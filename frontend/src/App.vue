@@ -1,13 +1,11 @@
 <template>
 	<div>
-		<button v-if="$auth.isLoggedIn" @click="$auth.logout()">Logout</button>
+		<Navbar />
 		<router-view />
 	</div>
 </template>
 
 
-<script>
-export default {
-	inject: ['$auth']
-};
+<script setup>
+import Navbar from './components/Navbar.vue';
 </script>
