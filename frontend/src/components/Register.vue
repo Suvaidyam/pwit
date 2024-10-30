@@ -1,5 +1,5 @@
 <template>
-    <button @click="open = true">Register</button>
+    <button @click="openDialog">Register</button>
     <TransitionRoot as="template" :show="open">
         <Dialog class="relative z-10" @close="open = false">
             <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
@@ -95,5 +95,8 @@ const login = () => {
     }
 
 };
-
+const openDialog = () => {
+    open.value = true;
+    store.auth=''
+}
 </script>

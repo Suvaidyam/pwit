@@ -9,7 +9,23 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref,inject,onMounted } from 'vue'
 import Login from './Login.vue'
 import Register from './Register.vue'
+
+const call = inject('$call')
+const cur_session = ref(JSON.parse(localStorage.getItem('session')))
+
+const create_session = async () => {
+    if (!cur_session.value) {
+        const response = await call('pwit.controllers.api.create_session', {})
+        console.log(response)
+        if (response) {
+            localStorage.setItem('session', JSON.stringify(response))
+        }
+    }
+}
+onMounted(() => {
+    create_session()
+})
 </script>
