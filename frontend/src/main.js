@@ -7,9 +7,11 @@ import resourceManager from "./libs/resourceManager";
 import call from "./libs/controllers/call";
 import socket from "./libs/controllers/socket";
 import Auth from "./libs/controllers/auth";
+import { store } from "./Store";
 
 const app = createApp(App);
 const auth = reactive(new Auth());
+app.provide('store', store);
 
 // Plugins
 app.use(router);

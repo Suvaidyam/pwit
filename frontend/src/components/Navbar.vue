@@ -1,13 +1,15 @@
 <template>
     <div class="w-full px-4 md:px-8 lg:px-20 h-16 flex justify-between items-center shadow-md">
-        <h1>LOGO</h1>
+        <router-link to="/" class="text-2xl font-bold text-primary">LOGO</router-link>
         <div class="flex gap-3 text-sm">
-           <button>Register</button>
-           <button class="px-4 py-2 rounded-md bg-secondary text-white">Login</button>
+           <Register/>
+           <Login/>
         </div>
     </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import Login from './Login.vue'
+import Register from './Register.vue'
 </script>
