@@ -13,6 +13,7 @@ export default {
       textColor:{
         'primary': 'var(--color-text-primary)',
         'secondary': 'var(--color-text-secondary)',
+        'tatary': 'var(--color-text-tatary)',
       }
     },
   },
