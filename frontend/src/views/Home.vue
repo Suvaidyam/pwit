@@ -1,8 +1,8 @@
 <template>
 	<div class="w-full h-screen">
 		<div class="w-full flex flex-col gap-5 justify-center h-40 items-center">
-			<h1 class="text-2xl md:text-4xl lg:text-6xl text-primary">Assistive Funder Toolkit</h1>
-			<p class="px-4 text-center">Developed under the Pay-What-It-Takes India Initiative</p>
+			<h1 class="text-xl font-bold md:text-4xl lg:text-6xl text-primary">Assistive Funder Toolkit</h1>
+			<p class="px-4 text-center font-extrabold text-[#4f4f4f] text-xl">Developed under the Pay-What-It-Takes India Initiative</p>
 		</div>
 		<!--  -->
 		<div class="w-full bg-tatary px-4 md:px-8 lg:px-20 py-6">
