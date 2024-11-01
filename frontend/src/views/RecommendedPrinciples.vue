@@ -1,8 +1,7 @@
     <template>
         <div class="w-100">
-            <div class="px-20 mx-auto">
+            <div class="px-4 md:px-8 lg:px-20 mx-auto">
                 <div class="mt-10">
-                    <nav class="text-sm text-gray-500 mb-1">Home / Funder Diagnostic / Pathway for funders to strengthen their grant making practices</nav>
                     <h1 class="text-3xl font-semibold text-blue-900">Pathway for funders to strengthen their grant making practices</h1>
                     <p class="text-gray-700 mt-3">
                         Funders can pursue or advance their journey on one or more principles; however, we recognize that a step-by-step approach
@@ -16,7 +15,7 @@
                     <div class="border-t border-gray-300 flex-grow"></div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-12 mt-4">
                     <!-- Card 1 -->
                     <div class="bg-white shadow-lg rounded-lg p-4 min-h-60 border-t-4 border-[#5d497d]">
                         <div class="rounded-md bg-white relative">
@@ -74,10 +73,10 @@
 
                 <div class="flex items-center justify-center my-14">
                         <div class="border-t border-gray-300 flex-grow"></div>
-                        <p class="px-4  text-gray-700 font-semibold text-xl">Additional PWIT principles to explore principles</p>
+                        <p class="text-gray-700 font-semibold text-xl">Additional PWIT principles to explore principles</p>
                         <div class="border-t border-gray-300 flex-grow"></div>
                     </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-12 my-16">
                     <!-- Card 4 -->
                     <div class="bg-white shadow-lg rounded-lg p-4 border-t-4 border-[#058248]">
                         <div class="rounded-md bg-white relative">
