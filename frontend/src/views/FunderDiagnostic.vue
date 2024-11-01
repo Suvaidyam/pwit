@@ -30,6 +30,7 @@
                 class="bg-secondary text-white px-6 py-2.5 text-sm border rounded-md">Submit</button>
             <button class="px-6 py-2.5 text-sm border rounded-md">Save as Draft</button>
         </div>
+        <FooterNav />
     </div>
 </template>
 
@@ -37,6 +38,7 @@
 import { ref } from 'vue'
 import { ArrowLeftIcon } from '@heroicons/vue/24/outline'
 import { useRouter } from 'vue-router'
+import FooterNav from '../components/FooterNav.vue';
 
 const router = useRouter()
 const data = ref([
