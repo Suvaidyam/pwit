@@ -340,6 +340,65 @@
 		<div class="w-full flex justify-center py-6 px-4">
 			<PickAssessment />
 		</div>
+		<div class="h-auto bg-[#255b97] pb-40 relative">
+			<h1 class="text-center font-serif text-4xl text-white py-8">Frequently Asked Questions</h1>
+			<div class="flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
+				<div class="container h-auto flex flex-col gap-4 w-full sm:w-3/4 md:w-2/3 lg:w-1/2">
+					<div class="h-[70px] bg-[#002c77] flex items-center justify-between px-7">
+						<p class="text-white font-medium">How to use it?</p>
+						<p class="text-white font-bold text-2xl">+</p>
+					</div>
+					<div class="h-[70px] bg-[#002c77] flex items-center justify-between px-7">
+						<p class="text-white font-medium">Lorem ipsum dolor sit amet, consectetur</p>
+						<p class="text-white font-bold text-2xl">+</p>
+					</div>
+					<div class="h-[70px] bg-[#002c77] flex items-center justify-between px-7">
+						<p class="text-white font-medium">Lorem ipsum dolor sit amet, consectetur</p>
+						<p class="text-white font-bold text-2xl">+</p>
+					</div>
+					<div class="h-[70px] bg-[#002c77] flex items-center justify-between px-7">
+						<p class="text-white font-medium">Lorem ipsum dolor sit amet, consectetur</p>
+						<p class="text-white font-bold text-2xl">+</p>
+					</div>
+					<div class="h-[70px] bg-[#002c77] flex items-center justify-between px-7">
+						<p class="text-white font-medium">Lorem ipsum dolor sit amet, consectetur</p>
+						<p class="text-white font-bold text-2xl">+</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex flex-col sm:flex-row h-[600px]  items-center justify-center gap-4 px-4 pb-8 relative bg-gray-100 ">
+			<div class="absolute bg-white shadow-lg -top-24  p-8  sm:w-3/4 md:w-2/3 lg:w-1/2 px-32 ">
+				<h2 class="text-3xl font-extrabold text-center text-blue-900 mb-6">Contact Us</h2>
+				<form class="space-y-6">
+					<div>
+						<label class="block text-gray-800 font-semibold mb-2">Full Name</label>
+						<input type="text" placeholder="Enter Full Name"
+							class="w-full p-3 border-b  bg-[#f3f4f8] border-gray-300 shadow-sm py-4 outline-none ">
+					</div>
+					<div>
+						<label class="block text-gray-800 font-semibold mb-2">Email Address</label>
+						<input type="email" placeholder="Enter Email Address"
+							class="w-full p-3 border-b bg-[#f3f4f8] border-gray-300   shadow-sm py-4 outline-none">
+					</div>
+					<div>
+						<label class="block text-gray-800 font-semibold mb-2">Your Message</label>
+						<textarea placeholder="Start writing from here"
+							class="w-full p-3 border-b bg-[#f3f4f8] border-gray-300   shadow-sm h-32 resize-none py-2  outline-none"></textarea>
+					</div>
+					<div class="flex justify-center">
+						<button type="submit"
+							class="w-64 p-3 bg-[#136096]  text-white font-semibold text-center  shadow-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">
+							Send Message
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+
 		<FooterNav />
 	</div>
 </template>
