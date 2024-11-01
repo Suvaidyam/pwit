@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full fixed top-0 bg-white z-50 px-4 md:px-8 lg:px-20 h-16 flex justify-between items-center shadow-md">
+    <div class="w-full fixed top-0 bg-white z-20 px-4 md:px-8 lg:px-20 h-16 flex justify-between items-center shadow-md">
         <router-link to="/" class="text-2xl font-bold text-primary">
             <img :src="`http://pwit.localhost:8000/files/logo.png`" class="w-32" alt="">
         </router-link>
