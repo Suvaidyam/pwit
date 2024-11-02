@@ -8,7 +8,7 @@
             </TransitionChild>
 
             <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-                <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="flex min-h-full justify-center p-4 text-center items-center sm:p-0">
                     <TransitionChild as="template" enter="ease-out duration-300"
                         enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                         enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
@@ -47,7 +47,8 @@
                                     </div>
                                     <div class="flex items-center justify-center">
                                         <span class="font-extralight text-gray-600 text-sm">No account yet?
-                                            <span class="text-primary cursor-pointer" @click="store.auth='Sign Up'">Sign Up</span>
+                                            <span class="text-primary cursor-pointer" @click="store.auth = 'Sign Up'">Sign
+                                                Up</span>
                                         </span>
                                     </div>
                                 </div>
@@ -61,36 +62,45 @@
 </template>
 
 <script setup>
-import { ref ,inject,watch} from 'vue'
+import { ref, inject, watch } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
+// import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
 
 const open = ref(false)
 const show_pass = ref(false)
 const email = ref('')
 const password = ref('')
 const store = inject('store');
-
+const auth = inject('$auth');
+const call = inject('$call');
+const cur_session = ref(JSON.parse(localStorage.getItem('session')))
+console.log(auth)
 watch(() => store.auth, (value) => {
     if (value === 'Log In') {
         open.value = true;
-    }else{
+    } else {
         open.value = false;
     }
 });
-const login = () => {
+const login = async () => {
     if (!email.value || !password.value) {
         alert("Please enter both email and password");
         return
-    }else{
-        console.log("Logging in with:", email.value, password.value);
+    } else {
         open.value = false;
+        let res = await auth.login(email.value, password.value);
+        if (res) {
+            const response = await call('pwit.controllers.api.set_user_session', {name:cur_session.value.name, user:email.value})
+            if(response){
+                window.location.reload()
+            }
+        }
     }
 
 };
 const openDialog = () => {
     open.value = true;
-    store.auth=''
+    store.auth = ''
 }
 
 </script>

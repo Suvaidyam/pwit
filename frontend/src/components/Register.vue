@@ -8,15 +8,15 @@
             </TransitionChild>
 
             <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-                <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="flex min-h-full justify-center text-center items-center px-4 sm:p-0">
                     <TransitionChild as="template" enter="ease-out duration-300"
                         enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                         enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
                         leave-from="opacity-100 translate-y-0 sm:scale-100"
                         leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
                         <DialogPanel
-                            class="relative transform overflow-hidden  bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl">
-                            <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                            class="relative transform overflow-hidden  bg-white text-left shadow-xl transition-all sm:my-8 w-full sm:max-w-xl">
+                            <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4">
                                 <div class="mt-3 text-center">
                                     <DialogTitle as="h3" class="text-xl font-semibold text-gray-900 text-center">Sign Up
                                     </DialogTitle>
@@ -47,7 +47,7 @@
                                     <div class="w-full border-b h-14">
                                         <button type="button"
                                             class=" w-full justify-center rounded-md bg-secondary px-3 py-2.5 text-sm font-semibold text-white shadow-sm"
-                                            @click="login">Sign Up</button>
+                                            @click="register">Sign Up</button>
                                     </div>
                                     <div class="flex items-center justify-center">
                                         <span class="font-extralight text-gray-600 text-sm">Already a user?
@@ -75,6 +75,7 @@ const email = ref('')
 const full_name = ref('')
 const password = ref('')
 const store = inject('store');
+const call = inject('$call');
 
 
 watch(() => store.auth, (value) => {
@@ -85,13 +86,20 @@ watch(() => store.auth, (value) => {
     }
 });
 
-const login = () => {
+const register = () => {
     if (!email.value || !password.value) {
         alert("Please enter both email and password");
         return
     } else {
         console.log("Register in with:", email.value, password.value);
         open.value = false;
+        let res = call('pwit.controllers.api.register', {
+            data: {
+                email: email.value,
+                full_name: full_name.value,
+                password: password.value,
+            }
+        });
     }
 
 };
