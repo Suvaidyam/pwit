@@ -68,6 +68,8 @@
 import { ref ,watch,inject} from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 
 const open = ref(false)
 const show_pass = ref(false)
@@ -86,20 +88,25 @@ watch(() => store.auth, (value) => {
     }
 });
 
-const register = () => {
+const register = async() => {
     if (!email.value || !password.value) {
         alert("Please enter both email and password");
         return
     } else {
-        console.log("Register in with:", email.value, password.value);
         open.value = false;
-        let res = call('pwit.controllers.api.register', {
+        let res = await call('pwit.controllers.api.register', {
             data: {
                 email: email.value,
                 full_name: full_name.value,
                 password: password.value,
             }
         });
+        if (res.code === 200) {
+            toast.success('Registration Successful');
+            store.auth = 'Log In';
+        } else {
+            toast.error('Registration Failed');
+        }
     }
 
 };

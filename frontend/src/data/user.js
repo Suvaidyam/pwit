@@ -6,7 +6,7 @@ export const userResource = createResource({
 	cache: "hrms:user",
 	onError(error) {
 		if (error && error.exc_type === "AuthenticationError") {
-			router.push({ name: "Login" })
+			router.push({ name: "Home" })
 		}
 	},
 })

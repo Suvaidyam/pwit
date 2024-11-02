@@ -64,7 +64,8 @@
 <script setup>
 import { ref, inject, watch } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
-// import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 
 const open = ref(false)
 const show_pass = ref(false)
@@ -74,7 +75,7 @@ const store = inject('store');
 const auth = inject('$auth');
 const call = inject('$call');
 const cur_session = ref(JSON.parse(localStorage.getItem('session')))
-console.log(auth)
+
 watch(() => store.auth, (value) => {
     if (value === 'Log In') {
         open.value = true;
@@ -90,9 +91,12 @@ const login = async () => {
         open.value = false;
         let res = await auth.login(email.value, password.value);
         if (res) {
-            const response = await call('pwit.controllers.api.set_user_session', {name:cur_session.value.name, user:email.value})
+            const response = await call('pwit.controllers.api.set_user_session', {name:cur_session.value?.data?.name, user:email.value})
             if(response){
-                window.location.reload()
+                toast.success('Login Successful');
+                setTimeout(() => {
+                    window.location.reload()
+                }, 500);
             }
         }
     }
