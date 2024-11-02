@@ -7,12 +7,12 @@
                 <details class="dropdown w-full">
                     <summary class="flex w-full justify-between px-4 py-3 bg-[#e9eaec] text-md  font-bold font-serif text-gray-700 ">
                         Introduction
-                    <svg class="-mr-1 ml-2 h-5 w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <svg class="-mr-1 ml-2 h-5 w-10 font-bold " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                         <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06 0L10 10.415l3.71-3.205a.75.75 0 111.06 1.06l-4.25 3.5a.75.75 0 01-1.06 0l-4.25-3.5a.75.75 0 010-1.06z" clip-rule="evenodd" />
                     </svg>
                     </summary>
                     
-                    <div class="absolute right-0 z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                    <div class="absolute   z-10 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                     <div class="py-1" role="menu" aria-orientation="vertical">
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Option 1</a>
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Option 2</a>
@@ -81,16 +81,14 @@
                 </div>
             </div>
             <div class="pt-10">
-                <button @click="openDialog"
-                class="bg-secondary text-white w-full md:w-1/5 py-4 text-sm font-semibold rounded-md">Start the
-                Assessment</button>
+                <PickAssessment />
             </div>
         </div>
-        
     </div>
 </template>
 
 <script setup>
 import Breadcrumb from '../../components/Breadcrumb.vue';
+import PickAssessment from '../../components/PickAssessment.vue'
  
 </script>
