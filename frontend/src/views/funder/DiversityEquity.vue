@@ -4,7 +4,7 @@
         <h1 class="text-4xl font-serif font-semibold text-primary pb-4">Diversity Equity Inclusion</h1>
         <div class="w-full pt-4">
             <div class="relative inline-block text-buttom w-full">
-                <details class="dropdown w-full">
+                <details class=" w-full">
                     <summary class="flex w-full justify-between px-4 py-3 bg-[#e9eaec] text-md  font-bold font-serif text-gray-700 ">
                         Introduction
                     <svg class="-mr-1 ml-2 h-5 w-10 font-bold " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -12,7 +12,7 @@
                     </svg>
                     </summary>
                     
-                    <div class="absolute mt-2 w-full bg-white">
+                    <div class="absolute mt-2 w-full bg- h-auto pb-3 ">
                     <div class="py-1" role="menu" aria-orientation="vertical">
                         <div class="w-full pt-4 flex gap-4">
                      <div
@@ -26,7 +26,7 @@
                         <path d="M6.33337 10.333H7.66671V6.33301H6.33337V10.333ZM7.00004 4.99967C7.18893 4.99967 7.34737 4.93567 7.47538 4.80767C7.60337 4.67967 7.66715 4.52145 7.66671 4.33301C7.66626 4.14456 7.60226 3.98634 7.47471 3.85834C7.34715 3.73034 7.18893 3.66634 7.00004 3.66634C6.81115 3.66634 6.65293 3.73034 6.52537 3.85834C6.39782 3.98634 6.33382 4.14456 6.33337 4.33301C6.33293 4.52145 6.39693 4.6799 6.52537 4.80834C6.65382 4.93679 6.81204 5.00056 7.00004 4.99967ZM7.00004 13.6663C6.07782 13.6663 5.21115 13.4912 4.40004 13.141C3.58893 12.7908 2.88337 12.3159 2.28338 11.7163C1.68338 11.1168 1.20849 10.4112 0.858708 9.59967C0.50893 8.78812 0.333819 7.92145 0.333375 6.99967C0.33293 6.0779 0.508042 5.21123 0.858708 4.39967C1.20937 3.58812 1.68426 2.88256 2.28338 2.28301C2.88249 1.68345 3.58804 1.20856 4.40004 0.858341C5.21204 0.508119 6.07871 0.333008 7.00004 0.333008C7.92137 0.333008 8.78804 0.508119 9.60004 0.858341C10.412 1.20856 11.1176 1.68345 11.7167 2.28301C12.3158 2.88256 12.7909 3.58812 13.142 4.39967C13.4932 5.21123 13.668 6.0779 13.6667 6.99967C13.6654 7.92145 13.4903 8.78812 13.1414 9.59967C12.7925 10.4112 12.3176 11.1168 11.7167 11.7163C11.1158 12.3159 10.4103 12.791 9.60004 13.1417C8.78982 13.4923 7.92315 13.6672 7.00004 13.6663Z" fill="#464547"/>
                         </svg>
                         </h1>
-                        <p>
+                        <p class="text-justify">
                             Diversity, equity, and inclusion (DEI) refers to policies or initiatives designed to make people from different races, ethnicities, religions, abilities, genders, ? and sexual orientations feel welcome and respected, and ensures fair opportunities for everyone regardless of these differences.
                         </p>
                     </div>
@@ -43,7 +43,7 @@
                         <path d="M6.33337 10.333H7.66671V6.33301H6.33337V10.333ZM7.00004 4.99967C7.18893 4.99967 7.34737 4.93567 7.47538 4.80767C7.60337 4.67967 7.66715 4.52145 7.66671 4.33301C7.66626 4.14456 7.60226 3.98634 7.47471 3.85834C7.34715 3.73034 7.18893 3.66634 7.00004 3.66634C6.81115 3.66634 6.65293 3.73034 6.52537 3.85834C6.39782 3.98634 6.33382 4.14456 6.33337 4.33301C6.33293 4.52145 6.39693 4.6799 6.52537 4.80834C6.65382 4.93679 6.81204 5.00056 7.00004 4.99967ZM7.00004 13.6663C6.07782 13.6663 5.21115 13.4912 4.40004 13.141C3.58893 12.7908 2.88337 12.3159 2.28338 11.7163C1.68338 11.1168 1.20849 10.4112 0.858708 9.59967C0.50893 8.78812 0.333819 7.92145 0.333375 6.99967C0.33293 6.0779 0.508042 5.21123 0.858708 4.39967C1.20937 3.58812 1.68426 2.88256 2.28338 2.28301C2.88249 1.68345 3.58804 1.20856 4.40004 0.858341C5.21204 0.508119 6.07871 0.333008 7.00004 0.333008C7.92137 0.333008 8.78804 0.508119 9.60004 0.858341C10.412 1.20856 11.1176 1.68345 11.7167 2.28301C12.3158 2.88256 12.7909 3.58812 13.142 4.39967C13.4932 5.21123 13.668 6.0779 13.6667 6.99967C13.6654 7.92145 13.4903 8.78812 13.1414 9.59967C12.7925 10.4112 12.3176 11.1168 11.7167 11.7163C11.1158 12.3159 10.4103 12.791 9.60004 13.1417C8.78982 13.4923 7.92315 13.6672 7.00004 13.6663Z" fill="#464547"/>
                         </svg>
                         </h1>
-                        <p>
+                        <p class="text-justify">
                             For funders, DEI calls attention to marginalised individuals and communities, and promotes fair and impartial grantmaking practices. 
                             As the fifth pay-whatit-takes (PWIT) principle, a DEI perspective also influences how you implement the other four: multiyear partnerships,
                             core costs, organizational development, and financial resilience, to make your grantmaking accessible to a wider range of nonprofits. 
@@ -66,7 +66,7 @@
                         <path d="M6.33337 10.333H7.66671V6.33301H6.33337V10.333ZM7.00004 4.99967C7.18893 4.99967 7.34737 4.93567 7.47538 4.80767C7.60337 4.67967 7.66715 4.52145 7.66671 4.33301C7.66626 4.14456 7.60226 3.98634 7.47471 3.85834C7.34715 3.73034 7.18893 3.66634 7.00004 3.66634C6.81115 3.66634 6.65293 3.73034 6.52537 3.85834C6.39782 3.98634 6.33382 4.14456 6.33337 4.33301C6.33293 4.52145 6.39693 4.6799 6.52537 4.80834C6.65382 4.93679 6.81204 5.00056 7.00004 4.99967ZM7.00004 13.6663C6.07782 13.6663 5.21115 13.4912 4.40004 13.141C3.58893 12.7908 2.88337 12.3159 2.28338 11.7163C1.68338 11.1168 1.20849 10.4112 0.858708 9.59967C0.50893 8.78812 0.333819 7.92145 0.333375 6.99967C0.33293 6.0779 0.508042 5.21123 0.858708 4.39967C1.20937 3.58812 1.68426 2.88256 2.28338 2.28301C2.88249 1.68345 3.58804 1.20856 4.40004 0.858341C5.21204 0.508119 6.07871 0.333008 7.00004 0.333008C7.92137 0.333008 8.78804 0.508119 9.60004 0.858341C10.412 1.20856 11.1176 1.68345 11.7167 2.28301C12.3158 2.88256 12.7909 3.58812 13.142 4.39967C13.4932 5.21123 13.668 6.0779 13.6667 6.99967C13.6654 7.92145 13.4903 8.78812 13.1414 9.59967C12.7925 10.4112 12.3176 11.1168 11.7167 11.7163C11.1158 12.3159 10.4103 12.791 9.60004 13.1417C8.78982 13.4923 7.92315 13.6672 7.00004 13.6663Z" fill="#464547"/>
                         </svg>
                         </h1>
-                        <p>
+                        <p class="text-justify">
                             The DEI self-assessment questions that follow touch on 10 practices, ranging from sourcing and diligence in choosing grantees to grant reporting and renewal. 
                             At the end, the tool generates a scorecard that shows whether your DEI efforts rank as low, medium, or high on each of the 10 practices. We then provide practical recommendations for improving your approach to each practice.
                         </p>
