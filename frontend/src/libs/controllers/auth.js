@@ -32,6 +32,7 @@ export default class Auth {
 	async logout() {
 		await call('logout');
 		this.isLoggedIn = false;
+		localStorage.clear();
 		window.location.reload();
 	}
 

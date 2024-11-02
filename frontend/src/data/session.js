@@ -38,7 +38,7 @@ export const session = reactive({
 			userResource.reset() 
 
 			session.user = sessionUser()
-			router.replace({ name: "Login" })
+			router.replace({ name: "Home" })
 			window.location.reload()
 		},
 	}),
