@@ -1,7 +1,7 @@
 <template>
     <div class="p-4 w-full ">
         <Breadcrumb name="Diversity Equity Inclusion"/>
-        <h1 class="text-4xl font-serif font-semibold text-primary pb-4">Diversity Equity Inclusion</h1>
+        <h1 class="text-[33px] font-serif font-semibold text-primary pb-4">Diversity Equity Inclusion</h1>
         <div class="w-full pt-4">
             <div class="relative inline-block text-buttom w-full">
                 <details class=" w-full">

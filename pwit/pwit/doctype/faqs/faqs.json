@@ -1,27 +1,37 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-10-30 15:24:19.381814",
+ "autoname": "format:FAQ-{######}",
+ "creation": "2024-11-02 16:13:45.473486",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "user"
+  "question",
+  "answer"
  ],
  "fields": [
   {
-   "fieldname": "user",
-   "fieldtype": "Link",
-   "label": "User",
-   "options": "User"
+   "fieldname": "question",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Question",
+   "reqd": 1
+  },
+  {
+   "fieldname": "answer",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Answer",
+   "reqd": 1
   }
  ],
- "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-02 15:59:15.782615",
+ "modified": "2024-11-02 16:15:25.299211",
  "modified_by": "Administrator",
  "module": "pwit",
- "name": "Session",
+ "name": "FAQs",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -39,5 +49,6 @@
  ],
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "question"
 }

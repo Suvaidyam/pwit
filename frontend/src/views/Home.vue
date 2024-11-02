@@ -3,7 +3,8 @@
 		<div class="w-full px-4 md:px-8 lg:px-20 flex flex-col gap-2 md:gap-5 justify-center h-24 md:h-40 items-center">
 			<h1 class="text-[33px] font-bold text-4xl lg:text-[64px] text-primary font-serif">Assistive Funder Toolkit
 			</h1>
-			<p class="px-4 text-center md:font-extrabold text-[#4f4f4f] text-base md:text-xl font-serif">Developed under the
+			<p class="px-4 text-center md:font-extrabold text-[#4f4f4f] text-base md:text-xl font-serif">Developed under
+				the
 				Pay-What-It-Takes India Initiative</p>
 		</div>
 		<!--  -->
@@ -341,26 +342,19 @@
 			<h1 class="text-center font-serif text-[28px] md:text-4xl text-white py-8">Frequently Asked Questions</h1>
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 				<div class="flex flex-col gap-4 w-full sm:w-3/4 md:w-2/3 lg:w-3/5">
-					<div class="h-12 bg-primary flex items-center justify-between px-7">
-						<p class="text-white font-medium text-sm">How to use it?</p>
-						<p class="text-white font-bold text-2xl cursor-pointer">+</p>
-					</div>
-					<div class="h-12 bg-primary flex items-center justify-between px-7">
-						<p class="text-white font-medium text-sm">How to use it?</p>
-						<p class="text-white font-bold text-2xl cursor-pointer">+</p>
-					</div>
-					<div class="h-12 bg-primary flex items-center justify-between px-7">
-						<p class="text-white font-medium text-sm">How to use it?</p>
-						<p class="text-white font-bold text-2xl cursor-pointer">+</p>
-					</div>
-					<div class="h-12 bg-primary flex items-center justify-between px-7">
-						<p class="text-white font-medium text-sm">How to use it?</p>
-						<p class="text-white font-bold text-2xl cursor-pointer">+</p>
-					</div>
-					<div class="h-12 bg-primary flex items-center justify-between px-7">
-						<p class="text-white font-medium text-sm">How to use it?</p>
-						<p class="text-white font-bold text-2xl cursor-pointer">+</p>
-					</div>
+					<!--  -->
+					<label v-for="(item, index) in faqs_list" :key="item.name" class="w-full flex ">
+						<input class="peer/showLabel absolute scale-0" type="checkbox" />
+						<span
+							class="block max-h-12 w-full overflow-hidden bg-primary py-2 px-4 text-white shadow-lg transition-all duration-300 peer-checked/showLabel:max-h-52">
+							<div class="flex h-12 cursor-pointer justify-between text-white font-medium ">
+								<p class="pt-1.5 text-sm">{{ item.question }}</p>
+								<span class="text-white font-bold text-2xl cursor-pointer">+</span>
+							</div>
+							<p class="mb-2">{{ item.answer }} 😎</p>
+						</span>
+					</label>
+					<!--  -->
 				</div>
 			</div>
 		</div>
@@ -373,20 +367,22 @@
 	</div>
 </template>
 <script setup>
-import { ref } from 'vue';
+import { inject, ref, onMounted } from 'vue';
 import FooterNav from '../components/FooterNav.vue';
 import PickAssessment from '../components/PickAssessment.vue';
 import ContactUs from '../components/ContactUs.vue';
-const data = ref([
-	{
-		name: 1,
-		img: ` `
 
-	},
-	{ name: 2 },
-	{ name: 3 },
-	{ name: 4 },
-	{ name: 5 }
-]);
+const call = inject('$call');
+let faqs_list = ref([]);
+
+const get_faqs = async () => {
+	const res = await call('pwit.controllers.api.get_faq', {});
+	if (res.code === 200) {
+		faqs_list.value = res.data;
+	}
+};
+onMounted(() => {
+	get_faqs();
+});
 
 </script>
