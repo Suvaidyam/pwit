@@ -31,3 +31,13 @@ class AuthAPIs:
             return {'code':200,'msg':'Register successfully','data':new_user} 
         except Exception as e:
             return {'code':500,'msg':'Internal Server Error','data':str(e)} 
+    
+    def contact_us(data): 
+        exits = frappe.db.exists('Contact Us',data.get('session'))
+        if exits:
+            return {'code':400,'msg':'You have already submitted a request'}
+        else:
+            new_doc = frappe.new_doc('Contact Us')
+            new_doc.update(data)
+            new_doc.insert(ignore_permissions=True)
+            return {'code':200,'data':new_doc} 

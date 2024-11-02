@@ -1,14 +1,15 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:",
+ "autoname": "field:session",
  "creation": "2024-10-30 15:47:34.612459",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "full_name",
   "email",
-  "message"
+  "message",
+  "session"
  ],
  "fields": [
   {
@@ -30,15 +31,22 @@
    "fieldname": "message",
    "fieldtype": "Small Text",
    "label": "Message"
+  },
+  {
+   "fieldname": "session",
+   "fieldtype": "Link",
+   "label": "Session",
+   "options": "Session",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-30 15:50:32.673986",
+ "modified": "2024-11-02 15:15:16.686162",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Contact Us",
- "naming_rule": "Expression",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
