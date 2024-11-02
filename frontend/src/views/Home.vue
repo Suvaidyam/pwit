@@ -1,8 +1,9 @@
 <template>
 	<div class="w-full h-screen">
-		<div class="w-full flex flex-col gap-5 justify-center h-40 items-center">
-			<h1 class="text-xl font-bold md:text-4xl lg:text-6xl text-primary font-serif">Assistive Funder Toolkit</h1>
-			<p class="px-4 text-center font-extrabold text-[#4f4f4f] text-xl font-serif">Developed under the
+		<div class="w-full px-4 md:px-8 lg:px-20 flex flex-col gap-2 md:gap-5 justify-center h-24 md:h-40 items-center">
+			<h1 class="text-[33px] font-bold text-4xl lg:text-[64px] text-primary font-serif">Assistive Funder Toolkit
+			</h1>
+			<p class="px-4 text-center md:font-extrabold text-[#4f4f4f] text-base md:text-xl font-serif">Developed under the
 				Pay-What-It-Takes India Initiative</p>
 		</div>
 		<!--  -->
@@ -34,7 +35,7 @@
 					</div>
 
 				</div>
-				<div class="h-36 flex rounded-md bg-white relative px-4 ">
+				<div class="h-36 flex items-center justify-center rounded-md bg-white relative px-4 ">
 					<div
 						class="w-[70px] h-[70px] shadow-2xl rounded-full border-8 border-[#136096] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						{{ }} <svg width="15" height="24" viewBox="0 0 15 24" fill="none"
@@ -44,13 +45,11 @@
 								fill="#464547" />
 						</svg>
 					</div>
-					<div class="  my-12">
-						<p class="text-[#136096]  text-center font-bold text-sm uppercase">
-							Pay a fair share of core costs
-						</p>
-					</div>
+					<p class="text-[#136096]  text-center font-bold text-sm uppercase">
+						Pay a fair share of core costs
+					</p>
 				</div>
-				<div class="h-36 flex rounded-md bg-white relative px-4">
+				<div class="h-36 flex items-center justify-center rounded-md bg-white relative px-4">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#029fd9] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						{{ }} <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
@@ -60,11 +59,9 @@
 								fill="#464547" />
 						</svg>
 					</div>
-					<div class=" my-12">
-						<p class="text-[#029fd9]  text-center font-bold text-sm uppercase">
-							Invest in organizational development
-						</p>
-					</div>
+					<p class="text-[#029fd9]  text-center font-bold text-sm uppercase">
+						Invest in organizational development
+					</p>
 				</div>
 				<div class="h-36 flex rounded-md bg-white relative px-4">
 					<div
@@ -193,7 +190,7 @@
 			</div>
 		</div>
 		<!--  -->
-		<div class=" w-full px-4 md:px-8 lg:px-20  md:py-10 ">
+		<div class=" w-full px-4 md:px-8 lg:px-20  md:pt-8 ">
 			<div class="flex flex-col md:flex-row">
 				<div class="w-full pt-8 flex justify-center items-center order-2 md:order-1">
 					<img class="w-[90%]"
@@ -337,68 +334,41 @@
 			</div>
 		</div>
 		<!--  -->
-		<div class="w-full flex justify-center py-6 px-4">
+		<div class="w-full flex justify-center py-8 px-4">
 			<PickAssessment />
 		</div>
-		<div class="h-auto bg-[#255b97] pb-40 relative">
-			<h1 class="text-center font-serif text-4xl text-white py-8">Frequently Asked Questions</h1>
-			<div class="flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
-				<div class="container h-auto flex flex-col gap-4 w-full sm:w-3/4 md:w-2/3 lg:w-1/2">
-					<div class="h-[70px] bg-[#002c77] flex items-center justify-between px-7">
-						<p class="text-white font-medium">How to use it?</p>
-						<p class="text-white font-bold text-2xl">+</p>
+		<div class=" bg-secondary pb-40 relative px-4">
+			<h1 class="text-center font-serif text-[28px] md:text-4xl text-white py-8">Frequently Asked Questions</h1>
+			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+				<div class="flex flex-col gap-4 w-full sm:w-3/4 md:w-2/3 lg:w-3/5">
+					<div class="h-12 bg-primary flex items-center justify-between px-7">
+						<p class="text-white font-medium text-sm">How to use it?</p>
+						<p class="text-white font-bold text-2xl cursor-pointer">+</p>
 					</div>
-					<div class="h-[70px] bg-[#002c77] flex items-center justify-between px-7">
-						<p class="text-white font-medium">Lorem ipsum dolor sit amet, consectetur</p>
-						<p class="text-white font-bold text-2xl">+</p>
+					<div class="h-12 bg-primary flex items-center justify-between px-7">
+						<p class="text-white font-medium text-sm">How to use it?</p>
+						<p class="text-white font-bold text-2xl cursor-pointer">+</p>
 					</div>
-					<div class="h-[70px] bg-[#002c77] flex items-center justify-between px-7">
-						<p class="text-white font-medium">Lorem ipsum dolor sit amet, consectetur</p>
-						<p class="text-white font-bold text-2xl">+</p>
+					<div class="h-12 bg-primary flex items-center justify-between px-7">
+						<p class="text-white font-medium text-sm">How to use it?</p>
+						<p class="text-white font-bold text-2xl cursor-pointer">+</p>
 					</div>
-					<div class="h-[70px] bg-[#002c77] flex items-center justify-between px-7">
-						<p class="text-white font-medium">Lorem ipsum dolor sit amet, consectetur</p>
-						<p class="text-white font-bold text-2xl">+</p>
+					<div class="h-12 bg-primary flex items-center justify-between px-7">
+						<p class="text-white font-medium text-sm">How to use it?</p>
+						<p class="text-white font-bold text-2xl cursor-pointer">+</p>
 					</div>
-					<div class="h-[70px] bg-[#002c77] flex items-center justify-between px-7">
-						<p class="text-white font-medium">Lorem ipsum dolor sit amet, consectetur</p>
-						<p class="text-white font-bold text-2xl">+</p>
+					<div class="h-12 bg-primary flex items-center justify-between px-7">
+						<p class="text-white font-medium text-sm">How to use it?</p>
+						<p class="text-white font-bold text-2xl cursor-pointer">+</p>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="flex flex-col sm:flex-row h-[600px]  items-center justify-center gap-4 px-4 pb-8 relative bg-gray-100 ">
-			<div class="absolute bg-white shadow-lg -top-24  p-8  sm:w-3/4 md:w-2/3 lg:w-1/2 px-32 ">
-				<h2 class="text-3xl font-extrabold text-center text-blue-900 mb-6">Contact Us</h2>
-				<form class="space-y-6">
-					<div>
-						<label class="block text-gray-800 font-semibold mb-2">Full Name</label>
-						<input type="text" placeholder="Enter Full Name"
-							class="w-full p-3 border-b  bg-[#f3f4f8] border-gray-300 shadow-sm py-4 outline-none ">
-					</div>
-					<div>
-						<label class="block text-gray-800 font-semibold mb-2">Email Address</label>
-						<input type="email" placeholder="Enter Email Address"
-							class="w-full p-3 border-b bg-[#f3f4f8] border-gray-300   shadow-sm py-4 outline-none">
-					</div>
-					<div>
-						<label class="block text-gray-800 font-semibold mb-2">Your Message</label>
-						<textarea placeholder="Start writing from here"
-							class="w-full p-3 border-b bg-[#f3f4f8] border-gray-300   shadow-sm h-32 resize-none py-2  outline-none"></textarea>
-					</div>
-					<div class="flex justify-center">
-						<button type="submit"
-							class="w-64 p-3 bg-[#136096]  text-white font-semibold text-center  shadow-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">
-							Send Message
-						</button>
-					</div>
-				</form>
-			</div>
+		<div
+			class="flex flex-col sm:flex-row h-[470px]  items-center justify-center gap-4 px-4 pb-8 relative bg-gray-100 ">
+			<ContactUs />
 		</div>
-
-
-
 		<FooterNav />
 	</div>
 </template>
@@ -406,6 +376,7 @@
 import { ref } from 'vue';
 import FooterNav from '../components/FooterNav.vue';
 import PickAssessment from '../components/PickAssessment.vue';
+import ContactUs from '../components/ContactUs.vue';
 const data = ref([
 	{
 		name: 1,
@@ -417,6 +388,5 @@ const data = ref([
 	{ name: 4 },
 	{ name: 5 }
 ]);
-console.log(data.value[0].name);
 
 </script>
