@@ -1,7 +1,7 @@
 <template>
-    <div class="flex">
+    <div class="flex w-full">
         <LeftNav />
-        <div class="md:pl-56">
+        <div class="md:pl-60 w-full">
             <router-view />
         </div>
     </div>
