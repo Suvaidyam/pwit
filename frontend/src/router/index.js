@@ -7,6 +7,8 @@ import SubRoute from '../views/funder/SubRoute.vue'
 import CoreCosts from '../views/funder/CoreCosts.vue'
 import MultiPartnerships from '../views/funder/MultiPartnerships.vue'
 import OrganizationDev from '../views/funder/OrganizationDev.vue'
+import DiversityEquity from '../views/funder/DiversityEquity.vue'
+ 
 const routes = [
   {
     path: "/",
@@ -56,7 +58,7 @@ const routes = [
       {
         path: "diversity-equity-inclusion",
         name: "DiversityEquity",
-        component: CoreCosts,
+        component: DiversityEquity,
       },
     ],
   },
