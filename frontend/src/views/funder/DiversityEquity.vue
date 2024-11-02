@@ -1,5 +1,5 @@
 <template>
-    <div class="p-4 ">
+    <div class="p-4 w-full">
         <Breadcrumb name="Diversity Equity Inclusion"/>
         <h1 class="text-4xl font-serif font-semibold text-primary">Diversity Equity Inclusion</h1>
     </div>
