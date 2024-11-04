@@ -78,12 +78,7 @@ const password = ref('')
 const store = inject('store');
 const auth = inject('$auth');
 const call = inject('$call');
-const cur_session = ref(JSON.parse(localStorage.getItem('session'))?.data?.name)
 
-watch(() => cur_session.value, (value) => {
-    cur_session.value = value
-});
-console.log(cur_session.value)
 watch(() => store.auth, (value) => {
     if (value === 'Log In') {
         open.value = true;
@@ -98,8 +93,8 @@ const login = async () => {
     } else {
         open.value = false;
         let res = await auth.login(email.value, password.value);
-        if (res && cur_session.value) {
-            const response = await call('pwit.controllers.api.set_user_session', {name:cur_session.value, user:email.value})
+        if (res && store.session) {
+            const response = await call('pwit.controllers.api.set_user_session', {name:store.session, user:email.value})
             if(response){
                 toast.success('Login Successful');
                 setTimeout(() => {

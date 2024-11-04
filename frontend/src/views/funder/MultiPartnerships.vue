@@ -1,7 +1,7 @@
 <template>
     <div class="p-4 w-full">
         <Breadcrumb name="Multi-year Partnerships"/>
-        <h1 class="text-4xl font-serif font-semibold text-primary">Multi-year Partnerships</h1>
+        <h1 class="text-h2 font-serif font-semibold text-primary">Multi-year Partnerships</h1>
     </div>
 </template>
 
