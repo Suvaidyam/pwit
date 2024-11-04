@@ -20,6 +20,7 @@ import Register from './Register.vue'
 import ProfileDrop from './ProfileDrop.vue';
 const call = inject('$call')
 const auth = inject('$auth');
+const store = inject('store');
 const cur_session = ref(JSON.parse(localStorage.getItem('session')))
 
 watch(() => auth.cookie, (value) => {
@@ -30,7 +31,10 @@ const create_session = async () => {
         const response = await call('pwit.controllers.api.create_session', {})
         if (response) {
             localStorage.setItem('session', JSON.stringify(response))
+            store.session = response?.data?.name
         }
+    }else{
+        store.session = cur_session.value?.data?.name
     }
 }
 onMounted(() => {
