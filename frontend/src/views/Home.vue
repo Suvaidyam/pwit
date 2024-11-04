@@ -10,7 +10,7 @@
 		<!--  -->
 		<div class="w-full bg-tatary px-4 md:px-8 lg:px-20 py-6 mt-7">
 			<h4 class="text-center text-h2 font-bold text-[#20252b] my-6 font-serif">About the tool</h4>
-			<div class="flex justify-center text-h5 text-center">
+			<div class="flex justify-center font-normal text-sebase text-h5 text-center">
 				Philanthropy has a significant opportunity to amplify the impact of its grantmaking
 				by enabling a stronger and more resilient nonprofit sector. Bridgespan’s Pay-What-It-Takes
 				India Initiative has identified five principles of effective grantmaking, rooted in trust,
@@ -20,7 +20,7 @@
 
 			<div
 				class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-12 gap-x-5 pt-14">
-				<div class="h-36 flex rounded-md bg-white relative px-4 ">
+				<div class="h-[149px] flex rounded-md bg-white relative px-4 ">
 					<div
 						class="w-[70px] h-[70px]  shadow-2xl rounded-full border-8 border-[#59467b] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						<svg width="34" height="22" viewBox="0 0 34 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,14 +29,14 @@
 								fill="#464547" />
 						</svg>
 					</div>
-					<div class="flex justify-center items-center ">
-						<p class="text-[#59467b] text-center font-bold text-sm uppercase ">
+					<div class="flex justify-center pt-10">
+						<p class="text-[#59467b] text-center font-bold text-h5 uppercase ">
 							Develop Multiyear Funder-Nonprofit Partnerships
 						</p>
 					</div>
 
 				</div>
-				<div class="h-36 flex items-center justify-center rounded-md bg-white relative px-4 ">
+				<div class="h-[149px] flex justify-center rounded-md bg-white relative px-4 ">
 					<div
 						class="w-[70px] h-[70px] shadow-2xl rounded-full border-8 border-[#136096] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						{{ }} <svg width="15" height="24" viewBox="0 0 15 24" fill="none"
@@ -46,11 +46,14 @@
 								fill="#464547" />
 						</svg>
 					</div>
-					<p class="text-[#136096]  text-center font-bold text-sm uppercase">
-						Pay a fair share of core costs
-					</p>
+					<div class="flex justify-center pt-10">
+						<p class="text-[#136096] text-center font-bold text-h5 uppercase ">
+							Pay a fair share of core costs
+						</p>
+					</div>
+
 				</div>
-				<div class="h-36 flex items-center justify-center rounded-md bg-white relative px-4">
+				<div class="h-[149px] flex justify-center rounded-md bg-white relative px-4">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#029fd9] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						{{ }} <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
@@ -60,11 +63,13 @@
 								fill="#464547" />
 						</svg>
 					</div>
-					<p class="text-[#029fd9]  text-center font-bold text-sm uppercase">
-						Invest in organizational development
-					</p>
+					<div class="flex justify-center pt-10">
+						<p class="text-[#029fd9] text-center font-bold text-h5 uppercase ">
+							Invest in organizational development
+						</p>
+					</div> 
 				</div>
-				<div class="h-36 flex rounded-md bg-white relative px-4">
+				<div class="h-[149px] flex rounded-md bg-white relative px-4">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#058248] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						{{ }} <svg width="26" height="25" viewBox="0 0 26 25" fill="none"
@@ -75,13 +80,13 @@
 						</svg>
 
 					</div>
-					<div class="flex justify-center items-center container my-12">
-						<p class="text-[#058248]  text-center font-bold text-sm uppercase">
+					<div class="flex justify-center pt-10">
+						<p class="text-[#058248] text-center font-bold text-h5 uppercase ">
 							Build Financial Resilience
 						</p>
 					</div>
 				</div>
-				<div class="h-36 flex rounded-md bg-white relative px-4 ">
+				<div class="h-[149px] flex rounded-md bg-white relative px-4 ">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#f38714] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						{{ }} <svg width="26" height="25" viewBox="0 0 26 25" fill="none"
@@ -91,11 +96,11 @@
 								fill="#464547" />
 						</svg>
 					</div>
-					<div class="flex justify-center items-center container my-12 ">
-						<p class="text-[#f38714]  text-center font-bold text-sm uppercase ">
+					<div class="flex justify-center pt-10">
+						<p class="text-[#f38714] text-center font-bold text-h5 uppercase ">
 							Embed Diversity Equity, and inclusion in grantmaking
 						</p>
-					</div>
+					</div> 
 				</div>
 
 			</div>
@@ -114,10 +119,10 @@
 		</div>
 		<!--  -->
 		<div class=" w-full px-4 md:px-8 lg:px-20 py-10 ">
-			<h1 class="text-primary text-3xl font-semibold font-serif">What does the toolkit include?</h1>
+			<h1 class="text-primary text-h2 font-semibold font-serif">What does the toolkit include?</h1>
 			<div class="flex flex-col md:flex-row mt-5">
 				<div class="w-full flex flex-col gap-3">
-					<p class="pt-2 text-md  font-medium text-[#535353]">The tool is designed for institutional
+					<p class="pt-2 text-h5 font-medium text-trbase">The tool is designed for institutional
 						funders
 						(global, domestic, CSR) who are seeking a deeper understanding of how they can strengthen their
 						own
@@ -139,8 +144,8 @@
 								</svg>
 							</div>
 							<div class="">
-								<h4 class="font-semibold text-md font-serif">Part 1 - Funding practices diagnostic</h4>
-								<p class="text-tatary text-sm py-2">
+								<h4 class="font-bold text-h5 text-sebase font-serif">Part 1 - Funding practices diagnostic</h4>
+								<p class="text-trbase text-sm py-2">
 									Take a quick diagnostic of your organization’s funding beliefs and practices to
 									identify specific principles that would be most relevant for you to enhance your
 									grantmaking.
@@ -167,9 +172,9 @@
 								</svg>
 							</div>
 							<div class="">
-								<h4 class="font-semibold text-md font-serif">Part 2 – Assistive guides for each
+								<h4 class="font-bold text-sebase text-h5 font-serif">Part 2 – Assistive guides for each
 									principle</h4>
-								<p class="text-tatary text-sm py-2">
+								<p class="text-trbase text-sm py-2">
 									Use these guides to map your current practices on the five PWIT principles, across
 									various elements spanning policy, approaches, communication, etc., to understand the
 									strengths and gaps in your funding practices. The guides for most principles are
@@ -199,7 +204,7 @@
 						alt="">
 				</div>
 				<div class="w-full flex flex-col gap-3 order-1 md:order-2">
-					<h1 class="text-primary  text-3xl font-semibold font-serif">What will the output include?</h1>
+					<h1 class="text-primary text-h2 font-bold font-serif">What will the output include?</h1>
 					<div class="flex flex-col gap-5">
 						<div class="flex gap-2">
 							<div class="w-10 min-w-10 h-10 flex items-center justify-center rounded-full bg-gray-100">
@@ -219,9 +224,9 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-semibold text-md font-serif">Optional Survey Before Accessing Guides
+								<h4 class="font-bold text-sebase text-h5 font-serif">Optional Survey Before Accessing Guides
 								</h4>
-								<p class=" text-sm p-1 ">
+								<p class="text-trbase text-sm p-1 ">
 									Visit Link and fill out the short survey before proceeding to the principle-specific
 									assistive guides,
 									to understand which principles might be most relevant for you. You may feel free to
@@ -240,8 +245,8 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-semibold text-md font-serif">Complete the Tool in One Session</h4>
-								<p class=" text-sm p-1 ">
+								<h4 class="font-bold text-sebase text-h5 font-serif">Complete the Tool in One Session</h4>
+								<p class="text-trbase text-sm p-1 ">
 									The tool is designed to be completed in one session; however, you can pause and
 									return to this later. Please do not close the browser window as results for
 									completed sessions will not be saved. You will be provided the opportunity to email
@@ -261,8 +266,8 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-semibold text-md font-serif">Expect Level 1 and 2 Ratings in Part 2</h4>
-								<p class=" text-sm p-1 ">
+								<h4 class="font-bold text-h5 text-sebase font-serif">Expect Level 1 and 2 Ratings in Part 2</h4>
+								<p class="text-trbase text-sm p-1 ">
 									As you go through Part 2 of the tool, it is possible that you will have certain
 									Level 1 and 2 ratings.
 									Few will achieve Level 4, and in some cases, Level 4 is not the desired end state.
@@ -280,9 +285,9 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-semibold text-md font-serif"> Generate a Summary Report Upon Completion
+								<h4 class="font-bold text-h5 text-sebase font-serif"> Generate a Summary Report Upon Completion
 								</h4>
-								<p class="text-sm p-1 ">
+								<p class="text-sm p-1 text-trbase">
 									Upon completion, you will have the option of generating a summary report which
 									provides an overview of your assessment and
 									recommendations to strengthen your practices. Please save a copy of the report to
@@ -301,9 +306,9 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-semibold text-md font-serif"> Use Insights for Strategic Discussions and
+								<h4 class="font-bold text-h5 text-sebase font-serif"> Use Insights for Strategic Discussions and
 									Team Conversations on Improving Grantmaking</h4>
-								<p class="text-sm p-1 ">
+								<p class="text-sm p-1 text-trbase">
 									We encourage you to use the insights for strategic discussions on enhancing your
 									grantmaking as well as in conversations with your teams.
 								</p>
@@ -320,8 +325,8 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-semibold text-md font-serif"> Your Responses Are Confidential</h4>
-								<p class="text-sm p-1 ">
+								<h4 class="font-bold text-sebase text-h5 font-serif"> Your Responses Are Confidential</h4>
+								<p class="text-sm p-1 text-trbase">
 									Your responses are confidential and protected and may only be seen by the
 									development team.
 									Any trends interfered from this data will only be made at an aggregate level, based
@@ -339,7 +344,7 @@
 			<PickAssessment />
 		</div>
 		<div class=" bg-secondary pb-40 relative px-4">
-			<h1 class="text-center font-serif text-[28px] md:text-4xl text-white py-8">Frequently Asked Questions</h1>
+			<h1 class="text-center font-serif text-h2 font-semibold tracking-wide text-white py-8">Frequently Asked Questions</h1>
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 				<div class="flex flex-col gap-4 w-full sm:w-3/4 md:w-2/3 lg:w-3/5">
 					<!--  -->

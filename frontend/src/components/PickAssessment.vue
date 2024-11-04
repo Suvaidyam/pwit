@@ -1,7 +1,7 @@
 <template>
     <button @click="openDialog"
-        class="bg-secondary text-white w-full md:w-1/3 py-4 text-sm font-semibold rounded-md">Start the
-        Assessment</button>
+        class="bg-secondary text-white flex items-center justify-center gap-2 w-full md:w-1/3 h-14 text-h5 font-bold rounded-md">Start the
+        Assessment <ArrowRight class="w-4"/></button>
     <!--  -->
     <TransitionRoot as="template" :show="open">
         <Dialog class="relative z-30" @close="open = false">
@@ -175,7 +175,7 @@
 <script setup>
 import { ref } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import { ExclamationTriangleIcon } from '@heroicons/vue/24/outline'
+import { ArrowRight} from 'lucide-vue-next'
 
 const open = ref(false)
 const open_ass = ref(false)
