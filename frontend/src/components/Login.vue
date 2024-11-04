@@ -35,10 +35,10 @@
                                     <div class="flex flex-col gap-2 w-full relative">
                                         <label for="" class="text-sm text-tatary">Password</label>
                                         <input v-model="password" :type="show_pass ? 'text' : 'password'"
-                                            class="outline-none w-full border-b-2 bg-gray-50 px-3 py-2 placeholder:text-sm"
+                                            class="outline-none w-full border-b-2 bg-gray-50 text-sm px-3 py-2 placeholder:text-sm"
                                             placeholder="******">
-                                        <span class="absolute right-2 top-10 text-xs cursor-pointer"
-                                            @click="show_pass = !show_pass">{{ show_pass ? 'hide' : 'show' }} </span>
+                                        <span class="absolute right-2 top-10 font-semibold text-gray-500 text-xs cursor-pointer"
+                                            @click="show_pass = !show_pass">{{ show_pass ? 'Hide' : 'Show' }} </span>
                                     </div>
                                     <div class="w-full border-b h-14">
                                         <button type="button"
@@ -62,7 +62,7 @@
 </template>
 
 <script setup>
-import { ref, inject, watch } from 'vue'
+import { ref, inject, watch ,onMounted} from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
@@ -74,8 +74,12 @@ const password = ref('')
 const store = inject('store');
 const auth = inject('$auth');
 const call = inject('$call');
-const cur_session = ref(JSON.parse(localStorage.getItem('session')))
+const cur_session = ref(JSON.parse(localStorage.getItem('session'))?.data?.name)
 
+watch(() => cur_session.value, (value) => {
+    cur_session.value = value
+});
+console.log(cur_session.value)
 watch(() => store.auth, (value) => {
     if (value === 'Log In') {
         open.value = true;
@@ -90,8 +94,8 @@ const login = async () => {
     } else {
         open.value = false;
         let res = await auth.login(email.value, password.value);
-        if (res) {
-            const response = await call('pwit.controllers.api.set_user_session', {name:cur_session.value?.data?.name, user:email.value})
+        if (res && cur_session.value) {
+            const response = await call('pwit.controllers.api.set_user_session', {name:cur_session.value, user:email.value})
             if(response){
                 toast.success('Login Successful');
                 setTimeout(() => {
