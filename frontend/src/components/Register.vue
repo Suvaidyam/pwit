@@ -25,20 +25,31 @@
                                 </div>
                                 <div class="flex flex-col gap-3 pt-4">
                                     <div class="flex flex-col gap-2 w-full">
-                                        <label for="full_name" class="text-sm text-tatary">Full Name</label>
+                                        <label  id="inputId1" for="full_name" class="text-sm text-tatary">
+                                            Full Name
+                                            <span class="text-red-500">
+                                                *
+                                            </span>
+                                        </label>
                                         <input v-model="full_name" type="text" id="full_name"
                                             class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5"
                                             placeholder="Enter Full Name">
                                     </div>
                                     <div class="flex flex-col gap-2 w-full">
-                                        <label for="" class="text-sm text-tatary">Email Address</label>
-                                        <input v-model="email" type="email"
+                                        <label for="" class="text-sm text-tatary">
+                                            Email Address
+                                            <span class="text-red-500"> *</span>
+                                        </label>
+                                        <input  @input="resetBorder"  id="emailInputId" v-model="email" type="email"
                                             class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5"
                                             placeholder="Enter Email Address">
                                     </div>
                                     <div class="flex flex-col gap-2 w-full relative">
-                                        <label for="" class="text-sm text-tatary">Password</label>
-                                        <input v-model="password" :type="show_pass ? 'text' : 'password'"
+                                        <label for="" class="text-sm text-tatary">
+                                            Password
+                                            <span class="text-red-500"> *</span>
+                                        </label>
+                                        <input  @input="resetBorder" id="passwordInputId" v-model="password" :type="show_pass ? 'text' : 'password'"
                                             class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5"
                                             placeholder="******">
                                         <span class="absolute right-2 top-10 text-xs cursor-pointer"
@@ -82,7 +93,6 @@ const password = ref('')
 const store = inject('store');
 const call = inject('$call');
 
-
 watch(() => store.auth, (value) => {
     if (value === 'Sign Up') {
         open.value = true;
@@ -91,30 +101,44 @@ watch(() => store.auth, (value) => {
     }
 });
 
-const register = async() => {
-    if (!email.value || !password.value) {
-        alert("Please enter both email and password");
-        return
-    } else {
-        open.value = false;
-        let res = await call('pwit.controllers.api.register', {
-            data: {
-                email: email.value,
-                full_name: full_name.value,
-                password: password.value,
-            }
-        });
-        if (res.code === 200) {
-            toast.success('Registration Successful');
-            store.auth = 'Log In';
-        } else {
-            toast.error('Registration Failed');
-        }
-    }
+const register = async () => {
+    const email = document.getElementById('emailInputId');  
+    const password = document.getElementById('passwordInputId'); 
 
+    if (!email.value || !password.value) {
+        // alert("Please enter both email and password");
+        if (!email.value) {
+            email.style.borderBottom = '1px solid red';
+        } 
+
+        if (!password.value) {
+            password.style.borderBottom = '1px solid red';  
+        }  
+        return; 
+    } else {
+     
+     open.value = false;
+     let res = await call('pwit.controllers.api.register', {
+         data: {
+             email: email.value,
+             full_name: full_name.value,
+             password: password.value,
+         }
+     });
+     if (res.code === 200) {
+         toast.success('Registration Successful');
+         store.auth = 'Log In';
+     } else {
+         toast.error('Registration Failed');
+     }
+ }
 };
+
 const openDialog = () => {
     open.value = true;
     store.auth=''
+}
+const resetBorder = (event) => {
+    event.target.style.borderBottom = '';  
 }
 </script>

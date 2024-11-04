@@ -27,14 +27,18 @@
                                 </div>
                                 <div class="flex flex-col gap-3 pt-4">
                                     <div class="flex flex-col gap-2 w-full">
-                                        <label for="" class="text-sm text-tatary">Email Address</label>
-                                        <input v-model="email" type="email"
+                                        <label for="" class="text-sm text-tatary">Email Address
+                                            <span class="text-red-500"> *</span>
+                                        </label>
+                                        <input  @input="resetBorder"  id="emailInputId" v-model="email" type="email"
                                             class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5"
                                             placeholder="Enter Email Address">
                                     </div>
                                     <div class="flex flex-col gap-2 w-full relative">
-                                        <label for="" class="text-sm text-tatary">Password</label>
-                                        <input v-model="password" :type="show_pass ? 'text' : 'password'"
+                                        <label for="" class="text-sm text-tatary">Password
+                                            <span class="text-red-500"> *</span>
+                                        </label>
+                                        <input @input="resetBorder" id="passwordInputId" v-model="password" :type="show_pass ? 'text' : 'password'"
                                             class="outline-none w-full border-b-2 bg-gray-50 text-sm px-3 h-12 text-h5"
                                             placeholder="******">
                                         <span class="absolute right-2 top-10 font-semibold text-gray-500 text-xs cursor-pointer"
@@ -78,7 +82,12 @@ const password = ref('')
 const store = inject('store');
 const auth = inject('$auth');
 const call = inject('$call');
+const cur_session = ref(JSON.parse(localStorage.getItem('session'))?.data?.name)
 
+watch(() => cur_session.value, (value) => {
+    cur_session.value = value
+});
+console.log(cur_session.value)
 watch(() => store.auth, (value) => {
     if (value === 'Log In') {
         open.value = true;
@@ -87,14 +96,24 @@ watch(() => store.auth, (value) => {
     }
 });
 const login = async () => {
+    const email = document.getElementById('emailInputId');  
+    const password = document.getElementById('passwordInputId'); 
+
     if (!email.value || !password.value) {
-        alert("Please enter both email and password");
+        // alert("Please enter both email and password");
+        if (!email.value) {
+            email.style.borderBottom = '1px solid red';
+        } 
+
+        if (!password.value) {
+            password.style.borderBottom = '1px solid red';  
+        } 
         return
     } else {
         open.value = false;
         let res = await auth.login(email.value, password.value);
-        if (res && store.session) {
-            const response = await call('pwit.controllers.api.set_user_session', {name:store.session, user:email.value})
+        if (res && cur_session.value) {
+            const response = await call('pwit.controllers.api.set_user_session', {name:cur_session.value, user:email.value})
             if(response){
                 toast.success('Login Successful');
                 setTimeout(() => {
@@ -108,6 +127,9 @@ const login = async () => {
 const openDialog = () => {
     open.value = true;
     store.auth = ''
+}
+const resetBorder = (event) => {
+    event.target.style.borderBottom = '';  
 }
 
 </script>

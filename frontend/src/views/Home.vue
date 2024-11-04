@@ -122,7 +122,7 @@
 			<h1 class="text-primary text-h2 font-semibold font-serif">What does the toolkit include?</h1>
 			<div class="flex flex-col md:flex-row mt-5">
 				<div class="w-full flex flex-col gap-3">
-					<p class="pt-2 text-h5 font-medium text-trbase">The tool is designed for institutional
+					<p class="pt-2 text-h5 font-medium text-trbase text-justify">The tool is designed for institutional
 						funders
 						(global, domestic, CSR) who are seeking a deeper understanding of how they can strengthen their
 						own
@@ -145,7 +145,7 @@
 							</div>
 							<div class="">
 								<h4 class="font-bold text-h5 text-sebase font-serif">Part 1 - Funding practices diagnostic</h4>
-								<p class="text-trbase text-sm py-2">
+								<p class="text-trbase text-sm py-2 text-justify">
 									Take a quick diagnostic of your organization’s funding beliefs and practices to
 									identify specific principles that would be most relevant for you to enhance your
 									grantmaking.
@@ -174,7 +174,7 @@
 							<div class="">
 								<h4 class="font-bold text-sebase text-h5 font-serif">Part 2 – Assistive guides for each
 									principle</h4>
-								<p class="text-trbase text-sm py-2">
+								<p class="text-trbase text-sm py-2  text-justify">
 									Use these guides to map your current practices on the five PWIT principles, across
 									various elements spanning policy, approaches, communication, etc., to understand the
 									strengths and gaps in your funding practices. The guides for most principles are
@@ -226,7 +226,7 @@
 							<div class="">
 								<h4 class="font-bold text-sebase text-h5 font-serif">Optional Survey Before Accessing Guides
 								</h4>
-								<p class="text-trbase text-sm p-1 ">
+								<p class="text-trbase text-sm p-1  text-justify">
 									Visit Link and fill out the short survey before proceeding to the principle-specific
 									assistive guides,
 									to understand which principles might be most relevant for you. You may feel free to
@@ -246,7 +246,7 @@
 							</div>
 							<div class="">
 								<h4 class="font-bold text-sebase text-h5 font-serif">Complete the Tool in One Session</h4>
-								<p class="text-trbase text-sm p-1 ">
+								<p class="text-trbase text-sm p-1  text-justify">
 									The tool is designed to be completed in one session; however, you can pause and
 									return to this later. Please do not close the browser window as results for
 									completed sessions will not be saved. You will be provided the opportunity to email
@@ -267,7 +267,7 @@
 							</div>
 							<div class="">
 								<h4 class="font-bold text-h5 text-sebase font-serif">Expect Level 1 and 2 Ratings in Part 2</h4>
-								<p class="text-trbase text-sm p-1 ">
+								<p class="text-trbase text-sm p-1  text-justify">
 									As you go through Part 2 of the tool, it is possible that you will have certain
 									Level 1 and 2 ratings.
 									Few will achieve Level 4, and in some cases, Level 4 is not the desired end state.
@@ -287,7 +287,7 @@
 							<div class="">
 								<h4 class="font-bold text-h5 text-sebase font-serif"> Generate a Summary Report Upon Completion
 								</h4>
-								<p class="text-sm p-1 text-trbase">
+								<p class="text-sm p-1 text-trbase text-justify">
 									Upon completion, you will have the option of generating a summary report which
 									provides an overview of your assessment and
 									recommendations to strengthen your practices. Please save a copy of the report to
@@ -308,7 +308,7 @@
 							<div class="">
 								<h4 class="font-bold text-h5 text-sebase font-serif"> Use Insights for Strategic Discussions and
 									Team Conversations on Improving Grantmaking</h4>
-								<p class="text-sm p-1 text-trbase">
+								<p class="text-sm p-1 text-trbase text-justify">
 									We encourage you to use the insights for strategic discussions on enhancing your
 									grantmaking as well as in conversations with your teams.
 								</p>
@@ -326,7 +326,7 @@
 							</div>
 							<div class="">
 								<h4 class="font-bold text-sebase text-h5 font-serif"> Your Responses Are Confidential</h4>
-								<p class="text-sm p-1 text-trbase">
+								<p class="text-sm p-1 text-trbase text-justify">
 									Your responses are confidential and protected and may only be seen by the
 									development team.
 									Any trends interfered from this data will only be made at an aggregate level, based
