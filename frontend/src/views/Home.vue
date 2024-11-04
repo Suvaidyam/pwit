@@ -1,16 +1,16 @@
 <template>
 	<div class="w-full h-screen">
-		<div class="w-full px-4 md:px-8 lg:px-20 flex flex-col gap-2 md:gap-5 justify-center h-24 md:h-40 items-center">
-			<h1 class="text-[33px] font-bold text-4xl lg:text-[64px] text-primary font-serif">Assistive Funder Toolkit
+		<div class="w-full px-4 md:px-8 lg:px-20 flex flex-col gap-2 md:gap-3 justify-center h-24 md:h-40 items-center">
+			<h1 class="text-h2 font-bold lg:text-[64px] text-primary font-serif">Assistive Funder Toolkit
 			</h1>
-			<p class="px-4 text-center md:font-extrabold text-[#4f4f4f] text-base md:text-xl font-serif">Developed under
+			<p class="px-4 text-center md:font-extrabold text-[#4f4f4f] text-h5 font-serif">Developed under
 				the
 				Pay-What-It-Takes India Initiative</p>
 		</div>
 		<!--  -->
 		<div class="w-full bg-tatary px-4 md:px-8 lg:px-20 py-6 mt-7">
-			<h4 class="text-center text-3xl font-bold text-[#20252b] my-6 font-serif">About the tool</h4>
-			<div class="flex text-[16px] justify-center text-center">
+			<h4 class="text-center text-h2 font-bold text-[#20252b] my-6 font-serif">About the tool</h4>
+			<div class="flex justify-center text-h5 text-center">
 				Philanthropy has a significant opportunity to amplify the impact of its grantmaking
 				by enabling a stronger and more resilient nonprofit sector. Bridgespan’s Pay-What-It-Takes
 				India Initiative has identified five principles of effective grantmaking, rooted in trust,
@@ -100,7 +100,7 @@
 
 			</div>
 
-			<div class="flex justify-center text-[16px] my-8">
+			<div class="flex justify-center text-h5 my-8">
 				As funders recognize the importance of making grantmaking more supportive and inclusive, there is a
 				need
 				to pursue actionable strategies to advance on this journey. The Funder Practices Assistive Tool is
