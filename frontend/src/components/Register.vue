@@ -25,13 +25,13 @@
                                 </div>
                                 <div class="flex flex-col gap-3 pt-4">
                                     <div class="flex flex-col gap-2 w-full">
-                                        <label  id="inputId1" for="full_name" class="text-sm text-tatary">
+                                        <label  for="full_name" class="text-sm text-tatary">
                                             Full Name
                                             <span class="text-red-500">
                                                 *
                                             </span>
                                         </label>
-                                        <input v-model="full_name" type="text" id="full_name"
+                                        <input  @input="resetBorder"  v-model="full_name"  type="text" id="full_name"
                                             class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5"
                                             placeholder="Enter Full Name">
                                     </div>
@@ -104,16 +104,18 @@ watch(() => store.auth, (value) => {
 const register = async () => {
     const email = document.getElementById('emailInputId');  
     const password = document.getElementById('passwordInputId'); 
+    const full_name = document.getElementById('full_name'); 
 
-    if (!email.value || !password.value) {
-        // alert("Please enter both email and password");
-        if (!email.value) {
-            email.style.borderBottom = '1px solid red';
-        } 
-
-        if (!password.value) {
-            password.style.borderBottom = '1px solid red';  
-        }  
+    if (!full_name.value || !email.value || !password.value) {
+    if (!full_name.value) {
+        full_name.style.borderBottom = '1px solid red'; // Corrected line
+    }
+    if (!email.value) {
+        email.style.borderBottom = '1px solid red';
+    } 
+    if (!password.value) {
+        password.style.borderBottom = '1px solid red';  
+    } 
         return; 
     } else {
      

@@ -17,7 +17,7 @@
                         *
                     </span>
                 </label>
-                <input @input="resetBorder" id="inputId2"  v-model="data.email" type="email" placeholder="Enter Email Address"
+                <input  @input="resetBorder" id="inputId2"  v-model="data.email" type="email" placeholder="Enter Email Address"
                     class="w-full px-3 border-b bg-[#f3f4f8] border-gray-300   shadow-sm py-2 outline-none">
             </div>
             <div>
