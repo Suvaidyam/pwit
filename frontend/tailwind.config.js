@@ -14,6 +14,9 @@ export default {
         'primary': 'var(--color-text-primary)',
         'secondary': 'var(--color-text-secondary)',
         'tatary': 'var(--color-text-tatary)',
+        'pbase': 'var(--color-text-pbase)',
+        'sebase': 'var(--color-text-sebase)',
+        'trbase': 'var(--color-text-trbase)',
       },
       fontSize: {
         'h1': 'var(--font-size-h1)',
