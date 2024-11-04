@@ -6,9 +6,9 @@
                         <ArrowLeftIcon class="h-4 w-4 inline-block " />
                         Back
                     </p>
-                    <h1 class="text-3xl font-semibold text-blue-900">Pathway for funders to strengthen their grant
+                    <h1 class="text-h2 font-bold  text-[#002C77] font-serif">Pathway for funders to strengthen their grant
                         making practices</h1>
-                    <p class="text-gray-700 mt-3">
+                    <p class="text-sebase pt-3  font-normal text-sm text-justify">
                         Funders can pursue or advance their journey on one or more principles; however, we recognize
                         that a step-by-step approach
                         would allow this exercise to become more meaningful and effective. This section presents three
@@ -18,16 +18,16 @@
                     </p>
                 </div>
                 <div class="flex items-center justify-center my-14">
-                    <div class="border-t border-gray-300 flex-grow"></div>
-                    <p class="px-4  text-gray-700 font-semibold text-xl">Recommended principles</p>
-                    <div class="border-t border-gray-300 flex-grow"></div>
+                    <div class="border-t border-[#D0D1D3] flex-grow"></div>
+                    <p class="px-4  text-sebase font-bold text-h4 font-serif ">Recommended principles</p>
+                    <div class="border-t border-[#D0D1D3] flex-grow"></div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-12 mt-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-12 pt-4">
                     <!-- Card 1 -->
                     <router-link to="/funder/core-costs"
-                        class="bg-white shadow-lg rounded-lg p-4 min-h-60 border-t-4 border-[#5d497d]">
-                        <div class="rounded-md bg-white relative">
+                        class="bg-white shadow-lg rounded-lg p-4 h-56  border-t-4 border-[#5d497d]">
+                        <div class="rounded-md bg-white relative shadow-lg">
                             <div
                                 class="w-[70px] h-[70px] rounded-full border-8 border-[#5d497d] absolute -top-14 bg-white justify-center items-center flex">
                                 {{ }} <svg width="34" height="22" viewBox="0 0 34 22" fill="none"
@@ -39,20 +39,19 @@
                             </div>
                         </div>
 
-                        <div class="flex items-center mt-8">
+                        <div class="flex items-center pt-8">
                             <div>
-                                <h3 class="text-lg font-semibold text-[#5d497d]">DEVELOP MULTIYEAR FUNDER-NONPROFIT
+                                <h3 class="text-h5 font-bold text-[#604B81]">DEVELOP MULTIYEAR FUNDER-NONPROFIT
                                     PARTNERSHIPS</h3>
-                                <p class="text-gray-600 text-sm mt-1"> Multiyear partnerships nurture trust between
+                                <p class="text-[trbase] text-h6 font-normal pt-1 text-justify"> Multiyear partnerships nurture trust between
                                     funders and nonprofits while simplifying the grantmaking process. Adopting a
                                     longer-term partnership approach can help funders increasingly focus on creating
                                     lasting change, over immediate and short-term outputs.</p>
-                                <p class="text-gray-400 text-xs mt-2">Last updated on: 12/10/2024</p>
                             </div>
                         </div>
                     </router-link>
                     <!-- Card 2 -->
-                    <div class="bg-white shadow-lg rounded-lg p-4 border-t-4 border-[#136096] ">
+                    <div class="bg-white shadow-lg rounded-lg p-4 h-56  border-t-4 border-[#136096] ">
                         <div class="rounded-md bg-white relative">
                             <div
                                 class="w-[70px] h-[70px] rounded-full border-8 border-[#136096] absolute -top-14 bg-white justify-center items-center flex">
@@ -65,20 +64,19 @@
 
                             </div>
                         </div>
-                        <div class="flex items-center mt-8">
+                        <div class="flex items-center pt-8">
                             <div>
-                                <h3 class="text-lg font-semibold text-[#136096]">PAY A FAIR SHARE OF CORE COSTS</h3>
-                                <p class="text-gray-600 text-sm mt-1">Core costs — often referred to as indirect costs —
+                                <h3 class=" text-h5 font-bold text-[#145A95]">PAY A FAIR SHARE OF CORE COSTS</h3>
+                                <p class="text-[trbase] text-h6 font-normal pt-1 text-justify">Core costs — often referred to as indirect costs —
                                     are functions are essential for nonprofits to conduct day-to-day operations and
                                     deliver on their impact mandates. Supporting nonprofits in this regard aligns with
                                     funders goals of ensuring that nonprofits have the critical investments required to
                                     enable operational effectives, have sound...</p>
-                                <p class="text-gray-400 text-xs mt-2">Last updated on: 12/10/2024</p>
                             </div>
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="bg-white shadow-lg rounded-lg p-4 border-t-4 border-[#029fd9]">
+                    <div class="bg-white shadow-lg rounded-lg h-56  p-4 border-t-4 border-[#029fd9]">
                         <div class="rounded-md bg-white relative">
                             <div
                                 class="w-[70px] h-[70px] rounded-full border-8 border-[#029fd9] absolute -top-14 bg-white justify-center items-center flex">
@@ -90,25 +88,24 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="flex items-center mt-8">
+                        <div class="flex items-center pt-8">
                             <div>
-                                <h3 class="text-lg font-semibold text-[#029fd9]">INVEST IN ORGANIZATIONAL DEVELOPMENT
+                                <h3 class=" text-h5 font-bold text-[#00A9E0]">INVEST IN ORGANIZATIONAL DEVELOPMENT
                                 </h3>
-                                <p class="text-gray-600 text-sm mt-1">Organizational development (OD) investments build
+                                <p class=" text-[trbase] text-h6 font-normal pt-1 text-justify">Organizational development (OD) investments build
                                     and strengthen a range of critical efficiency and growth-oriented capabilities that
                                     enable nonprofits to deliver greater impact.</p>
-                                <p class="text-gray-400 text-xs mt-2">Last updated on: 12/10/2024</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="flex items-center justify-center my-14">
-                    <div class="border-t border-gray-300 flex-grow"></div>
-                    <p class="text-gray-700 font-semibold text-xl">Additional PWIT principles to explore principles</p>
-                    <div class="border-t border-gray-300 flex-grow"></div>
+                    <div class="border-t border-[#D0D1D3] flex-grow"></div>
+                    <p class="px-4  text-sebase font-bold text-h4 font-serif ">Additional PWIT principles to explore principles</p>
+                    <div class="border-t border-[#D0D1D3] flex-grow"></div>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-12 my-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-12 py-6">
                     <!-- Card 4 -->
                     <div class="bg-white shadow-lg rounded-lg p-4 border-t-4 border-[#058248]">
                         <div class="rounded-md bg-white relative">
@@ -123,15 +120,14 @@
 
                             </div>
                         </div>
-                        <div class="flex items-center mt-8">
+                        <div class="flex items-center pt-8">
                             <div>
-                                <h3 class="text-lg font-semibold text-[#058248]">BUILD FINANCIAL RESILIENCE</h3>
-                                <p class="text-gray-600 text-sm mt-1"> Financial resilience refers to a nonprofit’s
+                                <h3 class=" text-h5 font-bold text-[#008542]">BUILD FINANCIAL RESILIENCE</h3>
+                                <p class=" text-[trbase] text-h6 font-normal pt-1 text-justify"> Financial resilience refers to a nonprofit’s
                                     ability to sustain its operations over the long term and withstand external stresses
                                     and shocks. By supporting nonprofits build their financial resilience, funders can
                                     ensure the sustainability of the organization and its ability to continue creating
                                     impact in the communities in which they work.</p>
-                                <p class="text-gray-400 text-xs mt-2">Last updated on: 12/10/2024</p>
                             </div>
                         </div>
                     </div>
@@ -149,17 +145,16 @@
 
                             </div>
                         </div>
-                        <div class="flex items-center mt-8">
+                        <div class="flex items-center pt-8 ">
                             <div>
-                                <h3 class="text-lg font-semibold text-[#f38714]">EMBED DIVERSITY EQUITY, AND INCLUSION
+                                <h3 class=" text-h5 font-bold text-[#EF8613]">EMBED DIVERSITY EQUITY, AND INCLUSION
                                     IN GRANTMAKING</h3>
-                                <p class="text-gray-600 text-sm mt-1"> An intentional focus on DEI can help funders
+                                <p class=" text-[trbase] text-h6 font-normal pt-1 text-justify"> An intentional focus on DEI can help funders
                                     address the disproportional funding gap that persists by organizations not located
                                     in major cities and headed by members of historically marginalized populations such
                                     as Dalit, Bahujan and Adivasi (DBA) communities. An intentional focus on DEI can
                                     help funders address the disproportionate financial gap these critical agents of
                                     social change face and thus accelerate progress on India’s steepest challenges.</p>
-                                <p class="text-gray-400 text-xs mt-2">Last updated on: 12/10/2024</p>
                             </div>
                         </div>
                     </div>

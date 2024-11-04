@@ -4,16 +4,19 @@
             <ArrowLeftIcon class="h-4 w-4 inline-block " />
             Back
         </p>
-        <h1 class="text-3xl px-4 md:px-8 lg:px-20 tracking-wide font-serif text-primary font-semibold">
+        <h1 class="text-h2 px-4 md:px-8 lg:px-20 tracking-wide font-serif text-primary font-bold">
             Funder Diagnostic
         </h1>
+        <p class="text-sm px-4 md:px-8 lg:px-20   font-serif text-sebase font-normal">
+            Please select the degree to which your organization’s mindset and practices agree or disagree with the following statements:
+        </p>
         <div class="w-full flex flex-col gap-4 px-4 md:px-8 lg:px-20 py-5 mt-4 bg-gray-100">
             <div v-for="(item, index) in data" :key="item.name">
                 <div class="flex gap-3">
                     <div class="w-6 h-6 flex items-center justify-center text-xs rounded-full bg-gray-800 text-white">
                         {{ index + 1 }}
                     </div>
-                    <h1 class="text-sm">{{ item.name1 }}</h1>
+                    <h1 class="text-h5 font-normal ">{{ item.name1 }}</h1>
                 </div>
                 <div class="flex flex-col md:flex-row gap-3 pl-9 pt-2">
                     <div v-for="el in item.option" :key="el.name"
