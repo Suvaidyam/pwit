@@ -4,15 +4,13 @@
         <h1 class="text-h2 font-serif font-bold text-primary pb-4">Diversity, Equity, Inclusion</h1>
         <div class="w-full pt-1">
             <div class="relative inline-block text-buttom w-full">
-                <details class=" w-full">
-                    <summary class="flex w-full justify-between items-center px-4 py-3 bg-[#e9eaec] text-h5  font-bold font-serif text-pbase ">
+                <details   class=" w-full" open>
+                    <summary class="flex w-full justify-between items-center px-4 py-3 bg-[#e9eaec] text-h5  font-bold font-serif text-pbase " aria-expanded="true">
                         Introduction
-                        <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg   width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.833252 0.333008L4.99992 4.49967L9.16658 0.333008H0.833252Z" fill="#1E1E1E"/>
                         </svg>
-
                     </summary>
-                    
                     <div class="absolute mt-2 w-full bg- h-auto pb-3 ">
                     <div class="py-1" role="menu" aria-orientation="vertical">
                         <div class="w-full pt-4 flex gap-4">
@@ -86,6 +84,6 @@
 
 <script setup>
 import Breadcrumb from '../../components/Breadcrumb.vue';
-import PickAssessment from '../../components/PickAssessment.vue'
+import PickAssessment from '../../components/PickAssessment.vue';
  
 </script>

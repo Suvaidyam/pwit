@@ -1,7 +1,12 @@
 <template>
     <div :class="store.sidebar ? 'block' : 'hidden md:block'"
-        class="w-16 md:w-60 h-screen fixed top-0 pt-20 left-0 z-20">
-        <div class="w-full h-full bg-primary p-2 ">
+        class="w-16 md:w-60 h-screen fixed top-0 left-0 z-20">
+        <div class=" fixed flex justify-end items-center  bg-white z-20 px-4 md:px-10 lg:px-20 h-20 ">
+            <router-link to="/" class="text-2xl font-bold text-primary">
+            <img :src="`http://pwit.localhost:8000/files/logo.png`" class="w-40 h-14" alt="">
+        </router-link>
+        </div>
+        <div class="w-full h-full bg-primary px-3 pt-24 ">
             <p title="close" @click="store.sidebar = false" class="bg-primary py-1 hover:bg-white hover:text-black rounded-md cursor-pointer mb-1 block md:hidden text-white w-full text-center">X</p>
             <p class="pl-2 py-2 font-bold text-[11px] hidden md:block text-white">RECOMMENDED PRINCIPLES</p>
             <router-link to="/funder/multi-year-artnerships"

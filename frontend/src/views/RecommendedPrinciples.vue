@@ -154,7 +154,8 @@
                                     in major cities and headed by members of historically marginalized populations such
                                     as Dalit, Bahujan and Adivasi (DBA) communities. An intentional focus on DEI can
                                     help funders address the disproportionate financial gap these critical agents of
-                                    social change face and thus accelerate progress on India’s steepest challenges.</p>
+                                    social change face and thus accelerate progress on India’s steepest challenges.
+                                </p>
                             </div>
                         </div>
                     </div>
