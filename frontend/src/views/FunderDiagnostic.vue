@@ -97,7 +97,7 @@ const data = ref([
     },
 ])
 const submit = () => {
-    console.log(data.value)
-    // router.push('/recommended')
+    // console.log(data.value)
+    router.push('/recommended')
 }
 </script>

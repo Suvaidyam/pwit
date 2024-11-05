@@ -1,14 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
-import authRoutes from './auth';
-import RecommendedPrinciples from '../views/RecommendedPrinciples.vue'
-import FunderDiagnostic from '../views/FunderDiagnostic.vue'
-import SubRoute from '../views/funder/SubRoute.vue'
-import CoreCosts from '../views/funder/CoreCosts.vue'
-import MultiPartnerships from '../views/funder/MultiPartnerships.vue'
-import OrganizationDev from '../views/funder/OrganizationDev.vue'
-import DiversityEquity from '../views/funder/DiversityEquity.vue'
- 
+import Home from "../views/Home/Home.vue";
+import RecommendedPrinciples from '../views/RecommendedPrinciples.vue';
+import FunderDiagnostic from '../views/FunderDiagnostic.vue';
+import SubRoute from '../views/Assessment/SubRoute.vue';
+import Assessment from '../views/Assessment/Assessment.vue';
+
 const routes = [
   {
     path: "/",
@@ -26,43 +22,11 @@ const routes = [
     component: FunderDiagnostic,
   },
   {
-    path: "/funder",
-    name: "Funders",
+    path: '/funder',
+    name: 'Assessment',
     component: SubRoute,
-    children: [
-      {
-        path: "core-costs",
-        name: "CoreCosts",
-        component: CoreCosts,
-      },
-      {
-        path: "multi-year-artnerships",
-        name: "MultiPartnerships",
-        component: MultiPartnerships,
-      },
-      {
-        path: "organization-development",
-        name: "OrganizationDev",
-        component: OrganizationDev,
-      },
-      {
-        path: "organization-development",
-        name: "OrganizationDevelopment",
-        component: CoreCosts,
-      },
-      {
-        path: "rinancial-resilience",
-        name: "FinancialResilience",
-        component: CoreCosts,
-      },
-      {
-        path: "diversity-equity-inclusion",
-        name: "DiversityEquity",
-        component: DiversityEquity,
-      },
-    ],
-  },
-  ...authRoutes,
+    children: []  
+  }
 ];
 
 const router = createRouter({
@@ -70,5 +34,22 @@ const router = createRouter({
   history: createWebHistory('/pwit'),
   routes,
 });
+ 
+export const initializeDynamicRoutes = async () => {
+  try {
+    const res = await fetch('/api/method/pwit.controllers.api.route');
+    const routeList = await res.json();
+    const funderRoutes = routeList?.message?.data?.map(route => ({
+      ...route,
+      component: Assessment,  
+    }));
+ 
+    for (const route of funderRoutes) {
+      router.addRoute('Assessment', route);
+    }
+  } catch (error) {
+    console.error("Failed to fetch routes:", error);
+  }
+};
 
 export default router;

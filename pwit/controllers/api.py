@@ -1,5 +1,6 @@
 import frappe
 from pwit.controllers.auth import AuthAPIs
+from pwit.controllers.left_menu import LeftMenuAPIs
 
 @frappe.whitelist(allow_guest=True)
 def create_session():
@@ -21,3 +22,11 @@ def contact_us(data):
 def get_faq():
     data = frappe.get_all('FAQs',fields=['name','question','answer'])
     return {'code':200,'data':data}
+
+@frappe.whitelist(allow_guest=True)
+def left_menu_list():
+    return LeftMenuAPIs.left_menu_list()
+
+@frappe.whitelist(allow_guest=True)
+def route():
+    return LeftMenuAPIs.route()

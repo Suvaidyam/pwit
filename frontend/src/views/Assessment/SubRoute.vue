@@ -8,5 +8,5 @@
 </template>
 
 <script setup>
-import LeftNav from '../../components/LeftNav.vue';
+import LeftNav from './LeftNav.vue';
 </script>
