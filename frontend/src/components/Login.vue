@@ -69,7 +69,7 @@
 </template>
 
 <script setup>
-import { ref, inject, watch ,onMounted} from 'vue'
+import { ref, inject, watch } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';

@@ -53,6 +53,32 @@ function validateEmail(email) {
 const call = inject('$call');
 const sendMessage = async () => {
     let session = JSON.parse(localStorage.getItem('session'));
+
+    const fullName = document.getElementById('inputId1');
+    const email = document.getElementById('inputId2');
+        let valid = true;
+        fullName.style.borderBottom = '';
+        email.style.borderBottom = '';
+
+        if (!fullName.value || !email.value) {
+            if (!fullName.value) {
+                fullName.style.borderBottom = '1px solid red';  
+                valid = false;
+            }
+
+            if (!email.value) {
+                email.style.borderBottom = '1px solid red'; 
+                valid = false;
+            }
+            return; 
+        }
+
+        if (!validateEmail(email.value)) {
+            email.style.borderBottom = '1px solid red'; 
+            toast.error("Invalid email address.");
+            valid = false;
+            return;  
+        }
     
     if (data.value.full_name && data.value.email) {
         try {
@@ -86,9 +112,7 @@ const sendMessage = async () => {
             }
         }
     } else {
-        // alert('Please fill all the fields');
-        document.getElementById('inputId1').style.borderBottom = '1px solid red';
-        document.getElementById('inputId2').style.borderBottom = '1px solid red';
+        // toast.error('Please fill all the fields');
     }
 };
 const resetBorder = (event) => {
