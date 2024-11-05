@@ -17,7 +17,7 @@
                         *
                     </span>
                 </label>
-                <input  @input="resetBorder" id="inputId2"  v-model="data.email" type="email" placeholder="Enter Email Address"
+                <input @input="resetBorder" id="inputId2"  v-model="data.email" type="email" placeholder="Enter Email Address"
                     class="w-full px-3 border-b bg-[#f3f4f8] border-gray-300   shadow-sm py-2 outline-none">
             </div>
             <div>
@@ -45,6 +45,11 @@ const data = ref({
     email: '',
     message: ''
 });
+    
+function validateEmail(email) {
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    return emailRegex.test(email);
+}
 const call = inject('$call');
 const sendMessage = async () => {
     let session = JSON.parse(localStorage.getItem('session'));
@@ -72,6 +77,13 @@ const sendMessage = async () => {
             }
         } catch (error) {
             toast.error('Request failed');
+            validateEmail();
+            const email = document.getElementById('inputId2').value;
+            if (validateEmail(email)) {
+                alert("Valid email address.");
+            } else {
+                toast.error("Invalid email address.");
+            }
         }
     } else {
         // alert('Please fill all the fields');

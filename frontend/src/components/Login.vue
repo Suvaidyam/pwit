@@ -95,35 +95,58 @@ watch(() => store.auth, (value) => {
         open.value = false;
     }
 });
+
+const validateEmail = (email) => {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(email);
+}
+
 const login = async () => {
     const email = document.getElementById('emailInputId');  
     const password = document.getElementById('passwordInputId'); 
+    let valid = true;  
+
+    email.style.borderBottom = '';
+    password.style.borderBottom = '';
 
     if (!email.value || !password.value) {
-        // alert("Please enter both email and password");
+        alert("Please enter both email and password");
+        
         if (!email.value) {
-            email.style.borderBottom = '1px solid red';
-        } 
-
-        if (!password.value) {
-            password.style.borderBottom = '1px solid red';  
-        } 
-        return
-    } else {
-        open.value = false;
-        let res = await auth.login(email.value, password.value);
-        if (res && cur_session.value) {
-            const response = await call('pwit.controllers.api.set_user_session', {name:cur_session.value, user:email.value})
-            if(response){
-                toast.success('Login Successful');
-                setTimeout(() => {
-                    window.location.reload()
-                }, 500);
-            }
+            email.style.borderBottom = '1px solid red';  
+            valid = false;  
         }
+        if (!password.value) {
+            password.style.borderBottom = '1px solid red'; 
+            valid = false; 
+        }
+        return;  
+    }
+    if (!validateEmail(email.value)) {
+        email.style.borderBottom = '1px solid red';  
+        toast.error("Invalid email address.");
+        valid = false; 
+        return;  
     }
 
+    open.value = false; 
+    let res = await auth.login(email.value, password.value);
+    
+    if (res && cur_session.value) {
+        const response = await call('pwit.controllers.api.set_user_session', {
+            name: cur_session.value,
+            user: email.value
+        });
+        
+        if (response) {
+            toast.success('Login Successful');
+            setTimeout(() => {
+                window.location.reload();
+            }, 500);
+        }
+    }
 };
+
 const openDialog = () => {
     open.value = true;
     store.auth = ''

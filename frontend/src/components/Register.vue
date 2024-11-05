@@ -100,41 +100,61 @@ watch(() => store.auth, (value) => {
         open.value = false;
     }
 });
+const validateEmail = (email) => {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(email);
+}
 
 const register = async () => {
-    const email = document.getElementById('emailInputId');  
-    const password = document.getElementById('passwordInputId'); 
-    const full_name = document.getElementById('full_name'); 
+    const emailEl = document.getElementById('emailInputId');
+    const passwordEl = document.getElementById('passwordInputId');
+    const fullNameEl = document.getElementById('full_name');
+    let valid = true;
+
+    fullNameEl.style.borderBottom = emailEl.style.borderBottom = passwordEl.style.borderBottom = '';
 
     if (!full_name.value || !email.value || !password.value) {
-    if (!full_name.value) {
-        full_name.style.borderBottom = '1px solid red'; // Corrected line
+        
+        if (!full_name.value) {
+            fullNameEl.style.borderBottom = '1px solid red';
+            valid = false;
+        }
+
+        if (!email.value) {
+            emailEl.style.borderBottom = '1px solid red';
+            valid = false;
+        } 
+
+        if (!password.value) {
+            passwordEl.style.borderBottom = '1px solid red';
+            valid = false;
+        }
+            return;  
     }
-    if (!email.value) {
-        email.style.borderBottom = '1px solid red';
-    } 
-    if (!password.value) {
-        password.style.borderBottom = '1px solid red';  
-    } 
-        return; 
+
+    if (!validateEmail(email.value)) {
+        emailEl.style.borderBottom = '1px solid red';
+        toast.error("Invalid email address.");
+        valid = false;
+        return
+    }
+    open.value = false;
+    const res = await call('pwit.controllers.api.register', {
+        data: {
+            email: email.value,
+            full_name: full_name.value,
+            password: password.value,
+        }
+    });
+
+    if (res.code === 200) {
+        toast.success('Registration Successful');
+        store.auth = 'Log In';
     } else {
-     
-     open.value = false;
-     let res = await call('pwit.controllers.api.register', {
-         data: {
-             email: email.value,
-             full_name: full_name.value,
-             password: password.value,
-         }
-     });
-     if (res.code === 200) {
-         toast.success('Registration Successful');
-         store.auth = 'Log In';
-     } else {
-         toast.error('Registration Failed');
-     }
- }
+        toast.error('Registration Failed');
+    }
 };
+
 
 const openDialog = () => {
     open.value = true;
