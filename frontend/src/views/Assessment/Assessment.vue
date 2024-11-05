@@ -1,7 +1,7 @@
 <template>
     <div class="p-4 w-full">
-        <Breadcrumb name="Core Costs" />
-        <h1 class="text-h2 font-serif font-semibold text-primary">Core Costs</h1>
+        <Breadcrumb  />
+        <h1 class="text-h2 font-serif font-semibold text-primary">{{ title }}</h1>
         <div class="flex flex-col pt-4">
             <div class="" v-for="(item, index) in question" :key="item.name">
                 <div class="flex gap-2">
@@ -37,9 +37,18 @@
     </div>
 </template>
 
-<script setup>
-import Breadcrumb from '../../components/Breadcrumb.vue'
 
+<script setup>
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router';
+import Breadcrumb from './Breadcrumb.vue'
+
+const route = useRoute() 
+const title = ref(splitAtSecondCapital(route.name));
+
+watch(route, (newVal, oldVal) => {
+    title.value = splitAtSecondCapital(newVal.name)
+})
 const question = [
     {
         name: 1,
@@ -68,4 +77,9 @@ const question = [
         ]
     },
 ]
+function splitAtSecondCapital(input) {
+  return input
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .trim(); 
+}
 </script>

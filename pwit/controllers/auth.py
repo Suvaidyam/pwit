@@ -41,3 +41,9 @@ class AuthAPIs:
             new_doc.update(data)
             new_doc.insert(ignore_permissions=True)
             return {'code':200,'data':new_doc} 
+        
+    def set_route_logs(session,route): 
+        doc = frappe.get_doc('Session',session)
+        doc.routes.append(route)
+        doc.save()
+        return {'code':200,'data':doc}

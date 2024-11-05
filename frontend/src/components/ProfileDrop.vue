@@ -4,7 +4,7 @@
             <MenuButton
                 class="inline-flex w-full justify-center gap-x-1.5 rounded-full bg-white p-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
                 <img v-if="auth?.cookie?.user_image" class="w-10 h-10 rounded-full" :src="auth?.cookie?.user_image" alt="">
-                <p class="w-10 h-10 flex items-center justify-center text-xl text-gray-600" v-else>{{ auth?.cookie?.full_name?.split('')[0] }}</p>
+                <p class="w-10 h-10 flex items-center justify-center text-xl font-normal text-gray-600" v-else>{{ auth?.cookie?.full_name?.split('')[0] }}</p>
             </MenuButton>
         </div>
 

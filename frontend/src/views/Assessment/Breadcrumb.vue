@@ -12,9 +12,21 @@
 </template>
 
 <script setup>
-import { ref ,inject} from 'vue'
+import { ref ,inject, watch} from 'vue'
+import { useRoute } from 'vue-router';
 
+const route = useRoute() 
 const store = inject('store')
-const props = defineProps(['name']);
-const title = ref(props.name)
+const title = ref(splitAtSecondCapital(route.name));
+
+watch(route, (newVal, oldVal) => {
+    title.value = splitAtSecondCapital(newVal.name)
+})
+
+function splitAtSecondCapital(input) {
+  return input
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .trim(); 
+}
+
 </script>

@@ -5,7 +5,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "user"
+  "user",
+  "routes"
  ],
  "fields": [
   {
@@ -13,12 +14,18 @@
    "fieldtype": "Link",
    "label": "User",
    "options": "User"
+  },
+  {
+   "fieldname": "routes",
+   "fieldtype": "Table",
+   "label": "Routes",
+   "options": "Route Child"
   }
  ],
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-02 15:59:15.782615",
+ "modified": "2024-11-05 10:02:33.968676",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Session",

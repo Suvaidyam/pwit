@@ -375,9 +375,9 @@
 </template>
 <script setup>
 import { inject, ref, onMounted } from 'vue';
-import FooterNav from '../components/FooterNav.vue';
-import PickAssessment from '../components/PickAssessment.vue';
-import ContactUs from '../components/ContactUs.vue';
+import FooterNav from '../../components/FooterNav.vue';
+import PickAssessment from './PickAssessment.vue';
+import ContactUs from './ContactUs.vue';
 
 const call = inject('$call');
 let faqs_list = ref([]);
