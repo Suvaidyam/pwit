@@ -2,7 +2,7 @@ import frappe
 
 class LeftMenuAPIs:
     def left_menu_list():
-        left_menu = frappe.get_all('Left-Menu',fields=['name','label','icon','ref_doctype','type'],filters={'disabled':0})
+        left_menu = frappe.get_all('Left-Menu',fields=['name','label','icon','ref_doctype','type'],filters={'disabled':0},order_by='label')
         grouped_menu = {}
         for item in left_menu:
             if not grouped_menu.get(item.type):
