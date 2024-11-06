@@ -1,6 +1,7 @@
 import frappe
 from pwit.controllers.auth import AuthAPIs
 from pwit.controllers.left_menu import LeftMenuAPIs
+from pwit.controllers.assessment import AssessmentAPIs
 
 @frappe.whitelist(allow_guest=True)
 def create_session():
@@ -30,3 +31,7 @@ def left_menu_list():
 @frappe.whitelist(allow_guest=True)
 def route():
     return LeftMenuAPIs.route()
+
+@frappe.whitelist(allow_guest=True)
+def question_list(doctype):
+    return AssessmentAPIs.question_list(doctype)
