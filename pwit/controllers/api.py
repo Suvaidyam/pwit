@@ -33,5 +33,9 @@ def route():
     return LeftMenuAPIs.route()
 
 @frappe.whitelist(allow_guest=True)
+def set_route_logs(session,route):
+    return AuthAPIs.set_route_logs(session,route)
+
+@frappe.whitelist(allow_guest=True)
 def question_list(doctype):
     return AssessmentAPIs.question_list(doctype)

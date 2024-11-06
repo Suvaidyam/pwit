@@ -25,7 +25,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-12 pt-4">
                     <!-- Card 1 -->
-                    <router-link to="/funder/core-costs"
+                    <router-link to="/funder/multi-year-partnerships"
                         class="bg-white shadow-lg rounded-lg p-4 h-56  border-t-4 border-[#5d497d]">
                         <div class="rounded-md bg-white relative shadow-lg">
                             <div
@@ -51,7 +51,7 @@
                         </div>
                     </router-link>
                     <!-- Card 2 -->
-                    <div class="bg-white shadow-lg rounded-lg p-4 h-56  border-t-4 border-[#136096] ">
+                    <router-link to="/funder/core-costs" class="bg-white shadow-lg rounded-lg p-4 h-56  border-t-4 border-[#136096] ">
                         <div class="rounded-md bg-white relative">
                             <div
                                 class="w-[70px] h-[70px] rounded-full border-8 border-[#136096] absolute -top-14 bg-white justify-center items-center flex">
@@ -74,9 +74,9 @@
                                     enable operational effectives, have sound...</p>
                             </div>
                         </div>
-                    </div>
+                    </router-link>
                     <!-- Card 3 -->
-                    <div class="bg-white shadow-lg rounded-lg h-56  p-4 border-t-4 border-[#029fd9]">
+                    <router-link to="/funder/organization-development" class="bg-white shadow-lg rounded-lg h-56  p-4 border-t-4 border-[#029fd9]">
                         <div class="rounded-md bg-white relative">
                             <div
                                 class="w-[70px] h-[70px] rounded-full border-8 border-[#029fd9] absolute -top-14 bg-white justify-center items-center flex">
@@ -97,7 +97,7 @@
                                     enable nonprofits to deliver greater impact.</p>
                             </div>
                         </div>
-                    </div>
+                    </router-link>
                 </div>
 
                 <div class="flex items-center justify-center my-14">
@@ -111,7 +111,7 @@
                         <div class="rounded-md bg-white relative">
                             <div
                                 class="w-[70px] h-[70px] rounded-full border-8 border-[#058248] absolute -top-14 bg-white justify-center items-center flex">
-                                {{ }} <svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                <svg width="26" height="25" viewBox="0 0 26 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M21.2687 0.264815C21.4185 0.38164 21.5397 0.531066 21.6231 0.701743C21.7065 0.872419 21.7499 1.05986 21.75 1.24982V3.87607C22.7466 4.89216 23.4803 6.13603 23.8875 7.49981H24.25C24.5815 7.49981 24.8995 7.63151 25.1339 7.86593C25.3683 8.10035 25.5 8.41829 25.5 8.74981V12.4998C25.4999 12.7319 25.4351 12.9594 25.3131 13.1567C25.191 13.3541 25.0164 13.5136 24.8088 13.6173L22.9887 14.5286C22.3541 15.5773 21.5062 16.481 20.5 17.1811V18.7498C20.5 19.0813 20.3683 19.3993 20.1339 19.6337C19.8995 19.8681 19.5815 19.9998 19.25 19.9998H15.5C15.1685 19.9998 14.8505 19.8681 14.6161 19.6337C14.3817 19.3993 14.25 19.0813 14.25 18.7498H13C13 19.0813 12.8683 19.3993 12.6339 19.6337C12.3995 19.8681 12.0815 19.9998 11.75 19.9998H8C7.66848 19.9998 7.35054 19.8681 7.11612 19.6337C6.8817 19.3993 6.75 19.0813 6.75 18.7498V17.1811C5.09016 16.026 3.88166 14.3316 3.33 12.3861C2.52091 12.1813 1.80324 11.7125 1.29064 11.0539C0.778043 10.3952 0.49981 9.58441 0.5 8.74981V8.12481C0.5 7.79329 0.631696 7.47535 0.866117 7.24093C1.10054 7.00651 1.41848 6.87481 1.75 6.87481C2.08152 6.87481 2.39946 7.00651 2.63388 7.24093C2.8683 7.47535 3 7.79329 3 8.12481V8.74981C2.99971 8.86474 3.01528 8.97915 3.04625 9.08982C3.27123 6.93825 4.28527 4.9463 5.89263 3.49845C7.49998 2.05061 9.5867 1.24952 11.75 1.24982H15.3462L20.1963 0.0373155C20.3806 -0.00875602 20.5729 -0.0122134 20.7588 0.0272071C20.9446 0.0666276 21.119 0.147888 21.2687 0.264815ZM18.625 6.24981C18.1277 6.24982 17.6508 6.44736 17.2992 6.79899C16.9475 7.15062 16.75 7.62753 16.75 8.12481C16.75 8.6221 16.9475 9.09901 17.2992 9.45064C17.6508 9.80227 18.1277 9.99981 18.625 9.99981C19.1223 9.99981 19.5992 9.80227 19.9508 9.45064C20.3025 9.09901 20.5 8.6221 20.5 8.12481C20.5 7.62753 20.3025 7.15062 19.9508 6.79899C19.5992 6.44736 19.1223 6.24982 18.625 6.24981Z"

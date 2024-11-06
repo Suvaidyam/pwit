@@ -25,7 +25,7 @@ const routes = [
     path: '/funder',
     name: 'Assessment',
     component: SubRoute,
-    children: []  
+    children: []
   }
 ];
 
@@ -34,16 +34,16 @@ const router = createRouter({
   history: createWebHistory('/pwit'),
   routes,
 });
- 
+
 export const initializeDynamicRoutes = async () => {
   try {
     const res = await fetch('/api/method/pwit.controllers.api.route');
     const routeList = await res.json();
     const funderRoutes = routeList?.message?.data?.map(route => ({
       ...route,
-      component: Assessment,  
+      component: Assessment,
     }));
- 
+
     for (const route of funderRoutes) {
       router.addRoute('Assessment', route);
     }
@@ -51,5 +51,19 @@ export const initializeDynamicRoutes = async () => {
     console.error("Failed to fetch routes:", error);
   }
 };
+
+router.beforeEach(async (to, from, next) => {
+  const session = JSON.parse(localStorage.getItem('session'))?.data?.name;
+  if (to.name && from.name) {
+    await fetch('/api/method/pwit.controllers.api.set_route_logs', {
+      method: 'POST',
+      body: JSON.stringify({ session: session, route: from.name + '/' + to.name }),
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+  }
+  next();
+});
 
 export default router;

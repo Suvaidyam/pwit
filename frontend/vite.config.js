@@ -16,7 +16,7 @@ export default defineConfig({
 		}
 	},
 	build: {
-		outDir: '../pwit/public/frontend',
+		outDir: '../pwit/public/pwit',
 		emptyOutDir: true,
 		target: 'es2015',
 	},
