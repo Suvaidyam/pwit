@@ -95,7 +95,7 @@ const data = [
         description: 'Multiyear partnerships nurture trust between funders and nonprofits while simplifying the grantmaking process. Adopting a longer-term partnership approach can help funders increasingly focus on creating lasting change, over immediate and short-term outputs.',
         icon:'',
         route: '/funder/multi-year-partnerships',
-        color: '#5d497d',
+        color: '#59467b',
         group: 'recommended'
     },
     {
@@ -113,7 +113,7 @@ const data = [
         description: 'Organizational development (OD) investments build and strengthen a range of critical efficiency and growth-oriented capabilities that enable nonprofits to deliver greater impact.',
         icon:'',
         route: '/funder/organization-development',
-        color: '#00A9E0',
+        color: '#029fd9',
         group: 'recommended'
     },
     {
@@ -131,9 +131,9 @@ const data = [
         description: 'An intentional focus on DEI can help funders address the disproportional funding gap that persists by organizations not located in major cities and headed by members of historically marginalized populations such as Dalit, Bahujan and Adivasi (DBA) communities. An intentional focus on DEI can help funders address the disproportionate financial gap these critical agents of social change face and thus accelerate progress on India’s steepest challenges.',
         icon:'',
         route: '/funder/diversity-equity-inclusion',
-        color: '#EF8613',
+        color: '#f38714',
         group: 'additional'
-    }
+    } 
 ]
 const recommended = ref(data.filter(item => item.group === 'recommended'))
 const additional = ref(data.filter(item => item.group === 'additional'))
