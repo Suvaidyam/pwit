@@ -31,7 +31,7 @@
                                                 *
                                             </span>
                                         </label>
-                                        <input  @input="resetBorder"  v-model="full_name"  type="text" id="full_name"
+                                        <input  @keydown.enter="register"  @input="resetBorder"  v-model="full_name"  type="text" id="full_name"
                                             class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5"
                                             placeholder="Enter Full Name">
                                     </div>
@@ -40,7 +40,7 @@
                                             Email Address
                                             <span class="text-red-500"> *</span>
                                         </label>
-                                        <input  @input="resetBorder"  id="emailInputId" v-model="email" type="email"
+                                        <input  @keydown.enter="register"   @input="resetBorder"  id="emailInputId" v-model="email" type="email"
                                             class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5"
                                             placeholder="Enter Email Address">
                                     </div>
@@ -49,7 +49,7 @@
                                             Password
                                             <span class="text-red-500"> *</span>
                                         </label>
-                                        <input  @input="resetBorder" id="passwordInputId" v-model="password" :type="show_pass ? 'text' : 'password'"
+                                        <input  @keydown.enter="register"  @input="resetBorder" id="passwordInputId" v-model="password" :type="show_pass ? 'text' : 'password'"
                                             class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5"
                                             placeholder="******">
                                         <span class="absolute right-2 top-10 text-xs cursor-pointer"
@@ -154,8 +154,6 @@ const register = async () => {
         toast.error('Registration Failed');
     }
 };
-
-
 const openDialog = () => {
     open.value = true;
     store.auth=''

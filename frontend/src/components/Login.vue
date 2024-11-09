@@ -30,7 +30,7 @@
                                         <label for="" class="text-sm text-tatary">Email Address
                                             <span class="text-red-500"> *</span>
                                         </label>
-                                        <input  @input="resetBorder"  id="emailInputId" v-model="email" type="email"
+                                        <input   @keydown.enter="login"  @input="resetBorder"  id="emailInputId" v-model="email" type="email"
                                             class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5"
                                             placeholder="Enter Email Address">
                                     </div>
@@ -38,7 +38,7 @@
                                         <label for="" class="text-sm text-tatary">Password
                                             <span class="text-red-500"> *</span>
                                         </label>
-                                        <input @input="resetBorder" id="passwordInputId" v-model="password" :type="show_pass ? 'text' : 'password'"
+                                        <input  @keydown.enter="login"  @input="resetBorder" id="passwordInputId" v-model="password" :type="show_pass ? 'text' : 'password'"
                                             class="outline-none w-full border-b-2 bg-gray-50 text-sm px-3 h-12 text-h5"
                                             placeholder="******">
                                         <span class="absolute right-2 top-10 font-semibold text-gray-500 text-xs cursor-pointer"

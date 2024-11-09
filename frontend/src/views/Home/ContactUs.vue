@@ -7,7 +7,7 @@
                     Full Name
                     <span class="text-red-500"> *</span>
                 </label>
-                <input @input="resetBorder" id="inputId1" v-model="data.full_name" type="text" placeholder="Enter Full Name"
+                <input @keydown.enter="sendMessage" @input="resetBorder" id="inputId1" v-model="data.full_name" type="text" placeholder="Enter Full Name"
                     class="w-full px-3 py-2 border-b  bg-[#f3f4f8] border-gray-300 shadow-sm outline-none ">
             </div>
             <div>
@@ -17,7 +17,7 @@
                         *
                     </span>
                 </label>
-                <input @input="resetBorder" id="inputId2"  v-model="data.email" type="email" placeholder="Enter Email Address"
+                <input @keydown.enter="sendMessage" @input="resetBorder" id="inputId2"  v-model="data.email" type="email" placeholder="Enter Email Address"
                     class="w-full px-3 border-b bg-[#f3f4f8] border-gray-300   shadow-sm py-2 outline-none">
             </div>
             <div>
