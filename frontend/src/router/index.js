@@ -4,6 +4,7 @@ import RecommendedPrinciples from '../views/RecommendedPrinciples.vue';
 import FunderDiagnostic from '../views/FunderDiagnostic.vue';
 import SubRoute from '../views/Assessment/SubRoute.vue';
 import Assessment from '../views/Assessment/Assessment.vue';
+import NotFound from '../views/NotFound.vue';
 
 const routes = [
   {
@@ -20,6 +21,11 @@ const routes = [
     path: "/funder-diagnostic",
     name: "Funder",
     component: FunderDiagnostic,
+  },
+  {
+    path: "/:pathMatch(.*)*",  
+    name: "NotFound",
+    component: NotFound,
   },
   {
     path: '/funder',

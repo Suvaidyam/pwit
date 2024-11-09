@@ -24,18 +24,14 @@ import { useRoute } from 'vue-router'
 const route = ref(useRoute())
 const store = inject('store')
 const call = inject('$call')
-const menu_list = ref({})
+const props = defineProps(['menu_list'])
+const menu_list = ref(props.menu_list) 
+
 watch(route, (newVal, oldVal) => {
     route.value = newVal
-})
+}) 
+watch(() => props.menu_list, (newVal, oldVal) => {
+    menu_list.value = newVal
+}, { deep: true, immediate: true })
 
-const leftMenu = async () => {
-    let res = await call('pwit.controllers.api.left_menu_list', {})
-    if (res.code == 200) {
-        menu_list.value = res.data
-    }
-}
-onMounted(() => {
-    leftMenu()
-})
 </script>
