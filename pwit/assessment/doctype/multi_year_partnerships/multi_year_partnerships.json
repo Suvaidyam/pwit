@@ -5,18 +5,25 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1"
+  "name1",
+  "session"
  ],
  "fields": [
   {
    "fieldname": "name1",
    "fieldtype": "Data",
    "label": "Name"
+  },
+  {
+   "fieldname": "session",
+   "fieldtype": "Link",
+   "label": "Session",
+   "options": "Session"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-05 15:19:50.915618",
+ "modified": "2024-11-09 10:28:44.682526",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Multi-year Partnerships",

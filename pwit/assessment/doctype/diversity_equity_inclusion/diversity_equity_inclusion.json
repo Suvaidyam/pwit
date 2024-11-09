@@ -5,18 +5,25 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1"
+  "name1",
+  "session"
  ],
  "fields": [
   {
    "fieldname": "name1",
    "fieldtype": "Data",
    "label": "Name"
+  },
+  {
+   "fieldname": "session",
+   "fieldtype": "Link",
+   "label": "Session",
+   "options": "Session"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-05 15:34:21.451883",
+ "modified": "2024-11-09 10:27:47.988736",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Diversity Equity Inclusion",
