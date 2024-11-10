@@ -10,6 +10,7 @@
         <p class="text-sm px-4 md:px-8 lg:px-20   font-serif text-sebase font-normal">
             Please select the degree to which your organization’s mindset and practices agree or disagree with the following statements:
         </p>
+        <FormView />
         <div class="w-full flex flex-col gap-4 px-4 md:px-8 lg:px-20 py-5 mt-4 bg-gray-100">
             <div v-for="(item, index) in data" :key="item.name">
                 <div class="flex gap-3">
@@ -42,7 +43,7 @@ import { ref } from 'vue'
 import { ArrowLeftIcon } from '@heroicons/vue/24/outline'
 import { useRouter } from 'vue-router'
 import FooterNav from '../components/FooterNav.vue';
-
+import FormView from '../components/sva_form_ui/FormView.vue';
 const router = useRouter()
 const data = ref([
     {

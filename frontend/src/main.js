@@ -7,6 +7,7 @@ import resourceManager from "./libs/resourceManager";
 import call from "./libs/controllers/call";
 import socket from "./libs/controllers/socket";
 import Auth from "./libs/controllers/auth";
+import {FeatherIcon} from 'frappe-ui';
 import { store } from "./Store";
 
 initializeDynamicRoutes().then(() => {
@@ -18,7 +19,7 @@ initializeDynamicRoutes().then(() => {
     // Plugins
     app.use(router);
     app.use(resourceManager);
-    
+    app.component("FeatherIcon",FeatherIcon)
     // Global Properties,
     // components can inject this
     app.provide("$auth", auth);
