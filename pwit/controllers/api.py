@@ -2,6 +2,7 @@ import frappe
 from pwit.controllers.auth import AuthAPIs
 from pwit.controllers.left_menu import LeftMenuAPIs
 from pwit.controllers.assessment import AssessmentAPIs
+from pwit.controllers.form import FormAPIs
 
 @frappe.whitelist(allow_guest=True)
 def create_session():
@@ -39,3 +40,7 @@ def set_route_logs(session,route):
 @frappe.whitelist(allow_guest=True)
 def question_list(doctype):
     return AssessmentAPIs.question_list(doctype)
+
+@frappe.whitelist(allow_guest=True)
+def get_meta(doctype):
+    return FormAPIs.get_meta(doctype)
