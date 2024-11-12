@@ -5,26 +5,46 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "session",
-  "name1"
+  "section_a_section",
+  "funder_diagnostic_1",
+  "funder_diagnostic_2",
+  "funder_diagnostic_3",
+  "funder_diagnostic_4"
  ],
  "fields": [
   {
-   "fieldname": "session",
-   "fieldtype": "Link",
-   "label": "Session",
-   "options": "Session"
+   "fieldname": "section_a_section",
+   "fieldtype": "Section Break",
+   "label": "Funding practices diagnostic (1/2)"
   },
   {
-   "fieldname": "name1",
+   "fieldname": "funder_diagnostic_1",
    "fieldtype": "Link",
-   "label": "Name",
+   "label": "A lower core cost (administrative or support-function expenses not tied to a specific program)  means a nonprofit is more efficient",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "funder_diagnostic_2",
+   "fieldtype": "Link",
+   "label": "We fund nonprofits when they seek money for organizational development that may not be  directly related to a program.",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "funder_diagnostic_3",
+   "fieldtype": "Link",
+   "label": "Changing nonprofit partners frequently creates competition amongst them, pushing them to  be more efficient.",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "funder_diagnostic_4",
+   "fieldtype": "Link",
+   "label": "We encourage our nonprofit partners to create an operating surplus and transfer the surplus  to reserves",
    "options": "Field Options"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-10 15:09:26.053490",
+ "modified": "2024-11-12 11:10:13.234640",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Funder Diagnostic",
