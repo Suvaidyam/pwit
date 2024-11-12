@@ -6,7 +6,7 @@
         </svg>
         <p class="text-gray-800 text-sm">
             <router-link to="/">Home</router-link>
-            / <router-link to="/recommended">Recommended Principles</router-link> <span class="text-gray-400">/ {{ title }}</span>
+           / <router-link to="/funder-diagnostic">Funder Diagnostic</router-link> / <router-link to="/recommended">Recommended Principles</router-link> <span class="text-gray-400 truncate">/ {{ title }}</span>
         </p>
     </div>
 </template>
