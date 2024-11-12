@@ -5,25 +5,32 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_a_section",
   "name1",
   "session"
  ],
  "fields": [
   {
    "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
+   "fieldtype": "Link",
+   "label": "Name",
+   "options": "Field Options"
   },
   {
    "fieldname": "session",
    "fieldtype": "Link",
    "label": "Session",
    "options": "Session"
+  },
+  {
+   "fieldname": "section_a_section",
+   "fieldtype": "Section Break",
+   "label": "Section A"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-09 10:29:01.335780",
+ "modified": "2024-11-12 17:43:24.451012",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Core Costs",

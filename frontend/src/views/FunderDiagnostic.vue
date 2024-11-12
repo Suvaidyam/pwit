@@ -46,11 +46,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { ArrowLeftIcon } from '@heroicons/vue/24/outline'
-import { useRouter } from 'vue-router'
-import FooterNav from '../components/FooterNav.vue';
-import FormView from '../components/sva_form_ui/FormView.vue';
+import FooterNav from '../components/FooterNav.vue'; 
+import {FormView} from '../../../../sva_form_vuejs/form_view.js';
 
 // const submit = () => {
 //     // console.log(data.value)
