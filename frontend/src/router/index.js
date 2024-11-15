@@ -68,7 +68,7 @@ router.beforeEach(async (to, from, next) => {
   if (to.name && from.name) {
     await fetch('/api/method/pwit.controllers.api.set_route_logs', {
       method: 'POST',
-      body: JSON.stringify({ session: session, route: from.name + '/' + to.name }),
+      body: JSON.stringify({ session: session, from: from.name,to: to.name }),
       headers: {
         'Content-Type': 'application/json',
       }

@@ -13,7 +13,7 @@
                     {{ name }}
                 </p>
                 <router-link :to="`/funder/${el.ref_doctype?.toLowerCase()?.split(' ').join('-')}`" v-for="el in items"
-                    :class="route.fullPath == '/funder/' + el.ref_doctype?.toLowerCase()?.split(' ').join('-') ? 'bg-white' : 'text-white'"
+                    :class="['/funder/' + el.ref_doctype?.toLowerCase()?.split(' ').join('-'),'/funder/' + el.ref_doctype?.toLowerCase()?.split(' ').join('-')+'/results'].includes(route.fullPath) ? 'bg-white' : 'text-white'"
                     class="text-sm px-2 h-10 flex gap-2 items-center justify-center md:justify-normal rounded-md mb-2 hover:bg-white hover:text-black">
                     <img :src="el.icon" alt="" class="w-5 h-5">
                     <p class="hidden md:block">{{ el.label }}</p>
@@ -30,6 +30,7 @@ const route = ref(useRoute())
 const store = inject('store')
 const call = inject('$call')
 const menu_list = ref({})
+
 watch(route, (newVal, oldVal) => {
     route.value = newVal
 })
