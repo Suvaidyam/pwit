@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-full pt-6">
+    <div class="w-full pt-6">
         <div class="flex gap-2 px-4 md:px-8 lg:px-20">
             <svg @click="store.sidebar = true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke-width="1.5" stroke="currentColor" class="size-6 cursor-pointer block md:hidden">
@@ -17,7 +17,7 @@
             Please select the degree to which your organization’s mindset and practices agree or disagree with the
             following statements:
         </p>
-        <div class="w-full flex flex-col gap-4 px-4 md:px-8 lg:px-20 py-5 mt-4 bg-gray-100">
+        <div class="w-full flex flex-col gap-4 px-4 md:px-8 lg:px-20 py-5 mt-4 bg-gray-50">
             <FormView :doctype="'Funder Diagnostic'" :section="true" isRoute="/recommended" />
             <!-- <div v-for="(item, index) in data" :key="item.name">
                 <div class="flex gap-3">
@@ -41,8 +41,8 @@
                 class="bg-secondary text-white px-6 py-2.5 text-sm border rounded-md">Submit</button>
             <button class="px-6 py-2.5 text-sm border rounded-md">Save as Draft</button>
         </div> -->
-        <FooterNav />
     </div>
+    <FooterNav />
 </template>
 
 <script setup>
