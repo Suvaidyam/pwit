@@ -6,22 +6,30 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "route"
+  "from",
+  "to"
  ],
  "fields": [
   {
-   "fieldname": "route",
+   "fieldname": "from",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Route",
+   "label": "From",
    "reqd": 1,
    "set_only_once": 1
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "To",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-11-05 10:03:09.436346",
+ "modified": "2024-11-15 12:54:02.835187",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Route Child",

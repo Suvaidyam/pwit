@@ -356,10 +356,10 @@
 								<p class="pt-1.5 text-sm">{{ item.question }}</p>
 								<span class="text-white font-bold text-2xl cursor-pointer">+</span>
 							</div>
-							<p class="mb-2 flex justify-between">
+							<div class="mb-2 flex justify-between">
 								<div v-html="item.answer"></div>
 								<!-- <span class="text-white font-bold text-2xl cursor-pointer">-</span> -->
-							</p>
+							</div>
 						</span>
 					</label>
 					<!--  -->

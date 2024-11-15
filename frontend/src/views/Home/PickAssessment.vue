@@ -106,7 +106,7 @@
                                                 <p class="text-sm font-medium">Develop multiyear funder-nonprofit
                                                     partnerships</p>
                                             </div>
-                                            <p class="text-primary text-sm cursor-pointer">View</p>
+                                            <router-link to="/funder/multi-year-partnerships" class="text-primary text-sm cursor-pointer">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 pt-3 items-center">
@@ -119,7 +119,7 @@
                                                 </div>
                                                 <p class="text-sm font-medium">Pay a fair share of core costs</p>
                                             </div>
-                                            <p class="text-primary text-sm cursor-pointer">View</p>
+                                            <router-link to="/funder/core-cost" class="text-primary text-sm cursor-pointer">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 pt-3 items-center">
@@ -132,7 +132,7 @@
                                                 </div>
                                                 <p class="text-sm font-medium">Invest in organizational development</p>
                                             </div>
-                                            <p class="text-primary text-sm cursor-pointer">View</p>
+                                            <router-link to="/funder/organizational-development" class="text-primary text-sm cursor-pointer">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 pt-3 items-center">
@@ -145,7 +145,7 @@
                                                 </div>
                                                 <p class="text-sm font-medium">Build financial resilience</p>
                                             </div>
-                                            <p class="text-primary text-sm cursor-pointer">View</p>
+                                            <router-link to="/funder" class="text-primary text-sm cursor-pointer">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 pt-3 items-center">
@@ -159,7 +159,7 @@
                                                 <p class="text-sm font-medium">Embed diversity, equity and inclusion in
                                                     grantmaking</p>
                                             </div>
-                                            <p class="text-primary text-sm cursor-pointer">View</p>
+                                            <router-link to="/funder/diversity-equity-inclusion" class="text-primary text-sm cursor-pointer">View</router-link>
                                         </div>
                                     </div>
                                 </div>
