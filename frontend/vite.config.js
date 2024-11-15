@@ -37,7 +37,7 @@ export default defineConfig({
 		},
 	},
 	build: {
-		outDir: "../pwit/public/frontend", // Adjusted for pwit
+		outDir: "../pwit/public/pwit", // Adjusted for pwit
 		emptyOutDir: true,
 		target: "es2015",
 		commonjsOptions: {
