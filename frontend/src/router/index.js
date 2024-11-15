@@ -5,6 +5,7 @@ import FunderDiagnostic from '../views/FunderDiagnostic.vue';
 import SubRoute from '../views/Assessment/SubRoute.vue';
 import Assessment from '../views/Assessment/Assessment.vue';
 import NotFound from '../views/NotFound.vue';
+import Results from "../views/Assessment/Results.vue";
 
 const routes = [
   {
@@ -31,7 +32,11 @@ const routes = [
     path: '/funder',
     name: 'Assessment',
     component: SubRoute,
-    children: []
+    children: [{
+      path:':category/results',
+      name: 'Results',
+      component: Results
+    }]
   }
 ];
 
