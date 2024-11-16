@@ -4,7 +4,7 @@
         <h1 class="text-h2 font-serif font-semibold text-primary">{{ title }}</h1>
         <transition name="fade" mode="out-in">
             <div  class="w-full h-full">
-               <FormView :doctype="title" :section="true" :key="title" :isRoute="`${current_path}/results`"/>
+               <FormView :doctype="title" :isTable="true" :section="true" :key="title" :isRoute="`${current_path}/results`"/>
             </div>
         </transition>
     </div>
