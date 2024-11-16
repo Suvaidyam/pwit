@@ -7,7 +7,7 @@
             </svg>
             <p class="text-gray-800 text-sm">
                 <router-link to="/">Home </router-link>
-                 <span class="text-gray-400">/ Funder Diagnostic</span>
+                <span class="text-gray-400">/ Funder Diagnostic</span>
             </p>
         </div>
         <h1 class="text-h2 px-4 md:px-8 lg:px-20 tracking-wide font-serif text-primary font-bold">
@@ -18,39 +18,31 @@
             following statements:
         </p>
         <div class="w-full flex flex-col gap-4 px-4 md:px-8 lg:px-20 py-5 mt-4 bg-gray-50">
-            <FormView :doctype="'Funder Diagnostic'" :section="true" isRoute="/recommended" />
-            <!-- <div v-for="(item, index) in data" :key="item.name">
-                <div class="flex gap-3">
-                    <div class="w-6 h-6 flex items-center justify-center text-xs rounded-full bg-gray-800 text-white">
-                        {{ index + 1 }}
-                    </div>
-                    <h1 class="text-h5 font-normal ">{{ item.name1 }}</h1>
-                </div>
-                <div class="flex flex-col md:flex-row gap-3 pl-9 pt-2">
-                    <div v-for="el in item.option" :key="el.name"
-                        class="flex gap-2 bg-white items-center px-4 py-1.5 border rounded-md"
-                        :class="{ 'border-[#3086c4]': el.checked }">
-                        <input type="checkbox" :id="el.name" v-model="el.checked" class="cursor-pointer" />
-                        <label :for="el.name" class="text-sm w-full truncate cursor-pointer">{{ el.name1 }}</label>
-                    </div>
-                </div>
-            </div> -->
+            <FormView 
+                :doctype="'Funder Diagnostic'" 
+                :isCard="true" 
+                :isDraft="true" 
+                :section="true"
+                :save_as_draft="save_as_draft"
+                isRoute="/recommended" 
+            />
         </div>
-        <!-- <div class="px-4 md:px-8 lg:px-20 py-4 flex gap-4 items-center">
-            <button @click="submit"
-                class="bg-secondary text-white px-6 py-2.5 text-sm border rounded-md">Submit</button>
-            <button class="px-6 py-2.5 text-sm border rounded-md">Save as Draft</button>
-        </div> -->
     </div>
     <FooterNav />
 </template>
 
 <script setup>
-import FooterNav from '../components/FooterNav.vue'; 
-import {FormView} from '../../../../sva_form_vuejs/form_view.js';
+import { ref ,inject} from 'vue';
+import FooterNav from '../components/FooterNav.vue';
+import { FormView } from '../../../../sva_form_vuejs/form_view.js';
 
-// const submit = () => {
-//     // console.log(data.value)
-//     router.push('/recommended')
-// }
+const store = inject('store');
+const auth = inject('$auth');
+const save_as_draft = () => {
+    if(auth.isLoggedIn){
+        console.log('save as draft');
+    }else{
+        store.auth = 'Log In';
+    } 
+}
 </script>
