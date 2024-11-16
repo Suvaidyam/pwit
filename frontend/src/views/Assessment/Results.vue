@@ -40,33 +40,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="border-b">
-                                    <td class="w-1/2 px-4 py-2 font-serif text-pbase border border-gray-200">
-                                        Policy guidelines
+                                <tr v-for="recommendation in recommendations" :key="recommendation.title"
+                                    class="border-b">
+                                    <td class="w-1/2 px-4 py-2 font-normal text-h6 text-pbase border border-gray-200">
+                                        {{ recommendation.title }}
                                     </td>
                                     <td class="py-2 px-4">
-                                        <div class="h-4 bg-gray-200">
-                                            <div class="h-4 bg-orange-400 w-3/6"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="border">
-                                    <td class="w-1/2 px-4 py-2 font-serif text-pbase border border-gray-200">
-                                        Annual budget allocation
-                                    </td>
-                                    <td class="py-2 px-4">
-                                        <div class="h-4 bg-gray-200">
-                                            <div class="h-4 bg-yellow-400 w-3/6"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="border">
-                                    <td class="w-1/2 px-4 py-2 font-serif text-pbase border border-gray-200">
-                                        Another parameter
-                                    </td>
-                                    <td class="py-2 px-4">
-                                        <div class="h-4 bg-gray-200">
-                                            <div class="h-4 bg-yellow-400 w-3/6"></div>
+                                        <div v-for="(item, idx) in recommendation.items" :key="idx"
+                                            class="h-4 bg-gray-200">
+                                            <div class="h-4 " :style="{ width: item.chart + '%', backgroundColor: item.color  }">
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
@@ -77,11 +60,11 @@
             </div>
             <!-- Right Section -->
             <div class="w-full mx-auto flex justify-center items-center p-4">
-                <div class="text-justify">
+                <div class="text-start">
                     <p class="text-primary font-bold font-serif text-2xl pb-4">
                         The Power of Multiyear Partnerships in Grantmaking
                     </p>
-                    <p class="text-h6 text-trbase">
+                    <p class="text-h6 text-trbase text-justify">
                         Multiyear partnerships simplify grantmaking, reduce the time spent on scouting new grantees and
                         projects,
                         and help funders gain a deeper understanding of social issues. Engaging in these longer-term
@@ -106,9 +89,9 @@
                 <p class="text-primary font-bold font-serif text-xl sm:text-2xl pb-4">
                     Recommended Actions
                 </p>
-                <div v-for="action in recommendedActions" :key="action.title" class="pb-3">
+                <div v-for="action in recommendedActions" :key="action.title" class="pb-5">
                     <div
-                        class="flex justify-between items-center px-4 py-3 bg-[#e9eaec] text-h5 font-bold font-serif text-pbase">
+                        class="flex justify-between items-center px-4 py-2 bg-[#e9eaec] text-h5 font-bold font-serif text-pbase">
                         {{ action.title }}
                     </div>
                     <div class="pt-2">
@@ -133,7 +116,7 @@
                 <p class="text-primary font-bold font-serif text-xl sm:text-2xl pb-4">
                     Useful Resources
                 </p>
-                <div v-for="resource in resources" :key="resource.title" class="flex gap-4 py-3 border-t">
+                <div v-for="resource in resources" :key="resource.title" class="flex gap-4 py-3 border-b ">
                     <span class="flex justify-center items-center">
                         <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 13 13">
@@ -142,14 +125,16 @@
                                 fill="#27853F" />
                         </svg>
                     </span>
-                    <p class="text-pbase text-h6 md:text-base font-normal text-justify">
+                    <p class="text-pbase text-h6  md:text-base font-normal text-justify">
                         {{ resource.title }}
                     </p>
                 </div>
             </div>
         </div>
-        <div class="pb-6">
-            <!-- <DiversityEquity/> -->
+        <div class="pb-6 sm:pt-5">
+            <button class=" py-3 px-6 bg-[#255B97] text-white rounded">
+                Next Principle
+            </button>
         </div>
     </div>
 
@@ -160,7 +145,6 @@ import { ref, watch, inject } from 'vue'
 import { useRoute } from 'vue-router';
 import DownloadResults from './DownloadResults.vue';
 import { Text } from 'lucide-vue-next';
-// import DiversityEquity from './DiversityEquity.vue';
 const route = useRoute()
 const title = ref(splitAtSecondCapital(route.path));
 
@@ -199,6 +183,28 @@ const resources = ref([
     { title: 'New Attitudes, Old Practices: The Provision of Multiyear General Operating Support' },
     { title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
     { title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' }
+]);
+
+
+const recommendations = ref([
+    {
+        title: 'Policy guidelines',
+        items: [
+            { chart: 50, color:'#FFD23F' }
+        ]
+    },
+    {
+        title: 'Annual budget allocation',
+        items: [
+            { chart: 75, color:'#FF6464' }
+        ]
+    },
+    {
+        title: 'Approach: Structuring of multiyear partnerships',
+        items:[
+            {chart:40, color:'#337357'}
+        ]
+    }
 ]);
 
 </script>
