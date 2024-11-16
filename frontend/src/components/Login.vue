@@ -84,18 +84,6 @@ const auth = inject('$auth');
 const call = inject('$call');
 const cur_session = ref(JSON.parse(localStorage.getItem('session'))?.data?.name)
 
-watch(() => cur_session.value, (value) => {
-    cur_session.value = value
-});
-console.log(cur_session.value)
-watch(() => store.auth, (value) => {
-    if (value === 'Log In') {
-        open.value = true;
-    } else {
-        open.value = false;
-    }
-});
-
 const validateEmail = (email) => {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailPattern.test(email);
@@ -155,4 +143,19 @@ const resetBorder = (event) => {
     event.target.style.borderBottom = '';  
 }
 
+watch(() => cur_session.value, (value) => {
+    cur_session.value = value
+});
+watch(()=> open.value, (value) => {
+    if (!value) {
+        store.auth = ''
+    }
+});
+watch(() => store.auth, (value) => {
+    if (value === 'Log In') {
+        open.value = true;
+    } else {
+        open.value = false;
+    }
+});
 </script>
