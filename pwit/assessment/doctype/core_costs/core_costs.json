@@ -7,13 +7,15 @@
  "field_order": [
   "section_a_section",
   "name1",
-  "session"
+  "session",
+  "approaches_adopted_section",
+  "last"
  ],
  "fields": [
   {
    "fieldname": "name1",
    "fieldtype": "Link",
-   "label": "Name",
+   "label": "Do you have a policy that enables multiyear partnerships?",
    "options": "Field Options"
   },
   {
@@ -25,12 +27,23 @@
   {
    "fieldname": "section_a_section",
    "fieldtype": "Section Break",
-   "label": "Section A"
+   "label": "Policy guidelines"
+  },
+  {
+   "fieldname": "last",
+   "fieldtype": "Link",
+   "label": "Do you provide multiyear grants (within any relevant legal parameters# ) to nonprofit partners?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "approaches_adopted_section",
+   "fieldtype": "Section Break",
+   "label": "Approaches adopted"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-12 17:43:24.451012",
+ "modified": "2024-11-16 12:11:24.847119",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Core Costs",
