@@ -1,7 +1,7 @@
 <template>
     <div class="w-full h-screen p-4">
         <div class="flex gap-2">
-            <Text  @click="store.sidebar=true" class="w-6 min-w-6 cursor-pointer block md:hidden"/>
+            <Text @click="store.sidebar = true" class="w-6 min-w-6 cursor-pointer block md:hidden" />
             <p class="text-gray-800 text-sm">
                 <router-link to="/">Home</router-link>
                 / <router-link to="/funder-diagnostic">Funder Diagnostic</router-link> / <router-link
@@ -14,132 +14,153 @@
             <h1 class="text-h3 md:text-h2 text-primary">Results and Recommendtions</h1>
             <DownloadResults />
         </div>
-        <div class="w-full flex gap-5 justify-center pt-4">
-            <div class="w-1/2">
+        <div class="w-full grid grid-cols-1 xl:grid-cols-2 gap-5 pt-4">
+            <div class="w-full  mx-auto">
                 <div class="bg-white border p-4">
                     <h2 class="text-primary font-bold font-serif text-2xl">
                         Results and Recommendations
                     </h2>
                     <p class="text-h6 pt-1 pb-4">
-                        <span class="font-medium">Average:</span> 
+                        <span class="font-medium">Average:</span>
                         <span class="text-green-600 font-semibold">2.5</span>
                     </p>
                     <!-- Table -->
                     <div class="overflow-x-auto">
-                        <table class="w-full border border-gray-200">
-                            <thead class="bg-blue-100">
+                        <table class="w-full border">
+                            <thead class="bg-[#E0F4FB]">
                                 <tr>
-                                    <th class="w-1/2 px-4 py-2 text-left font-serif text-h6 text-trbase font-bold border-b border-r  ">
+                                    <th
+                                        class="w-1/2 px-4 py-2 text-left font-serif text-h6 text-trbase font-bold border">
                                         Parameters
                                     </th>
-                                    <th class="w-1/2 px-4 py-2 text-left font-serif text-h6 text-trbase font-bold border-b  ">
+                                    <th
+                                        class="w-1/2 px-4 py-2 text-left font-serif text-h6 text-trbase font-bold border">
                                         Performance at that stage
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr class="border-b">
-                                    <td class="w-1/2 px-4 py-2 font-serif text-pbase border-r border-gray-200">
+                                    <td class="w-1/2 px-4 py-2 font-serif text-pbase border border-gray-200">
                                         Policy guidelines
                                     </td>
                                     <td class="py-2 px-4">
-                                        <div class="h-4 bg-gray-200 rounded-full">
-                                            <div class="h-4 bg-orange-400 rounded-full w-3/6"></div>
+                                        <div class="h-4 bg-gray-200">
+                                            <div class="h-4 bg-orange-400 w-3/6"></div>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr class="border">
-                                    <td class="w-1/2 px-4 py-2 font-serif text-pbase border-r border-gray-200">
+                                    <td class="w-1/2 px-4 py-2 font-serif text-pbase border border-gray-200">
                                         Annual budget allocation
                                     </td>
                                     <td class="py-2 px-4">
-                                        <div class="h-4 bg-gray-200 rounded-full">
-                                            <div class="h-4 bg-yellow-400 rounded-full w-3/6"></div>
+                                        <div class="h-4 bg-gray-200">
+                                            <div class="h-4 bg-yellow-400 w-3/6"></div>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr class="border">
-                                    <td class="w-1/2 px-4 py-2 font-serif text-pbase border-r border-gray-200">
-                                        Annual budget allocation
+                                    <td class="w-1/2 px-4 py-2 font-serif text-pbase border border-gray-200">
+                                        Another parameter
                                     </td>
                                     <td class="py-2 px-4">
-                                        <div class="h-4 bg-gray-200 rounded-full">
-                                            <div class="h-4 bg-yellow-400 rounded-full w-3/6"></div>
+                                        <div class="h-4 bg-gray-200">
+                                            <div class="h-4 bg-yellow-400 w-3/6"></div>
                                         </div>
                                     </td>
-                                </tr>  
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            <div class="w-1/2 flex justify-center items-center p-4">
+            <!-- Right Section -->
+            <div class="w-full mx-auto flex justify-center items-center p-4">
                 <div class="text-justify">
                     <p class="text-primary font-bold font-serif text-2xl pb-4">
                         The Power of Multiyear Partnerships in Grantmaking
                     </p>
                     <p class="text-h6 text-trbase">
-                        Multiyear partnerships simplifies grantmaking, reduces the time spent on scouting new grantees and projects, 
-                        and help funders gain a deeper understanding of social issues. Engaging in these longer-term partnerships allows for funders to move from being
-                         only grant makers to playing the role of advisors to nonprofit partners and can facilitate greater job enrichment for program teams as they are able 
-                         to invest more time and effort in understanding nonprofit needs and support them in delivering on their intended impact. Multiyear partnerships nurture 
-                         trust as relationships between funders and nonprofits deepen over time and a mutual understanding of a nonprofit’s needs and goals grows. For funder, 
-                         adopting a multiyear approach can help increasingly focus on creating lasting change, over immediate and short-term outputs. Additionally,
-                         it enables stability and visibility for nonprofits to plan and direct efforts on their core focus.
+                        Multiyear partnerships simplify grantmaking, reduce the time spent on scouting new grantees and
+                        projects,
+                        and help funders gain a deeper understanding of social issues. Engaging in these longer-term
+                        partnerships allows funders to move from being
+                        only grant makers to playing the role of advisors to nonprofit partners and can facilitate
+                        greater job enrichment for program teams as they are able
+                        to invest more time and effort in understanding nonprofit needs and support them in delivering
+                        on their intended impact. Multiyear partnerships nurture
+                        trust as relationships between funders and nonprofits deepen over time and a mutual
+                        understanding of a nonprofit’s needs and goals grows. For funders,
+                        adopting a multiyear approach can help increasingly focus on creating lasting change, over
+                        immediate and short-term outputs. Additionally,
+                        it enables stability and visibility for nonprofits to plan and direct efforts on their core
+                        focus.
                     </p>
                 </div>
             </div>
         </div>
-        <!-- Recommended Actions Section -->
-        <div class="w-full pt-10 flex justify-center gap-6">
-            <div class="w-[70%]">
-                <p class="text-primary font-bold font-serif text-2xl pb-4">Recommended Actions</p>
+        <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] md:grid-cols-1  lg:grid-cols-1 gap-4 pt-10 w-full">
+            <!-- Recommended Actions Section -->
+            <div class="w-full mx-auto">
+                <p class="text-primary font-bold font-serif text-xl sm:text-2xl pb-4">
+                    Recommended Actions
+                </p>
                 <div v-for="action in recommendedActions" :key="action.title" class="pb-3">
-                    <div class="flex justify-between items-center px-4 py-3 bg-[#e9eaec] text-h5 font-bold font-serif text-pbase">
+                    <div
+                        class="flex justify-between items-center px-4 py-3 bg-[#e9eaec] text-h5 font-bold font-serif text-pbase">
                         {{ action.title }}
                     </div>
                     <div class="pt-2">
-                        <div class="py-1">
-                            <div v-for="item in action.items" :key="item.description" class="w-full pt-4 flex gap-4">
-                                <div class="w-7 h-7 flex justify-center items-center">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8 0L9.16938 5.17688L13.6569 2.34315L10.8231 6.83062L16 8L10.8231 9.16938L13.6569 13.6569L9.16938 10.8231L8 16L6.83062 10.8231L2.34315 13.6569L5.17688 9.16938L0 8L5.17688 6.83062L2.34315 2.34315L6.83062 5.17688L8 0Z" fill="#255B97"/>
-                                    </svg>
-                                </div>
-                                <p class="text-justify text-sm text-trbase font-normal">
-                                    <strong class="text-pbase">{{ item.title }}</strong> {{ item.description }}
-                                </p>
+                        <div v-for="item in action.items" :key="item.description" class="flex gap-4 pt-4">
+                            <div class="w-7 h-7 flex justify-center items-center">
+                                <svg class="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0L9.16938 5.17688L13.6569 2.34315L10.8231 6.83062L16 8L10.8231 9.16938L13.6569 13.6569L9.16938 10.8231L8 16L6.83062 10.8231L2.34315 13.6569L5.17688 9.16938L0 8L5.17688 6.83062L2.34315 2.34315L6.83062 5.17688L8 0Z"
+                                        fill="#255B97" />
+                                </svg>
                             </div>
+                            <p class="text-justify text-sm md:text-base text-trbase font-normal">
+                                <strong class="text-pbase">{{ item.title }}</strong>
+                                {{ item.description }}
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="w-[30%] rounded-sm shadow-md px-4 py-2">
-                <p class="text-primary font-bold font-serif text-2xl pb-4">Useful Resources</p>
+            <!-- Useful Resources Section -->
+            <div class="w-full mx-auto rounded-sm shadow-md px-4 py-2">
+                <p class="text-primary font-bold font-serif text-xl sm:text-2xl pb-4">
+                    Useful Resources
+                </p>
                 <div v-for="resource in resources" :key="resource.title" class="flex gap-4 py-3 border-t">
                     <span class="flex justify-center items-center">
-                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.92589 1.94306L3.05734 1.94306L3.05734 0.343298H12.657L12.657 1.14318L12.657 9.94298L11.0573 9.94298L11.0573 3.07443L1.909 12.2227L0.777625 11.0913L9.92589 1.94306Z" fill="#27853F"/>
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 13 13">
+                            <path
+                                d="M9.92589 1.94306L3.05734 1.94306L3.05734 0.343298H12.657L12.657 1.14318L12.657 9.94298L11.0573 9.94298L11.0573 3.07443L1.909 12.2227L0.777625 11.0913L9.92589 1.94306Z"
+                                fill="#27853F" />
                         </svg>
                     </span>
-                    <p class="text-pbase text-h6 font-normal text-justify">{{ resource.title }}</p>
+                    <p class="text-pbase text-h6 md:text-base font-normal text-justify">
+                        {{ resource.title }}
+                    </p>
                 </div>
             </div>
         </div>
         <div class="pb-6">
-            <button class="px-4 py-2 text-white bg-[#255B97] rounded">Next Principle</button>
+            <!-- <DiversityEquity/> -->
         </div>
     </div>
-   
+
 </template>
 
 <script setup>
 import { ref, watch, inject } from 'vue'
 import { useRoute } from 'vue-router';
 import DownloadResults from './DownloadResults.vue';
-import { Text } from 'lucide-vue-next'
-
-
+import { Text } from 'lucide-vue-next';
+// import DiversityEquity from './DiversityEquity.vue';
 const route = useRoute()
 const title = ref(splitAtSecondCapital(route.path));
 
@@ -177,7 +198,7 @@ const resources = ref([
     { title: 'Funder Practices that Strengthen Nonprofit Resilience: Lessons from India' },
     { title: 'New Attitudes, Old Practices: The Provision of Multiyear General Operating Support' },
     { title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-    {title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+    { title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' }
 ]);
 
 </script>
