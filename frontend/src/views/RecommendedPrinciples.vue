@@ -3,23 +3,13 @@
             <div class="px-4 md:px-8 lg:px-20 mx-auto">
                 <div class="mt-6">
                     <div class="flex gap-2">
-                        <svg @click="store.sidebar = true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                            class="size-6 cursor-pointer block md:hidden">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
-                        </svg>
                         <p class="text-gray-800 text-sm">
                             <router-link to="/">Home</router-link>
                             / <router-link to="/funder-diagnostic">Funder Diagnostic</router-link> <span
                                 class="text-gray-400">/ Recommended Principles</span>
                         </p>
-                    </div>
-                    <!-- <p @click="router.back(-1)" class="cursor-pointer text-sm">
-                        <ArrowLeftIcon class="h-4 w-4 inline-block " />
-                        Back
-                    </p> -->
-                    <h1 class="text-h2 font-bold  text-[#002C77] font-serif">Pathway for funders to strengthen their
+                    </div> 
+                    <h1 class="text-h3 md:text-h2 font-bold  text-[#002C77] font-serif">Pathway for funders to strengthen their
                         grant
                         making practices</h1>
                     <p class="text-sebase pt-3  font-normal text-sm text-justify">
