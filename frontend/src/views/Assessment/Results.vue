@@ -83,7 +83,7 @@
                 </div>
             </div>
         </div>
-        <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] md:grid-cols-1  lg:grid-cols-1 gap-4 pt-10 w-full">
+        <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] md:grid-cols-1  lg:grid-cols-1 gap-4 pt-4 w-full">
             <!-- Recommended Actions Section -->
             <div class="w-full mx-auto">
                 <p class="text-primary font-bold font-serif text-xl sm:text-2xl pb-4">
@@ -103,7 +103,7 @@
                                         fill="#255B97" />
                                 </svg>
                             </div>
-                            <p class="text-justify text-sm md:text-base text-trbase font-normal">
+                            <p class="text-justify text-sm text-trbase font-normal">
                                 <strong class="text-pbase">{{ item.title }}</strong>
                                 {{ item.description }}
                             </p>
@@ -117,22 +117,22 @@
                     Useful Resources
                 </p>
                 <div v-for="resource in resources" :key="resource.title" class="flex gap-4 py-3 border-b ">
-                    <span class="flex justify-center items-center">
-                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    <span class="flex justify-center pt-1">
+                        <svg class="w-4 h-4" fill="none" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 13 13">
                             <path
                                 d="M9.92589 1.94306L3.05734 1.94306L3.05734 0.343298H12.657L12.657 1.14318L12.657 9.94298L11.0573 9.94298L11.0573 3.07443L1.909 12.2227L0.777625 11.0913L9.92589 1.94306Z"
                                 fill="#27853F" />
                         </svg>
                     </span>
-                    <p class="text-pbase text-h6  md:text-base font-normal text-justify">
+                    <p class="text-pbase text-h6 font-normal text-justify">
                         {{ resource.title }}
                     </p>
                 </div>
             </div>
         </div>
-        <div class="pb-6 sm:pt-5">
-            <button @click="router.forward(1)" class=" py-3 px-6 bg-[#255B97] text-white rounded">
+        <div class="py-5 w-full">
+            <button @click="router.forward(1)" class="w-full md:w-auto py-3 px-6 bg-[#255B97] text-white rounded">
                 Next Principle
             </button>
         </div>

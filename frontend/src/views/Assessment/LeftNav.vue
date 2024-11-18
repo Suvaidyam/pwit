@@ -3,7 +3,7 @@
         class="w-16 md:w-60 h-screen fixed top-0 left-0 z-20">
             <div class="flex justify-end  bg-white fixed px-4 md:px-10 lg:px-20 h-20 items-center">
                 <router-link to="/" class="text-2xl font-bold text-primary">
-                    <img :src="`http://pwit.localhost:8000/files/logo.png`" class="w-40 h-14" alt="">
+                    <img :src="`/files/logo.png`" class="w-40 h-14" alt="">
                 </router-link>
             </div>
         <div class="w-full h-full bg-primary p-2 pt-24 ">

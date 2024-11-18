@@ -17,13 +17,18 @@
                 <div class="py-1">
                     <MenuItem v-slot="{ active }">
                     <a href="#"
-                        :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">Account
-                        settings</a>
+                        :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'flex items-center gap-2 px-4 py-2 text-sm']">
+                        <UserRound class="w-4 h-4 text-gray-400" /> Profile</a>
+                    </MenuItem>
+                    <MenuItem v-slot="{ active }">
+                    <a href="#"
+                        :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'flex items-center gap-2 px-4 py-2 text-sm']">
+                        <LockKeyhole class="w-4 h-4 text-gray-400" />Change Password</a>
                     </MenuItem>
                     <MenuItem v-slot="{ active }">
                     <button type="button" @click="auth.logout()"
-                        :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block w-full px-4 py-2 text-left text-sm']">Sign
-                        out</button>
+                        :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'flex items-center gap-2 w-full px-4 py-2 text-left text-sm']">
+                        <LogOut class="w-4 h-4 text-gray-400" />Logout</button>
                     </MenuItem>
                 </div>
             </MenuItems>
@@ -34,6 +39,7 @@
 <script setup>
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ref, inject, watch } from 'vue'
+import {UserRound,LockKeyhole,LogOut} from 'lucide-vue-next'
 
 const auth = inject('$auth');
 
