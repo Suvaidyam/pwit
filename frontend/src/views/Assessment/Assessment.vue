@@ -1,5 +1,5 @@
 <template>
-    <div class="p-4 w-full">
+    <div class="p-4 w-full h-screen">
         <Breadcrumb />
         <h1 class="text-h2 font-serif font-semibold text-primary">{{ title }}</h1>
         <transition name="fade" mode="out-in">

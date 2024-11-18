@@ -132,7 +132,7 @@
             </div>
         </div>
         <div class="pb-6 sm:pt-5">
-            <button class=" py-3 px-6 bg-[#255B97] text-white rounded">
+            <button @click="router.forward(1)" class=" py-3 px-6 bg-[#255B97] text-white rounded">
                 Next Principle
             </button>
         </div>
@@ -142,10 +142,14 @@
 
 <script setup>
 import { ref, watch, inject } from 'vue'
-import { useRoute } from 'vue-router';
+import { useRoute,useRouter } from 'vue-router';
 import DownloadResults from './DownloadResults.vue';
 import { Text } from 'lucide-vue-next';
+
 const route = useRoute()
+const router = useRouter()
+const store = inject('store');
+console.log(router)
 const title = ref(splitAtSecondCapital(route.path));
 
 watch(route, (newVal) => {
