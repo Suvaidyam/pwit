@@ -3,8 +3,10 @@
         <div>
             <MenuButton
                 class="inline-flex w-full justify-center gap-x-1.5 rounded-full bg-white p-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-                <img v-if="auth?.cookie?.user_image" class="w-10 h-10 rounded-full" :src="auth?.cookie?.user_image" alt="">
-                <p class="w-10 h-10 flex items-center justify-center text-xl font-normal text-gray-600" v-else>{{ auth?.cookie?.full_name?.split('')[0] }}</p>
+                <img v-if="auth?.cookie?.user_image" class="w-10 h-10 rounded-full" :src="auth?.cookie?.user_image"
+                    alt="">
+                <p class="w-10 h-10 flex items-center justify-center text-xl font-normal text-gray-600" v-else>{{
+                    auth?.cookie?.full_name?.split('')[0] }}</p>
             </MenuButton>
         </div>
 
@@ -15,34 +17,42 @@
             <MenuItems
                 class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div class="py-1">
-                    <MenuItem v-slot="{ active }">
+                    <MenuItem v-slot="{ active }" @click="openDialog">
                     <a href="#"
                         :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'flex items-center gap-2 px-4 py-2 text-sm']">
-                        <UserRound class="w-4 h-4 text-gray-400" /> Profile</a>
+                        <UserRound class="w-4 h-4 text-gray-400" /> Profile
+                    </a>
                     </MenuItem>
                     <MenuItem v-slot="{ active }">
                     <a href="#"
                         :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'flex items-center gap-2 px-4 py-2 text-sm']">
-                        <LockKeyhole class="w-4 h-4 text-gray-400" />Change Password</a>
+                        <LockKeyhole class="w-4 h-4 text-gray-400" />Change Password
+                    </a>
                     </MenuItem>
                     <MenuItem v-slot="{ active }">
                     <button type="button" @click="auth.logout()"
                         :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'flex items-center gap-2 w-full px-4 py-2 text-left text-sm']">
-                        <LogOut class="w-4 h-4 text-gray-400" />Logout</button>
+                        <LogOut class="w-4 h-4 text-gray-400" />Logout
+                    </button>
                     </MenuItem>
                 </div>
             </MenuItems>
         </transition>
     </Menu>
+    <Profile />
 </template>
 
 <script setup>
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ref, inject, watch } from 'vue'
-import {UserRound,LockKeyhole,LogOut} from 'lucide-vue-next'
+import { UserRound, LockKeyhole, LogOut } from 'lucide-vue-next'
+import Profile from './Profile.vue';
 
 const auth = inject('$auth');
-
+const store = inject('store');
+const openDialog = () => {
+    store.isOpen = true;
+} 
 watch(() => auth.cookie, (value) => {
     auth.cookie = value
 });
