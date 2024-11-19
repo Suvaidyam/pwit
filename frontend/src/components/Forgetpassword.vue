@@ -1,6 +1,6 @@
 <template>
-    <TransitionRoot as="template" :show="store.isOpen">
-        <Dialog class="relative z-20" @close="store.isOpen = false">
+    <TransitionRoot as="template" :show="store.isOpenPas">
+        <Dialog class="relative z-20" @close="store.isOpenPas = false">
             <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
                 leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
                 <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
@@ -17,41 +17,27 @@
                             class="relative transform overflow-hidden  bg-white text-left shadow-xl transition-all sm:my-8 w-full sm:max-w-2xl">
                             <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4">
                                 <div class="block justify-center gap-5 items-center">
-                                    <h1 class="text-center font-serif font-bold text-h3">My Profile</h1>
-                                    <p class="text-center text-[#21272A] font-normal text-h5 pt-2"> Set up or update
-                                        your profile</p>
-                                </div>
-                                <div class=" flex justify-center items-center pt-4">
-                                    <div class="w-24 h-24 rounded-full bg-slate-300 flex items-center justify-center">
-                                        <img v-if="formData.user_image" :src="formData.user_image" alt="">
-                                        <p class="text-h2" v-else>{{ formData.full_name?.split('')[0]?.toUpperCase() }}</p>
-                                    </div>
+                                    <!-- <h1 class=" font-serif font-bold text-h3">Update Password</h1> -->
                                 </div>
                                 <div class="space-y-6 container">
                                     <div>
-                                        <label class="block text-gray-800 text-sm pb-2">
-                                            Full Name
+                                        <label for="new_password" class="block text-gray-800 text-sm pb-2">
+                                            New Password
                                         </label>
-                                        <input v-model="formData.full_name" id="inputId1" type="text" placeholder="Enter Full Name"
+                                        <input v-model="new_password" id="new_password" type="password" placeholder="Enter New Password"
                                             class="w-full px-3 py-2 border-b  bg-[#f3f4f8] border-gray-300 shadow-sm outline-none ">
                                     </div>
                                     <div>
-                                        <label class="block text-gray-800 text-sm pb-2">
-                                            Mobile No.
+                                        <label for="Confirm_pass" class="block text-gray-800 text-sm pb-2">
+                                            Confirm Password
                                         </label>
-                                        <input id="inputId1" type="text" placeholder="Enter your Mobile No. "
+                                        <input v-model="Confirm_pass" id="Confirm_pass" type="password" placeholder="Enter New Password"
                                             class="w-full px-3 py-2 border-b  bg-[#f3f4f8] border-gray-300 shadow-sm outline-none ">
                                     </div>
-                                    <div>
-                                        <label class="block text-gray-800 text-sm pb-2">
-                                            Email Address
-                                        </label>
-                                        <input v-model="formData.user_id" id="inputId2" type="email" placeholder="Enter Email Address"
-                                            class="w-full px-3 border-b bg-[#f3f4f8] border-gray-300   shadow-sm py-2 outline-none">
-                                    </div>
+                                 
                                     <div class="flex justify-end">
                                         <button class="text-white bg-secondary py-2 px-8 rounded-md">
-                                            save
+                                            Update
                                         </button>
                                     </div>
                                 </div>
@@ -69,8 +55,8 @@ import { ref, watch, inject } from 'vue'
 import { TransitionChild, TransitionRoot, Dialog, DialogPanel } from '@headlessui/vue'
 
 const store = inject('store');
-const auth = inject('$auth') 
-const formData = ref(auth.cookie)
+
+const new_password = ref('')
 const props = defineProps({
     isOpen: {
         type: Boolean,

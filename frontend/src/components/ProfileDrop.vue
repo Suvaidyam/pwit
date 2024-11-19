@@ -17,13 +17,13 @@
             <MenuItems
                 class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div class="py-1">
-                    <MenuItem v-slot="{ active }" @click="openDialog">
+                    <MenuItem v-slot="{ active }" @click="openDialog('profile')">
                     <a href="#"
                         :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'flex items-center gap-2 px-4 py-2 text-sm']">
                         <UserRound class="w-4 h-4 text-gray-400" /> Profile
                     </a>
                     </MenuItem>
-                    <MenuItem v-slot="{ active }">
+                    <MenuItem v-slot="{ active }" @click="openDialog('change_pass')">
                     <a href="#"
                         :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'flex items-center gap-2 px-4 py-2 text-sm']">
                         <LockKeyhole class="w-4 h-4 text-gray-400" />Change Password
@@ -40,6 +40,7 @@
         </transition>
     </Menu>
     <Profile />
+    <Forgetpassword/>
 </template>
 
 <script setup>
@@ -47,11 +48,16 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ref, inject, watch } from 'vue'
 import { UserRound, LockKeyhole, LogOut } from 'lucide-vue-next'
 import Profile from './Profile.vue';
+import Forgetpassword from './Forgetpassword.vue'
 
 const auth = inject('$auth');
 const store = inject('store');
-const openDialog = () => {
-    store.isOpen = true;
+const openDialog = (el) => {
+    if(el=='profile'){
+        store.isOpen = true;
+    }else{
+        store.isOpenPas=true
+    }
 } 
 watch(() => auth.cookie, (value) => {
     auth.cookie = value
