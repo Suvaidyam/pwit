@@ -17,7 +17,6 @@
                             class="relative transform overflow-hidden  bg-white text-left shadow-xl transition-all sm:my-8 w-full sm:max-w-2xl">
                             <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4">
                                 <div class="block justify-center gap-5 items-center">
-                                    <!-- <h1 class=" font-serif font-bold text-h3">Update Password</h1> -->
                                 </div>
                                 <div class="space-y-6 container">
                                     <div>
