@@ -11,7 +11,17 @@
   "myp_1",
   "fr_1",
   "core_cost_2",
-  "core_cost_3"
+  "core_cost_3",
+  "dei_1",
+  "od_2",
+  "myp_2",
+  "fr_2",
+  "fr_3",
+  "myp_3",
+  "dei_2",
+  "dei_3",
+  "od_3",
+  "session"
  ],
  "fields": [
   {
@@ -23,43 +33,120 @@
    "fieldname": "core_cost_1",
    "fieldtype": "Link",
    "label": "A lower core cost (administrative or support-function expenses not tied to a specific program)  means a nonprofit is more efficient",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "od_1",
    "fieldtype": "Link",
    "label": "We fund nonprofits when they seek money for organizational development that may not be  directly related to a program.",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "myp_1",
    "fieldtype": "Link",
    "label": "Changing nonprofit partners frequently creates competition amongst them, pushing them to  be more efficient.",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "fr_1",
    "fieldtype": "Link",
    "label": "We encourage our nonprofit partners to create an operating surplus and transfer the surplus  to reserves",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "core_cost_2",
    "fieldtype": "Link",
    "label": "We rarely have a conversation with nonprofits partners to reduce core costs at the proposal stage ",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "description": "core-cost  support",
    "fieldname": "core_cost_3",
    "fieldtype": "Link",
    "label": "We encourage our nonprofit partners to find alternative sources for covering their core costs rather  than asking us to increase our ",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dei_1",
+   "fieldtype": "Link",
+   "label": "A  nonprofit\u2019s relationship with other credible funders is an important selection criterion for us ",
+   "options": "Field Options",
+   "reqd": 1
+  },
+  {
+   "fieldname": "od_2",
+   "fieldtype": "Link",
+   "label": "Nonprofits are able to do well even in the absence of organisational development ",
+   "options": "Field Options",
+   "reqd": 1
+  },
+  {
+   "fieldname": "myp_2",
+   "fieldtype": "Link",
+   "label": "We typically support programmes that show results within an annual funding cycle",
+   "options": "Field Options",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fr_2",
+   "fieldtype": "Link",
+   "label": "Most nonprofits do not have the capabilities to manage reserves",
+   "options": "Field Options",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fr_3",
+   "fieldtype": "Link",
+   "label": "We proactively introduce our nonprofit partners to other funders",
+   "options": "Field Options",
+   "reqd": 1
+  },
+  {
+   "fieldname": "myp_3",
+   "fieldtype": "Link",
+   "label": "The majority of our funding goes to nonprofit partners whom we have supported for a long period  of time",
+   "options": "Field Options",
+   "reqd": 1
+  },
+  {
+   "description": "benefit all sections of the community equally",
+   "fieldname": "dei_2",
+   "fieldtype": "Link",
+   "label": "A special focus on marginalised communities is not necessary, a nonprofit\u2019s initiatives will typically  ",
+   "options": "Field Options",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dei_3",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "The leadership composition does not matter as long as the nonprofit organisation is working on a  credible issue",
+   "options": "Field Options",
+   "reqd": 1
+  },
+  {
+   "fieldname": "od_3",
+   "fieldtype": "Link",
+   "label": "Organisational development funding does not contribute to social impact",
+   "options": "Field Options",
+   "reqd": 1
+  },
+  {
+   "fieldname": "session",
+   "fieldtype": "Link",
+   "label": "Session",
+   "options": "Session"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-20 13:04:41.099909",
+ "modified": "2024-11-20 13:51:32.871270",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Funder Diagnostic",
