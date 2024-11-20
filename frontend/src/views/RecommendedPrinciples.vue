@@ -8,8 +8,9 @@
                             / <router-link to="/funder-diagnostic">Funder Diagnostic</router-link> <span
                                 class="text-gray-400">/ Recommended Principles</span>
                         </p>
-                    </div> 
-                    <h1 class="text-h3 md:text-h2 font-bold  text-[#002C77] font-serif">Pathway for funders to strengthen their
+                    </div>
+                    <h1 class="text-h3 md:text-h2 font-bold  text-[#002C77] font-serif">Pathway for funders to
+                        strengthen their
                         grant
                         making practices</h1>
                     <p class="text-sebase pt-3  font-normal text-sm text-justify">
@@ -26,11 +27,11 @@
                     <p class="px-4  text-sebase font-bold text-h4 font-serif ">Recommended principles</p>
                     <div class="border-t border-[#D0D1D3] flex-grow"></div>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-12 pt-4">
+                <Loader v-if="loading"/>
+                <div v-if="!loading" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-12 pt-4">
                     <!-- Card 1 -->
                     <router-link v-for="el in recommended" :key="el.name" :to="el.route"
-                        class="bg-white shadow-lg rounded-lg p-4 h-56  border-t-4 " :class="`border-[${el.color}]`">
+                        class="bg-white shadow-lg rounded-lg p-4 min-h-56  border-t-4 " :class="`border-[${el.color}]`">
                         <div class="rounded-md bg-white relative shadow-lg">
                             <div class="w-[70px] h-[70px] rounded-full border-8 absolute -top-14 bg-white justify-center items-center flex"
                                 :class="`border-[${el.color}]`">
@@ -58,7 +59,8 @@
                         principles</p>
                     <div class="border-t border-[#D0D1D3] flex-grow"></div>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-12 py-6">
+                <Loader v-if="loading"/>
+                <div v-if="!loading" class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-12 py-6">
                     <router-link v-for="el in additional" :key="el.name" :to="el.route"
                         class="bg-white shadow-lg rounded-lg p-4 h-56  border-t-4 " :class="`border-[${el.color}]`">
                         <div class="rounded-md bg-white relative shadow-lg">
@@ -85,12 +87,18 @@
         </div>
     </template>
 <script setup>
-import { ref } from 'vue'
+import { computed, inject, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import FooterNav from '../components/FooterNav.vue';
-import { ArrowLeftIcon } from '@heroicons/vue/24/outline'
+import  Loader  from './Assessment/Loader.vue';
 
 const router = useRouter()
+const call = inject('$call')
+const session = JSON.parse(localStorage.getItem('session'))
+const logic = ref([])
+const results = ref({})
+const loading = ref(false)
+
 const data = [
     {
         name: 1,
@@ -99,7 +107,7 @@ const data = [
         icon: '',
         route: '/funder/multi-year-partnerships',
         color: '#59467b',
-        group: 'recommended'
+        code: 'myp'
     },
     {
         name: 2,
@@ -108,7 +116,7 @@ const data = [
         icon: '',
         route: '/funder/core-costs',
         color: '#136096',
-        group: 'recommended'
+        code: 'core_cost'
     },
     {
         name: 3,
@@ -117,7 +125,7 @@ const data = [
         icon: '',
         route: '/funder/organization-development',
         color: '#029fd9',
-        group: 'recommended'
+        code: 'od'
     },
     {
         name: 4,
@@ -126,7 +134,7 @@ const data = [
         icon: '',
         route: '/funder/build-financial-resilience',
         color: '#058248',
-        group: 'additional'
+        code: 'fr'
     },
     {
         name: 5,
@@ -135,9 +143,98 @@ const data = [
         icon: '',
         route: '/funder/diversity-equity-inclusion',
         color: '#f38714',
-        group: 'additional'
+        code: 'dei'
     }
 ]
-const recommended = ref(data.filter(item => item.group === 'recommended'))
-const additional = ref(data.filter(item => item.group === 'additional'))
+const recommended = computed(() => {
+    const recommendationKeys = [
+        computedMatchingLogic.value[0]?.recommendation_1,
+        computedMatchingLogic.value[0]?.recommendation_2,
+        computedMatchingLogic.value[0]?.recommendation_3
+    ].filter(Boolean); // Filter out null/undefined keys
+
+    return data.filter(item => recommendationKeys.includes(item.code));
+});
+
+// Additional logic
+const additional = computed(() => {
+    const additionalKeys = [
+        computedMatchingLogic.value[0]?.additional_1,
+        computedMatchingLogic.value[0]?.additional_2
+    ].filter(Boolean); // Filter out null/undefined keys
+
+    return data.filter(item => additionalKeys.includes(item.code));
+});
+const matchingLogic = ref([]);
+
+const get_result = async () => {
+    loading.value = true
+    try {
+        const response = await call('pwit.controllers.api.get_results', {
+            doctype: 'Funder Diagnostic',
+            session: session.data.name
+        });
+
+        const groupedSums = Object.entries(response.data).reduce((acc, [key, value]) => {
+            const keyParts = key.split('_');
+            keyParts.pop();
+            const prefix = keyParts.join('_');
+            acc[prefix] = (acc[prefix] || 0) + value;
+            return acc;
+        }, {});
+        results.value = groupedSums;
+        loading.value = false
+    } catch (error) {
+        console.error('Error fetching results:', error);
+    }
+};
+
+// Fetch recommended principles
+const get_recomm = async () => {
+    loading.value = true
+    try {
+        const res = await call('pwit.controllers.api.get_recommended_principles', {});
+        if (res.code === 200) {
+            logic.value = res.data;
+            loading.value = false
+        }
+    } catch (error) {
+        console.error('Error fetching recommendations:', error);
+    }
+};
+
+// Evaluate logic dynamically based on results
+const evaluateLogic = (logicArray, results) => {
+    return logicArray.filter(entry => {
+        try {
+            if (entry?.logic?.trim()) {
+                const substitutedLogic = entry.logic.replace(
+                    /\b(core_cost|od|myp|fr|dei)\b/g,
+                    match => `(${results[match] || 0})`
+                );
+                return eval(substitutedLogic);
+            }
+            return false;
+        } catch (e) {
+            console.error(`Error evaluating logic for entry ${entry.name}:`, e);
+            return false;
+        }
+    });
+};
+
+// Computed property for matching logic
+const computedMatchingLogic = computed(() => {
+    return evaluateLogic(logic.value, results.value);
+});
+
+// Update matching logic whenever results or logic change
+watch([results, logic], () => {
+    matchingLogic.value = computedMatchingLogic.value;
+});
+
+// Fetch data on mount
+onMounted(() => {
+    get_result();
+    get_recomm();
+});
 </script>

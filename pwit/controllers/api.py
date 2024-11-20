@@ -34,6 +34,10 @@ def route():
     return LeftMenuAPIs.route()
 
 @frappe.whitelist(allow_guest=True)
+def get_recommended_principles():
+    return LeftMenuAPIs.get_recommended_principles()
+
+@frappe.whitelist(allow_guest=True)
 def set_route_logs(**args):
     from_route = args.get('from')
     session = args.get('session')
@@ -44,6 +48,10 @@ def set_route_logs(**args):
 @frappe.whitelist(allow_guest=True)
 def question_list(doctype):
     return AssessmentAPIs.question_list(doctype)
+
+@frappe.whitelist(allow_guest=True)
+def get_results(doctype,session):
+    return AssessmentAPIs.get_results(doctype,session)
 
 @frappe.whitelist(allow_guest=True)
 def get_meta(doctype):
