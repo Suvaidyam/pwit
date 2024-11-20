@@ -23,21 +23,28 @@
                                         <label for="new_password" class="block text-gray-800 text-sm pb-2">
                                             New Password
                                         </label>
-                                        <input v-model="new_password" id="new_password" type="password" placeholder="Enter New Password"
-                                            class="w-full px-3 py-2 border-b  bg-[#f3f4f8] border-gray-300 shadow-sm outline-none ">
+                                        <input v-model="newPassword" id="new_password" type="password"
+                                            placeholder="Enter New Password"
+                                            class="w-full px-3 py-2 border-b bg-[#f3f4f8] border-gray-300 shadow-sm outline-none">
                                     </div>
                                     <div>
                                         <label for="Confirm_pass" class="block text-gray-800 text-sm pb-2">
                                             Confirm Password
                                         </label>
-                                        <input v-model="Confirm_pass" id="Confirm_pass" type="password" placeholder="Enter New Password"
-                                            class="w-full px-3 py-2 border-b  bg-[#f3f4f8] border-gray-300 shadow-sm outline-none ">
+                                        <input v-model="confirmPassword" id="Confirm_pass" type="password"
+                                            placeholder="Confirm New Password"
+                                            class="w-full px-3 py-2 border-b bg-[#f3f4f8] shadow-sm outline-none">
                                     </div>
-                                 
-                                    <div class="flex justify-end">
-                                        <button class="text-white bg-secondary py-2 px-8 rounded-md">
+                                    <div class="flex justify-between">
+                                        <div>
+                                            <p v-if="passwordsMatch === false" class="text-red-500 text-sm ">Passwords
+                                                do not match</p>
+                                        </div>
+                                        <button @click="handleClick"
+                                            class="text-white bg-secondary py-2 px-8 rounded-md">
                                             Update
                                         </button>
+
                                     </div>
                                 </div>
                             </div>
@@ -54,8 +61,9 @@ import { ref, watch, inject } from 'vue'
 import { TransitionChild, TransitionRoot, Dialog, DialogPanel } from '@headlessui/vue'
 
 const store = inject('store');
-
-const new_password = ref('')
+const newPassword = ref('');
+const confirmPassword = ref('');
+const passwordsMatch = ref(null);
 const props = defineProps({
     isOpen: {
         type: Boolean,
@@ -63,5 +71,13 @@ const props = defineProps({
         default: false
     }
 })
+const handleClick = () => {
+    passwordsMatch.value = newPassword.value === confirmPassword.value;
+    if (!passwordsMatch.value) {
+        Confirm_pass.style.borderBottom = '1px solid red';
+    } else {
+        Confirm_pass.style.borderBottom = '';
+    }
+};
 
 </script>
