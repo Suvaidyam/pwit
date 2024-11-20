@@ -4,4 +4,28 @@ class AssessmentAPIs:
     def question_list(doctype):
         assessments = frappe.get_all(doctype, fields=['*'])
         return {'code': 200, 'data': assessments}
+
+    def get_results(doctype,session):
+        
+        assessments = frappe.get_all(doctype,filters={'session':session}, fields=['*'],order_by='creation desc', limit_page_length=1)
+        if len(assessments) > 0:
+            assessment = assessments[0]
+            meta = frappe.get_meta(doctype)
+            if not meta:
+                return {'code': 404, 'message': 'Meta not found'}
+            option_fields = [field.fieldname for field in meta.fields if (field.fieldtype == 'Link' and field.options == 'Field Options')]
+            options = frappe.db.get_list('Field Options', 
+                filters={
+                    'ref_doctype':doctype, 
+                    'field':["IN", option_fields]
+                }, 
+                fields=['name','field','score']
+            )
+            data = {}
+            for option in options:
+                if assessment[option.field] == option.name:
+                    data[option.field] = option.score
+            return {'code': 200, 'data': data}
+        else:
+            return {'code': 200, 'data': {}}
         
