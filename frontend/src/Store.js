@@ -1,6 +1,6 @@
 import { reactive, ref } from 'vue';
 
-const auth = ref('');  
+const auth = ref(false);  
 const isOpen = ref(false);
 const isOpenPas = ref(false);
 const session = ref(JSON.parse(localStorage.getItem('session'))?.data?.name);
