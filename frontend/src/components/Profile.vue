@@ -14,10 +14,12 @@
                         leave-from="opacity-100 translate-y-0 sm:scale-100"
                         leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
                         <DialogPanel
-                            class="relative transform overflow-hidden  bg-white text-left shadow-xl transition-all sm:my-8 w-full sm:max-w-2xl">
-                            <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4">
+                            class="relative transform overflow-hidden md:px-4 bg-white text-left shadow-xl transition-all sm:my-8 w-full sm:max-w-2xl">
+                            <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4 relative">
+                                <X  @click="store.isOpen=false" class="text-sm  cursor-pointer absolute right-5"  />
                                 <div class="block justify-center gap-5 items-center">
                                     <h1 class="text-center font-serif font-bold text-h3 text-[#21272A]">My Profile</h1>
+                                  
                                     <p class="text-center text-[#21272A] font-normal text-h5 pt-2"> Set up or update
                                         your profile</p>
                                 </div>
@@ -25,7 +27,7 @@
                                     <div>
                                         <div
                                             class="w-24 h-24 rounded-full bg-slate-300 flex items-center justify-center relative">
-                                            <img v-if="formData.user_image" :src="formData.user_image" alt="User Image"
+                                            <img v-if="formData.user_image || imgUrl" :src="imgUrl ? imgUrl : formData.user_image" alt="User Image"
                                                 class="w-full h-full rounded-full object-cover" />
                                             <p class="text-h2" v-else>{{ formData.full_name?.[0]?.toUpperCase() }}</p>
 
@@ -96,8 +98,8 @@
 <script setup>
 import { ref, inject } from 'vue'
 import { TransitionChild, TransitionRoot, Dialog, DialogPanel } from '@headlessui/vue'
+import { X } from 'lucide-vue-next';
 
-const mobile_no = ref('')
 const isReadonly = ref(true);
 const store = inject('store');
 const auth = inject('$auth');
@@ -162,7 +164,8 @@ const saveUserProfile = async () => {
         mobile_no: formData.value.mobile_no,
         user_image: imgUrl.value
     }
-    await call('pwit.controllers.api.save_image', { data: data })
+    let res = await call('pwit.controllers.api.save_image', { data: data })
+    store.isOpen=false
 }
 
 
