@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+    <div v-if="!store.isForgetPas" class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
         <div class="sm:flex sm:items-start">
             <div class="mt-3 text-center sm:mt-0 sm:text-left">
                 <DialogTitle as="h3" class="text-h3 font-bold text-[#21272A]">Login to
@@ -36,7 +36,7 @@
                     <input v-model="remember" type="checkbox" id="remember" class="h-4 w-4" />
                     <label for="remember" class="text-sm text-gray-500">Remember me</label>
                 </div>
-                <p class="text-green-400 text-sm cursor-pointer">Forgot Password?</p>
+                <p @click="store.isForgetPas=true" class="text-green-400 text-sm cursor-pointer">Forgot Password?</p>
             </div>
             <div class="w-full border-b h-14">
                 <button :disabled="remember ? false : true" type="button"
@@ -52,6 +52,7 @@
             </div>
         </div>
     </div>
+    <ForgetPassword v-if="store.isForgetPas"/>
 </template>
 
 <script setup>
@@ -60,8 +61,8 @@ import { DialogTitle } from '@headlessui/vue'
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
 import { Eye, EyeOff } from 'lucide-vue-next'
-
-const open = ref(false)
+import ForgetPassword from './ForgetPassword.vue';
+ 
 const show_pass = ref(false)
 const remember = ref(false)
 const email = ref('')
@@ -108,7 +109,7 @@ const login = async () => {
         res = await auth.login(email.value, password.value);
         console.log(res)
         if (res) {
-            open.value = false;
+            store.auth = false;
             toast.success('Login Successful');
         }
 
