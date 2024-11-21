@@ -230,6 +230,7 @@ const computedMatchingLogic = computed(() => {
 // Update matching logic whenever results or logic change
 watch([results, logic], () => {
     matchingLogic.value = computedMatchingLogic.value;
+    console.log(computedMatchingLogic.value);
 });
 
 // Fetch data on mount
