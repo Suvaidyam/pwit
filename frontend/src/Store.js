@@ -2,6 +2,7 @@ import { reactive, ref } from 'vue';
 
 const auth = ref(false);  
 const isOpen = ref(false);
+const isForgetPas = ref(false);
 const isOpenPas = ref(false);
 const session = ref(JSON.parse(localStorage.getItem('session'))?.data?.name);
 const sidebar = ref(false);  
@@ -10,5 +11,6 @@ export const store = reactive({
     sidebar:sidebar.value,
     session:session.value,
     isOpen:isOpen.value,
-    isOpenPas:isOpenPas.value
+    isOpenPas:isOpenPas.value,
+    isForgetPas:isForgetPas.value,
 });

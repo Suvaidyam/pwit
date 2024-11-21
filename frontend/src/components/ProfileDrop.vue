@@ -40,7 +40,7 @@
         </transition>
     </Menu>
     <Profile />
-    <Forgetpassword/>
+    <ChangePassword/>
 </template>
 
 <script setup>
@@ -48,7 +48,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ref, inject, watch } from 'vue'
 import { UserRound, LockKeyhole, LogOut } from 'lucide-vue-next'
 import Profile from './Profile.vue';
-import Forgetpassword from './Forgetpassword.vue'
+import ChangePassword from './ChangePassword.vue'
 
 const auth = inject('$auth');
 const store = inject('store');
