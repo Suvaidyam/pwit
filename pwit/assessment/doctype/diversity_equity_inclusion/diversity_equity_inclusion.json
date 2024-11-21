@@ -5,25 +5,157 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "strategic_considerations_section",
   "name1",
-  "session"
+  "name2",
+  "session",
+  "sourcing_section",
+  "question",
+  "application_section",
+  "question4",
+  "selection_section",
+  "question5",
+  "diligence_section",
+  "question6",
+  "grant_setup_and_disbursement_section",
+  "question7",
+  "grantee_support_section",
+  "question8",
+  "grantee_engagement_section",
+  "question9",
+  "reporting_section",
+  "question10",
+  "renewal_section",
+  "question11"
  ],
  "fields": [
   {
    "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
+   "fieldtype": "Link",
+   "label": " Is implementation of DEI specifically for marginalised communities a stated goal of your grantmaking?",
+   "options": "Field Options"
   },
   {
    "fieldname": "session",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Session",
    "options": "Session"
+  },
+  {
+   "fieldname": "strategic_considerations_section",
+   "fieldtype": "Section Break",
+   "label": "Strategic considerations"
+  },
+  {
+   "fieldname": "name2",
+   "fieldtype": "Link",
+   "label": "Do you collect and review data or feedback from grantees to evaluate how inclusive their programmes are?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "sourcing_section",
+   "fieldtype": "Section Break",
+   "label": "Sourcing"
+  },
+  {
+   "fieldname": "question",
+   "fieldtype": "Link",
+   "label": " What steps do you take to go beyond your networks and source nonprofits in an inclusive way? ",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "application_section",
+   "fieldtype": "Section Break",
+   "label": "Application"
+  },
+  {
+   "fieldname": "question4",
+   "fieldtype": "Link",
+   "label": "Is your grant application process inclusive and accessible for nonprofits well-suited to achieve the desired impact?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "selection_section",
+   "fieldtype": "Section Break",
+   "label": "Selection"
+  },
+  {
+   "fieldname": "question5",
+   "fieldtype": "Link",
+   "label": "How do you ensure your selection criteria and processes are equitable for all applicants?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "diligence_section",
+   "fieldtype": "Section Break",
+   "label": "Diligence"
+  },
+  {
+   "fieldname": "question6",
+   "fieldtype": "Link",
+   "label": "Do you try to make the diligence process less arduous for the nonprofit?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "grant_setup_and_disbursement_section",
+   "fieldtype": "Section Break",
+   "label": "Grant setup and disbursement"
+  },
+  {
+   "fieldname": "question7",
+   "fieldtype": "Link",
+   "label": "Which of the following steps do you take to make grant setup and disbursement more inclusive?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "grantee_support_section",
+   "fieldtype": "Section Break",
+   "label": "Grantee support"
+  },
+  {
+   "fieldname": "question8",
+   "fieldtype": "Link",
+   "label": "How do you help grantees become more inclusive? ",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "grantee_engagement_section",
+   "fieldtype": "Section Break",
+   "label": "Grantee engagement"
+  },
+  {
+   "fieldname": "question9",
+   "fieldtype": "Link",
+   "label": "What steps do you take to ensure ongoing engagement with grantees is inclusive and equitable?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "reporting_section",
+   "fieldtype": "Section Break",
+   "label": "Reporting"
+  },
+  {
+   "fieldname": "question10",
+   "fieldtype": "Link",
+   "label": "What steps do you take to make reporting more inclusive for all grantees ? ",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "renewal_section",
+   "fieldtype": "Section Break",
+   "label": "Renewal"
+  },
+  {
+   "fieldname": "question11",
+   "fieldtype": "Link",
+   "label": "Is progress on DEI-related outcomes/results seen as a positive at the time of grant renewal?",
+   "options": "Field Options"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-09 10:27:47.988736",
+ "modified": "2024-11-21 18:21:07.883652",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Diversity Equity Inclusion",

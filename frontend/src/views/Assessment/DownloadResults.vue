@@ -22,38 +22,49 @@
                         <DialogPanel
                             class="relative transform overflow-hidden  bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl">
                             <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                               <div class="flex justify-between">
-                                <h1 class="text-h3 font-serif font-bold text-primary">Provide the following
-                                    information</h1>
-                                    <X  @click="open=false" class="text-sm  cursor-pointer" />
-                               </div>
-                                <p class="text-sm font-normal text=[#21272A] py-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                <div class="flex justify-between">
+                                    <h1 class="text-h3 font-serif font-bold text-primary">Provide the following
+                                        information</h1>
+                                    <X @click="open = false" class="text-sm  cursor-pointer" />
+                                </div>
+                                <p class="text-sm font-normal text=[#21272A] py-1">Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit, sed do
                                     eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 <hr class="pb-2 mt-2">
                                 <div class="flex flex-col gap-1.5">
-                                    <label for="" class="text-h5 font-normal text=[#21272A] py-1 ">Please share your designation</label>
+                                    <label for="" class="text-h5 font-normal text=[#21272A] py-1 ">Please share your
+                                        designation</label>
                                     <select name="" id="" class="h-12 outline-none border-b px-2 bg-slate-50">
                                         <option value="" selected>Select </option>
                                     </select>
                                 </div>
-                               
-                                <div class="pt-4 ">
-                                    <h1 class="pb-2 text-h5 font-normal text=[#21272A] py-1 ">Please select which funder type your organization identifies as</h1>
-                                    <div class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer">
-                                        <input id="input1" type="radio" class="p-8" />
-                                        <label for="input1"  class="font-normal text-sm text-sebase cursor-pointer">Corporate Social Responsibility (CSR)</label>
-                                    </div>
-                                    <div class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md mt-3 cursor-pointer">
+                                <div class="pt-3 ">
+                                    <h1 class="pb-2 text-h5 font-normal text=[#21272A] py-1 ">Please select which funder
+                                        type your organization identifies as</h1>
+                                    <label
+                                        :class="`w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer ${isActive ? 'border-slate-600' : ''}`"
+                                        @click="isActive = !isActive" for="input1">
+                                        <input id="input1" type="radio" />
+                                        <span class="font-normal text-sm text-slate-600 cursor-pointer">
+                                            Corporate Social Responsibility (CSR)
+                                        </span>
+                                    </label>
+                                    <label for="input2"
+                                        class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md mt-3 cursor-pointer">
                                         <input id="input2" type="radio" class="p-8" />
-                                        <label for="input2" class="font-normal text-sm text-sebase cursor-pointer"> Domestic Foundation</label>
-                                    </div>
-                                    <div class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md mt-3 cursor-pointer">
+                                        <span for="input2" class="font-normal text-sm text-sebase cursor-pointer">
+                                            Domestic Foundation</span>
+                                    </label>
+                                    <label for="input3"
+                                        class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md mt-3 cursor-pointer">
                                         <input id="input3" type="radio" class="p-8" />
-                                        <label for="input3" class="font-normal text-sm text-sebase cursor-pointer"> Global Foundation</label>
-                                    </div>
+                                        <span for="input3" class="font-normal text-sm text-sebase cursor-pointer">
+                                            Global Foundation</span>
+                                    </label>
                                 </div>
                                 <div class="flex flex-col gap-1.5 pt-2 ">
-                                    <label for="" class="text-h5  font-normal text=[#21272A] py-1 ">Your organisation’s approximate annual budget
+                                    <label for="" class="text-h5  font-normal text=[#21272A] py-1 ">Your organisation’s
+                                        approximate annual budget
                                         allocation</label>
                                     <select name="" id="" class="h-12 outline-none border-b px-2 bg-slate-50">
                                         <option value="" selected>Select </option>
@@ -215,12 +226,12 @@
 <script setup>
 import { ref } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import { Download,X } from 'lucide-vue-next'
+import { Download, X } from 'lucide-vue-next'
 
 const open = ref(false)
 const open_ass = ref(false)
 const condision = ref(false)
-
+const isActive = ref(false);
 
 const openDialog = () => {
     open.value = true;

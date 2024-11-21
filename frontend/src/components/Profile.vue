@@ -25,20 +25,20 @@
                                 </div>
                                 <div class=" flex justify-center items-center pt-4 relative">
                                     <div>
-                                        <div
+                                        <label for="upload" :class="isReadonly?'':' cursor-pointer'"
                                             class="w-24 h-24 rounded-full bg-slate-300 flex items-center justify-center relative">
                                             <img v-if="formData.user_image || imgUrl" :src="imgUrl ? imgUrl : formData.user_image" alt="User Image"
                                                 class="w-full h-full rounded-full object-cover" />
                                             <p class="text-h2" v-else>{{ formData.full_name?.[0]?.toUpperCase() }}</p>
 
                                             <div v-if="!isReadonly"
-                                                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-full">
-                                                <label for="upload"
-                                                    class="cursor-pointer text-white text-sm">Upload</label>
-                                                <input id="upload" type="file" class="hidden" @change="imageUpload"
+                                                class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-full cursor-pointer">
+                                                <p
+                                                    class="cursor-pointer text-white text-sm">Upload</p>
+                                                <input  id="upload" type="file" class="hidden cursor-pointer" @change="imageUpload"
                                                     accept="image/*" />
                                             </div>
-                                        </div>
+                                        </label>
                                         <div class="flex items-end justify-end absolute top-16 pl-[4.5rem]">
                                             <button @click="Editable" class="p-2 rounded-full bg-secondary">
                                                 <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
@@ -65,7 +65,7 @@
                                         <label for="mobile_no" class="block text-gray-800 text-sm pb-2">
                                             Mobile No.
                                         </label>
-                                        <input ref="formData.mobile_no" id="mobile_no" type="text"
+                                        <input v-model="formData.mobile_no" id="mobile_no" type="text"
                                             placeholder="Enter your Mobile No. "
                                             class="w-full px-3 py-2 border-b  bg-[#f3f4f8] border-gray-300 shadow-sm outline-none"
                                             :readonly="isReadonly">
