@@ -25,7 +25,7 @@
                                <div class="flex justify-between">
                                 <h1 class="text-h3 font-serif font-bold text-primary">Provide the following
                                     information</h1>
-                                    <X class="text-sm  cursor-pointer" />
+                                    <X  @click="open=false" class="text-sm  cursor-pointer" />
                                </div>
                                 <p class="text-sm font-normal text=[#21272A] py-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                     eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
