@@ -1,0 +1,74 @@
+[
+ {
+  "additional_1": "myp",
+  "additional_2": "od",
+  "docstatus": 0,
+  "doctype": "Recommendation Logic",
+  "logic": "(core_cost < 5 && od < 5 && fr < 5 && dei < 5 && myp < 5)",
+  "modified": "2024-11-20 17:20:25.710618",
+  "name": "jqk89cb9u3",
+  "recommendation_1": "core_cost",
+  "recommendation_2": "dei",
+  "recommendation_3": "fr"
+ },
+ {
+  "additional_1": "od",
+  "additional_2": "fr",
+  "docstatus": 0,
+  "doctype": "Recommendation Logic",
+  "logic": "((core_cost < 5 || od < 5 || fr < 5 || dei < 5 || myp < 5) && myp > 5)",
+  "modified": "2024-11-20 18:02:32.198867",
+  "name": "k1rorr2cn8",
+  "recommendation_1": "myp",
+  "recommendation_2": "core_cost",
+  "recommendation_3": "dei"
+ },
+ {
+  "additional_1": "fr",
+  "additional_2": "core_cost",
+  "docstatus": 0,
+  "doctype": "Recommendation Logic",
+  "logic": "((core_cost < 5 || od < 5 || fr < 5 || dei < 5 || myp < 5) && core_cost > 5)",
+  "modified": "2024-11-20 18:05:26.099402",
+  "name": "k4ca5p011k",
+  "recommendation_1": "myp",
+  "recommendation_2": "od",
+  "recommendation_3": "dei"
+ },
+ {
+  "additional_1": "fr",
+  "additional_2": "od",
+  "docstatus": 0,
+  "doctype": "Recommendation Logic",
+  "logic": "((core_cost < 5 || od < 5 || fr < 5 || dei < 5 || myp < 5) && od > 5)",
+  "modified": "2024-11-20 18:02:17.528632",
+  "name": "k58gegf8ra",
+  "recommendation_1": "myp",
+  "recommendation_2": "core_cost",
+  "recommendation_3": "dei"
+ },
+ {
+  "additional_1": "fr",
+  "additional_2": "dei",
+  "docstatus": 0,
+  "doctype": "Recommendation Logic",
+  "logic": "((core_cost < 5 || od < 5 || fr < 5 || dei < 5 || myp < 5) && dei > 5)",
+  "modified": "2024-11-20 18:02:08.310266",
+  "name": "k5kllsnjel",
+  "recommendation_1": "myp",
+  "recommendation_2": "core_cost",
+  "recommendation_3": "od"
+ },
+ {
+  "additional_1": "fr",
+  "additional_2": "od",
+  "docstatus": 0,
+  "doctype": "Recommendation Logic",
+  "logic": "((core_cost < 5 || od < 5 || fr < 5 || dei < 5 || myp < 5) && fr > 5)",
+  "modified": "2024-11-20 18:01:33.159309",
+  "name": "k5slf5rrid",
+  "recommendation_1": "myp",
+  "recommendation_2": "core_cost",
+  "recommendation_3": "dei"
+ }
+]

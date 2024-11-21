@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-20 17:03:48.589156",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "logic",
+  "recommendation_1",
+  "recommendation_2",
+  "recommendation_3",
+  "additional_1",
+  "additional_2"
+ ],
+ "fields": [
+  {
+   "fieldname": "logic",
+   "fieldtype": "Small Text",
+   "label": "Logic"
+  },
+  {
+   "fieldname": "recommendation_1",
+   "fieldtype": "Select",
+   "label": "Recommendation 1",
+   "options": "\ncore_cost\ndei\nfr\nmyp\nod"
+  },
+  {
+   "fieldname": "recommendation_2",
+   "fieldtype": "Select",
+   "label": "Recommendation 2",
+   "options": "\ncore_cost\ndei\nfr\nmyp\nod"
+  },
+  {
+   "fieldname": "recommendation_3",
+   "fieldtype": "Select",
+   "label": "Recommendation 3",
+   "options": "\ncore_cost\ndei\nfr\nmyp\nod"
+  },
+  {
+   "fieldname": "additional_1",
+   "fieldtype": "Select",
+   "label": "Additional 1",
+   "options": "\ncore_cost\ndei\nfr\nmyp\nod"
+  },
+  {
+   "fieldname": "additional_2",
+   "fieldtype": "Select",
+   "label": "Additional 2",
+   "options": "\ncore_cost\ndei\nfr\nmyp\nod"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-21 10:14:22.540600",
+ "modified_by": "Administrator",
+ "module": "pwit",
+ "name": "Recommendation Logic",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

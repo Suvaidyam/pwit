@@ -122,7 +122,9 @@ const recommended = computed(() => {
         matchingLogic.recommendation_3
     ].filter(Boolean);
 
-    return menu_list.value?.filter(item => recommendationKeys.includes(item.code));
+    return results.length
+        ? menu_list.value?.filter(item => recommendationKeys.includes(item.code))
+        : menu_list.value
 });
 
 const additional = computed(() => {
@@ -132,7 +134,8 @@ const additional = computed(() => {
         matchingLogic.additional_2
     ].filter(Boolean);
 
-    return menu_list.value?.filter(item => additionalKeys.includes(item.code));
+    return results.length ? menu_list.value?.filter(item => additionalKeys.includes(item.code))
+        : [];
 });
 
 onMounted(() => {
