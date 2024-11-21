@@ -27,13 +27,20 @@
                                             placeholder="Enter New Password"
                                             class="w-full px-3 py-2 border-b bg-[#f3f4f8] border-gray-300 shadow-sm outline-none">
                                     </div>
-                                    <div>
-                                        <label for="Confirm_pass" class="block text-gray-800 text-sm pb-2">
+                                   
+                                    <div class="flex flex-col gap-1 w-full relative">
+                                        <label for="Confirm_pass" class="block text-gray-800 text-sm pb-1">
                                             Confirm Password
                                         </label>
-                                        <input v-model="confirmPassword" id="Confirm_pass" type="password"
-                                            placeholder="Confirm New Password"
-                                            class="w-full px-3 py-2 border-b bg-[#f3f4f8] shadow-sm outline-none">
+                                        <input  v-model="confirmPassword" id="Confirm_pass" type="password" :type="show_pass ? 'text' : 'password'"
+                                            class="outline-none w-full border-b-2  bg-[#f3f4f8] text-sm px-3 h-12 text-h5"
+                                            placeholder="Confirm New Password">
+                                        <span
+                                            class="absolute right-2 top-11 font-semibold text-gray-500 text-xs cursor-pointer"
+                                            @click="show_pass = !show_pass">
+                                            <EyeOff class="w-5 h-4 text-gray-500" v-if="show_pass" />
+                                            <Eye class="w-5 h-4 text-gray-500" v-else />
+                                        </span>
                                     </div>
                                     <div class="flex justify-between">
                                         <div>
@@ -59,11 +66,13 @@
 <script setup>
 import { ref, watch, inject } from 'vue'
 import { TransitionChild, TransitionRoot, Dialog, DialogPanel } from '@headlessui/vue'
+import {Eye,EyeOff} from 'lucide-vue-next'
 
 const store = inject('store');
 const newPassword = ref('');
 const confirmPassword = ref('');
 const passwordsMatch = ref(null);
+const show_pass = ref(false)
 const props = defineProps({
     isOpen: {
         type: Boolean,

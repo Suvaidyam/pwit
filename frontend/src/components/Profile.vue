@@ -63,7 +63,7 @@
                                         <label for="mobile_no" class="block text-gray-800 text-sm pb-2">
                                             Mobile No.
                                         </label>
-                                        <input id="mobile_no" type="text" placeholder="Enter your Mobile No. "
+                                        <input v-model="formData.mobile_no" id="mobile_no" type="text" placeholder="Enter your Mobile No. "
                                             class="w-full px-3 py-2 border-b  bg-[#f3f4f8] border-gray-300 shadow-sm outline-none"
                                             :readonly="isReadonly">
                                     </div>
@@ -77,7 +77,7 @@
                                             :readonly="isReadonly">
                                     </div>
                                     <div class="flex justify-end">
-                                        <button type="button" @click="saveImage"
+                                        <button type="button" @click="saveUserProfile"
                                             class="text-white bg-secondary py-2 px-8 rounded-md">
                                             Save
                                         </button>
@@ -99,8 +99,10 @@ import { TransitionChild, TransitionRoot, Dialog, DialogPanel } from '@headlessu
 const isReadonly = ref(true);
 const store = inject('store');
 const auth = inject('$auth');
+const call = inject('$call');
 const formData = ref(auth.cookie);
 const uploadedImage = ref(null);
+const imgUrl = ref('');
 const props = defineProps({
     isOpen: {
         type: Boolean,
@@ -112,23 +114,55 @@ const Editable = () => {
     isReadonly.value = !isReadonly.value;
 };
 
-const imageUpload = (event) => {
+const imageUpload = async (event) => {
     const file = event.target.files[0];
     if (file) {
         const reader = new FileReader();
+
         reader.onload = (e) => {
-            uploadedImage.value = e.target.result;
+            uploadedImage.value = e.target.result;  
         };
         reader.readAsDataURL(file);
+
+        const formData1 = new FormData();
+        formData1.append("file", file); // The actual file
+        formData1.append("is_private", 1);
+        formData1.append("folder", "Home");
+        formData1.append("doctype", "User");
+        formData1.append("docname", formData.value.user_id); // Assuming `formData.value.user_id` exists
+        formData1.append("fieldname", "user_image");
+
+        try {
+            const response = await fetch('/api/method/upload_file', {
+                method: 'POST',
+                body: formData1,
+                headers: {
+                },
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                imgUrl.value = result.message.file_url
+            } else {
+                console.error('Upload failed', response.status, response.statusText);
+            }
+        } catch (error) {
+            console.error('Error uploading file:', error);
+        }
     }
+    
 };
-const saveImage = () => {
-    if (uploadedImage.value) {
-        formData.value.user_image = uploadedImage.value;
-        auth.cookie.user_image = uploadedImage.value;
-        console.log('Image saved successfully!', auth.cookie);
-    } else {
-        console.warn('No image uploaded yet.');
+const saveUserProfile = async()=>{
+    // return console.log({user:formData.value.user_id,data:{...formData,url:imgUrl.value}})
+    let data ={
+        user:formData.value.user_id,
+        first_name:formData.value.full_name?.split(' ')[0],
+        last_name:formData.value?.full_name?.split(' ')[1],
+        mobile_no:formData.value.mobile_no,
+        user_image:imgUrl.value
     }
-};
+    await call('pwit.controllers.api.save_image',{data:data})
+}
+
+
 </script>

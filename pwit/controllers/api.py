@@ -56,3 +56,14 @@ def get_results(doctype,session):
 @frappe.whitelist(allow_guest=True)
 def get_meta(doctype):
     return FormAPIs.get_meta(doctype)
+
+
+@frappe.whitelist(allow_guest=True)
+def save_image(data): 
+    doc = frappe.get_doc('User',data.get('user'))
+    doc.first_name=data.get('first_name')
+    if data.get('last_name'):
+        doc.last_name=data.get('last_name')
+    doc.mobile_no=data.get('mobile_no')
+    doc.user_image=data.get('user_image')
+    doc.save()

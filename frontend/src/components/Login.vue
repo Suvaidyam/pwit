@@ -21,7 +21,8 @@
                                     <div class="mt-3 text-center sm:mt-0 sm:text-left">
                                         <DialogTitle as="h3" class="text-h3 font-bold text-[#21272A]">Login to
                                             PAY-WHAT-IT-TAKES INDIA INITIATIVE </DialogTitle>
-                                        <p class="text-h5 pt-2 text-center text-trbase font-normal">Please provide the following
+                                        <p class="text-h5 pt-2 text-center text-trbase font-normal">Please provide the
+                                            following
                                             information to continue </p>
                                     </div>
                                 </div>
@@ -30,7 +31,8 @@
                                         <label for="" class="text-sm text-tatary">Email Address
                                             <span class="text-red-500"> *</span>
                                         </label>
-                                        <input   @keydown.enter="login"  @input="resetBorder"  id="emailInputId" v-model="email" type="email"
+                                        <input @keydown.enter="login" @input="resetBorder" id="emailInputId"
+                                            v-model="email" type="email"
                                             class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5"
                                             placeholder="Enter Email Address">
                                     </div>
@@ -38,13 +40,15 @@
                                         <label for="" class="text-sm text-tatary">Password
                                             <span class="text-red-500"> *</span>
                                         </label>
-                                        <input  @keydown.enter="login"  @input="resetBorder" id="passwordInputId" v-model="password" :type="show_pass ? 'text' : 'password'"
+                                        <input @keydown.enter="login" @input="resetBorder" id="passwordInputId"
+                                            v-model="password" :type="show_pass ? 'text' : 'password'"
                                             class="outline-none w-full border-b-2 bg-gray-50 text-sm px-3 h-12 text-h5"
                                             placeholder="******">
-                                        <span class="absolute right-2 top-10 font-semibold text-gray-500 text-xs cursor-pointer"
+                                        <span
+                                            class="absolute right-2 top-10 font-semibold text-gray-500 text-xs cursor-pointer"
                                             @click="show_pass = !show_pass">
-                                        <EyeOff class="w-5 h-5 text-gray-500" v-if="show_pass"/>
-                                        <Eye class="w-5 h-5 text-gray-500" v-else/>
+                                            <EyeOff class="w-5 h-5 text-gray-500" v-if="show_pass" />
+                                            <Eye class="w-5 h-5 text-gray-500" v-else />
                                         </span>
                                     </div>
                                     <div class="w-full border-b h-14">
@@ -54,7 +58,8 @@
                                     </div>
                                     <div class="flex items-center justify-center">
                                         <span class="font-extralight text-gray-600 text-sm">No account yet?
-                                            <span class="text-primary cursor-pointer" @click="store.auth = 'Sign Up'">Sign
+                                            <span class="text-primary cursor-pointer"
+                                                @click="store.auth = 'Sign Up'">Sign
                                                 Up</span>
                                         </span>
                                     </div>
@@ -73,7 +78,7 @@ import { ref, inject, watch } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
-import {Eye,EyeOff} from 'lucide-vue-next'
+import { Eye, EyeOff } from 'lucide-vue-next'
 
 const open = ref(false)
 const show_pass = ref(false)
@@ -90,44 +95,52 @@ const validateEmail = (email) => {
 }
 
 const login = async () => {
-    const email = document.getElementById('emailInputId');  
-    const password = document.getElementById('passwordInputId'); 
-    let valid = true;  
+    const email = document.getElementById('emailInputId');
+    const password = document.getElementById('passwordInputId');
+    let valid = true;
 
     email.style.borderBottom = '';
     password.style.borderBottom = '';
 
     if (!email.value || !password.value) {
-        alert("Please enter both email and password");
-        
+        // alert("Please enter both email and password");
+
         if (!email.value) {
-            email.style.borderBottom = '1px solid red';  
-            valid = false;  
+            email.style.borderBottom = '1px solid red';
+            valid = false;
         }
         if (!password.value) {
-            password.style.borderBottom = '1px solid red'; 
-            valid = false; 
+            password.style.borderBottom = '1px solid red';
+            valid = false;
         }
-        return;  
+        return;
     }
     if (!validateEmail(email.value)) {
-        email.style.borderBottom = '1px solid red';  
+        email.style.borderBottom = '1px solid red';
         toast.error("Invalid email address.");
-        valid = false; 
-        return;  
+        valid = false;
+        return;
     }
+    let res
+    try {
+        res = await auth.login(email.value, password.value);
+        console.log(res)
+        if (res) {
+            open.value = false;
+            toast.success('Login Successful');
+        }
 
-    open.value = false; 
-    let res = await auth.login(email.value, password.value);
-    
+    } catch (error) {
+        console.log(error)
+        toast.error('Invalid login');
+    }
     if (res && cur_session.value) {
         const response = await call('pwit.controllers.api.set_user_session', {
             name: cur_session.value,
             user: email.value
         });
-        
+
         if (response) {
-            toast.success('Login Successful');
             setTimeout(() => {
                 window.location.reload();
             }, 500);
@@ -140,13 +153,13 @@ const openDialog = () => {
     store.auth = ''
 }
 const resetBorder = (event) => {
-    event.target.style.borderBottom = '';  
+    event.target.style.borderBottom = '';
 }
 
 watch(() => cur_session.value, (value) => {
     cur_session.value = value
 });
-watch(()=> open.value, (value) => {
+watch(() => open.value, (value) => {
     if (!value) {
         store.auth = ''
     }
