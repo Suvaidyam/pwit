@@ -63,7 +63,8 @@
                                         <label for="mobile_no" class="block text-gray-800 text-sm pb-2">
                                             Mobile No.
                                         </label>
-                                        <input v-model="formData.mobile_no" id="mobile_no" type="text" placeholder="Enter your Mobile No. "
+                                        <input ref="formData.mobile_no" id="mobile_no" type="text"
+                                            placeholder="Enter your Mobile No. "
                                             class="w-full px-3 py-2 border-b  bg-[#f3f4f8] border-gray-300 shadow-sm outline-none"
                                             :readonly="isReadonly">
                                     </div>
@@ -74,7 +75,7 @@
                                         <input v-model="formData.user_id" id="email" type="email"
                                             placeholder="Enter Email Address"
                                             class="w-full px-3 border-b bg-[#f3f4f8] border-gray-300   shadow-sm py-2 outline-none"
-                                            :readonly="isReadonly">
+                                            :disabled="true">
                                     </div>
                                     <div class="flex justify-end">
                                         <button type="button" @click="saveUserProfile"
@@ -96,6 +97,7 @@
 import { ref, inject } from 'vue'
 import { TransitionChild, TransitionRoot, Dialog, DialogPanel } from '@headlessui/vue'
 
+const mobile_no = ref('')
 const isReadonly = ref(true);
 const store = inject('store');
 const auth = inject('$auth');
@@ -120,16 +122,16 @@ const imageUpload = async (event) => {
         const reader = new FileReader();
 
         reader.onload = (e) => {
-            uploadedImage.value = e.target.result;  
+            uploadedImage.value = e.target.result;
         };
         reader.readAsDataURL(file);
 
         const formData1 = new FormData();
-        formData1.append("file", file); // The actual file
+        formData1.append("file", file);
         formData1.append("is_private", 1);
         formData1.append("folder", "Home");
         formData1.append("doctype", "User");
-        formData1.append("docname", formData.value.user_id); // Assuming `formData.value.user_id` exists
+        formData1.append("docname", formData.value.user_id);
         formData1.append("fieldname", "user_image");
 
         try {
@@ -150,18 +152,17 @@ const imageUpload = async (event) => {
             console.error('Error uploading file:', error);
         }
     }
-    
+
 };
-const saveUserProfile = async()=>{
-    // return console.log({user:formData.value.user_id,data:{...formData,url:imgUrl.value}})
-    let data ={
-        user:formData.value.user_id,
-        first_name:formData.value.full_name?.split(' ')[0],
-        last_name:formData.value?.full_name?.split(' ')[1],
-        mobile_no:formData.value.mobile_no,
-        user_image:imgUrl.value
+const saveUserProfile = async () => {
+    let data = {
+        user: formData.value.user_id,
+        first_name: formData.value.full_name?.split(' ')[0],
+        last_name: formData.value?.full_name?.split(' ')[1],
+        mobile_no: formData.value.mobile_no,
+        user_image: imgUrl.value
     }
-    await call('pwit.controllers.api.save_image',{data:data})
+    await call('pwit.controllers.api.save_image', { data: data })
 }
 
 
