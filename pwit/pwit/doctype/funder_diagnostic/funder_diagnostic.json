@@ -140,13 +140,14 @@
   {
    "fieldname": "session",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Session",
    "options": "Session"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-20 13:51:32.871270",
+ "modified": "2024-11-21 19:20:23.688978",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Funder Diagnostic",
