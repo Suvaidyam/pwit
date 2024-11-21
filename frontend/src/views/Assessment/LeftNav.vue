@@ -5,7 +5,7 @@
                 <img :src="`/files/logo.png`" class="w-40 h-14" alt="">
             </router-link>
         </div>
-        <div  class="w-full h-full bg-primary p-2 pt-24 ">
+        <div class="w-full h-full bg-primary p-2 pt-24 ">
             <LeftMenuLoader v-if="loading" />
             <div v-if="!loading" class="w-full h-full">
                 <div class="w-full text-white opacity-40 block md:hidden text-center py-2 hover:bg-white hover:text-black rounded-md mb-1 cursor-pointer"
@@ -61,23 +61,26 @@ const leftMenu = async () => {
 
 const get_result = async () => {
     loading.value = true;
-    try {
-        const response = await call('pwit.controllers.api.get_results', {
-            doctype: 'Funder Diagnostic',
-            session: session.data.name
-        });
+    if (session?.data?.name){
+        try {
+            const response = await call('pwit.controllers.api.get_results', {
+                doctype: 'Funder Diagnostic',
+                session: session?.data?.name
+            });
 
-        const groupedSums = Object.entries(response.data).reduce((acc, [key, value]) => {
-            const prefix = key.split('_').slice(0, -1).join('_');
-            acc[prefix] = (acc[prefix] || 0) + value;
-            return acc;
-        }, {});
-        results.value = groupedSums;
-    } catch (error) {
-        console.error('Error fetching results:', error);
-    } finally {
-        loading.value = false;
+            const groupedSums = Object.entries(response.data).reduce((acc, [key, value]) => {
+                const prefix = key.split('_').slice(0, -1).join('_');
+                acc[prefix] = (acc[prefix] || 0) + value;
+                return acc;
+            }, {});
+            results.value = groupedSums;
+        } catch (error) {
+            console.error('Error fetching results:', error);
+        } finally {
+            loading.value = false;
+        }
     }
+
 };
 
 const get_recomm = async () => {

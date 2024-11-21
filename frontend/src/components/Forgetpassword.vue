@@ -32,7 +32,7 @@
                                         <label for="Confirm_pass" class="block text-gray-800 text-sm pb-1">
                                             Confirm Password
                                         </label>
-                                        <input  v-model="confirmPassword" id="Confirm_pass" type="password" :type="show_pass ? 'text' : 'password'"
+                                        <input  v-model="confirmPassword" id="Confirm_pass" :type="show_pass ? 'text' : 'password'"
                                             class="outline-none w-full border-b-2  bg-[#f3f4f8] text-sm px-3 h-12 text-h5"
                                             placeholder="Confirm New Password">
                                         <span
@@ -67,8 +67,12 @@
 import { ref, watch, inject } from 'vue'
 import { TransitionChild, TransitionRoot, Dialog, DialogPanel } from '@headlessui/vue'
 import {Eye,EyeOff} from 'lucide-vue-next'
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 
 const store = inject('store');
+const auth = inject('$auth');
+const call = inject('$call');
 const newPassword = ref('');
 const confirmPassword = ref('');
 const passwordsMatch = ref(null);
@@ -80,12 +84,21 @@ const props = defineProps({
         default: false
     }
 })
-const handleClick = () => {
+const handleClick = async() => {
     passwordsMatch.value = newPassword.value === confirmPassword.value;
     if (!passwordsMatch.value) {
         Confirm_pass.style.borderBottom = '1px solid red';
     } else {
-        Confirm_pass.style.borderBottom = '';
+        let res = await call('pwit.controllers.api.change_password', {
+            user: auth.cookie.user_id,
+            new_password: newPassword.value,
+        });
+        if (res.code === 200) {
+            toast.success('Password changed successfully');
+            newPassword.value = '';
+            confirmPassword.value = '';
+            store.isOpenPas = false;
+        }
     }
 };
 

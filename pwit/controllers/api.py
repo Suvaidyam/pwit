@@ -17,6 +17,10 @@ def register(data):
     return AuthAPIs.register(data)
 
 @frappe.whitelist(allow_guest=True)
+def change_password(user,new_password):
+    return AuthAPIs.change_password(user,new_password)
+
+@frappe.whitelist(allow_guest=True)
 def contact_us(data):
     return AuthAPIs.contact_us(data)
 

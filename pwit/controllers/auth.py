@@ -51,3 +51,9 @@ class AuthAPIs:
         })
         doc.save(ignore_permissions=True)
         return {'code': 200, 'data': doc}
+            
+    def change_password(user,new_password): 
+        doc = frappe.get_doc('User', user)
+        doc.new_password = new_password
+        doc.save(ignore_permissions=True)
+        return {'code': 200, 'data': doc}

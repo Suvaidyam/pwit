@@ -4,8 +4,7 @@
             <img :src="`/files/logo.png`" class="w-40 h-14" alt="">
         </router-link>
         <div class="flex gap-3 text-sm" v-if="!auth.isLoggedIn">
-           <Register/>
-           <Login/>
+           <AuthPop/>
         </div>
         <div class="flex gap-2 items-center" v-else>{{ auth?.cookie?.full_name }}
             <ProfileDrop/>
@@ -15,8 +14,7 @@
 
 <script setup>
 import { ref,inject,onMounted,watch } from 'vue'
-import Login from './Login.vue'
-import Register from './Register.vue'
+import AuthPop from './AuthPop.vue';
 import ProfileDrop from './ProfileDrop.vue';
 const call = inject('$call')
 const auth = inject('$auth');
