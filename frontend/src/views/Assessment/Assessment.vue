@@ -4,9 +4,17 @@
         <h1 class="text-h2 font-serif font-semibold text-primary">{{ title }}</h1>
         <transition name="fade" mode="out-in">
             <div  class="w-full h-full">
-               <FormView 
+               <FormView v-if="title!=='Diversity Equity Inclusion'"
                     :doctype="title" 
                     :isTable="true" 
+                    :isDraft="true" 
+                    :section="true"
+                    :save_as_draft="save_as_draft"
+                    :key="title" 
+                    :isRoute="`${current_path}/results`"
+                />
+               <FormView v-if="title=='Diversity Equity Inclusion'"
+                    :doctype="title" 
                     :isDraft="true" 
                     :section="true"
                     :save_as_draft="save_as_draft"
