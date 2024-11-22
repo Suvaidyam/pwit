@@ -6,6 +6,7 @@ import SubRoute from '../views/Assessment/SubRoute.vue';
 import Assessment from '../views/Assessment/Assessment.vue';
 import NotFound from '../views/NotFound.vue';
 import Results from "../views/Assessment/Results.vue";
+import ChangePass from "../views/ChangePass.vue";
 
 const routes = [
   {
@@ -22,6 +23,11 @@ const routes = [
     path: "/funder-diagnostic",
     name: "Funder",
     component: FunderDiagnostic,
+  },
+  {
+    path: "/update-password",
+    name: "ChangePass",
+    component: ChangePass,
   },
   {
     path: "/:pathMatch(.*)*",  

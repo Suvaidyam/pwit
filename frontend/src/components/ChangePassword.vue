@@ -86,9 +86,7 @@ const props = defineProps({
 })
 const handleClick = async() => {
     passwordsMatch.value = newPassword.value === confirmPassword.value;
-    if (!passwordsMatch.value) {
-        Confirm_pass.style.borderBottom = '1px solid red';
-    } else {
+    if (passwordsMatch.value && newPassword.value.length > 5 && confirmPassword.value.length > 5) {
         let res = await call('pwit.controllers.api.change_password', {
             user: auth.cookie.user_id,
             new_password: newPassword.value,
@@ -99,6 +97,8 @@ const handleClick = async() => {
             confirmPassword.value = '';
             store.isOpenPas = false;
         }
+    } else {
+        Confirm_pass.style.borderBottom = '1px solid red';
     }
 };
 
