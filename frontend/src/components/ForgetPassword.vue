@@ -11,8 +11,14 @@
                 <div class="flex flex-col items-center gap-2 justify-center">
                     <button :disabled="email ? false : true"
                         :class="email ? 'text-white bg-secondary' : 'bg-gray-300 text-gray-500'" @click="reset_password"
-                        class="w-full py-2 px-8 rounded-md">
-                        Reset Password
+                        class="w-full py-2 px-8 rounded-md flex items-center justify-center gap-2">
+                        <div v-if="loading" class="h-5 w-5 ">
+                            <div
+                                class="animate-spin h-full w-full rounded-full border-2 border-t-[#00A0DC] border-b-[#00A0DC]">
+                            </div>
+                        </div>
+                        <p v-if="loading"> verifying...</p>
+                        <p v-if="!loading">Reset Password</p>
                     </button>
                     <p @click="store.isForgetPas = false" class="text-sm cursor-pointer">Back to Login</p>
                 </div>
@@ -28,9 +34,11 @@ import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
 
 const email = ref('');
+const loading = ref(false);
 const store = inject('store');
 
 const reset_password = async () => {
+    loading.value = true;
     if (email.value) {
         const formData = new FormData();
         formData.append('cmd', 'frappe.core.doctype.user.user.reset_password');
@@ -44,13 +52,16 @@ const reset_password = async () => {
             });
 
             if (response.ok) {
+                loading.value = false;
                 const result = await response.json();
                 toast.success('Password reset instructions have been sent to your email');
                 email.value = '';
-            } else { 
+            } else {
+                loading.value = false;
                 toast.error(`Email ${response.statusText}`);
             }
         } catch (error) {
+            loading.value = false;
             toast.error('Please setup email settings');
         }
     }

@@ -31,7 +31,7 @@
                 <div v-if="!loading" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-12 pt-4">
                     <!-- Card 1 -->
                     <router-link v-for="el in recommended" :key="el.name" :to="el.route"
-                        class="bg-white shadow-lg rounded-lg p-4 min-h-56  border-t-4 " :class="`border-[${el.color}]`">
+                        class="bg-white shadow-sm hover:shadow-xl rounded-lg p-4 min-h-56  border-t-4 " :class="`border-[${el.color}]`">
                         <div class="rounded-md bg-white relative shadow-lg">
                             <div class="w-[70px] h-[70px] rounded-full border-8 absolute -top-14 bg-white justify-center items-center flex"
                                 :class="`border-[${el.color}]`">
@@ -88,13 +88,12 @@
 import { computed, inject, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import FooterNav from '../components/FooterNav.vue';
-import  Loader  from './Assessment/Loader.vue';
+import  Loader  from '../components/Loader.vue';
 import {IndianRupee,Handshake,PiggyBank,ChartNoAxesCombined,Scale} from 'lucide-vue-next'
 
 const router = useRouter()
 const call = inject('$call')
 const session = JSON.parse(localStorage.getItem('session'))
-const logic = ref([])
 const results = ref({})
 const loading = ref(false)
 
@@ -144,27 +143,16 @@ const data = [
         color: '#f38714',
         code: 'dei'
     }
-]
+] 
+console.log(results)
 const recommended = computed(() => {
-    const recommendationKeys = [
-        computedMatchingLogic.value[0]?.recommendation_1,
-        computedMatchingLogic.value[0]?.recommendation_2,
-        computedMatchingLogic.value[0]?.recommendation_3
-    ].filter(Boolean); // Filter out null/undefined keys
-
-    return data.filter(item => recommendationKeys.includes(item.code));
+    return data;
 });
 
 // Additional logic
-const additional = computed(() => {
-    const additionalKeys = [
-        computedMatchingLogic.value[0]?.additional_1,
-        computedMatchingLogic.value[0]?.additional_2
-    ].filter(Boolean); // Filter out null/undefined keys
-
-    return data.filter(item => additionalKeys.includes(item.code));
+const additional = computed(() => { 
+    return data;
 });
-const matchingLogic = ref([]);
 
 const get_result = async () => {
     loading.value = true
@@ -188,53 +176,11 @@ const get_result = async () => {
     }
 };
 
-// Fetch recommended principles
-const get_recomm = async () => {
-    loading.value = true
-    try {
-        const res = await call('pwit.controllers.api.get_recommended_principles', {});
-        if (res.code === 200) {
-            logic.value = res.data;
-            loading.value = false
-        }
-    } catch (error) {
-        console.error('Error fetching recommendations:', error);
-    }
-};
-
-// Evaluate logic dynamically based on results
-const evaluateLogic = (logicArray, results) => {
-    return logicArray.filter(entry => {
-        try {
-            if (entry?.logic?.trim()) {
-                const substitutedLogic = entry.logic.replace(
-                    /\b(core_cost|od|myp|fr|dei)\b/g,
-                    match => `(${results[match] || 0})`
-                );
-                return eval(substitutedLogic);
-            }
-            return false;
-        } catch (e) {
-            console.error(`Error evaluating logic for entry ${entry.name}:`, e);
-            return false;
-        }
-    });
-};
-
-// Computed property for matching logic
-const computedMatchingLogic = computed(() => {
-    return evaluateLogic(logic.value, results.value);
+watch(results.value, (newVal) => {
+    results.value = newVal;
 });
-
-// Update matching logic whenever results or logic change
-watch([results, logic], () => {
-    matchingLogic.value = computedMatchingLogic.value;
-    console.log(computedMatchingLogic.value);
-});
-
 // Fetch data on mount
 onMounted(() => {
     get_result();
-    get_recomm();
 });
 </script>
