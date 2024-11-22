@@ -16,6 +16,7 @@
                <FormView v-if="title=='Diversity Equity Inclusion'"
                     :doctype="title" 
                     :isDraft="true" 
+                    :isCard="true" 
                     :section="true"
                     :save_as_draft="save_as_draft"
                     :key="title" 

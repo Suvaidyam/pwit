@@ -41,9 +41,14 @@
             </div>
             <div class="w-full border-b h-14">
                 <button :disabled="remember ? false : true" type="button"
-                    :class="remember ? 'bg-secondary text-white' : 'bg-slate-300 text-gray-500'"
-                    class=" w-full justify-center rounded-md px-3 h-12 text-h5 font-normal  shadow-sm"
-                    @click="login">Log In</button>
+                    :class="remember ? 'bg-secondary text-white' : 'bg-gray-300 text-gray-600'"
+                    class=" w-full flex items-center gap-2 justify-center rounded-md px-3 h-12 text-h5 font-normal  shadow-sm" @click="login">
+                    <div v-if="loading" class="h-5 w-5 ">
+                        <div  class="animate-spin h-full w-full rounded-full border-2 border-t-[#00A0DC] border-b-[#00A0DC]"></div>
+                    </div>
+                    <p v-if="loading"> verifying...</p>
+                    <p v-if="!loading"> Log In</p>
+                </button>
             </div>
             <div class="flex items-center justify-center">
                 <span class="font-extralight text-gray-600 text-sm">No account yet?
@@ -66,9 +71,11 @@ import ForgetPassword from './ForgetPassword.vue';
 
 const show_pass = ref(false)
 const remember = ref(false)
+const loading = ref(false)
 const email = ref('')
 const password = ref('')
 const errorMessage = ref('')
+
 const store = inject('store');
 const auth = inject('$auth');
 const call = inject('$call');
@@ -80,6 +87,7 @@ const validateEmail = (email) => {
 }
 
 const login = async () => {
+   
     const email = document.getElementById('emailInputId');
     const password = document.getElementById('passwordInputId');
     let valid = true;
@@ -108,16 +116,19 @@ const login = async () => {
     }
     let res
     try {
-        if(errorMessage.value == ''){
+        if (errorMessage.value == '') {
+            loading.value = true;
             res = await auth.login(email.value, password.value);
             if (res) {
                 store.auth = false;
                 toast.success('Login Successful');
+                loading.value = false;
             }
         }
 
     } catch (error) {
         toast.error('Invalid login credentials');
+        loading.value = false;
     }
     if (res && cur_session.value) {
         const response = await call('pwit.controllers.api.set_user_session', {

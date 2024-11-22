@@ -38,7 +38,7 @@
                                         <input type="checkbox" v-model="condision" name="" id="tc">
                                         <label class="text-sm" for="tc">I understand and agree to the above.</label>
                                     </div>
-                                    <button :disabled="!condision" @click="assessment" :class="condision?'bg-secondary':'bg-gray-700'" class="px-16 py-3 mt-5 rounded-md text-white">Continue </button>
+                                    <button  @click="assessment" :class="condision?'bg-secondary':'bg-secondary'" class="px-16 py-3 mt-5 rounded-md text-white">Continue </button>
                                 </div>
                             </div>
                         </DialogPanel>

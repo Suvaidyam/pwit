@@ -46,13 +46,21 @@
             </div>
             <div class="w-full border-b h-14">
                 <button :disabled="remember ? false : true" type="button"
-                    :class="remember ? 'bg-secondary text-white' : 'bg-slate-300 text-gray-500'"
-                    class=" w-full justify-center rounded-md px-3 h-12 text-h5 font-normal shadow-sm"
-                    @click="register">Sign Up</button>
+                    :class="remember ? 'bg-secondary text-white' : 'bg-gray-300 text-gray-600'"
+                    class=" w-full flex items-center gap-2 justify-center rounded-md px-3 h-12 text-h5 font-normal shadow-sm"
+                    @click="register">
+                    <div v-if="loading" class="h-5 w-5 ">
+                        <div
+                            class="animate-spin h-full w-full rounded-full border-2 border-t-[#00A0DC] border-b-[#00A0DC]">
+                        </div>
+                    </div>
+                    <p v-if="loading"> verifying...</p>
+                    <p v-if="!loading">Sign Up</p>
+                </button>
             </div>
             <div class="flex items-center justify-center">
                 <span class="font-extralight text-gray-600 text-sm">Already a user?
-                    <span class="text-primary cursor-pointer" @click="store.auth =false">Log
+                    <span class="text-primary cursor-pointer" @click="store.auth = false">Log
                         In</span>
                 </span>
             </div>
@@ -62,12 +70,13 @@
 
 <script setup>
 import { ref, watch, inject } from 'vue'
-import {  DialogTitle } from '@headlessui/vue'
+import { DialogTitle } from '@headlessui/vue'
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
 import { Eye, EyeOff } from 'lucide-vue-next'
 
 const open = ref(false)
+const loading = ref(false)
 const show_pass = ref(false)
 const remember = ref(false)
 const email = ref('')
@@ -83,6 +92,7 @@ const validateEmail = (email) => {
 }
 
 const register = async () => {
+
     const emailEl = document.getElementById('emailInputId');
     const passwordEl = document.getElementById('passwordInputId');
     const fullNameEl = document.getElementById('full_name');
@@ -116,19 +126,27 @@ const register = async () => {
         return
     }
     open.value = false;
-    const res = await call('pwit.controllers.api.register', {
-        data: {
-            email: email.value,
-            full_name: full_name.value,
-            password: password.value,
-        }
-    });
+    if (errorMessage.value == '') {
+        loading.value = true;
 
-    if (res.code === 200) {
-        toast.success('Registration Successful');
-        store.auth = 'Log In';
-    } else {
-        toast.error('Registration Failed');
+        const res = await call('pwit.controllers.api.register', {
+            data: {
+                email: email.value,
+                full_name: full_name.value,
+                password: password.value,
+            }
+        });
+
+        if (res.code === 200) {
+            toast.success('Registration Successful');
+            // store.auth = 'Log In';
+            loading.value = false;
+        } else {
+            setTimeout(() => {
+                loading.value = false;
+            }, 1000);
+            toast.error('Registration Failed');
+        }
     }
 };
 

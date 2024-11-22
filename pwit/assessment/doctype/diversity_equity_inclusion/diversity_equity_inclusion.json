@@ -60,9 +60,9 @@
   },
   {
    "fieldname": "question",
-   "fieldtype": "Link",
+   "fieldtype": "Table MultiSelect",
    "label": " What steps do you take to go beyond your networks and source nonprofits in an inclusive way? ",
-   "options": "Field Options"
+   "options": "Options Child"
   },
   {
    "fieldname": "application_section",
@@ -155,7 +155,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-21 18:21:07.883652",
+ "modified": "2024-11-22 20:05:53.128424",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Diversity Equity Inclusion",
