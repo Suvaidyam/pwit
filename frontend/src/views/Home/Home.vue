@@ -190,7 +190,7 @@
 				</div>
 				<div class="w-full md:h-96 flex md:justify-end">
 					<img class="w-[90%]"
-						src="https://s3-alpha-sig.figma.com/img/fd5f/3676/ae1cb6c025ff0ce6cf4fa11682c74551?Expires=1731283200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZW6YxqY7dSwIZ8GcQEHIRcC5A6T~oxGg3xLqCHv~A4GnVxUXMPH0~zqEVie0xR8XE6v~xkAcnOQwPjYWQtnZZdzCAi95WlikIUs7Mi9egCHfQoR3jwa39DROeFzacjayYTjm52~~lVyrHU7MwUbQNl08iJffpYI-kSC6vvgZG9yrBsrxdGBq48R0pr0aOyh5vuosUR2m9ppiCGU1xp9xTQkd44WKCd3GbP1gobxI5KDEzuf2Q6meVTpJi9BAu-MCFgWzQg40PovT6vcjaAQlcoWWmnOEV2HJHtP3WriZJE94CFcMVOQULVSKxDIE3NfLFGGCBc87Lh9zSwc5Ul-FIw__"
+						src="../../assets/right.png"
 						alt="">
 				</div>
 			</div>
@@ -200,7 +200,7 @@
 			<div class="flex flex-col md:flex-row">
 				<div class="w-full pt-8 flex justify-center items-center order-2 md:order-1">
 					<img class="w-[90%]"
-						src="https://s3-alpha-sig.figma.com/img/834b/f517/79c7b44475375a1dc3f5a0e6e046517c?Expires=1731283200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IpJtiWqr53iUZULdXroP4U58t4RSnDxGIAnfkiPwd5TLR-J0C9AMkmY58yjqWYVCFrvx3GwVxHz33GGNxHbpf5clOSXcICECCmmejjuDN~x9zU3kJKWM9W7-mfmZowuA9vqTTihh6zeV7~vWfQjVk4NitQ86fLOD-IxCArckkPDM37ReIGHHKAXAoaKFJgW8G7wGuJmg4Yb3zSoXonUAUra56ivgkkhwHNpb9qH9ryJTK12LtVK6TYpU10ogRG8yE6NK9xbZczT~oBt4UhV4gz-6cFxwEwFbNsekpm22BuXC5NscJXODhG4audPfPO3jVJeJZAsDm8Yfa--QB4Oc-Q__"
+						src="../../assets/left.png"
 						alt="">
 				</div>
 				<div class="w-full flex flex-col gap-3 order-1 md:order-2">

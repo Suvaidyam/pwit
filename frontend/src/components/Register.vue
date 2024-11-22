@@ -31,15 +31,16 @@
                     Password
                     <span class="text-red-500"> *</span>
                 </label>
-                <input @keydown.enter="register" @input="resetBorder" id="passwordInputId" v-model="password"
+                <input @keydown.enter="register" @input="validatePassword" id="passwordInputId" v-model="password"
                     :type="show_pass ? 'text' : 'password'"
                     class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5" placeholder="******">
                 <span class="absolute right-2 top-10 text-xs cursor-pointer" @click="show_pass = !show_pass">
                     <EyeOff class="w-5 h-5 text-gray-500" v-if="show_pass" />
                     <Eye class="w-5 h-5 text-gray-500" v-else />
                 </span>
+                <p v-if="errorMessage" class="text-red-500 text-xs mt-1 absolute -bottom-5">{{ errorMessage }}</p>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 py-2">
                 <input v-model="remember" type="checkbox" id="remember" class="h-4 w-4" />
                 <label for="remember" class="text-sm text-gray-500">Remember me</label>
             </div>
@@ -72,6 +73,7 @@ const remember = ref(false)
 const email = ref('')
 const full_name = ref('')
 const password = ref('')
+const errorMessage = ref('')
 const store = inject('store');
 const call = inject('$call');
 
@@ -109,7 +111,7 @@ const register = async () => {
 
     if (!validateEmail(email.value)) {
         emailEl.style.borderBottom = '1px solid red';
-        toast.error("Invalid email address.");
+        toast.error("Invalid Email Address.");
         valid = false;
         return
     }
@@ -130,7 +132,25 @@ const register = async () => {
     }
 };
 
-const resetBorder = (event) => {
-    event.target.style.borderBottom = '';
+
+const validatePassword = () => {
+    const minLength = 8;
+    const hasNumber = /\d/.test(password.value);
+    const hasSpecialChar = /[!@#$%^&*]/.test(password.value);
+
+    if (!password.value) {
+        errorMessage.value = 'Password is required.';
+    } else if (password.value.length < minLength) {
+        errorMessage.value = `Password must be at least ${minLength} characters.`;
+    } else if (!hasNumber) {
+        errorMessage.value = 'Password must include at least one number.';
+    } else if (!hasSpecialChar) {
+        errorMessage.value = 'Password must include at least one special character.';
+    } else {
+        errorMessage.value = '';
+    }
 }
+// const resetBorder = (event) => {
+//     event.target.style.borderBottom = '';
+// }
 </script>
