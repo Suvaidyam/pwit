@@ -14,7 +14,7 @@
                         class="w-full py-2 px-8 rounded-md">
                         Reset Password
                     </button>
-                    <p @click="store.isForgetPas=false" class="text-sm cursor-pointer">Back to Login</p>
+                    <p @click="store.isForgetPas = false" class="text-sm cursor-pointer">Back to Login</p>
                 </div>
             </div>
         </div>
@@ -45,8 +45,10 @@ const reset_password = async () => {
 
             if (response.ok) {
                 const result = await response.json();
-                console.log(result)
-                toast.success('Password changed successfully');
+                toast.success('Password reset instructions have been sent to your email');
+                email.value = '';
+            } else { 
+                toast.error(`Email ${response.statusText}`);
             }
         } catch (error) {
             toast.error('Please setup email settings');

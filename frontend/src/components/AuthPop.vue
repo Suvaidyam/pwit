@@ -32,13 +32,21 @@
 </template>
 
 <script setup>
-import { inject, ref } from 'vue'
+import { inject, ref, watch } from 'vue'
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import Login from './Login.vue';
 import Register from './Register.vue';
 
 const open = ref(false) 
 const store = inject('store');
+
+watch(()=> open.value, (value) => {
+    if (!value) {
+        setTimeout(() => {
+            store.isForgetPas = false;
+        }, 300)
+    }
+})
 
 const openDialog = (el) => {
     open.value = true;
