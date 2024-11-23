@@ -14,13 +14,13 @@
             following statements:
         </p>
         <div class="w-full flex flex-col gap-4 px-4 md:px-8 lg:px-20 py-5 mt-4 bg-gray-50">
-            <FormView 
+            <FormView  
                 :doctype="'Funder Diagnostic'" 
+                :onSubmit="handleSubmit"
                 :isCard="true" 
                 :isDraft="true" 
                 :section="true"
-                :save_as_draft="save_as_draft"
-                isRoute="/recommended" 
+                :save_as_draft="save_as_draft" 
             />
         </div>
         <FooterNav />
@@ -31,9 +31,29 @@
 import { ref ,inject} from 'vue';
 import FooterNav from '../components/FooterNav.vue';
 import { FormView } from '../../../../sva_form_vuejs/form_view.js';
+import {useRouter} from 'vue-router';
 
 const store = inject('store');
 const auth = inject('$auth');
+const call = inject('$call');
+const router = useRouter();
+
+const handleSubmit = async (formData) => {
+  try {
+    const res = await call('frappe.desk.form.save.savedocs', {
+      doc: JSON.stringify({
+        doctype: 'Funder Diagnostic',
+        ...formData
+      }),
+      action: 'Save'
+    });
+    if (res) {
+      router.push('/recommended');
+    }
+  } catch (err) {
+    console.error('Error saving form:', err);
+  } 
+};
 const save_as_draft = () => {
     if(auth.isLoggedIn){
         console.log('save as draft');
@@ -41,4 +61,5 @@ const save_as_draft = () => {
         store.auth = 'Log In';
     } 
 }
+
 </script>

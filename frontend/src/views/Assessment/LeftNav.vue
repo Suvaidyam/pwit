@@ -13,7 +13,7 @@
                 <p class="pl-2 hidden md:block py-2 font-bold text-[11px] text-white">
                     RECOMMENDED PRINCIPLES
                 </p>
-                <div class="" v-for="items in recommended" :key="items.name">
+                <div class="" v-for="items in recommendedList" :key="items.name">
                     <router-link :to="`/funder/${items.ref_doctype?.toLowerCase()?.split(' ').join('-')}`"
                         :class="['/funder/' + items.ref_doctype?.toLowerCase()?.split(' ').join('-'), '/funder/' + items.ref_doctype?.toLowerCase()?.split(' ').join('-') + '/results'].includes(route.fullPath) ? 'bg-white' : 'text-white'"
                         class="text-sm px-2 h-10 flex gap-2 items-center justify-center md:justify-normal rounded-md mb-2 hover:bg-white hover:text-black">
@@ -21,11 +21,11 @@
                         <p class="hidden md:block">{{ items.label }}</p>
                     </router-link>
                 </div>
-                <p v-if="additional.length > 0"
+                <p v-if="recommendedList.length > 0"
                     class="pl-2 hidden md:block py-2 font-bold text-[11px] text-white border-t">
                     ADDITIONAL PWIT PRINCIPLES
                 </p>
-                <div class="" v-for="items in additional" :key="items.name">
+                <div class="" v-for="items in additionalList" :key="items.name">
                     <router-link :to="`/funder/${items.ref_doctype?.toLowerCase()?.split(' ').join('-')}`"
                         :class="['/funder/' + items.ref_doctype?.toLowerCase()?.split(' ').join('-'), '/funder/' + items.ref_doctype?.toLowerCase()?.split(' ').join('-') + '/results'].includes(route.fullPath) ? 'bg-white' : 'text-white'"
                         class="text-sm px-2 h-10 flex gap-2 items-center justify-center md:justify-normal rounded-md mb-2 hover:bg-white hover:text-black">
@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-import { ref, computed, inject, onMounted } from 'vue';
+import { ref, computed,watch, inject, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import LeftMenuLoader from './LeftMenuLoader.vue';
 
@@ -48,9 +48,9 @@ const store = inject('store');
 const call = inject('$call');
 const session = JSON.parse(localStorage.getItem('session'));
 const menu_list = ref([]);
-const logic = ref([]);
-const results = ref({});
 const loading = ref(true);
+const recommendedList = ref([])
+const additionalList = ref([])
 
 const leftMenu = async () => {
     const res = await call('pwit.controllers.api.left_menu_list', {});
@@ -59,44 +59,67 @@ const leftMenu = async () => {
     }
 };
 
+
 const get_result = async () => {
-    loading.value = true;
-    if (session?.data?.name){
-        try {
-            const response = await call('pwit.controllers.api.get_results', {
-                doctype: 'Funder Diagnostic',
-                session: session?.data?.name
+    return new Promise((resolve, reject) => {
+        loading.value = true;
+        call('pwit.controllers.api.get_results', {
+            doctype: 'Funder Diagnostic',
+            session: session.data.name
+        })
+            .then(res => {
+                const groupedSums = Object.entries(res.data).reduce((acc, [key, value]) => {
+                    const keyParts = key.split('_');
+                    keyParts.pop();
+                    const prefix = keyParts.join('_');
+                    acc[prefix] = (acc[prefix] || 0) + value;
+                    return acc;
+                }, {});
+                resolve(groupedSums);
+            })
+            .catch(error => {
+                console.error('Error fetching results:', error);
+                reject(error);
+            })
+            .finally(() => {
+                loading.value = false;
             });
-
-            const groupedSums = Object.entries(response.data).reduce((acc, [key, value]) => {
-                const prefix = key.split('_').slice(0, -1).join('_');
-                acc[prefix] = (acc[prefix] || 0) + value;
-                return acc;
-            }, {});
-            results.value = groupedSums;
-        } catch (error) {
-            console.error('Error fetching results:', error);
-        } finally {
-            loading.value = false;
-        }
-    }
-
+    });
 };
 
+// Fetch recommended principles
 const get_recomm = async () => {
-    loading.value = true;
-    try {
-        const res = await call('pwit.controllers.api.get_recommended_principles', {});
-        if (res.code === 200) {
-            logic.value = res.data;
-        }
-    } catch (error) {
-        console.error('Error fetching recommendations:', error);
-    } finally {
-        loading.value = false;
-    }
+    return new Promise((resolve, reject) => {
+        loading.value = true;
+        call('pwit.controllers.api.get_recommended_principles', {})
+            .then(res => {
+                if (res.code === 200) {
+                    resolve(res.data);
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching recommendations:', error);
+                reject(error);
+            })
+            .finally(() => {
+                loading.value = false;
+            });
+    });
 };
 
+function sortAndAssign(d) {
+    d.sort((a, b) => {
+        if (a.score === b.score) {
+            return a.name - b.name;  
+        }
+        return a.score - b.score;
+    });
+    d.forEach((item, index) => {
+        item.group = index < 3 ? 'Recommended' : 'Additional';
+    });
+    return d;
+}
+// Evaluate logic dynamically based on results
 const evaluateLogic = (logicArray, results) => {
     return logicArray.filter(entry => {
         try {
@@ -115,35 +138,36 @@ const evaluateLogic = (logicArray, results) => {
     });
 };
 
-const computedMatchingLogic = computed(() => evaluateLogic(logic.value, results.value));
-
-const recommended = computed(() => {
-    const matchingLogic = computedMatchingLogic.value[0] || {};
-    const recommendationKeys = [
-        matchingLogic.recommendation_1,
-        matchingLogic.recommendation_2,
-        matchingLogic.recommendation_3
-    ].filter(Boolean);
-
-    return Object.keys(results.value).length > 0
-        ? menu_list.value?.filter(item => recommendationKeys.includes(item.code))
-        : menu_list.value
+watch(() => menu_list.value, (value) => {
+   recommendedList.value = value?.filter(e => e.group === 'Recommended')
+   additionalList.value = value?.filter(e => e.group === 'Additional')
+}, {deep: true, immediate: true});
+// Fetch menu_list on mount
+onMounted(async() => {
+    try {
+        await leftMenu();
+        let assessmentResult = await get_result()
+        let logics = await get_recomm();
+        let topMatching = evaluateLogic(logics, assessmentResult)?.[0];
+        if(!topMatching){
+            let updatedData = menu_list?.value?.map(e => {
+                e.score = assessmentResult[e.code] || 0;
+                return e;
+            });
+            menu_list.value = sortAndAssign(updatedData);
+        }else{
+             menu_list.value = [
+                {...menu_list.value.find(e => e.code === topMatching.recommendation_1), group:'Recommended'},
+                {...menu_list.value.find(e => e.code === topMatching.recommendation_2), group:'Recommended'},
+                {...menu_list.value.find(e => e.code === topMatching.recommendation_3), group:'Recommended'},
+                {...menu_list.value.find(e => e.code === topMatching.additional_1), group:'Additional'},
+                {...menu_list.value.find(e => e.code === topMatching.additional_2), group:'Additional'}
+            ]
+        }
+    } catch (error) {
+        
+    }
+    
 });
 
-const additional = computed(() => {
-    const matchingLogic = computedMatchingLogic.value[0] || {};
-    const additionalKeys = [
-        matchingLogic.additional_1,
-        matchingLogic.additional_2
-    ].filter(Boolean);
-
-    return Object.keys(results.value).length > 0 ? menu_list.value?.filter(item => additionalKeys.includes(item.code))
-        : [];
-});
-
-onMounted(() => {
-    get_result();
-    get_recomm();
-    leftMenu();
-});
 </script>
