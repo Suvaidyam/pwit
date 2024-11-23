@@ -7,6 +7,7 @@
  "field_order": [
   "disabled",
   "ref_doctype",
+  "priority",
   "column_break_qoam",
   "label",
   "code",
@@ -55,12 +56,18 @@
    "fieldname": "code",
    "fieldtype": "Data",
    "label": "Code"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Int",
+   "label": "Priority",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2024-11-20 17:14:15.058869",
+ "modified": "2024-11-23 18:01:07.376226",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Left-Menu",

@@ -110,7 +110,7 @@ const get_recomm = async () => {
 function sortAndAssign(d) {
     d.sort((a, b) => {
         if (a.score === b.score) {
-            return a.name - b.name;  
+            return a.priority - b.priority;  
         }
         return a.score - b.score;
     });
