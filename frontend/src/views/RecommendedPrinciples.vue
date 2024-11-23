@@ -122,6 +122,7 @@ const data = ref([
         route: '/funder/core-costs',
         color: '#136096',
     },
+
     {
         name: 3,
         score: 0,
@@ -137,24 +138,25 @@ const data = ref([
         name: 4,
         score: 0,
         group: 'Additional',
-        code: 'fr',
-        name1: 'BUILD FINANCIAL RESILIENCE',
-        description: 'Financial resilience refers to a nonprofit’s ability to sustain its operations over the long term and withstand external stresses and shocks. By supporting nonprofits build their financial resilience, funders can ensure the sustainability of the organization and its ability to continue creating impact in the communities in which they work.',
-        icon: 'PiggyBank',
-        route: '/funder/build-financial-resilience',
-        color: '#058248',
-    },
-    {
-        name: 5,
-        score: 0,
-        group: 'Additional',
         code: 'dei',
         name1: 'EMBED DIVERSITY EQUITY, AND INCLUSION IN GRANTMAKING',
         description: 'An intentional focus on DEI can help funders address the disproportional funding gap that persists by organizations not located in major cities and headed by members of historically marginalized populations such as Dalit, Bahujan and Adivasi (DBA) communities. An intentional focus on DEI can help funders address the disproportionate financial gap these critical agents of social change face and thus accelerate progress on India’s steepest challenges.',
         icon: 'Scale',
         route: '/funder/diversity-equity-inclusion',
         color: '#f38714',
+    },
+    {
+        name: 5,
+        score: 0,
+        group: 'Additional',
+        code: 'fr',
+        name1: 'BUILD FINANCIAL RESILIENCE',
+        description: 'Financial resilience refers to a nonprofit’s ability to sustain its operations over the long term and withstand external stresses and shocks. By supporting nonprofits build their financial resilience, funders can ensure the sustainability of the organization and its ability to continue creating impact in the communities in which they work.',
+        icon: 'PiggyBank',
+        route: '/funder/financial-resilience',
+        color: '#058248',
     }
+
 ])
 
 const get_result = async () => {
@@ -207,7 +209,7 @@ const get_recomm = async () => {
 function sortAndAssign(d) {
     d.sort((a, b) => {
         if (a.score === b.score) {
-            return a.name - b.name;  
+            return a.name - b.name;
         }
         return a.score - b.score;
     });
@@ -236,32 +238,32 @@ const evaluateLogic = (logicArray, results) => {
 };
 
 watch(() => data.value, (value) => {
-   recommendedList.value = value?.filter(e => e.group === 'Recommended')
-   additionalList.value = value?.filter(e => e.group === 'Additional')
-}, {deep: true, immediate: true});
+    recommendedList.value = value?.filter(e => e.group === 'Recommended')
+    additionalList.value = value?.filter(e => e.group === 'Additional')
+}, { deep: true, immediate: true });
 // Fetch data on mount
-onMounted(async() => {
+onMounted(async () => {
     try {
         let assessmentResult = await get_result()
         let logics = await get_recomm();
         let topMatching = evaluateLogic(logics, assessmentResult)?.[0];
-        if(!topMatching){
+        if (!topMatching) {
             let updatedData = data?.value?.map(e => {
                 e.score = assessmentResult[e.code] || 0;
                 return e;
             });
             data.value = sortAndAssign(updatedData);
-        }else{
-             data.value = [
-                {...data.value.find(e => e.code === topMatching.recommendation_1), group:'Recommended'},
-                {...data.value.find(e => e.code === topMatching.recommendation_2), group:'Recommended'},
-                {...data.value.find(e => e.code === topMatching.recommendation_3), group:'Recommended'},
-                {...data.value.find(e => e.code === topMatching.additional_1), group:'Additional'},
-                {...data.value.find(e => e.code === topMatching.additional_2), group:'Additional'}
+        } else {
+            data.value = [
+                { ...data.value.find(e => e.code === topMatching.recommendation_1), group: 'Recommended' },
+                { ...data.value.find(e => e.code === topMatching.recommendation_2), group: 'Recommended' },
+                { ...data.value.find(e => e.code === topMatching.recommendation_3), group: 'Recommended' },
+                { ...data.value.find(e => e.code === topMatching.additional_1), group: 'Additional' },
+                { ...data.value.find(e => e.code === topMatching.additional_2), group: 'Additional' }
             ]
         }
     } catch (error) {
-        
+
     }
 });
 

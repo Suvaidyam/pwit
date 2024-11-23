@@ -2,7 +2,7 @@ import frappe
 
 class LeftMenuAPIs:
     def left_menu_list():
-        left_menu = frappe.get_all('Left-Menu',fields=['name','label','icon','ref_doctype','code'],filters={'disabled':0},order_by='label')
+        left_menu = frappe.get_all('Left-Menu',fields=['name','label','icon','ref_doctype','code','priority'],filters={'disabled':0},order_by='label')
         
         return {'code': 200, 'data': left_menu}
     
