@@ -5,25 +5,72 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "guidelines_section",
   "name1",
-  "session"
+  "session",
+  "approaches__adopted_section",
+  "question1",
+  "question3",
+  "channels_of__communication_section",
+  "question4",
+  "question5"
  ],
  "fields": [
   {
    "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
+   "fieldtype": "Link",
+   "label": " Do you have written  guidelines that  clearly stipulate the financial resilience7 support extended to  nonprofit partners?",
+   "options": "Field Options"
   },
   {
    "fieldname": "session",
    "fieldtype": "Link",
    "label": "Session",
    "options": "Session"
+  },
+  {
+   "fieldname": "guidelines_section",
+   "fieldtype": "Section Break",
+   "label": "Guidelines"
+  },
+  {
+   "fieldname": "approaches__adopted_section",
+   "fieldtype": "Section Break",
+   "label": "Approaches  adopted"
+  },
+  {
+   "fieldname": "question1",
+   "fieldtype": "Link",
+   "label": "Do you help  nonprofit partners  build their resilience  through non\u0002financial support?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "question3",
+   "fieldtype": "Link",
+   "label": "Do you provide a  financial  contribution(s) to  nonprofit partners  to help them build  reserves?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "channels_of__communication_section",
+   "fieldtype": "Section Break",
+   "label": "Channels of  communication"
+  },
+  {
+   "fieldname": "question4",
+   "fieldtype": "Link",
+   "label": "How are your  guidelines on  financial resilience support  communicated  internally?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "question5",
+   "fieldtype": "Link",
+   "label": " How are your  guidelines on  financial resilience support communica ted to nonprofits (current and potential) and the  wider sector?",
+   "options": "Field Options"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-09 10:28:06.632145",
+ "modified": "2024-11-23 13:28:58.087150",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Financial Resilience",
