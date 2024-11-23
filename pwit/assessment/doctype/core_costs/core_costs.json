@@ -7,43 +7,85 @@
  "field_order": [
   "section_a_section",
   "name1",
+  "question1",
   "session",
   "approaches_adopted_section",
-  "last"
+  "last",
+  "question",
+  "question5",
+  "channels_of__communication_section",
+  "question6",
+  "question7"
  ],
  "fields": [
   {
    "fieldname": "name1",
    "fieldtype": "Link",
-   "label": "Do you have a policy that enables multiyear partnerships?",
+   "label": "Do you have written guidelines that  clearly stipulate the  core cost3 support  that is extended to  nonprofit partners?",
    "options": "Field Options"
   },
   {
    "fieldname": "session",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Session",
    "options": "Session"
   },
   {
    "fieldname": "section_a_section",
    "fieldtype": "Section Break",
-   "label": "Policy guidelines"
+   "label": "Guidelines"
   },
   {
    "fieldname": "last",
    "fieldtype": "Link",
-   "label": "Do you provide multiyear grants (within any relevant legal parameters# ) to nonprofit partners?",
+   "label": "What approach  have you adopted for providing core\u0002cost support to  nonprofit partners?",
    "options": "Field Options"
   },
   {
    "fieldname": "approaches_adopted_section",
    "fieldtype": "Section Break",
-   "label": "Approaches adopted"
+   "label": "Approaches  adopted"
+  },
+  {
+   "fieldname": "question5",
+   "fieldtype": "Link",
+   "label": "Does your approach  allow room for  nonprofit partners  to negotiate the  core cost support  provided?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "channels_of__communication_section",
+   "fieldtype": "Section Break",
+   "label": "Channels of  communication"
+  },
+  {
+   "fieldname": "question6",
+   "fieldtype": "Link",
+   "label": "How are your  guidelines on core cost support  communicated  internally?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "question7",
+   "fieldtype": "Link",
+   "label": "How are your  guidelines on core  cost  support communicated to nonprofits (current and potential) and the  wider sector?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "question",
+   "fieldtype": "Link",
+   "label": " How consultative is  your approach? ",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "question1",
+   "fieldtype": "Link",
+   "label": "  Are these guidelines flexible and  adaptable based on  context and need?",
+   "options": "Field Options"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-16 12:11:24.847119",
+ "modified": "2024-11-23 15:09:14.664156",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Core Costs",
