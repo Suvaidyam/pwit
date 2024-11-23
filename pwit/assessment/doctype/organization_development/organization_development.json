@@ -5,25 +5,85 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "guidelines_section",
   "name1",
-  "session"
+  "session",
+  "annual_budget__allocation_section",
+  "question2",
+  "approaches__adopted_section",
+  "question3",
+  "question4",
+  "channels_of__communication_section",
+  "question5",
+  "question6"
  ],
  "fields": [
   {
    "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
+   "fieldtype": "Link",
+   "label": "Do you have written guidelines that  clearly states the  organisational development (OD)  support available to  nonprofit partners? ",
+   "options": "Field Options"
   },
   {
    "fieldname": "session",
    "fieldtype": "Link",
    "label": "Session",
    "options": "Session"
+  },
+  {
+   "fieldname": "guidelines_section",
+   "fieldtype": "Section Break",
+   "label": "Guidelines"
+  },
+  {
+   "fieldname": "annual_budget__allocation_section",
+   "fieldtype": "Section Break",
+   "label": "Annual budget  allocation"
+  },
+  {
+   "fieldname": "approaches__adopted_section",
+   "fieldtype": "Section Break",
+   "label": "Approaches  adopted"
+  },
+  {
+   "fieldname": "question3",
+   "fieldtype": "Link",
+   "label": "What are your  preferred pathways  to extend OD grants  to your nonprofit  partners?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "question2",
+   "fieldtype": "Link",
+   "label": "Do you provide OD  grants to nonprofit  partners?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "question4",
+   "fieldtype": "Link",
+   "label": "Who decides the OD  needs of nonprofit  partners? How  consultative is your  approach?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "channels_of__communication_section",
+   "fieldtype": "Section Break",
+   "label": "Channels of  communication"
+  },
+  {
+   "fieldname": "question5",
+   "fieldtype": "Link",
+   "label": "How are your  guidelines on OD support  communicated  internally?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "question6",
+   "fieldtype": "Link",
+   "label": "How are your  guidelines on OD support communica ted to nonprofits (current and  potential) and the  wider sector?",
+   "options": "Field Options"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-09 10:28:24.734123",
+ "modified": "2024-11-23 12:57:25.375148",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Organization Development",
