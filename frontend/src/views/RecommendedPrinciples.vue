@@ -28,12 +28,12 @@
                     <div class="border-t border-[#D0D1D3] flex-grow"></div>
                 </div>
                 <Loader v-if="loading" />
-                <div v-if="!loading" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-12 pt-4">
+                <div v-if="!loading" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-12 pt-4">
                     <!-- Card 1 -->
                     <router-link v-for="el in recommendedList" :key="el.name" :to="el.route"
-                        class="bg-white shadow-lg rounded-lg p-4 min-h-56  border-t-4 " :class="`border-[${el.color}]`">
-                        <div class="rounded-md bg-white relative shadow-lg">
-                            <div class="w-[70px] h-[70px] rounded-full border-8 absolute -top-14 bg-white justify-center items-center flex"
+                        class="bg-white shadow-md hover:shadow-xl hover:scale-105 transition-all group rounded-lg p-4 min-h-56  border-t-4 " :class="`border-[${el.color}]`">
+                        <div class="rounded-md bg-white relative ">
+                            <div class="w-[70px] h-[70px] group-hover:drop-shadow-xl rounded-full border-8 absolute -top-14 bg-white justify-center items-center flex"
                                 :class="`border-[${el.color}]`">
                                 <IndianRupee v-if="el.icon == 'IndianRupee'" />
                                 <Handshake v-if="el.icon == 'Handshake'" />
@@ -60,9 +60,9 @@
                     <div class="border-t border-[#D0D1D3] flex-grow"></div>
                 </div>
                 <Loader v-if="loading" />
-                <div v-if="!loading" class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-12 py-6">
+                <div v-if="!loading" class="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-12 py-6">
                     <router-link v-for="el in additionalList" :key="el.name" :to="el.route"
-                        class="bg-white shadow-lg rounded-lg p-4 h-56  border-t-4 " :class="`border-[${el.color}]`">
+                        class="bg-white shadow-md hover:shadow-xl hover:scale-105 transition-all rounded-lg p-4 h-56  border-t-4 " :class="`border-[${el.color}]`">
                         <div class="rounded-md bg-white relative shadow-lg">
                             <div class="w-[70px] h-[70px] rounded-full border-8 absolute -top-14 bg-white justify-center items-center flex"
                                 :class="`border-[${el.color}]`">

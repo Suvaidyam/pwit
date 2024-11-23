@@ -440,17 +440,6 @@
   "score": -2.0
  },
  {
-  "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "name1",
-  "label": "We do not have a written policy. It is not a consideration or a point of interest for decision makers in our organization. There is a differ",
-  "modified": "2024-11-16 11:50:42.210058",
-  "name": "Core Costs-name1-Level 1",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
   "code": "3",
   "docstatus": 0,
   "doctype": "Field Options",

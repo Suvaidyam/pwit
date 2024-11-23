@@ -67,7 +67,7 @@
 						<p class="text-[#029fd9] text-center font-bold text-h5 uppercase ">
 							Invest in organizational development
 						</p>
-					</div> 
+					</div>
 				</div>
 				<div class="h-[149px] flex rounded-md bg-white relative px-4">
 					<div
@@ -100,7 +100,7 @@
 						<p class="text-[#f38714] text-center font-bold text-h5 uppercase ">
 							Embed Diversity Equity, and inclusion in grantmaking
 						</p>
-					</div> 
+					</div>
 				</div>
 
 			</div>
@@ -144,7 +144,8 @@
 								</svg>
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif">Part 1 - Funding practices diagnostic</h4>
+								<h4 class="font-bold text-h5 text-sebase font-serif">Part 1 - Funding practices
+									diagnostic</h4>
 								<p class="text-trbase text-sm py-2 text-justify">
 									Take a quick diagnostic of your organization’s funding beliefs and practices to
 									identify specific principles that would be most relevant for you to enhance your
@@ -189,9 +190,7 @@
 					</div>
 				</div>
 				<div class="w-full md:h-96 flex md:justify-end">
-					<img class="w-[90%]"
-						src="../../assets/right.png"
-						alt="">
+					<img class="w-[90%]" src="../../assets/right.png" alt="">
 				</div>
 			</div>
 		</div>
@@ -199,9 +198,7 @@
 		<div class=" w-full px-4 md:px-8 lg:px-20  md:pt-8 ">
 			<div class="flex flex-col md:flex-row">
 				<div class="w-full pt-8 flex justify-center items-center order-2 md:order-1">
-					<img class="w-[90%]"
-						src="../../assets/left.png"
-						alt="">
+					<img class="w-[90%]" src="../../assets/left.png" alt="">
 				</div>
 				<div class="w-full flex flex-col gap-3 order-1 md:order-2">
 					<h1 class="text-primary text-h2 font-bold font-serif">What will the output include?</h1>
@@ -224,7 +221,8 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-sebase text-h5 font-serif">Optional Survey Before Accessing Guides
+								<h4 class="font-bold text-sebase text-h5 font-serif">Optional Survey Before Accessing
+									Guides
 								</h4>
 								<p class="text-trbase text-sm p-1  text-justify">
 									Visit Link and fill out the short survey before proceeding to the principle-specific
@@ -245,7 +243,8 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-sebase text-h5 font-serif">Complete the Tool in One Session</h4>
+								<h4 class="font-bold text-sebase text-h5 font-serif">Complete the Tool in One Session
+								</h4>
 								<p class="text-trbase text-sm p-1  text-justify">
 									The tool is designed to be completed in one session; however, you can pause and
 									return to this later. Please do not close the browser window as results for
@@ -266,7 +265,8 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif">Expect Level 1 and 2 Ratings in Part 2</h4>
+								<h4 class="font-bold text-h5 text-sebase font-serif">Expect Level 1 and 2 Ratings in
+									Part 2</h4>
 								<p class="text-trbase text-sm p-1  text-justify">
 									As you go through Part 2 of the tool, it is possible that you will have certain
 									Level 1 and 2 ratings.
@@ -285,7 +285,8 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif"> Generate a Summary Report Upon Completion
+								<h4 class="font-bold text-h5 text-sebase font-serif"> Generate a Summary Report Upon
+									Completion
 								</h4>
 								<p class="text-sm p-1 text-trbase text-justify">
 									Upon completion, you will have the option of generating a summary report which
@@ -306,7 +307,8 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif"> Use Insights for Strategic Discussions and
+								<h4 class="font-bold text-h5 text-sebase font-serif"> Use Insights for Strategic
+									Discussions and
 									Team Conversations on Improving Grantmaking</h4>
 								<p class="text-sm p-1 text-trbase text-justify">
 									We encourage you to use the insights for strategic discussions on enhancing your
@@ -325,7 +327,8 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-sebase text-h5 font-serif"> Your Responses Are Confidential</h4>
+								<h4 class="font-bold text-sebase text-h5 font-serif"> Your Responses Are Confidential
+								</h4>
 								<p class="text-sm p-1 text-trbase text-justify">
 									Your responses are confidential and protected and may only be seen by the
 									development team.
@@ -343,26 +346,55 @@
 		<div class="w-full flex justify-center py-8 px-4">
 			<PickAssessment />
 		</div>
-		<div class=" bg-secondary pb-40 relative px-4">
-			<h1 class="text-center font-serif text-h2 font-semibold tracking-wide text-white py-8">Frequently Asked Questions</h1>
+		<div class="flex flex-col gap-3 px-4 md:px-8 lg:px-16 ">
+			<h1 class="text-h2 text-primary font-bold font-serif tracking-wide">How to get started</h1>
+			<p class="text-sm"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda inventore neque qui,
+				et laborum dolor eligendi, aliquid voluptatem quis quo amet ipsum maiores magni. Laboriosam blanditiis
+				eveniet nesciunt impedit tempore.</p>
+		</div>
+		<div class="flex justify-between gap-4 px-4 md:px-8 lg:px-16 py-6">
+			<div class="flex flex-col gap-2">
+				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
+					<FolderLock class="text-green-500"/>
+				</div>
+				<h1 class="font-bold">Hellow</h1>
+				<p class="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, tenetur pariatur
+					temporibus sequi
+					ea perferendis natus quaerat excepturi debitis facere in nisi unde cupiditate illo dolorum
+					perspiciatis facilis vero nam?</p>
+			</div>
+			<div class="flex flex-col gap-2">
+				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
+					<FolderLock class="text-green-500"/>
+				</div>
+				<h1 class="font-bold">Hellow</h1>
+				<p class="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, tenetur pariatur
+					temporibus sequi
+					ea perferendis natus quaerat excepturi debitis facere in nisi unde cupiditate illo dolorum
+					perspiciatis facilis vero nam?</p>
+			</div>
+			<div class="flex flex-col gap-2">
+				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
+					<FolderLock class="text-green-500"/>
+				</div>
+				<h1 class="font-bold">Hellow</h1>
+				<p class="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, tenetur pariatur
+					temporibus sequi
+					ea perferendis natus quaerat excepturi debitis facere in nisi unde cupiditate illo dolorum
+					perspiciatis facilis vero nam?</p>
+			</div>
+		</div>
+		<div class=" bg-secondary pb-40 relative px-4 md:px-8 lg:px-16">
+			<h1 class="text-center font-serif text-h2 font-semibold tracking-wide text-white pt-8 pb-5">About the
+				Partneership</h1>
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-				<div class="flex flex-col gap-4 w-full sm:w-3/4 md:w-2/3 lg:w-3/5">
-					<!--  -->
-					<label v-for="(item, index) in faqs_list" :key="item.name" class="w-full flex ">
-						<input class="peer/showLabel absolute scale-0" type="checkbox" />
-						<span
-							class="block max-h-12 w-full overflow-hidden bg-primary py-2 px-4 text-white shadow-lg transition-all duration-300 peer-checked/showLabel:max-h-52">
-							<div class="flex h-12 cursor-pointer justify-between text-white font-medium ">
-								<p class="pt-1.5 text-sm">{{ item.question }}</p>
-								<span class="text-white font-bold text-2xl cursor-pointer">+</span>
-							</div>
-							<div class="mb-2 flex justify-between">
-								<div v-html="item.answer"></div>
-								<!-- <span class="text-white font-bold text-2xl cursor-pointer">-</span> -->
-							</div>
-						</span>
-					</label>
-					<!--  -->
+				<div class="flex flex-col gap-4 w-full text-center text-white font-serif text-sm">
+					<p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima mollitia laboriosam ab
+						numquam ducimus repellendus similique non officiis tempore quasi voluptates soluta, ipsum
+						molestias reiciendis voluptatibus totam iusto beatae fugit! Lorem ipsum dolor sit amet
+						consectetur adipisicing elit. Numquam, tempora amet deserunt excepturi rem repudiandae ullam
+						quisquam fugiat autem, animi officia eum, maxime exercitationem explicabo laborum facere tempore
+						minima accusantium.</p>
 				</div>
 			</div>
 		</div>
@@ -379,18 +411,18 @@ import { inject, ref, onMounted } from 'vue';
 import FooterNav from '../../components/FooterNav.vue';
 import PickAssessment from './PickAssessment.vue';
 import ContactUs from './ContactUs.vue';
+import { FolderLock} from 'lucide-vue-next'
+// const call = inject('$call');
+// let faqs_list = ref([]);
 
-const call = inject('$call');
-let faqs_list = ref([]);
-
-const get_faqs = async () => {
-	const res = await call('pwit.controllers.api.get_faq', {});
-	if (res.code === 200) {
-		faqs_list.value = res.data;
-	}
-};
-onMounted(() => {
-	get_faqs();
-});
+// const get_faqs = async () => {
+// 	const res = await call('pwit.controllers.api.get_faq', {});
+// 	if (res.code === 200) {
+// 		faqs_list.value = res.data;
+// 	}
+// };
+// onMounted(() => {
+// 	get_faqs();
+// });
 
 </script>
