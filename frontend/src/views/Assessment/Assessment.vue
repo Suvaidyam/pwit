@@ -5,22 +5,22 @@
         <transition name="fade" mode="out-in">
             <div  class="w-full h-full">
                <FormView v-if="title!=='Diversity Equity Inclusion'"
-                    :doctype="title" 
+                    :doctype="title"
+                    :onSubmit="handleSubmit" 
                     :isTable="true" 
                     :isDraft="true" 
                     :section="true"
                     :save_as_draft="save_as_draft"
                     :key="title" 
-                    :isRoute="`${current_path}/results`"
                 />
                <FormView v-if="title=='Diversity Equity Inclusion'"
-                    :doctype="title" 
+                    :doctype="title"
+                    :onSubmit="handleSubmit" 
                     :isDraft="true" 
                     :isCard="true" 
                     :section="true"
                     :save_as_draft="save_as_draft"
                     :key="title" 
-                    :isRoute="`${current_path}/results`"
                 />
             </div>
         </transition>
@@ -29,21 +29,38 @@
 
 <script setup>
 import { ref, watch,inject } from 'vue'
-import { useRoute } from 'vue-router';
+import { useRoute ,useRouter} from 'vue-router';
 import Breadcrumb from './Breadcrumb.vue'
 import {FormView} from '../../../../../sva_form_vuejs/form_view';
 
 const route = useRoute()
+const router = useRouter()
 const current_path = ref(route.fullPath)
 const title = ref(splitAtSecondCapital(route.name));
 const store = inject('store');
 const auth = inject('$auth');
+const call = inject('$call');
 
 watch(route, (newVal, oldVal) => {
     title.value = splitAtSecondCapital(newVal.name)
     current_path.value = oldVal.path
 })
-
+const handleSubmit = async (formData) => {
+  try {
+    const res = await call('frappe.desk.form.save.savedocs', {
+      doc: JSON.stringify({
+        doctype: title.value,
+        ...formData
+      }),
+      action: 'Save'
+    });
+    if (res) {
+      router.push(`${current_path}/results`);
+    }
+  } catch (err) {
+    console.error('Error saving form:', err);
+  } 
+};
 const save_as_draft = () => {
     if(auth.isLoggedIn){
         console.log('save as draft');
