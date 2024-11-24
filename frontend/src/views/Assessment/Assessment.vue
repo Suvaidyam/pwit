@@ -40,6 +40,7 @@ const title = ref(splitAtSecondCapital(route.name));
 const store = inject('store');
 const auth = inject('$auth');
 const call = inject('$call');
+const cur_session = JSON.parse(localStorage.getItem('session'));
 
 watch(route, (newVal, oldVal) => {
     title.value = splitAtSecondCapital(newVal.name)
@@ -47,14 +48,8 @@ watch(route, (newVal, oldVal) => {
 })
 const handleSubmit = async (formData) => {
   try {
-    const res = await call('frappe.desk.form.save.savedocs', {
-      doc: JSON.stringify({
-        doctype: title.value,
-        ...formData
-      }),
-      action: 'Save'
-    });
-    if (res) {
+    const res = await call('pwit.controllers.api.save_doc', { doctype: title.value, doc: {...formData,'session':cur_session.data.name} });
+    if (res.code === 200) {
       router.push(`${current_path}/results`);
     }
   } catch (err) {

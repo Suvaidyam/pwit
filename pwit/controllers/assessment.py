@@ -19,7 +19,7 @@ class AssessmentAPIs:
                     'ref_doctype':doctype, 
                     'field':["IN", option_fields]
                 }, 
-                fields=['name','field','score']
+                fields=['name','field','score'],ignore_permissions=True
             )
             data = {}
             for option in options:

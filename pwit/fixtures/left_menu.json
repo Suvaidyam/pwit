@@ -1,0 +1,62 @@
+[
+ {
+  "code": "myp",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Left-Menu",
+  "icon": "/files/Vector.svg",
+  "label": "Multi-year Partnerships",
+  "modified": "2024-11-23 19:51:45.038800",
+  "name": "Multi-year Partnerships",
+  "priority": 1,
+  "ref_doctype": "Multi-year Partnerships"
+ },
+ {
+  "code": "core_cost",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Left-Menu",
+  "icon": "/files/Vector (1).svg",
+  "label": "Core Costs",
+  "modified": "2024-11-23 19:51:55.786517",
+  "name": "Core Costs",
+  "priority": 2,
+  "ref_doctype": "Core Costs"
+ },
+ {
+  "code": "od",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Left-Menu",
+  "icon": "/files/Vector (2).svg",
+  "label": "Organization Development",
+  "modified": "2024-11-23 19:48:10.412227",
+  "name": "Organization Development",
+  "priority": 3,
+  "ref_doctype": "Organization Development"
+ },
+ {
+  "code": "fr",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Left-Menu",
+  "icon": "/files/Vector (3).svg",
+  "label": "Financial Resilience",
+  "modified": "2024-11-23 17:54:40.075236",
+  "name": "Financial Resilience",
+  "priority": 5,
+  "ref_doctype": "Financial Resilience"
+ },
+ {
+  "code": "dei",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Left-Menu",
+  "icon": "/files/Vector (4).svg",
+  "label": "Diversity, Equity, Inclusion",
+  "modified": "2024-11-23 19:48:16.517643",
+  "name": "Diversity, Equity, Inclusion",
+  "priority": 4,
+  "ref_doctype": "Diversity Equity Inclusion"
+ }
+]
