@@ -141,7 +141,7 @@
 </template>
 
 <script setup>
-import { ref, watch, inject } from 'vue'
+import { ref, watch, inject, onMounted } from 'vue'
 import { useRoute,useRouter } from 'vue-router';
 import DownloadResults from './DownloadResults.vue';
 import { Text } from 'lucide-vue-next';
@@ -149,11 +149,30 @@ import { Text } from 'lucide-vue-next';
 const route = useRoute()
 const router = useRouter()
 const store = inject('store');
-console.log(router)
+const call = inject('$call');
+const auth = inject('$auth');
+// console.log(router)
 const title = ref(splitAtSecondCapital(route.path));
+const session = JSON.parse(localStorage.getItem('session'));
+
+const get_results=async()=>{
+    try {
+        let res = call('pwit.controllers.api.get_results', {
+            doctype: title.value,
+            session: session.data.name,
+            user:auth.cookie.user_id!=='Guest'?auth.cookie.user_id:''
+        })
+        console.log(res,'results')
+    } catch (error) {
+        
+    }
+}
 
 watch(route, (newVal) => {
     title.value = splitAtSecondCapital(newVal.path)
+})
+onMounted(()=>{
+    get_results()
 })
 function splitAtSecondCapital(input) {
     input = input.split('/')[2]

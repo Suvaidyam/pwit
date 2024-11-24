@@ -94,6 +94,7 @@ import { IndianRupee, Handshake, PiggyBank, ChartNoAxesCombined, Scale } from 'l
 
 const router = useRouter()
 const call = inject('$call')
+const auth = inject('$auth')
 const session = JSON.parse(localStorage.getItem('session'))
 const loading = ref(false)
 const recommendedList = ref([])
@@ -164,7 +165,8 @@ const get_result = async () => {
         loading.value = true;
         call('pwit.controllers.api.get_results', {
             doctype: 'Funder Diagnostic',
-            session: session.data.name
+            session: session.data.name,
+            user:auth.cookie.user_id!=='Guest'?auth.cookie.user_id:''
         })
             .then(res => {
                 const groupedSums = Object.entries(res.data).reduce((acc, [key, value]) => {

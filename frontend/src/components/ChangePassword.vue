@@ -18,7 +18,7 @@
                             <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4">
                                 <div class="block justify-center gap-5 items-center">
                                 </div>
-                                <div class="space-y-6 container">
+                                <div class="space-y-3 container">
                                     <div>
                                         <label for="new_password" class="block text-gray-800 text-sm pb-2">
                                             New Password
@@ -32,7 +32,7 @@
                                         <label for="Confirm_pass" class="block text-gray-800 text-sm pb-1">
                                             Confirm Password
                                         </label>
-                                        <input  v-model="confirmPassword" id="Confirm_pass" :type="show_pass ? 'text' : 'password'"
+                                        <input @keyup="onchange"  v-model="confirmPassword" id="Confirm_pass" :type="show_pass ? 'text' : 'password'"
                                             class="outline-none w-full border-b-2  bg-[#f3f4f8] text-sm px-3 h-12 text-h5"
                                             placeholder="Confirm New Password">
                                         <span
@@ -41,14 +41,14 @@
                                             <EyeOff class="w-5 h-4 text-gray-500" v-if="show_pass" />
                                             <Eye class="w-5 h-4 text-gray-500" v-else />
                                         </span>
-                                    </div>
-                                    <div class="flex justify-between">
                                         <div>
                                             <p v-if="passwordsMatch === false" class="text-red-500 text-sm ">Passwords
                                                 do not match</p>
                                         </div>
+                                    </div>
+                                    <div class="flex justify-between">
                                         <button @click="handleClick"
-                                            class="text-white bg-secondary py-2 px-8 rounded-md">
+                                            class="text-white w-full bg-secondary py-2 px-8 rounded-md">
                                             Update
                                         </button>
 
@@ -84,8 +84,10 @@ const props = defineProps({
         default: false
     }
 })
-const handleClick = async() => {
+const onchange = () => {
     passwordsMatch.value = newPassword.value === confirmPassword.value;
+};
+const handleClick = async() => {
     if (passwordsMatch.value && newPassword.value.length > 5 && confirmPassword.value.length > 5) {
         let res = await call('pwit.controllers.api.change_password', {
             user: auth.cookie.user_id,
