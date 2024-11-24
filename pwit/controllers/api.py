@@ -71,3 +71,7 @@ def save_image(data):
     doc.mobile_no=data.get('mobile_no')
     doc.user_image=data.get('user_image')
     doc.save()
+
+@frappe.whitelist(allow_guest=True)
+def save_doc(doctype, doc):
+    return FormAPIs.save_doc(doctype, doc)
