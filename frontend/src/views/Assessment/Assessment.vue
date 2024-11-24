@@ -50,7 +50,7 @@ const handleSubmit = async (formData) => {
   try {
     const res = await call('pwit.controllers.api.save_doc', { doctype: title.value, doc: {...formData,'session':cur_session.data.name} });
     if (res.code === 200) {
-      router.push(`${current_path}/results`);
+      router.push(`${current_path.value}/results`);
     }
   } catch (err) {
     console.error('Error saving form:', err);

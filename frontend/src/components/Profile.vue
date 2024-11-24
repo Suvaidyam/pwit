@@ -16,27 +16,27 @@
                         <DialogPanel
                             class="relative transform overflow-hidden md:px-4 bg-white text-left shadow-xl transition-all sm:my-8 w-full sm:max-w-2xl">
                             <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4 relative">
-                                <X  @click="store.isOpen=false" class="text-sm  cursor-pointer absolute right-5"  />
+                                <X @click="store.isOpen = false" class="text-sm  cursor-pointer absolute right-5" />
                                 <div class="block justify-center gap-5 items-center">
                                     <h1 class="text-center font-serif font-bold text-h3 text-[#21272A]">My Profile</h1>
-                                  
+
                                     <p class="text-center text-[#21272A] font-normal text-h5 pt-2"> Set up or update
                                         your profile</p>
                                 </div>
                                 <div class=" flex justify-center items-center pt-4 relative">
                                     <div>
-                                        <label for="upload" :class="isReadonly?'':' cursor-pointer'"
+                                        <label for="upload" :class="isReadonly ? '' : ' cursor-pointer border-[#255B97] border-4'"
                                             class="w-24 h-24 rounded-full bg-slate-300 flex items-center justify-center relative">
-                                            <img v-if="formData.user_image || imgUrl" :src="imgUrl ? imgUrl : formData.user_image" alt="User Image"
+                                            <img v-if="formData.user_image || imgUrl"
+                                                :src="imgUrl ? imgUrl : formData.user_image" alt="User Image"
                                                 class="w-full h-full rounded-full object-cover" />
                                             <p class="text-h2" v-else>{{ formData.full_name?.[0]?.toUpperCase() }}</p>
 
                                             <div v-if="!isReadonly"
                                                 class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-full cursor-pointer">
-                                                <p
-                                                    class="cursor-pointer text-white text-sm">Upload</p>
-                                                <input  id="upload" type="file" class="hidden cursor-pointer" @change="imageUpload"
-                                                    accept="image/*" />
+                                                <p class="cursor-pointer text-white text-sm">Upload</p>
+                                                <input id="upload" type="file" class="hidden cursor-pointer"
+                                                    @change="imageUpload" accept="image/*" />
                                             </div>
                                         </label>
                                         <div class="flex items-end justify-end absolute top-16 pl-[4.5rem]">
@@ -58,7 +58,8 @@
                                         </label>
                                         <input v-model="formData.full_name" id="full_name" type="text"
                                             placeholder="Enter Full Name"
-                                            class="w-full px-3 py-2 border-b  bg-[#f3f4f8] border-gray-300 shadow-sm outline-none"
+                                            :class="isReadonly ? 'border-gray-300 text-gray-500' : 'border-[#255B97] text-gray-900'"
+                                            class="w-full px-3 py-2 border-b  bg-[#f3f4f8] shadow-sm outline-none"
                                             :readonly="isReadonly">
                                     </div>
                                     <div>
@@ -67,7 +68,8 @@
                                         </label>
                                         <input v-model="formData.mobile_no" id="mobile_no" type="text"
                                             placeholder="Enter your Mobile No. "
-                                            class="w-full px-3 py-2 border-b  bg-[#f3f4f8] border-gray-300 shadow-sm outline-none"
+                                            :class="isReadonly ? 'border-gray-300 text-gray-400' : 'border-[#255B97] text-gray-900'"
+                                            class="w-full px-3 py-2 border-b  bg-[#f3f4f8]  shadow-sm outline-none"
                                             :readonly="isReadonly">
                                     </div>
                                     <div>
@@ -76,7 +78,7 @@
                                         </label>
                                         <input v-model="formData.user_id" id="email" type="email"
                                             placeholder="Enter Email Address"
-                                            class="w-full px-3 border-b bg-[#f3f4f8] border-gray-300   shadow-sm py-2 outline-none"
+                                            class="w-full px-3 border-b bg-[#f3f4f8] cursor-not-allowed text-gray-500 border-gray-300   shadow-sm py-2 outline-none"
                                             :disabled="true">
                                     </div>
                                     <div class="flex justify-end">
@@ -165,7 +167,7 @@ const saveUserProfile = async () => {
         user_image: imgUrl.value
     }
     let res = await call('pwit.controllers.api.save_image', { data: data })
-    store.isOpen=false
+    store.isOpen = false
 }
 
 
