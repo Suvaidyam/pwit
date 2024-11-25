@@ -22,11 +22,12 @@
                     Email Address
                     <span class="text-red-500"> *</span>
                 </label>
-                <input @keydown.enter="register" @input="resetBorder" id="emailInputId" v-model="email" type="email"
+                <input @keydown.enter="register" @input="emailvalidate" id="emailInputId" v-model="email" type="email"
                     class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5"
                     placeholder="Enter Email Address">
+                <p v-if="errorMessage" class="text-red-500 text-xs mt-1   -bottom-5">{{ errorMessage }}</p>
             </div>
-           
+
             <div class="flex items-center gap-2 py-2">
                 <input v-model="remember" type="checkbox" id="remember" class="h-4 w-4" />
                 <label for="remember" class="text-sm text-gray-500">Remember me</label>
@@ -70,10 +71,20 @@ const errorMessage = ref('')
 const store = inject('store');
 const call = inject('$call');
 
-const validateEmail = (email) => {
+const emailvalidate = () => {
+    const minLength = 3;
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return emailPattern.test(email);
-}
+
+    if (!email.value) {
+        errorMessage.value = 'Email is required.';
+    } else if (email.value.length < minLength) {
+        errorMessage.value = `Email must be at least ${minLength} characters.`;
+    } else if (!emailPattern.test(email.value)) {
+        errorMessage.value = 'Invalid email format.';
+    } else {
+        errorMessage.value = ''; 
+    }
+};
 
 const register = async () => {
 
@@ -83,7 +94,7 @@ const register = async () => {
 
     fullNameEl.style.borderBottom = emailEl.style.borderBottom = '';
 
-    if (!full_name.value || !email.value ) {
+    if (!full_name.value || !email.value) {
 
         if (!full_name.value) {
             fullNameEl.style.borderBottom = '1px solid red';
@@ -96,13 +107,6 @@ const register = async () => {
         }
 
         return;
-    }
-
-    if (!validateEmail(email.value)) {
-        emailEl.style.borderBottom = '1px solid red';
-        toast.error("Invalid Email Address.");
-        valid = false;
-        return
     }
     open.value = false;
     if (errorMessage.value == '') {
@@ -121,14 +125,11 @@ const register = async () => {
             store.authPopup = false;
         } else {
             setTimeout(() => {
-                loading.value = false; 
+                loading.value = false;
             }, 1000);
             toast.error(res.msg);
         }
     }
 };
 
-// const resetBorder = (event) => {
-//     event.target.style.borderBottom = '';
-// }
 </script>
