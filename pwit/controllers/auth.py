@@ -1,4 +1,7 @@
 import frappe
+from frappe.utils import now_datetime
+from hashlib import sha256
+from frappe.utils import get_url
 
 class AuthAPIs:
     def create_session():
@@ -14,21 +17,24 @@ class AuthAPIs:
 
     @frappe.whitelist(allow_guest=True)
     def register(data):
-        if not data.get("email") or not data.get("password"):
-            return {'code':400,'msg':'Email and password are required'} 
+        if not data.get("email"):
+            return {'code':400,'msg':'Email is required'} 
         try:
-            new_user = frappe.new_doc("User")
-            new_user.email = data.get("email")
+            exits = frappe.db.exists('User',data.get('email'))
+            if exits:
+                return {'code':400,'msg':'User already exists'}
+            else:
+                new_user = frappe.new_doc("User")
+                new_user.email = data.get("email")
 
-            if data.get("full_name"):
-                full_name = data.get("full_name").split(" ")
-                new_user.first_name = full_name[0]
-                new_user.last_name = full_name[1] if len(full_name) > 1 else ""
-            new_user.new_password = data.get("password")
+                if data.get("full_name"):
+                    full_name = data.get("full_name").split(" ")
+                    new_user.first_name = full_name[0]
+                    new_user.last_name = full_name[1] if len(full_name) > 1 else ""
 
-            new_user.save(ignore_permissions=True)
-            new_user.add_roles("System Manager")
-            return {'code':200,'msg':'Register successfully','data':new_user} 
+                new_user.save(ignore_permissions=True)
+                # new_user.add_roles("System Manager")
+                return {'code':200,'msg':'Password reset instructions have been sent to your email','data':new_user} 
         except Exception as e:
             return {'code':500,'msg':'Internal Server Error','data':str(e)} 
     
@@ -57,3 +63,24 @@ class AuthAPIs:
         doc.new_password = new_password
         doc.save(ignore_permissions=True)
         return {'code': 200, 'data': doc}
+    
+    def send_custom_welcome_email_method(doc):
+        link= AuthAPIs.reset_password(doc)
+        message_content = frappe.render_template("pwit/templates/pages/welcome_email_template.html",{"doc":doc, "verification_link": link})
+        now = frappe.flags.in_test or frappe.flags.in_install
+        frappe.sendmail(
+            recipients=[doc.email],
+            subject= 'Welcome to The Bridgespan Group Portal',
+            message=message_content,
+            delayed=(not now) if now is not None else doc.flags.delay_emails,
+            retry=3,
+        )
+
+    def reset_password(self):  
+        key = frappe.generate_hash()
+        hashed_key = sha256(key.encode('utf-8')).hexdigest()
+        frappe.db.set_value("User", self.name, "reset_password_key", hashed_key)
+        frappe.db.set_value("User", self.name, "last_reset_password_key_generated_on", now_datetime())
+        url = "/pwit/update-password?key=" + key
+        link = get_url(url)
+        return link

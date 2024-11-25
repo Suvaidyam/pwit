@@ -26,20 +26,7 @@
                     class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5"
                     placeholder="Enter Email Address">
             </div>
-            <div class="flex flex-col gap-2 w-full relative">
-                <label for="" class="text-sm text-tatary">
-                    Password
-                    <span class="text-red-500"> *</span>
-                </label>
-                <input @keydown.enter="register" @input="validatePassword" id="passwordInputId" v-model="password"
-                    :type="show_pass ? 'text' : 'password'"
-                    class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5" placeholder="******">
-                <span class="absolute right-2 top-10 text-xs cursor-pointer" @click="show_pass = !show_pass">
-                    <EyeOff class="w-5 h-5 text-gray-500" v-if="show_pass" />
-                    <Eye class="w-5 h-5 text-gray-500" v-else />
-                </span>
-                <p v-if="errorMessage" class="text-red-500 text-xs mt-1 absolute -bottom-5">{{ errorMessage }}</p>
-            </div>
+           
             <div class="flex items-center gap-2 py-2">
                 <input v-model="remember" type="checkbox" id="remember" class="h-4 w-4" />
                 <label for="remember" class="text-sm text-gray-500">Remember me</label>
@@ -73,15 +60,12 @@ import { ref, watch, inject } from 'vue'
 import { DialogTitle } from '@headlessui/vue'
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
-import { Eye, EyeOff } from 'lucide-vue-next'
 
 const open = ref(false)
 const loading = ref(false)
-const show_pass = ref(false)
 const remember = ref(false)
 const email = ref('')
 const full_name = ref('')
-const password = ref('')
 const errorMessage = ref('')
 const store = inject('store');
 const call = inject('$call');
@@ -94,13 +78,12 @@ const validateEmail = (email) => {
 const register = async () => {
 
     const emailEl = document.getElementById('emailInputId');
-    const passwordEl = document.getElementById('passwordInputId');
     const fullNameEl = document.getElementById('full_name');
     let valid = true;
 
-    fullNameEl.style.borderBottom = emailEl.style.borderBottom = passwordEl.style.borderBottom = '';
+    fullNameEl.style.borderBottom = emailEl.style.borderBottom = '';
 
-    if (!full_name.value || !email.value || !password.value) {
+    if (!full_name.value || !email.value ) {
 
         if (!full_name.value) {
             fullNameEl.style.borderBottom = '1px solid red';
@@ -112,10 +95,6 @@ const register = async () => {
             valid = false;
         }
 
-        if (!password.value) {
-            passwordEl.style.borderBottom = '1px solid red';
-            valid = false;
-        }
         return;
     }
 
@@ -133,41 +112,21 @@ const register = async () => {
             data: {
                 email: email.value,
                 full_name: full_name.value,
-                password: password.value,
             }
         });
 
         if (res.code === 200) {
-            toast.success('Registration Successful');
-            // store.auth = 'Log In';
-            loading.value = false;
+            toast.success(res.msg); 
+            loading.value = false; 
         } else {
             setTimeout(() => {
-                loading.value = false;
+                loading.value = false; 
             }, 1000);
-            toast.error('Registration Failed');
+            toast.error(res.msg);
         }
     }
 };
 
-
-const validatePassword = () => {
-    const minLength = 8;
-    const hasNumber = /\d/.test(password.value);
-    const hasSpecialChar = /[!@#$%^&*]/.test(password.value);
-
-    if (!password.value) {
-        errorMessage.value = 'Password is required.';
-    } else if (password.value.length < minLength) {
-        errorMessage.value = `Password must be at least ${minLength} characters.`;
-    } else if (!hasNumber) {
-        errorMessage.value = 'Password must include at least one number.';
-    } else if (!hasSpecialChar) {
-        errorMessage.value = 'Password must include at least one special character.';
-    } else {
-        errorMessage.value = '';
-    }
-}
 // const resetBorder = (event) => {
 //     event.target.style.borderBottom = '';
 // }
