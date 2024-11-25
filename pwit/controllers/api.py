@@ -75,3 +75,6 @@ def save_image(data):
 @frappe.whitelist(allow_guest=True)
 def save_doc(doctype, doc):
     return FormAPIs.save_doc(doctype, doc)
+
+def send_custom_welcome_email(doc):
+    AuthAPIs.send_custom_welcome_email_method(doc)
