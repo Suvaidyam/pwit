@@ -5,8 +5,8 @@
         <button @click="openDialog('Login')"
             class="w-[74px] h-10 text-h5 rounded-md bg-secondary text-white">Login</button>
     </div>
-    <TransitionRoot as="template" :show="open">
-        <Dialog class="relative z-20" @close="open = false">
+    <TransitionRoot as="template" :show="store.authPopup">
+        <Dialog class="relative z-20" @close="store.authPopup = false">
             <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
                 leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
                 <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
@@ -37,10 +37,9 @@ import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessu
 import Login from './Login.vue';
 import Register from './Register.vue';
 
-const open = ref(false) 
 const store = inject('store');
 
-watch(()=> open.value, (value) => {
+watch(()=> store.authPopup, (value) => {
     if (!value) {
         store.save_as_login = false;
         setTimeout(() => {
@@ -54,7 +53,7 @@ watch(()=> store.save_as_login, (value) => {
     }
 })
 const openDialog = (el) => {
-    open.value = true;
+    store.authPopup = true;
     if (el === 'Register') {
         store.auth = true;
     } else {

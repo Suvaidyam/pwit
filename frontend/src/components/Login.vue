@@ -121,6 +121,7 @@ const login = async () => {
             res = await auth.login(email.value, password.value);
             if (res) {
                 store.auth = false;
+                store.authPopup = false;
                 toast.success('Login Successful');
                 loading.value = false;
             }
