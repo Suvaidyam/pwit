@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-import { ref, computed,watch, inject, onMounted } from 'vue';
+import { ref, watch, inject, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import LeftMenuLoader from './LeftMenuLoader.vue';
 
@@ -47,15 +47,16 @@ const route = useRoute();
 const store = inject('store');
 const call = inject('$call');
 const auth = inject('$auth');
-const session = JSON.parse(localStorage.getItem('session'));
 const menu_list = ref([]);
-const loading = ref(true);
+const loading = ref(false);
 const recommendedList = ref([])
 const additionalList = ref([])
 
 const leftMenu = async () => {
+    loading.value = true;
     const res = await call('pwit.controllers.api.left_menu_list', {});
     if (res.code === 200) {
+        loading.value = false;
         menu_list.value = res.data;
     }
 };
@@ -66,8 +67,8 @@ const get_result = async () => {
         loading.value = true;
         call('pwit.controllers.api.get_results', {
             doctype: 'Funder Diagnostic',
-            session: session.data.name,
-            user:auth.cookie.user_id!=='Guest'?auth.cookie.user_id:''
+            session: store.session,
+            user: auth.cookie.user_id !== 'Guest' ? auth.cookie.user_id : ''
         })
             .then(res => {
                 const groupedSums = Object.entries(res.data).reduce((acc, [key, value]) => {
@@ -80,7 +81,6 @@ const get_result = async () => {
                 resolve(groupedSums);
             })
             .catch(error => {
-                console.error('Error fetching results:', error);
                 reject(error);
             })
             .finally(() => {
@@ -100,7 +100,6 @@ const get_recomm = async () => {
                 }
             })
             .catch(error => {
-                console.error('Error fetching recommendations:', error);
                 reject(error);
             })
             .finally(() => {
@@ -112,7 +111,7 @@ const get_recomm = async () => {
 function sortAndAssign(d) {
     d.sort((a, b) => {
         if (a.score === b.score) {
-            return a.priority - b.priority;  
+            return a.priority - b.priority;
         }
         return a.score - b.score;
     });
@@ -140,36 +139,35 @@ const evaluateLogic = (logicArray, results) => {
     });
 };
 
-watch(() => menu_list.value, (value) => {
-   recommendedList.value = value?.filter(e => e.group === 'Recommended')
-   additionalList.value = value?.filter(e => e.group === 'Additional')
-}, {deep: true, immediate: true});
+watch(() => menu_list.value, async (value) => {
+    menu_list.value = value
+    recommendedList.value = await value?.filter(e => e.group === 'Recommended')
+    additionalList.value = await value?.filter(e => e.group === 'Additional')
+}, { deep: true, immediate: true });
 // Fetch menu_list on mount
-onMounted(async() => {
-    try {
-        await leftMenu();
-        let assessmentResult = await get_result()
-        let logics = await get_recomm();
-        let topMatching = evaluateLogic(logics, assessmentResult)?.[0];
-        if(!topMatching){
-            let updatedData = menu_list?.value?.map(e => {
-                e.score = assessmentResult[e.code] || 0;
-                return e;
-            });
-            menu_list.value = sortAndAssign(updatedData);
-        }else{
-             menu_list.value = [
-                {...menu_list.value.find(e => e.code === topMatching.recommendation_1), group:'Recommended'},
-                {...menu_list.value.find(e => e.code === topMatching.recommendation_2), group:'Recommended'},
-                {...menu_list.value.find(e => e.code === topMatching.recommendation_3), group:'Recommended'},
-                {...menu_list.value.find(e => e.code === topMatching.additional_1), group:'Additional'},
-                {...menu_list.value.find(e => e.code === topMatching.additional_2), group:'Additional'}
-            ]
-        }
-    } catch (error) {
-        
+onMounted(async () => {
+
+    await leftMenu();
+    let assessmentResult = await get_result()
+    let logics = await get_recomm();
+    let topMatching = await evaluateLogic(logics, assessmentResult)?.[0];
+    if (!topMatching) {
+        let updatedData = menu_list?.value?.map(e => {
+            e.score = assessmentResult[e.code] || 0;
+            return e;
+        });
+        menu_list.value = sortAndAssign(updatedData);
+
+    } else {
+        menu_list.value = [
+            { ...menu_list.value.find(e => e.code === topMatching.recommendation_1), group: 'Recommended' },
+            { ...menu_list.value.find(e => e.code === topMatching.recommendation_2), group: 'Recommended' },
+            { ...menu_list.value.find(e => e.code === topMatching.recommendation_3), group: 'Recommended' },
+            { ...menu_list.value.find(e => e.code === topMatching.additional_1), group: 'Additional' },
+            { ...menu_list.value.find(e => e.code === topMatching.additional_2), group: 'Additional' }
+        ]
     }
-    
+
 });
 
 </script>

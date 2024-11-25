@@ -42,12 +42,17 @@ const store = inject('store');
 
 watch(()=> open.value, (value) => {
     if (!value) {
+        store.save_as_login = false;
         setTimeout(() => {
             store.isForgetPas = false;
         }, 300)
     }
 })
-
+watch(()=> store.save_as_login, (value) => {
+    if (value) {
+        openDialog('Login');
+    }
+})
 const openDialog = (el) => {
     open.value = true;
     if (el === 'Register') {

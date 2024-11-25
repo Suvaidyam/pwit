@@ -5,7 +5,8 @@ const isOpen = ref(false);
 const isForgetPas = ref(false);
 const isOpenPas = ref(false);
 const session = ref(JSON.parse(localStorage.getItem('session'))?.data?.name);
-const sidebar = ref(false);  
+const sidebar = ref(false);
+const save_as_login = ref(false);
 export const store = reactive({ 
     auth:auth.value,
     sidebar:sidebar.value,
@@ -13,4 +14,5 @@ export const store = reactive({
     isOpen:isOpen.value,
     isOpenPas:isOpenPas.value,
     isForgetPas:isForgetPas.value,
+    save_as_login:save_as_login.value
 });

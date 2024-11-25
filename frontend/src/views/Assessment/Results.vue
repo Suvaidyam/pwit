@@ -153,13 +153,12 @@ const call = inject('$call');
 const auth = inject('$auth');
 // console.log(router)
 const title = ref(splitAtSecondCapital(route.path));
-const session = JSON.parse(localStorage.getItem('session'));
 
 const get_results=async()=>{
     try {
         let res = call('pwit.controllers.api.get_results', {
             doctype: title.value,
-            session: session.data.name,
+            session: store.session,
             user:auth.cookie.user_id!=='Guest'?auth.cookie.user_id:''
         })
         console.log(res,'results')
