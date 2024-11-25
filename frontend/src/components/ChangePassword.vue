@@ -1,6 +1,6 @@
 <template>
     <TransitionRoot as="template" :show="store.isOpenPas">
-        <Dialog class="relative z-20" @close="store.isOpenPas = false">
+        <Dialog class="relative z-20">
             <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
                 leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
                 <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
@@ -15,6 +15,7 @@
                         leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
                         <DialogPanel
                             class="relative transform overflow-hidden  bg-white text-left shadow-xl transition-all sm:my-8 w-full sm:max-w-2xl">
+                            <X @click="store.isOpenPas = false" class="text-sm  cursor-pointer absolute right-5 pt-2" />
                             <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4">
                                 <div class="block justify-center gap-5 items-center">
                                 </div>
@@ -69,6 +70,8 @@ import { TransitionChild, TransitionRoot, Dialog, DialogPanel } from '@headlessu
 import {Eye,EyeOff} from 'lucide-vue-next'
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
+import { X } from 'lucide-vue-next';
+
 
 const store = inject('store');
 const auth = inject('$auth');
