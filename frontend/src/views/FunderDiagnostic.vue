@@ -31,10 +31,9 @@ const store = inject('store');
 const auth = inject('$auth');
 const call = inject('$call');
 const router = useRouter();
-const cur_session = JSON.parse(localStorage.getItem('session'));
 const handleSubmit = async (formData) => {
   try {
-    const res = await call('pwit.controllers.api.save_doc', { doctype: 'Funder Diagnostic', doc: {...formData,'session':cur_session.data.name} });
+    const res = await call('pwit.controllers.api.save_doc', { doctype: 'Funder Diagnostic', doc: {...formData,'session':store.session} });
     if (res.code === 200) {
       router.push('/recommended');
     }
@@ -62,7 +61,7 @@ const save_as_draft = () => {
   if (auth.isLoggedIn) {
     console.log('save as draft');
   } else {
-    store.auth = 'Log In';
+    store.save_as_login = true;
   }
 }
 
