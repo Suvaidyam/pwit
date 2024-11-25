@@ -16,7 +16,8 @@
   "q5",
   "channels_of_communication_section",
   "q7",
-  "q8"
+  "q8",
+  "amended_from"
  ],
  "fields": [
   {
@@ -87,11 +88,22 @@
    "fieldtype": "Link",
    "label": "How is your policy on multiyear partnerships communicated to nonprofit partners (current and potential) and the ecosystem?",
    "options": "Field Options"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Multi-year Partnerships",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-11-21 18:37:47.967383",
+ "modified": "2024-11-25 22:19:41.659127",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Multi-year Partnerships",
@@ -107,6 +119,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

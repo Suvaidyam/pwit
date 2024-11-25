@@ -21,7 +21,8 @@
   "dei_2",
   "dei_3",
   "od_3",
-  "session"
+  "session",
+  "amended_from"
  ],
  "fields": [
   {
@@ -143,17 +144,29 @@
    "hidden": 1,
    "label": "Session",
    "options": "Session"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Funder Diagnostic",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-11-21 19:20:23.688978",
+ "modified": "2024-11-25 22:18:23.048374",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Funder Diagnostic",
  "owner": "Administrator",
  "permissions": [
   {
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -163,6 +176,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

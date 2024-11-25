@@ -15,7 +15,8 @@
   "question4",
   "channels_of__communication_section",
   "question5",
-  "question6"
+  "question6",
+  "amended_from"
  ],
  "fields": [
   {
@@ -79,11 +80,22 @@
    "fieldtype": "Link",
    "label": "How are your  guidelines on OD support communica ted to nonprofits (current and  potential) and the  wider sector?",
    "options": "Field Options"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Organization Development",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-11-23 12:57:25.375148",
+ "modified": "2024-11-25 22:19:25.707311",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Organization Development",
@@ -99,6 +111,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

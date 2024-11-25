@@ -80,5 +80,13 @@ def save_image(data):
 def save_doc(doctype, doc):
     return FormAPIs.save_doc(doctype, doc)
 
+@frappe.whitelist(allow_guest=True)
+def save_as_draft(doctype, doc):
+    return FormAPIs.save_as_draft(doctype, doc)
+
+@frappe.whitelist(allow_guest=False)
+def get_save_as_draft(doctype, user):
+    return FormAPIs.get_save_as_draft(doctype, user)
+
 def send_custom_welcome_email(doc):
     AuthAPIs.send_custom_welcome_email_method(doc)

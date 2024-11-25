@@ -10,7 +10,7 @@
   "name2",
   "session",
   "sourcing_section",
-  "question",
+  "question_dei",
   "application_section",
   "question4",
   "selection_section",
@@ -26,7 +26,8 @@
   "reporting_section",
   "question10",
   "renewal_section",
-  "question11"
+  "question11",
+  "amended_from"
  ],
  "fields": [
   {
@@ -57,12 +58,6 @@
    "fieldname": "sourcing_section",
    "fieldtype": "Section Break",
    "label": "Sourcing"
-  },
-  {
-   "fieldname": "question",
-   "fieldtype": "Table MultiSelect",
-   "label": " What steps do you take to go beyond your networks and source nonprofits in an inclusive way? ",
-   "options": "Options Child"
   },
   {
    "fieldname": "application_section",
@@ -151,11 +146,28 @@
    "fieldtype": "Link",
    "label": "Is progress on DEI-related outcomes/results seen as a positive at the time of grant renewal?",
    "options": "Field Options"
+  },
+  {
+   "fieldname": "question_dei",
+   "fieldtype": "Table MultiSelect",
+   "label": " What steps do you take to go beyond your networks and source nonprofits in an inclusive way? ",
+   "options": "Options Child"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Diversity Equity Inclusion",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-11-22 20:05:53.128424",
+ "modified": "2024-11-25 22:18:57.187502",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Diversity Equity Inclusion",
@@ -171,6 +183,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

@@ -13,7 +13,8 @@
   "question3",
   "channels_of__communication_section",
   "question4",
-  "question5"
+  "question5",
+  "amended_from"
  ],
  "fields": [
   {
@@ -66,11 +67,22 @@
    "fieldtype": "Link",
    "label": " How are your  guidelines on  financial resilience support communica ted to nonprofits (current and potential) and the  wider sector?",
    "options": "Field Options"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Financial Resilience",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-11-23 13:28:58.087150",
+ "modified": "2024-11-25 22:19:10.726815",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Financial Resilience",
@@ -86,6 +98,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
