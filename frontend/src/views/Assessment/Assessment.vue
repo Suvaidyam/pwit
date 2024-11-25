@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-import { ref, watch,inject } from 'vue'
+import { ref, watch,inject, onMounted } from 'vue'
 import { useRoute ,useRouter} from 'vue-router';
 import Breadcrumb from './Breadcrumb.vue'
 import {FormView} from '../../../../../sva_form_vuejs/form_view';
@@ -62,7 +62,19 @@ const save_as_draft = () => {
         store.save_as_login = true;
     } 
 }
-
+const get_save_as_draft = async() => {
+    try {
+        let res = await call('pwit.controllers.api.get_save_as_draft', { doctype: title.value, user:auth.cookie.user_id });
+        console.log(res)
+    } catch (error) {
+        
+    }
+}
+onMounted(() => {
+    if(auth.isLoggedIn){
+        get_save_as_draft();
+    }
+})
 function splitAtSecondCapital(input) {
     return input
         .replace(/([a-z])([A-Z])/g, '$1 $2')

@@ -1,4 +1,5 @@
 import frappe
+from frappe.model.docstatus import DocStatus
 
 class AssessmentAPIs:
     def question_list(doctype):
@@ -8,11 +9,11 @@ class AssessmentAPIs:
     def get_results(doctype,session,user=None):
         assessments = []
         if not user:
-            assessments = frappe.get_all(doctype,filters={'session':session}, fields=['*'],order_by='creation desc', limit_page_length=1)
+            assessments = frappe.get_all(doctype,filters={'session':session,'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
         else:
             all_session = frappe.get_all('Session', {'user': user}, pluck='name',order_by='creation desc')
             if len(all_session):
-                assessments = frappe.get_all(doctype,filters={'session':["IN", all_session]}, fields=['*'],order_by='creation desc', limit_page_length=1)
+                assessments = frappe.get_all(doctype,filters={'session':["IN", all_session],'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
         if len(assessments) > 0:
             assessment = assessments[0]
             meta = frappe.get_meta(doctype)
@@ -39,11 +40,11 @@ class AssessmentAPIs:
         assessments = []
         meta = frappe.get_meta(doctype)
         if not user:
-            assessments = frappe.get_all(doctype,filters={'session':session}, fields=['*'],order_by='creation desc', limit_page_length=1)
+            assessments = frappe.get_all(doctype,filters={'session':session,'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
         else:
             all_session = frappe.get_all('Session', {'user': user}, pluck='name',order_by='creation desc')
             if len(all_session):
-                assessments = frappe.get_all(doctype,filters={'session':["IN", all_session]}, fields=['*'],order_by='creation desc', limit_page_length=1)
+                assessments = frappe.get_all(doctype,filters={'session':["IN", all_session],'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
         if len(assessments) > 0:
             assessment = assessments[0]
             final_fields = {}

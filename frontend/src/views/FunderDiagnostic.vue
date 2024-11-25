@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { ref, inject } from 'vue';
+import { ref, inject, onMounted } from 'vue';
 import FooterNav from '../components/FooterNav.vue';
 import { FormView } from '../../../../sva_form_vuejs/form_view.js';
 import { useRouter } from 'vue-router';
@@ -41,25 +41,27 @@ const handleSubmit = async (formData) => {
     console.error('Error saving form:', err);
   }
 };
-// const handleSubmit = async (formData) => {
-//   try {
-//     const res = await call('frappe.desk.form.save.savedocs', {
-//       doc: JSON.stringify({
-//         doctype: 'Funder Diagnostic',
-//         ...formData
-//       }),
-//       action: 'Save'
-//     });
-//     if (res) {
-//       router.push('/recommended');
-//     }
-//   } catch (err) {
-//     console.error('Error saving form:', err);
-//   } 
-// };
-const save_as_draft = () => {
+
+const get_save_as_draft = async() => {
+    try {
+        let res = await call('pwit.controllers.api.get_save_as_draft', { doctype: 'Funder Diagnostic', user:auth.cookie.user_id });
+        console.log(res)
+    } catch (error) {
+        
+    }
+}
+onMounted(() => {
+    if(auth.isLoggedIn){
+        get_save_as_draft();
+    }
+})
+
+const save_as_draft = async(formData) => {
   if (auth.isLoggedIn) {
-    console.log('save as draft');
+    const res = await call('pwit.controllers.api.save_as_draft', { doctype: 'Funder Diagnostic', doc: {...formData,'session':store.session} });
+    if (res.code === 200) {
+      console.log(res);
+    }
   } else {
     store.save_as_login = true;
   }

@@ -48,8 +48,8 @@
                                     <td class="py-2 px-4">
                                         <div 
                                             class="h-4 bg-gray-200">
-                                            <div class="h-4 text-xs flex justify-center" :class="[value > 7 ?'bg-[#337357] w-full': value > 3?'w-2/3 bg-[#FFD23F]':'bg-[#FF6464]']">
-                                                {{ value?'':'Not Found' }}
+                                            <div class="h-4 text-xs flex justify-center" :class="[value > 7 ?'bg-[#337357] w-full': value > 3?'w-2/3 bg-[#FFD23F]':'bg-[#FF6464] w-1/3']">
+                                                {{ recommendations.result?'':'Not Found' }}
                                             </div>
                                         </div>
                                     </td>

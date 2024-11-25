@@ -15,7 +15,8 @@
   "question5",
   "channels_of__communication_section",
   "question6",
-  "question7"
+  "question7",
+  "amended_from"
  ],
  "fields": [
   {
@@ -81,11 +82,22 @@
    "fieldname": "guidelines_section",
    "fieldtype": "Section Break",
    "label": "Guidelines"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Core Costs",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-11-25 17:39:48.011338",
+ "modified": "2024-11-25 22:19:55.460985",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Core Costs",
@@ -101,6 +113,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
