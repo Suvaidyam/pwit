@@ -118,6 +118,7 @@ const register = async () => {
         if (res.code === 200) {
             toast.success(res.msg); 
             loading.value = false; 
+            store.authPopup = false;
         } else {
             setTimeout(() => {
                 loading.value = false; 
