@@ -348,40 +348,39 @@
 		</div>
 		<div class="flex flex-col gap-3 px-4 md:px-8 lg:px-16 ">
 			<h1 class="text-h2 text-primary font-bold font-serif tracking-wide">How to get started</h1>
-			<p class="text-sm"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda inventore neque qui,
-				et laborum dolor eligendi, aliquid voluptatem quis quo amet ipsum maiores magni. Laboriosam blanditiis
-				eveniet nesciunt impedit tempore.</p>
+			<p class="text-h5 text-trbase font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+				exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		</div>
 		<div class="flex justify-between gap-4 px-4 md:px-8 lg:px-16 py-6">
 			<div class="flex flex-col gap-2">
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
-					<FolderLock class="text-green-500"/>
+					<FolderLock class="text-green-500  " />
 				</div>
-				<h1 class="font-bold">Hellow</h1>
-				<p class="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, tenetur pariatur
-					temporibus sequi
-					ea perferendis natus quaerat excepturi debitis facere in nisi unde cupiditate illo dolorum
-					perspiciatis facilis vero nam?</p>
+				<h1 class="font-bold text-h5 text-sebase">Lorem ipsum dolor sit amet</h1>
+				<p class="text-h6 text-trbase"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+					officia deserunt mollit anim id est laborum.</p>
 			</div>
 			<div class="flex flex-col gap-2">
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
-					<FolderLock class="text-green-500"/>
+					<FolderLock class="text-green-500" />
 				</div>
-				<h1 class="font-bold">Hellow</h1>
-				<p class="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, tenetur pariatur
-					temporibus sequi
-					ea perferendis natus quaerat excepturi debitis facere in nisi unde cupiditate illo dolorum
-					perspiciatis facilis vero nam?</p>
+				<h1 class="font-bold text-h5 text-sebase">Lorem ipsum dolor sit amet</h1>
+				<p class="text-h6 text-trbase"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+					officia deserunt mollit anim id est laborum.</p>
+
 			</div>
 			<div class="flex flex-col gap-2">
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
-					<FolderLock class="text-green-500"/>
+					<FolderLock class="text-green-500" />
 				</div>
-				<h1 class="font-bold">Hellow</h1>
-				<p class="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, tenetur pariatur
-					temporibus sequi
-					ea perferendis natus quaerat excepturi debitis facere in nisi unde cupiditate illo dolorum
-					perspiciatis facilis vero nam?</p>
+				<h1 class="font-bold text-h5 text-sebase">Lorem ipsum dolor sit amet</h1>
+				<p class="text-h6 text-trbase"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+					officia deserunt mollit anim id est laborum.</p>
+
 			</div>
 		</div>
 		<div class=" bg-secondary pb-40 relative px-4 md:px-8 lg:px-16">
@@ -389,12 +388,12 @@
 				Partneership</h1>
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 				<div class="flex flex-col gap-4 w-full text-center text-white font-serif text-sm">
-					<p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima mollitia laboriosam ab
-						numquam ducimus repellendus similique non officiis tempore quasi voluptates soluta, ipsum
-						molestias reiciendis voluptatibus totam iusto beatae fugit! Lorem ipsum dolor sit amet
-						consectetur adipisicing elit. Numquam, tempora amet deserunt excepturi rem repudiandae ullam
-						quisquam fugiat autem, animi officia eum, maxime exercitationem explicabo laborum facere tempore
-						minima accusantium.</p>
+					<p class="text-h5 text-[#E9EAEB] font-normal text-center"> Lorem
+						ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+						aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+						culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
 		</div>
@@ -411,7 +410,7 @@ import { inject, ref, onMounted } from 'vue';
 import FooterNav from '../../components/FooterNav.vue';
 import PickAssessment from './PickAssessment.vue';
 import ContactUs from './ContactUs.vue';
-import { FolderLock} from 'lucide-vue-next'
+import { FolderLock } from 'lucide-vue-next'
 // const call = inject('$call');
 // let faqs_list = ref([]);
 
