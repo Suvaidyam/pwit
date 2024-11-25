@@ -6,7 +6,7 @@
             class="w-[74px] h-10 text-h5 rounded-md bg-secondary text-white">Login</button>
     </div>
     <TransitionRoot as="template" :show="store.authPopup">
-        <Dialog class="relative z-20" @close="store.authPopup = false">
+        <Dialog class="relative z-20">
             <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
                 leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
                 <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
@@ -20,7 +20,8 @@
                         leave-from="opacity-100 translate-y-0 sm:scale-100"
                         leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
                         <DialogPanel
-                            class="relative transform overflow-hidden  bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl">
+                            class="relative  transform overflow-hidden  bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl">
+                         <X @click="open = false" class="text-sm  cursor-pointer absolute right-5 mt-2" />
                             <Register v-if="store.auth" />
                             <Login v-if="!store.auth" />
                         </DialogPanel>
@@ -36,6 +37,7 @@ import { inject, ref, watch } from 'vue'
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import Login from './Login.vue';
 import Register from './Register.vue';
+import { X } from 'lucide-vue-next';
 
 const store = inject('store');
 
