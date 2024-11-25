@@ -21,8 +21,8 @@
                         Results and Recommendations
                     </h2>
                     <p class="text-h6 pt-1 pb-4">
-                        <span class="font-medium">Average:</span>
-                        <span class="text-green-600 font-semibold">2.5</span>
+                        <span class="font-medium">Average: </span>
+                        <span class="text-green-600 font-semibold">{{ recommendations?.average ?? 0 }}</span>
                     </p>
                     <!-- Table -->
                     <div class="overflow-x-auto">
@@ -40,15 +40,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="recommendation in recommendations" :key="recommendation.title"
+                                <tr v-if="recommendations.result" v-for="[key,value] in Object.entries(recommendations.result)" :key="key"
                                     class="border-b">
                                     <td class="w-1/2 px-4 py-2 font-normal text-h6 text-pbase border border-gray-200">
-                                        {{ recommendation.title }}
+                                        {{ key }}
                                     </td>
                                     <td class="py-2 px-4">
-                                        <div v-for="(item, idx) in recommendation.items" :key="idx"
+                                        <div 
                                             class="h-4 bg-gray-200">
-                                            <div class="h-4 " :style="{ width: item.chart + '%', backgroundColor: item.color  }">
+                                            <div class="h-4 text-xs flex justify-center" :class="[value > 7 ?'bg-[#337357] w-full': value > 3?'w-2/3 bg-[#FFD23F]':'bg-[#FF6464]']">
+                                                {{ value?'':'Not Found' }}
                                             </div>
                                         </div>
                                     </td>
@@ -151,17 +152,20 @@ const router = useRouter()
 const store = inject('store');
 const call = inject('$call');
 const auth = inject('$auth');
+const recommendations = ref({});
 // console.log(router)
 const title = ref(splitAtSecondCapital(route.path));
 
 const get_results=async()=>{
     try {
-        let res = call('pwit.controllers.api.get_results', {
+        let res = await call('pwit.controllers.api.get_assistive_result', {
             doctype: title.value,
             session: store.session,
             user:auth.cookie.user_id!=='Guest'?auth.cookie.user_id:''
         })
-        console.log(res,'results')
+        if(res.code===200){
+            recommendations.value = res.data
+        }
     } catch (error) {
         
     }
@@ -208,25 +212,6 @@ const resources = ref([
 ]);
 
 
-const recommendations = ref([
-    {
-        title: 'Policy guidelines',
-        items: [
-            { chart: 50, color:'#FFD23F' }
-        ]
-    },
-    {
-        title: 'Annual budget allocation',
-        items: [
-            { chart: 75, color:'#FF6464' }
-        ]
-    },
-    {
-        title: 'Approach: Structuring of multiyear partnerships',
-        items:[
-            {chart:40, color:'#337357'}
-        ]
-    }
-]);
+
 
 </script>

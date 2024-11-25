@@ -5,7 +5,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_a_section",
+  "guidelines_section",
   "name1",
   "question1",
   "session",
@@ -30,11 +30,6 @@
    "hidden": 1,
    "label": "Session",
    "options": "Session"
-  },
-  {
-   "fieldname": "section_a_section",
-   "fieldtype": "Section Break",
-   "label": "Guidelines"
   },
   {
    "fieldname": "last",
@@ -81,11 +76,16 @@
    "fieldtype": "Link",
    "label": "  Are these guidelines flexible and  adaptable based on  context and need?",
    "options": "Field Options"
+  },
+  {
+   "fieldname": "guidelines_section",
+   "fieldtype": "Section Break",
+   "label": "Guidelines"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-23 15:09:14.664156",
+ "modified": "2024-11-25 17:39:48.011338",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Core Costs",
