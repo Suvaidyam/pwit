@@ -17,7 +17,7 @@
       <FormView :doctype="'Funder Diagnostic'" :onSubmit="handleSubmit" :isCard="true" :isDraft="true" :section="true"
         :save_as_draft="save_as_draft" />
     </div>
-    <FooterNav />
+    <!-- <FooterNav /> -->
   </div>
 </template>
 
