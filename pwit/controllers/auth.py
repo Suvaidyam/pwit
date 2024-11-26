@@ -81,7 +81,17 @@ class AuthAPIs:
             delayed=(not now) if now is not None else doc.flags.delay_emails,
             retry=3,
         )
-
+    def reset_custom_password_method(doc, send_email=True):
+        link= AuthAPIs.reset_password(doc)
+        message_content = frappe.render_template("pwit/templates/pages/forget_email_template.html",{"doc":doc, "verification_link": link})
+        now = frappe.flags.in_test or frappe.flags.in_install
+        frappe.sendmail(
+            recipients=[doc.email],
+            subject= 'Password Forget',
+            message=message_content,
+            delayed=(not now) if now is not None else doc.flags.delay_emails,
+            retry=3,
+        )
     def reset_password(self):  
         key = frappe.generate_hash()
         hashed_key = sha256(key.encode('utf-8')).hexdigest()
