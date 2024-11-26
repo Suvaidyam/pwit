@@ -94,3 +94,6 @@ def get_save_as_draft(doctype, user):
 
 def send_custom_welcome_email(doc):
     AuthAPIs.send_custom_welcome_email_method(doc)
+
+def reset_custom_password(doc, send_email=True):
+    AuthAPIs.reset_custom_password_method(doc, send_email)
