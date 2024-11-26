@@ -1,17 +1,7 @@
 [
  {
   "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "core_cost_3",
-  "label": "Strongly disagree",
-  "modified": "2024-11-20 14:38:53.934536",
-  "name": "Funder Diagnostic-core_cost_3-1",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 5.0
- },
- {
-  "code": "1",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_2",
@@ -23,6 +13,7 @@
  },
  {
   "code": "3",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_1",
@@ -34,17 +25,7 @@
  },
  {
   "code": "3",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "od_1",
-  "label": "Neutral",
-  "modified": "2024-11-20 15:05:35.098722",
-  "name": "Funder Diagnostic-od_1-3",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 0.0
- },
- {
-  "code": "3",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_1",
@@ -56,28 +37,7 @@
  },
  {
   "code": "3",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "core_cost_3",
-  "label": "Neutral",
-  "modified": "2024-11-20 15:06:58.841321",
-  "name": "Funder Diagnostic-core_cost_3-3",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 0.0
- },
- {
-  "code": "3",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "od_2",
-  "label": "Neutral",
-  "modified": "2024-11-20 15:08:00.742637",
-  "name": "Funder Diagnostic-od_2-3",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 0.0
- },
- {
-  "code": "3",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_2",
@@ -89,39 +49,7 @@
  },
  {
   "code": "3",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "fr_3",
-  "label": "Neutral",
-  "modified": "2024-11-20 15:08:48.629816",
-  "name": "Funder Diagnostic-fr_3-3",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 0.0
- },
- {
-  "code": "3",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "myp_3",
-  "label": "Neutral",
-  "modified": "2024-11-20 15:09:10.622464",
-  "name": "Funder Diagnostic-myp_3-3",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 0.0
- },
- {
-  "code": "3",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "dei_2",
-  "label": "Neutral",
-  "modified": "2024-11-20 15:09:54.195778",
-  "name": "Funder Diagnostic-dei_2-3",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 0.0
- },
- {
-  "code": "3",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_3",
@@ -133,6 +61,7 @@
  },
  {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_1",
@@ -144,17 +73,7 @@
  },
  {
   "code": "4",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "dei_1",
-  "label": "Agree ",
-  "modified": "2024-11-20 15:18:58.056401",
-  "name": "Funder Diagnostic-dei_1-4",
-  "ref_doctype": "Funder Diagnostic",
-  "score": -2.0
- },
- {
-  "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_3",
@@ -166,6 +85,7 @@
  },
  {
   "code": "5",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_1",
@@ -177,6 +97,7 @@
  },
  {
   "code": "5",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_1",
@@ -188,28 +109,7 @@
  },
  {
   "code": "5",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "myp_1",
-  "label": "Strongly agree\n",
-  "modified": "2024-11-20 15:30:12.351454",
-  "name": "Funder Diagnostic-myp_1-5",
-  "ref_doctype": "Funder Diagnostic",
-  "score": -5.0
- },
- {
-  "code": "5",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "od_2",
-  "label": "Strongly agree\n",
-  "modified": "2024-11-20 15:33:26.342504",
-  "name": "Funder Diagnostic-od_2-5",
-  "ref_doctype": "Funder Diagnostic",
-  "score": -5.0
- },
- {
-  "code": "5",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_2",
@@ -221,6 +121,7 @@
  },
  {
   "code": "5",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_3",
@@ -231,40 +132,8 @@
   "score": 5.0
  },
  {
-  "code": "5",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "myp_3",
-  "label": "Strongly agree\n",
-  "modified": "2024-11-20 15:35:35.559921",
-  "name": "Funder Diagnostic-myp_3-5",
-  "ref_doctype": "Funder Diagnostic",
-  "score": -5.0
- },
- {
-  "code": "5",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "dei_2",
-  "label": "Strongly agree\n",
-  "modified": "2024-11-20 15:35:50.290794",
-  "name": "Funder Diagnostic-dei_2-5",
-  "ref_doctype": "Funder Diagnostic",
-  "score": -5.0
- },
- {
-  "code": "5",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "dei_3",
-  "label": "Strongly agree\n",
-  "modified": "2024-11-20 15:36:23.452602",
-  "name": "Funder Diagnostic-dei_3-5",
-  "ref_doctype": "Funder Diagnostic",
-  "score": -5.0
- },
- {
   "code": "1",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_1",
@@ -276,6 +145,7 @@
  },
  {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_2",
@@ -287,6 +157,7 @@
  },
  {
   "code": "5",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_2",
@@ -298,6 +169,7 @@
  },
  {
   "code": "5",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_1",
@@ -308,51 +180,8 @@
   "score": -5.0
  },
  {
-  "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "last",
-  "label": "We provide less than 20% of our annual budget to multiyear partnerships.",
-  "modified": "2024-11-16 12:13:39.900358",
-  "name": "Core Costs-last-1",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "dei_3",
-  "label": "Strongly disagree",
-  "modified": "2024-11-20 14:42:25.200946",
-  "name": "Funder Diagnostic-dei_3-1",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 5.0
- },
- {
-  "code": "2",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "fr_1",
-  "label": "Disagree ",
-  "modified": "2024-11-20 14:52:22.989564",
-  "name": "Funder Diagnostic-fr_1-2",
-  "ref_doctype": "Funder Diagnostic",
-  "score": -2.0
- },
- {
-  "code": "2",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "core_cost_2",
-  "label": "Disagree ",
-  "modified": "2024-11-20 14:52:36.673856",
-  "name": "Funder Diagnostic-core_cost_2-2",
-  "ref_doctype": "Funder Diagnostic",
-  "score": -2.0
- },
- {
   "code": "3",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_2",
@@ -364,6 +193,7 @@
  },
  {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_1",
@@ -375,6 +205,7 @@
  },
  {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_2",
@@ -386,6 +217,7 @@
  },
  {
   "code": "5",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_2",
@@ -397,6 +229,7 @@
  },
  {
   "code": "5",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_3",
@@ -408,6 +241,7 @@
  },
  {
   "code": "1",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_2",
@@ -419,6 +253,7 @@
  },
  {
   "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_3",
@@ -430,6 +265,7 @@
  },
  {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_3",
@@ -440,18 +276,8 @@
   "score": -2.0
  },
  {
-  "code": "3",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "od_3",
-  "label": "Neutral",
-  "modified": "2024-11-20 15:10:45.897791",
-  "name": "Funder Diagnostic-od_3-3",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 0.0
- },
- {
   "code": "5",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_1",
@@ -462,29 +288,8 @@
   "score": 5.0
  },
  {
-  "code": "2",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "core_cost_1",
-  "label": "Disagree ",
-  "modified": "2024-11-20 14:46:34.843481",
-  "name": "Funder Diagnostic-core_cost_1-2",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 2.0
- },
- {
-  "code": "3",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "core_cost_2",
-  "label": "Neutral",
-  "modified": "2024-11-20 15:06:46.429908",
-  "name": "Funder Diagnostic-core_cost_2-3",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 0.0
- },
- {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_1",
@@ -496,6 +301,7 @@
  },
  {
   "code": "5",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_3",
@@ -507,6 +313,7 @@
  },
  {
   "code": "1",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_1",
@@ -518,6 +325,7 @@
  },
  {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_3",
@@ -529,6 +337,7 @@
  },
  {
   "code": "1",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_1",
@@ -540,6 +349,7 @@
  },
  {
   "code": "1",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_3",
@@ -550,18 +360,8 @@
   "score": 5.0
  },
  {
-  "code": "2",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "myp_2",
-  "label": "Disagree ",
-  "modified": "2024-11-20 15:00:04.376008",
-  "name": "Funder Diagnostic-myp_2-2",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 2.0
- },
- {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_2",
@@ -573,6 +373,7 @@
  },
  {
   "code": "1",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_2",
@@ -584,17 +385,7 @@
  },
  {
   "code": "2",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "dei_1",
-  "label": "Disagree ",
-  "modified": "2024-11-20 14:53:48.704495",
-  "name": "Funder Diagnostic-dei_1-2",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 2.0
- },
- {
-  "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_3",
@@ -606,6 +397,7 @@
  },
  {
   "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_3",
@@ -617,6 +409,7 @@
  },
  {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_1",
@@ -628,6 +421,7 @@
  },
  {
   "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_1",
@@ -639,6 +433,7 @@
  },
  {
   "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_2",
@@ -649,18 +444,8 @@
   "score": 2.0
  },
  {
-  "code": "4",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "fr_3",
-  "label": "Agree ",
-  "modified": "2024-11-20 15:20:42.232489",
-  "name": "Funder Diagnostic-fr_3-4",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 2.0
- },
- {
   "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_2",
@@ -671,18 +456,8 @@
   "score": 2.0
  },
  {
-  "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question1",
-  "label": " There is a difference \nof opinion amongst\ndecision-makers on \nhow much core-cost \nsupport we should be \nextending to \nnonprofit partners. ",
-  "modified": "2024-11-23 14:41:06.613879",
-  "name": "Core Costs-question1-1",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
   "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "question1",
@@ -693,18 +468,8 @@
   "score": 0.0
  },
  {
-  "code": "3",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question1",
-  "label": "The decision-makers\nin our organisation \nunderstand that \ncontext may dictate \nthe core cost need of \nthe partner. They are \namenable to \ncustomizing cost \ncoverage on a case\u0002by-case basis.",
-  "modified": "2024-11-23 14:43:09.869640",
-  "name": "Core Costs-question1-3",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "question1",
@@ -716,6 +481,7 @@
  },
  {
   "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "last",
@@ -727,6 +493,7 @@
  },
  {
   "code": "3",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "last",
@@ -738,6 +505,7 @@
  },
  {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "last",
@@ -748,29 +516,8 @@
   "score": 0.0
  },
  {
-  "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question",
-  "label": " We do not consult \nnonprofit partners to \nunderstand their cost \nstructures and needs\nduring the proposal \nphase. ",
-  "modified": "2024-11-23 14:51:40.753035",
-  "name": "Core Costs-question-1",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "2",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question",
-  "label": " We consult nonprofit \npartners during the \nproposal phase to \nbetter understand \ntheir cost structures \nand needs. \n",
-  "modified": "2024-11-23 14:52:21.685623",
-  "name": "Core Costs-question-2",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
   "code": "3",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "question",
@@ -781,29 +528,8 @@
   "score": 0.0
  },
  {
-  "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question5",
-  "label": " There is no room for\nnonprofit partners to \nnegotiate and \nadvocate for \nincreasing the share \nof core costs\nprovided. ",
-  "modified": "2024-11-23 14:54:21.687654",
-  "name": "Core Costs-question5-1",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "2",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question5",
-  "label": "There is limited room \nfor select, or a few, \npartners to negotiate \nand advocate for \nincreasing the share \nof core costs\nprovided. \n",
-  "modified": "2024-11-23 14:54:38.508096",
-  "name": "Core Costs-question5-2",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
   "code": "3",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "question5",
@@ -815,6 +541,7 @@
  },
  {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "question5",
@@ -825,18 +552,8 @@
   "score": 0.0
  },
  {
-  "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question6",
-  "label": "We do not make an \neffort to communicate \nour approach \ninternally. \nInternal team \nmembers develop an \nunderstanding based \non prevalent \npractices.",
-  "modified": "2024-11-23 15:00:35.261865",
-  "name": "Core Costs-question6-1",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
   "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "question6",
@@ -848,6 +565,7 @@
  },
  {
   "code": "3",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "question6",
@@ -859,6 +577,7 @@
  },
  {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "question6",
@@ -869,18 +588,8 @@
   "score": 0.0
  },
  {
-  "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question7",
-  "label": "We do not \ncommunicate our \napproach on core-cost \nsupport to nonprofits \nor make this information publicly \navailable.",
-  "modified": "2024-11-23 15:10:57.096649",
-  "name": "Core Costs-question7-1",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
   "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "question7",
@@ -892,6 +601,7 @@
  },
  {
   "code": "3",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "question7",
@@ -902,29 +612,8 @@
   "score": 0.0
  },
  {
-  "code": "4",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question7",
-  "label": " We use our website\nor official means to \ncommunicate our \nguidelines on core\u0002cost support to \nnonprofits and the \nwider sector.We maintain \ncommunication with \nnonprofits and \ncontinuously seek \ntheir feedback to \nstrengthen our \ngrantmaking \napproach.",
-  "modified": "2024-11-23 15:13:27.940849",
-  "name": "Core Costs-question7-4",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "name1",
-  "label": " We do not have \ndocumented \nguidelines.",
-  "modified": "2024-11-23 15:15:15.621438",
-  "name": "Core Costs-name1-1",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
   "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "name1",
@@ -936,6 +625,7 @@
  },
  {
   "code": "3",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "name1",
@@ -947,6 +637,7 @@
  },
  {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "name1",
@@ -958,28 +649,7 @@
  },
  {
   "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "core_cost_1",
-  "label": "Strongly disagree",
-  "modified": "2024-11-20 14:35:21.236183",
-  "name": "Funder Diagnostic-core_cost_1-1",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 5.0
- },
- {
-  "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "fr_3",
-  "label": "Strongly disagree",
-  "modified": "2024-11-20 14:41:00.039934",
-  "name": "Funder Diagnostic-fr_3-1",
-  "ref_doctype": "Funder Diagnostic",
-  "score": -5.0
- },
- {
-  "code": "1",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_2",
@@ -991,6 +661,7 @@
  },
  {
   "code": "3",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_1",
@@ -1002,6 +673,7 @@
  },
  {
   "code": "3",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_1",
@@ -1013,6 +685,7 @@
  },
  {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_2",
@@ -1024,6 +697,7 @@
  },
  {
   "code": "4",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_2",
@@ -1035,17 +709,7 @@
  },
  {
   "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "myp_1",
-  "label": "Strongly disagree",
-  "modified": "2024-11-20 14:36:24.511375",
-  "name": "Funder Diagnostic-myp_1-1",
-  "ref_doctype": "Funder Diagnostic",
-  "score": 5.0
- },
- {
-  "code": "1",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_2",
@@ -1057,6 +721,7 @@
  },
  {
   "code": "1",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_3",
@@ -1068,6 +733,7 @@
  },
  {
   "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_1",
@@ -1079,6 +745,7 @@
  },
  {
   "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_3",
@@ -1089,7 +756,380 @@
   "score": 2.0
  },
  {
+  "code": "4",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "core_cost_3",
+  "label": "Agree ",
+  "modified": "2024-11-20 15:18:04.510852",
+  "name": "Funder Diagnostic-core_cost_3-4",
+  "ref_doctype": "Funder Diagnostic",
+  "score": -2.0
+ },
+ {
+  "code": "3",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_3",
+  "label": "Neutral",
+  "modified": "2024-11-20 15:09:10.622464",
+  "name": "Funder Diagnostic-myp_3-3",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 0.0
+ },
+ {
+  "code": "4",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "fr_3",
+  "label": "Agree ",
+  "modified": "2024-11-20 15:20:42.232489",
+  "name": "Funder Diagnostic-fr_3-4",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 2.0
+ },
+ {
+  "code": "1",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "question1",
+  "label": " There is a difference \nof opinion amongst\ndecision-makers on \nhow much core-cost \nsupport we should be \nextending to \nnonprofit partners. ",
+  "modified": "2024-11-23 14:41:06.613879",
+  "name": "Core Costs-question1-1",
+  "ref_doctype": "Core Costs",
+  "score": 0.0
+ },
+ {
+  "code": "3",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "question1",
+  "label": "The decision-makers\nin our organisation \nunderstand that \ncontext may dictate \nthe core cost need of \nthe partner. They are \namenable to \ncustomizing cost \ncoverage on a case\u0002by-case basis.",
+  "modified": "2024-11-23 14:43:09.869640",
+  "name": "Core Costs-question1-3",
+  "ref_doctype": "Core Costs",
+  "score": 0.0
+ },
+ {
+  "code": "1",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "question",
+  "label": " We do not consult \nnonprofit partners to \nunderstand their cost \nstructures and needs\nduring the proposal \nphase. ",
+  "modified": "2024-11-23 14:51:40.753035",
+  "name": "Core Costs-question-1",
+  "ref_doctype": "Core Costs",
+  "score": 0.0
+ },
+ {
   "code": "2",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "question",
+  "label": " We consult nonprofit \npartners during the \nproposal phase to \nbetter understand \ntheir cost structures \nand needs. \n",
+  "modified": "2024-11-23 14:52:21.685623",
+  "name": "Core Costs-question-2",
+  "ref_doctype": "Core Costs",
+  "score": 0.0
+ },
+ {
+  "code": "1",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "question5",
+  "label": " There is no room for\nnonprofit partners to \nnegotiate and \nadvocate for \nincreasing the share \nof core costs\nprovided. ",
+  "modified": "2024-11-23 14:54:21.687654",
+  "name": "Core Costs-question5-1",
+  "ref_doctype": "Core Costs",
+  "score": 0.0
+ },
+ {
+  "code": "2",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "question5",
+  "label": "There is limited room \nfor select, or a few, \npartners to negotiate \nand advocate for \nincreasing the share \nof core costs\nprovided. \n",
+  "modified": "2024-11-23 14:54:38.508096",
+  "name": "Core Costs-question5-2",
+  "ref_doctype": "Core Costs",
+  "score": 0.0
+ },
+ {
+  "code": "1",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "question7",
+  "label": "We do not \ncommunicate our \napproach on core-cost \nsupport to nonprofits \nor make this information publicly \navailable.",
+  "modified": "2024-11-23 15:10:57.096649",
+  "name": "Core Costs-question7-1",
+  "ref_doctype": "Core Costs",
+  "score": 0.0
+ },
+ {
+  "code": "4",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "question7",
+  "label": " We use our website\nor official means to \ncommunicate our \nguidelines on core\u0002cost support to \nnonprofits and the \nwider sector.We maintain \ncommunication with \nnonprofits and \ncontinuously seek \ntheir feedback to \nstrengthen our \ngrantmaking \napproach.",
+  "modified": "2024-11-23 15:13:27.940849",
+  "name": "Core Costs-question7-4",
+  "ref_doctype": "Core Costs",
+  "score": 0.0
+ },
+ {
+  "code": "3",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "core_cost_3",
+  "label": "Neutral",
+  "modified": "2024-11-20 15:06:58.841321",
+  "name": "Funder Diagnostic-core_cost_3-3",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 0.0
+ },
+ {
+  "code": "3",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "fr_3",
+  "label": "Neutral",
+  "modified": "2024-11-20 15:08:48.629816",
+  "name": "Funder Diagnostic-fr_3-3",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 0.0
+ },
+ {
+  "code": "4",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "dei_1",
+  "label": "Agree ",
+  "modified": "2024-11-20 15:18:58.056401",
+  "name": "Funder Diagnostic-dei_1-4",
+  "ref_doctype": "Funder Diagnostic",
+  "score": -2.0
+ },
+ {
+  "code": "5",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_1",
+  "label": "Strongly agree\n",
+  "modified": "2024-11-20 15:30:12.351454",
+  "name": "Funder Diagnostic-myp_1-5",
+  "ref_doctype": "Funder Diagnostic",
+  "score": -5.0
+ },
+ {
+  "code": "5",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "od_2",
+  "label": "Strongly agree\n",
+  "modified": "2024-11-20 15:33:26.342504",
+  "name": "Funder Diagnostic-od_2-5",
+  "ref_doctype": "Funder Diagnostic",
+  "score": -5.0
+ },
+ {
+  "code": "1",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "last",
+  "label": "We provide less than 20% of our annual budget to multiyear partnerships.",
+  "modified": "2024-11-16 12:13:39.900358",
+  "name": "Core Costs-last-1",
+  "ref_doctype": "Core Costs",
+  "score": 0.0
+ },
+ {
+  "code": "1",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "dei_3",
+  "label": "Strongly disagree",
+  "modified": "2024-11-20 14:42:25.200946",
+  "name": "Funder Diagnostic-dei_3-1",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 5.0
+ },
+ {
+  "code": "3",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "core_cost_2",
+  "label": "Neutral",
+  "modified": "2024-11-20 15:06:46.429908",
+  "name": "Funder Diagnostic-core_cost_2-3",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 0.0
+ },
+ {
+  "code": "1",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "question6",
+  "label": "We do not make an \neffort to communicate \nour approach \ninternally. \nInternal team \nmembers develop an \nunderstanding based \non prevalent \npractices.",
+  "modified": "2024-11-23 15:00:35.261865",
+  "name": "Core Costs-question6-1",
+  "ref_doctype": "Core Costs",
+  "score": 0.0
+ },
+ {
+  "code": "1",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "name1",
+  "label": " We do not have \ndocumented \nguidelines.",
+  "modified": "2024-11-26 14:24:41.928893",
+  "name": "Core Costs-name1-1",
+  "ref_doctype": "Core Costs",
+  "score": 6.0
+ },
+ {
+  "code": "1",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "core_cost_1",
+  "label": "Strongly disagree",
+  "modified": "2024-11-20 14:35:21.236183",
+  "name": "Funder Diagnostic-core_cost_1-1",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 5.0
+ },
+ {
+  "code": "1",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "core_cost_3",
+  "label": "Strongly disagree",
+  "modified": "2024-11-20 14:38:53.934536",
+  "name": "Funder Diagnostic-core_cost_3-1",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 5.0
+ },
+ {
+  "code": "3",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "od_2",
+  "label": "Neutral",
+  "modified": "2024-11-20 15:08:00.742637",
+  "name": "Funder Diagnostic-od_2-3",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 0.0
+ },
+ {
+  "code": "3",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "dei_2",
+  "label": "Neutral",
+  "modified": "2024-11-20 15:09:54.195778",
+  "name": "Funder Diagnostic-dei_2-3",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 0.0
+ },
+ {
+  "code": "5",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "dei_3",
+  "label": "Strongly agree\n",
+  "modified": "2024-11-20 15:36:23.452602",
+  "name": "Funder Diagnostic-dei_3-5",
+  "ref_doctype": "Funder Diagnostic",
+  "score": -5.0
+ },
+ {
+  "code": "2",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "core_cost_2",
+  "label": "Disagree ",
+  "modified": "2024-11-20 14:52:36.673856",
+  "name": "Funder Diagnostic-core_cost_2-2",
+  "ref_doctype": "Funder Diagnostic",
+  "score": -2.0
+ },
+ {
+  "code": "2",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "core_cost_1",
+  "label": "Disagree ",
+  "modified": "2024-11-20 14:46:34.843481",
+  "name": "Funder Diagnostic-core_cost_1-2",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 2.0
+ },
+ {
+  "code": "2",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "dei_1",
+  "label": "Disagree ",
+  "modified": "2024-11-20 14:53:48.704495",
+  "name": "Funder Diagnostic-dei_1-2",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 2.0
+ },
+ {
+  "code": "1",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "fr_3",
+  "label": "Strongly disagree",
+  "modified": "2024-11-20 14:41:00.039934",
+  "name": "Funder Diagnostic-fr_3-1",
+  "ref_doctype": "Funder Diagnostic",
+  "score": -5.0
+ },
+ {
+  "code": "1",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_1",
+  "label": "Strongly disagree",
+  "modified": "2024-11-20 14:36:24.511375",
+  "name": "Funder Diagnostic-myp_1-1",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 5.0
+ },
+ {
+  "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_3",
@@ -1100,7 +1140,68 @@
   "score": 2.0
  },
  {
+  "code": "3",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "od_1",
+  "label": "Neutral",
+  "modified": "2024-11-20 15:05:35.098722",
+  "name": "Funder Diagnostic-od_1-3",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 0.0
+ },
+ {
+  "code": "5",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_3",
+  "label": "Strongly agree\n",
+  "modified": "2024-11-20 15:35:35.559921",
+  "name": "Funder Diagnostic-myp_3-5",
+  "ref_doctype": "Funder Diagnostic",
+  "score": -5.0
+ },
+ {
+  "code": "5",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "dei_2",
+  "label": "Strongly agree\n",
+  "modified": "2024-11-20 15:35:50.290794",
+  "name": "Funder Diagnostic-dei_2-5",
+  "ref_doctype": "Funder Diagnostic",
+  "score": -5.0
+ },
+ {
   "code": "2",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "fr_1",
+  "label": "Disagree ",
+  "modified": "2024-11-20 14:52:22.989564",
+  "name": "Funder Diagnostic-fr_1-2",
+  "ref_doctype": "Funder Diagnostic",
+  "score": -2.0
+ },
+ {
+  "code": "2",
+  "depends_on": null,
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_2",
+  "label": "Disagree ",
+  "modified": "2024-11-20 15:00:04.376008",
+  "name": "Funder Diagnostic-myp_2-2",
+  "ref_doctype": "Funder Diagnostic",
+  "score": 2.0
+ },
+ {
+  "code": "2",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_2",
@@ -1111,14 +1212,15 @@
   "score": 2.0
  },
  {
-  "code": "4",
+  "code": "3",
+  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
-  "field": "core_cost_3",
-  "label": "Agree ",
-  "modified": "2024-11-20 15:18:04.510852",
-  "name": "Funder Diagnostic-core_cost_3-4",
+  "field": "od_3",
+  "label": "Neutral",
+  "modified": "2024-11-20 15:10:45.897791",
+  "name": "Funder Diagnostic-od_3-3",
   "ref_doctype": "Funder Diagnostic",
-  "score": -2.0
+  "score": 0.0
  }
 ]
