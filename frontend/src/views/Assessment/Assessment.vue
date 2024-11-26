@@ -8,10 +8,12 @@
         </div>
         <transition name="fade" mode="out-in">
             <div class="w-full h-full">
-                <FormView v-if="title !== 'Diversity Equity Inclusion'" :initialData="initialData"  :doctype="title" :onSubmit="handleSubmit"
-                    :isTable="true" :isDraft="true" :section="true" :save_as_draft="save_as_draft" :key="title" />
-                <FormView v-if="title == 'Diversity Equity Inclusion'"  :initialData="initialData" :doctype="title" :onSubmit="handleSubmit"
-                    :isDraft="true" :isCard="true" :section="true" :save_as_draft="save_as_draft" :key="title" />
+                <FormView v-if="title !== 'Diversity Equity Inclusion'" :initialData="initialData" :doctype="title"
+                    :onSubmit="handleSubmit" :isTable="true" :isDraft="true" :section="true"
+                    :save_as_draft="save_as_draft" :key="title" />
+                <FormView v-if="title == 'Diversity Equity Inclusion'" :initialData="initialData" :doctype="title"
+                    :onSubmit="handleSubmit" :isDraft="true" :isCard="true" :section="true"
+                    :save_as_draft="save_as_draft" :key="title" />
             </div>
         </transition>
     </div>
@@ -39,7 +41,7 @@ watch(route, (newVal, oldVal) => {
 })
 const handleSubmit = async (formData) => {
     try {
-        const res = await call('pwit.controllers.api.save_doc', { doctype: title.value, doc: { ...formData, 'session': store.session },name: initialData?.value?.name  });
+        const res = await call('pwit.controllers.api.save_doc', { doctype: title.value, doc: { ...formData, 'session': store.session }, name: initialData?.value?.name });
         if (res.code === 200) {
             router.push(`${current_path.value}/results`);
         }
@@ -47,10 +49,15 @@ const handleSubmit = async (formData) => {
         console.error('Error saving form:', err);
     }
 };
-const save_as_draft = () => {
+const save_as_draft = async (formData) => {
     if (auth.isLoggedIn) {
-        console.log('save as draft');
+        const res = await call('pwit.controllers.api.save_as_draft', { doctype: title.value, doc: { ...formData, 'session': store.session }, name: initialData?.value?.name });
+        if (res.code === 200) {
+            localStorage.removeItem('draft');
+            return res;
+        }
     } else {
+        localStorage.setItem('draft', JSON.stringify(formData));
         store.save_as_login = true;
     }
 }
@@ -64,16 +71,25 @@ const get_save_as_draft = async () => {
 
     }
 }
-onMounted(() => {
-    if (auth.isLoggedIn) {
-        get_save_as_draft();
-    }
-})
+
 function splitAtSecondCapital(input) {
     return input
         .replace(/([a-z])([A-Z])/g, '$1 $2')
         .trim();
 }
+onMounted(async () => {
+    let draft = JSON.parse(localStorage.getItem('draft') ?? '{}');
+    if (Object.keys(draft).length) {
+        if (auth.isLoggedIn) {
+            await save_as_draft(draft);
+        } else {
+            initialData.value = draft;
+        }
+    }
+    if (auth.isLoggedIn) {
+        get_save_as_draft();
+    }
+})
 </script>
 
 <style scoped>
