@@ -11,7 +11,7 @@
         Funder Diagnostic
       </h1>
       <p class="w-16 py-1 flex items-center justify-center rounded-2xl text-red-700 bg-red-100 font-bold"
-        v-if="initialData">Draft</p>
+        v-if="Object.keys(initialData).length">Draft</p>
     </div>
     <p class="text-sm px-4 md:px-8 lg:px-20   font-serif text-sebase font-normal">
       Please select the degree to which your organization’s mindset and practices agree or disagree with the
@@ -57,21 +57,30 @@ const get_save_as_draft = async () => {
 
   }
 }
-onMounted(() => {
+
+const save_as_draft = async (formData) => {
+  if (auth.isLoggedIn) {
+    const res = await call('pwit.controllers.api.save_as_draft', { doctype: 'Funder Diagnostic', doc: { ...formData, 'session': store.session }, name: initialData?.value?.name });
+    if (res.code === 200) {
+      localStorage.removeItem('draft');
+      return res;
+    }
+  } else {
+    localStorage.setItem('draft', JSON.stringify(formData));
+    store.save_as_login = true;
+  }
+}
+onMounted(async () => {
+  let draft = JSON.parse(localStorage.getItem('draft') ?? '{}');
+  if (Object.keys(draft).length) {
+    if (auth.isLoggedIn) {
+      await save_as_draft(draft);
+    } else {
+      initialData.value = draft;
+    }
+  }
   if (auth.isLoggedIn) {
     get_save_as_draft();
   }
 })
-
-const save_as_draft = async (formData) => {
-  if (auth.isLoggedIn) {
-    const res = await call('pwit.controllers.api.save_as_draft', { doctype: 'Funder Diagnostic', doc: { ...formData, 'session': store.session },name: initialData?.value?.name });
-    if (res.code === 200) {
-      console.log(res);
-    }
-  } else {
-    store.save_as_login = true;
-  }
-}
-
 </script>
