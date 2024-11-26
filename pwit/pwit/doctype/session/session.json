@@ -6,6 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "user",
+  "policyconsent",
   "routes"
  ],
  "fields": [
@@ -20,12 +21,18 @@
    "fieldtype": "Table",
    "label": "Routes",
    "options": "Route Child"
+  },
+  {
+   "default": "0",
+   "fieldname": "policyconsent",
+   "fieldtype": "Check",
+   "label": "Policy/Consent"
   }
  ],
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-05 10:02:33.968676",
+ "modified": "2024-11-26 12:06:11.156298",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Session",
