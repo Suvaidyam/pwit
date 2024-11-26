@@ -1,7 +1,7 @@
 <template>
 	<div class="w-full h-screen">
-		<div class="w-full px-4 md:px-8 lg:px-20 flex flex-col gap-2 md:gap-3 justify-center h-24 md:h-40 items-center">
-			<h1 class="text-h2 font-bold lg:text-[64px] text-primary font-serif">Assistive Funder Toolkit
+		<div class="w-full px-4 md:px-8 lg:px-20 flex flex-col gap-2 md:gap-3 justify-center h-24 md:h-40 items-center ">
+			<h1 class="text-h2 font-bold lg:text-[64px] text-primary font-serif ">Assistive Funder Toolkit
 			</h1>
 			<p class="px-4 text-center md:font-extrabold text-[#4f4f4f] text-h5 font-serif">Developed under
 				the

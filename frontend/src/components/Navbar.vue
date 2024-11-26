@@ -1,7 +1,7 @@
 <template>
     <div class="w-full fixed top-0 bg-white z-20 px-4 md:px-8 lg:px-20 h-20 flex justify-between items-center shadow-md">
         <router-link to="/" class="text-2xl font-bold text-primary">
-            <img :src="`/files/logo.png`" class="w-40 h-14" alt="">
+            <img class="w-32 md:w-40 h-12 md:h-14" src="../assets/navbar.png" alt="">
         </router-link>
         <div class="flex gap-3 text-sm" v-if="!auth.isLoggedIn">
            <AuthPop/>
