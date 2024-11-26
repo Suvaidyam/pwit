@@ -55,6 +55,7 @@ const reset_password = async () => {
                 loading.value = false;
                 const result = await response.json();
                 toast.success('Password reset instructions have been sent to your email');
+                store.authPopup=false;
                 email.value = '';
             } else {
                 loading.value = false;

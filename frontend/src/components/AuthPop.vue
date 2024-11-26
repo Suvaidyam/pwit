@@ -21,7 +21,7 @@
                         leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
                         <DialogPanel
                             class="relative  transform overflow-hidden  bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl">
-                         <X @click="store.authPopup= false" class="text-sm  cursor-pointer absolute right-5 mt-2" />
+                         <X @click="store.authPopup= false" class="text-sm  cursor-pointer absolute right-1 -top-1 mt-2" />
                             <Register v-if="store.auth" />
                             <Login v-if="!store.auth" />
                         </DialogPanel>
