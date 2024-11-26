@@ -35,8 +35,8 @@
                                         being stored, processed and analyzed for the purpose of strengthening this
                                         tool’s offerings.</p>
                                     <div class="flex gap-2 items-center">
-                                        <input type="checkbox" v-model="condision" name="" id="tc">
-                                        <label class="text-sm" for="tc">I understand and agree to the above.</label>
+                                        <input type="checkbox" v-model="policyconsent" @change="set_policyconsent" name="" id="policyconsent">
+                                        <label class="text-sm" for="policyconsent">I understand and agree to the above.</label>
                                     </div>
                                     <button  @click="assessment" :class="condision?'bg-secondary':'bg-secondary'" class="px-16 py-3 mt-5 rounded-md text-white">Continue </button>
                                 </div>
@@ -173,13 +173,15 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref,inject } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { ArrowRight} from 'lucide-vue-next'
 
 const open = ref(false)
 const open_ass = ref(false)
-const condision = ref(false)
+const policyconsent = ref(false)
+const call = inject('$call')
+const store = inject('store')
 
 
 const openDialog = () => {
@@ -189,5 +191,14 @@ const assessment = () => {
     open.value = false;
     open_ass.value = true;
 }
-
+const set_policyconsent = async () => {
+	const res = await call('pwit.controllers.api.set_policyconsent_session', {
+		name:store.session,
+		value:policyconsent.value
+	});
+	if (res.code === 200) {
+		console.log(res)
+        // policyconsent.value=res.data
+	}
+};
 </script>

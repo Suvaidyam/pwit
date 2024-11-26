@@ -1,0 +1,81 @@
+{
+ "app": "pwit",
+ "charts": [],
+ "content": "[{\"id\":\"32aA32z8MR\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Funder diagnostic</span>\",\"col\":12}},{\"id\":\"7ZZ58dZ-1J\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Funder Diagnostic\",\"col\":3}},{\"id\":\"5z0RnzcCzb\",\"type\":\"paragraph\",\"data\":{\"text\":\"Assistive Guides\",\"col\":12}},{\"id\":\"WkK2S8eaY4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Multi Year Partnerships\",\"col\":3}},{\"id\":\"vQq5myCt6C\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Financial Resilience\",\"col\":3}},{\"id\":\"oCGsekc0Yk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Core Costs\",\"col\":3}},{\"id\":\"zYvqg3U26T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Diversity Equity Inclusion\",\"col\":3}},{\"id\":\"GiFxqtm9xO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Organization Development\",\"col\":3}}]",
+ "creation": "2024-11-26 14:44:19.267000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "notebook-text",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Assessment",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2024-11-26 14:48:36.635113",
+ "modified_by": "rahul@gmail.com",
+ "module": "pwit",
+ "name": "Assessment",
+ "number_cards": [],
+ "owner": "rahul@gmail.com",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Funder Diagnostic",
+   "link_to": "Funder Diagnostic",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Multi Year Partnerships",
+   "link_to": "Multi-year Partnerships",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Financial Resilience",
+   "link_to": "Financial Resilience",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Core Costs",
+   "link_to": "Core Costs",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Diversity Equity Inclusion",
+   "link_to": "Diversity Equity Inclusion",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Organization Development",
+   "link_to": "Organization Development",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Assessment",
+ "type": "Workspace"
+}

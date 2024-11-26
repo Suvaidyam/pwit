@@ -14,6 +14,12 @@ class AuthAPIs:
         doc.user = user
         doc.save()
         return {'code':200,'data':doc} 
+    
+    def set_policyconsent_session(name,value):
+        doc = frappe.get_doc('Session',name)
+        doc.policyconsent = value
+        doc.save(ignore_permissions=True)
+        return {'code':200,'data':doc} 
 
     @frappe.whitelist(allow_guest=True)
     def register(data):

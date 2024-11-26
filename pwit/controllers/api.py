@@ -13,6 +13,10 @@ def set_user_session(name,user):
     return AuthAPIs.set_user_session(name,user)
 
 @frappe.whitelist(allow_guest=True)
+def set_policyconsent_session(name,value):
+    return AuthAPIs.set_policyconsent_session(name,value)
+
+@frappe.whitelist(allow_guest=True)
 def register(data):
     return AuthAPIs.register(data)
 
@@ -77,12 +81,12 @@ def save_image(data):
     doc.save()
 
 @frappe.whitelist(allow_guest=True)
-def save_doc(doctype, doc):
-    return FormAPIs.save_doc(doctype, doc)
+def save_doc(doctype, doc,name=None):
+    return FormAPIs.save_doc(doctype, doc,name)
 
 @frappe.whitelist(allow_guest=True)
-def save_as_draft(doctype, doc):
-    return FormAPIs.save_as_draft(doctype, doc)
+def save_as_draft(doctype, doc,name=None):
+    return FormAPIs.save_as_draft(doctype, doc,name)
 
 @frappe.whitelist(allow_guest=False)
 def get_save_as_draft(doctype, user):
