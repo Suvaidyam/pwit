@@ -33,8 +33,8 @@
                 <label for="remember" class="text-sm text-gray-500">Remember me</label>
             </div>
             <div class="w-full border-b h-14">
-                <button :disabled="remember ? false : true" type="button"
-                    :class="remember ? 'bg-secondary text-white' : 'bg-gray-300 text-gray-600'"
+                <button :disabled="remember ? false : false" type="button"
+                    :class="true ? 'bg-secondary text-white' : 'bg-gray-300 text-gray-600'"
                     class=" w-full flex items-center gap-2 justify-center rounded-md px-3 h-12 text-h5 font-normal shadow-sm"
                     @click="register">
                     <div v-if="loading" class="h-5 w-5 ">
@@ -82,12 +82,32 @@ const emailvalidate = () => {
     } else if (!emailPattern.test(email.value)) {
         errorMessage.value = 'Invalid email format.';
     } else {
-        errorMessage.value = ''; 
+        errorMessage.value = '';
     }
 };
 
-const register = async () => {
+watch([full_name, email], ([newFullName, newEmail]) => {
+  const fullNameEl = document.getElementById('full_name');
+  const emailEl = document.getElementById('emailInputId');
+  let valid = true;
 
+  fullNameEl.style.borderBottom = emailEl.style.borderBottom = '';
+
+  if (!newFullName || !newEmail) {
+    if (!newFullName) {
+    //   fullNameEl.style.borderBottom = '1px solid red';
+      valid = false;
+    }
+
+    if (!newEmail) {
+    //   emailEl.style.borderBottom = '1px solid red';
+      valid = false;
+    }
+  }
+
+});
+
+const register = async () => {
     const emailEl = document.getElementById('emailInputId');
     const fullNameEl = document.getElementById('full_name');
     let valid = true;
@@ -120,8 +140,8 @@ const register = async () => {
         });
 
         if (res.code === 200) {
-            toast.success(res.msg); 
-            loading.value = false; 
+            toast.success(res.msg);
+            loading.value = false;
             store.authPopup = false;
         } else {
             setTimeout(() => {
