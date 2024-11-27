@@ -14,8 +14,11 @@
                         *
                     </span>
                 </label>
-                <input @keydown.enter="register" @input="resetBorder" v-model="full_name" type="text" id="full_name"
+                <input @keydown.enter="register" @input="validateName" v-model="full_name" type="text" id="full_name"
                     class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5" placeholder="Enter Full Name">
+                <span v-if="invalidName" class="text-red-500 text-xs mt-1 -bottom-5">Only letters allowed</span>
+                <span v-if="lengthExceeded" class="text-red-500 text-xs mt-1 -bottom-5">Maximum length of 50
+                    characters</span>
             </div>
             <div class="flex flex-col gap-2 w-full">
                 <label for="" class="text-sm text-tatary">
@@ -57,7 +60,7 @@
 </template>
 
 <script setup>
-import { ref, watch, inject } from 'vue'
+import { ref, watch, inject, computed } from 'vue'
 import { DialogTitle } from '@headlessui/vue'
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
@@ -70,6 +73,18 @@ const full_name = ref('')
 const errorMessage = ref('')
 const store = inject('store');
 const call = inject('$call');
+const invalidName = ref(false);
+const lengthExceeded = ref(false);
+
+const validateName = () => {
+    const regex = /^[A-Za-z ]+$/;
+    invalidName.value = !regex.test(full_name.value);
+    lengthExceeded.value = full_name.value.length > 50;
+};
+
+const remainingCharacters = computed(() => {
+    return 50 - full_name.value.length;
+});
 
 const emailvalidate = () => {
     const minLength = 3;
@@ -80,54 +95,50 @@ const emailvalidate = () => {
     } else if (email.value.length < minLength) {
         errorMessage.value = `Email must be at least ${minLength} characters.`;
     } else if (!emailPattern.test(email.value)) {
-        errorMessage.value = 'Invalid email format.';
+        errorMessage.value = 'Invalid email';
     } else {
         errorMessage.value = '';
     }
 };
 
 watch([full_name, email], ([newFullName, newEmail]) => {
-  const fullNameEl = document.getElementById('full_name');
-  const emailEl = document.getElementById('emailInputId');
-  let valid = true;
+    const fullNameEl = document.getElementById('full_name');
+    const emailEl = document.getElementById('emailInputId');
+    let valid = true;
 
-  fullNameEl.style.borderBottom = emailEl.style.borderBottom = '';
-
-  if (!newFullName || !newEmail) {
+    fullNameEl.style.borderBottom = emailEl.style.borderBottom = '';
     if (!newFullName) {
-    //   fullNameEl.style.borderBottom = '1px solid red';
-      valid = false;
+        fullNameEl.style.borderBottom = '1px solid red';
+        valid = false;
     }
 
     if (!newEmail) {
-    //   emailEl.style.borderBottom = '1px solid red';
-      valid = false;
+        emailEl.style.borderBottom = '1px solid red';
+        valid = false;
     }
-  }
-
 });
 
+
 const register = async () => {
+
     const emailEl = document.getElementById('emailInputId');
     const fullNameEl = document.getElementById('full_name');
     let valid = true;
 
     fullNameEl.style.borderBottom = emailEl.style.borderBottom = '';
-
-    if (!full_name.value || !email.value) {
-
-        if (!full_name.value) {
-            fullNameEl.style.borderBottom = '1px solid red';
-            valid = false;
-        }
-
-        if (!email.value) {
-            emailEl.style.borderBottom = '1px solid red';
-            valid = false;
-        }
-
-        return;
+    if (!full_name.value) {
+        fullNameEl.style.borderBottom = '1px solid red';
+        valid = false;
     }
+
+    if (!email.value) {
+        emailEl.style.borderBottom = '1px solid red';
+        valid = false;
+    }
+    if (!invalidName.value && !lengthExceeded.value) {
+        // console.log("Full Name submitted:", full_name.value);
+    }
+    return;
     open.value = false;
     if (errorMessage.value == '') {
         loading.value = true;

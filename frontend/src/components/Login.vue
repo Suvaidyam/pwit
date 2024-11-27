@@ -96,17 +96,14 @@ watch([email, password], ([newEmail, newpassword]) => {
 
     email.style.borderBottom = '';
     password.style.borderBottom = '';
+    if (!newEmail) {
+        email.style.borderBottom = '1px solid red';
+        valid = false;
+    }
 
-    if (!newEmail || !newpassword) {
-        if (!newEmail) {
-            email.style.borderBottom = '1px solid red';
-            valid = false;
-        }
-
-        if (!newpassword) {
-            password.style.borderBottom = '1px solid red';
-            valid = false;
-        }
+    if (!newpassword) {
+        password.style.borderBottom = '1px solid red';
+        valid = false;
     }
 });
 const login = async () => {
@@ -117,20 +114,17 @@ const login = async () => {
 
     email.style.borderBottom = '';
     password.style.borderBottom = '';
-
-    if (!email.value || !password.value) {
-        // alert("Please enter both email and password");
-
-        if (!email.value) {
-            email.style.borderBottom = '1px solid red';
-            valid = false;
-        }
-        if (!password.value) {
-            password.style.borderBottom = '1px solid red';
-            valid = false;
-        }
-        return;
+    // alert("Please enter both email and password");
+    if (!email.value) {
+        email.style.borderBottom = '1px solid red';
+        valid = false;
     }
+    if (!password.value) {
+        password.style.borderBottom = '1px solid red';
+        valid = false;
+    }
+    return;
+
     if (!validateEmail(email.value)) {
         email.style.borderBottom = '1px solid red';
         toast.error("Invalid Email Address.");
