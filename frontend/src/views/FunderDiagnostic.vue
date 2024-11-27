@@ -51,7 +51,7 @@ const get_save_as_draft = async () => {
   try {
     let res = await call('pwit.controllers.api.get_save_as_draft', { doctype: 'Funder Diagnostic', user: auth.cookie.user_id });
     if (res.code === 200) {
-      initialData.value = res.data[0];
+      initialData.value = res.data;
     }
   } catch (error) {
 
