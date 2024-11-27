@@ -5,89 +5,27 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_a_section",
-  "name1",
-  "session",
+  "guidelines_section",
+  "myp_guidelines",
   "annual_budget_allocation_section",
-  "q2",
+  "myp_budget_allocation",
   "approaches_adopted_section",
-  "q3",
-  "q4",
-  "q5",
+  "myp_approaches_adopted_01",
+  "myp_approaches_adopted_02",
+  "myp_approaches_adopted_03",
   "channels_of_communication_section",
-  "q7",
-  "q8",
+  "myp_communication_channels_01",
+  "myp_communication_channels_02",
+  "session",
   "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "name1",
-   "fieldtype": "Link",
-   "label": "Do you have a policy that enables multiyear partnerships?",
-   "options": "Field Options"
-  },
   {
    "fieldname": "session",
    "fieldtype": "Link",
    "hidden": 1,
    "label": "Session",
    "options": "Session"
-  },
-  {
-   "fieldname": "section_a_section",
-   "fieldtype": "Section Break",
-   "label": "Policy guidelines"
-  },
-  {
-   "fieldname": "annual_budget_allocation_section",
-   "fieldtype": "Section Break",
-   "label": "Annual budget allocation"
-  },
-  {
-   "fieldname": "q2",
-   "fieldtype": "Link",
-   "label": "Do you provide multiyear grants (within any relevant legal parameters# ) to nonprofit partners?",
-   "options": "Field Options"
-  },
-  {
-   "fieldname": "approaches_adopted_section",
-   "fieldtype": "Section Break",
-   "label": "Approaches adopted"
-  },
-  {
-   "fieldname": "q3",
-   "fieldtype": "Link",
-   "label": "How are your multiyear partnerships structured?",
-   "options": "Field Options"
-  },
-  {
-   "fieldname": "q4",
-   "fieldtype": "Link",
-   "label": "Who is eligible for multiyear partnerships?",
-   "options": "Field Options"
-  },
-  {
-   "fieldname": "q5",
-   "fieldtype": "Link",
-   "label": "How well defined is your eligibility criteria for multiyear partnerships? What retains them?",
-   "options": "Field Options"
-  },
-  {
-   "fieldname": "channels_of_communication_section",
-   "fieldtype": "Section Break",
-   "label": "Channels of communication"
-  },
-  {
-   "fieldname": "q7",
-   "fieldtype": "Link",
-   "label": "How is your strategy around multiyear partnerships communicated internally?",
-   "options": "Field Options"
-  },
-  {
-   "fieldname": "q8",
-   "fieldtype": "Link",
-   "label": "How is your policy on multiyear partnerships communicated to nonprofit partners (current and potential) and the ecosystem?",
-   "options": "Field Options"
   },
   {
    "fieldname": "amended_from",
@@ -98,12 +36,74 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "guidelines_section",
+   "fieldtype": "Section Break",
+   "label": "Guidelines"
+  },
+  {
+   "fieldname": "myp_guidelines",
+   "fieldtype": "Link",
+   "label": "Do you have written guidelines that enable multiyear partnerships?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "annual_budget_allocation_section",
+   "fieldtype": "Section Break",
+   "label": "Annual budget allocation"
+  },
+  {
+   "fieldname": "myp_budget_allocation",
+   "fieldtype": "Link",
+   "label": "Do you provide multiyear grants (within any relevant legal parameters) to nonprofit partners?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "approaches_adopted_section",
+   "fieldtype": "Section Break",
+   "label": "Approaches adopted"
+  },
+  {
+   "fieldname": "myp_approaches_adopted_01",
+   "fieldtype": "Link",
+   "label": "How intentional are you in forming multiyear partnerships?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "myp_approaches_adopted_02",
+   "fieldtype": "Link",
+   "label": "Do you have well-defined eligibility criteria for multiyear partnerships?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "myp_approaches_adopted_03",
+   "fieldtype": "Link",
+   "label": "What are the criteria to renew/retain partnerships? ",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "channels_of_communication_section",
+   "fieldtype": "Section Break",
+   "label": "Channels of communication"
+  },
+  {
+   "fieldname": "myp_communication_channels_01",
+   "fieldtype": "Link",
+   "label": "How is your approach to multiyear partnerships communicated internally?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "myp_communication_channels_02",
+   "fieldtype": "Link",
+   "label": "How are your guidelines on multiyear partnerships communicated to nonprofits (current and potential) and the wider sector? ",
+   "options": "Field Options"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-25 22:19:41.659127",
+ "modified": "2024-11-27 18:11:02.160954",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Multi-year Partnerships",

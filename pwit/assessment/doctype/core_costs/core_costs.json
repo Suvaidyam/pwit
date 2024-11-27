@@ -6,77 +6,21 @@
  "engine": "InnoDB",
  "field_order": [
   "guidelines_section",
-  "name1",
-  "question1",
-  "session",
+  "cc_guidelines",
   "approaches_adopted_section",
-  "last",
-  "question",
-  "question5",
-  "channels_of__communication_section",
-  "question6",
-  "question7",
+  "cc_approaches_adopted_01",
+  "cc_approaches_adopted_02",
+  "channels_of_communication_section",
+  "cc_communication_channels_01",
+  "cc_communication_channels_02",
+  "session",
   "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "name1",
-   "fieldtype": "Link",
-   "label": "Do you have written guidelines that  clearly stipulate the  core cost3 support  that is extended to  nonprofit partners?",
-   "options": "Field Options"
-  },
-  {
-   "fieldname": "session",
-   "fieldtype": "Link",
-   "hidden": 1,
-   "label": "Session",
-   "options": "Session"
-  },
-  {
-   "fieldname": "last",
-   "fieldtype": "Link",
-   "label": "What approach  have you adopted for providing core\u0002cost support to  nonprofit partners?",
-   "options": "Field Options"
-  },
-  {
    "fieldname": "approaches_adopted_section",
    "fieldtype": "Section Break",
-   "label": "Approaches  adopted"
-  },
-  {
-   "fieldname": "question5",
-   "fieldtype": "Link",
-   "label": "Does your approach  allow room for  nonprofit partners  to negotiate the  core cost support  provided?",
-   "options": "Field Options"
-  },
-  {
-   "fieldname": "channels_of__communication_section",
-   "fieldtype": "Section Break",
-   "label": "Channels of  communication"
-  },
-  {
-   "fieldname": "question6",
-   "fieldtype": "Link",
-   "label": "How are your  guidelines on core cost support  communicated  internally?",
-   "options": "Field Options"
-  },
-  {
-   "fieldname": "question7",
-   "fieldtype": "Link",
-   "label": "How are your  guidelines on core  cost  support communicated to nonprofits (current and potential) and the  wider sector?",
-   "options": "Field Options"
-  },
-  {
-   "fieldname": "question",
-   "fieldtype": "Link",
-   "label": " How consultative is  your approach? ",
-   "options": "Field Options"
-  },
-  {
-   "fieldname": "question1",
-   "fieldtype": "Link",
-   "label": "  Are these guidelines flexible and  adaptable based on  context and need?",
-   "options": "Field Options"
+   "label": "Approaches adopted"
   },
   {
    "fieldname": "guidelines_section",
@@ -92,12 +36,55 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "description": "Are these guidelines flexible and adaptable based on context and need?",
+   "fieldname": "cc_guidelines",
+   "fieldtype": "Link",
+   "label": "Do you have written guidelines that clearly stipulate the core cost3 support that is extended to nonprofit partners? ",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "cc_approaches_adopted_01",
+   "fieldtype": "Link",
+   "label": "What approach have you adopted for providing core- cost support to nonprofit partners? How consultative is your approach? ",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "cc_approaches_adopted_02",
+   "fieldtype": "Link",
+   "label": "Does your approach allow room for nonprofit partners to negotiate the core cost support provided?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "channels_of_communication_section",
+   "fieldtype": "Section Break",
+   "label": "Channels of communication"
+  },
+  {
+   "fieldname": "cc_communication_channels_01",
+   "fieldtype": "Link",
+   "label": "How are your guidelines on core cost support communicated internally?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "cc_communication_channels_02",
+   "fieldtype": "Link",
+   "label": "How are your guidelines on core cost support communica ted to nonprofits (current and potential) and the wider sector? ",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "session",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Session",
+   "options": "Session"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-25 22:19:55.460985",
+ "modified": "2024-11-27 18:18:55.853924",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Core Costs",

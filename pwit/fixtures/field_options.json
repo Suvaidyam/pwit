@@ -1,7 +1,6 @@
 [
  {
   "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_2",
@@ -13,7 +12,6 @@
  },
  {
   "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_1",
@@ -25,7 +23,6 @@
  },
  {
   "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_1",
@@ -37,7 +34,6 @@
  },
  {
   "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_2",
@@ -49,7 +45,6 @@
  },
  {
   "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_3",
@@ -61,7 +56,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_1",
@@ -73,7 +67,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_3",
@@ -85,7 +78,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_1",
@@ -97,7 +89,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_1",
@@ -109,7 +100,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_2",
@@ -121,7 +111,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_3",
@@ -133,7 +122,6 @@
  },
  {
   "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_1",
@@ -145,7 +133,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_2",
@@ -157,7 +144,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_2",
@@ -169,7 +155,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_1",
@@ -181,7 +166,6 @@
  },
  {
   "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_2",
@@ -193,7 +177,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_1",
@@ -205,7 +188,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_2",
@@ -217,7 +199,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_2",
@@ -229,7 +210,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_3",
@@ -241,7 +221,6 @@
  },
  {
   "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_2",
@@ -253,7 +232,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_3",
@@ -265,7 +243,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_3",
@@ -277,7 +254,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_1",
@@ -289,7 +265,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_1",
@@ -301,7 +276,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_3",
@@ -313,7 +287,6 @@
  },
  {
   "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_1",
@@ -325,7 +298,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_3",
@@ -337,7 +309,6 @@
  },
  {
   "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_1",
@@ -349,7 +320,6 @@
  },
  {
   "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_3",
@@ -361,7 +331,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_2",
@@ -373,7 +342,6 @@
  },
  {
   "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_2",
@@ -385,7 +353,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_3",
@@ -397,7 +364,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_3",
@@ -409,7 +375,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_1",
@@ -421,7 +386,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_1",
@@ -433,7 +397,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_2",
@@ -445,7 +408,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_2",
@@ -456,200 +418,7 @@
   "score": 2.0
  },
  {
-  "code": "2",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question1",
-  "label": " There are \nindividual(s) amongst\nthe decision-makers n our organisation \nwho advocate for \nmaking our \nguidelines more \nflexible. ",
-  "modified": "2024-11-23 14:42:30.030387",
-  "name": "Core Costs-question1-2",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "4",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question1",
-  "label": " Decision-makers in \nour organisation \nunderstand the \nimportance of and \nare committed to supporting the core\u0002cost needs requested \nby nonprofit \npartners.",
-  "modified": "2024-11-23 14:44:05.154268",
-  "name": "Core Costs-question1-4",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "2",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "last",
-  "label": " We have a fixed \nrange for core-cost \nsupport between \n10% and 15% of the \ntotal grant amount. \nThis is based on our \norganisation’s guidelines and prior \nexperience. ",
-  "modified": "2024-11-23 14:47:05.710293",
-  "name": "Core Costs-last-2",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "3",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "last",
-  "label": " We have a fixed \nrange for core-cost \nsupport between\n15% and 20% of the\ntotal grant amount.\n",
-  "modified": "2024-11-23 14:47:59.822629",
-  "name": "Core Costs-last-3",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "4",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "last",
-  "label": " We do not have a \nfixed core-cost range, \nand provide support \nas per the ask, need, \nand cost structures of \nthe nonprofit \npartner, while adhering to relevant \nregulations.",
-  "modified": "2024-11-23 14:49:24.476601",
-  "name": "Core Costs-last-4",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "3",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question",
-  "label": "We actively engage \nwith and consult \nnonprofit partners \nduring the proposal \nphase to better \nunderstand their cost \nstructures and needs. ",
-  "modified": "2024-11-23 14:52:40.184170",
-  "name": "Core Costs-question-3",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "3",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question5",
-  "label": "There is room for \nnegotiation for all \nnonprofit partners. \nWe are able to vary \nthe core-cost range \nby 2% to 5% based \non the needs of the \nnonprofit partner \nwhile supporting and \nadvising them on how best to optimise \nthe pool of core-cost \nsupport available.\n",
-  "modified": "2024-11-23 14:55:22.111828",
-  "name": "Core Costs-question5-3",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "4",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question5",
-  "label": " We are flexible on \nthe core-cost support \nextended to \nnonprofit partners \nbased on their needs. \nWe support our \nnonprofit partners \nand advise them on \nhow best to optimize the pool of core-cost \nsupport available.",
-  "modified": "2024-11-23 14:59:12.522593",
-  "name": "Core Costs-question5-4",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "2",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question6",
-  "label": " We don’t use our \nwebsite or other \nofficial means to \ncommunicate our \napproach on core \ncost support\ninternally. Our \napproach is often \ncommunicated at the \nsenior management \nand board level.\nThere is no \nmechanism to gather \nfeedback on our \nguidelines from \ninternal teams",
-  "modified": "2024-11-23 15:01:25.576532",
-  "name": "Core Costs-question6-2",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "3",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question6",
-  "label": " We don’t use our \nwebsite or other \nofficial means to \ncommunicate our \nguidelines on core \ncost support\ninternally. Most \nteams, including the \nboard and senior \nmanagement, are \naware of the \nguidelines. \nWe sometimes \ngather internal \nfeedback on the \nguidelines with the \nintent to improve our \ngrantmaking \napproach.",
-  "modified": "2024-11-23 15:06:11.469167",
-  "name": "Core Costs-question6-3",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "4",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question6",
-  "label": "We communicate \nour approach on \ncore cost support\nacross the \norganisation using \nour website and \nother official means. \nAll our teams have a \nclear understanding \nof the guidelines. \nThis is documented \nand available for \ninternal access. \nWe regularly gather \ninternal feedback on \nthe guidelines to \nimprove our \ngrantmaking \napproach.",
-  "modified": "2024-11-23 15:07:01.992448",
-  "name": "Core Costs-question6-4",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "2",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question7",
-  "label": " We don’t use our \nwebsite or other \nofficial means to \ncommunicate our \napproach on core\u0002cost support to nonprofits or the \nwider sector. ",
-  "modified": "2024-11-23 15:11:47.445164",
-  "name": "Core Costs-question7-2",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "3",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question7",
-  "label": "We use our website \nor other official \nmeans to \ncommunicate our \nguidelines on core\u0002cost support to nonprofits and the \nwider sector",
-  "modified": "2024-11-23 15:12:38.561765",
-  "name": "Core Costs-question7-3",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "2",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "name1",
-  "label": " There are \nindividual(s) amongst\nthe decision-makers in our organisation \nwho advocate for \nmaking our \nguidelines more \nflexible.",
-  "modified": "2024-11-23 15:16:57.299220",
-  "name": "Core Costs-name1-2",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "3",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "name1",
-  "label": " The decision-makers\nin our organisation \nunderstand that \ncontext may dictate \nthe core cost need of \nthe partner. They are \namenable to \ncustomizing cost \ncoverage on a case\u0002by-case basis.\n",
-  "modified": "2024-11-23 15:17:32.880177",
-  "name": "Core Costs-name1-3",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "4",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "name1",
-  "label": " Decision-makers in \nour organisation \nunderstand the \nimportance of and \nare committed to supporting the core\u0002cost needs requested \nby nonprofit \npartners.",
-  "modified": "2024-11-23 15:18:03.706171",
-  "name": "Core Costs-name1-4",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
   "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_2",
@@ -661,7 +430,6 @@
  },
  {
   "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_1",
@@ -673,7 +441,6 @@
  },
  {
   "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_1",
@@ -685,7 +452,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_2",
@@ -697,7 +463,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_2",
@@ -709,7 +474,6 @@
  },
  {
   "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_2",
@@ -721,7 +485,6 @@
  },
  {
   "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_3",
@@ -733,7 +496,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_1",
@@ -745,7 +507,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_3",
@@ -757,7 +518,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_3",
@@ -769,7 +529,6 @@
  },
  {
   "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_3",
@@ -781,7 +540,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_3",
@@ -792,104 +550,7 @@
   "score": 2.0
  },
  {
-  "code": "1",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question1",
-  "label": " There is a difference \nof opinion amongst\ndecision-makers on \nhow much core-cost \nsupport we should be \nextending to \nnonprofit partners. ",
-  "modified": "2024-11-23 14:41:06.613879",
-  "name": "Core Costs-question1-1",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
   "code": "3",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question1",
-  "label": "The decision-makers\nin our organisation \nunderstand that \ncontext may dictate \nthe core cost need of \nthe partner. They are \namenable to \ncustomizing cost \ncoverage on a case\u0002by-case basis.",
-  "modified": "2024-11-23 14:43:09.869640",
-  "name": "Core Costs-question1-3",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "1",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question",
-  "label": " We do not consult \nnonprofit partners to \nunderstand their cost \nstructures and needs\nduring the proposal \nphase. ",
-  "modified": "2024-11-23 14:51:40.753035",
-  "name": "Core Costs-question-1",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "2",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question",
-  "label": " We consult nonprofit \npartners during the \nproposal phase to \nbetter understand \ntheir cost structures \nand needs. \n",
-  "modified": "2024-11-23 14:52:21.685623",
-  "name": "Core Costs-question-2",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "1",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question5",
-  "label": " There is no room for\nnonprofit partners to \nnegotiate and \nadvocate for \nincreasing the share \nof core costs\nprovided. ",
-  "modified": "2024-11-23 14:54:21.687654",
-  "name": "Core Costs-question5-1",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "2",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question5",
-  "label": "There is limited room \nfor select, or a few, \npartners to negotiate \nand advocate for \nincreasing the share \nof core costs\nprovided. \n",
-  "modified": "2024-11-23 14:54:38.508096",
-  "name": "Core Costs-question5-2",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "1",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question7",
-  "label": "We do not \ncommunicate our \napproach on core-cost \nsupport to nonprofits \nor make this information publicly \navailable.",
-  "modified": "2024-11-23 15:10:57.096649",
-  "name": "Core Costs-question7-1",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "4",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question7",
-  "label": " We use our website\nor official means to \ncommunicate our \nguidelines on core\u0002cost support to \nnonprofits and the \nwider sector.We maintain \ncommunication with \nnonprofits and \ncontinuously seek \ntheir feedback to \nstrengthen our \ngrantmaking \napproach.",
-  "modified": "2024-11-23 15:13:27.940849",
-  "name": "Core Costs-question7-4",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_3",
@@ -901,7 +562,6 @@
  },
  {
   "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_3",
@@ -913,7 +573,6 @@
  },
  {
   "code": "4",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_1",
@@ -925,7 +584,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_1",
@@ -937,7 +595,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_2",
@@ -949,19 +606,6 @@
  },
  {
   "code": "1",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "last",
-  "label": "We provide less than 20% of our annual budget to multiyear partnerships.",
-  "modified": "2024-11-16 12:13:39.900358",
-  "name": "Core Costs-last-1",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_3",
@@ -973,7 +617,6 @@
  },
  {
   "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_2",
@@ -985,31 +628,6 @@
  },
  {
   "code": "1",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "question6",
-  "label": "We do not make an \neffort to communicate \nour approach \ninternally. \nInternal team \nmembers develop an \nunderstanding based \non prevalent \npractices.",
-  "modified": "2024-11-23 15:00:35.261865",
-  "name": "Core Costs-question6-1",
-  "ref_doctype": "Core Costs",
-  "score": 0.0
- },
- {
-  "code": "1",
-  "depends_on": null,
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "name1",
-  "label": " We do not have \ndocumented \nguidelines.",
-  "modified": "2024-11-26 14:24:41.928893",
-  "name": "Core Costs-name1-1",
-  "ref_doctype": "Core Costs",
-  "score": 6.0
- },
- {
-  "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_1",
@@ -1021,7 +639,6 @@
  },
  {
   "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_3",
@@ -1033,7 +650,6 @@
  },
  {
   "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_2",
@@ -1045,7 +661,6 @@
  },
  {
   "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_2",
@@ -1057,7 +672,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_3",
@@ -1069,7 +683,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_2",
@@ -1081,7 +694,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "core_cost_1",
@@ -1093,7 +705,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_1",
@@ -1105,7 +716,6 @@
  },
  {
   "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_3",
@@ -1117,7 +727,6 @@
  },
  {
   "code": "1",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_1",
@@ -1129,7 +738,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_3",
@@ -1141,7 +749,6 @@
  },
  {
   "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_1",
@@ -1153,7 +760,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_3",
@@ -1165,7 +771,6 @@
  },
  {
   "code": "5",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "dei_2",
@@ -1177,7 +782,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_1",
@@ -1189,7 +793,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "myp_2",
@@ -1201,7 +804,6 @@
  },
  {
   "code": "2",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "fr_2",
@@ -1213,7 +815,6 @@
  },
  {
   "code": "3",
-  "depends_on": null,
   "docstatus": 0,
   "doctype": "Field Options",
   "field": "od_3",
@@ -1222,5 +823,291 @@
   "name": "Funder Diagnostic-od_3-3",
   "ref_doctype": "Funder Diagnostic",
   "score": 0.0
+ },
+ {
+  "code": "1",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_guidelines",
+  "label": "We do not have written guidelines. Multiyear partnerships are not a consideration of decision-makers in our organization. There is a difference of opinion amongst decision-makers on this aspect.",
+  "modified": "2024-11-27 19:19:15.587683",
+  "name": "Multi-year Partnerships-myp_guidelines-1",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 1.0
+ },
+ {
+  "code": "2",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_guidelines",
+  "label": " We do not have written guidelines on multiyear partnerships, but there is a shared understanding of how we should approach such partnerships. There are individual(s) amongst the decisionmakers who champion this approach.",
+  "modified": "2024-11-27 19:19:07.906178",
+  "name": "Multi-year Partnerships-myp_guidelines-2",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 2.0
+ },
+ {
+  "code": "3",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_guidelines",
+  "label": " We have written guidelines that provides high level guidance on multiyear partnerships. Many people in senior leadership positions act as guardians of the approach.",
+  "modified": "2024-11-27 19:19:02.271845",
+  "name": "Multi-year Partnerships-myp_guidelines-3",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 3.0
+ },
+ {
+  "code": "4",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_guidelines",
+  "label": " We have written guidelines with clearly defined criteria that allows for uniform and consistent decision-making on multiyear partnerships. There is collective guardianship and shared understanding of end goals of these guidelines .",
+  "modified": "2024-11-27 19:18:46.019938",
+  "name": "Multi-year Partnerships-myp_guidelines-4",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 4.0
+ },
+ {
+  "code": "1",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_budget_allocation",
+  "label": "We provide less than 20% of our annual budget to multiyear grants.",
+  "modified": "2024-11-27 19:18:55.828258",
+  "name": "Multi-year Partnerships-myp_budget_allocation-1",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 1.0
+ },
+ {
+  "code": "2",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_budget_allocation",
+  "label": "We allocate 20–40% of our annual budget to multiyear partnerships.",
+  "modified": "2024-11-27 19:18:39.335634",
+  "name": "Multi-year Partnerships-myp_budget_allocation-3",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 2.0
+ },
+ {
+  "code": "3",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_budget_allocation",
+  "label": " We allocate 41–60% of our annual budget to multiyear partnerships",
+  "modified": "2024-11-27 19:18:17.305030",
+  "name": "Multi-year Partnerships-myp_budget_allocation-2",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 3.0
+ },
+ {
+  "code": "4",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_budget_allocation",
+  "label": " We allocate 61% or more of our annual budget to multiyear partnerships.",
+  "modified": "2024-11-27 19:18:33.004630",
+  "name": "Multi-year Partnerships-myp_budget_allocation-4",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 4.0
+ },
+ {
+  "code": "1",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_approaches_adopted_01",
+  "label": " We approach grants with an\nannual horizon, which may lead to a nonprofit getting supported over multiple years.",
+  "modified": "2024-11-27 19:18:22.870780",
+  "name": "Multi-year Partnerships-myp_approaches_adopted_01-1",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 1.0
+ },
+ {
+  "code": "2",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_approaches_adopted_01",
+  "label": "We take a multiyear approach to partnerships but\nagreements need to be renewed on a year-on- year basis, aligned\nwith our annual goals or compliance targets.",
+  "modified": "2024-11-27 19:18:10.355013",
+  "name": "Multi-year Partnerships-myp_approaches_adopted_01-2",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 2.0
+ },
+ {
+  "code": "3",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_approaches_adopted_01",
+  "label": "We always enter into partnerships with nonprofits through formal multiyear agreements",
+  "modified": "2024-11-27 19:17:47.438699",
+  "name": "Multi-year Partnerships-myp_approaches_adopted_01-3",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 3.0
+ },
+ {
+  "code": "4",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_approaches_adopted_01",
+  "label": "We always enter into partnerships with nonprofits through formal multiyear agreements",
+  "modified": "2024-11-27 19:17:38.640343",
+  "name": "Multi-year Partnerships-myp_approaches_adopted_01-4",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 4.0
+ },
+ {
+  "code": "1",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_approaches_adopted_02",
+  "label": "We do not seek to enter into\nmultiyear partnerships with our nonprofit partners.",
+  "modified": "2024-11-27 19:17:30.016363",
+  "name": "Multi-year Partnerships-myp_approaches_adopted_02-1",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 1.0
+ },
+ {
+  "code": "2",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_approaches_adopted_02",
+  "label": "We do not have well- defined criteria.\nWe have formed multiyear partnerships with select nonprofit who have demonstrated a track record of delivering results on an annual basis.",
+  "modified": "2024-11-27 19:16:22.254657",
+  "name": "Multi-year Partnerships-myp_approaches_adopted_02-2",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 2.0
+ },
+ {
+  "code": "3",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_approaches_adopted_02",
+  "label": " We have clear partner selection criteria. We enter into multiyear partnerships with select nonprofit partners with whom we have cultivated a long-term relationship but are actively looking and planning to extend this to other nonprofit partners.",
+  "modified": "2024-11-27 19:17:06.028496",
+  "name": "Multi-year Partnerships-myp_approaches_adopted_02-3",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 3.0
+ },
+ {
+  "code": "4",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_approaches_adopted_02",
+  "label": "We have clear partner selection criteria. We always enter into multiyear partnerships with our nonprofit partners.",
+  "modified": "2024-11-27 19:17:21.642528",
+  "name": "Multi-year Partnerships-myp_approaches_adopted_02-4",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 4.0
+ },
+ {
+  "code": "1",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_approaches_adopted_03",
+  "label": " We do not enter into multiyear partnerships with nonprofit partners.",
+  "modified": "2024-11-27 19:16:29.766300",
+  "name": "Multi-year Partnerships-myp_approaches_adopted_03-1",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 1.0
+ },
+ {
+  "code": "2",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_approaches_adopted_03",
+  "label": "Our partners need to demonstrate proof of results every year to continue the partnership.",
+  "modified": "2024-11-27 19:16:56.109585",
+  "name": "Multi-year Partnerships-myp_approaches_adopted_03-2",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 2.0
+ },
+ {
+  "code": "3",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_approaches_adopted_03",
+  "label": "We are somewhat flexible with our nonprofit partners’ actual results against the annual commitment as we understand the complexity of development initiatives.",
+  "modified": "2024-11-27 19:16:15.973330",
+  "name": "Multi-year Partnerships-myp_approaches_adopted_03-3",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 3.0
+ },
+ {
+  "code": "1",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_communication_channels_01",
+  "label": "We do not make an effort to communicate our approach internally. Internal team members develop an understanding based on prevalent practices.",
+  "modified": "2024-11-27 19:16:06.893531",
+  "name": "Multi-year Partnerships-myp_approaches_adopted_03-4",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 1.0
+ },
+ {
+  "code": "2",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_communication_channels_01",
+  "label": " We don’t use our website or other official means to communicate our approach on multiyear partnerships internally. Our approach is often communicated at the senior management and board level. There is no mechanism to gather feedback on our guidelines from internal teams.",
+  "modified": "2024-11-27 19:15:53.104939",
+  "name": "Multi-year Partnerships-myp_communication_channels_01-2",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 2.0
+ },
+ {
+  "code": "3",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_communication_channels_01",
+  "label": "We don’t use our website or other official means to communicate our guidelines on\nmultiyear partnerships internally. Most\nteams, including the board and senior\nmanagement, are aware of the guidelines. We sometimes gather internal feedback on the guidelines with the intent to improve our grantmaking approach.",
+  "modified": "2024-11-27 19:16:01.035561",
+  "name": "Multi-year Partnerships-myp_communication_channels_01-3",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 3.0
+ },
+ {
+  "code": "1",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_communication_channels_02",
+  "label": "We do not communicate our approach on multiyear partnerships to nonprofits  or make this information publicly available.",
+  "modified": "2024-11-27 19:15:43.008670",
+  "name": "Multi-year Partnerships-myp_communication_channels_01-4",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 1.0
+ },
+ {
+  "code": "2",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_communication_channels_02",
+  "label": "We don’t use our website or other official means to communicate our approach on multiyear partnerships to nonprofits or the wider sector. Information is shared with nonprofits and select sector stakeholders on a one- on-one basis when the opportunity arises. Our communication with nonprofits primarily follows a one-way approach, with no / limited effort to seek their feedback. For cases where exceptions are made, the reason is not communicated to nonprofits.",
+  "modified": "2024-11-27 19:15:32.755576",
+  "name": "Multi-year Partnerships-myp_communication_channels_02-2",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 2.0
+ },
+ {
+  "code": "3",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_communication_channels_02",
+  "label": "We use our website or other official means to communicate our guidelines on multiyear partnerships to nonprofits and the wider sector. Information is shared with nonprofits before and during the proposal process. We sometimes share this information with the sector via formal communication channels as well. We maintain communication with nonprofits, occasionally considering their feedback when deemed relevant or necessary.",
+  "modified": "2024-11-27 19:12:11.313527",
+  "name": "Multi-year Partnerships-myp_communication_channels_02-3",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 3.0
+ },
+ {
+  "code": "4",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_communication_channels_02",
+  "label": "We use our website or official means to communicate our guidelines on multiyear partnerships to nonprofits and the wider sector. We maintain communication with nonprofits and continuously seek their feedback to strengthen our grantmaking approach.",
+  "modified": "2024-11-27 19:12:00.597661",
+  "name": "Multi-year Partnerships-myp_communication_channels_02-4",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 4.0
  }
 ]
