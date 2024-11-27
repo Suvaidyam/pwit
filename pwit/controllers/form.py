@@ -32,17 +32,13 @@ class FormAPIs:
             new_doc.update(cleaned_doc)
             new_doc.docstatus = DocStatus.draft()
             new_doc.insert(ignore_permissions=True,ignore_mandatory=True)
-        # new_doc = frappe.new_doc(doctype)
-        # new_doc.update(cleaned_doc) 
-        # new_doc.docstatus = DocStatus.draft()
-        # new_doc.insert(ignore_permissions=True,ignore_mandatory=True)
 
         return {'code': 200, 'message': 'Document saved as draft successfully', 'data': new_doc}
     
     def get_save_as_draft(doctype, user):
-        draft = []
+        draft = {}
         session = frappe.get_all('Session', filters={'user': user}, pluck='name')
         if session:
-            draft = frappe.get_list(doctype, filters={'session': ['IN',session],'docstatus':DocStatus.draft()}, fields=['*'],order_by='creation desc', limit=1)
-
+            draft_name = frappe.get_list(doctype, filters={'session': ['IN',session],'docstatus':DocStatus.draft()}, pluck='name',order_by='creation desc', limit=1)
+            draft = frappe.get_doc(doctype, draft_name[0])
         return {'code': 200, 'data': draft}

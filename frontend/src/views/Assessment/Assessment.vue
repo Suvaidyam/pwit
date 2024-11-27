@@ -4,7 +4,7 @@
         <div class="flex items-center gap-3">
             <h1 class="text-h2 font-serif font-semibold text-primary">{{ title }}</h1>
             <p class="w-16 py-1 flex items-center justify-center rounded-2xl text-red-700 bg-red-100 font-bold"
-                v-if="initialData">Draft</p>
+                v-if="Object.keys(initialData).length">Draft</p>
         </div>
         <transition name="fade" mode="out-in">
             <div class="w-full h-full">
@@ -37,7 +37,9 @@ const initialData = ref({});
 watch(route, (newVal, oldVal) => {
     title.value = splitAtSecondCapital(newVal.name)
     current_path.value = oldVal.path
-    get_save_as_draft();
+    if (auth.isLoggedIn) {
+        get_save_as_draft();
+    }
 })
 const handleSubmit = async (formData) => {
     try {
@@ -65,7 +67,7 @@ const get_save_as_draft = async () => {
     try {
         let res = await call('pwit.controllers.api.get_save_as_draft', { doctype: title.value, user: auth.cookie.user_id });
         if (res.code === 200) {
-            initialData.value = res.data[0];
+            initialData.value = res?.data ?? {};
         }
     } catch (error) {
 
@@ -87,6 +89,7 @@ onMounted(async () => {
         }
     }
     if (auth.isLoggedIn) {
+        console.log('first')
         get_save_as_draft();
     }
 })
