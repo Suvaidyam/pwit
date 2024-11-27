@@ -39,9 +39,9 @@ class FormAPIs:
         draft = {}
         session = frappe.get_all('Session', filters={'user': user}, pluck='name')
         if session:
-            draft_name = frappe.get_list(doctype, filters={'session': ['IN',session],'docstatus':DocStatus.draft()}, pluck='name',order_by='creation desc', limit=1)
+            draft_name = frappe.get_list(doctype, filters={'session': ['IN',session],'docstatus':DocStatus.draft()}, pluck='name',order_by='creation desc',  limit_page_length=1,ignore_permissions=True )
             if len(draft_name):
-                draft = frappe.get_doc(doctype, draft_name[0])
+                draft = frappe.get_doc(doctype, draft_name[0], ignore_permissions=True)
             else:
                 draft = {}
         return {'code': 200, 'data': draft}

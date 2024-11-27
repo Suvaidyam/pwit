@@ -12,7 +12,7 @@ class AuthAPIs:
     def set_user_session(name,user):
         doc = frappe.get_doc('Session',name)
         doc.user = user
-        doc.save()
+        doc.save(ignore_permissions=True)
         return {'code':200,'data':doc} 
     
     def set_policyconsent_session(name,value):
