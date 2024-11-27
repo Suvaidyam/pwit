@@ -5,7 +5,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_a_section",
+  "funding_practices_diagnostic_section",
   "core_cost_1",
   "od_1",
   "myp_1",
@@ -25,11 +25,6 @@
   "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "section_a_section",
-   "fieldtype": "Section Break",
-   "label": "Funding practices diagnostic (1/2)"
-  },
   {
    "fieldname": "core_cost_1",
    "fieldtype": "Link",
@@ -154,12 +149,17 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "funding_practices_diagnostic_section",
+   "fieldtype": "Section Break",
+   "label": "Funding practices diagnostic"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-25 22:18:23.048374",
+ "modified": "2024-11-27 13:46:40.692641",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Funder Diagnostic",
