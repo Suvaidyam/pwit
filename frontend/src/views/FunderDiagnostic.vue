@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full pt-6 h-screen">
+  <div class="w-full pt-6">
     <div class="flex gap-2 px-4 md:px-8 lg:px-20">
       <p class="text-gray-800 text-sm">
         <router-link to="/">Home </router-link>
@@ -18,7 +18,7 @@
       following statements:
     </p>
     <div class="w-full flex flex-col gap-4 px-4 md:px-8 lg:px-20 py-5 mt-4 bg-gray-50">
-      <FormView :initialData="initialData" :doctype="'Funder Diagnostic'" :onSubmit="handleSubmit" :isCard="true"
+      <FormView :isRow="true" :initialData="initialData" :doctype="'Funder Diagnostic'" :onSubmit="handleSubmit" :isCard="true"
         :isDraft="true" :section="true" :save_as_draft="save_as_draft" />
     </div>
     <!-- <FooterNav /> -->
