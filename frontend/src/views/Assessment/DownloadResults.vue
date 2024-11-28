@@ -1,5 +1,6 @@
 <template>
-    <button @click="openDialog"
+    <button @click="openDialog" :disabled="props.disabled"
+        :class="[props.disabled?'cursor-not-allowed':'cursor-pointer']"
         class="border flex items-center justify-center gap-2 px-2 md:px-4 h-7 md:h-9 text-sm border-[#27853F] text-[#27853F] rounded-md">
         <span class="hidden lg:block">Download Result </span>
         <Download class="w-4" />
@@ -233,6 +234,12 @@ const open_ass = ref(false)
 const condision = ref(false)
 const isActive = ref(false);
 
+const props = defineProps({
+    disabled: {
+        type: Boolean,
+        default: false
+    }
+})
 const openDialog = () => {
     open.value = true;
 }

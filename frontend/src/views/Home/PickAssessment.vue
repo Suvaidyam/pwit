@@ -119,7 +119,7 @@
                                                 </div>
                                                 <p class="text-sm font-medium">Pay a fair share of core costs</p>
                                             </div>
-                                            <router-link to="/funder/core-cost" class="text-primary text-sm cursor-pointer">View</router-link>
+                                            <router-link to="/funder/core-costs" class="text-primary text-sm cursor-pointer">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 pt-3 items-center">
