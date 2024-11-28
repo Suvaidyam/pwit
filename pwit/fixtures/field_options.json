@@ -946,17 +946,6 @@
   "score": 3.0
  },
  {
-  "code": "4",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "myp_approaches_adopted_01",
-  "label": "We always enter into partnerships with nonprofits through formal multiyear agreements",
-  "modified": "2024-11-27 19:17:38.640343",
-  "name": "Multi-year Partnerships-myp_approaches_adopted_01-4",
-  "ref_doctype": "Multi-year Partnerships",
-  "score": 4.0
- },
- {
   "code": "1",
   "docstatus": 0,
   "doctype": "Field Options",
@@ -1034,17 +1023,6 @@
   "score": 3.0
  },
  {
-  "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "myp_communication_channels_01",
-  "label": "We do not make an effort to communicate our approach internally. Internal team members develop an understanding based on prevalent practices.",
-  "modified": "2024-11-27 19:16:06.893531",
-  "name": "Multi-year Partnerships-myp_approaches_adopted_03-4",
-  "ref_doctype": "Multi-year Partnerships",
-  "score": 1.0
- },
- {
   "code": "2",
   "docstatus": 0,
   "doctype": "Field Options",
@@ -1065,17 +1043,6 @@
   "name": "Multi-year Partnerships-myp_communication_channels_01-3",
   "ref_doctype": "Multi-year Partnerships",
   "score": 3.0
- },
- {
-  "code": "1",
-  "docstatus": 0,
-  "doctype": "Field Options",
-  "field": "myp_communication_channels_02",
-  "label": "We do not communicate our approach on multiyear partnerships to nonprofits  or make this information publicly available.",
-  "modified": "2024-11-27 19:15:43.008670",
-  "name": "Multi-year Partnerships-myp_communication_channels_01-4",
-  "ref_doctype": "Multi-year Partnerships",
-  "score": 1.0
  },
  {
   "code": "2",
@@ -1107,6 +1074,61 @@
   "label": "We use our website or official means to communicate our guidelines on multiyear partnerships to nonprofits and the wider sector. We maintain communication with nonprofits and continuously seek their feedback to strengthen our grantmaking approach.",
   "modified": "2024-11-27 19:12:00.597661",
   "name": "Multi-year Partnerships-myp_communication_channels_02-4",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 4.0
+ },
+ {
+  "code": "1",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_communication_channels_01",
+  "label": "We do not make an effort to communicate our approach internally. Internal team members develop an understanding based on prevalent practices.",
+  "modified": "2024-11-28 12:22:12.593107",
+  "name": "Multi-year Partnerships-myp_communication_channels_01-1",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 1.0
+ },
+ {
+  "code": "4",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_communication_channels_01",
+  "label": "We communicate our approach on multiyear\npartnerships across the organisation using our website and other official means. All our teams have a clear understanding of the guidelines. This is documented and available for internal access. We regularly gather internal feedback on the guidelines to improve our grantmaking approach.",
+  "modified": "2024-11-28 12:35:38.271633",
+  "name": "Multi-year Partnerships-myp_communication_channels_01-4",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 4.0
+ },
+ {
+  "code": "1",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_communication_channels_02",
+  "label": "We do not communicate our approach on multiyear partnerships to nonprofits  or make this information publicly available.",
+  "modified": "2024-11-28 12:38:25.221360",
+  "name": "Multi-year Partnerships-myp_communication_channels_02-1",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 1.0
+ },
+ {
+  "code": "4",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_approaches_adopted_03",
+  "label": "We are flexible with the nonprofit partners’ actual results against the annual commitments as we understand the complexity of development initiatives.",
+  "modified": "2024-11-28 12:39:24.010859",
+  "name": "Multi-year Partnerships-myp_approaches_adopted_03-4",
+  "ref_doctype": "Multi-year Partnerships",
+  "score": 4.0
+ },
+ {
+  "code": "4",
+  "docstatus": 0,
+  "doctype": "Field Options",
+  "field": "myp_approaches_adopted_01",
+  "label": "We always enter into partnerships with nonprofits through formal multiyear agreements.\n",
+  "modified": "2024-11-28 12:53:57.562998",
+  "name": "Multi-year Partnerships-myp_approaches_adopted_01-4",
   "ref_doctype": "Multi-year Partnerships",
   "score": 4.0
  }
