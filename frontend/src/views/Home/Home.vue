@@ -1,16 +1,20 @@
 <template>
 	<div class="w-full h-screen">
-		<div class="w-full px-4 md:px-8 lg:px-20 flex flex-col gap-2 md:gap-3 justify-center h-24 md:h-40 items-center ">
-			<h1 class="text-h2 font-bold lg:text-[64px] text-primary font-serif ">Assistive Funder Toolkit
+		<div
+			class="w-full px-4 md:px-8 lg:px-20 flex flex-col gap-2 md:gap-3 justify-center h-24 md:h-40 items-center ">
+			<h1 class="text-h2 font-bold lg:text-[64px] text-primary font-serif leading-tight">Assistive Funder Toolkit
 			</h1>
-			<p class="px-4 text-center md:font-extrabold text-[#4f4f4f] text-h5 font-serif">Developed under
+			<p
+				class="px-4 text-center font-bold md:font-extrabold text-[#4f4f4f] leading-4 tracking-wide text-h5 font-serif">
+				Developed under
 				the
 				Pay-What-It-Takes India Initiative</p>
 		</div>
 		<!--  -->
 		<div class="w-full bg-tatary px-4 md:px-8 lg:px-20 py-6 mt-7">
-			<h4 class="text-center text-h2 font-bold text-[#20252b] my-6 font-serif">About the tool</h4>
-			<div class="flex justify-center font-normal text-sebase text-h5 text-center">
+			<h4 class="text-center text-h2 font-bold text-[#20252b] my-6 font-serif tracking-wide leading-9">About the
+				tool</h4>
+			<div class="flex justify-center font-normal text-sebase text-h5 text-center tracking-wider leading-5">
 				Philanthropy has a significant opportunity to amplify the impact of its grantmaking
 				by enabling a stronger and more resilient nonprofit sector. Bridgespan’s Pay-What-It-Takes
 				India Initiative has identified five principles of effective grantmaking, rooted in trust,
@@ -22,7 +26,7 @@
 				class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-12 gap-x-5 pt-14">
 				<div class="h-[149px] flex rounded-md bg-white relative px-4 ">
 					<div
-						class="w-[70px] h-[70px] rounded-full border-8 border-[#59467b] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
+						class="w-[70px] h-[70px] rounded-full border-8  tracking-widerborder-[#59467b] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						<svg width="34" height="22" viewBox="0 0 34 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M17.0808 1.92641L12.0261 6.09181C11.1854 6.7825 11.0236 8.02574 11.6606 8.91302C12.3342 9.85873 13.6449 10.0447 14.5483 9.32743L19.7335 5.22579C20.099 4.93888 20.6212 5.00264 20.9084 5.37455C21.1956 5.74646 21.1277 6.27776 20.7622 6.56998L19.6708 7.43069L26.9291 14.2313V4.20038H26.8925L26.6889 4.06755L22.8979 1.597C22.0989 1.07633 21.1642 0.800049 20.2139 0.800049C19.0755 0.800049 17.9685 1.19852 17.0808 1.92641ZM18.2714 8.53579L15.5717 10.6716C13.9269 11.9786 11.5405 11.6386 10.3082 9.91718C9.14895 8.29671 9.44137 6.03336 10.9713 4.77418L15.3159 1.19852C14.7101 0.938187 14.0574 0.805362 13.3942 0.805362C12.4126 0.800049 11.457 1.09758 10.6372 1.65013L6.87747 4.20038V16.1015H8.35001L13.1227 20.5326C14.1462 21.4836 15.7284 21.4092 16.6631 20.3679C16.9503 20.0438 17.1435 19.6666 17.2427 19.2734L18.1304 20.1022C19.1486 21.0532 20.7361 20.9842 21.6708 19.9481C21.9057 19.6878 22.0781 19.385 22.1877 19.0715C23.2007 19.7622 24.5793 19.6187 25.4304 18.673C26.3651 17.637 26.2973 16.0218 25.279 15.0708L18.2714 8.53579ZM1.02909 4.20038C0.569571 4.20038 0.193604 4.58291 0.193604 5.05046V16.1015C0.193604 17.0419 0.940317 17.8017 1.86457 17.8017H3.53554C4.45979 17.8017 5.20651 17.0419 5.20651 16.1015V4.20038H1.02909ZM2.70006 14.4014C2.92164 14.4014 3.13415 14.4909 3.29083 14.6503C3.44752 14.8098 3.53554 15.026 3.53554 15.2514C3.53554 15.4769 3.44752 15.6931 3.29083 15.8525C3.13415 16.012 2.92164 16.1015 2.70006 16.1015C2.47847 16.1015 2.26596 16.012 2.10928 15.8525C1.9526 15.6931 1.86457 15.4769 1.86457 15.2514C1.86457 15.026 1.9526 14.8098 2.10928 14.6503C2.26596 14.4909 2.47847 14.4014 2.70006 14.4014ZM28.6001 4.20038V16.1015C28.6001 17.0419 29.3468 17.8017 30.271 17.8017H31.942C32.8662 17.8017 33.613 17.0419 33.613 16.1015V5.05046C33.613 4.58291 33.237 4.20038 32.7775 4.20038H28.6001ZM30.271 15.2514C30.271 15.026 30.359 14.8098 30.5157 14.6503C30.6724 14.4909 30.8849 14.4014 31.1065 14.4014C31.3281 14.4014 31.5406 14.4909 31.6973 14.6503C31.854 14.8098 31.942 15.026 31.942 15.2514C31.942 15.4769 31.854 15.6931 31.6973 15.8525C31.5406 16.012 31.3281 16.1015 31.1065 16.1015C30.8849 16.1015 30.6724 16.012 30.5157 15.8525C30.359 15.6931 30.271 15.4769 30.271 15.2514Z"
@@ -30,7 +34,7 @@
 						</svg>
 					</div>
 					<div class="flex justify-center pt-10">
-						<p class="text-[#59467b] text-center font-bold text-h5 uppercase ">
+						<p class="text-[#59467b] text-center font-bold text-h5 uppercase tracking-wider leading-4">
 							Develop Multiyear Funder-Nonprofit Partnerships
 						</p>
 					</div>
@@ -47,7 +51,7 @@
 						</svg>
 					</div>
 					<div class="flex justify-center pt-10">
-						<p class="text-[#136096] text-center font-bold text-h5 uppercase ">
+						<p class="text-[#136096] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
 							Pay a fair share of core costs
 						</p>
 					</div>
@@ -64,7 +68,7 @@
 						</svg>
 					</div>
 					<div class="flex justify-center pt-10">
-						<p class="text-[#029fd9] text-center font-bold text-h5 uppercase ">
+						<p class="text-[#029fd9] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
 							Invest in organizational development
 						</p>
 					</div>
@@ -81,7 +85,7 @@
 
 					</div>
 					<div class="flex justify-center pt-10">
-						<p class="text-[#058248] text-center font-bold text-h5 uppercase ">
+						<p class="text-[#058248] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
 							Build Financial Resilience
 						</p>
 					</div>
@@ -97,7 +101,7 @@
 						</svg>
 					</div>
 					<div class="flex justify-center pt-10">
-						<p class="text-[#f38714] text-center font-bold text-h5 uppercase ">
+						<p class="text-[#f38714] text-center font-bold text-h5 uppercase  tracking-wider leading-4 ">
 							Embed Diversity Equity, and inclusion in grantmaking
 						</p>
 					</div>
@@ -105,7 +109,7 @@
 
 			</div>
 
-			<div class="flex justify-center text-h5 my-8">
+			<div class="flex justify-center text-h5 py-8 font-normal  tracking-wider ">
 				As funders recognize the importance of making grantmaking more supportive and inclusive, there is a
 				need
 				to pursue actionable strategies to advance on this journey. The Funder Practices Assistive Tool is
@@ -119,10 +123,12 @@
 		</div>
 		<!--  -->
 		<div class=" w-full px-4 md:px-8 lg:px-20 py-10 ">
-			<h1 class="text-primary text-h2 font-semibold font-serif">What does the toolkit include?</h1>
+			<h1 class="text-primary text-h2 font-bold leading-9 tracking-wide font-serif">What does the toolkit include?
+			</h1>
 			<div class="flex flex-col md:flex-row mt-5">
 				<div class="w-full flex flex-col gap-3">
-					<p class="pt-2 text-h5 font-medium text-trbase text-justify">The tool is designed for institutional
+					<p class="pt-2 text-h5 font-normal text-trbase text-justify leading-5 tracking-wider">The tool is
+						designed for institutional
 						funders
 						(global, domestic, CSR) who are seeking a deeper understanding of how they can strengthen their
 						own
@@ -144,9 +150,10 @@
 								</svg>
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif">Part 1 - Funding practices
+								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide">Part 1 -
+									Funding practices
 									diagnostic</h4>
-								<p class="text-trbase text-sm py-2 text-justify">
+								<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider">
 									Take a quick diagnostic of your organization’s funding beliefs and practices to
 									identify specific principles that would be most relevant for you to enhance your
 									grantmaking.
@@ -173,9 +180,10 @@
 								</svg>
 							</div>
 							<div class="">
-								<h4 class="font-bold text-sebase text-h5 font-serif">Part 2 – Assistive guides for each
+								<h4 class="font-bold text-sebase text-h5 font-serif leading-4 tracking-wide">Part 2 –
+									Assistive guides for each
 									principle</h4>
-								<p class="text-trbase text-sm py-2  text-justify">
+								<p class="text-trbase text-sm py-2  text-justify leading-5 tracking-wider">
 									Use these guides to map your current practices on the five PWIT principles, across
 									various elements spanning policy, approaches, communication, etc., to understand the
 									strengths and gaps in your funding practices. The guides for most principles are
@@ -201,7 +209,8 @@
 					<img class="w-[90%]" src="../../assets/left.png" alt="">
 				</div>
 				<div class="w-full flex flex-col gap-3 order-1 md:order-2">
-					<h1 class="text-primary text-h2 font-bold font-serif">What will the output include?</h1>
+					<h1 class="text-primary text-h2 font-bold font-serif leading-9 tracking-wide">What will the output
+						include?</h1>
 					<div class="flex flex-col gap-5">
 						<div class="flex gap-2">
 							<div class="w-10 min-w-10 h-10 flex items-center justify-center rounded-full bg-gray-100">
@@ -221,10 +230,11 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-sebase text-h5 font-serif">Optional Survey Before Accessing
+								<h4 class="font-bold text-sebase text-h5 font-serif leading-4 tracking-wide">Optional
+									Survey Before Accessing
 									Guides
 								</h4>
-								<p class="text-trbase text-sm p-1  text-justify">
+								<p class="text-trbase text-sm p-1  text-justify leading-5 tracking-wider">
 									Visit Link and fill out the short survey before proceeding to the principle-specific
 									assistive guides,
 									to understand which principles might be most relevant for you. You may feel free to
@@ -243,9 +253,10 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-sebase text-h5 font-serif">Complete the Tool in One Session
+								<h4 class="font-bold text-sebase text-h5 font-serif leading-4 tracking-wide">Complete
+									the Tool in One Session
 								</h4>
-								<p class="text-trbase text-sm p-1  text-justify">
+								<p class="text-trbase text-sm p-1  text-justify leading-5 tracking-wider">
 									The tool is designed to be completed in one session; however, you can pause and
 									return to this later. Please do not close the browser window as results for
 									completed sessions will not be saved. You will be provided the opportunity to email
@@ -265,9 +276,10 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif">Expect Level 1 and 2 Ratings in
+								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide">Expect
+									Level 1 and 2 Ratings in
 									Part 2</h4>
-								<p class="text-trbase text-sm p-1  text-justify">
+								<p class="text-trbase text-sm p-1  text-justify leading-5 tracking-wider">
 									As you go through Part 2 of the tool, it is possible that you will have certain
 									Level 1 and 2 ratings.
 									Few will achieve Level 4, and in some cases, Level 4 is not the desired end state.
@@ -285,10 +297,11 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif"> Generate a Summary Report Upon
+								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide"> Generate a
+									Summary Report Upon
 									Completion
 								</h4>
-								<p class="text-sm p-1 text-trbase text-justify">
+								<p class="text-sm p-1 text-trbase text-justify leading-5 tracking-wider">
 									Upon completion, you will have the option of generating a summary report which
 									provides an overview of your assessment and
 									recommendations to strengthen your practices. Please save a copy of the report to
@@ -307,7 +320,8 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif"> Use Insights for Strategic
+								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide"> Use
+									Insights for Strategic
 									Discussions and
 									Team Conversations on Improving Grantmaking</h4>
 								<p class="text-sm p-1 text-trbase text-justify">
@@ -327,9 +341,10 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-sebase text-h5 font-serif"> Your Responses Are Confidential
+								<h4 class="font-bold text-sebase text-h5 font-serif leading-4 tracking-wide"> Your
+									Responses Are Confidential
 								</h4>
-								<p class="text-sm p-1 text-trbase text-justify">
+								<p class="text-sm p-1 text-trbase text-justify leading-5 tracking-wider">
 									Your responses are confidential and protected and may only be seen by the
 									development team.
 									Any trends interfered from this data will only be made at an aggregate level, based
@@ -347,18 +362,20 @@
 			<PickAssessment />
 		</div>
 		<div class="flex flex-col gap-3 px-4 md:px-8 lg:px-16 ">
-			<h1 class="text-h2 text-primary font-bold font-serif tracking-wide">How to get started</h1>
-			<p class="text-h5 text-trbase font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+			<h1 class="text-h2 text-primary font-bold font-serif tracking-wide leading-9">How to get started</h1>
+			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit, sed do
 				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 				exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		</div>
-		<div class="flex justify-between gap-4 px-4 md:px-8 lg:px-16 py-6">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-4 px-4 md:px-8 lg:px-16 py-6">
 			<div class="flex flex-col gap-2">
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
 					<FolderLock class="text-green-500  " />
 				</div>
-				<h1 class="font-bold text-h5 text-sebase">Lorem ipsum dolor sit amet</h1>
-				<p class="text-h6 text-trbase"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet</h1>
+				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum
 					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 					officia deserunt mollit anim id est laborum.</p>
 			</div>
@@ -366,8 +383,9 @@
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
 					<FolderLock class="text-green-500" />
 				</div>
-				<h1 class="font-bold text-h5 text-sebase">Lorem ipsum dolor sit amet</h1>
-				<p class="text-h6 text-trbase"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet</h1>
+				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum
 					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 					officia deserunt mollit anim id est laborum.</p>
 
@@ -376,19 +394,20 @@
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
 					<FolderLock class="text-green-500" />
 				</div>
-				<h1 class="font-bold text-h5 text-sebase">Lorem ipsum dolor sit amet</h1>
-				<p class="text-h6 text-trbase"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet</h1>
+				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum
 					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 					officia deserunt mollit anim id est laborum.</p>
 
 			</div>
 		</div>
 		<div class=" bg-secondary pb-40 relative px-4 md:px-8 lg:px-16">
-			<h1 class="text-center font-serif text-h2 font-semibold tracking-wide text-white pt-8 pb-5">About the
+			<h1 class="text-center font-serif text-h2 font-bold tracking-wide leading-9 text-white pt-8 pb-5">About the
 				Partneership</h1>
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 				<div class="flex flex-col gap-4 w-full text-center text-white font-serif text-sm">
-					<p class="text-h5 text-[#E9EAEB] font-normal text-center"> Lorem
+					<p class="text-h5 text-[#E9EAEB] font-normal text-center leading-5 tracking-wider"> Lorem
 						ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
 						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 						aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
