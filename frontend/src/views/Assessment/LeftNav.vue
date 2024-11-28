@@ -143,6 +143,9 @@ watch(() => menu_list.value, async (value) => {
     menu_list.value = value
     recommendedList.value = await value?.filter(e => e.group === 'Recommended')
     additionalList.value = await value?.filter(e => e.group === 'Additional')
+    let doc = await splitAndCapitalize(route.fullPath)
+    let index = (recommendedList.value.concat(additionalList.value)).findIndex(e => e.ref_doctype == (doc=='Multi Year Partnerships'?'Multi-year Partnerships':doc))
+    store.nextPrinciple = index !== -1 && index < (recommendedList.value.concat(additionalList.value)).length - 1 ? (recommendedList.value.concat(additionalList.value))[index + 1] : null;
 }, { deep: true, immediate: true });
 // Fetch menu_list on mount
 onMounted(async () => {
@@ -169,5 +172,11 @@ onMounted(async () => {
     }
 
 });
-
+function splitAndCapitalize(str) {
+    return str
+        .split('/')[2]
+        .split('-') 
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1)) 
+        .join(' ');
+}
 </script>

@@ -65,6 +65,10 @@ def get_results(doctype,session,user=None):
 def get_assistive_result(doctype,session,user=None):
     return AssessmentAPIs.get_assistive_result(doctype,session,user)
 
+@frappe.whitelist()
+def get_last_draft():
+    return AssessmentAPIs.get_last_draft()
+
 @frappe.whitelist(allow_guest=True)
 def get_meta(doctype):
     return FormAPIs.get_meta(doctype)

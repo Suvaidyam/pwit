@@ -43,11 +43,11 @@ watch(route, (newVal, oldVal) => {
         get_save_as_draft();
     }
 })
-console.log(router,'router')
 const handleSubmit = async (formData) => {
     try {
         const res = await call('pwit.controllers.api.save_doc', { doctype: title.value, doc: { ...formData, 'session': store.session }, name: initialData?.value?.name });
         if (res.code === 200) {
+            localStorage.removeItem('re_attempt');
             router.push(`${current_path.value}/results`);
         }
     } catch (err) {
@@ -86,7 +86,8 @@ const get_results=async()=>{
             user:auth.cookie.user_id!=='Guest'?auth.cookie.user_id:''
         })
         if(res.code===200){
-            if(res.data){
+            let re_attempt = localStorage.getItem('re_attempt');
+            if(res.data && !re_attempt){
                 router.push(`${current_path.value}/results`);
             }
         }
@@ -100,7 +101,7 @@ function splitAtSecondCapital(input) {
         .trim();
 }
 onMounted(async () => {
-    // get_results();
+    get_results();
     let draft = JSON.parse(localStorage.getItem('draft') ?? '{}');
     if (Object.keys(draft).length) {
         if (auth.isLoggedIn) {
