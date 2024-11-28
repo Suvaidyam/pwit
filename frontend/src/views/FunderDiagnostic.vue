@@ -30,6 +30,8 @@ import { ref, inject, onMounted } from 'vue';
 import FooterNav from '../components/FooterNav.vue';
 import { FormView } from '../../../../sva_form_vuejs/form_view.js';
 import { useRouter } from 'vue-router';
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 
 const store = inject('store');
 const auth = inject('$auth');
@@ -63,6 +65,7 @@ const save_as_draft = async (formData) => {
     const res = await call('pwit.controllers.api.save_as_draft', { doctype: 'Funder Diagnostic', doc: { ...formData, 'session': store.session }, name: initialData?.value?.name });
     if (res.code === 200) {
       localStorage.removeItem('draft');
+      toast.success('Draft saved successfully');
       return res;
     }
   } else {

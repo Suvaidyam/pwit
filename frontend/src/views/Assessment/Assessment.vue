@@ -24,6 +24,8 @@ import { ref, watch, inject, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router';
 import Breadcrumb from './Breadcrumb.vue'
 import { FormView } from '../../../../../sva_form_vuejs/form_view';
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 
 const route = useRoute()
 const router = useRouter()
@@ -41,6 +43,7 @@ watch(route, (newVal, oldVal) => {
         get_save_as_draft();
     }
 })
+console.log(router,'router')
 const handleSubmit = async (formData) => {
     try {
         const res = await call('pwit.controllers.api.save_doc', { doctype: title.value, doc: { ...formData, 'session': store.session }, name: initialData?.value?.name });
@@ -56,6 +59,7 @@ const save_as_draft = async (formData) => {
         const res = await call('pwit.controllers.api.save_as_draft', { doctype: title.value, doc: { ...formData, 'session': store.session }, name: initialData?.value?.name });
         if (res.code === 200) {
             localStorage.removeItem('draft');
+            toast.info('Draft saved successfully');
             return res;
         }
     } else {
@@ -74,12 +78,29 @@ const get_save_as_draft = async () => {
     }
 }
 
+const get_results=async()=>{
+    try {
+        let res = await call('pwit.controllers.api.get_assistive_result', {
+            doctype: title.value,
+            session: store.session,
+            user:auth.cookie.user_id!=='Guest'?auth.cookie.user_id:''
+        })
+        if(res.code===200){
+            if(res.data){
+                router.push(`${current_path.value}/results`);
+            }
+        }
+    } catch (error) {
+        
+    }
+}
 function splitAtSecondCapital(input) {
     return input
         .replace(/([a-z])([A-Z])/g, '$1 $2')
         .trim();
 }
 onMounted(async () => {
+    // get_results();
     let draft = JSON.parse(localStorage.getItem('draft') ?? '{}');
     if (Object.keys(draft).length) {
         if (auth.isLoggedIn) {
