@@ -103,13 +103,14 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-27 18:11:02.160954",
+ "modified": "2024-11-28 09:46:39.507392",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Multi-year Partnerships",
  "owner": "Administrator",
  "permissions": [
   {
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
