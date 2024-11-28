@@ -6,13 +6,14 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "title",
   "actions",
   "logic"
  ],
  "fields": [
   {
    "fieldname": "actions",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "in_list_view": 1,
    "label": "Actions",
    "reqd": 1
@@ -21,14 +22,19 @@
    "fieldname": "logic",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Logic",
+   "label": "Logic"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-11-28 06:53:03.383406",
+ "modified": "2024-11-28 18:00:05.324569",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Recommended Actions",
