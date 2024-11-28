@@ -15,18 +15,17 @@
 			<h4 class="text-center text-h2 font-bold text-[#20252b] my-6 font-serif tracking-wide leading-9">About the
 				tool</h4>
 			<div class="flex justify-center font-normal text-sebase text-h5 text-center tracking-wider leading-5">
-				Philanthropy has a significant opportunity to amplify the impact of its grantmaking
-				by enabling a stronger and more resilient nonprofit sector. Bridgespan’s Pay-What-It-Takes
-				India Initiative has identified five principles of effective grantmaking, rooted in trust,
-				that funders can adopt to support strong, resilient nonprofit partners. As funders recognize
-				the importance of making grantmaking
+				<p>Philanthropy has a significant opportunity to amplify the impact of their grantmaking by enabling a
+				stronger and more resilient nonprofit sector. <a href="https://www.bridgespan.org/our-global-reach/pay-what-it-takes-india-initiative" class="text-secondary hover:underline"> Bridgespan’s Pay-What-ItTakes India Initiative</a> has
+				identified five principles of effective grantmaking, rooted in trust, that funders can adopt to support
+				strong, resilient nonprofit partners.</p>
 			</div>
 
 			<div
 				class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-12 gap-x-5 pt-14">
 				<div class="h-[149px] flex rounded-md bg-white relative px-4 ">
 					<div
-						class="w-[70px] h-[70px] rounded-full border-8  tracking-widerborder-[#59467b] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
+						class="w-[70px] h-[70px] rounded-full border-8  tracking-wider border-[#59467b] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						<svg width="34" height="22" viewBox="0 0 34 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M17.0808 1.92641L12.0261 6.09181C11.1854 6.7825 11.0236 8.02574 11.6606 8.91302C12.3342 9.85873 13.6449 10.0447 14.5483 9.32743L19.7335 5.22579C20.099 4.93888 20.6212 5.00264 20.9084 5.37455C21.1956 5.74646 21.1277 6.27776 20.7622 6.56998L19.6708 7.43069L26.9291 14.2313V4.20038H26.8925L26.6889 4.06755L22.8979 1.597C22.0989 1.07633 21.1642 0.800049 20.2139 0.800049C19.0755 0.800049 17.9685 1.19852 17.0808 1.92641ZM18.2714 8.53579L15.5717 10.6716C13.9269 11.9786 11.5405 11.6386 10.3082 9.91718C9.14895 8.29671 9.44137 6.03336 10.9713 4.77418L15.3159 1.19852C14.7101 0.938187 14.0574 0.805362 13.3942 0.805362C12.4126 0.800049 11.457 1.09758 10.6372 1.65013L6.87747 4.20038V16.1015H8.35001L13.1227 20.5326C14.1462 21.4836 15.7284 21.4092 16.6631 20.3679C16.9503 20.0438 17.1435 19.6666 17.2427 19.2734L18.1304 20.1022C19.1486 21.0532 20.7361 20.9842 21.6708 19.9481C21.9057 19.6878 22.0781 19.385 22.1877 19.0715C23.2007 19.7622 24.5793 19.6187 25.4304 18.673C26.3651 17.637 26.2973 16.0218 25.279 15.0708L18.2714 8.53579ZM1.02909 4.20038C0.569571 4.20038 0.193604 4.58291 0.193604 5.05046V16.1015C0.193604 17.0419 0.940317 17.8017 1.86457 17.8017H3.53554C4.45979 17.8017 5.20651 17.0419 5.20651 16.1015V4.20038H1.02909ZM2.70006 14.4014C2.92164 14.4014 3.13415 14.4909 3.29083 14.6503C3.44752 14.8098 3.53554 15.026 3.53554 15.2514C3.53554 15.4769 3.44752 15.6931 3.29083 15.8525C3.13415 16.012 2.92164 16.1015 2.70006 16.1015C2.47847 16.1015 2.26596 16.012 2.10928 15.8525C1.9526 15.6931 1.86457 15.4769 1.86457 15.2514C1.86457 15.026 1.9526 14.8098 2.10928 14.6503C2.26596 14.4909 2.47847 14.4014 2.70006 14.4014ZM28.6001 4.20038V16.1015C28.6001 17.0419 29.3468 17.8017 30.271 17.8017H31.942C32.8662 17.8017 33.613 17.0419 33.613 16.1015V5.05046C33.613 4.58291 33.237 4.20038 32.7775 4.20038H28.6001ZM30.271 15.2514C30.271 15.026 30.359 14.8098 30.5157 14.6503C30.6724 14.4909 30.8849 14.4014 31.1065 14.4014C31.3281 14.4014 31.5406 14.4909 31.6973 14.6503C31.854 14.8098 31.942 15.026 31.942 15.2514C31.942 15.4769 31.854 15.6931 31.6973 15.8525C31.5406 16.012 31.3281 16.1015 31.1065 16.1015C30.8849 16.1015 30.6724 16.012 30.5157 15.8525C30.359 15.6931 30.271 15.4769 30.271 15.2514Z"
@@ -34,7 +33,7 @@
 						</svg>
 					</div>
 					<div class="flex justify-center pt-10">
-						<p class="text-[#59467b] text-center font-bold text-h5 uppercase tracking-wider leading-4">
+						<p class="text-[#42217c] text-center font-bold text-h5 uppercase tracking-wider leading-4">
 							Develop Multiyear Funder-Nonprofit Partnerships
 						</p>
 					</div>
@@ -110,12 +109,9 @@
 			</div>
 
 			<div class="flex justify-center text-h5 py-8 font-normal  tracking-wider ">
-				As funders recognize the importance of making grantmaking more supportive and inclusive, there is a
-				need
-				to pursue actionable strategies to advance on this journey. The Funder Practices Assistive Tool is
-				an
-				open-source and freely available tool to help assess how aligned your current funding practices are
-				with
+				As funders recognize the importance of making grantmaking more supportive and inclusive, there is a need
+				to pursue actionable strategies to advance on this journey. The Funder Practices Assistive Tool is an
+				open-source and freely available tool to help assess how aligned your current funding practices are with
 				the five PWIT principles and identify areas for further enhancement. Wherever you may be on your
 				journey, the tool provides next steps and recommendations for how you can make your grantmaking
 				practices more supportive and chart a path forward for more expansive forms of true cost investment.
@@ -153,11 +149,21 @@
 								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide">Part 1 -
 									Funding practices
 									diagnostic</h4>
-								<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider">
-									Take a quick diagnostic of your organization’s funding beliefs and practices to
-									identify specific principles that would be most relevant for you to enhance your
-									grantmaking.
-								</p>
+								<div class="max-w-lg mx-auto pt-2">
+									<p class="text-gray-700">
+									<p v-show="isExpanded"
+										class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider">
+										Take a quick diagnostic of your organization’s funding beliefs and practices
+										to
+										identify specific principles that would be most relevant for you to enhance
+										your
+										grantmaking.
+									</p>
+									</p>
+									<button @click="toggleExpand" class="pt-2 text-[#255B97] font-semibold text-h6">
+										{{ isExpanded ? "Read Less" : "Read More" }}
+									</button>
+								</div>
 							</div>
 						</div>
 						<div class="flex gap-2">
@@ -235,7 +241,8 @@
 									Guides
 								</h4>
 								<p class="text-trbase text-sm p-1  text-justify leading-5 tracking-wider">
-									Visit Link and fill out the short survey before proceeding to the principle-specific
+									
+									Visit <a href="http://pwit.localhost:8080/pwit/funder"  class="text-secondary hover:underline">Funder Diagnostic Link </a> and fill out the short survey before proceeding to the principle-specific
 									assistive guides,
 									to understand which principles might be most relevant for you. You may feel free to
 									skip this part and proceed directly to the guides.
@@ -373,7 +380,8 @@
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
 					<FolderLock class="text-green-500  " />
 				</div>
-				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet</h1>
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
+				</h1>
 				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
 					reprehenderit in voluptate velit esse cillum
 					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
@@ -383,7 +391,8 @@
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
 					<FolderLock class="text-green-500" />
 				</div>
-				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet</h1>
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
+				</h1>
 				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
 					reprehenderit in voluptate velit esse cillum
 					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
@@ -394,7 +403,8 @@
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
 					<FolderLock class="text-green-500" />
 				</div>
-				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet</h1>
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
+				</h1>
 				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
 					reprehenderit in voluptate velit esse cillum
 					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
@@ -430,6 +440,11 @@ import FooterNav from '../../components/FooterNav.vue';
 import PickAssessment from './PickAssessment.vue';
 import ContactUs from './ContactUs.vue';
 import { FolderLock } from 'lucide-vue-next'
+
+const isExpanded = ref(false);
+const toggleExpand = () => {
+	isExpanded.value = !isExpanded.value;
+};
 // const call = inject('$call');
 // let faqs_list = ref([]);
 

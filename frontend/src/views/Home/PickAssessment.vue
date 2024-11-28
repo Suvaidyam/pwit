@@ -52,7 +52,7 @@
     </TransitionRoot>
     <!--  -->
     <TransitionRoot as="template" :show="open_ass">
-        <Dialog class="relative z-30" @close="open_ass = false">
+        <Dialog class="relative z-30">
             <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
                 leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
                 <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
@@ -71,6 +71,7 @@
                                 <div class=" border-b w-full py-2">
                                     <DialogTitle as="h3" class="text-xl font-semibold text-primary font-serif">Pick an
                                         Assessment </DialogTitle>
+                                        <X @click="open_ass= false" class="text-h6 cursor-pointer absolute right-5 -top-1 mt-8" />
                                 </div>
                                 <div class="flex flex-col gap-3 pt-4">
                                     <div class="flex flex-col gap-2">
@@ -89,7 +90,7 @@
                                                 <p class="text-sm font-medium">Funding practics diagnostic</p>
                                             </div>
                                             <router-link to="/funder-diagnostic"
-                                                class="text-primary text-sm cursor-pointer">View</router-link>
+                                                class="text-primary text-sm cursor-pointer font-semibold leading-4 tracking-wide">View</router-link>
                                         </div>
                                     </div>
                                     <div class="flex flex-col gap-2">
@@ -109,7 +110,7 @@
                                                 <p class="text-sm font-medium">Develop multiyear funder-nonprofit
                                                     partnerships</p>
                                             </div>
-                                            <router-link to="/funder/multi-year-partnerships" class="text-primary text-sm cursor-pointer">View</router-link>
+                                            <router-link to="/funder/multi-year-partnerships" class="text-primary text-sm cursor-pointer font-semibold leading-4 tracking-wide ">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 pt-3 items-center">
@@ -122,7 +123,7 @@
                                                 </div>
                                                 <p class="text-sm font-medium">Pay a fair share of core costs</p>
                                             </div>
-                                            <router-link to="/funder/core-costs" class="text-primary text-sm cursor-pointer">View</router-link>
+                                            <router-link to="/funder/core-costs" class="text-primary text-sm cursor-pointer font-semibold leading-4 tracking-wide">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 pt-3 items-center">
@@ -135,7 +136,7 @@
                                                 </div>
                                                 <p class="text-sm font-medium">Invest in organizational development</p>
                                             </div>
-                                            <router-link to="/funder/organizational-development" class="text-primary text-sm cursor-pointer">View</router-link>
+                                            <router-link to="/funder/organizational-development" class="text-primary text-sm cursor-pointer font-semibold leading-4 tracking-wide">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 pt-3 items-center">
@@ -148,7 +149,7 @@
                                                 </div>
                                                 <p class="text-sm font-medium">Build financial resilience</p>
                                             </div>
-                                            <router-link to="/funder" class="text-primary text-sm cursor-pointer">View</router-link>
+                                            <router-link to="/funder" class="text-primary text-sm cursor-pointer font-semibold leading-4 tracking-wide">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 pt-3 items-center">
@@ -162,7 +163,7 @@
                                                 <p class="text-sm font-medium">Embed diversity, equity and inclusion in
                                                     grantmaking</p>
                                             </div>
-                                            <router-link to="/funder/diversity-equity-inclusion" class="text-primary text-sm cursor-pointer">View</router-link>
+                                            <router-link to="/funder/diversity-equity-inclusion" class="text-primary text-sm cursor-pointer font-semibold leading-4 tracking-wide">View</router-link>
                                         </div>
                                     </div>
                                 </div>
@@ -178,7 +179,7 @@
 <script setup>
 import { ref,inject,onMounted } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import { ArrowRight} from 'lucide-vue-next'
+import { ArrowRight,X} from 'lucide-vue-next'
 
 const open = ref(false)
 const open_ass = ref(false)
