@@ -78,9 +78,7 @@ onMounted(async () => {
   if (Object.keys(draft).length) {
     if (auth.isLoggedIn) {
       await save_as_draft(draft);
-    } else {
-      initialData.value = draft;
-    }
+    } 
   }
   if (auth.isLoggedIn) {
     get_save_as_draft();
