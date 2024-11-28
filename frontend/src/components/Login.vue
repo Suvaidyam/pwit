@@ -40,11 +40,14 @@
                 <p @click="store.isForgetPas = true" class="text-green-400 text-sm cursor-pointer">Forgot Password?</p>
             </div>
             <div class="w-full border-b h-14">
-                <button :disabled="remember ? false : true" type="button"
-                    :class="remember ? 'bg-secondary text-white' : 'bg-gray-300 text-gray-600'"
-                    class=" w-full flex items-center gap-2 justify-center rounded-md px-3 h-12 text-h5 font-normal  shadow-sm" @click="login">
+                <button :disabled="isValid ? false : false" type="button"
+                    :class="true ? 'bg-secondary text-white' : 'bg-gray-300 text-gray-600'"
+                    class=" w-full flex items-center gap-2 justify-center rounded-md px-3 h-12 text-h5 font-normal  shadow-sm"
+                    @click="login">
                     <div v-if="loading" class="h-5 w-5 ">
-                        <div  class="animate-spin h-full w-full rounded-full border-2 border-t-[#00A0DC] border-b-[#00A0DC]"></div>
+                        <div
+                            class="animate-spin h-full w-full rounded-full border-2 border-t-[#00A0DC] border-b-[#00A0DC]">
+                        </div>
                     </div>
                     <p v-if="loading"> verifying...</p>
                     <p v-if="!loading"> Log In</p>
@@ -86,28 +89,42 @@ const validateEmail = (email) => {
     return emailPattern.test(email);
 }
 
-const login = async () => {
-   
+watch([email, password], ([newEmail, newpassword]) => {
     const email = document.getElementById('emailInputId');
     const password = document.getElementById('passwordInputId');
     let valid = true;
 
     email.style.borderBottom = '';
     password.style.borderBottom = '';
-
-    if (!email.value || !password.value) {
-        // alert("Please enter both email and password");
-
-        if (!email.value) {
-            email.style.borderBottom = '1px solid red';
-            valid = false;
-        }
-        if (!password.value) {
-            password.style.borderBottom = '1px solid red';
-            valid = false;
-        }
-        return;
+    if (!newEmail) {
+        email.style.borderBottom = '1px solid red';
+        valid = false;
     }
+
+    if (!newpassword) {
+        password.style.borderBottom = '1px solid red';
+        valid = false;
+    }
+});
+const login = async () => {
+
+    const email = document.getElementById('emailInputId');
+    const password = document.getElementById('passwordInputId');
+    let valid = true;
+
+    email.style.borderBottom = '';
+    password.style.borderBottom = '';
+    // alert("Please enter both email and password");
+    if (!email.value) {
+        email.style.borderBottom = '1px solid red';
+        valid = false;
+    }
+    if (!password.value) {
+        password.style.borderBottom = '1px solid red';
+        valid = false;
+    }
+    return;
+
     if (!validateEmail(email.value)) {
         email.style.borderBottom = '1px solid red';
         toast.error("Invalid Email Address.");

@@ -8,6 +8,7 @@ const isOpenPas = ref(false);
 const session = ref(JSON.parse(localStorage.getItem('session'))?.data?.name);
 const sidebar = ref(false);
 const save_as_login = ref(false);
+const nextPrinciple = ref([]);
 export const store = reactive({ 
     auth:auth.value,
     sidebar:sidebar.value,
@@ -17,4 +18,5 @@ export const store = reactive({
     isForgetPas:isForgetPas.value,
     save_as_login:save_as_login.value,
     authPopup:authPopup.value,
+    nextPrinciple:nextPrinciple.value
 });

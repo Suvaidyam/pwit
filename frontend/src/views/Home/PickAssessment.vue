@@ -1,7 +1,10 @@
 <template>
-    <button @click="openDialog"
+    <button @click="openDialog" v-if="last_draft && !Object.entries(last_draft).length"
         class="bg-secondary text-white flex items-center justify-center gap-2 w-full md:w-1/3 h-14 text-h5 font-bold rounded-md">Start the
         Assessment <ArrowRight class="w-4"/></button>
+        <router-link :to="`/funder/${last_draft?.route}`" v-else class="bg-secondary text-white flex items-center justify-center gap-2 w-full md:w-1/3 h-14 text-h5 font-bold rounded-md">
+            Continue the Assessment <ArrowRight class="w-4"/>
+        </router-link>
     <!--  -->
     <TransitionRoot as="template" :show="open">
         <Dialog class="relative z-30" @close="open = false">
@@ -119,7 +122,7 @@
                                                 </div>
                                                 <p class="text-sm font-medium">Pay a fair share of core costs</p>
                                             </div>
-                                            <router-link to="/funder/core-cost" class="text-primary text-sm cursor-pointer">View</router-link>
+                                            <router-link to="/funder/core-costs" class="text-primary text-sm cursor-pointer">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 pt-3 items-center">
@@ -173,7 +176,7 @@
 </template>
 
 <script setup>
-import { ref,inject } from 'vue'
+import { ref,inject,onMounted } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { ArrowRight} from 'lucide-vue-next'
 
@@ -181,8 +184,9 @@ const open = ref(false)
 const open_ass = ref(false)
 const policyconsent = ref(false)
 const call = inject('$call')
+const auth = inject('$auth')
 const store = inject('store')
-
+const last_draft = ref({})
 
 const openDialog = () => {
     open.value = true;
@@ -201,4 +205,16 @@ const set_policyconsent = async () => {
         // policyconsent.value=res.data
 	}
 };
+const get_last_draft = async () => {
+	const res = await call('pwit.controllers.api.get_last_draft', { });
+	if (res.code === 200) {
+        console.log(res.data)
+        last_draft.value = res?.data ?? {}
+	}
+};
+onMounted(async()=>{
+    if(auth.isLoggedIn){
+       await get_last_draft()
+    }
+})
 </script>

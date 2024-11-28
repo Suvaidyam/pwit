@@ -6,23 +6,17 @@
  "engine": "InnoDB",
  "field_order": [
   "guidelines_section",
-  "name1",
-  "session",
+  "fr_guidelines",
   "approaches__adopted_section",
-  "question1",
-  "question3",
+  "fr_approaches_adopted_01",
+  "fr_approaches_adopted_02",
   "channels_of__communication_section",
-  "question4",
-  "question5",
+  "fr_communication_channels_01",
+  "fr_communication_channels_02",
+  "session",
   "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "name1",
-   "fieldtype": "Link",
-   "label": " Do you have written  guidelines that  clearly stipulate the financial resilience7 support extended to  nonprofit partners?",
-   "options": "Field Options"
-  },
   {
    "fieldname": "session",
    "fieldtype": "Link",
@@ -40,33 +34,9 @@
    "label": "Approaches  adopted"
   },
   {
-   "fieldname": "question1",
-   "fieldtype": "Link",
-   "label": "Do you help  nonprofit partners  build their resilience  through non\u0002financial support?",
-   "options": "Field Options"
-  },
-  {
-   "fieldname": "question3",
-   "fieldtype": "Link",
-   "label": "Do you provide a  financial  contribution(s) to  nonprofit partners  to help them build  reserves?",
-   "options": "Field Options"
-  },
-  {
    "fieldname": "channels_of__communication_section",
    "fieldtype": "Section Break",
    "label": "Channels of  communication"
-  },
-  {
-   "fieldname": "question4",
-   "fieldtype": "Link",
-   "label": "How are your  guidelines on  financial resilience support  communicated  internally?",
-   "options": "Field Options"
-  },
-  {
-   "fieldname": "question5",
-   "fieldtype": "Link",
-   "label": " How are your  guidelines on  financial resilience support communica ted to nonprofits (current and potential) and the  wider sector?",
-   "options": "Field Options"
   },
   {
    "fieldname": "amended_from",
@@ -77,12 +47,44 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "fr_guidelines",
+   "fieldtype": "Link",
+   "label": "Do you have written guidelines that clearly stipulate the financial resilience support extended to nonprofit partners?",
+   "options": "Field Options"
+  },
+  {
+   "description": " This can be through helping them diversify their funder base, supporting with financial planning, etc.",
+   "fieldname": "fr_approaches_adopted_01",
+   "fieldtype": "Link",
+   "label": "Do you help nonprofit partners build their resilience through non- financial support? ",
+   "options": "Field Options"
+  },
+  {
+   "description": "This can be through the transfer of surplus that the nonprofit accumulates, dedicated grants and/or the transfer of flexible funding towards reserves building.",
+   "fieldname": "fr_approaches_adopted_02",
+   "fieldtype": "Link",
+   "label": "Do you provide a financial contribution(s) to nonprofit partners to help them build reserves? ",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "fr_communication_channels_01",
+   "fieldtype": "Link",
+   "label": "How are your guidelines on financial resilience support communicated internally?",
+   "options": "Field Options"
+  },
+  {
+   "fieldname": "fr_communication_channels_02",
+   "fieldtype": "Link",
+   "label": "How are your guidelines on financial resilience support communica ted to nonprofits (current and potential) and the wider sector?",
+   "options": "Field Options"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-25 22:19:10.726815",
+ "modified": "2024-11-27 18:37:54.898785",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Financial Resilience",
