@@ -12,10 +12,14 @@
         </div>
         <div class="flex justify-between items-center">
             <h1 class="text-h3 md:text-h2 text-primary">Results and Recommendtions</h1>
-            <DownloadResults :disabled="Object.keys(recommendations).length > 0 ? false : true" />
+            <div class="flex items-center gap-3">
+                <button v-if="recommendations.result && Object.keys(recommendations.result).length" class="border border-[#255B97] flex items-center gap-2 rounded-md h-7 md:h-9 text-secondary text-sm px-2 md:px-4"
+                    @click="re_attempt"><span class="hidden md:block">Retake</span> <RefreshCcw class="w-4"/> </button>
+                <DownloadResults :disabled="recommendations.result && Object.keys(recommendations.result).length > 0 ? false : true" />
+            </div>
         </div>
-        <div class="w-full " :class="Object.keys(recommendations).length?'':'h-full'" v-if="!loading">
-            <div class="w-full" v-if="Object.keys(recommendations).length">
+        <div class="w-full " :class="recommendations.result && Object.keys(recommendations.result).length ? '' : 'h-full'" v-if="!loading">
+            <div class="w-full" v-if="recommendations.result && Object.keys(recommendations.result).length">
                 <div class="w-full grid grid-cols-1 xl:grid-cols-2 gap-5 pt-4">
                     <div class="w-full  mx-auto">
                         <div class="bg-white border p-4">
@@ -23,9 +27,6 @@
                                 <h2 class="text-primary font-bold font-serif text-2xl">
                                     Results and Recommendations
                                 </h2>
-                                <button v-if="Object.keys(recommendations).length" class="border rounded-md py-1 text-sm px-2"
-                                    @click="re_attempt">Retake</button>
-
                             </div>
                             <p class="text-h6 pt-1 pb-4">
                                 <span class="font-medium">Average: </span>
@@ -57,7 +58,7 @@
                                             <td class="py-2 px-4">
                                                 <div class="h-4 bg-gray-200">
                                                     <div class="h-4 text-xs flex justify-center"
-                                                        :class="[value == 4 ? 'bg-[#337357] w-full' : value == 3 ? 'w-2/3 bg-[#FFD23F]' : value == 2 ?'bg-[#FF6464] w-1/3':'bg-[#FF6464] w-1/5']">
+                                                        :class="[value == 4 ? 'bg-[#337357] w-full' : value == 3 ? 'w-2/3 bg-[#FFD23F]' : value == 2 ? 'bg-[#FF6464] w-1/3' : 'bg-[#FF6464] w-1/5']">
                                                         {{ recommendations.result ? '' : 'Not Found' }}
                                                     </div>
                                                 </div>
@@ -86,6 +87,7 @@
                         <p class="text-primary font-bold font-serif text-xl sm:text-2xl pb-4">
                             Recommended Actions
                         </p>
+                        <p v-html="'<h1 style=`font:bold;`>Hello</h1>'"></p>
                         <div v-for="action in recommendedActions" :key="action.title" class="pb-5">
                             <div
                                 class="flex justify-between items-center px-4 py-2 bg-[#e9eaec] text-h5 font-bold font-serif text-pbase">
@@ -137,7 +139,8 @@
             <div class="w-10 h-10 border-2 border-t-[4px] border-[#255B97] rounded-full animate-spin"></div>
         </div>
         <div class="py-5 w-full">
-            <router-link :to="`/funder/${store?.nextPrinciple?.ref_doctype?.toLowerCase()?.split(' ').join('-')}`" class="w-full md:w-auto py-3 px-6 bg-[#255B97] text-white rounded">
+            <router-link :to="`/funder/${store?.nextPrinciple?.ref_doctype?.toLowerCase()?.split(' ').join('-')}`"
+                class="w-full md:w-auto py-3 px-6 bg-[#255B97] text-white rounded">
                 Next Principle
             </router-link>
         </div>
@@ -149,7 +152,7 @@
 import { ref, watch, inject, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router';
 import DownloadResults from './DownloadResults.vue';
-import { Text } from 'lucide-vue-next';
+import { Text,RefreshCcw } from 'lucide-vue-next';
 
 const route = useRoute()
 const router = useRouter()
