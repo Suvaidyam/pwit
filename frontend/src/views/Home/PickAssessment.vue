@@ -41,7 +41,7 @@
                                         <input type="checkbox" v-model="policyconsent" @change="set_policyconsent" name="" id="policyconsent">
                                         <label class="text-sm" for="policyconsent">I understand and agree to the above.</label>
                                     </div>
-                                    <button  @click="assessment" :class="condision?'bg-secondary':'bg-secondary'" class="px-16 py-3 mt-5 rounded-md text-white">Continue </button>
+                                    <button  @click="assessment" :disabled="policyconsent?false:true" :class="policyconsent?'bg-secondary':'bg-gray-700'" class="px-16 py-3 mt-5 rounded-md text-white">Continue </button>
                                 </div>
                             </div>
                         </DialogPanel>

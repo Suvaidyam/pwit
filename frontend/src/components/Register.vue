@@ -20,7 +20,7 @@
                 <span v-if="lengthExceeded" class="text-red-500 text-xs mt-1 -bottom-5">Maximum length of 50
                     characters</span>
             </div>
-            <div class="flex flex-col gap-2 w-full">
+            <div class="flex flex-col gap-2 w-full relative">
                 <label for="" class="text-sm text-tatary">
                     Email Address
                     <span class="text-red-500"> *</span>
@@ -28,10 +28,13 @@
                 <input @keydown.enter="register" @input="emailvalidate" id="emailInputId" v-model="email" type="email"
                     class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5"
                     placeholder="Enter Email Address">
-                <p v-if="errorMessage" class="text-red-500 text-xs mt-1   -bottom-5">{{ errorMessage }}</p>
+                <div class="absolute -bottom-6">
+                    <p v-if="errorMessage" class="text-sm text-red-600">{{ errorMessage }}</p>
+                    <p v-else class="text-sm text-gray-600">Sign up with work email</p>
+                </div>
             </div>
 
-            <div class="flex items-center gap-2 py-2">
+            <div class="flex items-center gap-2 py-2 mt-3">
                 <input v-model="remember" type="checkbox" id="remember" class="h-4 w-4" />
                 <label for="remember" class="text-sm text-gray-500">Remember me</label>
             </div>
