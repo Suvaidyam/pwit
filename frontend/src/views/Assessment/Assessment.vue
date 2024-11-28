@@ -87,7 +87,7 @@ const get_results=async()=>{
         })
         if(res.code===200){
             let re_attempt = localStorage.getItem('re_attempt');
-            if(res.data && !re_attempt){
+            if(Object.keys(res.data.result).length && !re_attempt){
                 router.push(`${current_path.value}/results`);
             }
         }
