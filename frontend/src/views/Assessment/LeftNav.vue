@@ -17,7 +17,14 @@
                     <router-link :to="`/funder/${items.ref_doctype?.toLowerCase()?.split(' ').join('-')}`"
                         :class="['/funder/' + items.ref_doctype?.toLowerCase()?.split(' ').join('-'), '/funder/' + items.ref_doctype?.toLowerCase()?.split(' ').join('-') + '/results'].includes(route.fullPath) ? 'bg-white' : 'text-white'"
                         class="text-sm px-2 h-10 flex gap-2 items-center justify-center md:justify-normal rounded-md mb-2 hover:bg-white hover:text-black">
-                        <img :src="items.icon" alt="" class="w-5 h-5">
+                        <img v-if="items.icon" :src="items.icon" alt="" class="w-5 h-5">
+                        <div v-else>
+                            <IndianRupee v-if="items.ref_doctype == 'Core Costs'" class="w-5 h-5" />
+                            <Handshake v-if="items.ref_doctype == 'Multi-year Partnerships'" class="w-5 h-5" />
+                            <PiggyBank v-if="items.ref_doctype == 'Financial Resilience'" class="w-5 h-5" />
+                            <ChartNoAxesCombined v-if="items.ref_doctype == 'Organization Development'" class="w-5 h-5" />
+                            <Scale v-if="items.ref_doctype == 'Diversity Equity Inclusion'" class="w-5 h-5" />
+                        </div>
                         <p class="hidden md:block">{{ items.label }}</p>
                     </router-link>
                 </div>
@@ -29,7 +36,14 @@
                     <router-link :to="`/funder/${items.ref_doctype?.toLowerCase()?.split(' ').join('-')}`"
                         :class="['/funder/' + items.ref_doctype?.toLowerCase()?.split(' ').join('-'), '/funder/' + items.ref_doctype?.toLowerCase()?.split(' ').join('-') + '/results'].includes(route.fullPath) ? 'bg-white' : 'text-white'"
                         class="text-sm px-2 h-10 flex gap-2 items-center justify-center md:justify-normal rounded-md mb-2 hover:bg-white hover:text-black">
-                        <img :src="items.icon" alt="" class="w-5 h-5">
+                        <img v-if="items.icon" :src="items.icon" alt="" class="w-5 h-5">
+                        <div v-else>
+                            <IndianRupee v-if="items.ref_doctype == 'Core Costs'" class="w-5 h-5" />
+                            <Handshake v-if="items.ref_doctype == 'Multi-year Partnerships'" class="w-5 h-5" />
+                            <PiggyBank v-if="items.ref_doctype == 'Financial Resilience'" class="w-5 h-5" />
+                            <ChartNoAxesCombined v-if="items.ref_doctype == 'Organization Development'" class="w-5 h-5" />
+                            <Scale v-if="items.ref_doctype == 'Diversity Equity Inclusion'" class="w-5 h-5" />
+                        </div>
                         <p class="hidden md:block">{{ items.label }}</p>
                     </router-link>
                 </div>
@@ -42,6 +56,7 @@
 import { ref, watch, inject, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import LeftMenuLoader from './LeftMenuLoader.vue';
+import { IndianRupee, Handshake, PiggyBank, ChartNoAxesCombined, Scale } from 'lucide-vue-next'
 
 const route = useRoute();
 const store = inject('store');
@@ -144,7 +159,7 @@ watch(() => menu_list.value, async (value) => {
     recommendedList.value = await value?.filter(e => e.group === 'Recommended')
     additionalList.value = await value?.filter(e => e.group === 'Additional')
     let doc = await splitAndCapitalize(route.fullPath)
-    let index = (recommendedList.value.concat(additionalList.value)).findIndex(e => e.ref_doctype == (doc=='Multi Year Partnerships'?'Multi-year Partnerships':doc))
+    let index = (recommendedList.value.concat(additionalList.value)).findIndex(e => e.ref_doctype == (doc == 'Multi Year Partnerships' ? 'Multi-year Partnerships' : doc))
     store.nextPrinciple = index !== -1 && index < (recommendedList.value.concat(additionalList.value)).length - 1 ? (recommendedList.value.concat(additionalList.value))[index + 1] : null;
 }, { deep: true, immediate: true });
 // Fetch menu_list on mount
@@ -175,8 +190,8 @@ onMounted(async () => {
 function splitAndCapitalize(str) {
     return str
         .split('/')[2]
-        .split('-') 
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1)) 
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
 }
 </script>
