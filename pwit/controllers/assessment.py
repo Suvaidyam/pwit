@@ -57,9 +57,11 @@ class AssessmentAPIs:
             all_session = frappe.get_all('Session', {'user': user}, pluck='name',order_by='creation desc')
             if len(all_session):
                 assessments = frappe.get_all(doctype,filters={'session':["IN", all_session],'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
+        average=0
+        data = {}
+        details = {}
         if len(assessments) > 0:
             assessment = assessments[0]
-            data = {}
             for field in fields:
                 if field['fieldtype'] == 'Link':
                     options = frappe.db.get_list('Field Options', 
@@ -91,7 +93,7 @@ class AssessmentAPIs:
                         if option.name in field_options:
                             data[field['label']] += option.score
             average = round(sum(data.values()) / len(data),1)
-            details = {}
+            
             if doctype:
                details = AssessmentAPIs.get_assistive_results_details(doctype)
         return {'code': 200, 'data': {"average":average,"result":data,'details':details}}

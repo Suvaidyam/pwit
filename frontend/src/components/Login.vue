@@ -122,8 +122,8 @@ const login = async () => {
     if (!password.value) {
         password.style.borderBottom = '1px solid red';
         valid = false;
+        return
     }
-    return;
 
     if (!validateEmail(email.value)) {
         email.style.borderBottom = '1px solid red';
