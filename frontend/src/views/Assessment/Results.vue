@@ -161,6 +161,7 @@ const store = inject('store');
 const call = inject('$call');
 const auth = inject('$auth');
 const recommendations = ref({});
+// const recommend_action = ref([]);
 const loading = ref(false);
 const title = ref(splitAtSecondCapital(route.path));
 
@@ -188,6 +189,11 @@ const get_results = async () => {
         if (res.code === 200) {
             recommendations.value = res.data
             loading.value = false
+            res.data.details.recommended_actions.sort((a,b) => {
+                let scoreA = res.data.group[a.title] || Infinity; 
+                let scoreB = res.data.group[b.title] || Infinity;
+                return scoreA - scoreB;
+            })
         }
     } catch (error) {
         loading.value = false
