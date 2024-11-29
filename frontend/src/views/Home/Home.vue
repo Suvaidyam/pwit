@@ -127,18 +127,25 @@
 								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide">Part 1 -
 									Funding practices
 									diagnostic</h4>
-								<div class="max-w-lg mx-auto pt-2">
-									<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider">
-										<span v-if="readmore.one">Take a quick
-											diagnostic of your organization’s funding beliefs and practices
-											to
-											identify specific principles that would be most relevant for you to enhance
-											your
-											grantmaking.</span>
-										<span class="text-secondary text-h6 cursor-pointer font-bold"
-											@click="readmore.one = !readmore.one">{{ readmore.one ? 'Read Less' : 'Read More'
-											}} </span>
+								<div class="pt-2 text-justify">
+									<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider inline">
+										<transition name="fade-slide-x">
+											<span v-if="readmore.one" key="text" class="inline">
+												Take a quick diagnostic of your organization’s funding beliefs and
+												practices to identify specific principles
+												that would be most relevant for you to enhance your grantmaking.
+											</span>
+										</transition>
 									</p>
+									<transition name="fade-slide-x"
+										enter-active-class="transition-all duration-300 ease-in-out"
+										leave-active-class="transition-all duration-300 ease-in-out">
+										<span key="button"
+											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
+											@click="readmore.one = !readmore.one">
+											{{ readmore.one ? 'Read Less' : 'Read More' }}
+										</span>
+									</transition>
 								</div>
 							</div>
 						</div>
@@ -165,24 +172,41 @@
 								<h4 class="font-bold text-sebase text-h5 font-serif leading-4 tracking-wide">Part 2 –
 									Assistive guides for each
 									principle</h4>
-								<p class="text-trbase text-sm py-2  text-justify leading-5 tracking-wider">
-									<span v-if="readmore.two">Use these guides to map your current practices on the five
-										PWIT principles, across
-										various elements spanning policy, approaches, communication, etc., to understand
-										the
-										strengths and gaps in your funding practices. The guides for most principles are
-										rubric-based to accurately identify incremental shifts towards improving your
-										practices. Given the nascent stage of DEI practices in India, the DEI guide
-										takes a
-										different form to allow you to reflect on how inclusive your grantmaking
-										practices
-										are. At the end, you will receive a summary report with recommendations and
-										relevant
-										resources that may be useful to move forward on your journey.</span>
-									<span class="text-secondary text-h6 cursor-pointer font-bold"
-										@click="readmore.two = !readmore.two">{{ readmore.eight ? 'Read Less' : 'Read More' }}
-									</span>
-								</p>
+								<div class="pt-2 text-justify">
+									<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider inline">
+										<transition name="fade-slide-x">
+											<span v-if="readmore.two" key="text" class="inline">
+												Use these guides to map your current practices on the five
+												PWIT principles, across
+												various elements spanning policy, approaches, communication, etc., to
+												understand
+												the
+												strengths and gaps in your funding practices. The guides for most
+												principles are
+												rubric-based to accurately identify incremental shifts towards improving
+												your
+												practices. Given the nascent stage of DEI practices in India, the DEI
+												guide
+												takes a
+												different form to allow you to reflect on how inclusive your grantmaking
+												practices
+												are. At the end, you will receive a summary report with recommendations
+												and
+												relevant
+												resources that may be useful to move forward on your journey.
+											</span>
+										</transition>
+									</p>
+									<transition name="fade-slide-x"
+										enter-active-class="transition-all duration-300 ease-in-out"
+										leave-active-class="transition-all duration-300 ease-in-out">
+										<span key="button"
+											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
+											@click="readmore.two = !readmore.two">
+											{{ readmore.two ? 'Read Less' : 'Read More' }}
+										</span>
+									</transition>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -220,25 +244,37 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-sebase text-h5 font-serif leading-4 tracking-wide">Optional
+								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide">Optional
 									Survey Before Accessing
 									Guides
 								</h4>
-								<p class="text-trbase text-sm p-1  text-justify leading-5 tracking-wider">
-									<span v-if="readmore.three"> 
-										Visit <a href="http://pwit.localhost:8080/pwit/funder"
-											class="text-secondary hover:underline">Funder Diagnostic Link </a> and fill
-										out
-										the short survey before proceeding to the principle-specific
-										assistive guides,
-										to understand which principles might be most relevant for you. You may feel free
-										to
-										skip this part and proceed directly to the guides.
-									</span>
-									<span class="text-secondary text-h6 cursor-pointer font-bold"
-										@click="readmore.three = !readmore.three">{{ readmore.three ? 'Read Less' : 'Read More' }}
-									</span>
-								</p>
+								<div class="pt-2 text-justify">
+									<p class="text-trbase text-sm py-2  leading-5 tracking-wider inline">
+										<transition name="fade-slide-x">
+											<span v-if="readmore.three" key="text" class="inline">
+												Visit <a href="http://pwit.localhost:8080/pwit/funder"
+													class="text-secondary hover:underline">Funder Diagnostic Link </a>
+												and fill
+												out
+												the short survey before proceeding to the principle-specific
+												assistive guides,
+												to understand which principles might be most relevant for you. You may
+												feel free
+												to
+												skip this part and proceed directly to the guides.
+											</span>
+										</transition>
+									</p>
+									<transition name="fade-slide-x"
+										enter-active-class="transition-all duration-300 ease-in-out"
+										leave-active-class="transition-all duration-300 ease-in-out">
+										<span key="button"
+											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
+											@click="readmore.three = !readmore.three">
+											{{ readmore.three ? 'Read Less' : 'Read More' }}
+										</span>
+									</transition>
+								</div>
 							</div>
 						</div>
 						<div class="flex gap-2">
@@ -252,21 +288,35 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-sebase text-h5 font-serif leading-4 tracking-wide">Complete
+								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide">Complete
 									the Tool in One Session
 								</h4>
-								<p class="text-trbase text-sm p-1  text-justify leading-5 tracking-wider">
-									<span v-if="readmore.four">
-										The tool is designed to be completed in one session; however, you can pause and
-									return to this later. Please do not close the browser window as results for
-									completed sessions will not be saved. You will be provided the opportunity to email
-									the results to yourself at the end of Part 1 and after completing each
-									principle-level section in Part 2.
-									</span>
-									<span class="text-secondary text-h6 cursor-pointer font-bold"
-										@click="readmore.four = !readmore.four">{{ readmore.four ? 'Read Less' : 'Read More' }}
-									</span>
-								</p>
+
+								<div class="pt-2 text-justify">
+									<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider inline">
+										<transition name="fade-slide-x">
+											<span v-if="readmore.four" key="text" class="inline">
+												The tool is designed to be completed in one session; however, you can
+												pause and
+												return to this later. Please do not close the browser window as results
+												for
+												completed sessions will not be saved. You will be provided the
+												opportunity to email
+												the results to yourself at the end of Part 1 and after completing each
+												principle-level section in Part 2.
+											</span>
+										</transition>
+									</p>
+									<transition name="fade-slide-x"
+										enter-active-class="transition-all duration-300 ease-in-out"
+										leave-active-class="transition-all duration-300 ease-in-out">
+										<span key="button"
+											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
+											@click="readmore.four = !readmore.four">
+											{{ readmore.four ? 'Read Less' : 'Read More' }}
+										</span>
+									</transition>
+								</div>
 							</div>
 						</div>
 						<div class="flex gap-2">
@@ -283,14 +333,25 @@
 								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide">Expect
 									Level 1 and 2 Ratings in
 									Part 2</h4>
-								<p class="text-trbase text-sm p-1  text-justify leading-5 tracking-wider">
-									<span v-if="readmore.five"> As you go through Part 2 of the tool, it is possible that you will have certain
-									Level 1 and 2 ratings. Few will achieve Level 4, and in some cases, Level 4 is not the desired end state.
-									 </span>
-									<span class="text-secondary text-h6 cursor-pointer font-bold"
-										@click="readmore.five = !readmore.five">{{ readmore.five ? 'Read Less' : 'Read More' }}
-									</span>
-								</p>
+								<div class="pt-2 text-justify">
+									<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider inline">
+										<transition name="fade-slide-x">
+											<span v-if="readmore.five" key="text" class="inline">
+												As you go through Part 2 of the tool, it is possible that you will have
+												certain
+												Level 1 and 2 ratings. Few will achieve Level 4, and in some cases,
+												Level 4 is not the desired end state.
+											</span>
+										</transition>
+									</p>
+									<transition name="fade-slide-x">
+										<span key="button"
+											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
+											@click="readmore.five = !readmore.five">
+											{{ readmore.five ? 'Read Less' : 'Read More' }}
+										</span>
+									</transition>
+								</div>
 							</div>
 						</div>
 						<div class="flex gap-2">
@@ -307,17 +368,29 @@
 									Summary Report Upon
 									Completion
 								</h4>
-								<p class="text-sm p-1 text-trbase text-justify leading-5 tracking-wider">
-									<span v-if="readmore.sex">
-										Upon completion, you will have the option of generating a summary report which
-									provides an overview of your assessment and
-									recommendations to strengthen your practices. Please save a copy of the report to
-									preserve it.
-									</span>
-									<span class="text-secondary text-h6 cursor-pointer font-bold"
-										@click="readmore.sex = !readmore.sex">{{ readmore.sex ? 'Read Less' : 'Read More' }}
-									</span>
-								</p>
+								<div class=" text-justify pt-2">
+									<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider inline">
+										<transition name="fade-slide-x">
+											<span v-if="readmore.six" key="text" class="inline">
+												Upon completion, you will have the option of generating a summary report
+												which
+												provides an overview of your assessment and
+												recommendations to strengthen your practices. Please save a copy of the
+												report to
+												preserve it.
+											</span>
+										</transition>
+									</p>
+									<transition name="fade-slide-x"
+										enter-active-class="transition-all duration-300 ease-in-out"
+										leave-active-class="transition-all duration-300 ease-in-out">
+										<span key="button"
+											class="text-secondary text-h6 cursor-pointer font-bold  transition-all duration-300 ease-in-out"
+											@click="readmore.six = !readmore.six">
+											{{ readmore.six ? 'Read Less' : 'Read More' }}
+										</span>
+									</transition>
+								</div>
 							</div>
 						</div>
 						<div class="flex gap-2">
@@ -328,20 +401,32 @@
 										d="M23.0794 16.6148C23.0794 21.7097 18.4628 24 12 24C5.5371 24 0.920532 21.7097 0.920532 16.6508C0.920532 11.112 3.69082 8.30569 9.22968 5.4994L7.26853 1.84626C7.15152 1.66328 7.08636 1.45198 7.08 1.23488C7.07365 1.01778 7.12633 0.80303 7.23243 0.613521C7.33854 0.424011 7.49409 0.266851 7.68249 0.158799C7.8709 0.0507465 8.08509 -0.00414703 8.30225 -2.82914e-05H16.1314C16.3349 0.00517969 16.5338 0.0620919 16.7093 0.165352C16.8848 0.268612 17.0311 0.414824 17.1345 0.590228C17.2379 0.765631 17.2949 0.964458 17.3003 1.16799C17.3056 1.37153 17.2591 1.57308 17.1651 1.75369L14.7702 5.4994C20.3074 8.26797 23.0794 11.0743 23.0794 16.6148ZM8.49767 11.1428H11.3828C11.6228 11.2148 11.9245 11.3485 12.1662 11.5714C12.3471 11.7356 12.4809 11.9451 12.5537 12.1783H8.49939C8.38683 12.1783 8.27537 12.2004 8.17138 12.2435C8.06738 12.2866 7.97289 12.3497 7.8933 12.4293C7.8137 12.5089 7.75057 12.6034 7.70749 12.7074C7.66442 12.8114 7.64225 12.9228 7.64225 13.0354C7.64225 13.148 7.66442 13.2594 7.70749 13.3634C7.75057 13.4674 7.8137 13.5619 7.8933 13.6415C7.97289 13.7211 8.06738 13.7842 8.17138 13.8273C8.27537 13.8704 8.38683 13.8925 8.49939 13.8925H12.2828C11.9883 14.2198 11.6146 14.4659 11.1977 14.6074C10.6603 14.8037 10.0947 14.912 9.52282 14.928H9.4971C9.32262 14.9281 9.15234 14.9815 9.00901 15.081C8.86569 15.1805 8.75614 15.3214 8.69502 15.4849C8.6339 15.6483 8.62411 15.8265 8.66696 15.9956C8.70981 16.1648 8.80326 16.3168 8.93482 16.4314L8.93825 16.4348L8.94682 16.44L8.9691 16.4605C9.09076 16.5637 9.21598 16.6627 9.34453 16.7571C10.8228 17.861 12.5039 18.6631 14.292 19.1177C14.4021 19.1479 14.5172 19.1558 14.6305 19.1409C14.7437 19.126 14.8529 19.0886 14.9515 19.0309C15.0501 18.9732 15.1361 18.8964 15.2046 18.805C15.2731 18.7136 15.3226 18.6094 15.3503 18.4985C15.3779 18.3877 15.3832 18.2725 15.3656 18.1596C15.3481 18.0467 15.3082 17.9385 15.2483 17.8412C15.1883 17.744 15.1095 17.6597 15.0166 17.5934C14.9236 17.527 14.8183 17.4799 14.7068 17.4548C13.6582 17.1858 12.6496 16.7801 11.7068 16.248L11.7994 16.2137C12.3788 15.996 13.0165 15.6497 13.5137 15.0891C13.8137 14.7548 14.0485 14.3554 14.1942 13.8925H15.5005C15.7279 13.8925 15.9459 13.8022 16.1066 13.6415C16.2674 13.4807 16.3577 13.2627 16.3577 13.0354C16.3577 12.8081 16.2674 12.5901 16.1066 12.4293C15.9459 12.2686 15.7279 12.1783 15.5005 12.1783H14.3108C14.2566 11.8165 14.1419 11.4665 13.9714 11.1428H15.5005C15.7279 11.1428 15.9459 11.0525 16.1066 10.8918C16.2674 10.731 16.3577 10.513 16.3577 10.2857C16.3577 10.0584 16.2674 9.84034 16.1066 9.67959C15.9459 9.51885 15.7279 9.42854 15.5005 9.42854H8.49939C8.27206 9.42854 8.05404 9.51885 7.8933 9.67959C7.73255 9.84034 7.64225 10.0584 7.64225 10.2857C7.64225 10.513 7.73255 10.731 7.8933 10.8918C8.05404 11.0525 8.27206 11.1428 8.49939 11.1428H8.49767Z"
 										fill="#27853F" />
 								</svg>
-
 							</div>
 							<div class="">
 								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide"> Use
 									Insights for Strategic
 									Discussions and
 									Team Conversations on Improving Grantmaking</h4>
-								<p class="text-sm p-1 text-trbase text-justify">
-									<span v-if="readmore.seven">We encourage you to use the insights for strategic discussions on enhancing your
-										grantmaking as well as in conversations with your teams.</span>
-									<span class="text-secondary text-h6 cursor-pointer font-bold"
-										@click="readmore.seven = !readmore.seven">{{ readmore.seven ? 'Read Less' : 'Read More' }}
-									</span>
-								</p>
+								<div class="pt-2 text-justify">
+									<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider inline">
+										<transition name="fade-slide-x">
+											<span v-if="readmore.seven" key="text" class="inline">
+												We encourage you to use the insights for strategic discussions on
+												enhancing your
+												grantmaking as well as in conversations with your teams.
+											</span>
+										</transition>
+									</p>
+									<transition name="fade-slide-x"
+										enter-active-class="transition-all duration-300 ease-in-out"
+										leave-active-class="transition-all duration-300 ease-in-out">
+										<span key="button"
+											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
+											@click="readmore.seven = !readmore.seven">
+											{{ readmore.seven ? 'Read Less' : 'Read More' }}
+										</span>
+									</transition>
+								</div>
 							</div>
 						</div>
 						<div class="flex gap-2">
@@ -355,19 +440,31 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-sebase text-h5 font-serif leading-4 tracking-wide"> Your
+								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide"> Your
 									Responses Are Confidential
 								</h4>
-								<p class="text-sm p-1 text-trbase text-justify leading-5 tracking-wider">
-									<span v-if="readmore.eight" :class="['transition ease-in-out delay-150']">Your responses are confidential and protected and may only be seen by the
-									development team.
-									Any trends interfered from this data will only be made at an aggregate level, based
-									on type of funder (i.e., CSR, Global Foundation,
-									Domestic Foundation).</span>
-									<span class="text-secondary text-h6 cursor-pointer font-bold"
-										@click="readmore.eight = !readmore.eight">{{ readmore.eight ? 'Read Less' : 'Read More' }}
-									</span>
-								</p>
+								<div class="pt-2 text-justify">
+									<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider inline">
+										<transition name="fade-slide-x">
+											<span v-if="readmore.eight" key="text" class="inline">
+												development team.
+												Any trends interfered from this data will only be made at an aggregate
+												level, based
+												on type of funder (i.e., CSR, Global Foundation,
+												Domestic Foundation).
+											</span>
+										</transition>
+									</p>
+									<transition name="fade-slide-x"
+										enter-active-class="transition-all duration-300 ease-in-out"
+										leave-active-class="transition-all duration-300 ease-in-out">
+										<span key="button"
+											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
+											@click="readmore.eight = !readmore.eight">
+											{{ readmore.eight ? 'Read Less' : 'Read More' }}
+										</span>
+									</transition>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -475,3 +572,32 @@ let readmore = ref({
 // });
 
 </script>
+<style scoped>
+.fade-slide-x-enter-from {
+	opacity: 0;
+	transform: translateX(-20px);
+}
+
+.fade-slide-x-enter-to {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.fade-slide-x-leave-from {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.fade-slide-x-leave-to {
+	opacity: 0;
+	transform: translateX(-20px);
+}
+
+.fade-slide-x-enter-active {
+	transition: all 0.3s ease-in-out 0.2s;
+}
+
+.fade-slide-x-leave-active {
+	transition: all 0.3s ease-in-out 0.2s;
+}
+</style>
