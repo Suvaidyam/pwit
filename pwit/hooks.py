@@ -10,7 +10,13 @@ app_license = "mit"
 
 # required_apps = []
 
-fixtures=['Field Options','Recommendation Logic','Left-Menu','Property Setter']
+fixtures=[
+    'Field Options',
+    'Recommendation Logic',
+    'Left-Menu',
+    'Property Setter',
+    'Results and Recommendtions',
+    ]
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
