@@ -1,0 +1,41 @@
+[
+ {
+  "description": "Multiyear partnerships simplify grantmaking, reduce the time spent on scouting new grantees and projects, and help funders gain a deeper understanding of social issues. Engaging in these longer-term partnerships allows funders to move from being only grant makers to playing the role of advisors to nonprofit partners and can facilitate greater job enrichment for program teams as they are able to invest more time and effort in understanding nonprofit needs and support them in delivering on their intended impact. Multiyear partnerships nurture trust as relationships between funders and nonprofits deepen over time and a mutual understanding of a nonprofit’s needs and goals grows. For funders, adopting a multiyear approach can help increasingly focus on creating lasting change, over immediate and short-term outputs. Additionally, it enables stability and visibility for nonprofits to plan and direct efforts on their core focus.",
+  "docstatus": 0,
+  "doctype": "Results and Recommendtions",
+  "modified": "2024-11-29 12:33:46.934047",
+  "name": "pm84tbr7tr",
+  "recommended_actions": [
+   {
+    "actions": "<div class=\"ql-editor read-mode\"><ol><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><strong style=\"font-size: 14px;\">Revisiting your policy in context of your impact goals</strong><span style=\"font-size: 14px;\"> and ascertain any biases or blind spots that might be limiting multiyear partnerships (such as extending multiyear funding only to large nonprofits with a credible funder baser rather than small, community-based nonprofits).</span></li></ol><p><br></p><ol><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\"> </span><strong style=\"font-size: 14px;\">If alignment on policy is a barrier, engage with senior leadership and board / committee</strong><span style=\"font-size: 14px;\"> on the need, benefits and alignment with the Foundation/ CSRs vision and goals, to increase the number of multiyear partnerships. Lay out the opportunity cost (e.g., costs associated with sourcing and diligence). Leverage research and evidence, and showcase examples from funders/ NGOs who have fostered multiyear partnerships.</span></li></ol></div>",
+    "logic": "",
+    "title": "Policy guidelines"
+   },
+   {
+    "actions": "<div class=\"ql-editor read-mode\"><ol><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><strong>Evaluating your current funding portfolio</strong> to understand the percentage of funding allocated to multiyear partnerships and the number of nonprofits being supported in this regard. If the percentage is low, reflect on internal awareness and mindsets that may be influencing current practices.</li></ol><p><br></p><ol><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Encourage program officers to look at current grantee partners to assess <strong>where a long-term partnership might be most fruitful</strong></li></ol><p><br></p><ol><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><strong>Engage with existing and potential nonprofits on their 3–5-year strategy</strong> and impact goals, and how your funding can enable your collective mission. Customize grants to best suit their needs (both current and future) and objectives.</li></ol></div>",
+    "logic": null,
+    "title": "Annual budget allocation"
+   }
+  ],
+  "ref_doctype": "Multi-year Partnerships",
+  "title": "The Power of Multiyear Partnerships in Grantmaking",
+  "useful_resources": [
+   {
+    "resources": " Funder Practices that Strengthen Nonprofit Resilience: Lessons from India. The Bridgespan Group, November 2023.",
+    "to": "https://www.bridgespan.org/insights/funder-practices-that-strengthen-nonprofits-in-india"
+   },
+   {
+    "resources": " New Attitudes, Old Practices: The Provision of Multiyear General Operating Support, The Center for Effective Philanthropy, 2020.",
+    "to": "https://cep.org/report/new-attitudes-old-practices/"
+   },
+   {
+    "resources": "Funding for real change- Multi-year flexible funding. Funding For Real Change",
+    "to": "https://www.fundingforrealchange.com/multi-year-flexible-funding"
+   },
+   {
+    "resources": "Multi-year unrestricted funding. Trust based philanthropy",
+    "to": "https://ssir.org/articles/entry/foundations_must_get_serious_about_multi-year_grantmaking"
+   }
+  ]
+ }
+]

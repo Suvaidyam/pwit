@@ -40,7 +40,7 @@ class AssessmentAPIs:
         fields = []
         current_section = None
         meta = frappe.get_meta(doctype)
-        for field in meta.fields:
+        for field in meta.fields: 
             if field.fieldtype == 'Section Break':
                 current_section = field.label
             elif (field.fieldtype in ['Table MultiSelect', 'Link']) and field.hidden == 0:
@@ -48,7 +48,8 @@ class AssessmentAPIs:
                 fields.append({
                     'fieldname': field.fieldname,
                     'label': field_label_with_section,
-                    'fieldtype': field.fieldtype
+                    'fieldtype': field.fieldtype,
+                    'short_name': field.get('short_name',None)
                 })
         if not user:
             assessments = frappe.get_all(doctype,filters={'session':session,'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
@@ -73,7 +74,7 @@ class AssessmentAPIs:
                     )
                     for option in options:
                         if assessment[field['fieldname']] == option.name:
-                            data[field['label']] = option.score
+                            data[field['short_name']] = option.score
                 elif field['fieldtype'] == 'Table MultiSelect':
                     field_options = frappe.db.get_list('Options Child', 
                         filters={
@@ -91,7 +92,7 @@ class AssessmentAPIs:
                     )
                     for option in options:
                         if option.name in field_options:
-                            data[field['label']] += option.score
+                            data[field['short_name']] += option.score
             average = round(sum(data.values()) / len(data),1)
             
             if doctype:
