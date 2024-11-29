@@ -137,9 +137,7 @@
 											</span>
 										</transition>
 									</p>
-									<transition name="fade-slide-x"
-										enter-active-class="transition-all duration-300 ease-in-out"
-										leave-active-class="transition-all duration-300 ease-in-out">
+									<transition name="fade-slide-x">
 										<span key="button"
 											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
 											@click="readmore.one = !readmore.one">
@@ -197,9 +195,7 @@
 											</span>
 										</transition>
 									</p>
-									<transition name="fade-slide-x"
-										enter-active-class="transition-all duration-300 ease-in-out"
-										leave-active-class="transition-all duration-300 ease-in-out">
+									<transition name="fade-slide-x">
 										<span key="button"
 											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
 											@click="readmore.two = !readmore.two">
@@ -212,7 +208,7 @@
 					</div>
 				</div>
 				<div class="w-full md:h-96 flex md:justify-end">
-					<img class="w-[90%]" src="../../assets/right.png" alt="">
+					<img class="w-[520px] h-[338px]" src="../../assets/right.png" alt="">
 				</div>
 			</div>
 		</div>
@@ -220,7 +216,7 @@
 		<div class=" w-full px-4 md:px-8 lg:px-20  md:pt-8 ">
 			<div class="flex flex-col md:flex-row">
 				<div class="w-full pt-8 flex justify-center items-center order-2 md:order-1">
-					<img class="w-[90%]" src="../../assets/left.png" alt="">
+					<img class="w-[434px] h-[436px]" src="../../assets/left.png" alt="">
 				</div>
 				<div class="w-full flex flex-col gap-3 order-1 md:order-2">
 					<h1 class="text-primary text-h2 font-bold font-serif leading-9 tracking-wide">What will the output
@@ -265,9 +261,7 @@
 											</span>
 										</transition>
 									</p>
-									<transition name="fade-slide-x"
-										enter-active-class="transition-all duration-300 ease-in-out"
-										leave-active-class="transition-all duration-300 ease-in-out">
+									<transition name="fade-slide-x">
 										<span key="button"
 											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
 											@click="readmore.three = !readmore.three">
@@ -307,9 +301,7 @@
 											</span>
 										</transition>
 									</p>
-									<transition name="fade-slide-x"
-										enter-active-class="transition-all duration-300 ease-in-out"
-										leave-active-class="transition-all duration-300 ease-in-out">
+									<transition name="fade-slide-x">
 										<span key="button"
 											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
 											@click="readmore.four = !readmore.four">
@@ -381,9 +373,7 @@
 											</span>
 										</transition>
 									</p>
-									<transition name="fade-slide-x"
-										enter-active-class="transition-all duration-300 ease-in-out"
-										leave-active-class="transition-all duration-300 ease-in-out">
+									<transition name="fade-slide-x">
 										<span key="button"
 											class="text-secondary text-h6 cursor-pointer font-bold  transition-all duration-300 ease-in-out"
 											@click="readmore.six = !readmore.six">
@@ -410,22 +400,20 @@
 								<div class="pt-2 text-justify">
 									<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider inline">
 										<transition name="fade-slide-x">
-											<span v-if="readmore.seven" key="text" class="inline">
+											<span v-if="readmore.seven">
 												We encourage you to use the insights for strategic discussions on
-												enhancing your
-												grantmaking as well as in conversations with your teams.
+												enhancing your grantmaking as well as in conversations with your teams.
 											</span>
 										</transition>
+
+										<transition name="fade-slide-x">
+											<span key="button" class="text-secondary text-h6 cursor-pointer font-bold"
+												@click="readmore.seven = !readmore.seven">
+												{{ readmore.seven ? 'Read Less' : 'Read More' }}
+											</span>
+										</transition>
+
 									</p>
-									<transition name="fade-slide-x"
-										enter-active-class="transition-all duration-300 ease-in-out"
-										leave-active-class="transition-all duration-300 ease-in-out">
-										<span key="button"
-											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
-											@click="readmore.seven = !readmore.seven">
-											{{ readmore.seven ? 'Read Less' : 'Read More' }}
-										</span>
-									</transition>
 								</div>
 							</div>
 						</div>
@@ -455,14 +443,14 @@
 											</span>
 										</transition>
 									</p>
-									<transition name="fade-slide-x"
-										enter-active-class="transition-all duration-300 ease-in-out"
-										leave-active-class="transition-all duration-300 ease-in-out">
+									<transition name="fade-slide-x">
 										<span key="button"
-											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
+											class="text-secondary text-h6 cursor-pointer font-bold transition-opacity duration-700"
+											:class="{ 'opacity-50': readmore.eight }"
 											@click="readmore.eight = !readmore.eight">
 											{{ readmore.eight ? 'Read Less' : 'Read More' }}
 										</span>
+
 									</transition>
 								</div>
 							</div>
@@ -484,8 +472,8 @@
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-4 px-4 md:px-8 lg:px-16 py-6">
 			<div class="flex flex-col gap-2">
-				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
-					<img class="w-7  h-7" src="../../assets/file.png" alt="Description of image">
+				<div class="w-16 min-w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center">
+					<img class="w-8  h-8" src="../../assets/file.png" alt="Description of image">
 
 				</div>
 				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
@@ -496,8 +484,8 @@
 					officia deserunt mollit anim id est laborum.</p>
 			</div>
 			<div class="flex flex-col gap-2">
-				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
-					<img class="w-7  h-7" src="../../assets/file.png" alt="Description of image">
+				<div class="w-16 min-w-16 h-16  rounded-full bg-gray-200 flex items-center justify-center">
+					<img class="w-8  h-8" src="../../assets/file.png" alt="Description of image">
 				</div>
 				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
 				</h1>
@@ -508,8 +496,8 @@
 
 			</div>
 			<div class="flex flex-col gap-2">
-				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
-					<img class="w-7  h-7" src="../../assets/file.png" alt="Description of image">
+				<div class="w-16 min-w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center">
+					<img class="w-8  h-8" src="../../assets/file.png" alt="Description of image">
 				</div>
 				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
 				</h1>
@@ -521,8 +509,8 @@
 			</div>
 		</div>
 		<div class=" bg-secondary pb-40 relative px-4 md:px-8 lg:px-16">
-			<h1 class="text-center font-serif text-h2 font-bold tracking-wide leading-9 text-white pt-8 pb-5">About the
-				Partneership</h1>
+			<h1 class="text-center font-serif text-h2 font-bold tracking-wide leading-9 text-white pt-8 pb-5">
+				About the Partnership</h1>
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 				<div class="flex flex-col gap-4 w-full text-center text-white font-serif text-sm">
 					<p class="text-h5 text-[#E9EAEB] font-normal text-center leading-5 tracking-wider"> Lorem
@@ -585,7 +573,7 @@ let readmore = ref({
 
 .fade-slide-x-leave-from {
 	opacity: 1;
-	transform: translateX(0);
+	transform: translateX(-10);
 }
 
 .fade-slide-x-leave-to {
@@ -593,11 +581,8 @@ let readmore = ref({
 	transform: translateX(-20px);
 }
 
-.fade-slide-x-enter-active {
-	transition: all 0.3s ease-in-out 0.2s;
-}
-
+.fade-slide-x-enter-active,
 .fade-slide-x-leave-active {
-	transition: all 0.3s ease-in-out 0.2s;
+	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s;
 }
 </style>
