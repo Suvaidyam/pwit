@@ -12,10 +12,14 @@
         </div>
         <div class="flex justify-between items-center">
             <h1 class="text-h3 md:text-h2 text-primary">Results and Recommendtions</h1>
-            <DownloadResults :disabled="Object.keys(recommendations).length > 0 ? false : true" />
+            <div class="flex items-center gap-3">
+                <button v-if="recommendations.result && Object.keys(recommendations.result).length" class="border border-[#255B97] flex items-center gap-2 rounded-md h-7 md:h-9 text-secondary text-sm px-2 md:px-4"
+                    @click="re_attempt"><span class="hidden md:block">Retake</span> <RefreshCcw class="w-4"/> </button>
+                <DownloadResults :disabled="recommendations.result && Object.keys(recommendations.result).length > 0 ? false : true" />
+            </div>
         </div>
-        <div class="w-full " :class="Object.keys(recommendations).length?'':'h-full'" v-if="!loading">
-            <div class="w-full" v-if="Object.keys(recommendations).length">
+        <div class="w-full results-section" :class="recommendations.result && Object.keys(recommendations.result).length ? '' : 'h-full'" v-if="!loading">
+            <div class="w-full" v-if="recommendations.result && Object.keys(recommendations.result).length">
                 <div class="w-full grid grid-cols-1 xl:grid-cols-2 gap-5 pt-4">
                     <div class="w-full  mx-auto">
                         <div class="bg-white border p-4">
@@ -23,9 +27,6 @@
                                 <h2 class="text-primary font-bold font-serif text-2xl">
                                     Results and Recommendations
                                 </h2>
-                                <button v-if="Object.keys(recommendations).length" class="border rounded-md py-1 text-sm px-2"
-                                    @click="re_attempt">Retake</button>
-
                             </div>
                             <p class="text-h6 pt-1 pb-4">
                                 <span class="font-medium">Average: </span>
@@ -57,7 +58,7 @@
                                             <td class="py-2 px-4">
                                                 <div class="h-4 bg-gray-200">
                                                     <div class="h-4 text-xs flex justify-center"
-                                                        :class="[value == 4 ? 'bg-[#337357] w-full' : value == 3 ? 'w-2/3 bg-[#FFD23F]' : value == 2 ?'bg-[#FF6464] w-1/3':'bg-[#FF6464] w-1/5']">
+                                                        :class="[value == 4 ? 'bg-[#337357] w-full' : value == 3 ? 'w-2/3 bg-[#FFD23F]' : value == 2 ? 'bg-[#FF6464] w-1/3' : 'bg-[#FF6464] w-1/5']">
                                                         {{ recommendations.result ? '' : 'Not Found' }}
                                                     </div>
                                                 </div>
@@ -86,12 +87,13 @@
                         <p class="text-primary font-bold font-serif text-xl sm:text-2xl pb-4">
                             Recommended Actions
                         </p>
-                        <div v-for="action in recommendedActions" :key="action.title" class="pb-5">
+                        <div v-if="recommendations.details.recommended_actions" v-for="items in recommendations.details.recommended_actions" :key="items.name" class="pb-5">
                             <div
                                 class="flex justify-between items-center px-4 py-2 bg-[#e9eaec] text-h5 font-bold font-serif text-pbase">
-                                {{ action.title }}
+                                {{ items.title }}
                             </div>
-                            <div class="pt-2">
+                            <div class="pt-2" v-html="items.actions"></div>
+                            <!-- <div class="pt-2">
                                 <div v-for="item in action.items" :key="item.description" class="flex gap-4 pt-4">
                                     <div class="w-7 h-7 flex justify-center items-center">
                                         <svg class="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +108,7 @@
                                         {{ item.description }}
                                     </p>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <!-- Useful Resources Section -->
@@ -123,9 +125,9 @@
                                         fill="#27853F" />
                                 </svg>
                             </span>
-                            <p class="text-pbase text-h6 font-normal text-justify">
+                            <a :href="resource.to" target="_blank" class="text-pbase text-h6 font-normal text-justify">
                                 {{ resource.resources }}
-                            </p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -137,7 +139,8 @@
             <div class="w-10 h-10 border-2 border-t-[4px] border-[#255B97] rounded-full animate-spin"></div>
         </div>
         <div class="py-5 w-full">
-            <router-link :to="`/funder/${store?.nextPrinciple?.ref_doctype?.toLowerCase()?.split(' ').join('-')}`" class="w-full md:w-auto py-3 px-6 bg-[#255B97] text-white rounded">
+            <router-link :to="`/funder/${store?.nextPrinciple?.ref_doctype?.toLowerCase()?.split(' ').join('-')}`"
+                class="w-full md:w-auto py-3 px-6 bg-[#255B97] text-white rounded">
                 Next Principle
             </router-link>
         </div>
@@ -149,7 +152,8 @@
 import { ref, watch, inject, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router';
 import DownloadResults from './DownloadResults.vue';
-import { Text } from 'lucide-vue-next';
+import { Text,RefreshCcw } from 'lucide-vue-next';
+import html2pdf from 'html2pdf.js';
 
 const route = useRoute()
 const router = useRouter()
@@ -158,8 +162,20 @@ const call = inject('$call');
 const auth = inject('$auth');
 const recommendations = ref({});
 const loading = ref(false);
-// console.log(router)
 const title = ref(splitAtSecondCapital(route.path));
+
+const downloadPDF = () => {
+    const element = document.querySelector(".results-section");
+    const options = {
+        margin: 0.5,
+        filename: 'Results_and_Recommendations.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+    };
+
+    html2pdf().set(options).from(element).save();
+};
 
 const get_results = async () => {
     loading.value = true
@@ -196,32 +212,5 @@ function splitAtSecondCapital(input) {
         .replace(/([a-z])([A-Z])/g, '$1 $2')
         .trim();
 }
-
-const recommendedActions = ref([
-    {
-        title: 'Policy guidelines',
-        items: [
-            { title: 'Revisiting your policy in context of your impact goals ', description: 'and ascertain any biases or blind spots that might be limiting multiyear partnerships (such as extending multiyear funding only to large nonprofits with a credible funder baser rather than small, community-based nonprofits).' },
-            { title: 'If alignment on policy is a barrier, engage with senior leadership and board / committee ', description: ' on the need, benefits and alignment with the Foundation/ CSRs vision and goals, to increase the number of multiyear partnerships. Lay out the opportunity cost (e.g., costs associated with sourcing and diligence). Leverage research and evidence, and showcase examples from funders/ NGOs who have fostered multiyear partnerships.' }
-        ]
-    },
-    {
-        title: 'Annual budget allocation',
-        items: [
-            { title: 'Engage with existing and potential nonprofits on their 3–5-year strategy and', description: ' to understand the percentage of funding allocated to multiyear partnerships and the number of nonprofits being supported in this regard. If the percentage is low, reflect on internal awareness and mindsets that may be influencing current practices.' },
-            { title: 'Evaluating your current funding portfolio', description: ' and impact goals, and how your funding can enable your collective mission. Customize grants to best suit their needs (both current and future) and objectives.' }
-        ]
-    }
-]);
-
-const resources = ref([
-    { title: 'Funder Practices that Strengthen Nonprofit Resilience: Lessons from India' },
-    { title: 'New Attitudes, Old Practices: The Provision of Multiyear General Operating Support' },
-    { title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-    { title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' }
-]);
-
-
-
 
 </script>

@@ -15,26 +15,21 @@
 			<h4 class="text-center text-h2 font-bold text-[#20252b] my-6 font-serif tracking-wide leading-9">About the
 				tool</h4>
 			<div class="flex justify-center font-normal text-sebase text-h5 text-center tracking-wider leading-5">
-				Philanthropy has a significant opportunity to amplify the impact of its grantmaking
-				by enabling a stronger and more resilient nonprofit sector. Bridgespan’s Pay-What-It-Takes
-				India Initiative has identified five principles of effective grantmaking, rooted in trust,
-				that funders can adopt to support strong, resilient nonprofit partners. As funders recognize
-				the importance of making grantmaking
+				<p>Philanthropy has a significant opportunity to amplify the impact of their grantmaking by enabling a
+				stronger and more resilient nonprofit sector. <a href="https://www.bridgespan.org/our-global-reach/pay-what-it-takes-india-initiative" class="text-secondary hover:underline"> Bridgespan’s Pay-What-ItTakes India Initiative</a> has
+				identified five principles of effective grantmaking, rooted in trust, that funders can adopt to support
+				strong, resilient nonprofit partners.</p>
 			</div>
 
 			<div
 				class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-12 gap-x-5 pt-14">
 				<div class="h-[149px] flex rounded-md bg-white relative px-4 ">
 					<div
-						class="w-[70px] h-[70px] rounded-full border-8  tracking-widerborder-[#59467b] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
-						<svg width="34" height="22" viewBox="0 0 34 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M17.0808 1.92641L12.0261 6.09181C11.1854 6.7825 11.0236 8.02574 11.6606 8.91302C12.3342 9.85873 13.6449 10.0447 14.5483 9.32743L19.7335 5.22579C20.099 4.93888 20.6212 5.00264 20.9084 5.37455C21.1956 5.74646 21.1277 6.27776 20.7622 6.56998L19.6708 7.43069L26.9291 14.2313V4.20038H26.8925L26.6889 4.06755L22.8979 1.597C22.0989 1.07633 21.1642 0.800049 20.2139 0.800049C19.0755 0.800049 17.9685 1.19852 17.0808 1.92641ZM18.2714 8.53579L15.5717 10.6716C13.9269 11.9786 11.5405 11.6386 10.3082 9.91718C9.14895 8.29671 9.44137 6.03336 10.9713 4.77418L15.3159 1.19852C14.7101 0.938187 14.0574 0.805362 13.3942 0.805362C12.4126 0.800049 11.457 1.09758 10.6372 1.65013L6.87747 4.20038V16.1015H8.35001L13.1227 20.5326C14.1462 21.4836 15.7284 21.4092 16.6631 20.3679C16.9503 20.0438 17.1435 19.6666 17.2427 19.2734L18.1304 20.1022C19.1486 21.0532 20.7361 20.9842 21.6708 19.9481C21.9057 19.6878 22.0781 19.385 22.1877 19.0715C23.2007 19.7622 24.5793 19.6187 25.4304 18.673C26.3651 17.637 26.2973 16.0218 25.279 15.0708L18.2714 8.53579ZM1.02909 4.20038C0.569571 4.20038 0.193604 4.58291 0.193604 5.05046V16.1015C0.193604 17.0419 0.940317 17.8017 1.86457 17.8017H3.53554C4.45979 17.8017 5.20651 17.0419 5.20651 16.1015V4.20038H1.02909ZM2.70006 14.4014C2.92164 14.4014 3.13415 14.4909 3.29083 14.6503C3.44752 14.8098 3.53554 15.026 3.53554 15.2514C3.53554 15.4769 3.44752 15.6931 3.29083 15.8525C3.13415 16.012 2.92164 16.1015 2.70006 16.1015C2.47847 16.1015 2.26596 16.012 2.10928 15.8525C1.9526 15.6931 1.86457 15.4769 1.86457 15.2514C1.86457 15.026 1.9526 14.8098 2.10928 14.6503C2.26596 14.4909 2.47847 14.4014 2.70006 14.4014ZM28.6001 4.20038V16.1015C28.6001 17.0419 29.3468 17.8017 30.271 17.8017H31.942C32.8662 17.8017 33.613 17.0419 33.613 16.1015V5.05046C33.613 4.58291 33.237 4.20038 32.7775 4.20038H28.6001ZM30.271 15.2514C30.271 15.026 30.359 14.8098 30.5157 14.6503C30.6724 14.4909 30.8849 14.4014 31.1065 14.4014C31.3281 14.4014 31.5406 14.4909 31.6973 14.6503C31.854 14.8098 31.942 15.026 31.942 15.2514C31.942 15.4769 31.854 15.6931 31.6973 15.8525C31.5406 16.012 31.3281 16.1015 31.1065 16.1015C30.8849 16.1015 30.6724 16.012 30.5157 15.8525C30.359 15.6931 30.271 15.4769 30.271 15.2514Z"
-								fill="#464547" />
-						</svg>
+						class="w-[70px] h-[70px] rounded-full border-8  tracking-wider border-[#59467b] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
+						<Handshake class="w-7 h-7" />
 					</div>
 					<div class="flex justify-center pt-10">
-						<p class="text-[#59467b] text-center font-bold text-h5 uppercase tracking-wider leading-4">
+						<p class="text-[#42217c] text-center font-bold text-h5 uppercase tracking-wider leading-4">
 							Develop Multiyear Funder-Nonprofit Partnerships
 						</p>
 					</div>
@@ -43,12 +38,7 @@
 				<div class="h-[149px] flex justify-center rounded-md bg-white relative px-4 ">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#136096] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
-						{{ }} <svg width="15" height="24" viewBox="0 0 15 24" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M2 0.75H14.5L13.25 3.25H9.175C9.775 3.975 10.225 4.825 10.4875 5.75H14.5L13.25 8.25H10.75C10.5947 9.80828 9.9176 11.2684 8.82856 12.3938C7.73953 13.5191 6.30235 14.2437 4.75 14.45V14.5H3.875L11.375 23.25H8.25L0.75 14.5V12H3.875C6.075 12 7.9 10.375 8.2 8.25H0.75L2 5.75H7.825C7.125 4.275 5.625 3.25 3.875 3.25H0.75L2 0.75Z"
-								fill="#464547" />
-						</svg>
+						<IndianRupee class="w-7 h-7" />
 					</div>
 					<div class="flex justify-center pt-10">
 						<p class="text-[#136096] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
@@ -60,12 +50,7 @@
 				<div class="h-[149px] flex justify-center rounded-md bg-white relative px-4">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#029fd9] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
-						{{ }} <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M17.328 0.394218C17.5146 0.205934 17.7527 0.0776973 18.0119 0.0257985C18.2712 -0.0261003 18.5399 0.000680683 18.784 0.102739L22.5653 1.67994C22.8914 1.81538 23.1509 2.0753 23.2868 2.40276C23.4228 2.73022 23.4242 3.09854 23.2907 3.42702L21.7458 7.23055C21.646 7.47616 21.476 7.68646 21.2573 7.83487C21.0386 7.98327 20.7811 8.06309 20.5173 8.06424C20.2536 8.06539 19.9954 7.98781 19.7754 7.84132C19.5555 7.69483 19.3837 7.48601 19.2818 7.24128L18.672 5.77494L3.31556 12.3752C3.15447 12.4445 2.98139 12.4812 2.80621 12.4832C2.63103 12.4852 2.45717 12.4524 2.29456 12.3869C2.13196 12.3213 1.98379 12.2241 1.85852 12.1009C1.73324 11.9777 1.63332 11.8309 1.56444 11.6689C1.49557 11.5069 1.45911 11.3328 1.45712 11.1566C1.45514 10.9803 1.48768 10.8055 1.55289 10.6419C1.6181 10.4783 1.71469 10.3293 1.83716 10.2033C1.95963 10.0773 2.10558 9.97678 2.26667 9.9075L17.6427 3.30006L17.0436 1.86055C16.941 1.61532 16.9133 1.34496 16.964 1.08386C17.0146 0.822751 17.1414 0.582697 17.328 0.394218ZM22.2222 9.80021C22.6937 9.80021 23.1459 9.98861 23.4793 10.324C23.8127 10.6593 24 11.1142 24 11.5884V24.1059C24 24.343 23.9064 24.5704 23.7397 24.7381C23.573 24.9058 23.3469 25 23.1111 25H18.6667C18.4309 25 18.2048 24.9058 18.0381 24.7381C17.8714 24.5704 17.7778 24.343 17.7778 24.1059V11.5884C17.7778 11.1142 17.9651 10.6593 18.2985 10.324C18.6319 9.98861 19.0841 9.80021 19.5556 9.80021H22.2222ZM14.5902 13.0047C14.2566 12.67 13.8045 12.4822 13.3333 12.4825H10.6667C10.1952 12.4825 9.74299 12.6709 9.40959 13.0063C9.07619 13.3416 8.88889 13.7965 8.88889 14.2707V24.1059C8.88889 24.343 8.98254 24.5704 9.14924 24.7381C9.31594 24.9058 9.54203 25 9.77778 25H14.2222C14.458 25 14.6841 24.9058 14.8508 24.7381C15.0175 24.5704 15.1111 24.343 15.1111 24.1059V14.2707C15.1113 14.0356 15.0654 13.8028 14.976 13.5855C14.8866 13.3683 14.7555 13.1709 14.5902 13.0047ZM4.44444 15.1648C4.91594 15.1648 5.36813 15.3532 5.70152 15.6886C6.03492 16.024 6.22222 16.4788 6.22222 16.9531V24.1059C6.22222 24.343 6.12857 24.5704 5.96187 24.7381C5.79517 24.9058 5.56908 25 5.33333 25H0.888889C0.653141 25 0.427049 24.9058 0.26035 24.7381C0.0936505 24.5704 0 24.343 0 24.1059V16.9531C0 16.4788 0.187301 16.024 0.520699 15.6886C0.854097 15.3532 1.30628 15.1648 1.77778 15.1648H4.44444Z"
-								fill="#464547" />
-						</svg>
+						<ChartNoAxesCombined class="w-7 h-7" />
 					</div>
 					<div class="flex justify-center pt-10">
 						<p class="text-[#029fd9] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
@@ -76,13 +61,7 @@
 				<div class="h-[149px] flex rounded-md bg-white relative px-4">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#058248] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
-						{{ }} <svg width="26" height="25" viewBox="0 0 26 25" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M21.2687 0.264815C21.4185 0.38164 21.5397 0.531066 21.6231 0.701743C21.7065 0.872419 21.7499 1.05986 21.75 1.24982V3.87607C22.7466 4.89216 23.4803 6.13603 23.8875 7.49981H24.25C24.5815 7.49981 24.8995 7.63151 25.1339 7.86593C25.3683 8.10035 25.5 8.41829 25.5 8.74981V12.4998C25.4999 12.7319 25.4351 12.9594 25.3131 13.1567C25.191 13.3541 25.0164 13.5136 24.8088 13.6173L22.9887 14.5286C22.3541 15.5773 21.5062 16.481 20.5 17.1811V18.7498C20.5 19.0813 20.3683 19.3993 20.1339 19.6337C19.8995 19.8681 19.5815 19.9998 19.25 19.9998H15.5C15.1685 19.9998 14.8505 19.8681 14.6161 19.6337C14.3817 19.3993 14.25 19.0813 14.25 18.7498H13C13 19.0813 12.8683 19.3993 12.6339 19.6337C12.3995 19.8681 12.0815 19.9998 11.75 19.9998H8C7.66848 19.9998 7.35054 19.8681 7.11612 19.6337C6.8817 19.3993 6.75 19.0813 6.75 18.7498V17.1811C5.09016 16.026 3.88166 14.3316 3.33 12.3861C2.52091 12.1813 1.80324 11.7125 1.29064 11.0539C0.778043 10.3952 0.49981 9.58441 0.5 8.74981V8.12481C0.5 7.79329 0.631696 7.47535 0.866117 7.24093C1.10054 7.00651 1.41848 6.87481 1.75 6.87481C2.08152 6.87481 2.39946 7.00651 2.63388 7.24093C2.8683 7.47535 3 7.79329 3 8.12481V8.74981C2.99971 8.86474 3.01528 8.97915 3.04625 9.08982C3.27123 6.93825 4.28527 4.9463 5.89263 3.49845C7.49998 2.05061 9.5867 1.24952 11.75 1.24982H15.3462L20.1963 0.0373155C20.3806 -0.00875602 20.5729 -0.0122134 20.7588 0.0272071C20.9446 0.0666276 21.119 0.147888 21.2687 0.264815ZM18.625 6.24981C18.1277 6.24982 17.6508 6.44736 17.2992 6.79899C16.9475 7.15062 16.75 7.62753 16.75 8.12481C16.75 8.6221 16.9475 9.09901 17.2992 9.45064C17.6508 9.80227 18.1277 9.99981 18.625 9.99981C19.1223 9.99981 19.5992 9.80227 19.9508 9.45064C20.3025 9.09901 20.5 8.6221 20.5 8.12481C20.5 7.62753 20.3025 7.15062 19.9508 6.79899C19.5992 6.44736 19.1223 6.24982 18.625 6.24981Z"
-								fill="#464547" />
-						</svg>
-
+						<PiggyBank class="w-7 h-7" />
 					</div>
 					<div class="flex justify-center pt-10">
 						<p class="text-[#058248] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
@@ -93,12 +72,7 @@
 				<div class="h-[149px] flex rounded-md bg-white relative px-4 ">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#f38714] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
-						{{ }} <svg width="26" height="25" viewBox="0 0 26 25" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M0.5 24.25V21.75H11.75V7.78125C11.2083 7.59375 10.7396 7.30209 10.3438 6.90625C9.94792 6.51042 9.65625 6.04167 9.46875 5.5H5.5L9.25 14.25C9.25 15.2917 8.82292 16.1771 7.96875 16.9063C7.11458 17.6354 6.08333 18 4.875 18C3.66667 18 2.63542 17.6354 1.78125 16.9063C0.927083 16.1771 0.5 15.2917 0.5 14.25L4.25 5.5H1.75V3H9.46875C9.71875 2.27084 10.1667 1.67209 10.8125 1.20375C11.4583 0.735419 12.1875 0.500836 13 0.500002C13.8125 0.499169 14.5417 0.733752 15.1875 1.20375C15.8333 1.67375 16.2812 2.2725 16.5312 3H24.25V5.5H21.75L25.5 14.25C25.5 15.2917 25.0729 16.1771 24.2188 16.9063C23.3646 17.6354 22.3333 18 21.125 18C19.9167 18 18.8854 17.6354 18.0312 16.9063C17.1771 16.1771 16.75 15.2917 16.75 14.25L20.5 5.5H16.5312C16.3438 6.04167 16.0521 6.51042 15.6562 6.90625C15.2604 7.30209 14.7917 7.59375 14.25 7.78125V21.75H25.5V24.25H0.5ZM18.7812 14.25H23.4688L21.125 8.8125L18.7812 14.25ZM2.53125 14.25H7.21875L4.875 8.8125L2.53125 14.25ZM13 5.5C13.3542 5.5 13.6513 5.38 13.8913 5.14C14.1313 4.9 14.2508 4.60334 14.25 4.25C14.2492 3.89667 14.1292 3.6 13.89 3.36C13.6508 3.12 13.3542 3 13 3C12.6458 3 12.3492 3.12 12.11 3.36C11.8708 3.6 11.7508 3.89667 11.75 4.25C11.7492 4.60334 11.8692 4.90042 12.11 5.14125C12.3508 5.38209 12.6475 5.50167 13 5.5Z"
-								fill="#464547" />
-						</svg>
+						<Scale class="w-7 h-7" />
 					</div>
 					<div class="flex justify-center pt-10">
 						<p class="text-[#f38714] text-center font-bold text-h5 uppercase  tracking-wider leading-4 ">
@@ -110,12 +84,9 @@
 			</div>
 
 			<div class="flex justify-center text-h5 py-8 font-normal  tracking-wider ">
-				As funders recognize the importance of making grantmaking more supportive and inclusive, there is a
-				need
-				to pursue actionable strategies to advance on this journey. The Funder Practices Assistive Tool is
-				an
-				open-source and freely available tool to help assess how aligned your current funding practices are
-				with
+				As funders recognize the importance of making grantmaking more supportive and inclusive, there is a need
+				to pursue actionable strategies to advance on this journey. The Funder Practices Assistive Tool is an
+				open-source and freely available tool to help assess how aligned your current funding practices are with
 				the five PWIT principles and identify areas for further enhancement. Wherever you may be on your
 				journey, the tool provides next steps and recommendations for how you can make your grantmaking
 				practices more supportive and chart a path forward for more expansive forms of true cost investment.
@@ -153,11 +124,21 @@
 								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide">Part 1 -
 									Funding practices
 									diagnostic</h4>
-								<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider">
-									Take a quick diagnostic of your organization’s funding beliefs and practices to
-									identify specific principles that would be most relevant for you to enhance your
-									grantmaking.
-								</p>
+								<div class="max-w-lg mx-auto pt-2">
+									<p class="text-gray-700">
+									<p v-show="isExpanded"
+										class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider">
+										Take a quick diagnostic of your organization’s funding beliefs and practices
+										to
+										identify specific principles that would be most relevant for you to enhance
+										your
+										grantmaking.
+									</p>
+									</p>
+									<button @click="toggleExpand" class="pt-2 text-[#255B97] font-semibold text-h6">
+										{{ isExpanded ? "Read Less" : "Read More" }}
+									</button>
+								</div>
 							</div>
 						</div>
 						<div class="flex gap-2">
@@ -235,7 +216,8 @@
 									Guides
 								</h4>
 								<p class="text-trbase text-sm p-1  text-justify leading-5 tracking-wider">
-									Visit Link and fill out the short survey before proceeding to the principle-specific
+									
+									Visit <a href="http://pwit.localhost:8080/pwit/funder"  class="text-secondary hover:underline">Funder Diagnostic Link </a> and fill out the short survey before proceeding to the principle-specific
 									assistive guides,
 									to understand which principles might be most relevant for you. You may feel free to
 									skip this part and proceed directly to the guides.
@@ -373,7 +355,8 @@
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
 					<FolderLock class="text-green-500  " />
 				</div>
-				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet</h1>
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
+				</h1>
 				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
 					reprehenderit in voluptate velit esse cillum
 					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
@@ -383,7 +366,8 @@
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
 					<FolderLock class="text-green-500" />
 				</div>
-				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet</h1>
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
+				</h1>
 				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
 					reprehenderit in voluptate velit esse cillum
 					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
@@ -394,7 +378,8 @@
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
 					<FolderLock class="text-green-500" />
 				</div>
-				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet</h1>
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
+				</h1>
 				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
 					reprehenderit in voluptate velit esse cillum
 					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
@@ -430,6 +415,12 @@ import FooterNav from '../../components/FooterNav.vue';
 import PickAssessment from './PickAssessment.vue';
 import ContactUs from './ContactUs.vue';
 import { FolderLock } from 'lucide-vue-next'
+import { IndianRupee, Handshake, PiggyBank, ChartNoAxesCombined, Scale } from 'lucide-vue-next'
+
+const isExpanded = ref(false);
+const toggleExpand = () => {
+	isExpanded.value = !isExpanded.value;
+};
 // const call = inject('$call');
 // let faqs_list = ref([]);
 

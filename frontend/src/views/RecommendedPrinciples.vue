@@ -176,6 +176,7 @@ const get_result = async () => {
                     acc[prefix] = (acc[prefix] || 0) + value;
                     return acc;
                 }, {});
+                console.log(groupedSums,'group')
                 resolve(groupedSums);
             })
             .catch(error => {
@@ -218,6 +219,7 @@ function sortAndAssign(d) {
     d.forEach((item, index) => {
         item.group = index < 3 ? 'Recommended' : 'Additional';
     });
+    console.log(d, 'sorted')
     return d;
 }
 // Evaluate logic dynamically based on results
@@ -249,6 +251,7 @@ onMounted(async () => {
         let assessmentResult = await get_result()
         let logics = await get_recomm();
         let topMatching = evaluateLogic(logics, assessmentResult)?.[0];
+        console.log(topMatching, 'topMatching')
         if (!topMatching) {
             let updatedData = data?.value?.map(e => {
                 e.score = assessmentResult[e.code] || 0;

@@ -35,7 +35,6 @@ class AssessmentAPIs:
         else:
             return {'code': 200, 'data': {}}
         
-
     def get_assistive_result(doctype,session,user=None):
         assessments = []
         fields = []
@@ -60,6 +59,7 @@ class AssessmentAPIs:
         average=0
         data = {}
         details = {}
+        group = {}
         if len(assessments) > 0:
             assessment = assessments[0]
             for field in fields:
@@ -96,7 +96,8 @@ class AssessmentAPIs:
             
             if doctype:
                details = AssessmentAPIs.get_assistive_results_details(doctype)
-        return {'code': 200, 'data': {"average":average,"result":data,'details':details}}
+               group = AssessmentAPIs.get_section_by_result(doctype,session,user)
+        return {'code': 200, 'data': {"average":average,"result":data,'details':details,'group':group}}
 
     def get_assistive_results_details(doctype):
         name = frappe.get_all('Results and Recommendtions', filters={'ref_doctype': doctype}, pluck='name')
@@ -134,4 +135,68 @@ class AssessmentAPIs:
             else:
                 return {'code': 404, 'message': 'No draft found'}
 
-        
+    def get_section_by_result(doctype,session,user=None):
+        assessments = [] 
+        meta = frappe.get_meta(doctype)
+        if not user:
+            assessments = frappe.get_all(doctype,filters={'session':session,'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
+        else:
+            all_session = frappe.get_all('Session', {'user': user}, pluck='name',order_by='creation desc')
+            if len(all_session):
+                assessments = frappe.get_all(doctype,filters={'session':["IN", all_session],'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
+        data = {}
+        if len(assessments) > 0:
+            assessment = assessments[0]
+            final_fields = {}
+            sf = None   
+
+            for field in meta.fields:
+                if field.fieldtype == "Section Break":
+                    sf = field.fieldname
+                    final_fields[sf] = []  
+                elif field.fieldtype in ["Link", "Table MultiSelect"] and field.options in ["Field Options", "Options Child"]:
+                    if sf:
+                        final_fields[sf].append(field)  # Add field to the section if sf is set
+            data = {}
+            # Calculate scores
+            for section, fields in final_fields.items():
+                section_field = next((field for field in meta.fields if field.fieldname == section), None)
+                data[section_field.label] = 0
+                table_fields = list(filter(lambda field: field.get('fieldtype') == 'Table MultiSelect', fields))
+                link_fields = list(filter(lambda field: field.get('fieldtype') == 'Link' and field.get('hidden') == 0, fields))
+                if len(link_fields):
+                    options = frappe.db.get_list(
+                        'Field Options',
+                        filters={
+                            'ref_doctype': doctype,
+                            'field': ["IN", [field.fieldname for field in link_fields]]
+                        },
+                        fields=['name', 'field', 'score'],
+                        ignore_permissions=True
+                    )
+                    for option in options:
+                        if assessment.get(option.field) == option.name:
+                            data[section_field.label] += round(option.score/len(link_fields),1)
+                if len(table_fields):
+                    for field in table_fields:
+                        field_options = frappe.db.get_list(
+                            'Options Child',
+                            filters={
+                                'parent': assessment.name,
+                                'parentfield': field.get('fieldname')
+                            },
+                            pluck='field_options',
+                            ignore_permissions=True
+                        )
+                        options = frappe.db.get_list(
+                            'Field Options',
+                            filters={
+                                'ref_doctype': doctype,
+                                'name': ["IN", field_options]
+                            },
+                            fields=['name', 'field', 'score'],
+                            ignore_permissions=True
+                        )
+                        for option in options:
+                            data[section_field.label] += round(option.score/len(table_fields),1)
+            return data

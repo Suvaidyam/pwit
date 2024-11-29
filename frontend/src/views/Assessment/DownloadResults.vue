@@ -2,12 +2,12 @@
     <button @click="openDialog" :disabled="props.disabled"
         :class="[props.disabled?'cursor-not-allowed':'cursor-pointer']"
         class="border flex items-center justify-center gap-2 px-2 md:px-4 h-7 md:h-9 text-sm border-[#27853F] text-[#27853F] rounded-md">
-        <span class="hidden lg:block">Download Result </span>
+        <span class="hidden lg:block truncate">Download Result </span>
         <Download class="w-4" />
     </button>
     <!--  -->
     <TransitionRoot as="template" :show="open">
-        <Dialog class="relative z-30" @close="open = false">
+        <Dialog class="relative z-30">
             <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
                 leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
                 <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
