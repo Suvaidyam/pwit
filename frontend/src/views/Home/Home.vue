@@ -125,7 +125,6 @@
 									Funding practices
 									diagnostic</h4>
 								<div class="max-w-lg mx-auto pt-2">
-									<p class="text-gray-700">
 									<p v-show="isExpanded"
 										class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider">
 										Take a quick diagnostic of your organization’s funding beliefs and practices
@@ -134,11 +133,10 @@
 										your
 										grantmaking.
 									</p>
-									</p>
 									<button @click="toggleExpand" class="pt-2 text-[#255B97] font-semibold text-h6">
 										{{ isExpanded ? "Read Less" : "Read More" }}
 									</button>
-								</div>
+								</div> 
 							</div>
 						</div>
 						<div class="flex gap-2">
@@ -353,7 +351,8 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-4 px-4 md:px-8 lg:px-16 py-6">
 			<div class="flex flex-col gap-2">
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
-					<FolderLock class="text-green-500  " />
+					<img class="w-7  h-7" src="../../assets/file.png" alt="Description of image">
+
 				</div>
 				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
 				</h1>
@@ -364,7 +363,7 @@
 			</div>
 			<div class="flex flex-col gap-2">
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
-					<FolderLock class="text-green-500" />
+					<img class="w-7  h-7" src="../../assets/file.png" alt="Description of image">
 				</div>
 				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
 				</h1>
@@ -376,7 +375,7 @@
 			</div>
 			<div class="flex flex-col gap-2">
 				<div class="w-14 min-w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
-					<FolderLock class="text-green-500" />
+					<img class="w-7  h-7" src="../../assets/file.png" alt="Description of image">
 				</div>
 				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
 				</h1>
@@ -414,7 +413,6 @@ import { inject, ref, onMounted } from 'vue';
 import FooterNav from '../../components/FooterNav.vue';
 import PickAssessment from './PickAssessment.vue';
 import ContactUs from './ContactUs.vue';
-import { FolderLock } from 'lucide-vue-next'
 import { IndianRupee, Handshake, PiggyBank, ChartNoAxesCombined, Scale } from 'lucide-vue-next'
 
 const isExpanded = ref(false);
