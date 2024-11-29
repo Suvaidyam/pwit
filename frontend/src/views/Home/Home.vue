@@ -16,9 +16,12 @@
 				tool</h4>
 			<div class="flex justify-center font-normal text-sebase text-h5 text-center tracking-wider leading-5">
 				<p>Philanthropy has a significant opportunity to amplify the impact of their grantmaking by enabling a
-				stronger and more resilient nonprofit sector. <a href="https://www.bridgespan.org/our-global-reach/pay-what-it-takes-india-initiative" class="text-secondary hover:underline"> Bridgespan’s Pay-What-ItTakes India Initiative</a> has
-				identified five principles of effective grantmaking, rooted in trust, that funders can adopt to support
-				strong, resilient nonprofit partners.</p>
+					stronger and more resilient nonprofit sector. <a
+						href="https://www.bridgespan.org/our-global-reach/pay-what-it-takes-india-initiative"
+						class="text-secondary hover:underline"> Bridgespan’s Pay-What-ItTakes India Initiative</a> has
+					identified five principles of effective grantmaking, rooted in trust, that funders can adopt to
+					support
+					strong, resilient nonprofit partners.</p>
 			</div>
 
 			<div
@@ -125,18 +128,18 @@
 									Funding practices
 									diagnostic</h4>
 								<div class="max-w-lg mx-auto pt-2">
-									<p v-show="isExpanded"
-										class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider">
-										Take a quick diagnostic of your organization’s funding beliefs and practices
-										to
-										identify specific principles that would be most relevant for you to enhance
-										your
-										grantmaking.
+									<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider">
+										<span v-if="readmore.one">Take a quick
+											diagnostic of your organization’s funding beliefs and practices
+											to
+											identify specific principles that would be most relevant for you to enhance
+											your
+											grantmaking.</span>
+										<span class="text-secondary text-h6 cursor-pointer font-bold"
+											@click="readmore.one = !readmore.one">{{ readmore.one ? 'Read Less' : 'Read More'
+											}} </span>
 									</p>
-									<button @click="toggleExpand" class="pt-2 text-[#255B97] font-semibold text-h6">
-										{{ isExpanded ? "Read Less" : "Read More" }}
-									</button>
-								</div> 
+								</div>
 							</div>
 						</div>
 						<div class="flex gap-2">
@@ -163,14 +166,22 @@
 									Assistive guides for each
 									principle</h4>
 								<p class="text-trbase text-sm py-2  text-justify leading-5 tracking-wider">
-									Use these guides to map your current practices on the five PWIT principles, across
-									various elements spanning policy, approaches, communication, etc., to understand the
-									strengths and gaps in your funding practices. The guides for most principles are
-									rubric-based to accurately identify incremental shifts towards improving your
-									practices. Given the nascent stage of DEI practices in India, the DEI guide takes a
-									different form to allow you to reflect on how inclusive your grantmaking practices
-									are. At the end, you will receive a summary report with recommendations and relevant
-									resources that may be useful to move forward on your journey.
+									<span v-if="readmore.two">Use these guides to map your current practices on the five
+										PWIT principles, across
+										various elements spanning policy, approaches, communication, etc., to understand
+										the
+										strengths and gaps in your funding practices. The guides for most principles are
+										rubric-based to accurately identify incremental shifts towards improving your
+										practices. Given the nascent stage of DEI practices in India, the DEI guide
+										takes a
+										different form to allow you to reflect on how inclusive your grantmaking
+										practices
+										are. At the end, you will receive a summary report with recommendations and
+										relevant
+										resources that may be useful to move forward on your journey.</span>
+									<span class="text-secondary text-h6 cursor-pointer font-bold"
+										@click="readmore.two = !readmore.two">{{ readmore.eight ? 'Read Less' : 'Read More' }}
+									</span>
 								</p>
 							</div>
 						</div>
@@ -214,11 +225,19 @@
 									Guides
 								</h4>
 								<p class="text-trbase text-sm p-1  text-justify leading-5 tracking-wider">
-									
-									Visit <a href="http://pwit.localhost:8080/pwit/funder"  class="text-secondary hover:underline">Funder Diagnostic Link </a> and fill out the short survey before proceeding to the principle-specific
-									assistive guides,
-									to understand which principles might be most relevant for you. You may feel free to
-									skip this part and proceed directly to the guides.
+									<span v-if="readmore.three"> 
+										Visit <a href="http://pwit.localhost:8080/pwit/funder"
+											class="text-secondary hover:underline">Funder Diagnostic Link </a> and fill
+										out
+										the short survey before proceeding to the principle-specific
+										assistive guides,
+										to understand which principles might be most relevant for you. You may feel free
+										to
+										skip this part and proceed directly to the guides.
+									</span>
+									<span class="text-secondary text-h6 cursor-pointer font-bold"
+										@click="readmore.three = !readmore.three">{{ readmore.three ? 'Read Less' : 'Read More' }}
+									</span>
 								</p>
 							</div>
 						</div>
@@ -237,11 +256,16 @@
 									the Tool in One Session
 								</h4>
 								<p class="text-trbase text-sm p-1  text-justify leading-5 tracking-wider">
-									The tool is designed to be completed in one session; however, you can pause and
+									<span v-if="readmore.four">
+										The tool is designed to be completed in one session; however, you can pause and
 									return to this later. Please do not close the browser window as results for
 									completed sessions will not be saved. You will be provided the opportunity to email
 									the results to yourself at the end of Part 1 and after completing each
 									principle-level section in Part 2.
+									</span>
+									<span class="text-secondary text-h6 cursor-pointer font-bold"
+										@click="readmore.four = !readmore.four">{{ readmore.four ? 'Read Less' : 'Read More' }}
+									</span>
 								</p>
 							</div>
 						</div>
@@ -260,13 +284,16 @@
 									Level 1 and 2 Ratings in
 									Part 2</h4>
 								<p class="text-trbase text-sm p-1  text-justify leading-5 tracking-wider">
-									As you go through Part 2 of the tool, it is possible that you will have certain
-									Level 1 and 2 ratings.
-									Few will achieve Level 4, and in some cases, Level 4 is not the desired end state.
+									<span v-if="readmore.five"> As you go through Part 2 of the tool, it is possible that you will have certain
+									Level 1 and 2 ratings. Few will achieve Level 4, and in some cases, Level 4 is not the desired end state.
+									 </span>
+									<span class="text-secondary text-h6 cursor-pointer font-bold"
+										@click="readmore.five = !readmore.five">{{ readmore.five ? 'Read Less' : 'Read More' }}
+									</span>
 								</p>
 							</div>
 						</div>
-						<div class="flex gap-4">
+						<div class="flex gap-2">
 							<div class="w-10 min-w-10 h-10 flex items-center justify-center rounded-full bg-gray-100">
 								<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -274,18 +301,22 @@
 										d="M1.5 0C1.10218 0 0.720644 0.158036 0.43934 0.43934C0.158035 0.720645 0 1.10218 0 1.5V12C0 12.3978 0.158035 12.7794 0.43934 13.0607C0.720644 13.342 1.10218 13.5 1.5 13.5H12C12.3978 13.5 12.7794 13.342 13.0607 13.0607C13.342 12.7794 13.5 12.3978 13.5 12V1.5C13.5 1.10218 13.342 0.720645 13.0607 0.43934C12.7794 0.158036 12.3978 0 12 0H1.5ZM4.125 3.75C3.82663 3.75 3.54048 3.86853 3.3295 4.07951C3.11853 4.29048 3 4.57663 3 4.875C3 5.17337 3.11853 5.45952 3.3295 5.67049C3.54048 5.88147 3.82663 6 4.125 6H9.375C9.67337 6 9.95952 5.88147 10.1705 5.67049C10.3815 5.45952 10.5 5.17337 10.5 4.875C10.5 4.57663 10.3815 4.29048 10.1705 4.07951C9.95952 3.86853 9.67337 3.75 9.375 3.75H4.125ZM3 8.625C3 8.32663 3.11853 8.04048 3.3295 7.82951C3.54048 7.61853 3.82663 7.5 4.125 7.5H9.375C9.67337 7.5 9.95952 7.61853 10.1705 7.82951C10.3815 8.04048 10.5 8.32663 10.5 8.625C10.5 8.92337 10.3815 9.20952 10.1705 9.42049C9.95952 9.63147 9.67337 9.75 9.375 9.75H4.125C3.82663 9.75 3.54048 9.63147 3.3295 9.42049C3.11853 9.20952 3 8.92337 3 8.625Z"
 										fill="#27853F" />
 								</svg>
-
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide"> Generate a
+								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide">Generate a
 									Summary Report Upon
 									Completion
 								</h4>
 								<p class="text-sm p-1 text-trbase text-justify leading-5 tracking-wider">
-									Upon completion, you will have the option of generating a summary report which
+									<span v-if="readmore.sex">
+										Upon completion, you will have the option of generating a summary report which
 									provides an overview of your assessment and
 									recommendations to strengthen your practices. Please save a copy of the report to
 									preserve it.
+									</span>
+									<span class="text-secondary text-h6 cursor-pointer font-bold"
+										@click="readmore.sex = !readmore.sex">{{ readmore.sex ? 'Read Less' : 'Read More' }}
+									</span>
 								</p>
 							</div>
 						</div>
@@ -305,8 +336,11 @@
 									Discussions and
 									Team Conversations on Improving Grantmaking</h4>
 								<p class="text-sm p-1 text-trbase text-justify">
-									We encourage you to use the insights for strategic discussions on enhancing your
-									grantmaking as well as in conversations with your teams.
+									<span v-if="readmore.seven">We encourage you to use the insights for strategic discussions on enhancing your
+										grantmaking as well as in conversations with your teams.</span>
+									<span class="text-secondary text-h6 cursor-pointer font-bold"
+										@click="readmore.seven = !readmore.seven">{{ readmore.seven ? 'Read Less' : 'Read More' }}
+									</span>
 								</p>
 							</div>
 						</div>
@@ -325,11 +359,14 @@
 									Responses Are Confidential
 								</h4>
 								<p class="text-sm p-1 text-trbase text-justify leading-5 tracking-wider">
-									Your responses are confidential and protected and may only be seen by the
+									<span v-if="readmore.eight" :class="['transition ease-in-out delay-150']">Your responses are confidential and protected and may only be seen by the
 									development team.
 									Any trends interfered from this data will only be made at an aggregate level, based
 									on type of funder (i.e., CSR, Global Foundation,
-									Domestic Foundation).
+									Domestic Foundation).</span>
+									<span class="text-secondary text-h6 cursor-pointer font-bold"
+										@click="readmore.eight = !readmore.eight">{{ readmore.eight ? 'Read Less' : 'Read More' }}
+									</span>
 								</p>
 							</div>
 						</div>
@@ -415,12 +452,17 @@ import PickAssessment from './PickAssessment.vue';
 import ContactUs from './ContactUs.vue';
 import { IndianRupee, Handshake, PiggyBank, ChartNoAxesCombined, Scale } from 'lucide-vue-next'
 
-const isExpanded = ref(false);
-const toggleExpand = () => {
-	isExpanded.value = !isExpanded.value;
-};
 // const call = inject('$call');
-// let faqs_list = ref([]);
+let readmore = ref({
+	one: false,
+	two: false,
+	three: false,
+	four: false,
+	five: false,
+	six: false,
+	seven: false,
+	eight: false,
+});
 
 // const get_faqs = async () => {
 // 	const res = await call('pwit.controllers.api.get_faq', {});
