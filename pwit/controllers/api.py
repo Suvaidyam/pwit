@@ -3,6 +3,7 @@ from pwit.controllers.auth import AuthAPIs
 from pwit.controllers.left_menu import LeftMenuAPIs
 from pwit.controllers.assessment import AssessmentAPIs
 from pwit.controllers.form import FormAPIs
+from pwit.controllers.results import Result
 
 @frappe.whitelist(allow_guest=True)
 def create_session():
@@ -101,3 +102,7 @@ def send_custom_welcome_email(doc):
 
 def reset_custom_password(doc, send_email=True):
     AuthAPIs.reset_custom_password_method(doc, send_email)
+
+@frappe.whitelist(allow_guest=True)
+def result_download():
+    return Result.download_results()
