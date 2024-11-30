@@ -25,10 +25,10 @@
                                 </div>
                                 <div class=" flex justify-center items-center pt-4 relative">
                                     <div>
-                                        <label for="upload" :class="isReadonly ? '' : ' cursor-pointer border-[#255B97] border-4'"
+                                        <label for="upload"
+                                            :class="isReadonly ? '' : ' cursor-pointer border-[#255B97] border-4'"
                                             class="w-24 h-24 rounded-full bg-slate-300 flex items-center justify-center relative">
-                                            <img v-if="formData.user_image"
-                                                :src="formData.user_image" alt="User Image"
+                                            <img v-if="formData.user_image" :src="formData.user_image" alt="User Image"
                                                 class="w-full h-full rounded-full object-cover" />
                                             <p class="text-h2" v-else>{{ formData.full_name?.[0]?.toUpperCase() }}</p>
                                         </label>
@@ -41,9 +41,7 @@
                                         </label>
                                         <input v-model="formData.full_name" id="full_name" type="text"
                                             placeholder="Enter Full Name"
-                                            :class="isReadonly ? 'border-gray-300 text-gray-500' : 'border-[#255B97] text-gray-900'"
-                                            class="w-full px-3 py-2 border-b  bg-[#f3f4f8] shadow-sm outline-none"
-                                            :readonly="isReadonly">
+                                            class="w-full px-3 py-2 border-b  bg-[#f3f4f8] shadow-sm outline-none">
                                     </div>
                                     <div>
                                         <label for="mobile_no" class="block text-gray-800 text-sm pb-2">
@@ -51,9 +49,7 @@
                                         </label>
                                         <input v-model="formData.mobile_no" id="mobile_no" type="text"
                                             placeholder="Enter your Mobile No. "
-                                            :class="isReadonly ? 'border-gray-300 text-gray-400' : 'border-[#255B97] text-gray-900'"
-                                            class="w-full px-3 py-2 border-b  bg-[#f3f4f8]  shadow-sm outline-none"
-                                            :readonly="isReadonly">
+                                            class="w-full px-3 py-2 border-b  bg-[#f3f4f8]  shadow-sm outline-none">
                                     </div>
                                     <div>
                                         <label for="email" class="block text-gray-800 text-sm pb-2">
@@ -99,9 +95,6 @@ const props = defineProps({
         default: false
     }
 })
-// const Editable = () => {
-//     isReadonly.value = !isReadonly.value;
-// };
 
 // const imageUpload = async (event) => {
 //     const file = event.target.files[0];

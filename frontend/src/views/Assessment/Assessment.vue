@@ -1,10 +1,16 @@
 <template>
     <div class="p-4 w-full h-screen">
         <Breadcrumb />
-        <div class="flex items-center gap-3">
-            <h1 class="text-h2 font-serif font-semibold text-primary">{{ title }}</h1>
-            <p class="w-16 py-1 flex items-center justify-center rounded-2xl text-red-700 bg-red-100 font-bold"
-                v-if="Object.keys(initialData).length">Draft</p>
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <h1 class="text-h2 font-serif font-semibold text-primary">{{ title }}</h1>
+                <p class="w-16 py-1 flex items-center justify-center rounded-2xl text-red-700 bg-red-100 font-bold"
+                    v-if="Object.keys(initialData).length">Draft</p>
+            </div>
+            <button v-if="Object.keys(results).length" @click="() => router.push(`${current_path}/results`)"
+                class="border flex items-center gap-2 text-secondary border-[#255B97] rounded-md h-9 px-4 text-sm">
+                View Results <FileSearch2 class="w-4"/>
+            </button>
         </div>
         <transition name="fade" mode="out-in">
             <div class="w-full h-full">
@@ -35,13 +41,18 @@ const store = inject('store');
 const auth = inject('$auth');
 const call = inject('$call');
 const initialData = ref({});
-
-watch(route, (newVal, oldVal) => {
+const results = ref({});
+import {FileSearch2} from 'lucide-vue-next'
+watch(route, (oldVal,newVal) => {
     title.value = splitAtSecondCapital(newVal.name)
-    current_path.value = oldVal.path
+    current_path.value = newVal.path
     if (auth.isLoggedIn) {
         get_save_as_draft();
     }
+})
+watch(()=>title.value, async (newVal) => {
+    await get_results();
+    title.value = newVal
 })
 const handleSubmit = async (formData) => {
     try {
@@ -78,21 +89,22 @@ const get_save_as_draft = async () => {
     }
 }
 
-const get_results=async()=>{
+const get_results = async () => {
     try {
         let res = await call('pwit.controllers.api.get_assistive_result', {
             doctype: title.value,
             session: store.session,
-            user:auth.cookie.user_id!=='Guest'?auth.cookie.user_id:''
+            user: auth.cookie.user_id !== 'Guest' ? auth.cookie.user_id : ''
         })
-        if(res.code===200){
+        if (res.code === 200) {
             let re_attempt = localStorage.getItem('re_attempt');
-            if(Object.keys(res.data.result).length && !re_attempt){
+            results.value = res.data.result;
+            if (Object.keys(res.data.result).length && !re_attempt) {
                 router.push(`${current_path.value}/results`);
             }
         }
     } catch (error) {
-        
+
     }
 }
 function splitAtSecondCapital(input) {

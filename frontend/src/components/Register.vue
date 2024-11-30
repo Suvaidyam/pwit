@@ -137,11 +137,7 @@ const register = async () => {
     if (!email.value) {
         emailEl.style.borderBottom = '1px solid red';
         valid = false;
-    }
-    if (!invalidName.value && !lengthExceeded.value) {
-        // console.log("Full Name submitted:", full_name.value);
-    }
-    return;
+    } 
     open.value = false;
     if (errorMessage.value == '') {
         loading.value = true;

@@ -52,39 +52,48 @@
    "fieldname": "fr_guidelines",
    "fieldtype": "Link",
    "label": "Do you have written guidelines that clearly stipulate the financial resilience support extended to nonprofit partners?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "description": " This can be through helping them diversify their funder base, supporting with financial planning, etc.",
    "fieldname": "fr_approaches_adopted_01",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Do you help nonprofit partners build their resilience through non- financial support? ",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "description": "This can be through the transfer of surplus that the nonprofit accumulates, dedicated grants and/or the transfer of flexible funding towards reserves building.",
    "fieldname": "fr_approaches_adopted_02",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Do you provide a financial contribution(s) to nonprofit partners to help them build reserves? ",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "fr_communication_channels_01",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "How are your guidelines on financial resilience support communicated internally?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "fr_communication_channels_02",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "How are your guidelines on financial resilience support communica ted to nonprofits (current and potential) and the wider sector?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-27 18:37:54.898785",
+ "modified": "2024-11-30 15:31:52.807766",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Financial Resilience",
