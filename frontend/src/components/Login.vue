@@ -9,7 +9,7 @@
                     information to continue </p>
             </div>
         </div>
-        <div class="flex flex-col gap-8 pt-4">
+        <div class="flex flex-col gap-4 pt-4">
             <div class="flex flex-col gap-2 w-full relative">
                 <label for="" class="text-sm text-tatary">Email Address
                     <span class="text-red-500"> *</span>
@@ -21,25 +21,25 @@
                     <p v-if="errorMessage" class="text-sm text-red-600">{{ errorMessage }}</p>
                 </div>
             </div>
-            <div class="flex flex-col gap-2 w-full relative">
+            <div class="flex flex-col gap-2 w-full relative pt-2">
                 <label for="" class="text-sm text-tatary">Password
                     <span class="text-red-500"> *</span>
                 </label>
                 <input @keydown.enter="login" id="passwordInputId" v-model="password"
                     :type="show_pass ? 'text' : 'password'"
                     class="outline-none w-full border-b-2 bg-gray-50 text-sm px-3 h-12 text-h5" placeholder="******">
-                <span class="absolute right-2 top-10 font-semibold text-gray-500 text-xs cursor-pointer"
+                <span class="absolute right-2 top-12 font-semibold text-gray-500 text-xs cursor-pointer"
                     @click="show_pass = !show_pass">
                     <EyeOff class="w-5 h-5 text-gray-500" v-if="show_pass" />
                     <Eye class="w-5 h-5 text-gray-500" v-else />
                 </span>
             </div>
-            <div class="flex justify-between py-3">
+            <div class="flex justify-between py-2">
                 <div class="flex items-center gap-2">
                     <input v-model="remember" type="checkbox" id="remember" class="h-4 w-4" />
                     <label for="remember" class="text-sm text-gray-500">Remember me</label>
                 </div>
-                <p @click="store.isForgetPas = true" class="text-green-400 text-sm cursor-pointer">Forgot Password?</p>
+                <p @click="store.isForgetPas = true" class="text-blue-600 text-sm cursor-pointer">Forgot Password?</p>
             </div>
             <div class="w-full border-b h-14">
                 <button :disabled="isValid ? false : false" type="button"
