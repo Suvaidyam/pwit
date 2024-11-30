@@ -59,43 +59,53 @@
    "fieldname": "od_guidelines",
    "fieldtype": "Link",
    "label": "Do you have written guidelines that  clearly states the  organisational development (OD)  support available to  nonprofit partners? ",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "od_budget_allocation",
    "fieldtype": "Link",
    "label": "Do you provide OD  grants to nonprofit  partners?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "od_approaches_adopted_01",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "What are your  preferred pathways  to extend OD grants  to your nonprofit  partners?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "od_approaches_adopted_02",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Who decides the OD  needs of nonprofit  partners? How  consultative is your  approach?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "od_communication_channels_01",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "How are your  guidelines on OD support  communicated  internally?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "od_communication_channels_02",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "How are your  guidelines on OD support communica ted to nonprofits (current and  potential) and the  wider sector?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-27 18:26:52.115511",
+ "modified": "2024-11-30 15:27:20.304571",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Organization Development",
