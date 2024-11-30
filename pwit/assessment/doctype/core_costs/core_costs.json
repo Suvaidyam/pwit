@@ -41,20 +41,26 @@
    "description": "Are these guidelines flexible and adaptable based on context and need?",
    "fieldname": "cc_guidelines",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Do you have written guidelines that clearly stipulate the core cost3 support that is extended to nonprofit partners? ",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "cc_approaches_adopted_01",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "What approach have you adopted for providing core- cost support to nonprofit partners? How consultative is your approach? ",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "cc_approaches_adopted_02",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Does your approach allow room for nonprofit partners to negotiate the core cost support provided?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "channels_of_communication_section",
@@ -64,14 +70,17 @@
   {
    "fieldname": "cc_communication_channels_01",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "How are your guidelines on core cost support communicated internally?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "cc_communication_channels_02",
    "fieldtype": "Link",
    "label": "How are your guidelines on core cost support communica ted to nonprofits (current and potential) and the wider sector? ",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "session",
@@ -84,7 +93,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-27 18:18:55.853924",
+ "modified": "2024-11-30 15:30:45.404602",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Core Costs",

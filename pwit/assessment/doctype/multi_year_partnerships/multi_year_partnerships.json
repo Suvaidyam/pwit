@@ -45,8 +45,10 @@
   {
    "fieldname": "myp_guidelines",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Do you have written guidelines that enable multiyear partnerships?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "annual_budget_allocation_section",
@@ -56,8 +58,10 @@
   {
    "fieldname": "myp_budget_allocation",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Do you provide multiyear grants (within any relevant legal parameters) to nonprofit partners?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "approaches_adopted_section",
@@ -67,20 +71,25 @@
   {
    "fieldname": "myp_approaches_adopted_01",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "How intentional are you in forming multiyear partnerships?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "myp_approaches_adopted_02",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Do you have well-defined eligibility criteria for multiyear partnerships?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "myp_approaches_adopted_03",
    "fieldtype": "Link",
    "label": "What are the criteria to renew/retain partnerships? ",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "channels_of_communication_section",
@@ -91,19 +100,21 @@
    "fieldname": "myp_communication_channels_01",
    "fieldtype": "Link",
    "label": "How is your approach to multiyear partnerships communicated internally?",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   },
   {
    "fieldname": "myp_communication_channels_02",
    "fieldtype": "Link",
    "label": "How are your guidelines on multiyear partnerships communicated to nonprofits (current and potential) and the wider sector? ",
-   "options": "Field Options"
+   "options": "Field Options",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-29 13:35:26.628841",
+ "modified": "2024-11-30 15:26:27.846813",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Multi-year Partnerships",
