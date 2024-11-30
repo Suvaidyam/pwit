@@ -45,3 +45,6 @@ class FormAPIs:
             else:
                 draft = {}
         return {'code': 200, 'data': draft}
+    
+    def get_funder_type():
+        return frappe.get_all('Funder Type', pluck='name', ignore_permissions=True)

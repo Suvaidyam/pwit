@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-30 11:21:43.480745",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "funder_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "funder_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Funder Type",
+   "options": "Funder Type",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-30 11:23:02.982167",
+ "modified_by": "Administrator",
+ "module": "pwit",
+ "name": "Funder Type Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

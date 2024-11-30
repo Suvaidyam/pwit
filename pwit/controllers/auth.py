@@ -100,3 +100,36 @@ class AuthAPIs:
         url = "/pwit/update-password?key=" + key
         link = get_url(url)
         return link
+    
+    def save_user_details(data,session):  
+        if session:
+            doc = frappe.get_doc('Session', session)
+            doc.designation = data.get('designation')
+            doc.annual_budget = data.get('annual_budget')
+            for item in data.get('funderType'):
+                doc.append('funder_type', {'funder_type': item})
+            doc.save(ignore_permissions=True)
+            return {'code': 200, 'data': doc}
+        else:
+            return {'code': 400, 'msg': 'Session not found'}
+        
+    def check_user_details(session):  
+        details = {}
+        session_exits = frappe.get_all('Session', filters={'name': session,'designation':['is', 'set']}, pluck='name',order_by='creation desc',  limit_page_length=1,ignore_permissions=True )
+        if frappe.session.user and not session_exits:
+            details_exits = frappe.get_all('Session', filters={'user': frappe.session.user,'designation':['is', 'set']}, pluck='name',order_by='creation desc',  limit_page_length=1,ignore_permissions=True )
+            if details_exits:
+                session_details = frappe.get_doc('Session', details_exits[0])
+                if session_details:
+                    details = frappe.get_doc('Session', session)
+                    details.designation = session_details.get('designation')
+                    details.annual_budget = session_details.get('annual_budget')
+                    for item in session_details.get('funder_type'):
+                        details.append('funder_type', {'funder_type': item.funder_type})
+                    details.save(ignore_permissions=True)
+                return {'code': 200, 'data': details}
+            else:
+                return {'code': 400, 'msg': 'Session not found'}
+        else:
+            return {'code': 200, 'data':{},'msg':'Already set'}
+       
