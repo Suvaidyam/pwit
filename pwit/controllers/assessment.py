@@ -1,5 +1,6 @@
 import frappe
 from frappe.model.docstatus import DocStatus
+from pwit.controllers.form import FormAPIs
 
 class AssessmentAPIs:
     def question_list(doctype):
@@ -38,6 +39,7 @@ class AssessmentAPIs:
     def get_assistive_result(doctype,session,user=None):
         assessments = []
         fields = []
+        draft = {}
         current_section = None
         meta = frappe.get_meta(doctype)
         for field in meta.fields: 
@@ -98,7 +100,9 @@ class AssessmentAPIs:
             if doctype:
                details = AssessmentAPIs.get_assistive_results_details(doctype)
                group = AssessmentAPIs.get_section_by_result(doctype,session,user)
-        return {'code': 200, 'data': {"average":average,"result":data,'details':details,'group':group}}
+            if doctype and user:
+               draft = FormAPIs.get_save_as_draft(doctype,user) 
+        return {'code': 200, 'data': {"average":average,"result":data,'details':details,'group':group,'draft':draft}}
 
     def get_assistive_results_details(doctype):
         name = frappe.get_all('Results and Recommendtions', filters={'ref_doctype': doctype}, pluck='name')

@@ -7,7 +7,11 @@
  "field_order": [
   "user",
   "policyconsent",
-  "routes"
+  "routes",
+  "section_break_scvg",
+  "designation",
+  "annual_budget",
+  "funder_type"
  ],
  "fields": [
   {
@@ -27,12 +31,34 @@
    "fieldname": "policyconsent",
    "fieldtype": "Check",
    "label": "Policy/Consent"
+  },
+  {
+   "fieldname": "section_break_scvg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Autocomplete",
+   "label": "Designation",
+   "options": "Executive Director/Chief  Executive Officer/Head of CSR\nDirector of Philanthropy\nChief Operating Officer\nProgram Lead/Program Officer\nThird party supporting  funder organisation\nOther"
+  },
+  {
+   "fieldname": "annual_budget",
+   "fieldtype": "Autocomplete",
+   "label": "Annual budget",
+   "options": "Less than INR 10 Cr.\nINR 10-50 Cr.\nINR 51-100 Cr.\nINR 101-300 Cr.\nINR 301 and above"
+  },
+  {
+   "fieldname": "funder_type",
+   "fieldtype": "Table MultiSelect",
+   "label": "Funder Type",
+   "options": "Funder Type Child"
   }
  ],
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-26 12:06:11.156298",
+ "modified": "2024-11-30 11:42:54.623105",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Session",

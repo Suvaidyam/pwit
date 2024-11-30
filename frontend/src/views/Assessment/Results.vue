@@ -11,14 +11,22 @@
             </p>
         </div>
         <div class="flex justify-between items-center">
-            <h1 class="text-h3 md:text-h2 text-primary">Results and Recommendtions</h1>
+            <h1 class="text-h3 md:text-h2 text-primary truncate">Results and Recommendtions</h1>
             <div class="flex items-center gap-3">
-                <button v-if="recommendations.result && Object.keys(recommendations.result).length" class="border border-[#255B97] flex items-center gap-2 rounded-md h-7 md:h-9 text-secondary text-sm px-2 md:px-4"
-                    @click="re_attempt"><span class="hidden md:block">Retake</span> <RefreshCcw class="w-4"/> </button>
-                <DownloadResults :disabled="recommendations.result && Object.keys(recommendations.result).length > 0 ? false : true" />
+                <button v-if="recommendations.result && Object.keys(recommendations.result).length"
+                    class="border border-[#255B97] flex items-center gap-2 truncate rounded-md h-7 md:h-9 text-secondary text-sm px-2 md:px-4"
+                    @click="re_attempt"><span class="hidden md:block">{{ Object.keys(recommendations?.draft?.data).length?'Continue Assessment':'Retake' }}</span>
+                    <ChevronRight class="w-4" v-if="Object.keys(recommendations?.draft?.data).length" />
+                    <RefreshCcw class="w-4" v-else />
+                </button>
+                <DownloadResults
+                    :ref_doctype="title == 'Multi Year Partnerships' ? 'Multi-year Partnerships' : title"
+                    :disabled="recommendations.result && Object.keys(recommendations.result).length > 0 ? false : true" />
             </div>
         </div>
-        <div class="w-full results-section" :class="recommendations.result && Object.keys(recommendations.result).length ? '' : 'h-full'" v-if="!loading">
+        <div class="w-full results-section"
+            :class="recommendations.result && Object.keys(recommendations.result).length ? '' : 'h-full'"
+            v-if="!loading">
             <div class="w-full" v-if="recommendations.result && Object.keys(recommendations.result).length">
                 <div class="w-full grid grid-cols-1 xl:grid-cols-2 gap-5 pt-4">
                     <div class="w-full  mx-auto">
@@ -83,32 +91,17 @@
                 </div>
                 <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] md:grid-cols-1  lg:grid-cols-1 gap-4 pt-4 w-full">
                     <!-- Recommended Actions Section -->
-                    <div class="w-full mx-auto">
-                        <p class="text-primary font-bold font-serif text-xl sm:text-2xl pb-4">
+                    <div class="w-full mx-auto h-96 relative overflow-y-auto">
+                        <p class="text-primary font-bold sticky top-0 bg-white font-serif text-xl sm:text-2xl pb-4">
                             Recommended Actions
                         </p>
-                        <div v-if="recommendations.details.recommended_actions" v-for="items in recommendations.details.recommended_actions" :key="items.name" class="pb-5">
+                        <div v-if="recommendations.details.recommended_actions"
+                            v-for="items in recommendations.details.recommended_actions" :key="items.name" class="pb-5">
                             <div
                                 class="flex justify-between items-center px-4 py-2 bg-[#e9eaec] text-h5 font-bold font-serif text-pbase">
                                 {{ items.title }}
                             </div>
                             <div class="pt-2" v-html="items.actions"></div>
-                            <!-- <div class="pt-2">
-                                <div v-for="item in action.items" :key="item.description" class="flex gap-4 pt-4">
-                                    <div class="w-7 h-7 flex justify-center items-center">
-                                        <svg class="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 16 16">
-                                            <path
-                                                d="M8 0L9.16938 5.17688L13.6569 2.34315L10.8231 6.83062L16 8L10.8231 9.16938L13.6569 13.6569L9.16938 10.8231L8 16L6.83062 10.8231L2.34315 13.6569L5.17688 9.16938L0 8L5.17688 6.83062L2.34315 2.34315L6.83062 5.17688L8 0Z"
-                                                fill="#255B97" />
-                                        </svg>
-                                    </div>
-                                    <p class="text-justify text-sm text-trbase font-normal">
-                                        <strong class="text-pbase">{{ item.title }}</strong>
-                                        {{ item.description }}
-                                    </p>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                     <!-- Useful Resources Section -->
@@ -132,16 +125,18 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full h-full flex items-center justify-center text-h2 text-gray-700" v-else>Results Not Found
+            <div class="w-full h-full flex flex-col items-center justify-center " v-else>
+                <img src="../../assets/no-results.png" class="w-40" alt="">
             </div>
         </div>
         <div class="w-full h-full flex justify-center items-center" v-if="loading">
             <div class="w-10 h-10 border-2 border-t-[4px] border-[#255B97] rounded-full animate-spin"></div>
         </div>
-        <div class="py-5 w-full">
-            <router-link :to="`/funder/${store?.nextPrinciple?.ref_doctype?.toLowerCase()?.split(' ').join('-')}`"
-                class="w-full md:w-auto py-3 px-6 bg-[#255B97] text-white rounded">
+        <div class="py-5">
+            <router-link v-if="store?.nextPrinciple?.ref_doctype" :to="`/funder/${store?.nextPrinciple?.ref_doctype?.toLowerCase()?.split(' ').join('-')}`"
+                class="w-full flex justify-center md:w-fit gap- py-3 px-6 bg-[#255B97] text-white rounded">
                 Next Principle
+                <ChevronRight class="w-[18px]" />
             </router-link>
         </div>
     </div>
@@ -152,7 +147,7 @@
 import { ref, watch, inject, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router';
 import DownloadResults from './DownloadResults.vue';
-import { Text,RefreshCcw } from 'lucide-vue-next';
+import { Text, RefreshCcw, ChevronRight } from 'lucide-vue-next';
 import html2pdf from 'html2pdf.js';
 
 const route = useRoute()
@@ -189,8 +184,8 @@ const get_results = async () => {
         if (res.code === 200) {
             recommendations.value = res.data
             loading.value = false
-            res.data.details.recommended_actions.sort((a,b) => {
-                let scoreA = res.data.group[a.title] || Infinity; 
+            res.data.details.recommended_actions.sort((a, b) => {
+                let scoreA = res.data.group[a.title] || Infinity;
                 let scoreB = res.data.group[b.title] || Infinity;
                 return scoreA - scoreB;
             })
@@ -220,3 +215,33 @@ function splitAtSecondCapital(input) {
 }
 
 </script>
+
+<style scoped>
+/* Styling for modern browsers */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f4f4;
+    /* Background of the scrollbar track */
+}
+
+/* ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+    border: 4px solid #f4f4f4;
+} */
+
+/* Dark mode alternative */
+/* ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+} */
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #255B97 #f4f4f4;
+}
+</style>
