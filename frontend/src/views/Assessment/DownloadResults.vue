@@ -3,7 +3,10 @@
         :class="[props.disabled ? 'cursor-not-allowed' : 'cursor-pointer']"
         class="border flex items-center justify-center gap-2 px-2 md:px-4 h-7 md:h-9 text-sm border-[#27853F] text-[#27853F] rounded-md">
         <span class="hidden lg:block truncate">Download Result </span>
-        <Download class="w-4" />
+        <div class="h-5 w-5"  v-if="down_loading">
+            <div class="animate-spin h-full w-full rounded-full border-[3px] border-t-[#002C77] border-b-[#255B97]"></div>
+        </div>
+        <Download class="w-4" v-else/>
     </button>
     <TransitionRoot as="template" :show="userDetailsPop">
         <Dialog class="relative z-30">
@@ -110,6 +113,7 @@ import {  X } from 'lucide-vue-next'
 const call = inject('$call')
 const store = inject('store')
 const userDetailsPop = ref(false)
+const down_loading = ref(false);
 const formData = ref({
     designation: '',
     funderType: [],
@@ -143,8 +147,14 @@ const submitSelection = async () => {
 const download_results = async () => {
     let value = await check_user_details()
     if (value) {
-        let res = await call('pwit.controllers.api.download_results', { ref_doctype: props.ref_doctype })
-        console.log(res)
+        down_loading.value = true
+        let link = document.createElement('a')
+        link.href = `/api/method/pwit.controllers.api.download_results?ref_doctype=${props.ref_doctype}`;
+        link.target = '_blank';
+        link.click()
+        setTimeout(() => {
+            down_loading.value = false
+        }, 500)
     }
 }
 const check_user_details = async () => {
