@@ -13,11 +13,11 @@
       <p class="w-16 py-1 flex items-center justify-center rounded-2xl text-red-700 bg-red-100 font-bold"
         v-if="Object.keys(initialData).length">Draft</p>
     </div>
-    <p class="text-sm px-4 md:px-8 lg:px-20   font-serif text-sebase font-normal">
+    <p class="text-h5 px-4 md:px-8 lg:px-20 font-serif text-sebase font-bold">
       Please select the degree to which your organization’s mindset and practices agree or disagree with the
       following statements:
     </p>
-    <div class="w-full flex flex-col gap-4 px-4 md:px-8 lg:px-20 py-5 mt-4 bg-gray-50">
+    <div class="w-full flex flex-col gap-4 px-4 md:px-8 lg:px-20 mt-4 ">
       <FormView :isRow="true" :initialData="initialData" :doctype="'Funder Diagnostic'" :onSubmit="handleSubmit" :isCard="true"
         :isDraft="true" :section="true" :save_as_draft="save_as_draft" />
     </div>

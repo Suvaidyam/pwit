@@ -21,7 +21,7 @@
                     class="w-full px-3 border-b bg-[#f3f4f8] border-gray-300   shadow-sm py-2 outline-none">
             </div>
             <div>
-                <label class="block text-gray-800 text-sm mb-2">Your Message</label>
+                <label class="block text-gray-800 text-sm mb-2">Your Message <span class="text-red-500"> *</span></label>
                 <textarea v-model="data.message" placeholder="Start writing from here"
                     class="w-full px-3 border-b bg-[#f3f4f8] border-gray-300   shadow-sm h-24 resize-none py-2  outline-none"></textarea>
             </div>
@@ -60,7 +60,7 @@ const sendMessage = async () => {
         fullName.style.borderBottom = '';
         email.style.borderBottom = '';
 
-        if (!fullName.value || !email.value) {
+        if (!fullName.value || !email.value || !data.value.message) {
             if (!fullName.value) {
                 fullName.style.borderBottom = '1px solid red';  
                 valid = false;
@@ -68,6 +68,11 @@ const sendMessage = async () => {
 
             if (!email.value) {
                 email.style.borderBottom = '1px solid red'; 
+                valid = false;
+            }
+
+            if (!data.value.message) {
+                toast.error('Please fill all the fields');
                 valid = false;
             }
             return; 
