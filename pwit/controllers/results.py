@@ -4,17 +4,31 @@ import frappe
 
 class Result:
  def download_results(doctype, session):
-    
+    conditions = {
+        1: {"width": "25%", "color": "#FF6464"},
+        2: {"width": "50%", "color": "#FF6464"},
+        3: {"width": "75%", "color": "#FFD23F"},
+        4: {"width": "100%", "color": "#337357"}
+    }
     user = None
     if frappe.session.user not in ["Administrator", "Guest"]:
         user = frappe.session.user
     try:
         doc = AssessmentAPIs.get_assistive_result(doctype, session, user)
         data = doc['data']['result']
+        result = [
+            {
+                "name": key,
+                "value": value,
+                "width": conditions[value]["width"],
+                "color": conditions[value]["color"]
+            }
+            for key, value in data.items()
+        ]
         if not data:
             frappe.throw(frappe._("No result data available for the provided session."))
         
-        html = frappe.render_template('pwit/templates/pages/Result.html', {"doc": data})
+        html = frappe.render_template('pwit/templates/pages/Result.html', {"doc": result})
         pdf = get_pdf(html, {
             "margin-top": "1mm",
             "margin-bottom": "1mm",
