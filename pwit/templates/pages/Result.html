@@ -6,6 +6,41 @@
     <title>Result Page</title>
 </head>
 <body>
-    <h1>{{doc}}</h1>
+    <table style="width: 100%; border-collapse: collapse; border: 1px solid;">
+        <thead style="background-color: #E0F4FB;">
+            <tr>
+                <th style="width: 50%; padding: 8px; text-align: left; font-family: serif; font-size: 16px; font-weight: bold; color: #000; border: 1px solid;">
+                    Parameters
+                </th>
+                <th style="width: 50%; padding: 8px; text-align: left; font-family: serif; font-size: 16px; font-weight: bold; color: #000; border: 1px solid;">
+                    Performance at that stage
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if doc %}
+                {% for key, value in doc.items() %}
+                    <tr style="border-bottom: 1px solid #ccc;">
+                        <td style="width: 50%; padding: 8px; font-family: Arial, sans-serif; font-size: 16px; color: #000; border: 1px solid #ccc;">
+                            {{ key }}
+                        </td>
+                        <td style="padding: 8px; border: 1px solid #ccc;">
+                            <div style="height: 16px; background-color: #E0E0E0; border-radius: 4px; overflow: hidden;">
+                                <div style="height: 100%;  background-color: #4CAF50; text-align: center; color: #fff; font-size: 12px;">
+                                    
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="2" style="padding: 16px; text-align: center; font-family: Arial, sans-serif; font-size: 16px; color: #666;">
+                        No data available
+                    </td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
 </body>
 </html>

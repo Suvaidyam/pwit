@@ -104,8 +104,8 @@ def reset_custom_password(doc, send_email=True):
     AuthAPIs.reset_custom_password_method(doc, send_email)
 
 @frappe.whitelist(allow_guest=True)
-def download_results(ref_doctype):
-    return Result.download_results(ref_doctype)
+def download_results(doctype, session):
+    return Result.download_results(doctype, session)
 
 @frappe.whitelist(allow_guest=True)
 def get_funder_type():
