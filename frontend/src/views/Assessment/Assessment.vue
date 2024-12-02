@@ -124,7 +124,6 @@ onMounted(async () => {
         }
     }
     if (auth.isLoggedIn) {
-        console.log('first')
         get_save_as_draft();
     }
 })

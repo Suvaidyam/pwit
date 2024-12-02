@@ -15,7 +15,9 @@
             <div class="flex items-center gap-3">
                 <button v-if="recommendations.result && Object.keys(recommendations.result).length"
                     class="border border-[#255B97] flex items-center gap-2 truncate rounded-md h-7 md:h-9 text-secondary text-sm px-2 md:px-4"
-                    @click="re_attempt"><span class="hidden md:block" v-if="recommendations?.draft?.data">{{ Object.keys(recommendations?.draft?.data).length?'Continue Assessment':'Retake' }}</span>
+                    @click="re_attempt">
+                    <span class="hidden md:block" v-if="recommendations?.draft?.data">Continue Assessment</span>
+                    <span class="hidden md:block" v-else>Retake</span>
                     <ChevronRight class="w-4" v-if="recommendations?.draft?.data && Object.keys(recommendations?.draft?.data).length" />
                     <RefreshCcw class="w-4" v-else />
                 </button>
