@@ -105,8 +105,8 @@
                         </div>
                     </div>
                     <!-- Useful Resources Section -->
-                    <div class="w-full mx-auto rounded-sm shadow-md px-4 py-2">
-                        <p class="text-primary font-bold font-serif text-xl sm:text-2xl pb-4">
+                    <div class="w-full mx-auto rounded-sm shadow-md px-4 pb-2 h-96 overflow-y-auto">
+                        <p class="text-primary sticky top-0 bg-white font-bold font-serif text-xl sm:text-2xl pb-4">
                             Useful Resources
                         </p>
                         <div v-for="resource in recommendations?.details?.useful_resources" :key="resource.title"
@@ -118,7 +118,7 @@
                                         fill="#27853F" />
                                 </svg>
                             </span>
-                            <a :href="resource.to" target="_blank" class="text-pbase text-h6 font-normal text-justify">
+                            <a :href="resource.to" target="_blank" class="text-pbase hover:text-blue-500 text-h6 font-normal text-justify">
                                 {{ resource.resources }}
                             </a>
                         </div>
@@ -148,7 +148,6 @@ import { ref, watch, inject, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router';
 import DownloadResults from './DownloadResults.vue';
 import { Text, RefreshCcw, ChevronRight } from 'lucide-vue-next';
-import html2pdf from 'html2pdf.js';
 
 const route = useRoute()
 const router = useRouter()
@@ -159,19 +158,6 @@ const recommendations = ref({});
 // const recommend_action = ref([]);
 const loading = ref(false);
 const title = ref(splitAtSecondCapital(route.path));
-
-const downloadPDF = () => {
-    const element = document.querySelector(".results-section");
-    const options = {
-        margin: 0.5,
-        filename: 'Results_and_Recommendations.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
-    };
-
-    html2pdf().set(options).from(element).save();
-};
 
 const get_results = async () => {
     loading.value = true
