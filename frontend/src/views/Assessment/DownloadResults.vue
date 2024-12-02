@@ -149,7 +149,7 @@ const download_results = async () => {
     if (value) {
         down_loading.value = true
         let link = document.createElement('a')
-        link.href = `/api/method/pwit.controllers.api.download_results?ref_doctype=${props.ref_doctype}`;
+        link.href = `/api/method/pwit.controllers.api.download_results?doctype=${props.ref_doctype}&session=${store.session}`;
         link.target = '_blank';
         link.click()
         setTimeout(() => {
