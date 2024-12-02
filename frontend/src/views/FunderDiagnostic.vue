@@ -66,6 +66,7 @@ const save_as_draft = async (formData) => {
     if (res.code === 200) {
       localStorage.removeItem('draft');
       toast.success('Draft saved successfully');
+      get_save_as_draft()
       return res;
     }
   } else {
