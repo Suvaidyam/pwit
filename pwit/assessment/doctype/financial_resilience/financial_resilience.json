@@ -20,13 +20,14 @@
   {
    "fieldname": "session",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Session",
    "options": "Session"
   },
   {
    "fieldname": "guidelines_section",
    "fieldtype": "Section Break",
-   "label": "Guidelines"
+   "label": "Policy guidelines"
   },
   {
    "fieldname": "approaches__adopted_section",
@@ -93,7 +94,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-30 15:31:52.807766",
+ "modified": "2024-12-03 14:54:23.854210",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Financial Resilience",
