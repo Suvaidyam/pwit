@@ -524,7 +524,7 @@
 		</div>
 
 		<div
-			class="flex flex-col sm:flex-row h-[470px]  items-center justify-center gap-4 px-4 pb-8 relative bg-gray-100 ">
+			class="flex flex-col sm:flex-row h-[500px]  items-center justify-center gap-4 px-4 pb-8 relative bg-gray-100 ">
 			<ContactUs />
 		</div>
 		<FooterNav />
@@ -586,3 +586,6 @@ let readmore = ref({
 	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s;
 }
 </style>
+
+
+
