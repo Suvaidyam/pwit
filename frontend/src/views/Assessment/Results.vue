@@ -16,7 +16,7 @@
                 <button v-if="recommendations.result && Object.keys(recommendations.result).length"
                     class="border border-[#255B97] flex items-center gap-2 truncate rounded-md h-7 md:h-9 text-secondary text-sm px-2 md:px-4"
                     @click="re_attempt">
-                    <span class="hidden md:block" v-if="recommendations?.draft?.data">Continue Assessment</span>
+                    <span class="hidden md:block" v-if="recommendations?.draft?.data && Object.keys(recommendations?.draft?.data).length">Continue Assessment</span>
                     <span class="hidden md:block" v-else>Retake</span>
                     <ChevronRight class="w-4" v-if="recommendations?.draft?.data && Object.keys(recommendations?.draft?.data).length" />
                     <RefreshCcw class="w-4" v-else />
@@ -97,7 +97,7 @@
                         <p class="text-primary font-bold sticky top-0 bg-white font-serif text-xl sm:text-2xl pb-4">
                             Recommended Actions
                         </p>
-                        <div v-if="recommendations.details.recommended_actions"
+                        <div v-if="recommendations?.details?.recommended_actions"
                             v-for="items in recommendations.details.recommended_actions" :key="items.name" class="pb-5">
                             <div
                                 class="flex justify-between items-center px-4 py-2 bg-[#e9eaec] text-h5 font-bold font-serif text-pbase">
