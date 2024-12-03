@@ -28,7 +28,7 @@
   {
    "fieldname": "core_cost_1",
    "fieldtype": "Link",
-   "label": "A lower core cost (administrative or support-function expenses not tied to a specific program)  means a nonprofit is more efficient",
+   "label": "A lower core cost (administrative or support-function expenses not tied to a specific program)  means a nonprofit is more efficient.",
    "options": "Field Options",
    "reqd": 1
   },
@@ -49,14 +49,14 @@
   {
    "fieldname": "fr_1",
    "fieldtype": "Link",
-   "label": "We encourage our nonprofit partners to create an operating surplus and transfer the surplus  to reserves",
+   "label": "We encourage our nonprofit partners to create an operating surplus and transfer the surplus  to reserves.",
    "options": "Field Options",
    "reqd": 1
   },
   {
    "fieldname": "core_cost_2",
    "fieldtype": "Link",
-   "label": "We rarely have a conversation with nonprofits partners to reduce core costs at the proposal stage ",
+   "label": "We rarely have a conversation with nonprofits partners to reduce core costs at the proposal stage.",
    "options": "Field Options",
    "reqd": 1
   },
@@ -64,49 +64,49 @@
    "description": "core-cost  support",
    "fieldname": "core_cost_3",
    "fieldtype": "Link",
-   "label": "We encourage our nonprofit partners to find alternative sources for covering their core costs rather  than asking us to increase our ",
+   "label": "We encourage our nonprofit partners to find alternative sources for covering their core costs rather  than asking us to increase our.",
    "options": "Field Options",
    "reqd": 1
   },
   {
    "fieldname": "dei_1",
    "fieldtype": "Link",
-   "label": "A  nonprofit\u2019s relationship with other credible funders is an important selection criterion for us ",
+   "label": "A  nonprofit\u2019s relationship with other credible funders is an important selection criterion for us.",
    "options": "Field Options",
    "reqd": 1
   },
   {
    "fieldname": "od_2",
    "fieldtype": "Link",
-   "label": "Nonprofits are able to do well even in the absence of organisational development ",
+   "label": "Nonprofits are able to do well even in the absence of organisational development.",
    "options": "Field Options",
    "reqd": 1
   },
   {
    "fieldname": "myp_2",
    "fieldtype": "Link",
-   "label": "We typically support programmes that show results within an annual funding cycle",
+   "label": "We typically support programmes that show results within an annual funding cycle.",
    "options": "Field Options",
    "reqd": 1
   },
   {
    "fieldname": "fr_2",
    "fieldtype": "Link",
-   "label": "Most nonprofits do not have the capabilities to manage reserves",
+   "label": "Most nonprofits do not have the capabilities to manage reserves.",
    "options": "Field Options",
    "reqd": 1
   },
   {
    "fieldname": "fr_3",
    "fieldtype": "Link",
-   "label": "We proactively introduce our nonprofit partners to other funders",
+   "label": "We proactively introduce our nonprofit partners to other funders.",
    "options": "Field Options",
    "reqd": 1
   },
   {
    "fieldname": "myp_3",
    "fieldtype": "Link",
-   "label": "The majority of our funding goes to nonprofit partners whom we have supported for a long period  of time",
+   "label": "The majority of our funding goes to nonprofit partners whom we have supported for a long period  of time.",
    "options": "Field Options",
    "reqd": 1
   },
@@ -114,7 +114,7 @@
    "description": "benefit all sections of the community equally",
    "fieldname": "dei_2",
    "fieldtype": "Link",
-   "label": "A special focus on marginalised communities is not necessary, a nonprofit\u2019s initiatives will typically  ",
+   "label": "A special focus on marginalised communities is not necessary, a nonprofit\u2019s initiatives will typically.  ",
    "options": "Field Options",
    "reqd": 1
   },
@@ -122,14 +122,14 @@
    "fieldname": "dei_3",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "The leadership composition does not matter as long as the nonprofit organisation is working on a  credible issue",
+   "label": "The leadership composition does not matter as long as the nonprofit organisation is working on a  credible issue.",
    "options": "Field Options",
    "reqd": 1
   },
   {
    "fieldname": "od_3",
    "fieldtype": "Link",
-   "label": "Organisational development funding does not contribute to social impact",
+   "label": "Organisational development funding does not contribute to social impact.",
    "options": "Field Options",
    "reqd": 1
   },
@@ -159,7 +159,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-27 13:46:40.692641",
+ "modified": "2024-12-03 11:31:34.347199",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Funder Diagnostic",
