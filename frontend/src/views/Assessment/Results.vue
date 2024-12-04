@@ -16,13 +16,15 @@
                 <button v-if="recommendations.result && Object.keys(recommendations.result).length"
                     class="border border-[#255B97] flex items-center gap-2 truncate rounded-md h-7 md:h-9 text-secondary text-sm px-2 md:px-4"
                     @click="re_attempt">
-                    <span class="hidden md:block" v-if="recommendations?.draft?.data && Object.keys(recommendations?.draft?.data).length">Continue Assessment</span>
+                    <span class="hidden md:block"
+                        v-if="recommendations?.draft?.data && Object.keys(recommendations?.draft?.data).length">Continue
+                        Assessment</span>
                     <span class="hidden md:block" v-else>Retake</span>
-                    <ChevronRight class="w-4" v-if="recommendations?.draft?.data && Object.keys(recommendations?.draft?.data).length" />
+                    <ChevronRight class="w-4"
+                        v-if="recommendations?.draft?.data && Object.keys(recommendations?.draft?.data).length" />
                     <RefreshCcw class="w-4" v-else />
                 </button>
-                <DownloadResults
-                    :ref_doctype="title == 'Multi Year Partnerships' ? 'Multi-year Partnerships' : title"
+                <DownloadResults :ref_doctype="title == 'Multi Year Partnerships' ? 'Multi-year Partnerships' : title"
                     :disabled="recommendations.result && Object.keys(recommendations.result).length > 0 ? false : true" />
             </div>
         </div>
@@ -85,7 +87,7 @@
                             <p class="text-primary font-bold font-serif text-2xl pb-4">
                                 {{ recommendations?.details?.title }}
                             </p>
-                            <p class="text-h6 text-trbase text-justify">
+                            <p class="text-sm text-trbase text-justify">
                                 {{ recommendations?.details?.description }}
                             </p>
                         </div>
@@ -120,7 +122,8 @@
                                         fill="#27853F" />
                                 </svg>
                             </span>
-                            <a :href="resource.to" target="_blank" class="text-pbase hover:text-blue-500 text-h6 font-normal text-justify">
+                            <a :href="resource.to" target="_blank"
+                                class="text-pbase hover:text-blue-500 text-h6 font-normal text-justify">
                                 {{ resource.resources }}
                             </a>
                         </div>
@@ -135,7 +138,8 @@
             <div class="w-10 h-10 border-2 border-t-[4px] border-[#255B97] rounded-full animate-spin"></div>
         </div>
         <div class="py-5">
-            <router-link v-if="store?.nextPrinciple?.ref_doctype" :to="`/funder/${store?.nextPrinciple?.ref_doctype?.toLowerCase()?.split(' ').join('-')}`"
+            <router-link v-if="store?.nextPrinciple?.ref_doctype"
+                :to="`/funder/${store?.nextPrinciple?.ref_doctype?.toLowerCase()?.split(' ').join('-')}`"
                 class="w-full flex justify-center md:w-fit gap- py-3 px-6 bg-[#255B97] text-white rounded">
                 Next Principle
                 <ChevronRight class="w-[18px]" />
@@ -177,6 +181,18 @@ const get_results = async () => {
                 let scoreB = res.data.group[b.title] || Infinity;
                 return scoreA - scoreB;
             })
+            setTimeout(() => {
+                const targetLi = document.querySelectorAll('ol');
+                const targetOl = document.querySelectorAll('li[data-list="unchecked"]');
+                if (targetLi) {
+                    targetLi.forEach((li) => {
+                        li.style.paddingLeft = '20px';
+                    });
+                    targetOl.forEach((ol) => {
+                        ol.style.listStyleType = 'circle';
+                    });
+                }
+            }, 1000)
         }
     } catch (error) {
         loading.value = false
