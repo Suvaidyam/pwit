@@ -176,11 +176,11 @@ const get_results = async () => {
         if (res.code === 200) {
             recommendations.value = res.data
             loading.value = false
-            res.data.details.recommended_actions.sort((a, b) => {
-                let scoreA = res.data.group[a.title] || Infinity;
-                let scoreB = res.data.group[b.title] || Infinity;
-                return scoreA - scoreB;
-            })
+            let actions = res?.data?.details?.recommended_actions
+            let groups = res?.data?.group
+            if (actions.length){
+                actions.sort((a, b) => groups[a.title] - groups[b.title]);
+            }
             setTimeout(() => {
                 const targetLi = document.querySelectorAll('ol');
                 const targetOl = document.querySelectorAll('li[data-list="unchecked"]');
