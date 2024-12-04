@@ -32,12 +32,12 @@
   {
    "fieldname": "approaches__adopted_section",
    "fieldtype": "Section Break",
-   "label": "Approaches  adopted"
+   "label": "Approaches adopted"
   },
   {
    "fieldname": "channels_of__communication_section",
    "fieldtype": "Section Break",
-   "label": "Channels of  communication"
+   "label": "Channels of communication"
   },
   {
    "fieldname": "amended_from",
@@ -94,13 +94,14 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-03 14:54:23.854210",
+ "modified": "2024-12-04 11:42:47.015306",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Financial Resilience",
  "owner": "Administrator",
  "permissions": [
   {
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
