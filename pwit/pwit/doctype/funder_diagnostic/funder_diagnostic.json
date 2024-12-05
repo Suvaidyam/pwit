@@ -61,10 +61,10 @@
    "reqd": 1
   },
   {
-   "description": "core-cost  support",
+   "description": "core-cost  support.",
    "fieldname": "core_cost_3",
    "fieldtype": "Link",
-   "label": "We encourage our nonprofit partners to find alternative sources for covering their core costs rather  than asking us to increase our.",
+   "label": "We encourage our nonprofit partners to find alternative sources for covering their core costs rather  than asking us to increase our",
    "options": "Field Options",
    "reqd": 1
   },
@@ -111,10 +111,10 @@
    "reqd": 1
   },
   {
-   "description": "benefit all sections of the community equally",
+   "description": "benefit all sections of the community equally.",
    "fieldname": "dei_2",
    "fieldtype": "Link",
-   "label": "A special focus on marginalised communities is not necessary, a nonprofit\u2019s initiatives will typically.  ",
+   "label": "A special focus on marginalised communities is not necessary, a nonprofit\u2019s initiatives will typically ",
    "options": "Field Options",
    "reqd": 1
   },
@@ -159,7 +159,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-03 11:31:34.347199",
+ "modified": "2024-12-05 15:40:36.210020",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Funder Diagnostic",
