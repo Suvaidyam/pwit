@@ -1,17 +1,21 @@
 <template>
     <div class="p-4 w-full h-screen">
         <Breadcrumb />
-        <div class="flex items-center justify-between">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
             <div class="flex items-center gap-3">
-                <h1 class="text-h2 font-serif font-semibold text-primary">{{ title }}</h1>
-                <p class="w-16 py-1 flex items-center justify-center rounded-2xl text-red-700 bg-red-100 font-bold"
+                <h1 class="text-h2 font-serif font-semibold text-primary truncate">{{ title }}</h1>
+                <p class=" w-16 py-1 text-center hidden md:block rounded-2xl text-red-700 bg-red-100 font-bold"
                     v-if="Object.keys(initialData).length">Draft</p>
             </div>
-            <button v-if="Object.keys(results).length" @click="() => router.push(`${current_path}/results`)"
-                class="border flex items-center gap-2 text-secondary border-[#255B97] rounded-md h-9 px-4 text-sm">
-                View Results
-                <FileSearch2 class="w-4" />
-            </button>
+            <div class="flex justify-between w-full md:w-auto">
+                <p class=" w-16 py-1 text-center block md:hidden rounded-2xl text-red-700 bg-red-100 font-bold"
+                    v-if="Object.keys(initialData).length">Draft</p>
+                <button v-if="Object.keys(results).length" @click="() => router.push(`${current_path}/results`)"
+                    class="border flex items-center gap-2 text-secondary border-[#255B97] rounded-md h-9 px-4 text-sm truncate">
+                    View Results
+                    <FileSearch2 class="w-4" />
+                </button>
+            </div>
         </div>
         <transition name="fade" mode="out-in">
             <div class="w-full h-full">
@@ -67,10 +71,10 @@ const handleSubmit = async (formData) => {
     }
 };
 const save_as_draft = async (formData) => {
-    let changes 
-    if(Object.keys(initialData.value).length){
+    let changes
+    if (Object.keys(initialData.value).length) {
         changes = await compareObjects(initialData.value, formData)
-    }else{
+    } else {
         changes = true
     }
     if (auth.isLoggedIn && changes) {
@@ -81,21 +85,21 @@ const save_as_draft = async (formData) => {
             get_save_as_draft()
             return res;
         }
-    } else if(!auth.isLoggedIn) {
+    } else if (!auth.isLoggedIn) {
         localStorage.setItem('draft', JSON.stringify(formData));
         store.save_as_login = true;
     }
 }
 function compareObjects(initialData, formData) {
     let changes = [];
-    Object.entries(formData).filter(([key])=> key.startsWith('myp') || key.startsWith('cc') || key.startsWith('dei') || key.startsWith('od') || key.startsWith('fr')).forEach(([key, value]) => {
-        if(value && initialData[key] != value){
-            changes.push({key, value: initialData[key]})
+    Object.entries(formData).filter(([key]) => key.startsWith('myp') || key.startsWith('cc') || key.startsWith('dei') || key.startsWith('od') || key.startsWith('fr')).forEach(([key, value]) => {
+        if (value && initialData[key] != value) {
+            changes.push({ key, value: initialData[key] })
         }
     })
     if (changes.length) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }

@@ -132,4 +132,38 @@ class AuthAPIs:
                 return {'code': 400, 'msg': 'Session not found'}
         else:
             return {'code': 200, 'data':{},'msg':'Already set'}
-       
+    def get_other_details(session):
+        session_details = {}
+        existing_session = frappe.get_all(
+            'Session',
+            filters={'name': session, 'designation': ['is', 'set']},
+            pluck='name',
+            order_by='creation desc',
+            limit_page_length=1,
+            ignore_permissions=True
+        )
+        
+        if frappe.session.user and existing_session:
+            existing_user_session = frappe.get_all(
+                'Session',
+                filters={'user': frappe.session.user, 'designation': ['is', 'set']},
+                pluck='name',
+                order_by='creation desc',
+                limit_page_length=1,
+                ignore_permissions=True
+            )
+            
+            if existing_user_session:
+                session_doc = frappe.get_doc('Session', existing_user_session[0])
+                session_details = session_doc.as_dict()
+
+            return {'code': 200, 'data': session_details}
+        
+        return {'code': 404, 'message': 'Session or user not found'}
+    
+    def user_mobile_no():
+        user_mobile = frappe.get_value('User', frappe.session.user, 'mobile_no')
+        return {'code': 200, 'data': user_mobile}
+
+
+        
