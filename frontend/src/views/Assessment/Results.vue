@@ -137,7 +137,7 @@
         <div class="w-full h-full flex justify-center items-center" v-if="loading">
             <div class="w-10 h-10 border-2 border-t-[4px] border-[#255B97] rounded-full animate-spin"></div>
         </div>
-        <div class="py-5">
+        <div class="py-5 flex justify-end">
             <router-link v-if="store?.nextPrinciple?.ref_doctype"
                 :to="`/funder/${store?.nextPrinciple?.ref_doctype?.toLowerCase()?.split(' ').join('-')}`"
                 class="w-full flex justify-center md:w-fit gap- py-3 px-6 bg-[#255B97] text-white rounded">
@@ -184,12 +184,17 @@ const get_results = async () => {
             setTimeout(() => {
                 const targetLi = document.querySelectorAll('ol');
                 const targetOl = document.querySelectorAll('li[data-list="unchecked"]');
+                const targetInLI = document.querySelectorAll('li[data-list="bullet"]');
                 if (targetLi) {
                     targetLi.forEach((li) => {
                         li.style.paddingLeft = '20px';
                     });
                     targetOl.forEach((ol) => {
                         ol.style.listStyleType = 'circle';
+                    });
+                    targetInLI.forEach((li) => {
+                        li.style.marginLeft = '40px';
+                        li.style.listStyleType = 'circle';
                     });
                 }
             }, 1000)

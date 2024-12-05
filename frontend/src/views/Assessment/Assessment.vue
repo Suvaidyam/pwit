@@ -9,7 +9,8 @@
             </div>
             <button v-if="Object.keys(results).length" @click="() => router.push(`${current_path}/results`)"
                 class="border flex items-center gap-2 text-secondary border-[#255B97] rounded-md h-9 px-4 text-sm">
-                View Results <FileSearch2 class="w-4"/>
+                View Results
+                <FileSearch2 class="w-4" />
             </button>
         </div>
         <transition name="fade" mode="out-in">
@@ -42,15 +43,15 @@ const auth = inject('$auth');
 const call = inject('$call');
 const initialData = ref({});
 const results = ref({});
-import {FileSearch2} from 'lucide-vue-next'
-watch(route, (oldVal,newVal) => {
+import { FileSearch2 } from 'lucide-vue-next'
+watch(route, (oldVal, newVal) => {
     title.value = splitAtSecondCapital(newVal.name)
     current_path.value = newVal.path
     if (auth.isLoggedIn) {
         get_save_as_draft();
     }
 })
-watch(()=>title.value, async (newVal) => {
+watch(() => title.value, async (newVal) => {
     await get_results();
     title.value = newVal
 })
@@ -66,7 +67,13 @@ const handleSubmit = async (formData) => {
     }
 };
 const save_as_draft = async (formData) => {
-    if (auth.isLoggedIn) {
+    let changes 
+    if(Object.keys(initialData.value).length){
+        changes = await compareObjects(initialData.value, formData)
+    }else{
+        changes = true
+    }
+    if (auth.isLoggedIn && changes) {
         const res = await call('pwit.controllers.api.save_as_draft', { doctype: title.value, doc: { ...formData, 'session': store.session }, name: initialData?.value?.name });
         if (res.code === 200) {
             localStorage.removeItem('draft');
@@ -74,9 +81,22 @@ const save_as_draft = async (formData) => {
             get_save_as_draft()
             return res;
         }
-    } else {
+    } else if(!auth.isLoggedIn) {
         localStorage.setItem('draft', JSON.stringify(formData));
         store.save_as_login = true;
+    }
+}
+function compareObjects(initialData, formData) {
+    let changes = [];
+    Object.entries(formData).filter(([key])=> key.startsWith('myp') || key.startsWith('cc') || key.startsWith('dei') || key.startsWith('od') || key.startsWith('fr')).forEach(([key, value]) => {
+        if(value && initialData[key] != value){
+            changes.push({key, value: initialData[key]})
+        }
+    })
+    if (changes.length) {
+        return true;
+    }else{
+        return false;
     }
 }
 const get_save_as_draft = async () => {
