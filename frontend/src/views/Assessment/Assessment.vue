@@ -22,9 +22,10 @@
                 <FormView v-if="title !== 'Diversity Equity Inclusion'" :initialData="initialData" :doctype="title"
                     :onSubmit="handleSubmit" :isTable="true" :isDraft="true" :section="true"
                     :save_as_draft="save_as_draft" :key="title" />
-                <FormView v-if="title == 'Diversity Equity Inclusion'" :initialData="initialData" :doctype="title"
+                    <div class="w-full h-full flex justify-center items-center text-h2">Coming Soon..</div>
+                <!-- <FormView v-if="title == 'Diversity Equity Inclusion'" :initialData="initialData" :doctype="title"
                     :onSubmit="handleSubmit" :isDraft="true" :isCard="true" :section="true"
-                    :save_as_draft="save_as_draft" :key="title" />
+                    :save_as_draft="save_as_draft" :key="title" /> -->
             </div>
         </transition>
     </div>
