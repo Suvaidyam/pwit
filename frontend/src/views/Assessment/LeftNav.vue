@@ -162,6 +162,11 @@ watch(() => menu_list.value, async (value) => {
     let index = (recommendedList.value.concat(additionalList.value)).findIndex(e => e.ref_doctype == (doc == 'Multi Year Partnerships' ? 'Multi-year Partnerships' : doc))
     store.nextPrinciple = index !== -1 && index < (recommendedList.value.concat(additionalList.value)).length - 1 ? (recommendedList.value.concat(additionalList.value))[index + 1] : null;
 }, { deep: true, immediate: true });
+watch(() => route.fullPath, async (value) => {
+    let doc = await splitAndCapitalize(value)
+    let index = (recommendedList.value.concat(additionalList.value)).findIndex(e => e.ref_doctype == (doc == 'Multi Year Partnerships' ? 'Multi-year Partnerships' : doc))
+    store.nextPrinciple = index !== -1 && index < (recommendedList.value.concat(additionalList.value)).length - 1 ? (recommendedList.value.concat(additionalList.value))[index + 1] : null;
+}, { deep: true, immediate: true });
 // Fetch menu_list on mount
 onMounted(async () => {
 
