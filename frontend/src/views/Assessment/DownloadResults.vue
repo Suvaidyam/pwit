@@ -25,7 +25,7 @@
                             class="relative transform overflow-hidden bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl">
                             <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                                 <div class="flex justify-between">
-                                    <h1 class="text-h3 font-serif font-bold text-primary">Provide the following
+                                    <h1 class="text-h3 font-primary font-bold text-primary">Provide the following
                                         information</h1>
                                     <X @click="userDetailsPop = false" class="text-sm cursor-pointer" />
                                 </div>

@@ -1,9 +1,9 @@
 <template>
     <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4">
         <div class="mt-3 text-center">
-            <DialogTitle as="h3" class="text-h3 font-bold text-[#21272A] text-center">Sign Up
+            <DialogTitle as="h3" class="text-h3 font-bold text-sebase font-primary text-center">Sign Up
             </DialogTitle>
-            <p class="text-h5 pt-2 text-center text-trbase">Please provide the following
+            <p class="text-h5 pt-2 text-center text-sebase">Please provide the following
                 information to continue </p>
         </div>
         <div class="flex flex-col gap-3 pt-4">
@@ -15,7 +15,7 @@
                     </span>
                 </label>
                 <input @keydown.enter="register" @input="validateName" v-model="full_name" type="text" id="full_name"
-                    class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5" placeholder="Enter Full Name">
+                    class="outline-none w-full border-b-2 bg-gray-100 placeholder:text-[#697077] px-3 h-12 text-h5" placeholder="Enter Full Name">
                 <span v-if="invalidName" class="text-red-500 text-xs mt-1 -bottom-5">Only letters allowed</span>
                 <span v-if="lengthExceeded" class="text-red-500 text-xs mt-1 -bottom-5">Maximum length of 50
                     characters</span>
@@ -26,17 +26,17 @@
                     <span class="text-red-500"> *</span>
                 </label>
                 <input @keydown.enter="register" @input="emailvalidate" id="emailInputId" v-model="email" type="email"
-                    class="outline-none w-full border-b-2 bg-gray-50 px-3 h-12 text-h5"
+                    class="outline-none w-full border-b-2 bg-gray-100 placeholder:text-[#697077] px-3 h-12 text-h5"
                     placeholder="Enter Email Address">
                 <div class="absolute -bottom-6">
-                    <p v-if="errorMessage" class="text-sm text-red-600">{{ errorMessage }}</p>
-                    <p v-else class="text-sm text-gray-600">Sign up with work email</p>
+                    <p v-if="errorMessage" class="text-h6 text-red-600">{{ errorMessage }}</p>
+                    <p v-else class="text-h6 text-[#697077]">Sign up with work email</p>
                 </div>
             </div>
 
             <div class="flex items-center gap-2 py-2 mt-3">
                 <input v-model="remember" type="checkbox" id="remember" class="h-4 w-4" />
-                <label for="remember" class="text-sm text-gray-500">Remember me</label>
+                <label for="remember" class="text-sm text-gray-700">Remember me</label>
             </div>
             <div class="w-full border-b h-14">
                 <button :disabled="remember ? false : false" type="button"

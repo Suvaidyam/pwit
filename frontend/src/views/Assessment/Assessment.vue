@@ -3,7 +3,7 @@
         <Breadcrumb />
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
             <div class="flex items-center gap-3">
-                <h1 class="text-h2 font-serif font-semibold text-primary truncate">{{ title }}</h1>
+                <h1 class="text-h2 font-primary font-semibold text-primary truncate">{{ title }}</h1>
                 <p class=" w-16 py-1 text-center hidden md:block rounded-2xl text-red-700 bg-red-100 font-bold"
                     v-if="Object.keys(initialData).length">Draft</p>
             </div>

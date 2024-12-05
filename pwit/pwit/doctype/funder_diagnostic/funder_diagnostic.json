@@ -64,7 +64,7 @@
    "description": "core-cost  support.",
    "fieldname": "core_cost_3",
    "fieldtype": "Link",
-   "label": "We encourage our nonprofit partners to find alternative sources for covering their core costs rather  than asking us to increase our",
+   "label": "We encourage our nonprofit partners to find alternative sources for covering their core costs rather  than asking us to increase our ",
    "options": "Field Options",
    "reqd": 1
   },
@@ -159,7 +159,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-05 15:40:36.210020",
+ "modified": "2024-12-05 16:03:59.055274",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Funder Diagnostic",
