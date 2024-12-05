@@ -42,7 +42,7 @@
    "fieldname": "cc_guidelines",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Do you have written guidelines that clearly stipulate the core cost3 support that is extended to nonprofit partners? ",
+   "label": "Do you have written guidelines that clearly stipulate the core cost support that is extended to nonprofit partners? ",
    "options": "Field Options",
    "reqd": 1
   },
@@ -93,7 +93,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-04 10:27:47.660643",
+ "modified": "2024-12-05 15:01:56.249897",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Core Costs",
