@@ -118,3 +118,11 @@ def save_user_details(data,session):
 @frappe.whitelist(allow_guest=True)
 def check_user_details(session):
     return AuthAPIs.check_user_details(session)
+
+@frappe.whitelist(allow_guest=True)
+def get_other_details(session):
+    return AuthAPIs.get_other_details(session)
+
+@frappe.whitelist(allow_guest=True)
+def user_mobile_no():
+    return AuthAPIs.user_mobile_no()

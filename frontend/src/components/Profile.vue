@@ -23,18 +23,8 @@
                                     <p class="text-center text-[#21272A] font-normal text-h5 pt-2"> Set up or update
                                         your profile</p>
                                 </div>
-                                <div class=" flex justify-center items-center pt-4 relative">
-                                    <div>
-                                        <label for="upload"
-                                            :class="isReadonly ? '' : ' cursor-pointer border-[#255B97] border-4'"
-                                            class="w-24 h-24 rounded-full bg-slate-300 flex items-center justify-center relative">
-                                            <img v-if="formData.user_image" :src="formData.user_image" alt="User Image"
-                                                class="w-full h-full rounded-full object-cover" />
-                                            <p class="text-h2" v-else>{{ formData.full_name?.[0]?.toUpperCase() }}</p>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="space-y-4 container">
+                              
+                                <div class="space-y-4 container pt-2">
                                     <div>
                                         <label for="full_name" class="block text-gray-800 text-sm pb-2">
                                             Full Name
@@ -67,6 +57,75 @@
                                         </button>
                                     </div>
                                 </div>
+                                <!-- other details -->
+                                <div class="" v-if="otherFormData">
+                                    <div class="relative border-b py-3">
+                                        <p class="py-2 text-h3 absolute left-[40%] top-0 bg-white text-secondary">Other Details</p>
+                                    </div>
+                                    <div class="bg-white pb-4 sm:pb-4 pt-4">
+                                        <div class="flex flex-col gap-2">
+                                            <label for="designation" class="text-h5 font-normal text-[#21272A]">Designation</label>
+                                            <select disabled name="" id="designation" v-model="otherFormData.designation"
+                                                class="outline-none border-b-2 border-gray-400 bg-gray-50 py-3 text-gray-600 px-2">
+                                                <option value="">Select</option>
+                                                <option value="Executive Director/Chief Executive Officer/Head of CSR">
+                                                    Executive
+                                                    Director/Chief Executive Officer/Head of CSR
+                                                </option>
+                                                <option value="Director of Philanthropy">Director of Philanthropy
+                                                </option>
+                                                <option value="Chief Operating Officer">Chief Operating Officer
+                                                </option>
+                                                <option value="Program Lead/Program Officer">Program Lead/Program
+                                                    Officer
+                                                </option>
+                                                <option value="Third party supporting funder organisation">Third party
+                                                    supporting funder organisation
+                                                </option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="pt-3">
+                                            <p class=" text-h5 font-normal text-[#21272A]">
+                                                Funder type organization
+                                            </p>
+                                            <label :for="option.id" v-for="option in options" :key="option" :class="[
+                                                'w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3',
+                                                otherFormData.funderType.includes(option) ? 'border-[#255B97]' : 'border-gray-300'
+                                            ]">
+                                                <input disabled type="checkbox" :id="option" :value="option"
+                                                    v-model="otherFormData.funderType" class="cursor-pointer" />
+                                                <p
+                                                    :class="[otherFormData.funderType.includes(option) ? 'text-secondary' : 'text-slate-600', 'font-normal text-sm cursor-pointer']">
+                                                    {{ option }}
+                                                </p>
+                                            </label>
+                                        </div>
+                                        <div class="flex flex-col gap-2 pt-3">
+                                            <label for="annual_budget" class="text-h5 font-normal text-[#21272A]">
+                                                Organisation’s
+                                                approximate annual budget allocation</label>
+                                            <select disabled name="" id="annual_budget" v-model="otherFormData.annual_budget"
+                                                class="outline-none border-b-2 border-gray-400 bg-gray-50 py-3 text-gray-600 px-2">
+                                                <option value="">Select</option>
+                                                <option value="Less than INR 10 Cr.">Less than INR 10 Cr.
+                                                </option>
+                                                <option value="INR 10-50 Cr.">INR 10-50 Cr.
+                                                </option>
+                                                <option value="INR 51-100 Cr.">INR 51-100 Cr.
+                                                </option>
+                                                <option value="INR 101-300 Cr.">INR 101-300 Cr.
+                                                </option>
+                                                <option value="INR 301 and above">INR 301 and above
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <!-- <div class="flex justify-end pt-2">
+                                            <button @click="submitSelection"
+                                                class="bg-secondary text-white rounded-md w-28 h-12 text-h5">Submit</button>
+                                        </div> -->
+                                    </div>
+                                </div>
                             </div>
                         </DialogPanel>
                     </TransitionChild>
@@ -77,7 +136,7 @@
 </template>
 
 <script setup>
-import { ref, inject } from 'vue'
+import { ref, inject, onMounted } from 'vue'
 import { TransitionChild, TransitionRoot, Dialog, DialogPanel } from '@headlessui/vue'
 import { X } from 'lucide-vue-next';
 
@@ -86,6 +145,12 @@ const store = inject('store');
 const auth = inject('$auth');
 const call = inject('$call');
 const formData = ref(auth.cookie);
+const otherFormData = ref({
+    designation: '',
+    funderType: [],
+    annual_budget: ''
+})
+const options = ref([])
 // const uploadedImage = ref(null);
 const imgUrl = ref('');
 const props = defineProps({
@@ -95,7 +160,30 @@ const props = defineProps({
         default: false
     }
 })
-
+const get_funder_type = async () => {
+    let res = await call('pwit.controllers.api.get_funder_type', {})
+    options.value = res
+}
+const get_other = async () => {
+    let res = await call('pwit.controllers.api.get_other_details', {session:store.session})
+    if(res?.code==200){
+        otherFormData.value = res.data
+        otherFormData.value.funderType = res.data.funder_type.map((e)=>e.funder_type)
+    }
+}
+const user_mobile = async () => {
+    let res = await call('pwit.controllers.api.user_mobile_no', {})
+    if(res?.code==200){
+        formData.value.mobile_no = res.data
+    }
+}
+onMounted(() => {
+    get_funder_type()
+    if(auth.isLoggedIn){
+        user_mobile()
+        get_other()
+    }
+})
 // const imageUpload = async (event) => {
 //     const file = event.target.files[0];
 //     if (file) {
