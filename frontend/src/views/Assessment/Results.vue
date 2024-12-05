@@ -7,11 +7,11 @@
                 / <router-link to="/funder-diagnostic">Funder Diagnostic</router-link> / <router-link
                     to="/recommended">Recommended Principles</router-link> /
                 <router-link :to="`/funder/${route.params.category}`">{{ title }}</router-link>
-                <span class="text-gray-400 truncate"> / Results and Recommendtions</span>
+                <span class="text-gray-400 truncate"> / Results and Recommendations</span>
             </p>
         </div>
         <div class="flex justify-between items-center">
-            <h1 class="text-h3 md:text-h2 text-primary truncate">Results and Recommendtions</h1>
+            <h1 class="text-h3 md:text-h2 text-primary truncate">Results and Recommendations</h1>
             <div class="flex items-center gap-3">
                 <button v-if="recommendations.result && Object.keys(recommendations.result).length"
                     class="border border-[#255B97] flex items-center gap-2 truncate rounded-md h-7 md:h-9 text-secondary text-sm px-2 md:px-4"
