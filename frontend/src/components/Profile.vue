@@ -18,7 +18,7 @@
                             <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4 relative">
                                 <X @click="store.isOpen = false" class="text-sm  cursor-pointer absolute right-5" />
                                 <div class="block justify-center gap-5 items-center">
-                                    <h1 class="text-center font-serif font-bold text-h3 text-[#21272A]">My Profile</h1>
+                                    <h1 class="text-center font-primary font-bold text-h3 text-[#21272A]">My Profile</h1>
 
                                     <p class="text-center text-[#21272A] font-normal text-h5 pt-2"> Set up or update
                                         your profile</p>

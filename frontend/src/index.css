@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Helvetica';
 }
 
 :root {
@@ -27,4 +27,7 @@
     --font-size-h4:20px;
     --font-size-h5:16px;
     --font-size-h6:12px;
+
+    --font-family-primary:'Palatino Linotype';
+    --font-family-secondary:'Helvetica';
 }

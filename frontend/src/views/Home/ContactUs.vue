@@ -1,6 +1,6 @@
 <template>
     <div class="absolute bg-white shadow-lg py-6 -top-24 w-full lg:w-[65%] px-4 md:px-8 lg:px-20">
-        <h2 class="text-h2 font-bold font-serif text-center text-primary mb-6">Contact Us</h2>
+        <h2 class="text-h2 font-bold font-primary text-center text-primary mb-6">Contact Us</h2>
         <div class="space-y-6">
             <div>
                 <label class="block text-gray-800 text-sm mb-2">

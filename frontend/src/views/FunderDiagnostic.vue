@@ -7,13 +7,13 @@
       </p>
     </div>
     <div class="flex items-center px-4 md:px-8 lg:px-20 gap-3">
-      <h1 class="text-h2  tracking-wide font-serif text-primary font-bold">
+      <h1 class="text-h2  tracking-wide font-primary text-primary font-bold">
         Funder Diagnostic
       </h1>
       <p class="w-16 py-1 flex items-center justify-center rounded-2xl text-red-700 bg-red-100 font-bold"
         v-if="Object.keys(initialData).length">Draft</p>
     </div>
-    <p class="text-h5 px-4 md:px-8 lg:px-20 font-serif text-sebase font-bold">
+    <p class="text-h5 px-4 md:px-8 lg:px-20 font-primary text-sebase font-bold">
       Please select the degree to which your organization’s mindset and practices agree or disagree with the
       following statements:
     </p>
