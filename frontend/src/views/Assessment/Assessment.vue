@@ -1,5 +1,5 @@
 <template>
-    <div class="p-4 w-full h-screen">
+    <div class="p-4 w-full">
         <Breadcrumb />
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
             <div class="flex items-center gap-3">
@@ -18,11 +18,11 @@
             </div>
         </div>
         <transition name="fade" mode="out-in">
-            <div class="w-full h-full">
+            <div class="w-full">
                 <FormView v-if="title !== 'Diversity Equity Inclusion'" :initialData="initialData" :doctype="title"
                     :onSubmit="handleSubmit" :isTable="true" :isDraft="true" :section="true"
                     :save_as_draft="save_as_draft" :key="title" />
-                    <div v-if="title == 'Diversity Equity Inclusion'" class="w-full h-full flex justify-center items-center text-h2">Coming Soon..</div>
+                    <div v-if="title == 'Diversity Equity Inclusion'" class="w-full h-96 flex justify-center items-center text-h2">Coming Soon..</div>
                 <!-- <FormView v-if="title == 'Diversity Equity Inclusion'" :initialData="initialData" :doctype="title"
                     :onSubmit="handleSubmit" :isDraft="true" :isCard="true" :section="true"
                     :save_as_draft="save_as_draft" :key="title" /> -->
