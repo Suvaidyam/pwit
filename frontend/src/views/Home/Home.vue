@@ -2,17 +2,17 @@
 	<div class="w-full h-screen">
 		<div
 			class="w-full px-4 md:px-8 lg:px-20 flex flex-col gap-2 md:gap-3 justify-center h-24 md:h-40 items-center ">
-			<h1 class="text-h2 font-bold lg:text-[64px] text-primary font-serif leading-tight">Assistive Funder Toolkit
+			<h1 class="text-h2 font-bold lg:text-[64px] text-primary font-primary leading-[70.4px]">Assistive Funder Toolkit
 			</h1>
 			<p
-				class="px-4 text-center font-bold md:font-extrabold text-[#4f4f4f] leading-4 tracking-wide text-h5 font-serif">
-				Developed under
+				class="px-4 text-center font-bold text-[#464547] leading-4 tracking-wide text-h5 font-primary">
+				Developed by
 				the
 				Pay-What-It-Takes India Initiative</p>
 		</div>
 		<!--  -->
 		<div class="w-full bg-tatary px-4 md:px-8 lg:px-20 py-6 mt-7">
-			<h4 class="text-center text-h2 font-bold text-[#20252b] my-6 font-serif tracking-wide leading-9">About the
+			<h4 class="text-center text-h2 font-bold text-[#21272A] my-6 font-primary tracking-wide leading-9">About the
 				tool</h4>
 			<div class="flex justify-center font-normal text-sebase text-h5 text-center tracking-wider leading-5">
 				<p>Philanthropy has a significant opportunity to amplify the impact of their grantmaking by enabling a
@@ -97,7 +97,7 @@
 		</div>
 		<!--  -->
 		<div class=" w-full px-4 md:px-8 lg:px-20 py-10 ">
-			<h1 class="text-primary text-h2 font-bold leading-9 tracking-wide font-serif">What does the toolkit include?
+			<h1 class="text-primary text-h2 font-bold leading-9 tracking-wide font-primary">What does the toolkit include?
 			</h1>
 			<div class="flex flex-col md:flex-row mt-5">
 				<div class="w-full flex flex-col gap-3">
@@ -124,7 +124,7 @@
 								</svg>
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide">Part 1 -
+								<h4 class="font-bold text-h5 text-sebase font-primary leading-4 tracking-wide">Part 1 -
 									Funding practices
 									diagnostic</h4>
 								<div class="pt-2 text-justify">
@@ -167,7 +167,7 @@
 								</svg>
 							</div>
 							<div class="">
-								<h4 class="font-bold text-sebase text-h5 font-serif leading-4 tracking-wide">Part 2 –
+								<h4 class="font-bold text-sebase text-h5 font-primary leading-4 tracking-wide">Part 2 –
 									Assistive guides for each
 									principle</h4>
 								<div class="pt-2 text-justify">
@@ -219,7 +219,7 @@
 					<img class="w-[434px] h-[436px]" src="../../assets/left.png" alt="">
 				</div>
 				<div class="w-full flex flex-col gap-3 order-1 md:order-2">
-					<h1 class="text-primary text-h2 font-bold font-serif leading-9 tracking-wide">What will the output
+					<h1 class="text-primary text-h2 font-bold font-primary leading-9 tracking-wide">What will the output
 						include?</h1>
 					<div class="flex flex-col gap-5">
 						<div class="flex gap-2">
@@ -240,7 +240,7 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide">Optional
+								<h4 class="font-bold text-h5 text-sebase font-primary leading-4 tracking-wide">Optional
 									Survey Before Accessing
 									Guides
 								</h4>
@@ -282,7 +282,7 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide">Complete
+								<h4 class="font-bold text-h5 text-sebase font-primary leading-4 tracking-wide">Complete
 									the Tool in One Session
 								</h4>
 
@@ -322,7 +322,7 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide">Expect
+								<h4 class="font-bold text-h5 text-sebase font-primary leading-4 tracking-wide">Expect
 									Level 1 and 2 Ratings in
 									Part 2</h4>
 								<div class="pt-2 text-justify">
@@ -356,7 +356,7 @@
 								</svg>
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide">Generate a
+								<h4 class="font-bold text-h5 text-sebase font-primary leading-4 tracking-wide">Generate a
 									Summary Report Upon
 									Completion
 								</h4>
@@ -393,7 +393,7 @@
 								</svg>
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide"> Use
+								<h4 class="font-bold text-h5 text-sebase font-primary leading-4 tracking-wide"> Use
 									Insights for Strategic
 									Discussions and
 									Team Conversations on Improving Grantmaking</h4>
@@ -428,7 +428,7 @@
 
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-serif leading-4 tracking-wide"> Your
+								<h4 class="font-bold text-h5 text-sebase font-primary leading-4 tracking-wide"> Your
 									Responses Are Confidential
 								</h4>
 								<div class="pt-2 text-justify">
@@ -464,7 +464,7 @@
 			<PickAssessment />
 		</div>
 		<div class="flex flex-col gap-3 px-4 md:px-8 lg:px-16 ">
-			<h1 class="text-h2 text-primary font-bold font-serif tracking-wide leading-9">How to get started</h1>
+			<h1 class="text-h2 text-primary font-bold font-primary tracking-wide leading-9">How to get started</h1>
 			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">Lorem ipsum dolor sit amet, consectetur
 				adipiscing elit, sed do
 				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -476,7 +476,7 @@
 					<img class="w-8  h-8" src="../../assets/file.png" alt="Description of image">
 
 				</div>
-				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-primary">Lorem ipsum dolor sit amet
 				</h1>
 				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
 					reprehenderit in voluptate velit esse cillum
@@ -487,7 +487,7 @@
 				<div class="w-16 min-w-16 h-16  rounded-full bg-gray-200 flex items-center justify-center">
 					<img class="w-8  h-8" src="../../assets/file.png" alt="Description of image">
 				</div>
-				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-primary">Lorem ipsum dolor sit amet
 				</h1>
 				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
 					reprehenderit in voluptate velit esse cillum
@@ -499,7 +499,7 @@
 				<div class="w-16 min-w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center">
 					<img class="w-8  h-8" src="../../assets/file.png" alt="Description of image">
 				</div>
-				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-serif">Lorem ipsum dolor sit amet
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-primary">Lorem ipsum dolor sit amet
 				</h1>
 				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
 					reprehenderit in voluptate velit esse cillum
@@ -509,10 +509,10 @@
 			</div>
 		</div>
 		<div class=" bg-secondary pb-40 relative px-4 md:px-8 lg:px-16">
-			<h1 class="text-center font-serif text-h2 font-bold tracking-wide leading-9 text-white pt-8 pb-5">
+			<h1 class="text-center font-primary text-h2 font-bold tracking-wide leading-9 text-white pt-8 pb-5">
 				About the Partnership</h1>
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-				<div class="flex flex-col gap-4 w-full text-center text-white font-serif text-sm">
+				<div class="flex flex-col gap-4 w-full text-center text-white font-primary text-sm">
 					<p class="text-h5 text-[#E9EAEB] font-normal text-center leading-5 tracking-wider"> Lorem
 						ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
 						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

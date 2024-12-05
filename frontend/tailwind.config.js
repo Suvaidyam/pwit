@@ -25,7 +25,11 @@ export default {
         'h4': 'var(--font-size-h4)',
         'h5': 'var(--font-size-h5)',
         'h6': 'var(--font-size-h6)',
-      }
+      },
+      fontFamily: {
+        'primary': 'var(--font-family-primary)',
+        'secondary': 'var(--font-family-secondary)',
+      },
     },
   },
   plugins: [],

@@ -9,7 +9,7 @@
                                 class="text-gray-400">/ Recommended Principles</span>
                         </p>
                     </div>
-                    <h1 class="text-h3 md:text-h2 font-bold  text-[#002C77] font-serif">Pathway for funders to
+                    <h1 class="text-h3 md:text-h2 font-bold  text-[#002C77] font-primary">Pathway for funders to
                         strengthen their
                         grant
                         making practices</h1>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="flex items-center justify-center my-14">
                     <div class="border-t border-[#D0D1D3] flex-grow"></div>
-                    <p class="px-4  text-sebase font-bold text-h4 font-serif ">Recommended principles</p>
+                    <p class="px-4  text-sebase font-bold text-h4 font-primary ">Recommended principles</p>
                     <div class="border-t border-[#D0D1D3] flex-grow"></div>
                 </div>
                 <Loader v-if="loading" />
@@ -55,7 +55,7 @@
 
                 <div class="flex items-center justify-center my-14">
                     <div class="border-t border-[#D0D1D3] flex-grow"></div>
-                    <p class="px-4  text-sebase font-bold text-h4 font-serif ">Additional PWIT principles to explore
+                    <p class="px-4  text-sebase font-bold text-h4 font-primary ">Additional PWIT principles to explore
                         principles</p>
                     <div class="border-t border-[#D0D1D3] flex-grow"></div>
                 </div>

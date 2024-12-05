@@ -26,7 +26,7 @@
                                         </label>
                                         <input v-model="newPassword" id="new_password" type="password"
                                             placeholder="Enter New Password"
-                                            class="w-full px-3 py-2 border-b bg-[#f3f4f8] border-gray-300 shadow-sm outline-none">
+                                            class="w-full px-3 py-2 border-b bg-gray-100 placeholder:text-[#697077] border-gray-300 shadow-sm outline-none">
                                     </div>
                                    
                                     <div class="flex flex-col gap-1 w-full relative">
@@ -34,7 +34,7 @@
                                             Confirm Password
                                         </label>
                                         <input @keyup="onchange"  v-model="confirmPassword" id="Confirm_pass" :type="show_pass ? 'text' : 'password'"
-                                            class="outline-none w-full border-b-2  bg-[#f3f4f8] text-sm px-3 h-12 text-h5"
+                                            class="outline-none w-full border-b-2  bg-gray-100 placeholder:text-[#697077] text-sm px-3 h-12 text-h5"
                                             placeholder="Confirm New Password">
                                         <span
                                             class="absolute right-2 top-11 font-semibold text-gray-500 text-xs cursor-pointer"
@@ -43,7 +43,7 @@
                                             <Eye class="w-5 h-4 text-gray-500" v-else />
                                         </span>
                                         <div>
-                                            <p v-if="passwordsMatch === false" class="text-red-500 text-sm ">Passwords
+                                            <p v-if="passwordsMatch === false" class="text-red-500 text-h6">Passwords
                                                 do not match</p>
                                         </div>
                                     </div>
