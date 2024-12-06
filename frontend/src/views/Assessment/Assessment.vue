@@ -60,6 +60,9 @@ watch(() => title.value, async (newVal) => {
     await get_results();
     title.value = newVal
 })
+watch(()=>initialData.value, (newVal) => {
+    initialData.value = newVal
+}, {deep: true, immediate: true})
 const handleSubmit = async (formData) => {
     try {
         const res = await call('pwit.controllers.api.save_doc', { doctype: title.value, doc: { ...formData, 'session': store.session }, name: initialData?.value?.name });
@@ -125,7 +128,7 @@ const get_results = async () => {
         if (res.code === 200) {
             let re_attempt = localStorage.getItem('re_attempt');
             results.value = res.data.result;
-            if (Object.keys(res.data.result).length && !re_attempt) {
+            if (Object.keys(res.data.result).length && !re_attempt && Object.keys(initialData.value).length === 0) {
                 router.push(`${current_path.value}/results`);
             }
         }
