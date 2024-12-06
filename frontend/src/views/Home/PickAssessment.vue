@@ -188,7 +188,11 @@ const store = inject('store')
 const last_draft = ref({})
 
 const openDialog = () => {
-    open.value = true;
+    if(policyconsent.value){
+        open_ass.value = true;
+    }else{
+        open.value = true;
+    }
 }
 const assessment = () => {
     open.value = false;
@@ -200,8 +204,7 @@ const set_policyconsent = async () => {
 		value:policyconsent.value
 	});
 	if (res.code === 200) {
-		console.log(res)
-        // policyconsent.value=res.data
+		localStorage.setItem('policyconsent',JSON.stringify(res.data.policyconsent))
 	}
 };
 const get_last_draft = async () => {
@@ -214,5 +217,7 @@ onMounted(async()=>{
     if(auth.isLoggedIn){
        await get_last_draft()
     }
+    let consent = JSON.parse(localStorage.getItem('policyconsent'))
+    policyconsent.value = (consent==1?true:false)
 })
 </script>

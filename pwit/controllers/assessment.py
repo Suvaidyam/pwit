@@ -36,6 +36,15 @@ class AssessmentAPIs:
         else:
             return {'code': 200, 'data': {}}
         
+    def get_dei_result(doctype,session,user=None):
+        data = AssessmentAPIs.get_section_by_result(doctype,session,user)
+        if doctype:
+            details = AssessmentAPIs.get_assistive_results_details(doctype)
+            group = data
+        if doctype and user:
+            draft = FormAPIs.get_save_as_draft(doctype,user) 
+        return {'code': 200, 'data': {"average":'average',"result":data,'details':details,'group':group,'draft':draft}}
+   
     def get_assistive_result(doctype,session,user=None):
         assessments = []
         fields = []
