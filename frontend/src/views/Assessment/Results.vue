@@ -95,7 +95,7 @@
                 </div>
                 <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] md:grid-cols-1  lg:grid-cols-1 gap-4 pt-4 w-full">
                     <!-- Recommended Actions Section -->
-                    <div class="w-full mx-auto h-96 relative overflow-y-auto">
+                    <div v-if="recommendations?.details?.recommended_actions" class="w-full mx-auto h-96 relative overflow-y-auto">
                         <p class="text-primary font-bold sticky top-0 bg-white font-primary text-xl sm:text-2xl pb-4">
                             Recommended Actions
                         </p>
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                     <!-- Useful Resources Section -->
-                    <div class="w-full mx-auto rounded-sm shadow-md px-4 pb-2 h-96 overflow-y-auto">
+                    <div v-if="recommendations?.details?.useful_resources" class="w-full mx-auto rounded-sm shadow-md px-4 pb-2 h-96 overflow-y-auto">
                         <p class="text-primary sticky top-0 bg-white font-bold font-primary text-xl sm:text-2xl pb-4">
                             Useful Resources
                         </p>
@@ -167,8 +167,14 @@ const title = ref(splitAtSecondCapital(route.path));
 
 const get_results = async () => {
     loading.value = true
+    let url
+    if(title.value=='Diversity Equity Inclusion'){
+       url = 'get_dei_result'
+    }else{
+        url = 'get_assistive_result'
+    }
     try {
-        let res = await call('pwit.controllers.api.get_assistive_result', {
+        let res = await call(`pwit.controllers.api.${url}`, {
             doctype: title?.value == "Multi Year Partnerships" ? 'Multi-year Partnerships' : title.value,
             session: store.session,
             user: auth.cookie.user_id !== 'Guest' ? auth.cookie.user_id : ''

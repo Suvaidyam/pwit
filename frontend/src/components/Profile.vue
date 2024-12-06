@@ -164,6 +164,7 @@ const get_funder_type = async () => {
     let res = await call('pwit.controllers.api.get_funder_type', {})
     options.value = res
 }
+console.log(store.session)
 const get_other = async () => {
     let res = await call('pwit.controllers.api.get_other_details', {session:store.session})
     if(res?.code==200){
