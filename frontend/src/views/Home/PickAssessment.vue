@@ -134,7 +134,7 @@
                                                 </div>
                                                 <p class="text-h5 font-normal text-sebase">Invest in organizational development</p>
                                             </div>
-                                            <router-link to="/funder/organizational-development" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">View</router-link>
+                                            <router-link to="/funder/organization-development" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 items-center">
@@ -147,7 +147,7 @@
                                                 </div>
                                                 <p class="text-h5 font-normal text-sebase">Build financial resilience</p>
                                             </div>
-                                            <router-link to="/funder" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">View</router-link>
+                                            <router-link to="/funder/financial-resilience" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 items-center">
