@@ -78,26 +78,26 @@
                                         <p class="text-xs text-[#444444]">Lorem ipsum dolor sit amet consectetur
                                             adipisicing elit. veniam, reprehenderit</p>
                                         <div class="flex justify-between items-center gap-1 border-b pb-4">
-                                            <div class="flex gap-2 pt-3 items-center">
+                                            <div class="flex gap-2 items-center">
                                                 <div
                                                     class="w-8 h-8 min-w-8 rounded-full bg-gray-200 flex justify-center items-center">
                                                     <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M1.129 1.379C0.25 2.25725 0.25 3.67175 0.25 6.5V9.5C0.25 12.3282 0.25 13.7427 1.129 14.621C2.008 15.4992 3.42175 15.5 6.25 15.5H7.75C10.5782 15.5 11.9927 15.5 12.871 14.621C13.7357 13.757 13.75 12.374 13.75 9.635L11.6365 11.7485C11.434 11.951 11.2682 12.1167 11.0815 12.263C10.8625 12.4346 10.625 12.5812 10.3735 12.7003C10.1433 12.8038 9.90687 12.8927 9.6655 12.9665L7.9315 13.5448C7.65624 13.6365 7.36085 13.6499 7.07844 13.5832C6.79603 13.5166 6.53776 13.3726 6.33258 13.1674C6.1274 12.9622 5.98342 12.704 5.91678 12.4216C5.85013 12.1392 5.86345 11.8438 5.95525 11.5685L6.16075 10.9535L6.517 9.884L6.53275 9.8345C6.6235 9.563 6.69775 9.341 6.79975 9.1265C6.91975 8.8745 7.0655 8.63875 7.237 8.41925C7.38325 8.23175 7.549 8.06675 7.7515 7.86425L10.756 4.859L11.59 4.025L11.6852 3.92975C11.9401 3.67412 12.243 3.47141 12.5765 3.3333C12.91 3.19519 13.2675 3.12439 13.6285 3.125C13.5152 2.3525 13.2955 1.80275 12.871 1.379C11.9927 0.5 10.5782 0.5 7.75 0.5H6.25C3.42175 0.5 2.00725 0.5 1.129 1.379ZM3.4375 5.75C3.4375 5.60082 3.49676 5.45774 3.60225 5.35225C3.70774 5.24676 3.85082 5.1875 4 5.1875H8.875C9.02418 5.1875 9.16726 5.24676 9.27275 5.35225C9.37824 5.45774 9.4375 5.60082 9.4375 5.75C9.4375 5.89918 9.37824 6.04226 9.27275 6.14775C9.16726 6.25324 9.02418 6.3125 8.875 6.3125H4C3.85082 6.3125 3.70774 6.25324 3.60225 6.14775C3.49676 6.04226 3.4375 5.89918 3.4375 5.75ZM3.4375 8.75C3.4375 8.60082 3.49676 8.45774 3.60225 8.35225C3.70774 8.24676 3.85082 8.1875 4 8.1875H5.875C6.02418 8.1875 6.16726 8.24676 6.27275 8.35225C6.37824 8.45774 6.4375 8.60082 6.4375 8.75C6.4375 8.89918 6.37824 9.04226 6.27275 9.14775C6.16726 9.25324 6.02418 9.3125 5.875 9.3125H4C3.85082 9.3125 3.70774 9.25324 3.60225 9.14775C3.49676 9.04226 3.4375 8.89918 3.4375 8.75ZM3.4375 11.75C3.4375 11.6008 3.49676 11.4577 3.60225 11.3523C3.70774 11.2468 3.85082 11.1875 4 11.1875H5.125C5.27418 11.1875 5.41726 11.2468 5.52275 11.3523C5.62824 11.4577 5.6875 11.6008 5.6875 11.75C5.6875 11.8992 5.62824 12.0423 5.52275 12.1477C5.41726 12.2532 5.27418 12.3125 5.125 12.3125H4C3.85082 12.3125 3.70774 12.2532 3.60225 12.1477C3.49676 12.0423 3.4375 11.8992 3.4375 11.75Z" fill="#27853F"/>
                                                     </svg>
                                                 </div>
-                                                <p class="text-h5 font-normal text-sebase">Funding practics diagnostic</p>
+                                                <p class="text-h5 font-normal text-sebase">Funding practices diagnostic</p>
                                             </div>
                                             <router-link to="/funder-diagnostic"
-                                                class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">View</router-link>
+                                                class="text-primary text-sm cursor-pointer font-bold tracking-wide">View</router-link>
                                         </div>
                                     </div>
-                                    <div class="flex flex-col gap-2">
+                                    <div class="flex flex-col gap-5">
                                         <h2 class="font-primary text-h4 font-bold text-sebase tracking-wider">Assistive
                                             Guides</h2>
                                         <p class="text-xs text-[#444444]">Lorem ipsum dolor sit amet consectetur
                                             adipisicing elit. veniam, reprehenderit</p>
                                         <div class="flex justify-between items-center gap-1">
-                                            <div class="flex gap-2 pt-3 items-center">
+                                            <div class="flex gap-2 items-center">
                                                 <div
                                                     class="w-8 h-8 min-w-8 rounded-full bg-gray-200 flex justify-center items-center">
                                                     <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -111,7 +111,7 @@
                                             <router-link to="/funder/multi-year-partnerships" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide ">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
-                                            <div class="flex gap-2 pt-3 items-center">
+                                            <div class="flex gap-2 items-center">
                                                 <div
                                                     class="w-8 h-8 min-w-8 rounded-full bg-gray-200 flex justify-center items-center">
                                                     <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -124,7 +124,7 @@
                                             <router-link to="/funder/core-costs" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
-                                            <div class="flex gap-2 pt-3 items-center">
+                                            <div class="flex gap-2 items-center">
                                                 <div
                                                     class="w-8 h-8 min-w-8 rounded-full bg-gray-200 flex justify-center items-center">
                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -137,7 +137,7 @@
                                             <router-link to="/funder/organizational-development" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
-                                            <div class="flex gap-2 pt-3 items-center">
+                                            <div class="flex gap-2 items-center">
                                                 <div
                                                     class="w-8 h-8 min-w-8 rounded-full bg-gray-200 flex justify-center items-center">
                                                     <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -150,7 +150,7 @@
                                             <router-link to="/funder" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">View</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
-                                            <div class="flex gap-2 pt-3 items-center">
+                                            <div class="flex gap-2 items-center">
                                                 <div
                                                     class="w-8 h-8 min-w-8 rounded-full bg-gray-200 flex justify-center items-center">
                                                     <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
