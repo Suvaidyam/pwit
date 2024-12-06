@@ -86,7 +86,7 @@
 
 			</div>
 
-			<div class="flex justify-center text-h5 py-8 font-normal  tracking-wider ">
+			<div class="flex justify-center md:px-8 text-h5 py-8 font-normal tracking-wider ">
 				As funders recognize the importance of making grantmaking more supportive and inclusive, there is a need
 				to pursue actionable strategies to advance on this journey. The Funder Practices Assistive Tool is an
 				open-source and freely available tool to help assess how aligned your current funding practices are with

@@ -207,7 +207,6 @@ const set_policyconsent = async () => {
 const get_last_draft = async () => {
 	const res = await call('pwit.controllers.api.get_last_draft', { });
 	if (res.code === 200) {
-        console.log(res.data)
         last_draft.value = res?.data ?? {}
 	}
 };

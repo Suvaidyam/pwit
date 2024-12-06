@@ -116,26 +116,26 @@ class AssessmentAPIs:
             return {'code': 404, 'message': 'User not found'}
         session = frappe.get_all('Session', {'user': user}, pluck='name',order_by='creation desc' ,limit_page_length=1)
         if len(session):
-            myp = frappe.get_all('Multi-year Partnerships', filters={'session': session[0]}, fields=['creation'],order_by='creation desc', limit_page_length=1)
-            core_costs = frappe.get_all('Core Costs', filters={'session': session[0]}, fields=['creation'],order_by='creation desc', limit_page_length=1)
-            dei = frappe.get_all('Diversity Equity Inclusion', filters={'session': session[0]}, fields=['creation'],order_by='creation desc', limit_page_length=1)
-            od = frappe.get_all('Organization Development', filters={'session': session[0]}, fields=['creation'],order_by='creation desc', limit_page_length=1)
-            fr = frappe.get_all('Financial Resilience', filters={'session': session[0]}, fields=['creation'],order_by='creation desc', limit_page_length=1)
+            myp = frappe.get_all('Multi-year Partnerships', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            core_costs = frappe.get_all('Core Costs', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            dei = frappe.get_all('Diversity Equity Inclusion', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            od = frappe.get_all('Organization Development', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            fr = frappe.get_all('Financial Resilience', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
             # Consolidate all results into a single list with labels
             all_draft = [
-                {"doctype": "Multi-year Partnerships",'route':'multi-year-partnerships', "creation": myp[0]['creation']} if myp else None,
-                {"doctype": "Core Costs" ,'route':'core-costs', "creation": core_costs[0]['creation']} if core_costs else None,
-                {"doctype": "Diversity Equity Inclusion" ,'route':'diversity-equity-inclusion', "creation": dei[0]['creation']} if dei else None,
-                {"doctype": "Organization Development" ,'route':'organization-development', "creation": od[0]['creation']} if od else None,
-                {"doctype": "Financial Resilience" ,'route':'financial-resilience', "creation": fr[0]['creation']} if fr else None
+                {"doctype": "Multi-year Partnerships",'route':'multi-year-partnerships', "modified": myp[0]['modified']} if myp else None,
+                {"doctype": "Core Costs" ,'route':'core-costs', "modified": core_costs[0]['modified']} if core_costs else None,
+                {"doctype": "Diversity Equity Inclusion" ,'route':'diversity-equity-inclusion', "modified": dei[0]['modified']} if dei else None,
+                {"doctype": "Organization Development" ,'route':'organization-development', "modified": od[0]['modified']} if od else None,
+                {"doctype": "Financial Resilience" ,'route':'financial-resilience', "modified": fr[0]['modified']} if fr else None
             ]
 
             # Filter out None entries
             all_draft = [entry for entry in all_draft if entry is not None]
 
-            # Find the latest creation
+            # Find the latest modified
             if all_draft:
-                latest_entry = max(all_draft, key=lambda x: x['creation'])
+                latest_entry = max(all_draft, key=lambda x: x['modified'])
                 return {'code': 200, 'data': latest_entry}
             else:
                 return {'code': 404, 'message': 'No draft found'}
