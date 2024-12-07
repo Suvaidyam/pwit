@@ -38,12 +38,71 @@ class AssessmentAPIs:
         
     def get_dei_result(doctype,session,user=None):
         data = AssessmentAPIs.get_section_by_result(doctype,session,user)
+        datas = []
+        for key, value in data.items():
+            modified_data = {'priority': 'Low','key':key,'value':value}  # Start with priority
+            
+            
+            # Modify data based on the key
+            if key == 'Strategic considerations':
+                modified_data['value'] = round((value * 4) / 2, 1)
+                if modified_data['value'] == 4:
+                    modified_data['priority'] = 'High'
+                elif modified_data['value'] == 2:
+                    modified_data['priority'] = 'Medium'
+                else:
+                    modified_data['priority'] = 'Low'
+            elif key == 'Selection':
+                modified_data['value'] = round(value * 0.8, 1)
+                if modified_data['value'] == 4:
+                    modified_data['priority'] = 'High'
+                elif modified_data['value'] == 2.4 and modified_data['value'] == 3.2:
+                    modified_data['priority'] = 'Medium'
+                else:
+                    modified_data['priority'] = 'Low'
+            elif key == 'Grantee support':
+                modified_data['value'] = round(value * 2, 1)
+                if modified_data['value'] == 4:
+                    modified_data['priority'] = 'High'
+                elif modified_data['value'] == 2:
+                    modified_data['priority'] = 'Medium'
+                else:
+                    modified_data['priority'] = 'Low'
+            elif key == 'Reporting':
+                modified_data['value'] = round(value * 1.33, 1)
+                if modified_data['value'] == 4:
+                    modified_data['priority'] = 'High'
+                elif modified_data['value'] == 2.6:
+                    modified_data['priority'] = 'Medium'
+                else:
+                    modified_data['priority'] = 'Low'
+            elif key == 'Renewal':
+                modified_data['value'] = round(value * 4, 1)
+                if modified_data['value'] == 4:
+                    modified_data['priority'] = 'High'
+                else:
+                    modified_data['priority'] = 'Low'
+            else:
+                modified_data['key'] = key
+                modified_data['value'] = value
+                if modified_data['value'] == 4:
+                    modified_data['priority'] = 'High'
+                elif modified_data['value'] == 2 and modified_data['value'] == 3:
+                    modified_data['priority'] = 'Medium'
+                else:
+                    modified_data['priority'] = 'Low'
+            
+            # Append the modified dictionary to the list
+            datas.append(modified_data)
+
+        average = round(sum([data['value'] for data in datas]) / len(datas),2)
+        draft = {}
         if doctype:
             details = AssessmentAPIs.get_assistive_results_details(doctype)
-            group = data
+            group = AssessmentAPIs.get_section_by_result(doctype,session,user)
         if doctype and user:
             draft = FormAPIs.get_save_as_draft(doctype,user) 
-        return {'code': 200, 'data': {"average":'average',"result":data,'details':details,'group':group,'draft':draft}}
+        return {'code': 200, 'data': {"average":average,"result":datas,'details':details,'group':group,'draft':draft}}
    
     def get_assistive_result(doctype,session,user=None):
         assessments = []
@@ -70,6 +129,7 @@ class AssessmentAPIs:
                 assessments = frappe.get_all(doctype,filters={'session':["IN", all_session],'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
         average=0
         data = {}
+        datas = []
         details = {}
         group = {}
         if len(assessments) > 0:
@@ -110,8 +170,22 @@ class AssessmentAPIs:
                details = AssessmentAPIs.get_assistive_results_details(doctype)
                group = AssessmentAPIs.get_section_by_result(doctype,session,user)
             if doctype and user:
-               draft = FormAPIs.get_save_as_draft(doctype,user) 
-        return {'code': 200, 'data': {"average":average,"result":data,'details':details,'group':group,'draft':draft}}
+               draft = FormAPIs.get_save_as_draft(doctype,user)
+            for key, value in data.items():
+                modified_data = {'priority': 'Low'}  
+                modified_data['key'] = key
+                modified_data['value'] = value
+                if modified_data['value'] == 4:
+                    modified_data['priority'] = 'High'
+                elif modified_data['value'] == 3:
+                    modified_data['priority'] = 'Medium'
+                else:
+                    modified_data['priority'] = 'Low'
+                
+                # Append the modified dictionary to the list
+                datas.append(modified_data)
+
+        return {'code': 200, 'data': {"average":average,"result":datas,'details':details,'group':group,'draft':draft}}
 
     def get_assistive_results_details(doctype):
         name = frappe.get_all('Results and Recommendtions', filters={'ref_doctype': doctype}, pluck='name')

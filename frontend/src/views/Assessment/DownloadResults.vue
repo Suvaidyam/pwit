@@ -102,6 +102,44 @@
             </div>
         </Dialog>
     </TransitionRoot>
+    <!--  -->
+    <TransitionRoot as="template" :show="confirmation">
+        <Dialog class="relative z-30">
+            <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
+                leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+            </TransitionChild>
+            <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+                <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+                    <TransitionChild as="template" enter="ease-out duration-300"
+                        enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                        enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200"
+                        leave-from="opacity-100 translate-y-0 sm:scale-100"
+                        leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
+                        <DialogPanel
+                            class="relative transform overflow-hidden bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl">
+                            <div class="p-4">
+                                <div class="flex justify-between">
+                                    <h1 class="text-h3 font-primary font-bold text-primary">Confirmation</h1>
+                                    <X @click="confirmation = false" class="text-sm cursor-pointer" />
+                                </div>
+                                <p class="text-sm font-normal text-[#21272A] py-1">
+                                    You need to provide the following information to download the results.
+                                </p>
+                                <hr class="pb-2 mt-2">
+                                <div class="flex justify-end gap-2 pt-2">
+                                    <button @click="confirmationDn('guest')"
+                                        class="bg-secondary text-white rounded-md w-28 h-12 text-h5">Guest</button>
+                                    <button @click="confirmationDn('login')"
+                                        class="bg-secondary text-white rounded-md w-28 h-12 text-h5">Login</button>
+                                </div>
+                            </div>
+                        </DialogPanel>
+                    </TransitionChild>
+                </div>
+            </div>
+        </Dialog>
+    </TransitionRoot>
 </template>
 
 <script setup>
@@ -110,9 +148,11 @@ import { Download } from 'lucide-vue-next'
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import {  X } from 'lucide-vue-next'
 
+const auth = inject('$auth')
 const call = inject('$call')
 const store = inject('store')
 const userDetailsPop = ref(false)
+const confirmation = ref(false)
 const down_loading = ref(false);
 const formData = ref({
     designation: '',
@@ -145,6 +185,7 @@ const submitSelection = async () => {
     }
 }
 const download_results = async () => {
+    
     let value = await check_user_details()
     if (value) {
         down_loading.value = true
@@ -160,10 +201,22 @@ const download_results = async () => {
 const check_user_details = async () => {
     const response = await call('pwit.controllers.api.check_user_details', { session: store.session })
     if (response.code == 400) {
-        userDetailsPop.value = true
+        if(auth.isLoggedIn){ 
+            userDetailsPop.value = true
+        }else{
+            confirmation.value = true
+        }
         return false
     }else{
         return true
+    }
+}
+const confirmationDn=(value)=>{
+    confirmation.value = false
+    if(value == 'guest'){
+        userDetailsPop.value = true
+    }else{
+        store.authPopup= true;
     }
 }
 onMounted(() => {
