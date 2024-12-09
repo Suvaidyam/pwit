@@ -24,7 +24,8 @@
                         leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
                         <DialogPanel
                             class="relative transform overflow-hidden bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl">
-                            <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                            <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4 relative">
+                                <X @click="userDetailsPop = false" class="text-sm absolute right-4 cursor-pointer" />
                                 <div class="flex flex-col gap-2">
                                     <label for="designation" class="text-h5 font-normal text-[#21272A]">
                                         Please share your designation
