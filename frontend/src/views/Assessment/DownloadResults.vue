@@ -24,8 +24,18 @@
                         leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
                         <DialogPanel
                             class="relative transform overflow-hidden bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl">
-                            <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                                <div class="flex flex-col gap-2">
+                            <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4 relative">
+                                <div class="flex justify-between">
+                                    <h1 class="text-h3 font-primary font-bold text-primary">Provide the following
+                                        information</h1>
+                                    <X @click="userDetailsPop = false" class="text-sm cursor-pointer" />
+                                </div>
+                                <p class="text-sm font-normal text-[#21272A] py-1">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                                <hr class="pb-2 mt-2">
+                                <div class="flex flex-col gap-2 relative">
                                     <label for="designation" class="text-h5 font-normal text-[#21272A]">
                                         Please share your designation
                                         <span class="text-red-500">*</span>
@@ -44,11 +54,11 @@
                                             supporting funder organisation</option>
                                         <option value="Other">Other</option>
                                     </select>
-                                    <p v-if="errors.designation" class="text-red-500 text-h6 mt-1">{{ errors.designation
+                                    <p v-if="errors.designation" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{ errors.designation
                                         }}</p>
                                 </div>
 
-                                <div class="pt-3">
+                                <div class="pt-5 relative">
                                     <p class="text-h5 font-normal text-[#21272A]">
                                         Please select which funder type your organization identifies as
                                         <span class="text-red-500">*</span>
@@ -64,11 +74,11 @@
                                             {{ option }}
                                         </p>
                                     </label>
-                                    <p v-if="errors.funderType" class="text-red-500 text-h6 mt-1">{{ errors.funderType
+                                    <p v-if="errors.funderType" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{ errors.funderType
                                         }}</p>
                                 </div>
 
-                                <div class="flex flex-col gap-2 pt-3">
+                                <div class="flex flex-col gap-2 pt-5 relative">
                                     <label for="annual_budget" class="text-h5 font-normal text-[#21272A]">
                                         Your organization’s approximate annual budget allocation
                                         <span class="text-red-500">*</span>
@@ -83,7 +93,7 @@
                                         <option value="INR 101-300 Cr.">INR 101-300 Cr.</option>
                                         <option value="INR 301 and above">INR 301 and above</option>
                                     </select>
-                                    <p v-if="errors.annual_budget" class="text-red-500 text-h6 mt-1">{{
+                                    <p v-if="errors.annual_budget" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
                                         errors.annual_budget }}</p>
                                 </div>
 
