@@ -120,11 +120,11 @@
                             class="relative transform overflow-hidden bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl">
                             <div class="p-4">
                                 <div class="flex justify-between">
-                                    <h1 class="text-h3 font-primary font-bold text-primary">Confirmation</h1>
+                                    <h1 class="text-h2 font-primary font-bold text-primary">Confirmation</h1>
                                     <X @click="confirmation = false" class="text-sm cursor-pointer" />
                                 </div>
-                                <p class="text-sm font-normal text-[#21272A] py-1">
-                                    You need to provide the following information to download the results.
+                                <p class="text-h5 font-normal text-[#21272A] py-1">
+                                    Continue as guest on download.
                                 </p>
                                 <hr class="pb-2 mt-2">
                                 <div class="flex justify-end gap-2 pt-2">
@@ -193,6 +193,7 @@ const download_results = async () => {
         link.href = `/api/method/pwit.controllers.api.download_results?doctype=${props.ref_doctype}&session=${store.session}`;
         link.target = '_blank';
         link.click()
+        sessionStorage.removeItem('authPopup');
         setTimeout(() => {
             down_loading.value = false
         }, 500)
@@ -217,10 +218,14 @@ const confirmationDn=(value)=>{
         userDetailsPop.value = true
     }else{
         store.authPopup= true;
+        sessionStorage.setItem('authPopup', true);
     }
 }
 onMounted(() => {
     get_funder_type()
+    if(auth.isLoggedIn && sessionStorage.getItem('authPopup') == 'true'){
+        download_results()
+    }
 })
 </script>
 
