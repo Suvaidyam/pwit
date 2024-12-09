@@ -211,7 +211,7 @@ const get_results = async () => {
 }
 const re_attempt = () => {
     router.push(`/funder/${route.params.category}`)
-    localStorage.setItem('re_attempt', true)
+    sessionStorage.setItem('re_attempt', true)
 }
 watch(route, (newVal) => {
     title.value = splitAtSecondCapital(newVal.path)
