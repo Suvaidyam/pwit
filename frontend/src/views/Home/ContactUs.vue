@@ -2,7 +2,7 @@
     <div class="absolute bg-white shadow-lg py-6 -top-24 w-full lg:w-[65%] px-4 md:px-8 lg:px-20">
         <h2 class="text-h2 font-bold font-primary text-center text-primary mb-6">Contact Us</h2>
         <div class="space-y-6">
-            <div>
+            <div class="relative">
                 <label class="block text-gray-800 text-sm mb-2">
                     Full Name <span class="text-red-500">*</span>
                 </label>
@@ -11,9 +11,9 @@
                         'w-full px-3 py-2 border-b bg-[#f3f4f8] border-gray-300 shadow-sm outline-none',
                         { 'border-red-500': errors.full_name }
                     ]" />
-                <p v-if="errors.full_name" class="text-red-500 text-sm">{{ errors.full_name }}</p>
+                <p v-if="errors.full_name" class="text-red-500 text-h6 absolute -bottom-5 mt-1">{{ errors.full_name }}</p>
             </div>
-            <div>
+            <div class="relative">
                 <label class="block text-gray-800 text-sm mb-2">
                     Email Address <span class="text-red-500">*</span>
                 </label>
@@ -22,9 +22,9 @@
                         'w-full px-3 py-2 border-b bg-[#f3f4f8] border-gray-300 shadow-sm outline-none',
                         { 'border-red-500': errors.email }
                     ]" />
-                <p v-if="errors.email" class="text-red-500 text-sm">{{ errors.email }}</p>
+                <p v-if="errors.email" class="text-red-500 text-h6 absolute -bottom-5 mt-1">{{ errors.email }}</p>
             </div>
-            <div>
+            <div class="relative">
                 <label class="block text-gray-800 text-sm mb-2">
                     Your Message <span class="text-red-500">*</span>
                 </label>
@@ -33,7 +33,7 @@
                         'w-full px-3 py-2 h-24 border-b bg-[#f3f4f8] border-gray-300 shadow-sm outline-none',
                         { 'border-red-500': errors.message }
                     ]"></textarea>
-                <p v-if="errors.message" class="text-red-500 text-sm">{{ errors.message }}</p>
+                <p v-if="errors.message" class="text-red-500 text-h6  absolute -bottom-5 ">{{ errors.message }}</p>
             </div>
             <div class="flex justify-center">
                 <button type="button" @click="sendMessage"
