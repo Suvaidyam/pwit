@@ -3,10 +3,11 @@
         :class="[props.disabled ? 'cursor-not-allowed' : 'cursor-pointer']"
         class="border flex items-center justify-center gap-2 px-2 md:px-4 h-7 md:h-9 text-sm border-[#27853F] text-[#27853F] rounded-md">
         <span class="hidden lg:block truncate">Download Result </span>
-        <div class="h-5 w-5"  v-if="down_loading">
-            <div class="animate-spin h-full w-full rounded-full border-[3px] border-t-[#002C77] border-b-[#255B97]"></div>
+        <div class="h-5 w-5" v-if="down_loading">
+            <div class="animate-spin h-full w-full rounded-full border-[3px] border-t-[#002C77] border-b-[#255B97]">
+            </div>
         </div>
-        <Download class="w-4" v-else/>
+        <Download class="w-4" v-else />
     </button>
     <TransitionRoot as="template" :show="userDetailsPop">
         <Dialog class="relative z-30">
@@ -24,43 +25,35 @@
                         <DialogPanel
                             class="relative transform overflow-hidden bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl">
                             <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                                <div class="flex justify-between">
-                                    <h1 class="text-h3 font-primary font-bold text-primary">Provide the following
-                                        information</h1>
-                                    <X @click="userDetailsPop = false" class="text-sm cursor-pointer" />
-                                </div>
-                                <p class="text-sm font-normal text-[#21272A] py-1">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                                <hr class="pb-2 mt-2">
                                 <div class="flex flex-col gap-2">
-                                    <label for="designation" class="text-h5 font-normal text-[#21272A]">Please share
-                                        your
-                                        designation</label>
-                                    <select name="" id="designation" v-model="formData.designation"
-                                        class="outline-none border-b-2 border-gray-400 bg-gray-50 py-3 text-gray-600 px-2">
+                                    <label for="designation" class="text-h5 font-normal text-[#21272A]">
+                                        Please share your designation
+                                        <span class="text-red-500">*</span>
+                                    </label>
+                                    <select id="designation" v-model="formData.designation"
+                                        class="outline-none border-b-2 bg-gray-50 py-3 text-gray-600 px-2"
+                                        :class="[!errors.designation ? 'border-gray-400' : 'border-red-500']">
                                         <option value="">Select</option>
                                         <option value="Executive Director/Chief Executive Officer/Head of CSR">Executive
-                                            Director/Chief Executive Officer/Head of CSR
-                                        </option>
-                                        <option value="Director of Philanthropy">Director of Philanthropy
-                                        </option>
-                                        <option value="Chief Operating Officer">Chief Operating Officer
-                                        </option>
+                                            Director/Chief Executive Officer/Head of CSR</option>
+                                        <option value="Director of Philanthropy">Director of Philanthropy</option>
+                                        <option value="Chief Operating Officer">Chief Operating Officer</option>
                                         <option value="Program Lead/Program Officer">Program Lead/Program Officer
                                         </option>
                                         <option value="Third party supporting funder organisation">Third party
-                                            supporting funder organisation
-                                        </option>
+                                            supporting funder organisation</option>
                                         <option value="Other">Other</option>
                                     </select>
+                                    <p v-if="errors.designation" class="text-red-500 text-h6 mt-1">{{ errors.designation
+                                        }}</p>
                                 </div>
+
                                 <div class="pt-3">
-                                    <p class=" text-h5 font-normal text-[#21272A]">
+                                    <p class="text-h5 font-normal text-[#21272A]">
                                         Please select which funder type your organization identifies as
+                                        <span class="text-red-500">*</span>
                                     </p>
-                                    <label :for="option.id" v-for="option in options" :key="option" :class="[
+                                    <label v-for="option in options" :key="option" :class="[
                                         'w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3',
                                         formData.funderType.includes(option) ? 'border-[#255B97]' : 'border-gray-300'
                                     ]">
@@ -71,30 +64,36 @@
                                             {{ option }}
                                         </p>
                                     </label>
+                                    <p v-if="errors.funderType" class="text-red-500 text-h6 mt-1">{{ errors.funderType
+                                        }}</p>
                                 </div>
+
                                 <div class="flex flex-col gap-2 pt-3">
-                                    <label for="annual_budget" class="text-h5 font-normal text-[#21272A]">Your
-                                        organisation’s
-                                        approximate annual budget allocation</label>
-                                    <select name="" id="annual_budget" v-model="formData.annual_budget"
-                                        class="outline-none border-b-2 border-gray-400 bg-gray-50 py-3 text-gray-600 px-2">
+                                    <label for="annual_budget" class="text-h5 font-normal text-[#21272A]">
+                                        Your organization’s approximate annual budget allocation
+                                        <span class="text-red-500">*</span>
+                                    </label>
+                                    <select id="annual_budget" v-model="formData.annual_budget"
+                                        class="outline-none border-b-2 bg-gray-50 py-3 text-gray-600 px-2"
+                                        :class="[!errors.annual_budget ? 'border-gray-400' : 'border-red-500']">
                                         <option value="">Select</option>
-                                        <option value="Less than INR 10 Cr.">Less than INR 10 Cr.
-                                        </option>
-                                        <option value="INR 10-50 Cr.">INR 10-50 Cr.
-                                        </option>
-                                        <option value="INR 51-100 Cr.">INR 51-100 Cr.
-                                        </option>
-                                        <option value="INR 101-300 Cr.">INR 101-300 Cr.
-                                        </option>
-                                        <option value="INR 301 and above">INR 301 and above
-                                        </option>
+                                        <option value="Less than INR 10 Cr.">Less than INR 10 Cr.</option>
+                                        <option value="INR 10-50 Cr.">INR 10-50 Cr.</option>
+                                        <option value="INR 51-100 Cr.">INR 51-100 Cr.</option>
+                                        <option value="INR 101-300 Cr.">INR 101-300 Cr.</option>
+                                        <option value="INR 301 and above">INR 301 and above</option>
                                     </select>
+                                    <p v-if="errors.annual_budget" class="text-red-500 text-h6 mt-1">{{
+                                        errors.annual_budget }}</p>
                                 </div>
+
                                 <div class="flex justify-end pt-2">
                                     <button @click="submitSelection"
-                                        class="bg-secondary text-white rounded-md w-28 h-12 text-h5">Submit</button>
+                                        class="bg-secondary text-white rounded-md w-28 h-12 text-h5">
+                                        Submit
+                                    </button>
                                 </div>
+
                             </div>
                         </DialogPanel>
                     </TransitionChild>
@@ -146,7 +145,7 @@
 import { inject, onMounted, ref } from 'vue'
 import { Download } from 'lucide-vue-next'
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import {  X } from 'lucide-vue-next'
+import { X } from 'lucide-vue-next'
 
 const auth = inject('$auth')
 const call = inject('$call')
@@ -159,6 +158,11 @@ const formData = ref({
     funderType: [],
     annual_budget: ''
 })
+const errors = ref({
+    designation: '',
+    funderType: '',
+    annual_budget: ''
+});
 const options = ref([])
 // Props
 const props = defineProps({
@@ -176,8 +180,17 @@ const get_funder_type = async () => {
     options.value = res
 }
 
+const validateForm = () => {
+    errors.value.designation = formData.value.designation ? '' : 'Designation is required.';
+    errors.value.funderType = formData.value.funderType.length ? '' : 'Please select at least one funder type.';
+    errors.value.annual_budget = formData.value.annual_budget ? '' : 'Annual budget is required.';
+    return !errors.value.designation && !errors.value.funderType && !errors.value.annual_budget;
+};
 // Submit selected options
 const submitSelection = async () => {
+    if (!validateForm()) {
+        return;
+    }
     let res = await call('pwit.controllers.api.save_user_details', { data: formData.value, session: store.session })
     if (res.code == 200) {
         userDetailsPop.value = false
@@ -185,7 +198,7 @@ const submitSelection = async () => {
     }
 }
 const download_results = async () => {
-    
+
     let value = await check_user_details()
     if (value) {
         down_loading.value = true
@@ -202,28 +215,28 @@ const download_results = async () => {
 const check_user_details = async () => {
     const response = await call('pwit.controllers.api.check_user_details', { session: store.session })
     if (response.code == 400) {
-        if(auth.isLoggedIn){ 
+        if (auth.isLoggedIn) {
             userDetailsPop.value = true
-        }else{
+        } else {
             confirmation.value = true
         }
         return false
-    }else{
+    } else {
         return true
     }
 }
-const confirmationDn=(value)=>{
+const confirmationDn = (value) => {
     confirmation.value = false
-    if(value == 'guest'){
+    if (value == 'guest') {
         userDetailsPop.value = true
-    }else{
-        store.authPopup= true;
+    } else {
+        store.authPopup = true;
         sessionStorage.setItem('authPopup', true);
     }
 }
 onMounted(() => {
     get_funder_type()
-    if(auth.isLoggedIn && sessionStorage.getItem('authPopup') == 'true'){
+    if (auth.isLoggedIn && sessionStorage.getItem('authPopup') == 'true') {
         download_results()
     }
 })
