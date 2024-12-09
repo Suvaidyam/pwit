@@ -30,6 +30,12 @@
                     </a>
                     </MenuItem>
                     <MenuItem v-slot="{ active }">
+                    <router-link to="/recommended"
+                        :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'flex items-center gap-2 px-4 py-2 text-sm']">
+                        <FileSearch2 class="w-4 h-4 text-gray-400" />View Previous Results
+                    </router-link>
+                    </MenuItem>
+                    <MenuItem v-slot="{ active }">
                     <button type="button" @click="auth.logout()"
                         :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'flex items-center gap-2 w-full px-4 py-2 text-left text-sm']">
                         <LogOut class="w-4 h-4 text-gray-400" />Logout
@@ -46,12 +52,14 @@
 <script setup>
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ref, inject, watch } from 'vue'
-import { UserRound, LockKeyhole, LogOut } from 'lucide-vue-next'
+import { UserRound, LockKeyhole, LogOut ,FileSearch2} from 'lucide-vue-next'
 import Profile from './Profile.vue';
 import ChangePassword from './ChangePassword.vue'
+import { useRouter } from 'vue-router';
 
 const auth = inject('$auth');
 const store = inject('store');
+const router = useRouter();
 const openDialog = (el) => {
     if(el=='profile'){
         store.isOpen = true;
