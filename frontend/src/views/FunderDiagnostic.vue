@@ -74,7 +74,7 @@ const save_as_draft = async (formData) => {
     const res = await call('pwit.controllers.api.save_as_draft', { doctype: 'Funder Diagnostic', doc: { ...formData, 'session': store.session }, name: initialData?.value?.name });
     if (res.code === 200) {
       localStorage.removeItem('draft');
-      toast.success('Draft saved successfully');
+      toast.info('Draft saved successfully');
       get_save_as_draft()
       return res;
     }
