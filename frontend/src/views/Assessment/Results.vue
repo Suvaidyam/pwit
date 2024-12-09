@@ -61,17 +61,17 @@
                                     </thead>
                                     <tbody>
                                         <tr v-if="recommendations.result"
-                                            v-for="[key, value] in Object.entries(recommendations.result)" :key="key"
+                                            v-for="item in recommendations.result" :key="item.key"
                                             class="border-b">
                                             <td
                                                 class="w-1/2 px-4 py-2 font-normal text-h6 text-pbase border border-gray-200">
-                                                {{ key }}
+                                                {{ item.key }}
                                             </td>
                                             <td class="py-2 px-4">
                                                 <div class="h-4 bg-gray-200">
                                                     <div class="h-4 text-xs flex justify-center"
-                                                        :class="[value == 4 ? 'bg-[#337357] w-full' : value == 3 ? 'w-2/3 bg-[#FFD23F]' : value == 2 ? 'bg-[#FF6464] w-1/3' : 'bg-[#FF6464] w-1/5']">
-                                                        {{ recommendations.result ? '' : 'Not Found' }}
+                                                        :class="[item.priority == 'High' ? 'bg-[#337357] w-full text-green-200' : item.priority == 'Medium' ? 'w-2/3 bg-[#FFD23F] text-yellow-100' : 'bg-[#FF6464] w-1/3 text-red-100']">
+                                                        {{ item.value }}
                                                     </div>
                                                 </div>
                                             </td>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] md:grid-cols-1  lg:grid-cols-1 gap-4 pt-4 w-full">
                     <!-- Recommended Actions Section -->
-                    <div class="w-full mx-auto h-96 relative overflow-y-auto">
+                    <div v-if="recommendations?.details?.recommended_actions" class="w-full mx-auto h-96 relative overflow-y-auto">
                         <p class="text-primary font-bold sticky top-0 bg-white font-primary text-xl sm:text-2xl pb-4">
                             Recommended Actions
                         </p>
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                     <!-- Useful Resources Section -->
-                    <div class="w-full mx-auto rounded-sm shadow-md px-4 pb-2 h-96 overflow-y-auto">
+                    <div v-if="recommendations?.details?.useful_resources" class="w-full mx-auto rounded-sm shadow-md px-4 pb-2 h-96 overflow-y-auto">
                         <p class="text-primary sticky top-0 bg-white font-bold font-primary text-xl sm:text-2xl pb-4">
                             Useful Resources
                         </p>
@@ -167,8 +167,14 @@ const title = ref(splitAtSecondCapital(route.path));
 
 const get_results = async () => {
     loading.value = true
+    let url
+    if(title.value=='Diversity Equity Inclusion'){
+       url = 'get_dei_result'
+    }else{
+        url = 'get_assistive_result'
+    }
     try {
-        let res = await call('pwit.controllers.api.get_assistive_result', {
+        let res = await call(`pwit.controllers.api.${url}`, {
             doctype: title?.value == "Multi Year Partnerships" ? 'Multi-year Partnerships' : title.value,
             session: store.session,
             user: auth.cookie.user_id !== 'Guest' ? auth.cookie.user_id : ''
@@ -205,7 +211,7 @@ const get_results = async () => {
 }
 const re_attempt = () => {
     router.push(`/funder/${route.params.category}`)
-    localStorage.setItem('re_attempt', true)
+    sessionStorage.setItem('re_attempt', true)
 }
 watch(route, (newVal) => {
     title.value = splitAtSecondCapital(newVal.path)
@@ -237,18 +243,6 @@ function splitAtSecondCapital(input) {
     /* Background of the scrollbar track */
 }
 
-/* ::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 4px;
-    border: 4px solid #f4f4f4;
-} */
-
-/* Dark mode alternative */
-/* ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-} */
-
-/* For Firefox */
 * {
     scrollbar-width: thin;
     scrollbar-color: #255B97 #f4f4f4;

@@ -84,7 +84,6 @@ const errorMessage = ref('')
 const store = inject('store');
 const auth = inject('$auth');
 const call = inject('$call');
-const cur_session = ref(JSON.parse(localStorage.getItem('session'))?.data?.name)
 
 const validateEmail = (email) => {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -114,9 +113,9 @@ const login = async () => {
         toast.error('Invalid login credentials');
         loading.value = false;
     }
-    if (res && cur_session.value) {
+    if (res && store.session) {
         const response = await call('pwit.controllers.api.set_user_session', {
-            name: cur_session.value,
+            name: store.session,
             user: email.value
         });
 
@@ -129,7 +128,7 @@ const login = async () => {
 };
 
 
-watch(() => cur_session.value, (value) => {
-    cur_session.value = value
+watch(() => store.session, (value) => {
+    store.session = value
 });
 </script>

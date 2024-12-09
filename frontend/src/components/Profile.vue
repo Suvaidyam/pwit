@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
                                 <!-- other details -->
-                                <div class="" v-if="otherFormData">
+                                <div class="" v-if="otherFormData.designation && otherFormData.funderType && otherFormData.annual_budget">
                                     <div class="relative border-b py-3">
                                         <p class="py-2 text-h3 absolute left-[40%] top-0 bg-white text-secondary">Other Details</p>
                                     </div>

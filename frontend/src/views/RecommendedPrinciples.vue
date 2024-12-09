@@ -9,10 +9,23 @@
                                 class="text-gray-400">/ Recommended Principles</span>
                         </p>
                     </div>
-                    <h1 class="text-h3 md:text-h2 font-bold  text-[#002C77] font-primary">Pathway for funders to
+                    <div class="flex justify-between items-center">
+                        <h1 class="text-h3 truncate md:text-h2 font-bold  text-[#002C77] font-primary">Pathway for funders to
                         strengthen their
                         grant
                         making practices</h1>
+                        <router-link to="/funder-diagnostic"
+                            class="border border-[#255B97] w-10 justify-center md:w-auto min-w-10 flex items-center gap-2 truncate rounded-md h-7 md:h-9 text-secondary text-sm lg:px-6"
+                            @click="re_attempt">
+                            <span class="hidden lg:block"
+                                v-if="Object.keys(initialData).length">Continue
+                                Assessment</span>
+                            <span class="hidden lg:block" v-else>Retake</span>
+                            <ChevronRight class="w-4 h-4 min-w-4"
+                                v-if="false" />
+                            <RefreshCcw class="w-4 h-4 min-w-4" v-else />
+                        </router-link>
+                    </div>
                     <p class="text-sebase pt-3  font-normal text-sm text-justify">
                         Funders can pursue or advance their journey on one or more principles; however, we recognize
                         that a step-by-step approach
@@ -90,15 +103,17 @@ import { computed, inject, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import FooterNav from '../components/FooterNav.vue';
 import Loader from '../components/Loader.vue';
-import { IndianRupee, Handshake, PiggyBank, ChartNoAxesCombined, Scale } from 'lucide-vue-next'
+import { IndianRupee, Handshake, PiggyBank, ChartNoAxesCombined, Scale, RefreshCcw, ChevronRight } from 'lucide-vue-next'
 
 const router = useRouter()
 const call = inject('$call')
 const auth = inject('$auth')
-const session = JSON.parse(localStorage.getItem('session'))
+const store = inject('store')
 const loading = ref(false)
 const recommendedList = ref([])
 const additionalList = ref([])
+const initialData = ref({})
+const viewResult = ref(false)
 
 const data = ref([
     {
@@ -165,7 +180,7 @@ const get_result = async () => {
         loading.value = true;
         call('pwit.controllers.api.get_results', {
             doctype: 'Funder Diagnostic',
-            session: session.data.name,
+            session: store.session,
             user:auth.cookie.user_id!=='Guest'?auth.cookie.user_id:''
         })
             .then(res => {
@@ -176,7 +191,6 @@ const get_result = async () => {
                     acc[prefix] = (acc[prefix] || 0) + value;
                     return acc;
                 }, {});
-                console.log(groupedSums,'group')
                 resolve(groupedSums);
             })
             .catch(error => {
@@ -188,7 +202,9 @@ const get_result = async () => {
             });
     });
 };
-
+const re_attempt = () => {
+    console.log('re_attempt')
+}
 // Fetch recommended principles
 const get_recomm = async () => {
     return new Promise((resolve, reject) => {
@@ -241,6 +257,17 @@ const evaluateLogic = (logicArray, results) => {
     });
 };
 
+const get_save_as_draft = async () => {
+  try {
+    let res = await call('pwit.controllers.api.get_save_as_draft', { doctype: 'Funder Diagnostic', user: auth.cookie.user_id });
+    if (res.code === 200) {
+      initialData.value = res.data;
+    }
+  } catch (error) {
+
+  }
+}
+
 watch(() => data.value, (value) => {
     recommendedList.value = value?.filter(e => e.group === 'Recommended')
     additionalList.value = value?.filter(e => e.group === 'Additional')
@@ -251,7 +278,6 @@ onMounted(async () => {
         let assessmentResult = await get_result()
         let logics = await get_recomm();
         let topMatching = evaluateLogic(logics, assessmentResult)?.[0];
-        console.log(topMatching, 'topMatching')
         if (!topMatching) {
             let updatedData = data?.value?.map(e => {
                 e.score = assessmentResult[e.code] || 0;
@@ -269,6 +295,9 @@ onMounted(async () => {
         }
     } catch (error) {
 
+    }
+    if (auth.isLoggedIn) {
+        get_save_as_draft();
     }
 });
 

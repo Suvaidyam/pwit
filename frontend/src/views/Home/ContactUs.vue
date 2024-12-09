@@ -107,7 +107,7 @@ const sendMessage = async () => {
 
     const session = (() => {
         try {
-            return JSON.parse(localStorage.getItem('session')) || {};
+            return JSON.parse(sessionStorage.getItem('session')) || {};
         } catch (err) {
             console.error('Invalid session data', err);
             return {};

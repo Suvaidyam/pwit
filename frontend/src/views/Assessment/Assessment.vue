@@ -22,10 +22,9 @@
                 <FormView v-if="title !== 'Diversity Equity Inclusion'" :initialData="initialData" :doctype="title"
                     :onSubmit="handleSubmit" :isTable="true" :isDraft="true" :section="true"
                     :save_as_draft="save_as_draft" :key="title" />
-                    <div v-if="title == 'Diversity Equity Inclusion'" class="w-full h-96 flex justify-center items-center text-h2">Coming Soon..</div>
-                <!-- <FormView v-if="title == 'Diversity Equity Inclusion'" :initialData="initialData" :doctype="title"
+                <FormView v-if="title == 'Diversity Equity Inclusion'" :initialData="initialData" :doctype="title"
                     :onSubmit="handleSubmit" :isDraft="true" :isCard="true" :section="true"
-                    :save_as_draft="save_as_draft" :key="title" /> -->
+                    :save_as_draft="save_as_draft" :key="title" />
             </div>
         </transition>
     </div>
@@ -67,7 +66,7 @@ const handleSubmit = async (formData) => {
     try {
         const res = await call('pwit.controllers.api.save_doc', { doctype: title.value, doc: { ...formData, 'session': store.session }, name: initialData?.value?.name });
         if (res.code === 200) {
-            localStorage.removeItem('re_attempt');
+            sessionStorage.removeItem('re_attempt');
             router.push(`${current_path.value}/results`);
         }
     } catch (err) {
@@ -84,13 +83,13 @@ const save_as_draft = async (formData) => {
     if (auth.isLoggedIn && changes) {
         const res = await call('pwit.controllers.api.save_as_draft', { doctype: title.value, doc: { ...formData, 'session': store.session }, name: initialData?.value?.name });
         if (res.code === 200) {
-            localStorage.removeItem('draft');
+            sessionStorage.removeItem('draft');
             toast.info('Draft saved successfully');
             get_save_as_draft()
             return res;
         }
     } else if (!auth.isLoggedIn) {
-        localStorage.setItem('draft', JSON.stringify(formData));
+        sessionStorage.setItem('draft', JSON.stringify(formData));
         store.save_as_login = true;
     }
 }
@@ -126,7 +125,7 @@ const get_results = async () => {
             user: auth.cookie.user_id !== 'Guest' ? auth.cookie.user_id : ''
         })
         if (res.code === 200) {
-            let re_attempt = localStorage.getItem('re_attempt');
+            let re_attempt = sessionStorage.getItem('re_attempt');
             results.value = res.data.result;
             if (Object.keys(res.data.result).length && !re_attempt && Object.keys(initialData.value).length === 0) {
                 router.push(`${current_path.value}/results`);
@@ -143,12 +142,10 @@ function splitAtSecondCapital(input) {
 }
 onMounted(async () => {
     get_results();
-    let draft = JSON.parse(localStorage.getItem('draft') ?? '{}');
+    let draft = JSON.parse(sessionStorage.getItem('draft') ?? '{}');
     if (Object.keys(draft).length) {
         if (auth.isLoggedIn) {
             await save_as_draft(draft);
-        } else {
-            initialData.value = draft;
         }
     }
     if (auth.isLoggedIn) {
