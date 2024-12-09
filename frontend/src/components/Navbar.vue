@@ -19,7 +19,7 @@ import ProfileDrop from './ProfileDrop.vue';
 const call = inject('$call')
 const auth = inject('$auth');
 const store = inject('store');
-const cur_session = ref(JSON.parse(localStorage.getItem('session')))
+const cur_session = ref(JSON.parse(sessionStorage.getItem('session')))
 
 watch(() => auth.cookie, (value) => {
     auth.cookie = value
@@ -28,7 +28,7 @@ const create_session = async () => {
     if (!cur_session.value) {
         const response = await call('pwit.controllers.api.create_session', {})
         if (response) {
-            localStorage.setItem('session', JSON.stringify(response))
+            sessionStorage.setItem('session', JSON.stringify(response))
             store.session = response?.data?.name
         }
     }else{

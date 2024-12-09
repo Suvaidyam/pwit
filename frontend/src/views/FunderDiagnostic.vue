@@ -73,18 +73,18 @@ const save_as_draft = async (formData) => {
   if (auth.isLoggedIn) {
     const res = await call('pwit.controllers.api.save_as_draft', { doctype: 'Funder Diagnostic', doc: { ...formData, 'session': store.session }, name: initialData?.value?.name });
     if (res.code === 200) {
-      localStorage.removeItem('draft');
+      sessionStorage.removeItem('draft');
       toast.info('Draft saved successfully');
       get_save_as_draft()
       return res;
     }
   } else {
-    localStorage.setItem('draft', JSON.stringify(formData));
+    sessionStorage.setItem('draft', JSON.stringify(formData));
     store.save_as_login = true;
   }
 }
 onMounted(async () => {
-  let draft = JSON.parse(localStorage.getItem('draft') ?? '{}');
+  let draft = JSON.parse(sessionStorage.getItem('draft') ?? '{}');
   if (Object.keys(draft).length) {
     if (auth.isLoggedIn) {
       await save_as_draft(draft);

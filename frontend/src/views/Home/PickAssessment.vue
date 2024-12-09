@@ -204,7 +204,7 @@ const set_policyconsent = async () => {
 		value:policyconsent.value
 	});
 	if (res.code === 200) {
-		localStorage.setItem('policyconsent',JSON.stringify(res.data.policyconsent))
+		sessionStorage.setItem('policyconsent',JSON.stringify(res.data.policyconsent))
 	}
 };
 const get_last_draft = async () => {
@@ -217,7 +217,7 @@ onMounted(async()=>{
     if(auth.isLoggedIn){
        await get_last_draft()
     }
-    let consent = JSON.parse(localStorage.getItem('policyconsent'))
+    let consent = JSON.parse(sessionStorage.getItem('policyconsent'))
     policyconsent.value = (consent==1?true:false)
 })
 </script>
