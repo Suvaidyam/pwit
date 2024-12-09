@@ -151,15 +151,15 @@
             <p style="padding-top: 18px; font-size: 20px;color: #002C77;font-family: serif;font-weight: 700;">
                 Useful Resources
             </p>
-            {% for resource in doc.details.useful_resources %}
-            <div>
-                <div style="padding: 7px 10px; ">
+            <ul style="padding: 0px 22px;">
+                {% for resource in doc.details.useful_resources %}
+                <li style="padding: 7px 0px; ">
                     <a href="{{ resource.to }}" target="_blank" style="font-size: 14px; text-align: center;">
                         {{ resource.resources }}
                     </a>
-                </div>
-            </div>
-            {% endfor %}
+                </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </body>
