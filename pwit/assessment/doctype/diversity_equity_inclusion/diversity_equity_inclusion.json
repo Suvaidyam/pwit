@@ -16,7 +16,7 @@
   "dei_selection",
   "diligence_section",
   "dei_diligence",
-  "grant_setup_and_disbursement_section",
+  "grant_award_process_and_disbursement_section",
   "dei_grant_setup_and_disbursement",
   "grantee_support_section",
   "dei_grantee_support",
@@ -61,11 +61,6 @@
    "fieldname": "diligence_section",
    "fieldtype": "Section Break",
    "label": "Diligence"
-  },
-  {
-   "fieldname": "grant_setup_and_disbursement_section",
-   "fieldtype": "Section Break",
-   "label": "Grant setup and disbursement"
   },
   {
    "fieldname": "grantee_support_section",
@@ -177,12 +172,17 @@
    "label": "Is progress on DEI-related outcomes/results seen as a positive at the time of grant renewal? (Select one)",
    "options": "Field Options",
    "reqd": 1
+  },
+  {
+   "fieldname": "grant_award_process_and_disbursement_section",
+   "fieldtype": "Section Break",
+   "label": "Grant award process and disbursement"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-30 15:29:20.624123",
+ "modified": "2024-12-10 12:46:05.947859",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Diversity Equity Inclusion",
