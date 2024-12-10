@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="w-full h-full flex justify-center items-center text-4xl text-gray-600" v-else>
-        Workspace Not Found
+        <Loader />
     </div>
 </template>
 
@@ -14,6 +14,7 @@
 import { ref, onMounted, inject } from 'vue';
 import LeftNav from './LeftNav.vue';
 import { useRoute } from 'vue-router';
+import Loader from '../../components/Loader.vue';
 
 const route = useRoute()
 const call = inject('$call')

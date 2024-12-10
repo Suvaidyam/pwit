@@ -60,9 +60,8 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr v-if="recommendations.result"
-                                            v-for="item in recommendations.result" :key="item.key"
-                                            class="border-b">
+                                        <tr v-if="recommendations.result" v-for="item in recommendations.result"
+                                            :key="item.key" class="border-b">
                                             <td
                                                 class="w-1/2 px-4 py-2 font-normal text-h6 text-pbase border border-gray-200">
                                                 {{ item.key }}
@@ -71,7 +70,6 @@
                                                 <div class="h-4 bg-gray-200">
                                                     <div class="h-4 text-xs flex justify-center"
                                                         :class="[item.priority == 'High' ? 'bg-[#337357] w-full text-green-200' : item.priority == 'Medium' ? 'w-2/3 bg-[#FFD23F] text-yellow-100' : 'bg-[#FF6464] w-1/3 text-red-100']">
-                                                        {{ item.value }}
                                                     </div>
                                                 </div>
                                             </td>
@@ -95,7 +93,8 @@
                 </div>
                 <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] md:grid-cols-1  lg:grid-cols-1 gap-4 pt-4 w-full">
                     <!-- Recommended Actions Section -->
-                    <div v-if="recommendations?.details?.recommended_actions" class="w-full mx-auto h-96 relative overflow-y-auto">
+                    <div v-if="recommendations?.details?.recommended_actions"
+                        class="w-full mx-auto h-96 relative overflow-y-auto">
                         <p class="text-primary font-bold sticky top-0 bg-white font-primary text-xl sm:text-2xl pb-4">
                             Recommended Actions
                         </p>
@@ -109,23 +108,28 @@
                         </div>
                     </div>
                     <!-- Useful Resources Section -->
-                    <div v-if="recommendations?.details?.useful_resources" class="w-full mx-auto rounded-sm shadow-md px-4 pb-2 h-96 overflow-y-auto">
+                    <div v-if="recommendations?.details?.useful_resources"
+                        class="w-full mx-auto rounded-sm shadow-md px-4 pb-2 h-96 overflow-y-auto">
                         <p class="text-primary sticky top-0 bg-white font-bold font-primary text-xl sm:text-2xl pb-4">
                             Useful Resources
                         </p>
                         <div v-for="resource in recommendations?.details?.useful_resources" :key="resource.title"
-                            class="flex gap-4 py-3 border-b ">
-                            <span class="flex justify-center pt-1">
-                                <svg class="w-4 h-4" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13">
-                                    <path
-                                        d="M9.92589 1.94306L3.05734 1.94306L3.05734 0.343298H12.657L12.657 1.14318L12.657 9.94298L11.0573 9.94298L11.0573 3.07443L1.909 12.2227L0.777625 11.0913L9.92589 1.94306Z"
-                                        fill="#27853F" />
-                                </svg>
-                            </span>
-                            <a :href="resource.to" target="_blank"
-                                class="text-pbase hover:text-blue-500 text-h6 font-normal text-justify">
-                                {{ resource.resources }}
-                            </a>
+                            class="flex flex-col gap-1 py-3 border-b ">
+                            <p v-if="resource.section" class="text-h6 font-bold bg-gray-100 px-2 py-1">{{ resource.section }}</p>
+                            <div class="flex items-center gap-2">
+                                <span class="flex justify-center pt-1">
+                                    <svg class="w-4 h-4" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 13 13">
+                                        <path
+                                            d="M9.92589 1.94306L3.05734 1.94306L3.05734 0.343298H12.657L12.657 1.14318L12.657 9.94298L11.0573 9.94298L11.0573 3.07443L1.909 12.2227L0.777625 11.0913L9.92589 1.94306Z"
+                                            fill="#27853F" />
+                                    </svg>
+                                </span>
+                                <a :href="resource.to" target="_blank"
+                                    class="text-pbase hover:text-blue-500 text-h6 font-normal text-justify">
+                                    {{ resource.resources }}
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -168,9 +172,9 @@ const title = ref(splitAtSecondCapital(route.path));
 const get_results = async () => {
     loading.value = true
     let url
-    if(title.value=='Diversity Equity Inclusion'){
-       url = 'get_dei_result'
-    }else{
+    if (title.value == 'Diversity Equity Inclusion') {
+        url = 'get_dei_result'
+    } else {
         url = 'get_assistive_result'
     }
     try {
@@ -184,7 +188,7 @@ const get_results = async () => {
             loading.value = false
             let actions = res?.data?.details?.recommended_actions
             let groups = res?.data?.group
-            if (actions.length){
+            if (actions.length) {
                 actions.sort((a, b) => groups[a.title] - groups[b.title]);
             }
             setTimeout(() => {
