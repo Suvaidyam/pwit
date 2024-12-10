@@ -49,7 +49,7 @@
 						<p class="text-[#136096] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
 							Pay a fair share of core costs
 						</p>
-						<p class="text-h6 font-bold text-center leading-3">Cover NGOs' expenses for day-to-day
+						<p class="text-h6 font-bold text-center leading-3">Cover NGOs expenses for day-to-day
 							operations</p>
 					</div>
 
@@ -89,7 +89,7 @@
 							Embed Diversity Equity, and inclusion in grantmaking
 						</p>
 						<p class="text-h6 leading-3 font-bold text-center">Recognize and address the needs of
-							underserved indi- viduals and communities</p>
+							underserved individuals and communities</p>
 					</div>
 				</div>
 
