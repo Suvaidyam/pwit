@@ -316,3 +316,9 @@ onMounted(async () => {
 });
 
 </script>
+
+<style scoped>
+[class~="text-[#59467b]"] {
+  color: #59467b !important; /* Replace with the new color */
+}
+</style>
