@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4">
         <div class="mt-3 text-center">
-            <DialogTitle as="h3" class="text-h3 font-bold text-sebase font-primary text-center">Sign Up
+            <DialogTitle as="h3" class="text-h3 md:text-h2 font-bold text-sebase font-primary text-center">Sign up and create an account
             </DialogTitle>
             <p class="text-h5 pt-2 text-center text-sebase">Please provide the following
                 information to continue </p>

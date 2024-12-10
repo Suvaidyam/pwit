@@ -25,62 +25,67 @@
 			</div>
 
 			<div
-				class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-12 gap-x-5 pt-14">
-				<div class="h-[149px] flex rounded-md bg-white relative px-4 ">
+				class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-12 gap-x-3 pt-14">
+				<div class="h-[160px] flex rounded-md bg-white relative px-4 ">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8  tracking-wider border-[#59467b] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						<Handshake class="w-7 h-7" />
 					</div>
-					<div class="flex justify-center pt-10">
+					<div class="flex flex-col justify-around gap-2 pt-10 pb-4">
 						<p class="text-[#42217c] text-center font-bold text-h5 uppercase tracking-wider leading-4">
 							Develop Multiyear Funder-Nonprofit Partnerships
 						</p>
+						<p class="text-h6 text-center leading-3 font-bold ">Partner for the long term and build mutual trust with NGOs</p>
 					</div>
 
 				</div>
-				<div class="h-[149px] flex justify-center rounded-md bg-white relative px-4 ">
+				<div class="h-[160px] flex justify-center rounded-md bg-white relative px-4 ">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#136096] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						<IndianRupee class="w-7 h-7" />
 					</div>
-					<div class="flex justify-center pt-10">
+					<div class="flex flex-col justify-around gap-2 pt-10 pb-4">
 						<p class="text-[#136096] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
 							Pay a fair share of core costs
 						</p>
+						<p class="text-h6 font-bold text-center leading-3">Cover NGOs' expenses for day-to-day operations</p>
 					</div>
 
 				</div>
-				<div class="h-[149px] flex justify-center rounded-md bg-white relative px-4">
+				<div class="h-[160px] flex justify-center rounded-md bg-white relative px-4">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#029fd9] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						<ChartNoAxesCombined class="w-7 h-7" />
 					</div>
-					<div class="flex justify-center pt-10">
+					<div class="flex flex-col gap-2 justify-around pt-10 pb-4">
 						<p class="text-[#029fd9] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
 							Invest in organizational development
 						</p>
+						<p class="text-h6 font-bold text-center leading-3">Support NGOs growth in key areas</p>
 					</div>
 				</div>
-				<div class="h-[149px] flex rounded-md bg-white relative px-4">
+				<div class="h-[160px] flex rounded-md bg-white relative px-4">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#058248] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						<PiggyBank class="w-7 h-7" />
 					</div>
-					<div class="flex justify-center pt-10">
+					<div class="flex flex-col gap-2 justify-around pt-10 pb-4">
 						<p class="text-[#058248] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
 							Build Financial Resilience
 						</p>
+						<p class="text-h6 font-bold text-center leading-3">Contribute to reserves, or corpus, that provide a safety net for NGOs</p>
 					</div>
 				</div>
-				<div class="h-[149px] flex rounded-md bg-white relative px-4 ">
+				<div class="h-[160px] flex rounded-md bg-white relative px-4 ">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#f38714] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						<Scale class="w-7 h-7" />
 					</div>
-					<div class="flex justify-center pt-10">
+					<div class="flex flex-col gap-2 justify-around pt-10 pb-4">
 						<p class="text-[#f38714] text-center font-bold text-h5 uppercase  tracking-wider leading-4 ">
 							Embed Diversity Equity, and inclusion in grantmaking
 						</p>
+						<p class="text-h6 leading-3 font-bold text-center">Recognize and address the needs of underserved indi- viduals and communities</p>
 					</div>
 				</div>
 
@@ -460,10 +465,8 @@
 			</div>
 		</div>
 		<!--  -->
-		<div class="w-full flex justify-center py-8 px-4">
-			<PickAssessment />
-		</div>
-		<div class="flex flex-col gap-3 px-4 md:px-8 lg:px-16 ">
+		
+		<div class="flex flex-col gap-3 px-4 md:px-8 lg:px-16 pt-8">
 			<h1 class="text-h2 text-primary font-bold font-primary tracking-wide leading-9">How to get started</h1>
 			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">Lorem ipsum dolor sit amet, consectetur
 				adipiscing elit, sed do
@@ -507,6 +510,9 @@
 					officia deserunt mollit anim id est laborum.</p>
 
 			</div>
+		</div>
+		<div class="w-full flex justify-center py-6 px-4">
+			<PickAssessment />
 		</div>
 		<div class=" bg-secondary pb-40 relative px-4 md:px-8 lg:px-16">
 			<h1 class="text-center font-primary text-h2 font-bold tracking-wide leading-9 text-white pt-8 pb-5">

@@ -10,19 +10,18 @@
                         </p>
                     </div>
                     <div class="flex justify-between items-center">
-                        <h1 class="text-h3 truncate md:text-h2 font-bold  text-[#002C77] font-primary">Pathway for funders to
-                        strengthen their
-                        grant
-                        making practices</h1>
+                        <h1 class="text-h3 truncate md:text-h2 font-bold  text-[#002C77] font-primary">Pathway for
+                            funders to
+                            strengthen their
+                            grant
+                            making practices</h1>
                         <router-link to="/funder-diagnostic"
                             class="border border-[#255B97] w-10 justify-center md:w-auto min-w-10 flex items-center gap-2 truncate rounded-md h-7 md:h-9 text-secondary text-sm lg:px-6"
                             @click="re_attempt">
-                            <span class="hidden lg:block"
-                                v-if="Object.keys(initialData).length">Continue
+                            <span class="hidden lg:block" v-if="Object.keys(initialData).length">Continue
                                 Assessment</span>
                             <span class="hidden lg:block" v-else>Retake</span>
-                            <ChevronRight class="w-4 h-4 min-w-4"
-                                v-if="false" />
+                            <ChevronRight class="w-4 h-4 min-w-4" v-if="false" />
                             <RefreshCcw class="w-4 h-4 min-w-4" v-else />
                         </router-link>
                     </div>
@@ -41,29 +40,36 @@
                     <div class="border-t border-[#D0D1D3] flex-grow"></div>
                 </div>
                 <Loader v-if="loading" />
-                <div v-if="!loading" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-12 pt-4">
+                <div v-if="!loading" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-12 pt-4">
                     <!-- Card 1 -->
-                    <router-link v-for="el in recommendedList" :key="el.name" :to="el.route"
-                        class="bg-white shadow-md hover:shadow-xl hover:scale-105 transition-all group rounded-lg p-4 min-h-56  border-t-4 " :class="`border-[${el.color}]`">
-                        <div class="rounded-md bg-white relative ">
-                            <div class="w-[70px] h-[70px] group-hover:drop-shadow-xl rounded-full border-8 absolute -top-14 bg-white justify-center items-center flex"
-                                :class="`border-[${el.color}]`">
-                                <IndianRupee v-if="el.icon == 'IndianRupee'" />
-                                <Handshake v-if="el.icon == 'Handshake'" />
-                                <PiggyBank v-if="el.icon == 'PiggyBank'" />
-                                <ChartNoAxesCombined v-if="el.icon == 'ChartNoAxesCombined'" />
-                                <Scale v-if="el.icon == 'Scale'" />
+                    <div v-for="el in recommendedList" :key="el.name"
+                        class="bg-white shadow-lg flex flex-col justify-between transition-all group rounded-lg p-4 min-h-56  border-t-4 "
+                        :class="`border-[${el.color}]`">
+                        <div>
+                            <div class="rounded-md bg-white relative ">
+                                <div class="w-[70px] h-[70px] group-hover:drop-shadow-xl rounded-full border-8 absolute -top-14 bg-white justify-center items-center flex"
+                                    :class="`border-[${el.color}]`">
+                                    <IndianRupee v-if="el.icon == 'IndianRupee'" />
+                                    <Handshake v-if="el.icon == 'Handshake'" />
+                                    <PiggyBank v-if="el.icon == 'PiggyBank'" />
+                                    <ChartNoAxesCombined v-if="el.icon == 'ChartNoAxesCombined'" />
+                                    <Scale v-if="el.icon == 'Scale'" />
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="flex items-center pt-8">
-                            <div>
-                                <h3 class="text-h5 font-bold" :class="`text-[${el.color}]`">{{ el.name1 }}</h3>
-                                <p class="text-[trbase] text-h6 font-normal pt-1 text-justify">{{ el.description }}
-                                </p>
+                            <div class="flex items-center pt-8">
+                                <div>
+                                    <h3 class="text-h5 font-bold" :class="`text-[${el.color}]`">{{ el.name1 }}</h3>
+                                    <p class="text-[trbase] text-h6 font-normal pt-1 text-justify">{{ el.description }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </router-link>
+                        <router-link :to="el.route"
+                            class="w-40 h-9 min-h-9 hover:bg-primary flex items-center justify-center text-h6 mt-3 rounded-md bg-secondary text-white font-bold">
+                            Take the Assessment
+                        </router-link>
+                    </div>
                 </div>
 
                 <div class="flex items-center justify-center my-14">
@@ -73,26 +79,34 @@
                     <div class="border-t border-[#D0D1D3] flex-grow"></div>
                 </div>
                 <Loader v-if="loading" />
-                <div v-if="!loading" class="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-12 py-6">
-                    <router-link v-for="el in additionalList" :key="el.name" :to="el.route"
-                        class="bg-white shadow-md hover:shadow-xl hover:scale-105 transition-all rounded-lg p-4 h-56  border-t-4 " :class="`border-[${el.color}]`">
-                        <div class="rounded-md bg-white relative shadow-lg">
-                            <div class="w-[70px] h-[70px] rounded-full border-8 absolute -top-14 bg-white justify-center items-center flex"
-                                :class="`border-[${el.color}]`">
-                                <IndianRupee v-if="el.icon == 'IndianRupee'" />
-                                <Handshake v-if="el.icon == 'Handshake'" />
-                                <PiggyBank v-if="el.icon == 'PiggyBank'" />
-                                <ChartNoAxesCombined v-if="el.icon == 'ChartNoAxesCombined'" />
-                                <Scale v-if="el.icon == 'Scale'" />
+                <div v-if="!loading" class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-12 py-6">
+                    <div v-for="el in additionalList" :key="el.name"
+                        class="bg-white shadow-md flex flex-col justify-between transition-all rounded-lg p-4 h-56  border-t-4 "
+                        :class="`border-[${el.color}]`">
+                        <div>
+                            <div class="rounded-lg bg-white relative shadow-lg">
+                                <div class="w-[70px] h-[70px] rounded-full border-8 absolute -top-14 bg-white justify-center items-center flex"
+                                    :class="`border-[${el.color}]`">
+                                    <IndianRupee v-if="el.icon == 'IndianRupee'" />
+                                    <Handshake v-if="el.icon == 'Handshake'" />
+                                    <PiggyBank v-if="el.icon == 'PiggyBank'" />
+                                    <ChartNoAxesCombined v-if="el.icon == 'ChartNoAxesCombined'" />
+                                    <Scale v-if="el.icon == 'Scale'" />
+                                </div>
+                            </div>
+                            <div class="flex items-center pt-8">
+                                <div>
+                                    <h3 class="text-h5 font-bold" :class="`text-[${el.color}]`">{{ el.name1 }}</h3>
+                                    <p class="text-[trbase] text-h6 font-normal pt-1 text-justify">{{ el.description }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex items-center pt-8">
-                            <div>
-                                <h3 class="text-h5 font-bold" :class="`text-[${el.color}]`">{{ el.name1 }}</h3>
-                                <p class="text-[trbase] text-h6 font-normal pt-1 text-justify">{{ el.description }}</p>
-                            </div>
-                        </div>
-                    </router-link>
+                        <router-link :to="el.route"
+                            class="w-40 h-9 min-h-9 hover:bg-primary flex items-center justify-center text-h6 mt-3 rounded-md bg-secondary text-white font-bold">
+                            Take the Assessment
+                        </router-link>
+                    </div>
                 </div>
             </div>
             <FooterNav />
@@ -181,7 +195,7 @@ const get_result = async () => {
         call('pwit.controllers.api.get_results', {
             doctype: 'Funder Diagnostic',
             session: store.session,
-            user:auth.cookie.user_id!=='Guest'?auth.cookie.user_id:''
+            user: auth.cookie.user_id !== 'Guest' ? auth.cookie.user_id : ''
         })
             .then(res => {
                 const groupedSums = Object.entries(res.data).reduce((acc, [key, value]) => {
@@ -258,14 +272,14 @@ const evaluateLogic = (logicArray, results) => {
 };
 
 const get_save_as_draft = async () => {
-  try {
-    let res = await call('pwit.controllers.api.get_save_as_draft', { doctype: 'Funder Diagnostic', user: auth.cookie.user_id });
-    if (res.code === 200) {
-      initialData.value = res.data;
-    }
-  } catch (error) {
+    try {
+        let res = await call('pwit.controllers.api.get_save_as_draft', { doctype: 'Funder Diagnostic', user: auth.cookie.user_id });
+        if (res.code === 200) {
+            initialData.value = res.data;
+        }
+    } catch (error) {
 
-  }
+    }
 }
 
 watch(() => data.value, (value) => {

@@ -2,8 +2,7 @@
     <div v-if="!store.isForgetPas" class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
         <div class="">
             <div class="mt-3 text-center ">
-                <p class="text-h3 text-center leading-[26px] font-bold font-primary text-sebase">Login to
-                    PAY-WHAT-IT-TAKES INDIA INITIATIVE </p>
+                <p class="text-h3 md:text-h2 text-center leading-[26px] font-bold font-primary text-sebase">Login to the Assistive Funder Toolkit </p>
                 <p class="text-h5 pt-2 text-center text-sebase leading-4 tracking-[5%] font-normal">Please provide the
                     following
                     information to continue </p>
