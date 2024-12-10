@@ -2,10 +2,10 @@
 	<div class="w-full h-screen">
 		<div
 			class="w-full px-4 md:px-8 lg:px-20 flex flex-col gap-2 md:gap-3 justify-center h-24 md:h-40 items-center ">
-			<h1 class="text-h2 font-bold lg:text-[64px] text-primary font-primary leading-[70.4px]">Assistive Funder Toolkit
+			<h1 class="text-h2 font-bold lg:text-[64px] text-primary font-primary leading-[70.4px]">Assistive Funder
+				Toolkit
 			</h1>
-			<p
-				class="px-4 text-center font-bold text-[#464547] leading-4 tracking-wide text-h5 font-primary">
+			<p class="px-4 text-center font-bold text-[#464547] leading-4 tracking-wide text-h5 font-primary">
 				Developed by
 				the
 				Pay-What-It-Takes India Initiative</p>
@@ -35,7 +35,8 @@
 						<p class="text-[#42217c] text-center font-bold text-h5 uppercase tracking-wider leading-4">
 							Develop Multiyear Funder-Nonprofit Partnerships
 						</p>
-						<p class="text-h6 text-center leading-3 font-bold ">Partner for the long term and build mutual trust with NGOs</p>
+						<p class="text-h6 text-center leading-3 font-bold ">Partner for the long term and build mutual
+							trust with NGOs</p>
 					</div>
 
 				</div>
@@ -48,7 +49,8 @@
 						<p class="text-[#136096] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
 							Pay a fair share of core costs
 						</p>
-						<p class="text-h6 font-bold text-center leading-3">Cover NGOs' expenses for day-to-day operations</p>
+						<p class="text-h6 font-bold text-center leading-3">Cover NGOs' expenses for day-to-day
+							operations</p>
 					</div>
 
 				</div>
@@ -73,7 +75,8 @@
 						<p class="text-[#058248] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
 							Build Financial Resilience
 						</p>
-						<p class="text-h6 font-bold text-center leading-3">Contribute to reserves, or corpus, that provide a safety net for NGOs</p>
+						<p class="text-h6 font-bold text-center leading-3">Contribute to reserves, or corpus, that
+							provide a safety net for NGOs</p>
 					</div>
 				</div>
 				<div class="h-[160px] flex rounded-md bg-white relative px-4 ">
@@ -85,7 +88,8 @@
 						<p class="text-[#f38714] text-center font-bold text-h5 uppercase  tracking-wider leading-4 ">
 							Embed Diversity Equity, and inclusion in grantmaking
 						</p>
-						<p class="text-h6 leading-3 font-bold text-center">Recognize and address the needs of underserved indi- viduals and communities</p>
+						<p class="text-h6 leading-3 font-bold text-center">Recognize and address the needs of
+							underserved indi- viduals and communities</p>
 					</div>
 				</div>
 
@@ -102,7 +106,8 @@
 		</div>
 		<!--  -->
 		<div class=" w-full px-4 md:px-8 lg:px-20 py-10 ">
-			<h1 class="text-primary text-h2 font-bold leading-9 tracking-wide font-primary">What does the toolkit include?
+			<h1 class="text-primary text-h2 font-bold leading-9 tracking-wide font-primary">What does the toolkit
+				include?
 			</h1>
 			<div class="flex flex-col md:flex-row mt-5">
 				<div class="w-full flex flex-col gap-3">
@@ -361,7 +366,8 @@
 								</svg>
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-primary leading-4 tracking-wide">Generate a
+								<h4 class="font-bold text-h5 text-sebase font-primary leading-4 tracking-wide">Generate
+									a
 									Summary Report Upon
 									Completion
 								</h4>
@@ -464,8 +470,8 @@
 				</div>
 			</div>
 		</div>
-		<!--  -->
-		
+
+
 		<div class="flex flex-col gap-3 px-4 md:px-8 lg:px-16 pt-8">
 			<h1 class="text-h2 text-primary font-bold font-primary tracking-wide leading-9">How to get started</h1>
 			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">Lorem ipsum dolor sit amet, consectetur
@@ -473,13 +479,14 @@
 				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 				exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		</div>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-4 px-4 md:px-8 lg:px-16 py-6">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-4 px-4 md:px-8 lg:px-16 py-7">
 			<div class="flex flex-col gap-2">
 				<div class="w-16 min-w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center">
 					<img class="w-8  h-8" src="../../assets/file.png" alt="Description of image">
 
 				</div>
-				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-primary">Lorem ipsum dolor sit amet
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-primary">Lorem ipsum dolor sit
+					amet
 				</h1>
 				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
 					reprehenderit in voluptate velit esse cillum
@@ -490,7 +497,8 @@
 				<div class="w-16 min-w-16 h-16  rounded-full bg-gray-200 flex items-center justify-center">
 					<img class="w-8  h-8" src="../../assets/file.png" alt="Description of image">
 				</div>
-				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-primary">Lorem ipsum dolor sit amet
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-primary">Lorem ipsum dolor sit
+					amet
 				</h1>
 				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
 					reprehenderit in voluptate velit esse cillum
@@ -502,7 +510,8 @@
 				<div class="w-16 min-w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center">
 					<img class="w-8  h-8" src="../../assets/file.png" alt="Description of image">
 				</div>
-				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-primary">Lorem ipsum dolor sit amet
+				<h1 class="font-bold text-h5 text-sebase tracking-wide leading-5 font-primary">Lorem ipsum dolor sit
+					amet
 				</h1>
 				<p class="text-h6 text-trbase font-normal leading-4 tracking-wider"> Duis aute irure dolor in
 					reprehenderit in voluptate velit esse cillum
@@ -514,9 +523,31 @@
 		<div class="w-full flex justify-center py-6 px-4">
 			<PickAssessment />
 		</div>
-		<div class=" bg-secondary pb-40 relative px-4 md:px-8 lg:px-16">
+		<div class="bg-secondary h-auto pb-52  relative px-4 md:px-8 lg:px-16">
+			<!-- SVG Background -->
+			<div class="absolute inset-0 flex justify-center gap-12 py-10">
+				<div class="relative">
+					<svg width="240" height="200" viewBox="0 0 24100" fill="none" xmlns="http://www.w3.org/2000/svg"
+						class="absolute h-52">
+						<path
+							d="M191.131 195.802C183.475 202.784 163.131 208.639 148.045 205.712C172.664 205.185 200.515 190.397 208.097 182.666C215.001 175.534 215.301 170.956 214.4 166.527C202.69 176.661 176.194 185.519 149.696 182.066C183.85 183.642 218.755 161.647 226.187 155.342C234.819 147.911 235.045 138.679 233.918 136.651C213.576 151.513 188.279 159.472 166.06 160.147C186.102 156.243 220.107 147.986 237.296 122.84C239.248 120.211 241.425 116.234 240.899 114.432C236.621 100.996 219.956 120.062 218.68 120.812C216.654 122.014 214.626 123.215 212.526 124.265C195.034 133.724 175.894 140.33 156.076 142.581C137.31 144.684 118.019 143.182 106.157 126.368C98.7251 115.783 101.279 104.298 111.413 96.5675C116.741 92.5137 123.046 89.6612 129.203 86.8834C133.631 84.9321 138.736 83.656 140.387 78.7011C142.038 73.8227 144.366 67.9667 134.907 67.5918C107.808 66.4649 87.9161 79.9025 69.6767 98.2931C65.1713 102.871 61.194 107.826 57.89 113.305C56.5394 111.354 55.338 109.253 54.3623 107.151C51.9594 102.121 50.5342 96.6421 50.1593 91.0119C48.2079 62.788 73.279 41.2427 95.4231 27.9562C124.699 10.4667 159.003 2.88513 192.633 0.482264C157.201 -1.54368 123.798 2.88513 95.0481 12.4181C83.713 16.1716 73.1278 20.675 63.4457 25.9303C54.5135 30.7341 46.3312 36.1385 39.0499 42.0692C34.2442 45.9718 29.8154 50.1769 25.8381 54.5311C6.99598 74.498 -1.03518 96.2672 0.916173 116.909C2.71832 136.35 10.1488 153.015 21.1835 167.503C21.2581 167.578 21.2581 167.652 21.3347 167.729C32.444 182.215 47.1557 194.451 63.3711 204.885C63.9718 205.411 64.496 205.937 65.0967 206.461C72.6783 212.918 81.7617 217.797 91.5204 221.1C93.9978 221.925 96.6991 222.751 99.5515 223.427C130.779 231.309 178.071 229.658 190.005 200.908C190.531 199.406 190.906 197.229 191.131 195.802Z"
+							fill="white" fill-opacity="0.08" />
+					</svg>
+				</div>
+				<div class="relative pl-20 pt-5">
+					<svg width="240" height="227" viewBox="0 0 241 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M240.642 111.166C238.84 91.7235 231.407 75.0605 220.374 60.5726C220.298 60.498 220.298 60.4214 220.223 60.3468C209.114 45.859 194.4 33.6247 178.187 23.1907C177.586 22.6646 177.06 22.1385 176.461 21.6143C168.88 15.1576 159.796 10.2792 150.038 6.9753C147.56 6.15079 144.859 5.32431 142.006 4.64899C110.779 -3.23296 63.4872 -1.58197 51.5514 27.168C51.0272 28.5952 50.5757 30.7723 50.3519 32.1976C58.0081 25.2167 78.35 19.3626 93.4386 22.2897C68.8171 22.8138 40.9681 37.602 33.3866 45.3348C26.4803 52.4649 26.1799 57.0449 27.081 61.4737C38.791 51.34 65.2893 42.4824 91.7876 45.9355C57.6331 44.3591 22.7268 66.352 15.2963 72.6576C6.6625 80.09 6.4387 89.3226 7.56358 91.3485C27.9075 76.4857 53.2043 68.5292 75.423 67.8538C55.3795 71.7565 21.3761 80.0135 4.18503 105.161C2.23369 107.788 0.0565777 111.767 0.582696 113.569C4.86231 127.005 21.5253 107.939 22.8014 107.187C24.8293 105.988 26.8552 104.786 28.9577 103.734C46.4472 94.2775 65.5897 87.6716 85.4055 85.4199C104.173 83.3174 123.465 84.8192 135.324 101.633C142.756 112.217 140.204 123.703 130.071 131.434C124.741 135.487 118.435 138.34 112.279 141.118C107.85 143.069 102.746 144.345 101.095 149.3C99.4438 154.178 97.1175 160.034 106.574 160.409C133.673 161.534 153.565 148.099 171.807 129.708C176.31 125.128 180.289 120.173 183.591 114.694C184.942 116.645 186.143 118.748 187.119 120.85C189.522 125.88 190.947 131.359 191.324 136.989C193.275 165.213 168.202 186.757 146.058 200.043C116.784 217.534 82.4785 225.116 48.8501 227.517C84.2806 229.545 117.685 225.116 146.435 215.581C157.768 211.83 168.354 207.324 178.038 202.071C186.97 197.265 195.152 191.861 202.433 185.932C207.237 182.027 211.666 177.824 215.645 173.47C234.56 153.578 242.593 131.809 240.642 111.166Z"
+							fill="white" fill-opacity="0.08" />
+					</svg>
+				</div>
+			</div>
+
+
+			<!-- Content -->
 			<h1 class="text-center font-primary text-h2 font-bold tracking-wide leading-9 text-white pt-8 pb-5">
-				About the Partnership</h1>
+				About the Partnership
+			</h1>
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 				<div class="flex flex-col gap-4 w-full text-center text-white font-primary text-sm">
 					<p class="text-h5 text-[#E9EAEB] font-normal text-center leading-5 tracking-wider"> Lorem
@@ -524,7 +555,8 @@
 						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 						aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-						culpa qui officia deserunt mollit anim id est laborum.</p>
+						culpa qui officia deserunt mollit anim id est laborum.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -592,6 +624,3 @@ let readmore = ref({
 	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s;
 }
 </style>
-
-
-
