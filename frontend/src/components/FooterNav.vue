@@ -2,7 +2,7 @@
     <div
         class="flex flex-col md:flex-row justify-around md:justify-between items-center w-full px-4 md:px-8 lg:px-20 h-[72px] bg-[#578CC6]">
         <p class="text-white text-sm">
-            © 2023 The Bridgespan Group. All rights reserved.
+            © 2024 The Bridgespan Group. All rights reserved.
         </p>
         <div class="flex gap-4 items-center">
             <a href="https://www.youtube.com/user/TheBridgespanGroup" target="_blank" class="text-white text-sm">
