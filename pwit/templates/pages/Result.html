@@ -82,7 +82,7 @@
         </div>
         <!-- description -->
         <div style="padding-top: 8px;">
-            <h2 style="color: #002C77; font-family: serif; font-size: 24px; font-weight: 700;">{{ doc.main_title }}
+            <h2 style="color: #002C77; font-family: serif; font-size: 20px; font-weight: 700;">{{ doc.main_title }}
             </h2>
             <p style="font-size: 14px; padding-top: 8px; color: #464547; text-align: justify;">{{
                 doc.details.description }}</p>
@@ -90,10 +90,10 @@
         <!-- chart -->
         <div style="padding-top: 25px;">
             <div >
-                <p style="font-size: 24px; color: #002C77;font-family: serif; font-weight: 700;">
+                <p style="font-size: 20px; color: #002C77;font-family: serif; font-weight: 700;">
                     {{doc.details.title}}
                 </p>
-                <p style="font-size: 20px; padding: 10px 0px;">
+                <p style="font-size: 18px; padding: 10px 0px;">
                     <span style="font-weight: 500;">Average: </span>
                     <span style="font-weight: 700;color: #27853F;">{{ doc.average or 0 }}</span>
                 </p>
@@ -133,7 +133,7 @@
         </div>
         <!-- Recommended Actions Section -->
         <div style="width: 100%; margin: auto; padding-top: 25px;">
-            <p style="color: #002C77;font-size: 24px;font-weight: 700;font-family: serif;">
+            <p style="color: #002C77;font-size: 20px;font-weight: 700;font-family: serif;">
                 Recommended Actions
             </p>
             {% if doc.details.recommended_actions %}
