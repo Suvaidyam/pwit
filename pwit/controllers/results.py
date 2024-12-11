@@ -11,7 +11,7 @@ class Result:
             },
             {
                 'label':'Embedding diversity, equity and inclusion (DEI) in grantmaking',
-                'name':'Diversity equity inclusion'
+                'name':'Diversity Equity Inclusion'
             },
             {
                 'label':'Invest in organisational development',
@@ -39,7 +39,6 @@ class Result:
             doc = AssessmentAPIs.get_assistive_result(doctype, session, user)
             data = doc['data']
             data['main_title'] = selected_main['label']
-        
         html = frappe.render_template('pwit/templates/pages/Result.html', {"doc": data})
         pdf = get_pdf(html, {
             "margin-top": "1mm",
