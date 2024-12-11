@@ -253,8 +253,8 @@
   "doctype": "Field Options",
   "field": "od_guidelines",
   "group": null,
-  "label": "We do not have written guidelines. There is a difference of opinion amongst decision-makers on this aspect.",
-  "modified": "2024-12-02 20:11:02.510226",
+  "label": "We do not have written guidelines. There is a difference of opinion amongst decision makers on this aspect.",
+  "modified": "2024-12-10 15:42:59.800837",
   "name": "Organization Development-od_guidelines-1",
   "ref_doctype": "Organization Development",
   "score": 1.0
@@ -266,8 +266,8 @@
   "doctype": "Field Options",
   "field": "od_guidelines",
   "group": null,
-  "label": "We do not have written guidelines but may extend short-term OD support to nonprofit partners in exceptional circumstances. There are individual(s) amongst the decision-makers in our organisation who are in favor of extending OD support to nonprofit partners.",
-  "modified": "2024-12-02 20:11:35.454023",
+  "label": "We do not have written guidelines but may extend short-term OD support to nonprofit partners in exceptional circumstances. There are individuals amongst the decision makers in our organisation who are in favor of extending OD support to nonprofit partners.",
+  "modified": "2024-12-10 15:43:51.439645",
   "name": "Organization Development-od_guidelines-2",
   "ref_doctype": "Organization Development",
   "score": 2.0
@@ -279,8 +279,8 @@
   "doctype": "Field Options",
   "field": "od_guidelines",
   "group": null,
-  "label": "We have written guidelines that stipulates short-term OD support that can be provided to nonprofit partners. The decision-makers in our organisation understand that context may dictate the OD needs of nonprofit partners and are amenable to customizing this on a case-by case basis.",
-  "modified": "2024-12-02 20:11:58.119289",
+  "label": "We have written guidelines that stipulates short-term OD support that can be provided to nonprofit partners. The decision makers in our organisation understand that context may dictate the OD needs of nonprofit partners and are amenable to customizing this on a case-by case basis.",
+  "modified": "2024-12-10 15:44:29.859576",
   "name": "Organization Development-od_guidelines-3",
   "ref_doctype": "Organization Development",
   "score": 3.0
@@ -292,8 +292,8 @@
   "doctype": "Field Options",
   "field": "od_guidelines",
   "group": null,
-  "label": "We have written guidelines that allows dedicated, long-term OD support to nonprofit partners. Decision-makers in our organisation understand the importance of and are committed to supporting longer- term investments in OD for nonprofit partners.",
-  "modified": "2024-12-02 20:12:22.663395",
+  "label": "We have written guidelines that allows dedicated, long-term OD support to nonprofit partners. Decision-makers in our organisation understand the importance of and are committed to supporting longer-term investments in OD for nonprofit partners.",
+  "modified": "2024-12-10 15:44:53.726997",
   "name": "Organization Development-od_guidelines-4",
   "ref_doctype": "Organization Development",
   "score": 4.0

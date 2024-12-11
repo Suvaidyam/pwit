@@ -3,7 +3,7 @@
   "description": "Multiyear partnerships nurture trust as relationships between funders and nonprofits deepen over time and a mutual understanding of both stakeholders’ needs is built. Engaging in longer-term partnerships allows funders to move from being only grantmakers to playing the role of advisors. A multiyear approach can help to increase focus on creating lasting change over immediate and short-term outputs. Additionally, it enables stability for nonprofits to plan for the future.\n\nFor funders, multiyear partnerships also simplify grantmaking, reducing the time spent on scouting new nonprofit partners and projects and helping funders gain a deeper understanding of social issues. Partnerships can enrich programme team members, who are able to invest more time and effort in understanding a nonprofit’s needs and support the nonprofit in delivering on its intended impact. Here’s where your organisation ranks on several dimensions of multiyear partnerships.",
   "docstatus": 0,
   "doctype": "Results and Recommendtions",
-  "modified": "2024-12-10 15:18:29.263243",
+  "modified": "2024-12-10 16:57:31.963871",
   "name": "pm84tbr7tr",
   "recommended_actions": [
    {
@@ -28,7 +28,7 @@
    }
   ],
   "ref_doctype": "Multi-year Partnerships",
-  "title": "The Power of Multiyear Partnerships in Grantmaking",
+  "title": " Recommended actions to strengthen your practices",
   "useful_resources": [
    {
     "resources": " Funder Practices that Strengthen Nonprofit Resilience: Lessons from India. The Bridgespan Group, November 2023.",
@@ -61,7 +61,7 @@
   "description": "Organisational development (OD) investments build and strengthen a range of critical efficiency and growth-oriented capabilities, such as in strategic planning, leadership and talent development, and financial management, that enable nonprofits to deliver greater impact. Funders that invest in OD help to unlock their nonprofit partners’ impact potential. Research has shown when nonprofits invest in OD, they double their programme output over a three-to-five-year period and became more financially secure. Here’s where your organization ranks on several dimensions of organisational development.",
   "docstatus": 0,
   "doctype": "Results and Recommendtions",
-  "modified": "2024-12-09 18:32:24.163664",
+  "modified": "2024-12-10 16:57:40.014052",
   "name": "vltmcn5a4c",
   "recommended_actions": [
    {
@@ -86,7 +86,7 @@
    }
   ],
   "ref_doctype": "Organization Development",
-  "title": "Invest in organisational development",
+  "title": " Recommended actions to strengthen your practices",
   "useful_resources": [
    {
     "resources": "How to build an organizational development plan: A toolkit for NGOs and funders, The Bridgespan Group.",
@@ -149,7 +149,7 @@
   "description": "Financial resilience refers to a nonprofit’s ability to sustain its operations long term and withstand external stresses and shocks, such as the COVID-19 pandemic or the end of a key funder’s support. Nonprofits pursue financial resilience by developing prudent financial plans, monitoring financial performance, diversifying their funder base, and building reserve funds. Funders help by contributing to nonprofit reserves and introducing nonprofits to like-minded funders. Here’s where you organization ranks on several dimensions of financial resilience. ",
   "docstatus": 0,
   "doctype": "Results and Recommendtions",
-  "modified": "2024-12-09 18:31:36.653348",
+  "modified": "2024-12-10 16:57:47.465794",
   "name": "ektop2co82",
   "recommended_actions": [
    {
@@ -169,7 +169,7 @@
    }
   ],
   "ref_doctype": "Financial Resilience",
-  "title": "Building financial resilience",
+  "title": " Recommended actions to strengthen your practices",
   "useful_resources": [
    {
     "resources": "Bridging the Gap on Funding the True Costs of NGOs in India, The Bridgespan Group, June 2022.",
@@ -207,7 +207,7 @@
   "description": "Core costs, often called indirect costs, involve administrative or support-function expenses not tied to a specific programme, such as salaries of nonprogramme employees, rent and utilities for a central office, fundraising, and measurement and evaluation. Funders that pay a fair share of core costs ensure that a nonprofit is able to conduct its day-to-day operations and deliver on its impact mandates. Here’s where your organisation ranks on several dimensions of core costs.",
   "docstatus": 0,
   "doctype": "Results and Recommendtions",
-  "modified": "2024-12-09 18:29:48.186729",
+  "modified": "2024-12-10 16:57:53.956949",
   "name": "k8gmpe4f02",
   "recommended_actions": [
    {
@@ -227,7 +227,7 @@
    }
   ],
   "ref_doctype": "Core Costs",
-  "title": "Pay a fair share of core costs",
+  "title": " Recommended actions to strengthen your practices",
   "useful_resources": [
    {
     "resources": "Building Strong, Resilient NGOs in India: Time for New Funding Practices, The Bridgespan Group, March 2021. ",
@@ -275,7 +275,7 @@
   "description": "The scores for your answers to the 10 DEI practices are displayed on the chart below. The recommended actions provide guidance on how to advance DEI within various stages of your grantmaking.",
   "docstatus": 0,
   "doctype": "Results and Recommendtions",
-  "modified": "2024-12-10 15:40:31.208556",
+  "modified": "2024-12-10 17:12:23.687036",
   "name": "jqs6ccf9g2",
   "recommended_actions": [
    {
@@ -306,34 +306,34 @@
    {
     "actions": "<div class=\"ql-editor read-mode\"><ol><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Regularly engage with grantees and internal teams to identify and address challenges, gaps, and opportunities in the grant award and disbursement process that follows grant approval. Use this feedback to make improvements.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Include grantee partners in decision making about grant terms and disbursement schedules to ensure their perspectives are considered and to tailor arrangements to their needs.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Request only essential information and use preexisting data where possible to simplify the grant award process. This reduces administrative burdens on grantees.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Allow flexibility in milestone achievement and customise the grant disbursement schedule based on the nonprofit’s unique context. For example, permit larger initial disbursements to accommodate upfront costs</span></li></ol></div>",
     "logic": null,
-    "title": "Grant setup and disbursement"
+    "title": "Grant award process and disbursement"
    },
    {
-    "actions": "<div class=\"ql-editor read-mode\"><ol><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span>If you currently do not provide any organisational development (OD) support, start by piloting it for a few grantees.</li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span>If you already provide OD support, explore how you can customise it by taking into account the unique challenges that small and marginalised nonprofits face.</li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Extend support to grantees to enhance their capacity for integrating diversity, equity, and inclusion (DEI) considerations into their programmes. For partners that are new to this journey, provide them with access to relevant information, toolkits, and network connections. </li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Speak to peers who have experience with OD funding for DEI to understand the outcomes of such funding.</li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span>Provide training to your grant staff and programme officers to understand the importance of investing in nonprofits’ OD for DEI.</li></ol></div>",
+    "actions": "<div class=\"ql-editor read-mode\"><ol><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">If you currently do not provide any organisational development (OD) support, start by piloting it for a few grantees.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">If you already provide OD support, explore how you can customise it by taking into account the unique challenges that small and marginalised nonprofits face.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Extend support to grantees to enhance their capacity for integrating diversity, equity, and inclusion (DEI) considerations into their programmes. For partners that are new to this journey, provide them with access to relevant information, toolkits, and network connections.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Speak to peers who have experience with OD funding for DEI to understand the outcomes of such funding.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Provide training to your grant staff and programme officers to understand the importance of investing in nonprofits’ OD for DEI.</span></li></ol></div>",
     "logic": null,
     "title": "Grantee support"
    },
    {
-    "actions": "<div class=\"ql-editor read-mode\"><ol><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Assess whether the frequency of engagement and the platforms used are equitable and inclusive for all grantees.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><strong style=\"font-size: 14px;\">Schedule engagements with grantees and key stakeholders throughout the grantmaking cycle to solicit feedback and improve mutual understanding</strong><span style=\"font-size: 14px;\">, and engage in discussions about improvement opportunities.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><strong style=\"font-size: 14px;\">Build and maintain trust with grantees</strong><span style=\"font-size: 14px;\"> by showing respect, being responsive, and acknowledging power dynamics. Prioritize relationship-building over procedures.</span></li></ol></div>",
+    "actions": "<div class=\"ql-editor read-mode\"><ol><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Assess whether the frequency of engagement and the platforms used are equitable and inclusive for all grantees.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Schedule engagements with grantees and key stakeholders throughout the grantmaking cycle to solicit feedback and improve mutual understanding, and engage in discussions about improvement opportunities.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Build and maintain trust with grantees by showing respect, being responsive, and acknowledging power dynamics. Prioritise relationship building over procedures.</span></li></ol></div>",
     "logic": null,
     "title": "Grantee engagement"
    },
    {
-    "actions": "<div class=\"ql-editor read-mode\"><ol><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><strong style=\"font-size: 14px;\">Revisit your reporting requirements</strong><span style=\"font-size: 14px;\"> and evaluate whether the time and resources required by grantees is excessive. If so, </span><strong style=\"font-size: 14px;\">minimise the reporting burden</strong><span style=\"font-size: 14px;\"> by steps like letting grantees use their exiting formats, focusing on the most critical information.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Send grant officers on </span><strong style=\"font-size: 14px;\">site visits and encourage frequent conversations</strong><span style=\"font-size: 14px;\"> with grantees throughout the grantmaking cycle to expand the way of thinking about reporting.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><strong style=\"font-size: 14px;\">Continuously engage with grantees</strong><span style=\"font-size: 14px;\"> to go beyond structured reporting to understand the challenges, gaps, and opportunities they face.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Avoid data collection without any explicit purpose.</span></li></ol></div>",
+    "actions": "<div class=\"ql-editor read-mode\"><ol><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Revisit your reporting requirements and evaluate whether the time and resources required by grantees is excessive. If so, minimise the reporting burden by, for instance, letting grantees use their existing reporting and focusing on the most critical information.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Send grant officers on site visits and encourage frequent conversations with grantees throughout the grantmaking cycle to expand the way of thinking about reporting.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Continuously engage with grantees to go beyond structured reporting to understand the challenges, gaps, and opportunities they face. </span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Avoid data collection without any explicit purpose.</span></li></ol></div>",
     "logic": null,
     "title": "Reporting"
    },
    {
-    "actions": "<div class=\"ql-editor read-mode\"><ol><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><strong style=\"font-size: 14px;\">Engage in multiyear partnerships </strong><span style=\"font-size: 14px;\">with nonprofits, and encourage program officers to look at current grantees to assess whether a long-term partnership might be most fruitful.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><strong style=\"font-size: 14px;\">How well has the grantee served the interests and specific needs of marginalised communities?</strong></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><strong style=\"font-size: 14px;\">Use progress towards DEI goals as an indicator/metric</strong><span style=\"font-size: 14px;\"> for renewals or subsequent grants</span></li></ol></div>",
+    "actions": "<div class=\"ql-editor read-mode\"><ol><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Engage in multiyear partnerships with nonprofits, and encourage programme officers to look at current grantees to assess whether a long-term partnership might be most fruitful.</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">How well has the grantee served the interests and specific needs of marginalised communities?</span></li><li data-list=\"unchecked\"><span class=\"ql-ui\" contenteditable=\"false\"></span><span style=\"font-size: 14px;\">Use progress towards DEI goals as an indicator or metric for renewals or subsequent grants.</span></li></ol></div>",
     "logic": null,
     "title": "Renewal"
    }
   ],
   "ref_doctype": "Diversity Equity Inclusion",
-  "title": "Embedding Diversity, Equity and Inclusion (DEI) in grantmaking ",
+  "title": " Recommended actions to strengthen your practices",
   "useful_resources": [
    {
-    "resources": "D5 Coalition Resources",
+    "resources": " Coalition resources, D5.",
     "section": "Internal/institutional  level",
     "to": "https://www.d5coalition.org/work/leaders/"
    },
