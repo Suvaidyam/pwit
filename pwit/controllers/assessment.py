@@ -43,7 +43,6 @@ class AssessmentAPIs:
         for key, value in data.items():
             modified_data = {'priority': 'Low','key':key,'value':value}  # Start with priority
             
-            
             # Modify data based on the key
             if key == 'Strategic considerations':
                 modified_data['value'] = round((value * 4) / 2, 1)
@@ -59,7 +58,7 @@ class AssessmentAPIs:
                 group[key]= round(value * 0.8, 1)
                 if modified_data['value'] == 4:
                     modified_data['priority'] = 'High'
-                elif modified_data['value'] == 2.4 and modified_data['value'] == 3.2:
+                elif modified_data['value'] == 2.4 or modified_data['value'] == 3.2:
                     modified_data['priority'] = 'Medium'
                 else:
                     modified_data['priority'] = 'Low'
@@ -77,7 +76,7 @@ class AssessmentAPIs:
                 group[key]= round(value * 1.33, 1)
                 if modified_data['value'] == 4:
                     modified_data['priority'] = 'High'
-                elif modified_data['value'] == 2.6:
+                elif modified_data['value'] == 2.7:
                     modified_data['priority'] = 'Medium'
                 else:
                     modified_data['priority'] = 'Low'
@@ -94,7 +93,7 @@ class AssessmentAPIs:
                 group[key]= value
                 if modified_data['value'] == 4:
                     modified_data['priority'] = 'High'
-                elif modified_data['value'] == 2 and modified_data['value'] == 3:
+                elif modified_data['value'] == 2 or modified_data['value'] == 3:
                     modified_data['priority'] = 'Medium'
                 else:
                     modified_data['priority'] = 'Low'
