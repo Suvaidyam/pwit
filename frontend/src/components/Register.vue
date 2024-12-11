@@ -157,7 +157,7 @@ const register = async () => {
             setTimeout(() => {
                 loading.value = false;
             }, 1000);
-            toast.error(res.msg);
+            toast.error('This email is already associated with an account.');
         }
     }
 };

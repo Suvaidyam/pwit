@@ -30,9 +30,10 @@
                                         information</h1>
                                     <X @click="userDetailsPop = false" class="text-sm cursor-pointer" />
                                 </div>
-                                <p class="text-sm font-normal text-[#21272A] py-1">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                <p class="text-[13px] font-normal text-[#21272A] py-1">
+                                    Your responses are confidential and your information and individual responses will
+                                    not be shared or made public. Any trends inferred from this data will only be made
+                                    at an aggregate level (e.g., based on the type of funder).
                                 </p>
                                 <hr class="pb-2 mt-2">
                                 <div class="flex flex-col gap-2 relative">
@@ -41,7 +42,7 @@
                                         <span class="text-red-500">*</span>
                                     </label>
                                     <select id="designation" v-model="formData.designation"
-                                        class="outline-none border-b-2 bg-gray-50 py-3 text-gray-600 px-2"
+                                        class="outline-none border-b-2 bg-gray-50 py-3 text-black px-2"
                                         :class="[!errors.designation ? 'border-gray-400' : 'border-red-500']">
                                         <option value="">Select</option>
                                         <option value="Executive Director/Chief Executive Officer/Head of CSR">Executive
@@ -54,37 +55,39 @@
                                             supporting funder organisation</option>
                                         <option value="Other">Other</option>
                                     </select>
-                                    <p v-if="errors.designation" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{ errors.designation
+                                    <p v-if="errors.designation" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
+                                        errors.designation
                                         }}</p>
                                 </div>
 
                                 <div class="pt-5 relative">
                                     <p class="text-h5 font-normal text-[#21272A]">
-                                        Please select which funder type your organization identifies as
+                                        Please select which funder type your organisation identifies as
                                         <span class="text-red-500">*</span>
                                     </p>
                                     <label v-for="option in options" :key="option" :class="[
                                         'w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3',
-                                        formData.funderType.includes(option) ? 'border-[#255B97]' : 'border-gray-300'
+                                        formData.funderType.includes(option) ? 'border-[#255B97] text-secondary' : 'border-gray-300 text-black'
                                     ]">
                                         <input type="checkbox" :id="option" :value="option"
                                             v-model="formData.funderType" class="cursor-pointer" />
                                         <p
-                                            :class="[formData.funderType.includes(option) ? 'text-secondary' : 'text-slate-600', 'font-normal text-sm cursor-pointer']">
+                                            :class="['font-normal text-sm cursor-pointer']">
                                             {{ option }}
                                         </p>
                                     </label>
-                                    <p v-if="errors.funderType" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{ errors.funderType
+                                    <p v-if="errors.funderType" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
+                                        errors.funderType
                                         }}</p>
                                 </div>
 
                                 <div class="flex flex-col gap-2 pt-5 relative">
                                     <label for="annual_budget" class="text-h5 font-normal text-[#21272A]">
-                                        Your organization’s approximate annual budget allocation
+                                        Your organisation’s approximate annual budget allocation
                                         <span class="text-red-500">*</span>
                                     </label>
                                     <select id="annual_budget" v-model="formData.annual_budget"
-                                        class="outline-none border-b-2 bg-gray-50 py-3 text-gray-600 px-2"
+                                        class="outline-none border-b-2 bg-gray-50 py-3 text-gray-900 px-2"
                                         :class="[!errors.annual_budget ? 'border-gray-400' : 'border-red-500']">
                                         <option value="">Select</option>
                                         <option value="Less than INR 10 Cr.">Less than INR 10 Cr.</option>
@@ -93,8 +96,9 @@
                                         <option value="INR 101-300 Cr.">INR 101-300 Cr.</option>
                                         <option value="INR 301 and above">INR 301 and above</option>
                                     </select>
-                                    <p v-if="errors.annual_budget" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
-                                        errors.annual_budget }}</p>
+                                    <p v-if="errors.annual_budget" class="absolute -bottom-5 text-red-500 text-h6 mt-1">
+                                        {{
+                                            errors.annual_budget }}</p>
                                 </div>
 
                                 <div class="flex justify-end pt-2">
@@ -129,18 +133,18 @@
                             class="relative transform overflow-hidden bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl">
                             <div class="p-4">
                                 <div class="flex justify-between">
-                                    <h1 class="text-h2 font-primary font-bold text-primary">Confirmation</h1>
+                                    <h1 class="text-h3 font-primary font-bold text-primary">Download as Guest</h1>
                                     <X @click="confirmation = false" class="text-sm cursor-pointer" />
                                 </div>
-                                <p class="text-h5 font-normal text-[#21272A] py-1">
-                                    Continue as guest on download.
+                                <p class="text-sm font-normal text-[#21272A] py-1">
+                                    You can download the result now. However, creating an account lets you save results and access them anytime.
                                 </p>
                                 <hr class="pb-2 mt-2">
                                 <div class="flex justify-end gap-2 pt-2">
                                     <button @click="confirmationDn('guest')"
-                                        class="bg-secondary text-white rounded-md w-28 h-12 text-h5">Guest</button>
+                                        class="bg-secondary text-white rounded-md w-28 h-10 text-h5">Guest</button>
                                     <button @click="confirmationDn('login')"
-                                        class="bg-secondary text-white rounded-md w-28 h-12 text-h5">Login</button>
+                                        class="bg-secondary text-white rounded-md w-36 h-10 text-h5">Login / Register</button>
                                 </div>
                             </div>
                         </DialogPanel>
