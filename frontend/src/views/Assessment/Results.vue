@@ -93,13 +93,13 @@
                 </div>
                 <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] md:grid-cols-1  lg:grid-cols-1 gap-4 pt-4 w-full">
                     <!-- Recommended Actions Section -->
-                    <div v-if="recommendations?.details?.recommended_actions"
+                    <div v-if="recommend_action.length"
                         class="w-full mx-auto h-96 relative overflow-y-auto">
                         <p class="text-primary font-bold sticky top-0 bg-white font-primary text-xl sm:text-2xl pb-4">
                             Recommended Actions
                         </p>
-                        <div v-if="recommendations?.details?.recommended_actions"
-                            v-for="items in recommendations.details.recommended_actions" :key="items.name" class="pb-5">
+                        <div v-if="recommend_action.length"
+                            v-for="items in recommend_action" :key="items.name" class="pb-5">
                             <div
                                 class="flex justify-between items-center px-4 py-2 bg-[#e9eaec] text-h5 font-bold font-primary text-pbase">
                                 {{ items.title }}
@@ -165,7 +165,7 @@ const store = inject('store');
 const call = inject('$call');
 const auth = inject('$auth');
 const recommendations = ref({});
-// const recommend_action = ref([]);
+const recommend_action = ref([]);
 const loading = ref(false);
 const title = ref(splitAtSecondCapital(route.path));
 
@@ -189,7 +189,7 @@ const get_results = async () => {
             let actions = res?.data?.details?.recommended_actions
             let groups = res?.data?.group
             if (actions.length) {
-                actions.sort((a, b) => groups[a.key] - groups[b.key]);
+                recommend_action.value = actions.sort((a, b) => groups[a.title] - groups[b.title]);
             }
             setTimeout(() => {
                 const targetLi = document.querySelectorAll('ol');
