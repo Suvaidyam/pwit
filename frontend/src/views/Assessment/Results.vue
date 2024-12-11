@@ -6,12 +6,12 @@
                 <router-link to="/">Home</router-link>
                 / <router-link to="/funder-diagnostic">Funder Diagnostic</router-link> / <router-link
                     to="/recommended">Recommended Principles</router-link> /
-                <router-link :to="`/funder/${route.params.category}`">{{ title }}</router-link>
+                <router-link :to="`/funder/${route.params.category}`">{{ title=='Organization Development'?' Organisation Development':title }}</router-link>
                 <span class="text-gray-400 truncate"> / Results and Recommendations</span>
             </p>
         </div>
         <div class="flex justify-between items-center">
-            <h1 class="text-h3 md:text-h2 text-primary truncate">Results and Recommendations</h1>
+            <h1 class="text-h3 md:text-h2 text-primary truncate">{{ recommendations?.details?.title }}</h1>
             <div class="flex items-center gap-3">
                 <button v-if="recommendations.result && Object.keys(recommendations.result).length"
                     class="border border-[#255B97] flex items-center gap-2 truncate rounded-md h-7 md:h-9 text-secondary text-sm px-2 md:px-4"
@@ -82,9 +82,6 @@
                     <!-- Right Section -->
                     <div class="w-full mx-auto flex justify-center items-center p-4">
                         <div class="text-start">
-                            <p class="text-primary font-bold font-primary text-2xl pb-4">
-                                {{ recommendations?.details?.title }}
-                            </p>
                             <p class="text-sm text-trbase text-justify">
                                 {{ recommendations?.details?.description }}
                             </p>
@@ -200,7 +197,7 @@ const get_results = async () => {
                         li.style.paddingLeft = '20px';
                     });
                     targetOl.forEach((ol) => {
-                        ol.style.listStyleType = 'circle';
+                        ol.style.listStyleType = 'disc';
                     });
                     targetInLI.forEach((li) => {
                         li.style.marginLeft = '40px';
