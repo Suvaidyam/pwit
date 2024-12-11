@@ -49,7 +49,7 @@
 						<p class="text-[#136096] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
 							Pay a fair share of core costs
 						</p>
-						<p class="text-h6 font-bold text-center leading-3">Cover NGOs expenses for day-to-day
+						<p class="text-h6 font-bold text-center leading-3">Cover NGOs' expenses for day-to-day
 							operations</p>
 					</div>
 
@@ -61,9 +61,9 @@
 					</div>
 					<div class="flex flex-col gap-2 justify-around pt-10 pb-4">
 						<p class="text-[#029fd9] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
-							Invest in organizational development
+							Invest in organisational development
 						</p>
-						<p class="text-h6 font-bold text-center leading-3">Support NGOs growth in key areas</p>
+						<p class="text-h6 font-bold text-center leading-3">Support NGOs' growth in key areas</p>
 					</div>
 				</div>
 				<div class="h-[160px] flex rounded-md bg-white relative px-4">
@@ -474,12 +474,25 @@
 
 		<div class="flex flex-col gap-3 px-4 md:px-8 lg:px-16 pt-8">
 			<h1 class="text-h2 text-primary font-bold font-primary tracking-wide leading-9">How to get started</h1>
-			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit, sed do
-				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-				exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">You may pick which section of the tool
+				you would like to start with.</p>
+			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">You may begin with the Funder Diagnostic
+				to get customised recommendations for specific principles you need to improve or
+				proceed directly to the Assistive Guides to explore specific principles of interest to your
+				organisation.</p>
+
+			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">Alternatively, you can select any of the
+				five principle-level Assistive Guides to explore. The Assistive Guides help map your current
+				practices along the five PWIT principles, across various elements spanning organisational guidelines,
+				approaches, communication,
+				etc., to understand the strengths and gaps in your funding practices.</p>
+				<ul class="pl-4">
+					<li class="text-h5 text-trbase">For the first four principles, the guide helps to categorise your practices on a progressive scale. </li>
+					<li class="text-h5 text-trbase">For the first four principles, the guide helps to categorise your practices on a progressive scale. </li>
+				</ul>
+
 		</div>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-4 px-4 md:px-8 lg:px-16 py-7">
+		<!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-4 px-4 md:px-8 lg:px-16 py-7">
 			<div class="flex flex-col gap-2">
 				<div class="w-16 min-w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center">
 					<img class="w-8  h-8" src="../../assets/file.png" alt="Description of image">
@@ -519,7 +532,7 @@
 					officia deserunt mollit anim id est laborum.</p>
 
 			</div>
-		</div>
+		</div> -->
 		<div class="w-full flex justify-center py-6 px-4">
 			<PickAssessment />
 		</div>
@@ -622,5 +635,8 @@ let readmore = ref({
 .fade-slide-x-enter-active,
 .fade-slide-x-leave-active {
 	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s;
+}
+ul li {
+	list-style-type: disc;
 }
 </style>

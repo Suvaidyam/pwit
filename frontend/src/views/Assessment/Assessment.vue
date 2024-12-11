@@ -49,23 +49,23 @@ const call = inject('$call');
 const initialData = ref({});
 const results = ref({});
 const heading = ref([{
-    label:'Multiyear Funder-Nonprofit Partnerships',
+    label:'Multiyear funder-nonprofit partnerships',
     name:'Multi-year Partnerships'
 },
 {
-    label:'Embedding Diversity, Equity and Inclusion (DEI) in grantmaking',
+    label:'Embedding diversity, equity and inclusion (DEI) in grantmaking',
     name:'Diversity Equity Inclusion'
 },
 {
-    label:'Invest In Organisational Development',
+    label:'Invest in organisational development',
     name:'Organization Development'
 },
 {
-    label:'Building Financial Resilience',
+    label:'Building financial resilience',
     name:'Financial Resilience'
 },
 {
-    label:'Pay a Fair Share of Core Costs',
+    label:'Pay a fair share of core costs',
     name:'Core Costs'
 }
 ]);

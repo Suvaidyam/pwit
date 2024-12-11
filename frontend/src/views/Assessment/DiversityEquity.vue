@@ -45,7 +45,7 @@
                         <p class="text-justify text-sm text-trbase font-normal">
                             For funders, DEI calls attention to marginalised individuals and communities, and promotes fair and impartial grantmaking practices. 
                             As the fifth pay-whatit-takes (PWIT) principle, a DEI perspective also influences how you implement the other four: multiyear partnerships,
-                            core costs, organizational development, and financial resilience, to make your grantmaking accessible to a wider range of nonprofits. 
+                            core costs, organisational development, and financial resilience, to make your grantmaking accessible to a wider range of nonprofits. 
                             The tool provides directional guidance on how funders can embrace DEI practices that pursue equity and inclusiveness for grantees and the
                             people they serve. The questions in the tool will help you reflect on two lenses:
                             Do your funding practices make it easier for a more diverse set of nonprofits to thrive in their ecosystem? 

@@ -4,13 +4,29 @@ import frappe
 
 class Result:
  def download_results(doctype, session):
-    conditions = {
-        1: {"width": "25%", "color": "#FF6464"},
-        2: {"width": "50%", "color": "#FF6464"},
-        3: {"width": "75%", "color": "#FFD23F"},
-        4: {"width": "100%", "color": "#337357"}
-    }
     user = None
+    main = [{
+                'label':'Multiyear funder-nonprofit partnerships',
+                'name':'Multi-year Partnerships'
+            },
+            {
+                'label':'Embedding diversity, equity and inclusion (DEI) in grantmaking',
+                'name':'Diversity equity inclusion'
+            },
+            {
+                'label':'Invest in organisational development',
+                'name':'Organization Development'
+            },
+            {
+                'label':'Building financial resilience',
+                'name':'Financial Resilience'
+            },
+            {
+                'label':'Pay a fair share of core costs',
+                'name':'Core Costs'
+            }
+        ]
+    selected_main = next((item for item in main if item['name'] == doctype), None)
     if frappe.session.user not in ["Administrator", "Guest"]:
         user = frappe.session.user
     try:
@@ -18,9 +34,11 @@ class Result:
         if doctype =='Diversity Equity Inclusion':
             doc = AssessmentAPIs.get_dei_result(doctype, session, user)
             data = doc['data']
+            data['main_title'] = selected_main['label']
         else:
             doc = AssessmentAPIs.get_assistive_result(doctype, session, user)
             data = doc['data']
+            data['main_title'] = selected_main['label']
         
         html = frappe.render_template('pwit/templates/pages/Result.html', {"doc": data})
         pdf = get_pdf(html, {
