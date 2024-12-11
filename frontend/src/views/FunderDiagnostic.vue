@@ -25,7 +25,7 @@
       following statements:
     </p>
     <div class="w-full flex flex-col gap-4 px-4 md:px-8 lg:px-20 mt-4 ">
-      <FormView :isRow="true" :initialData="initialData" :doctype="'Funder Diagnostic'" :onSubmit="handleSubmit" :isCard="true"
+      <FormView :width="true" :isRow="true" :initialData="initialData" :doctype="'Funder Diagnostic'" :onSubmit="handleSubmit" :isCard="true"
         :isDraft="true" :isColumn="true" :section="true" :save_as_draft="save_as_draft" />
     </div>
     <!-- <FooterNav /> -->

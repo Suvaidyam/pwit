@@ -19,10 +19,10 @@
         </div>
         <transition name="fade" mode="out-in">
             <div class="w-full">
-                <FormView v-if="title !== 'Diversity Equity Inclusion'" :initialData="initialData" :doctype="title"
+                <FormView v-if="title !== 'Diversity Equity Inclusion'" :width="true" :initialData="initialData" :doctype="title"
                     :onSubmit="handleSubmit" :isTable="true" :isDraft="true" :section="true"
                     :save_as_draft="save_as_draft" :key="title" />
-                <FormView v-if="title == 'Diversity Equity Inclusion'" :initialData="initialData" :doctype="title"
+                <FormView v-if="title == 'Diversity Equity Inclusion'" :width="true" :initialData="initialData" :doctype="title"
                     :onSubmit="handleSubmit" :isDraft="true" :isCard="true" :section="true"
                     :save_as_draft="save_as_draft" :isColumn="true" :key="title" />
             </div>
