@@ -189,7 +189,7 @@ const get_results = async () => {
             let actions = res?.data?.details?.recommended_actions
             let groups = res?.data?.group
             if (actions.length) {
-                actions.sort((a, b) => groups[a.title] - groups[b.title]);
+                actions.sort((a, b) => groups[a.key] - groups[b.key]);
             }
             setTimeout(() => {
                 const targetLi = document.querySelectorAll('ol');
