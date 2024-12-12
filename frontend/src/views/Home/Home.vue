@@ -476,19 +476,20 @@
 			<h1 class="text-h2 text-primary font-bold font-primary tracking-wide leading-9">How to get started</h1>
 			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">You may pick which section of the tool
 				you would like to start with.</p>
-			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">You may begin with the Funder Diagnostic
+			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">You may begin with the <span class="font-bold text-[15px]">Funder Diagnostic</span>
 				to get customised recommendations for specific principles you need to improve or
-				proceed directly to the Assistive Guides to explore specific principles of interest to your
+				proceed directly to the <span class="font-bold text-[15px]">Assistive Guides</span> to explore specific principles of interest to your
 				organisation.</p>
 
 			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">Alternatively, you can select any of the
-				five principle-level Assistive Guides to explore. The Assistive Guides help map your current
+				five principle-level <span class="font-bold text-[15px]">Assistive Guides</span> to explore. The Assistive Guides help map your current
 				practices along the five PWIT principles, across various elements spanning organisational guidelines,
 				approaches, communication,
 				etc., to understand the strengths and gaps in your funding practices.</p>
-				<ul class="pl-4">
+				<ul class="px-2 md:px-10">
 					<li class="text-h5 text-trbase">For the first four principles, the guide helps to categorise your practices on a progressive scale. </li>
-					<li class="text-h5 text-trbase">For the first four principles, the guide helps to categorise your practices on a progressive scale. </li>
+					<li class="text-h5 text-trbase">For the fifth principle, the guide is structured as a checklist, capturing key steps that funders can take to integrate DEI across 
+						the grantmaking cycle. </li>
 				</ul>
 
 		</div>
