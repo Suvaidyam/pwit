@@ -203,6 +203,13 @@ const get_results = async () => {
                         li.style.marginLeft = '40px';
                         li.style.listStyleType = 'circle';
                     });
+                    document.querySelectorAll('a').forEach(anchor => {
+                        if (anchor.href && !anchor.href.startsWith(location.origin)) {
+                            anchor.setAttribute('target', '_blank');
+                            anchor.style.color = '#255B97';
+                        }
+                    });
+
                 }
             }, 1000)
         }

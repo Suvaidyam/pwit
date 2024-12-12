@@ -34,11 +34,28 @@ class Result:
         if doctype =='Diversity Equity Inclusion':
             doc = AssessmentAPIs.get_dei_result(doctype, session, user)
             data = doc['data']
+            groups = data['group']
+            actions = data.details.get('recommended_actions', [])
+            if actions:
+                sorted_actions = sorted(
+                    actions,
+                    key=lambda action: groups.get(action.title, float('inf')) 
+                )
+                data['details'].recommended_actions = sorted_actions
             data['main_title'] = selected_main['label']
         else:
             doc = AssessmentAPIs.get_assistive_result(doctype, session, user)
             data = doc['data']
+            groups = data['group']
+            actions = data['details'].get('recommended_actions', [])
+            if actions:
+                sorted_actions = sorted(
+                    actions,
+                    key=lambda action: groups.get(action.title, float('inf')) 
+                )
+                data['details'].recommended_actions = sorted_actions
             data['main_title'] = selected_main['label']
+        # return
         html = frappe.render_template('pwit/templates/pages/Result.html', {"doc": data})
         pdf = get_pdf(html, {
             "margin-top": "1mm",
@@ -47,7 +64,6 @@ class Result:
             "margin-right": "0mm",
             "encoding": "UTF-8"
         })
-
         frappe.local.response.filename = f"{doctype}.pdf"
         frappe.local.response.filecontent = pdf
         frappe.local.response.type = "download"
