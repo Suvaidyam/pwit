@@ -23,7 +23,7 @@
         </router-link>
     </div>
     <p class="text-h5 px-4 md:px-8 lg:px-20 font-primary text-sebase font-bold">
-      Please select the degree to which your organization’s mindset and practices agree or disagree with the
+      Please select the degree to which your organisation’s mindset and practices agree or disagree with the
       following statements:
     </p>
     <div class="w-full flex flex-col gap-4 px-4 md:px-8 lg:px-20">
