@@ -197,37 +197,6 @@ class AssessmentAPIs:
         if len(name):
            return frappe.get_doc('Results and Recommendtions', name[0])
 
-    def get_last_draft():
-        user = frappe.session.user
-
-        if not user:
-            return {'code': 404, 'message': 'User not found'}
-        session = frappe.get_all('Session', {'user': user}, pluck='name',order_by='creation desc' ,limit_page_length=1)
-        if len(session):
-            myp = frappe.get_all('Multi-year Partnerships', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
-            core_costs = frappe.get_all('Core Costs', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
-            dei = frappe.get_all('Diversity Equity Inclusion', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
-            od = frappe.get_all('Organization Development', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
-            fr = frappe.get_all('Financial Resilience', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
-            # Consolidate all results into a single list with labels
-            all_draft = [
-                {"doctype": "Multi-year Partnerships",'route':'multi-year-partnerships', "modified": myp[0]['modified']} if myp else None,
-                {"doctype": "Core Costs" ,'route':'core-costs', "modified": core_costs[0]['modified']} if core_costs else None,
-                {"doctype": "Diversity Equity Inclusion" ,'route':'diversity-equity-inclusion', "modified": dei[0]['modified']} if dei else None,
-                {"doctype": "Organization Development" ,'route':'organization-development', "modified": od[0]['modified']} if od else None,
-                {"doctype": "Financial Resilience" ,'route':'financial-resilience', "modified": fr[0]['modified']} if fr else None
-            ]
-
-            # Filter out None entries
-            all_draft = [entry for entry in all_draft if entry is not None]
-
-            # Find the latest modified
-            if all_draft:
-                latest_entry = max(all_draft, key=lambda x: x['modified'])
-                return {'code': 200, 'data': latest_entry}
-            else:
-                return {'code': 404, 'message': 'No draft found'}
-
     def get_dei(doctype,session,user=None):
             assessments = [] 
             meta = frappe.get_meta(doctype)
@@ -359,3 +328,36 @@ class AssessmentAPIs:
                         for option in options:
                             data[section_field.label] += round(option.score/len(table_fields),1)
             return data
+        
+    def get_last_draft():
+        user = frappe.session.user
+
+        if not user:
+            return {'code': 404, 'message': 'User not found'}
+        session = frappe.get_all('Session', {'user': user}, pluck='name',order_by='creation desc' ,limit_page_length=1)
+        if len(session):
+            fun = frappe.get_all('Funder Diagnostic', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            myp = frappe.get_all('Multi-year Partnerships', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            core_costs = frappe.get_all('Core Costs', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            dei = frappe.get_all('Diversity Equity Inclusion', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            od = frappe.get_all('Organization Development', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            fr = frappe.get_all('Financial Resilience', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            # Consolidate all results into a single list with labels
+            all_draft = [
+                {"doctype": "Multi-year Partnerships",'route':'multi-year-partnerships', "modified": myp[0]['modified']} if myp else None,
+                {"doctype": "Core Costs" ,'route':'core-costs', "modified": core_costs[0]['modified']} if core_costs else None,
+                {"doctype": "Diversity Equity Inclusion" ,'route':'diversity-equity-inclusion', "modified": dei[0]['modified']} if dei else None,
+                {"doctype": "Organization Development" ,'route':'organization-development', "modified": od[0]['modified']} if od else None,
+                {"doctype": "Financial Resilience" ,'route':'financial-resilience', "modified": fr[0]['modified']} if fr else None,
+                {"doctype": "Funder Diagnostic" ,'route':'funder-diagnostic', "modified": fun[0]['modified']} if fun else None
+            ]
+
+            # Filter out None entries
+            all_draft = [entry for entry in all_draft if entry is not None]
+
+            # Find the latest modified
+            if all_draft:
+                # latest_entry = max(all_draft, key=lambda x: x['modified'])
+                return {'code': 200, 'data': all_draft}
+            else:
+                return {'code': 404, 'message': 'No draft found'}

@@ -1,5 +1,5 @@
 <template>
-    <Popover v-slot="{ open }" class="relative z-50">
+    <Popover v-slot="{ open }" class="relative z-20">
         <PopoverButton @mouseenter="open = true" @mouseleave="open = false" class="focus:outline-none">
             <InfoIcon class="w-4 h-4 text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300" />
         </PopoverButton>

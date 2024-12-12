@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:session",
  "creation": "2024-10-30 15:47:34.612459",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -36,13 +35,12 @@
    "fieldname": "session",
    "fieldtype": "Link",
    "label": "Session",
-   "options": "Session",
-   "unique": 1
+   "options": "Session"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-02 15:15:16.686162",
+ "modified": "2024-12-12 16:47:21.664714",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Contact Us",

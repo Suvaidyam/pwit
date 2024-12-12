@@ -105,12 +105,12 @@
 			</div>
 		</div>
 		<!--  -->
-		<div class=" w-full px-4 md:px-8 lg:px-20 py-10 ">
-			<h1 class="text-primary text-h2 font-bold leading-9 tracking-wide font-primary">What does the toolkit
-				include?
-			</h1>
-			<div class="flex flex-col md:flex-row mt-5">
+		<div class=" w-full px-4 md:px-8 lg:px-20 py-6 ">
+			<div class="flex h-full items-center flex-col md:flex-row mt-5">
 				<div class="w-full flex flex-col gap-3">
+					<h1 class="text-primary text-h2 font-bold leading-9 tracking-wide font-primary">What does the toolkit
+						include?
+					</h1>
 					<p class="pt-2 text-h5 font-normal text-trbase text-justify leading-5 tracking-wider">The toolkit
 						includes two elements:</p>
 					<div class="flex flex-col gap-5 mt-3">
@@ -200,7 +200,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="w-full md:h-96 flex justify-center items-center">
+				<div class="w-full md:h-full flex justify-center items-center">
 					<img class="w-[400px] h-[270px]" src="../../assets/right.png" alt="">
 				</div>
 			</div>
