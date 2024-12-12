@@ -35,7 +35,7 @@
   {
    "fieldname": "od_1",
    "fieldtype": "Link",
-   "label": "We fund nonprofits when they seek money for organizational development that may not be  directly related to a program.",
+   "label": "We fund nonprofits when they seek money for organisational development that may not be  directly related to a program.",
    "options": "Field Options",
    "reqd": 1
   },
@@ -159,7 +159,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-05 16:03:59.055274",
+ "modified": "2024-12-12 12:32:58.842281",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Funder Diagnostic",

@@ -16,7 +16,7 @@
 				tool</h4>
 			<div class="flex justify-center font-normal text-sebase text-h5 text-center tracking-wider leading-5">
 				<p>Philanthropy has a significant opportunity to amplify the impact of their grantmaking by enabling a
-					stronger and more resilient nonprofit sector. <a
+					stronger and more resilient nonprofit sector. <a target="_blank"
 						href="https://www.bridgespan.org/our-global-reach/pay-what-it-takes-india-initiative"
 						class="text-secondary hover:underline"> Bridgespan’s Pay-What-ItTakes India Initiative</a> has
 					identified five principles of effective grantmaking, rooted in trust, that funders can adopt to
@@ -258,7 +258,7 @@
 									<p class="text-trbase text-sm py-2  leading-5 tracking-wider inline">
 										<transition name="fade-slide-x">
 											<span v-if="readmore.three" key="text" class="inline">
-												Visit <a href="http://pwit.localhost:8080/pwit/funder"
+												Visit <a href="/pwit/funder-diagnostic"
 													class="text-secondary hover:underline">Funder Diagnostic Link </a>
 												and fill
 												out
