@@ -66,8 +66,9 @@
                             </div>
                         </div>
                         <router-link :to="el.route"
-                            class="w-40 h-9 min-h-9 hover:bg-primary flex items-center justify-center text-h6 mt-3 rounded-md bg-secondary text-white font-bold">
-                            Take the Assessment
+                            :class="last_draft.some(item => item.doctype === el.doctype)?'w-44':'w-40'"
+                            class=" h-9 min-h-9 hover:bg-primary flex items-center justify-center text-h6 mt-3 rounded-md bg-secondary text-white font-bold">
+                            {{ last_draft.some(item => item.doctype === el.doctype)?'Continue the Assessment':'Take the Assessment' }} 
                         </router-link>
                     </div>
                 </div>
@@ -103,8 +104,9 @@
                             </div>
                         </div>
                         <router-link :to="el.route"
-                            class="w-40 h-9 min-h-9 hover:bg-primary flex items-center justify-center text-h6 mt-3 rounded-md bg-secondary text-white font-bold">
-                            Take the Assessment
+                        :class="last_draft.some(item => item.doctype === el.doctype)?'w-44':'w-40'"
+                            class=" h-9 min-h-9 hover:bg-primary flex items-center justify-center text-h6 mt-3 rounded-md bg-secondary text-white font-bold">
+                            {{ last_draft.some(item => item.doctype === el.doctype)?'Continue the Assessment':'Take the Assessment' }}
                         </router-link>
                     </div>
                 </div>
@@ -128,6 +130,7 @@ const recommendedList = ref([])
 const additionalList = ref([])
 const initialData = ref({})
 const viewResult = ref(false)
+const last_draft = ref([])
 
 const data = ref([
     {
@@ -139,6 +142,7 @@ const data = ref([
         description: 'Multiyear partnerships nurture trust between funders and nonprofits while simplifying the grantmaking process. Adopting a longer-term partnership approach can help funders increasingly focus on creating lasting change, over immediate and short-term outputs.',
         icon: 'Handshake',
         route: '/funder/multi-year-partnerships',
+        doctype: 'Multi-year Partnerships',
         color: '#59467b',
     },
     {
@@ -150,6 +154,7 @@ const data = ref([
         description: 'Core costs — often referred to as indirect costs — are functions are essential for nonprofits to conduct day-to-day operations and deliver on their impact mandates. Supporting nonprofits in this regard aligns with funders goals of ensuring that nonprofits have the critical investments required to enable operational effectives, have sound...',
         icon: 'IndianRupee',
         route: '/funder/core-costs',
+        doctype: 'Core Costs',
         color: '#136096',
     },
 
@@ -162,6 +167,7 @@ const data = ref([
         description: 'Organisational development (OD) investments build and strengthen a range of critical efficiency and growth-oriented capabilities that enable nonprofits to deliver greater impact.',
         icon: 'ChartNoAxesCombined',
         route: '/funder/organization-development',
+        doctype: 'Organization Development',
         color: '#029fd9',
     },
     {
@@ -173,6 +179,7 @@ const data = ref([
         description: 'An intentional focus on DEI can help funders address the disproportional funding gap that persists by organizations not located in major cities and headed by members of historically marginalized populations such as Dalit, Bahujan and Adivasi (DBA) communities. An intentional focus on DEI can help funders address the disproportionate financial gap these critical agents of social change face and thus accelerate progress on India’s steepest challenges.',
         icon: 'Scale',
         route: '/funder/diversity-equity-inclusion',
+        doctype: 'Diversity Equity Inclusion',
         color: '#f38714',
     },
     {
@@ -184,6 +191,7 @@ const data = ref([
         description: 'Financial resilience refers to a nonprofit’s ability to sustain its operations over the long term and withstand external stresses and shocks. By supporting nonprofits build their financial resilience, funders can ensure the sustainability of the organization and its ability to continue creating impact in the communities in which they work.',
         icon: 'PiggyBank',
         route: '/funder/financial-resilience',
+        doctype: 'Financial Resilience',
         color: '#058248',
     }
 
@@ -281,7 +289,12 @@ const get_save_as_draft = async () => {
 
     }
 }
-
+const get_last_draft = async () => {
+	const res = await call('pwit.controllers.api.get_last_draft', { });
+	if (res.code === 200) {
+        last_draft.value = res?.data ?? {}
+	}
+};
 watch(() => data.value, (value) => {
     recommendedList.value = value?.filter(e => e.group === 'Recommended')
     additionalList.value = value?.filter(e => e.group === 'Additional')
@@ -313,6 +326,7 @@ onMounted(async () => {
     if (auth.isLoggedIn) {
         get_save_as_draft();
     }
+    get_last_draft();
 });
 
 </script>
