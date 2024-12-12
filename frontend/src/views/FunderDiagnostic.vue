@@ -5,6 +5,8 @@
         <router-link to="/">Home </router-link>
         <span class="text-gray-400">/ Funder Diagnostic</span>
       </p>
+      <!-- <div class="flex items-center"><House class="w-5 h-4"/> Home</div>|
+      <div class="flex items-center cursor-pointer" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div> -->
     </div>
     <div class="flex items-center px-4 md:px-8 lg:px-20 justify-between">
       <div class="flex items-center gap-3">
@@ -24,8 +26,11 @@
       Please select the degree to which your organization’s mindset and practices agree or disagree with the
       following statements:
     </p>
-    <div class="w-full flex flex-col gap-4 px-4 md:px-8 lg:px-20 mt-4 ">
-      <FormView :width="true" :isRow="true" :initialData="initialData" :doctype="'Funder Diagnostic'" :onSubmit="handleSubmit" :isCard="true"
+    <div class="w-full flex flex-col gap-4 px-4 md:px-8 lg:px-20">
+      <!-- <div class=" w-full relative">
+        <p class="absolute  w-full top-5 left-0 border-b-4 rounded-md border-[]"></p>
+      </div> -->
+      <FormView  :section_hidden="true" :width="true" :isRow="true" :initialData="initialData" :doctype="'Funder Diagnostic'" :onSubmit="handleSubmit" :isCard="true"
         :isDraft="true" :isColumn="true" :section="true" :save_as_draft="save_as_draft" />
     </div>
     <!-- <FooterNav /> -->
@@ -39,7 +44,7 @@ import { FormView } from '../../../../sva_form_vuejs/form_view.js';
 import { useRouter } from 'vue-router';
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
-import { FileSearch2 } from 'lucide-vue-next';
+import { FileSearch2,ArrowBigLeft,House } from 'lucide-vue-next';
 
 const store = inject('store');
 const auth = inject('$auth');
