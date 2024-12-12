@@ -488,7 +488,8 @@
 				etc., to understand the strengths and gaps in your funding practices.</p>
 				<ul class="px-2 md:px-10">
 					<li class="text-h5 text-trbase">For the first four principles, the guide helps to categorise your practices on a progressive scale. </li>
-					<li class="text-h5 text-trbase">For the first four principles, the guide helps to categorise your practices on a progressive scale. </li>
+					<li class="text-h5 text-trbase">For the fifth principle, the guide is structured as a checklist, capturing key steps that funders can take to integrate DEI across 
+						the grantmaking cycle. </li>
 				</ul>
 
 		</div>
