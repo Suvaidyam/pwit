@@ -128,7 +128,7 @@
 									Funding practices
 									diagnostic</h4>
 								<div class="pt-2 text-justify">
-									<p class="text-trbase text-h5 py-2 text-justify leading-5 tracking-wider inline">
+									<p class="text-trbase text-h5 py-2 text-justify leading-5 inline">
 										<transition name="fade-slide-x">
 											<span v-if="readmore.one" key="text" class="inline">
 												Funder Diagnostic is a 10-minute diagnostic questionnaire regarding your
@@ -174,7 +174,7 @@
 									Assistive guides for each
 									principle</h4>
 								<div class="pt-2 text-justify">
-									<p class="text-trbase text-h5 py-2 text-justify leading-5 tracking-wider inline">
+									<p class="text-trbase text-h5 py-2 text-justify leading-5 inline">
 										<transition name="fade-slide-x">
 											<span v-if="readmore.two" key="text" class="inline">
 												Assistive Guides help you assess how aligned your current funding
@@ -214,11 +214,11 @@
 				<div class="w-full flex flex-col gap-3 order-1 md:order-2">
 					<h1 class="text-primary text-h2 font-bold font-primary leading-9 tracking-wide">What will the output
 						include?</h1>
-					<P class="text-h5 font-normal text-trbase text-justify leading-5 tracking-wider">After completing the questions for each principle, you will receive an instant summary
+					<P class="text-h5 font-normal text-trbase text-justify leading-5 ">After completing the questions for each principle, you will receive an instant summary
 						identifying your level of practice and recommendations on how to progress to the next level. A
 						curated list of resources for each PWIT principle is also shared for you to explore further.
 					</P>
-					<P class="text-h5 font-normal text-trbase text-justify leading-5 tracking-wider">Wherever you may be on your grantmaking journey, this toolkit provides concrete steps and
+					<P class="text-h5 font-normal text-trbase text-justify leading-5 ">Wherever you may be on your grantmaking journey, this toolkit provides concrete steps and
 						recommendations for making your work more supportive of nonprofits and more likely to achieve
 						your intended impact.</P>
 					<!-- <div class="flex flex-col gap-5">
