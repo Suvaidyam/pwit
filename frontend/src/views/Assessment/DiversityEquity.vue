@@ -24,18 +24,26 @@
                                 </div>
                                 <div class=" ">
                                     <h1 class="flex gap-3  text-h5 text-sebase font-bold font-primary pb-2"> What is
-                                        DEI? <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.33337 10.333H7.66671V6.33301H6.33337V10.333ZM7.00004 4.99967C7.18893 4.99967 7.34737 4.93567 7.47538 4.80767C7.60337 4.67967 7.66715 4.52145 7.66671 4.33301C7.66626 4.14456 7.60226 3.98634 7.47471 3.85834C7.34715 3.73034 7.18893 3.66634 7.00004 3.66634C6.81115 3.66634 6.65293 3.73034 6.52537 3.85834C6.39782 3.98634 6.33382 4.14456 6.33337 4.33301C6.33293 4.52145 6.39693 4.6799 6.52537 4.80834C6.65382 4.93679 6.81204 5.00056 7.00004 4.99967ZM7.00004 13.6663C6.07782 13.6663 5.21115 13.4912 4.40004 13.141C3.58893 12.7908 2.88337 12.3159 2.28338 11.7163C1.68338 11.1168 1.20849 10.4112 0.858708 9.59967C0.50893 8.78812 0.333819 7.92145 0.333375 6.99967C0.33293 6.0779 0.508042 5.21123 0.858708 4.39967C1.20937 3.58812 1.68426 2.88256 2.28338 2.28301C2.88249 1.68345 3.58804 1.20856 4.40004 0.858341C5.21204 0.508119 6.07871 0.333008 7.00004 0.333008C7.92137 0.333008 8.78804 0.508119 9.60004 0.858341C10.412 1.20856 11.1176 1.68345 11.7167 2.28301C12.3158 2.88256 12.7909 3.58812 13.142 4.39967C13.4932 5.21123 13.668 6.0779 13.6667 6.99967C13.6654 7.92145 13.4903 8.78812 13.1414 9.59967C12.7925 10.4112 12.3176 11.1168 11.7167 11.7163C11.1158 12.3159 10.4103 12.791 9.60004 13.1417C8.78982 13.4923 7.92315 13.6672 7.00004 13.6663Z"
-                                                fill="#464547" />
-                                        </svg>
+                                        DEI?
+                                        <Pophover :content="'This framework can help you understand the internal and external aspects of embedding DEI within your institution.'" />
                                     </h1>
                                     <p class="text-justify text-sm text-trbase font-normal">
-                                        Diversity, equity, and inclusion (DEI) refers to policies or initiatives
-                                        designed to make people from different races, ethnicities, religions, abilities,
-                                        genders, ? and sexual orientations feel welcome and respected, and ensures fair
-                                        opportunities for everyone regardless of these differences.
+                                        Diversity, equity, and inclusion are closely linked values embraced by many
+                                        organisations striving to support diverse groups of
+                                        individuals, entities or organisations, encompassing various races, ethnicities,
+                                        religions, abilities, genders, and sexual orientations.
+                                    </p>
+                                    <p class="text-justify text-sm text-trbase font-normal pt-2">
+                                        <span class="font-bold">Diversity</span> refers to the intentional variety within a specific collection of
+                                        people that takes into account intersectional elements of
+                                        human difference, identity, and lived experience. <span class="font-bold">Equity</span>  is the achievement and
+                                        maintenance of just outcomes for all people within
+                                        an organisation or within a culture or society. <span class="font-bold">Inclusion</span>  is a process that
+                                        gives all people – especially communities that have been
+                                        systematically excluded or prevented from having a say in the structures of
+                                        power – full and meaningful participation in planning
+                                        and decision making at all levels within a group, organisation, movement, or
+                                        society.
                                     </p>
                                 </div>
                             </div>
@@ -50,28 +58,23 @@
                                 </div>
                                 <div class=" ">
                                     <h1 class="flex gap-3  text-h5 text-sebase font-bold font-primary pb-2"> Why is DEI
-                                        important for funders? <svg width="14" height="14" viewBox="0 0 14 14"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.33337 10.333H7.66671V6.33301H6.33337V10.333ZM7.00004 4.99967C7.18893 4.99967 7.34737 4.93567 7.47538 4.80767C7.60337 4.67967 7.66715 4.52145 7.66671 4.33301C7.66626 4.14456 7.60226 3.98634 7.47471 3.85834C7.34715 3.73034 7.18893 3.66634 7.00004 3.66634C6.81115 3.66634 6.65293 3.73034 6.52537 3.85834C6.39782 3.98634 6.33382 4.14456 6.33337 4.33301C6.33293 4.52145 6.39693 4.6799 6.52537 4.80834C6.65382 4.93679 6.81204 5.00056 7.00004 4.99967ZM7.00004 13.6663C6.07782 13.6663 5.21115 13.4912 4.40004 13.141C3.58893 12.7908 2.88337 12.3159 2.28338 11.7163C1.68338 11.1168 1.20849 10.4112 0.858708 9.59967C0.50893 8.78812 0.333819 7.92145 0.333375 6.99967C0.33293 6.0779 0.508042 5.21123 0.858708 4.39967C1.20937 3.58812 1.68426 2.88256 2.28338 2.28301C2.88249 1.68345 3.58804 1.20856 4.40004 0.858341C5.21204 0.508119 6.07871 0.333008 7.00004 0.333008C7.92137 0.333008 8.78804 0.508119 9.60004 0.858341C10.412 1.20856 11.1176 1.68345 11.7167 2.28301C12.3158 2.88256 12.7909 3.58812 13.142 4.39967C13.4932 5.21123 13.668 6.0779 13.6667 6.99967C13.6654 7.92145 13.4903 8.78812 13.1414 9.59967C12.7925 10.4112 12.3176 11.1168 11.7167 11.7163C11.1158 12.3159 10.4103 12.791 9.60004 13.1417C8.78982 13.4923 7.92315 13.6672 7.00004 13.6663Z"
-                                                fill="#464547" />
-                                        </svg>
+                                        important for funders?
+                                        <Pophover :content="`Whilst the self-assessment tool focuses on grantmaking, it is important to look inward at how your organisation
+                                            would benefit from a commitment to DEI in order to address systemic exclusion and inequities. Understanding ways to embed DEI 
+                                            in internal culture, systems, and practices requires deeper reflection and work. Some resources on enhancing institutional DEI can 
+                                            be found here`" />
                                     </h1>
                                     <p class="text-justify text-sm text-trbase font-normal">
-                                        For funders, DEI calls attention to marginalised individuals and communities,
-                                        and promotes fair and impartial grantmaking practices.
-                                        As the fifth pay-whatit-takes (PWIT) principle, a DEI perspective also
-                                        influences how you implement the other four: multiyear partnerships,
-                                        core costs, organisational development, and financial resilience, to make your
-                                        grantmaking accessible to a wider range of nonprofits.
-                                        The tool provides directional guidance on how funders can embrace DEI practices
-                                        that pursue equity and inclusiveness for grantees and the
-                                        people they serve. The questions in the tool will help you reflect on two
-                                        lenses:
-                                        Do your funding practices make it easier for a more diverse set of nonprofits to
-                                        thrive in their ecosystem?
-                                        Do your organisation’s grants focus on serving the underserved communities?
+                                        For funders, DEI calls attention to marginalised individuals and communities and promotes fair and impartial grantmaking practices. 
+                                        As the fifth PWIT principle, a DEI perspective also influences how you implement the other four – multiyear partnerships, core cost
+                                        support, organisational development, and financial resilience – to make your grantmaking accessible to a wider range of nonprofits. 
+                                        The tool provides directional guidance on how funders can embrace DEI practices that pursue equity and inclusiveness for grantees 
+                                        and the people they serve. The questions in the tool will help you reflect on two lenses:
                                     </p>
+                                    <ul class="px-6">
+                                        <li class="text-sm text-trbase list-disc">Do your funding practices make it easier for a more diverse set of nonprofits to thrive in their ecosystem?</li>
+                                        <li class="text-sm text-trbase list-disc">Do your organisation’s grants focus on underserved communities?</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class=" w-full pt-8 flex gap-4">
@@ -85,26 +88,22 @@
                                 </div>
                                 <div class=" ">
                                     <h1 class="flex gap-3  text-h5 text-sebase font-bold font-primary pb-2"> How to use
-                                        this tool? <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.33337 10.333H7.66671V6.33301H6.33337V10.333ZM7.00004 4.99967C7.18893 4.99967 7.34737 4.93567 7.47538 4.80767C7.60337 4.67967 7.66715 4.52145 7.66671 4.33301C7.66626 4.14456 7.60226 3.98634 7.47471 3.85834C7.34715 3.73034 7.18893 3.66634 7.00004 3.66634C6.81115 3.66634 6.65293 3.73034 6.52537 3.85834C6.39782 3.98634 6.33382 4.14456 6.33337 4.33301C6.33293 4.52145 6.39693 4.6799 6.52537 4.80834C6.65382 4.93679 6.81204 5.00056 7.00004 4.99967ZM7.00004 13.6663C6.07782 13.6663 5.21115 13.4912 4.40004 13.141C3.58893 12.7908 2.88337 12.3159 2.28338 11.7163C1.68338 11.1168 1.20849 10.4112 0.858708 9.59967C0.50893 8.78812 0.333819 7.92145 0.333375 6.99967C0.33293 6.0779 0.508042 5.21123 0.858708 4.39967C1.20937 3.58812 1.68426 2.88256 2.28338 2.28301C2.88249 1.68345 3.58804 1.20856 4.40004 0.858341C5.21204 0.508119 6.07871 0.333008 7.00004 0.333008C7.92137 0.333008 8.78804 0.508119 9.60004 0.858341C10.412 1.20856 11.1176 1.68345 11.7167 2.28301C12.3158 2.88256 12.7909 3.58812 13.142 4.39967C13.4932 5.21123 13.668 6.0779 13.6667 6.99967C13.6654 7.92145 13.4903 8.78812 13.1414 9.59967C12.7925 10.4112 12.3176 11.1168 11.7167 11.7163C11.1158 12.3159 10.4103 12.791 9.60004 13.1417C8.78982 13.4923 7.92315 13.6672 7.00004 13.6663Z"
-                                                fill="#464547" />
-                                        </svg>
+                                        this tool?
+                                        <!-- <Pophover :content="'hii'" /> -->
                                     </h1>
                                     <p class="text-justify text-sm text-trbase font-normal">
-                                        The DEI self-assessment questions that follow touch on 10 practices, ranging
-                                        from sourcing and diligence in choosing grantees to grant reporting and renewal.
-                                        At the end, the tool generates a scorecard that shows whether your DEI efforts
-                                        rank as low, medium, or high on each of the 10 practices. We then provide
-                                        practical recommendations for improving your approach to each practice.
+                                        The DEI Assistive Guide questions touch on 10 practices ranging from sourcing and diligence in choosing grantees to grant reporting 
+                                        and renewal. At the end, the tool generates a scorecard that shows how your DEI efforts rank on each of the 10 practices. We then 
+                                        provide practical recommendations for improving your approach to each practice. For each question, we ask you to select the 
+                                        statement or statements that largely describe your organisation’s current practices, if any
                                     </p>
                                 </div>
                             </div>
                             <div class="pt-10 flex justify-end w-full">
                                 <button @click="is_dei_ass"
                                     class="bg-secondary text-white text-h5 py-2.5 px-10 rounded-md">
-                                   {{ Object.keys(initialData).length?'Continue the Assessment':'Start the Assessment' }} </button>
+                                    {{ Object.keys(initialData).length ? 'Continue the Assessment' : 'Start the Assessment'
+                                    }} </button>
                             </div>
                         </div>
                     </div>
@@ -116,13 +115,13 @@
 
 <script setup>
 import { inject, onMounted, ref } from 'vue'
-
+import Pophover from './Pophover.vue';
 const store = inject('store')
 const auth = inject('$auth')
 const call = inject('$call')
 const initialData = ref({})
 
-const is_dei_ass=()=>{
+const is_dei_ass = () => {
     store.is_dei_ass = true
 }
 const get_save_as_draft = async () => {
@@ -135,7 +134,7 @@ const get_save_as_draft = async () => {
 
     }
 }
-onMounted(()=>{
+onMounted(() => {
     get_save_as_draft()
 })
 </script>

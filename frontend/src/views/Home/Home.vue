@@ -86,7 +86,7 @@
 					</div>
 					<div class="flex flex-col gap-2 justify-around pt-10 pb-4">
 						<p class="text-[#f38714] text-center font-bold text-h5 uppercase  tracking-wider leading-4 ">
-							Embed Diversity Equity, and inclusion in grantmaking
+							Embed Diversity, Equity, and inclusion in grantmaking
 						</p>
 						<p class="text-h6 leading-3 font-bold text-center">Recognize and address the needs of
 							underserved individuals and communities</p>
@@ -95,7 +95,7 @@
 
 			</div>
 
-			<div class="flex justify-center md:px-8 text-h5 py-8 font-normal tracking-wider ">
+			<div class="flex justify-center text-sebase text-center text-h5 py-8 font-normal tracking-wider ">
 				As funders recognize the importance of making grantmaking more supportive and inclusive, there is a need
 				to pursue actionable strategies to advance on this journey. The Funder Practices Assistive Tool is an
 				open-source and freely available tool to help assess how aligned your current funding practices are with
@@ -111,18 +111,8 @@
 			</h1>
 			<div class="flex flex-col md:flex-row mt-5">
 				<div class="w-full flex flex-col gap-3">
-					<p class="pt-2 text-h5 font-normal text-trbase text-justify leading-5 tracking-wider">The tool is
-						designed for institutional
-						funders
-						(global, domestic, CSR) who are seeking a deeper understanding of how they can strengthen their
-						own
-						grantmaking practices to effectively and meaningfully support their nonprofit partners. It may
-						alsofont-sans
-						be used by advisors/ intermediaries who work closely with institutional donors, and leverage
-						this
-						tool to provide more targeted support to strengthen the impact of their grantmaking. The tool
-						helps
-						do this through a two-step approach:</p>
+					<p class="pt-2 text-h5 font-normal text-trbase text-justify leading-5 tracking-wider">The toolkit
+						includes two elements:</p>
 					<div class="flex flex-col gap-5 mt-3">
 						<div class="flex gap-2">
 							<div class="w-10 min-w-10 h-10 flex items-center justify-center rounded-full bg-gray-100">
@@ -134,16 +124,19 @@
 								</svg>
 							</div>
 							<div class="">
-								<h4 class="font-bold text-h5 text-sebase font-primary leading-4 tracking-wide">Part 1 -
+								<h4 class="font-bold text-[18px] text-sebase font-primary leading-4 tracking-wide">Part 1 -
 									Funding practices
 									diagnostic</h4>
 								<div class="pt-2 text-justify">
-									<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider inline">
+									<p class="text-trbase text-h5 py-2 text-justify leading-5 tracking-wider inline">
 										<transition name="fade-slide-x">
 											<span v-if="readmore.one" key="text" class="inline">
-												Take a quick diagnostic of your organization’s funding beliefs and
-												practices to identify specific principles
-												that would be most relevant for you to enhance your grantmaking.
+												Funder Diagnostic is a 10-minute diagnostic questionnaire regarding your
+												organisation’s funding beliefs and practices. At the end of the
+												questionnaire, you will receive an analysis that shows which of the five
+												grantmaking principles to work on first. Depending upon your experience
+												with PWIT principles, the tool will recommend three that you may explore
+												in more detail.
 											</span>
 										</transition>
 									</p>
@@ -159,7 +152,7 @@
 						</div>
 						<div class="flex gap-2">
 							<div class="w-10 min-w-10 h-10 flex items-center justify-center rounded-full bg-gray-100">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<g clip-path="url(#clip0_248_5487)">
 										<path fill-rule="evenodd" clip-rule="evenodd"
@@ -177,31 +170,21 @@
 								</svg>
 							</div>
 							<div class="">
-								<h4 class="font-bold text-sebase text-h5 font-primary leading-4 tracking-wide">Part 2 –
+								<h4 class="font-bold text-sebase text-[18px] font-primary leading-4 tracking-wide">Part 2 –
 									Assistive guides for each
 									principle</h4>
 								<div class="pt-2 text-justify">
-									<p class="text-trbase text-sm py-2 text-justify leading-5 tracking-wider inline">
+									<p class="text-trbase text-h5 py-2 text-justify leading-5 tracking-wider inline">
 										<transition name="fade-slide-x">
 											<span v-if="readmore.two" key="text" class="inline">
-												Use these guides to map your current practices on the five
-												PWIT principles, across
-												various elements spanning policy, approaches, communication, etc., to
-												understand
-												the
-												strengths and gaps in your funding practices. The guides for most
-												principles are
-												rubric-based to accurately identify incremental shifts towards improving
-												your
-												practices. Given the nascent stage of DEI practices in India, the DEI
-												guide
-												takes a
-												different form to allow you to reflect on how inclusive your grantmaking
-												practices
-												are. At the end, you will receive a summary report with recommendations
-												and
-												relevant
-												resources that may be useful to move forward on your journey.
+												Assistive Guides help you assess how aligned your current funding
+												practices are with each of the five principles. For the first four
+												principles, the guide helps to categorise your practices on a
+												progressive scale. For the fifth principle (Embedding diversity, equity,
+												and inclusion in grantmaking), the guide is structured as a checklist,
+												capturing key steps that funders can take to integrate DEI across the
+												grantmaking cycle. We use this alternative format because practices that
+												embody this principle are still maturing.
 											</span>
 										</transition>
 									</p>
@@ -217,21 +200,28 @@
 						</div>
 					</div>
 				</div>
-				<div class="w-full md:h-96 flex md:justify-end">
-					<img class="w-[520px] h-[338px]" src="../../assets/right.png" alt="">
+				<div class="w-full md:h-96 flex justify-center items-center">
+					<img class="w-[400px] h-[270px]" src="../../assets/right.png" alt="">
 				</div>
 			</div>
 		</div>
 		<!--  -->
 		<div class=" w-full px-4 md:px-8 lg:px-20  md:pt-8 ">
 			<div class="flex flex-col md:flex-row">
-				<div class="w-full pt-8 flex justify-center items-center order-2 md:order-1">
-					<img class="w-[434px] h-[436px]" src="../../assets/left.png" alt="">
+				<div class="w-full flex justify-center items-center order-2 md:order-1">
+					<img class="w-[364px] h-[300px]" src="../../assets/left.png" alt="">
 				</div>
 				<div class="w-full flex flex-col gap-3 order-1 md:order-2">
 					<h1 class="text-primary text-h2 font-bold font-primary leading-9 tracking-wide">What will the output
 						include?</h1>
-					<div class="flex flex-col gap-5">
+					<P class="text-h5 font-normal text-trbase text-justify leading-5 tracking-wider">After completing the questions for each principle, you will receive an instant summary
+						identifying your level of practice and recommendations on how to progress to the next level. A
+						curated list of resources for each PWIT principle is also shared for you to explore further.
+					</P>
+					<P class="text-h5 font-normal text-trbase text-justify leading-5 tracking-wider">Wherever you may be on your grantmaking journey, this toolkit provides concrete steps and
+						recommendations for making your work more supportive of nonprofits and more likely to achieve
+						your intended impact.</P>
+					<!-- <div class="flex flex-col gap-5">
 						<div class="flex gap-2">
 							<div class="w-10 min-w-10 h-10 flex items-center justify-center rounded-full bg-gray-100">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -466,7 +456,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -476,21 +466,26 @@
 			<h1 class="text-h2 text-primary font-bold font-primary tracking-wide leading-9">How to get started</h1>
 			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">You may pick which section of the tool
 				you would like to start with.</p>
-			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">You may begin with the <span class="font-bold text-[15px]">Funder Diagnostic</span>
+			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">You may begin with the <span
+					class="font-bold text-[15px]">Funder Diagnostic</span>
 				to get customised recommendations for specific principles you need to improve or
-				proceed directly to the <span class="font-bold text-[15px]">Assistive Guides</span> to explore specific principles of interest to your
+				proceed directly to the <span class="font-bold text-[15px]">Assistive Guides</span> to explore specific
+				principles of interest to your
 				organisation.</p>
 
 			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">Alternatively, you can select any of the
-				five principle-level <span class="font-bold text-[15px]">Assistive Guides</span> to explore. The Assistive Guides help map your current
+				five principle-level <span class="font-bold text-[15px]">Assistive Guides</span> to explore. The
+				Assistive Guides help map your current
 				practices along the five PWIT principles, across various elements spanning organisational guidelines,
 				approaches, communication,
 				etc., to understand the strengths and gaps in your funding practices.</p>
-				<ul class="px-2 md:px-10">
-					<li class="text-h5 text-trbase">For the first four principles, the guide helps to categorise your practices on a progressive scale. </li>
-					<li class="text-h5 text-trbase">For the fifth principle, the guide is structured as a checklist, capturing key steps that funders can take to integrate DEI across 
-						the grantmaking cycle. </li>
-				</ul>
+			<ul class="px-2 md:px-10">
+				<li class="text-h5 text-trbase">For the first four principles, the guide helps to categorise your
+					practices on a progressive scale. </li>
+				<li class="text-h5 text-trbase">For the fifth principle, the guide is structured as a checklist,
+					capturing key steps that funders can take to integrate DEI across
+					the grantmaking cycle. </li>
+			</ul>
 
 		</div>
 		<!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-4 px-4 md:px-8 lg:px-16 py-7">
@@ -637,6 +632,7 @@ let readmore = ref({
 .fade-slide-x-leave-active {
 	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s;
 }
+
 ul li {
 	list-style-type: disc;
 }
