@@ -22,7 +22,8 @@
                 <FormView v-if="title !== 'Diversity Equity Inclusion'" :width="true" :initialData="initialData" :doctype="title"
                     :onSubmit="handleSubmit" :isTable="true" :isDraft="true" :section="true"
                     :save_as_draft="save_as_draft" :key="title" />
-                <FormView v-if="title == 'Diversity Equity Inclusion'" :width="true" :initialData="initialData" :doctype="title"
+                <DiversityEquity  v-if="title == 'Diversity Equity Inclusion' && !store.is_dei_ass"/>
+                <FormView v-if="title == 'Diversity Equity Inclusion' && store.is_dei_ass" :width="true" :initialData="initialData" :doctype="title"
                     :onSubmit="handleSubmit" :isDraft="true" :isCard="true" :section="true"
                     :save_as_draft="save_as_draft" :isColumn="true" :key="title" />
             </div>
@@ -38,6 +39,7 @@ import { FormView } from '../../../../../sva_form_vuejs/form_view';
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
 import { FileSearch2 } from 'lucide-vue-next'
+import DiversityEquity from './DiversityEquity.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -48,6 +50,7 @@ const auth = inject('$auth');
 const call = inject('$call');
 const initialData = ref({});
 const results = ref({});
+
 const heading = ref([{
     label:'Multiyear funder-nonprofit partnerships',
     name:'Multi-year Partnerships'
@@ -84,6 +87,7 @@ watch(() => title.value, async (newVal) => {
 watch(()=>initialData.value, (newVal) => {
     initialData.value = newVal
 }, {deep: true, immediate: true})
+
 const handleSubmit = async (formData) => {
     try {
         const res = await call('pwit.controllers.api.save_doc', { doctype: title.value, doc: { ...formData, 'session': store.session }, name: initialData?.value?.name });

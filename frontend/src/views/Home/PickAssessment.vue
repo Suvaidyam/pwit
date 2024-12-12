@@ -208,6 +208,9 @@ const get_last_draft = async () => {
 	const res = await call('pwit.controllers.api.get_last_draft', { });
 	if (res.code === 200) {
         last_draft.value = res?.data ?? {}
+        if(res.data.doctype=='Diversity Equity Inclusion'){
+            store.is_dei_ass=true
+        }
 	}
 };
 onMounted(async()=>{
