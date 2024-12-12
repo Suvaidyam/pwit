@@ -35,7 +35,7 @@ class Result:
             doc = AssessmentAPIs.get_dei_result(doctype, session, user)
             data = doc['data']
             groups = data['group']
-            actions = data.details.get('recommended_actions', [])
+            actions = data['details'].get('recommended_actions', [])
             if actions:
                 sorted_actions = sorted(
                     actions,
