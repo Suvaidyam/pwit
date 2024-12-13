@@ -2,13 +2,15 @@
     <div class="w-full h-screen p-4">
         <div class="flex gap-2">
             <Text @click="store.sidebar = true" class="w-6 min-w-6 cursor-pointer block md:hidden" />
-            <p class="text-gray-800 text-sm">
+            <!-- <p class="text-gray-800 text-sm">
                 <router-link to="/">Home</router-link>
                 / <router-link to="/funder-diagnostic">Funder Diagnostic</router-link> / <router-link
                     to="/recommended">Recommended Principles</router-link> /
                 <router-link :to="`/funder/${route.params.category}`">{{ title=='Organization Development'?' Organisation Development':title }}</router-link>
                 <span class="text-gray-400 truncate"> / Results and Recommendations</span>
-            </p>
+            </p> -->
+            <router-link to="/" class="flex items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|
+            <div class="flex items-center cursor-pointer" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
         </div>
         <div class="flex justify-between items-center">
             <h1 class="text-h3 md:text-h2 text-primary truncate">{{ recommendations?.details?.title }}</h1>
@@ -154,7 +156,7 @@
 import { ref, watch, inject, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router';
 import DownloadResults from './DownloadResults.vue';
-import { Text, RefreshCcw, ChevronRight } from 'lucide-vue-next';
+import { Text, RefreshCcw, ChevronRight,House,ArrowBigLeft } from 'lucide-vue-next';
 
 const route = useRoute()
 const router = useRouter()

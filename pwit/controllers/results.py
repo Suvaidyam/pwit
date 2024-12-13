@@ -35,7 +35,9 @@ class Result:
             doc = AssessmentAPIs.get_dei_result(doctype, session, user)
             data = doc['data']
             groups = data['group']
-            actions = data['details'].get('recommended_actions', [])
+            actions = []
+            if data.get('details'):
+                actions = data['details'].get('recommended_actions', [])
             if actions:
                 sorted_actions = sorted(
                     actions,
@@ -47,7 +49,9 @@ class Result:
             doc = AssessmentAPIs.get_assistive_result(doctype, session, user)
             data = doc['data']
             groups = data['group']
-            actions = data['details'].get('recommended_actions', [])
+            actions = []
+            if data.get('details'):
+                actions = data['details'].get('recommended_actions', [])
             if actions:
                 sorted_actions = sorted(
                     actions,

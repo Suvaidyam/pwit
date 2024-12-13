@@ -45,13 +45,23 @@ class AuthAPIs:
             return {'code':500,'msg':'Internal Server Error','data':str(e)} 
     
     def contact_us(data): 
-        exits = frappe.db.exists('Contact Us',data.get('session'))
-        if exits:
-            return {'code':400,'msg':'You have already submitted a request'}
-        else:
+        # exits = frappe.db.exists('Contact Us',data.get('session'))
+        # if exits:
+        #     return {'code':400,'msg':'You have already submitted a request'}
+        # else:
             new_doc = frappe.new_doc('Contact Us')
             new_doc.update(data)
             new_doc.insert(ignore_permissions=True)
+            # send email
+            message_content = frappe.render_template("pwit/templates/pages/contact.html",{"doc":new_doc})
+            now = frappe.flags.in_test or frappe.flags.in_install
+            frappe.sendmail(
+                recipients= ['shashank.rastogi@bridgespan.org'],
+                subject= 'PWIT Contact Us',
+                message=message_content,
+                delayed=(not now) if now is not None else new_doc.flags.delay_emails,
+                retry=3,
+            )
             return {'code':200,'data':new_doc} 
             
     def set_route_logs(from_route,session,to): 
