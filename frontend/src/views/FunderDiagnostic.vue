@@ -1,12 +1,12 @@
 <template>
   <div class="w-full pt-6">
     <div class="flex gap-2 px-4 md:px-8 lg:px-20">
-      <p class="text-gray-800 text-sm">
+      <!-- <p class="text-gray-800 text-sm">
         <router-link to="/">Home </router-link>
         <span class="text-gray-400">/ Funder Diagnostic</span>
-      </p>
-      <!-- <div class="flex items-center"><House class="w-5 h-4"/> Home</div>|
-      <div class="flex items-center cursor-pointer" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div> -->
+      </p> -->
+      <router-link to="/" class="flex items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|
+      <div class="flex items-center cursor-pointer" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
     </div>
     <div class="flex items-center px-4 md:px-8 lg:px-20 justify-between">
       <div class="flex items-center gap-3">

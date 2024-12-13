@@ -87,7 +87,7 @@
                                                 <p class="text-h5 font-primary text-sebase ">Funding practices diagnostic</p>
                                             </div>
                                             <router-link to="/funder-diagnostic"
-                                                class="text-primary text-sm cursor-pointer font-bold tracking-wide">{{ last_draft.some(item => item.doctype === 'Funder Diagnostic')?'Continue':'View' }}</router-link>
+                                                class="text-primary text-sm cursor-pointer font-bold tracking-wide">{{ Object.keys(last_draft).length && last_draft.some(item => item.doctype === 'Funder Diagnostic')?'Continue':'View' }}</router-link>
                                         </div>
                                     </div>
                                     <div class="flex flex-col gap-5">
@@ -105,7 +105,7 @@
                                                 <p class="text-h5 font-normal text-sebase ">Develop multiyear funder-nonprofit
                                                     partnerships</p>
                                             </div>
-                                            <router-link to="/funder/multi-year-partnerships" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide ">{{ last_draft.some(item => item.doctype === 'Multi-year Partnerships')?'Continue':'View' }}</router-link>
+                                            <router-link to="/funder/multi-year-partnerships" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide ">{{ Object.keys(last_draft).length && last_draft.some(item => item.doctype === 'Multi-year Partnerships')?'Continue':'View' }}</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 items-center">
@@ -118,7 +118,7 @@
                                                 </div>
                                                 <p class="text-h5 font-normal text-sebase ">Pay a fair share of core costs</p>
                                             </div>
-                                            <router-link to="/funder/core-costs" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">{{ last_draft.some(item => item.doctype === 'Core Costs')?'Continue':'View' }}</router-link>
+                                            <router-link to="/funder/core-costs" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">{{ Object.keys(last_draft).length && last_draft.some(item => item.doctype === 'Core Costs')?'Continue':'View' }}</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 items-center">
@@ -131,7 +131,7 @@
                                                 </div>
                                                 <p class="text-h5 font-normal text-sebase ">Invest in organisational development</p>
                                             </div>
-                                            <router-link to="/funder/organization-development" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">{{ last_draft.some(item => item.doctype === 'Organization Development')?'Continue':'View' }}</router-link>
+                                            <router-link to="/funder/organization-development" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">{{ Object.keys(last_draft).length && last_draft.some(item => item.doctype === 'Organization Development')?'Continue':'View' }}</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 items-center">
@@ -144,7 +144,7 @@
                                                 </div>
                                                 <p class="text-h5 font-normal text-sebase ">Build financial resilience</p>
                                             </div>
-                                            <router-link to="/funder/financial-resilience" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">{{ last_draft.some(item => item.doctype === 'Financial Resilience')?'Continue':'View' }}</router-link>
+                                            <router-link to="/funder/financial-resilience" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">{{ Object.keys(last_draft).length && last_draft.some(item => item.doctype === 'Financial Resilience')?'Continue':'View' }}</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 items-center">
@@ -158,7 +158,7 @@
                                                 <p class="text-h5 font-normal text-sebase ">Embed diversity, equity and inclusion in
                                                     grantmaking</p>
                                             </div>
-                                            <router-link to="/funder/diversity-equity-inclusion" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">{{ last_draft.some(item => item.doctype === 'Diversity Equity Inclusion')?'Continue':'View' }}</router-link>
+                                            <router-link to="/funder/diversity-equity-inclusion" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">{{ Object.keys(last_draft).length && last_draft.some(item => item.doctype === 'Diversity Equity Inclusion')?'Continue':'View' }}</router-link>
                                         </div>
                                     </div>
                                 </div>

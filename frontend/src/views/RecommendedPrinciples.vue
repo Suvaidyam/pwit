@@ -3,11 +3,13 @@
             <div class="px-4 md:px-8 lg:px-20 mx-auto">
                 <div class="mt-6">
                     <div class="flex gap-2">
-                        <p class="text-gray-800 text-sm">
+                        <!-- <p class="text-gray-800 text-sm">
                             <router-link to="/">Home</router-link>
                             / <router-link to="/funder-diagnostic">Funder Diagnostic</router-link> <span
                                 class="text-gray-400">/ Recommended Principles</span>
-                        </p>
+                        </p> -->
+                        <router-link to="/" class="flex items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|
+                        <div class="flex items-center cursor-pointer" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
                     </div>
                     <div class="flex justify-between items-center">
                         <h1 class="text-h3 truncate md:text-h2 font-bold  text-[#002C77] font-primary">Pathway for
@@ -119,7 +121,7 @@ import { computed, inject, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import FooterNav from '../components/FooterNav.vue';
 import Loader from '../components/Loader.vue';
-import { IndianRupee, Handshake, PiggyBank, ChartNoAxesCombined, Scale, RefreshCcw, ChevronRight } from 'lucide-vue-next'
+import { IndianRupee, Handshake,House,ArrowBigLeft, PiggyBank, ChartNoAxesCombined, Scale, RefreshCcw, ChevronRight } from 'lucide-vue-next'
 
 const router = useRouter()
 const call = inject('$call')
