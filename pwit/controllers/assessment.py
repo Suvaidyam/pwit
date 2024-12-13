@@ -334,14 +334,14 @@ class AssessmentAPIs:
 
         if not user:
             return {'code': 404, 'message': 'User not found'}
-        session = frappe.get_all('Session', {'user': user}, pluck='name',order_by='creation desc' ,limit_page_length=1)
+        session = frappe.get_all('Session', {'user': user}, pluck='name',order_by='creation desc')
         if len(session):
-            fun = frappe.get_all('Funder Diagnostic', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
-            myp = frappe.get_all('Multi-year Partnerships', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
-            core_costs = frappe.get_all('Core Costs', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
-            dei = frappe.get_all('Diversity Equity Inclusion', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
-            od = frappe.get_all('Organization Development', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
-            fr = frappe.get_all('Financial Resilience', filters={'session': session[0],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            fun = frappe.get_all('Funder Diagnostic', filters={'session': ['in',session],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            myp = frappe.get_all('Multi-year Partnerships', filters={'session': ['in',session],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            core_costs = frappe.get_all('Core Costs', filters={'session': ['in',session],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            dei = frappe.get_all('Diversity Equity Inclusion', filters={'session': ['in',session],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            od = frappe.get_all('Organization Development', filters={'session': ['in',session],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            fr = frappe.get_all('Financial Resilience', filters={'session': ['in',session],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
             # Consolidate all results into a single list with labels
             all_draft = [
                 {"doctype": "Multi-year Partnerships",'route':'multi-year-partnerships', "modified": myp[0]['modified']} if myp else None,
@@ -360,4 +360,4 @@ class AssessmentAPIs:
                 # latest_entry = max(all_draft, key=lambda x: x['modified'])
                 return {'code': 200, 'data': all_draft}
             else:
-                return {'code': 404, 'message': 'No draft found'}
+                return {'code': 404,'data':{}, 'message': 'No draft found'}

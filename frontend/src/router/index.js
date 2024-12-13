@@ -77,7 +77,7 @@ export const initializeDynamicRoutes = async () => {
 };
 
 router.beforeEach(async (to, from, next) => {
-  const session = JSON.parse(localStorage.getItem('session'))?.data?.name;
+  const session = JSON.parse(sessionStorage.getItem('session'))?.data?.name;
   if (to.name && from.name) {
     await fetch('/api/method/pwit.controllers.api.set_route_logs', {
       method: 'POST',

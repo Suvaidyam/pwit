@@ -1,6 +1,6 @@
 <template>
     <TransitionRoot as="template" :show="store.isOpen">
-        <Dialog class="relative z-20" @close="store.isOpen = false">
+        <Dialog class="relative z-30" @close="store.isOpen = false">
             <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100"
                 leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
                 <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
@@ -136,7 +136,7 @@
 </template>
 
 <script setup>
-import { ref, inject, onMounted } from 'vue'
+import { ref, inject,watch, onMounted } from 'vue'
 import { TransitionChild, TransitionRoot, Dialog, DialogPanel } from '@headlessui/vue'
 import { X } from 'lucide-vue-next';
 
@@ -177,12 +177,9 @@ const user_mobile = async () => {
         formData.value.mobile_no = res.data
     }
 }
+
 onMounted(() => {
     get_funder_type()
-    if(auth.isLoggedIn){
-        user_mobile()
-        get_other()
-    }
 })
 // const imageUpload = async (event) => {
 //     const file = event.target.files[0];
@@ -233,6 +230,19 @@ const saveUserProfile = async () => {
     let res = await call('pwit.controllers.api.save_image', { data: data })
     store.isOpen = false
 }
-
+watch(() => store.isOpen, async(val) => {
+    console.log(val)
+    if (val) {
+        if(auth.isLoggedIn){
+        try {
+            await call('pwit.controllers.api.check_user_details', {session:store.session})
+        } catch (error) {
+            console.log(error)
+        }
+        await user_mobile()
+        await get_other()
+    }
+    }
+}, { immediate: true ,deep:true})
 
 </script>
