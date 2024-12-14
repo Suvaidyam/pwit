@@ -361,3 +361,33 @@ class AssessmentAPIs:
                 return {'code': 200, 'data': all_draft}
             else:
                 return {'code': 404,'data':{}, 'message': 'No draft found'}
+    def get_sub(session):
+        user = frappe.session.user
+        session_id =''
+        if user == 'Guest':
+            session_id = [session]
+        else:
+            session_id = frappe.get_all('Session', {'user': user}, pluck='name',order_by='creation desc')
+        if len(session_id):
+            myp = frappe.get_all('Multi-year Partnerships', filters={'session': ['in',session_id],'docstatus':1}, fields=['creation'],order_by='creation desc', limit_page_length=1)
+            core_costs = frappe.get_all('Core Costs', filters={'session': ['in',session_id],'docstatus':1}, fields=['creation'],order_by='creation desc', limit_page_length=1)
+            dei = frappe.get_all('Diversity Equity Inclusion', filters={'session': ['in',session_id],'docstatus':1}, fields=['creation'],order_by='creation desc', limit_page_length=1)
+            od = frappe.get_all('Organization Development', filters={'session': ['in',session_id],'docstatus':1}, fields=['creation'],order_by='creation desc', limit_page_length=1)
+            fr = frappe.get_all('Financial Resilience', filters={'session': ['in',session_id],'docstatus':1}, fields=['creation'],order_by='creation desc', limit_page_length=1)
+            # Consolidate all results into a single list with labels
+            last_sub = [
+                {"doctype": "Multi-year Partnerships", "creation": myp[0]['creation']} if myp else None,
+                {"doctype": "Core Costs" , "creation": core_costs[0]['creation']} if core_costs else None,
+                {"doctype": "Diversity Equity Inclusion" , "creation": dei[0]['creation']} if dei else None,
+                {"doctype": "Organization Development" ,"creation": od[0]['creation']} if od else None,
+                {"doctype": "Financial Resilience" ,"creation": fr[0]['creation']} if fr else None,
+            ]
+
+            # Filter out None entries
+            last_sub = [entry for entry in last_sub if entry is not None]
+
+            # Find the latest modified
+            if last_sub:
+                return {'code': 200, 'data': last_sub}
+            else:
+                return {'code': 404,'data':{}, 'message': 'No draft found'}

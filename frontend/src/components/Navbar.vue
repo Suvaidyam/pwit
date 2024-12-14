@@ -3,7 +3,7 @@
         class="w-full fixed top-0 bg-white z-30 px-4 md:px-8 lg:px-20 h-20 flex justify-between items-center shadow-md">
         <router-link to="/" class="text-2xl font-bold text-primary">
             <img class="w-32 md:w-40 h-12 md:h-[52px]" src="../assets/navbar.png" alt="">
-           
+
         </router-link>
         <div class="flex gap-3 text-sm" v-if="!auth.isLoggedIn">
             <AuthPop />
@@ -32,6 +32,13 @@ const create_session = async () => {
         if (response) {
             sessionStorage.setItem('session', JSON.stringify(response))
             store.session = response?.data?.name
+            if(auth.isLoggedIn){
+                const email = auth.cookie.user_id
+                await call('pwit.controllers.api.set_user_session', {
+                    name: response?.data?.name,
+                    user: email
+                });
+            }
         }
     } else {
         store.session = cur_session.value?.data?.name

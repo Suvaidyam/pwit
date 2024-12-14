@@ -75,6 +75,10 @@ def get_last_draft():
     return AssessmentAPIs.get_last_draft()
 
 @frappe.whitelist(allow_guest=True)
+def get_sub(session):
+    return AssessmentAPIs.get_sub(session)
+
+@frappe.whitelist(allow_guest=True)
 def get_meta(doctype):
     return FormAPIs.get_meta(doctype)
 
