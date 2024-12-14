@@ -67,11 +67,16 @@
                                 </div>
                             </div>
                         </div>
+                       <div>
                         <router-link :to="el.route"
-                            :class="last_draft.some(item => item.doctype === el.doctype)?'w-44':'w-40'"
+                                                    :class="last_draft.some(item => item.doctype === el.doctype)?'w-44':last_sub.some(item => item.doctype === el.doctype)?'w-20':'w-40'"
                             class=" h-9 min-h-9 hover:bg-primary flex items-center justify-center text-h6 mt-3 rounded-md bg-secondary text-white font-bold">
-                            {{ last_draft.some(item => item.doctype === el.doctype)?'Continue the Assessment':'Take the Assessment' }} 
+                            {{ last_draft.some(item => item.doctype === el.doctype)?'Continue the Assessment':last_sub.some(item => item.doctype === el.doctype)?'Retake':'Take the Assessment' }} 
                         </router-link>
+                        <p class="text-h6 pt-1 text-trbase" v-if="last_sub.some(item => item.doctype === el.doctype)">
+                           <span class="font-extralight text-gray-500">Last updted on</span> : {{ last_sub?.filter(item => item.doctype === el.doctype)[0]?.creation.split(' ')[0] }}
+                        </p>
+                       </div>
                     </div>
                 </div>
 
@@ -84,7 +89,7 @@
                 <Loader v-if="loading" />
                 <div v-if="!loading" class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-12 py-6">
                     <div v-for="el in additionalList" :key="el.name"
-                        class="bg-white shadow-md flex flex-col justify-between transition-all rounded-lg p-4 h-56  border-t-4 "
+                        class="bg-white shadow-md flex flex-col justify-between transition-all rounded-lg p-4  border-t-4 "
                         :class="`border-[${el.color}]`">
                         <div>
                             <div class="rounded-lg bg-white relative shadow-lg">
@@ -105,11 +110,15 @@
                                 </div>
                             </div>
                         </div>
-                        <router-link :to="el.route"
-                        :class="last_draft.some(item => item.doctype === el.doctype)?'w-44':'w-40'"
+                        <div>
+                            <router-link :to="el.route"
+                        :class="last_draft.some(item => item.doctype === el.doctype)?'w-44':last_sub.some(item => item.doctype === el.doctype)?'w-20':'w-40'"
                             class=" h-9 min-h-9 hover:bg-primary flex items-center justify-center text-h6 mt-3 rounded-md bg-secondary text-white font-bold">
-                            {{ last_draft.some(item => item.doctype === el.doctype)?'Continue the Assessment':'Take the Assessment' }}
+                            {{ last_draft.some(item => item.doctype === el.doctype)?'Continue the Assessment':last_sub.some(item => item.doctype === el.doctype)?'Retake':'Take the Assessment' }}
                         </router-link>
+                        <p class="text-h6 pt-1 text-trbase" v-if="last_sub.some(item => item.doctype === el.doctype)">
+                           <span class="font-extralight text-gray-500">Last updted on</span> : {{ last_sub?.filter(item => item.doctype === el.doctype)[0]?.creation.split(' ')[0] }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,6 +142,7 @@ const additionalList = ref([])
 const initialData = ref({})
 const viewResult = ref(false)
 const last_draft = ref([])
+const last_sub = ref([])
 
 const data = ref([
     {
@@ -297,6 +307,12 @@ const get_last_draft = async () => {
         last_draft.value = res?.data ?? {}
 	}
 };
+const get_last_sub = async () => {
+	const res = await call('pwit.controllers.api.get_sub', { session:store.session });
+	if (res.code === 200) {
+        last_sub.value = res?.data ?? {}
+	}
+};
 watch(() => data.value, (value) => {
     recommendedList.value = value?.filter(e => e.group === 'Recommended')
     additionalList.value = value?.filter(e => e.group === 'Additional')
@@ -327,8 +343,9 @@ onMounted(async () => {
     }
     if (auth.isLoggedIn) {
         get_save_as_draft();
+        get_last_draft();
     }
-    get_last_draft();
+    get_last_sub();
 });
 
 </script>
