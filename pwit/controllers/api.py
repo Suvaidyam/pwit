@@ -101,7 +101,7 @@ def save_doc(doctype, doc,name=None):
 def save_as_draft(doctype, doc,name=None):
     return FormAPIs.save_as_draft(doctype, doc,name)
 
-@frappe.whitelist(allow_guest=False)
+@frappe.whitelist(allow_guest=True)
 def get_save_as_draft(doctype, user):
     return FormAPIs.get_save_as_draft(doctype, user)
 
