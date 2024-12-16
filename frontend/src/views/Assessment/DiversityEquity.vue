@@ -32,7 +32,7 @@
                                         individuals, entities or organisations, encompassing various races, ethnicities,
                                         religions, abilities, genders, and sexual orientations.
                                     </p>
-                                    <p class="text-justify text-sm text-trbase font-normal pt-2">
+                                    <div class="text-justify text-sm text-trbase font-normal pt-2">
                                         <span class="font-bold">Diversity</span> refers to the intentional variety
                                         within a specific collection of
                                         people that takes into account intersectional elements of
@@ -46,42 +46,36 @@
                                         power – full and meaningful participation in planning
                                         and decision making at all levels within a group, organisation, movement, or
                                         society.
-                                        <Popper :arrow="true" :offsetDistance="0" placement="bottom-start">
-                                            <button class="text-trbase">
-                                                <sup class="font-bold">8</sup>
-                                            </button>
+                                        <Popper :arrow="true" :zIndex="20" :offsetDistance="4" placement="bottom-start">
+                                                <InfoIcon class="w-3 h-[14px] cursor-pointer leading-none" />
                                             <template #content>
                                                 <div class="border shadow-lg rounded-md bg-white p-3 py-2">
                                                     <a href="https://www.opensocietyfoundations.org/publications/advancing-diversity-equity-and-inclusion-in-grant-making"
                                                         class="text-sm ">
-                                                        “ <span class="text-blue-600">Advancing Diversity, Equity and inclusion in Grantmaking.</span>”
+                                                        “ <span class="text-blue-600">Advancing Diversity, Equity and
+                                                            inclusion in Grantmaking.</span>”
                                                     </a>
                                                     <p class="text-sm text-trbase">Open Society Foundations (OSF), July
                                                         2021</p>
                                                 </div>
                                             </template>
                                         </Popper>
-                                    </p>
-                                    <div class="flex gap-1">
+                                    </div>
+                                    <div class="flex flex-col gap-1 pr-4 md:pr-0">
                                         <img src="../../assets/DEI.png" class="pt-5 w-full" alt="">
-                                        <Popper :arrow="true" :offsetDistance="0" placement="bottom-start">
-                                            <button class="text-trbase">
-                                                <InfoIcon class="w-4 mt-4" />
-                                            </button>
-                                            <template #content>
-                                                <div class="border shadow-lg rounded-md bg-white p-3 py-2">
-                                                    <p class="text-sm text-trbase">This framework can help you
-                                                        understand the internal and external aspects of embedding DEI
-                                                        within your institution.</p>
-                                                    <p class="text-sm text-trbase pt-2">The objective of this section of the tool is to help funders
-                                                        assess how inclusive their current grantmaking processes are;
-                                                        hence, the
-                                                        tool primarily focuses on embedding DEI within the grantmaking
-                                                        process. We only touch upon the elements marked in <span class="text-orange-400">orange</span> on
-                                                        the below graphic.</p>
-                                                </div>
-                                            </template>
-                                        </Popper>
+                                        <div>
+                                            <p class="text-sm text-trbase"><span class="font-bold text-secondary">Note:</span> This framework can help you
+                                                understand the internal and external aspects of embedding DEI
+                                                within your institution.</p>
+                                            <p class="text-sm text-trbase pt-2">The objective of this section of the
+                                                tool is to help funders
+                                                assess how inclusive their current grantmaking processes are;
+                                                hence, the
+                                                tool primarily focuses on embedding DEI within the grantmaking
+                                                process. We only touch upon the elements marked in <span
+                                                    class="text-orange-400">orange</span> on
+                                                the below graphic.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -95,15 +89,15 @@
                                     </svg>
                                 </div>
                                 <div class=" ">
-                                    <h1 class="flex gap-3  text-h5 text-sebase font-bold font-primary pb-2"> Why is DEI
+                                    <div class="flex gap-3  text-h5 text-sebase font-bold font-primary pb-2"> Why is DEI
                                         important for funders?
-                                        <Popper :arrow="true" :offsetDistance="0" placement="bottom-start">
-                                            <button class="text-trbase">
+                                        <Popper :arrow="true" :zIndex="20" :offsetDistance="0" placement="bottom-start">
+                                            <button>
                                                 <InfoIcon class="w-4" />
                                             </button>
                                             <template #content>
                                                 <div class="border shadow-lg rounded-md bg-white p-3 py-2">
-                                                    <p class="text-sm text-trbase">Whilst the self-assessment tool
+                                                    <p class="text-sm font-medium text-trbase">Whilst the self-assessment tool
                                                         focuses on grantmaking, it is important to look inward at how
                                                         your organisation
                                                         would benefit from a commitment to DEI in order to address
@@ -116,7 +110,7 @@
                                                 </div>
                                             </template>
                                         </Popper>
-                                    </h1>
+                                    </div>
                                     <p class="text-justify text-sm text-trbase font-normal">
                                         For funders, DEI calls attention to marginalised individuals and communities and
                                         promotes fair and impartial
