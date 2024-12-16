@@ -222,6 +222,11 @@ const get_results = async () => {
 const re_attempt = () => {
     router.push(`/funder/${route.params.category}`)
     sessionStorage.setItem('re_attempt', true)
+    if(recommendations?.draft?.data && Object.keys(recommendations?.draft?.data).length){
+        store.is_dei_ass=true
+    }else{
+        store.is_dei_ass=false
+    }
 }
 watch(route, (newVal) => {
     title.value = splitAtSecondCapital(newVal.path)
