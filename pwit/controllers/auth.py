@@ -123,69 +123,25 @@ class AuthAPIs:
         else:
             return {'code': 400, 'msg': 'Session not found'}
         
-    from frappe.utils import now
-    def check_user_details(session):
-
-        try:
-            details = {}
-            
-            session_exists = frappe.get_all(
-                'Session',
-                filters={'name': session, 'designation': ['is', 'set']},
-                pluck='name',
-                order_by='creation desc',
-                limit_page_length=1,
-                ignore_permissions=True
-            )
-
-            if frappe.session.user and not session_exists:
-                # Fetch the most recent session details for the current user
-                details_exists = frappe.get_all(
-                    'Session',
-                    filters={'user': frappe.session.user, 'designation': ['is', 'set']},
-                    pluck='name',
-                    order_by='creation desc',
-                    limit_page_length=1,
-                    ignore_permissions=True
-                )
-
-                if details_exists:
-                    session_details = frappe.get_doc('Session', details_exists[0])
-                    if session_details:
-                        # Fetch the target session document
-                        details = frappe.get_doc('Session', session)
-                        
-                        # Safely copy details
-                        details.designation = session_details.get('designation')
-                        details.annual_budget = session_details.get('annual_budget')
-
-                        # Safely handle 'funder_type' field
-                        funder_types = session_details.get('funder_type') or []
-                        for item in funder_types:
-                            details.append('funder_type', {'funder_type': item.funder_type})
-
-                        # Save the updated session
-                        details.save(ignore_permissions=True)
-
-                    return {'code': 200, 'data': details}
-                else:
-                    return {'code': 400, 'msg': 'Session not found'}
+    def check_user_details(session):  
+        details = {}
+        session_exits = frappe.get_all('Session', filters={'name': session,'designation':['is', 'set']}, pluck='name',order_by='creation desc',  limit_page_length=1,ignore_permissions=True )
+        if frappe.session.user and not session_exits:
+            details_exits = frappe.get_all('Session', filters={'user': frappe.session.user,'designation':['is', 'set']}, pluck='name',order_by='creation desc',  limit_page_length=1,ignore_permissions=True )
+            if details_exits:
+                session_details = frappe.get_doc('Session', details_exits[0])
+                if session_details:
+                    details = frappe.get_doc('Session', session)
+                    details.designation = session_details.get('designation')
+                    details.annual_budget = session_details.get('annual_budget')
+                    for item in session_details.get('funder_type'):
+                        details.append('funder_type', {'funder_type': item.funder_type})
+                    details.save(ignore_permissions=True)
+                return {'code': 200, 'data': details}
             else:
-                return {'code': 200, 'data': {}, 'msg': 'Already set'}
-
-        except frappe.exceptions.ValidationError as e:
-            frappe.log_error(message=str(e), title="Validation Error in check_user_details")
-            return {'code': 500, 'msg': 'Validation error', 'error': str(e)}
-
-        except frappe.db.LostUpdateError as e:
-            # Handle concurrent update gracefully
-            frappe.log_error(message=str(e), title="Concurrent Update Error in check_user_details")
-            return {'code': 409, 'msg': 'Concurrent update error', 'error': str(e)}
-
-        except Exception as e:
-            frappe.log_error(message=str(e), title="Error in check_user_details")
-            return {'code': 500, 'msg': 'An unexpected error occurred', 'error': str(e)}
-
+                return {'code': 400, 'msg': 'Session not found'}
+        else:
+            return {'code': 200, 'data':{},'msg':'Already set'}
     def get_other_details(session):
         session_details = {}
         existing_session = frappe.get_all(
