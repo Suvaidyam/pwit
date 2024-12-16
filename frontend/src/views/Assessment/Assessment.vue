@@ -18,7 +18,7 @@
             </div>
         </div>
         <transition name="fade" mode="out-in">
-            <div class="w-full">
+            <div class="w-full pt-4">
                 <FormView v-if="title !== 'Diversity Equity Inclusion'" :width="true" :initialData="initialData" :doctype="title"
                     :onSubmit="handleSubmit" :isTable="true" :isDraft="true" :section="true"
                     :save_as_draft="save_as_draft" :key="title" />
