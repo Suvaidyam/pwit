@@ -9,8 +9,8 @@
                 <router-link :to="`/funder/${route.params.category}`">{{ title=='Organization Development'?' Organisation Development':title }}</router-link>
                 <span class="text-gray-400 truncate"> / Results and Recommendations</span>
             </p> -->
-            <router-link to="/" class="flex items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|
-            <div class="flex items-center cursor-pointer" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
+            <router-link to="/" class="flex text-trbase items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|
+            <div class="flex items-center text-trbase cursor-pointer" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
         </div>
         <div class="flex justify-between items-center">
             <h1 class="text-h3 md:text-h2 text-primary truncate">{{ recommendations?.details?.title }}</h1>

@@ -10,7 +10,7 @@
             <div v-if="!loading" class="w-full h-full">
                 <div class="text-white absolute right-0 top-20 opacity-40 block md:hidden text-center p-1.5 hover:bg-white hover:text-black rounded-full mb-1 cursor-pointer"
                     @click="store.sidebar = false"><X class=""/></div>
-                <p class="pl-2  py-2 font-bold text-[11px] text-white">
+                <p v-if="check_results && Object.keys(check_results)?.length" class="pl-2  py-2 font-bold text-[11px] text-white">
                     RECOMMENDED PRINCIPLES
                 </p>
                 <div class="" @click="store.sidebar=false" v-for="items in recommendedList" :key="items.name">
@@ -28,7 +28,7 @@
                         <p class="">{{ items.label }}</p>
                     </router-link>
                 </div>
-                <p v-if="recommendedList.length > 0"
+                <p v-if="recommendedList.length > 0  && check_results && Object.keys(check_results)?.length"
                     class="pl-2  py-2 font-bold text-[11px] text-white border-t">
                     ADDITIONAL PWIT PRINCIPLES
                 </p>
@@ -66,6 +66,7 @@ const menu_list = ref([]);
 const loading = ref(false);
 const recommendedList = ref([])
 const additionalList = ref([])
+const check_results = ref()
 
 const leftMenu = async () => {
     loading.value = true;
@@ -86,6 +87,7 @@ const get_result = async () => {
             user: auth.cookie.user_id !== 'Guest' ? auth.cookie.user_id : ''
         })
             .then(res => {
+                check_results.value = res.data
                 const groupedSums = Object.entries(res.data).reduce((acc, [key, value]) => {
                     const keyParts = key.split('_');
                     keyParts.pop();

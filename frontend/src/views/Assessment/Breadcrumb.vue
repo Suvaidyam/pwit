@@ -5,8 +5,8 @@
             <router-link to="/">Home</router-link>
            / <router-link to="/funder-diagnostic">Funder Diagnostic</router-link> / <router-link to="/recommended">Recommended Principles</router-link> <span class="text-gray-400 truncate">/ {{ title=='Organization Development'?' Organisation Development':title }}</span>
         </p> -->
-        <router-link to="/" class="flex items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|
-        <div class="flex items-center cursor-pointer" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
+        <router-link to="/" class="flex items-center text-trbase gap-1"><House class="w-4 h-4"/> Home</router-link>|
+        <div class="flex items-center cursor-pointer text-trbase" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
     </div>
 </template>
 
