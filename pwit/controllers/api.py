@@ -84,7 +84,7 @@ def get_meta(doctype):
 
 
 @frappe.whitelist(allow_guest=True)
-def save_image(data): 
+def update_user_dt(data): 
     doc = frappe.get_doc('User',data.get('user'))
     doc.first_name=data.get('first_name')
     if data.get('last_name'):

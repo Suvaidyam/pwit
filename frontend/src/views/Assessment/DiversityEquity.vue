@@ -25,7 +25,6 @@
                                 <div class=" ">
                                     <h1 class="flex gap-3  text-h5 text-sebase font-bold font-primary pb-2"> What is
                                         DEI?
-                                        <Pophover :content="'This framework can help you understand the internal and external aspects of embedding DEI within your institution.'" />
                                     </h1>
                                     <p class="text-justify text-sm text-trbase font-normal">
                                         Diversity, equity, and inclusion are closely linked values embraced by many
@@ -34,17 +33,56 @@
                                         religions, abilities, genders, and sexual orientations.
                                     </p>
                                     <p class="text-justify text-sm text-trbase font-normal pt-2">
-                                        <span class="font-bold">Diversity</span> refers to the intentional variety within a specific collection of
+                                        <span class="font-bold">Diversity</span> refers to the intentional variety
+                                        within a specific collection of
                                         people that takes into account intersectional elements of
-                                        human difference, identity, and lived experience. <span class="font-bold">Equity</span>  is the achievement and
+                                        human difference, identity, and lived experience. <span
+                                            class="font-bold">Equity</span> is the achievement and
                                         maintenance of just outcomes for all people within
-                                        an organisation or within a culture or society. <span class="font-bold">Inclusion</span>  is a process that
+                                        an organisation or within a culture or society. <span
+                                            class="font-bold">Inclusion</span> is a process that
                                         gives all people – especially communities that have been
                                         systematically excluded or prevented from having a say in the structures of
                                         power – full and meaningful participation in planning
                                         and decision making at all levels within a group, organisation, movement, or
                                         society.
+                                        <Popper :arrow="true" :offsetDistance="0" placement="bottom-start">
+                                            <button class="text-trbase">
+                                                <sup class="font-bold">8</sup>
+                                            </button>
+                                            <template #content>
+                                                <div class="border shadow-lg rounded-md bg-white p-3 py-2">
+                                                    <a href="https://www.opensocietyfoundations.org/publications/advancing-diversity-equity-and-inclusion-in-grant-making"
+                                                        class="text-sm ">
+                                                        “ <span class="text-blue-600">Advancing Diversity, Equity and inclusion in Grantmaking.</span>”
+                                                    </a>
+                                                    <p class="text-sm text-trbase">Open Society Foundations (OSF), July
+                                                        2021</p>
+                                                </div>
+                                            </template>
+                                        </Popper>
                                     </p>
+                                    <div class="flex gap-1">
+                                        <img src="../../assets/DEI.png" class="pt-5 w-full" alt="">
+                                        <Popper :arrow="true" :offsetDistance="0" placement="bottom-start">
+                                            <button class="text-trbase">
+                                                <InfoIcon class="w-4 mt-4" />
+                                            </button>
+                                            <template #content>
+                                                <div class="border shadow-lg rounded-md bg-white p-3 py-2">
+                                                    <p class="text-sm text-trbase">This framework can help you
+                                                        understand the internal and external aspects of embedding DEI
+                                                        within your institution.</p>
+                                                    <p class="text-sm text-trbase pt-2">The objective of this section of the tool is to help funders
+                                                        assess how inclusive their current grantmaking processes are;
+                                                        hence, the
+                                                        tool primarily focuses on embedding DEI within the grantmaking
+                                                        process. We only touch upon the elements marked in <span class="text-orange-400">orange</span> on
+                                                        the below graphic.</p>
+                                                </div>
+                                            </template>
+                                        </Popper>
+                                    </div>
                                 </div>
                             </div>
                             <div class=" w-full pt-8 flex gap-4">
@@ -59,21 +97,49 @@
                                 <div class=" ">
                                     <h1 class="flex gap-3  text-h5 text-sebase font-bold font-primary pb-2"> Why is DEI
                                         important for funders?
-                                        <Pophover :content="`Whilst the self-assessment tool focuses on grantmaking, it is important to look inward at how your organisation
-                                            would benefit from a commitment to DEI in order to address systemic exclusion and inequities. Understanding ways to embed DEI 
-                                            in internal culture, systems, and practices requires deeper reflection and work. Some resources on enhancing institutional DEI can 
-                                            be found here`" />
+                                        <Popper :arrow="true" :offsetDistance="0" placement="bottom-start">
+                                            <button class="text-trbase">
+                                                <InfoIcon class="w-4" />
+                                            </button>
+                                            <template #content>
+                                                <div class="border shadow-lg rounded-md bg-white p-3 py-2">
+                                                    <p class="text-sm text-trbase">Whilst the self-assessment tool
+                                                        focuses on grantmaking, it is important to look inward at how
+                                                        your organisation
+                                                        would benefit from a commitment to DEI in order to address
+                                                        systemic exclusion and inequities. Understanding ways to embed
+                                                        DEI
+                                                        in internal culture, systems, and practices requires deeper
+                                                        reflection and work. Some resources on enhancing institutional
+                                                        DEI can
+                                                        be found here</p>
+                                                </div>
+                                            </template>
+                                        </Popper>
                                     </h1>
                                     <p class="text-justify text-sm text-trbase font-normal">
-                                        For funders, DEI calls attention to marginalised individuals and communities and promotes fair and impartial grantmaking practices. 
-                                        As the fifth PWIT principle, a DEI perspective also influences how you implement the other four – multiyear partnerships, core cost
-                                        support, organisational development, and financial resilience – to make your grantmaking accessible to a wider range of nonprofits. 
-                                        The tool provides directional guidance on how funders can embrace DEI practices that pursue equity and inclusiveness for grantees 
-                                        and the people they serve. The questions in the tool will help you reflect on two lenses:
+                                        For funders, DEI calls attention to marginalised individuals and communities and
+                                        promotes fair and impartial
+                                        grantmaking practices.
+                                        As the fifth PWIT principle, a DEI perspective also influences how you implement
+                                        the other four – multiyear
+                                        partnerships, core cost
+                                        support, organisational development, and financial resilience – to make your
+                                        grantmaking accessible to a
+                                        wider range of nonprofits.
+                                        The tool provides directional guidance on how funders can embrace DEI practices
+                                        that pursue equity and
+                                        inclusiveness for grantees
+                                        and the people they serve. The questions in the tool will help you reflect on
+                                        two lenses:
                                     </p>
                                     <ul class="px-6">
-                                        <li class="text-sm text-trbase list-disc">Do your funding practices make it easier for a more diverse set of nonprofits to thrive in their ecosystem?</li>
-                                        <li class="text-sm text-trbase list-disc">Do your organisation’s grants focus on underserved communities?</li>
+                                        <li class="text-sm text-trbase list-disc">Do your funding practices make it
+                                            easier for a more diverse set of
+                                            nonprofits to thrive in their ecosystem?</li>
+                                        <li class="text-sm text-trbase list-disc">Do your organisation’s grants focus on
+                                            underserved communities?
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -92,18 +158,25 @@
                                         <!-- <Pophover :content="'hii'" /> -->
                                     </h1>
                                     <p class="text-justify text-sm text-trbase font-normal">
-                                        The DEI Assistive Guide questions touch on 10 practices ranging from sourcing and diligence in choosing grantees to grant reporting 
-                                        and renewal. At the end, the tool generates a scorecard that shows how your DEI efforts rank on each of the 10 practices. We then 
-                                        provide practical recommendations for improving your approach to each practice. For each question, we ask you to select the 
-                                        statement or statements that largely describe your organisation’s current practices, if any
+                                        The DEI Assistive Guide questions touch on 10 practices ranging from sourcing
+                                        and diligence in choosing
+                                        grantees to grant reporting
+                                        and renewal. At the end, the tool generates a scorecard that shows how your DEI
+                                        efforts rank on each of the
+                                        10 practices. We then
+                                        provide practical recommendations for improving your approach to each practice.
+                                        For each question, we ask
+                                        you to select the
+                                        statement or statements that largely describe your organisation’s current
+                                        practices, if any
                                     </p>
                                 </div>
                             </div>
                             <div class="pt-10 flex justify-end w-full">
                                 <button @click="is_dei_ass"
                                     class="bg-secondary text-white text-h5 py-2.5 px-10 rounded-md">
-                                    {{ Object.keys(initialData).length ? 'Continue the Assessment' : 'Start the Assessment'
-                                    }} </button>
+                                    {{ Object.keys(initialData).length ? `Continue the Assessment` : `Start the
+                                    Assessment`}} </button>
                             </div>
                         </div>
                     </div>
@@ -115,7 +188,9 @@
 
 <script setup>
 import { inject, onMounted, ref } from 'vue'
-import Pophover from './Pophover.vue';
+import { InfoIcon } from 'lucide-vue-next'
+import Popper from "vue3-popper";
+
 const store = inject('store')
 const auth = inject('$auth')
 const call = inject('$call')

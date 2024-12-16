@@ -227,11 +227,10 @@ const saveUserProfile = async () => {
         mobile_no: formData.value.mobile_no,
         user_image: imgUrl.value
     }
-    let res = await call('pwit.controllers.api.save_image', { data: data })
+    let res = await call('pwit.controllers.api.update_user_dt', { data: data })
     store.isOpen = false
 }
 watch(() => store.isOpen, async(val) => {
-    console.log(val)
     if (val) {
         if(auth.isLoggedIn){
         try {

@@ -5,8 +5,8 @@
         <router-link to="/">Home </router-link>
         <span class="text-gray-400">/ Funder Diagnostic</span>
       </p> -->
-      <router-link to="/" class="flex items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|
-      <div class="flex items-center cursor-pointer" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
+      <router-link to="/" class="flex items-center text-trbase gap-1"><House class="w-4 h-4"/> Home</router-link>|
+      <div class="flex items-center cursor-pointer text-trbase" @click="router.back(-1)"><ArrowBigLeft  class="w-5 "/> Back</div>
     </div>
     <div class="flex items-center px-4 md:px-8 lg:px-20 justify-between">
       <div class="flex items-center gap-3">

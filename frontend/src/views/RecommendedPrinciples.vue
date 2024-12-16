@@ -8,8 +8,8 @@
                             / <router-link to="/funder-diagnostic">Funder Diagnostic</router-link> <span
                                 class="text-gray-400">/ Recommended Principles</span>
                         </p> -->
-                        <router-link to="/" class="flex items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|
-                        <div class="flex items-center cursor-pointer" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
+                        <router-link to="/" class="flex text-trbase items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|
+                        <div class="flex items-center cursor-pointer text-trbase" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
                     </div>
                     <div class="flex justify-between items-center">
                         <h1 class="text-h3 truncate md:text-h2 font-bold  text-[#002C77] font-primary">Pathway for
@@ -74,7 +74,7 @@
                             {{ last_draft.some(item => item.doctype === el.doctype)?'Continue the Assessment':last_sub.some(item => item.doctype === el.doctype)?'Retake':'Take the Assessment' }} 
                         </router-link>
                         <p class="text-h6 pt-1 text-trbase" v-if="last_sub.some(item => item.doctype === el.doctype)">
-                           <span class="font-extralight text-gray-500">Last updted on</span> : {{ last_sub?.filter(item => item.doctype === el.doctype)[0]?.creation.split(' ')[0] }}
+                           <span class="font-extralight text-gray-500">Last updated on</span> : {{ last_sub?.filter(item => item.doctype === el.doctype)[0]?.creation.split(' ')[0] }}
                         </p>
                        </div>
                     </div>
@@ -117,7 +117,7 @@
                             {{ last_draft.some(item => item.doctype === el.doctype)?'Continue the Assessment':last_sub.some(item => item.doctype === el.doctype)?'Retake':'Take the Assessment' }}
                         </router-link>
                         <p class="text-h6 pt-1 text-trbase" v-if="last_sub.some(item => item.doctype === el.doctype)">
-                           <span class="font-extralight text-gray-500">Last updted on</span> : {{ last_sub?.filter(item => item.doctype === el.doctype)[0]?.creation.split(' ')[0] }}</p>
+                           <span class="font-extralight text-gray-500">Last updated on</span> : {{ last_sub?.filter(item => item.doctype === el.doctype)[0]?.creation.split(' ')[0] }}</p>
                         </div>
                     </div>
                 </div>
