@@ -2177,8 +2177,8 @@
   "doctype": "Field Options",
   "field": "dei_strategic_considerations_01",
   "group": null,
-  "label": "We believe that if the programmes are made available to a community, every constituent has equal opportunity to benefit from them, hence we do not actively nudge our grantee partners to clearly identify marginalised populations.",
-  "modified": "2024-12-09 14:46:27.403681",
+  "label": " We believe that if the programmes are made available to a community, every constituent has equal opportunity to benefit from them, hence we do not actively nudge our grantee partners to clearly identify marginalised populations.",
+  "modified": "2024-12-16 15:17:35.936589",
   "name": "Diversity Equity Inclusion-dei_strategic_considerations_01-2",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 0.0
@@ -2190,8 +2190,8 @@
   "doctype": "Field Options",
   "field": "dei_strategic_considerations_02",
   "group": null,
-  "label": "We gather information either through data on outcomes related to our DEI focus (e.g. tracking the number of women or Adivasi participants achieving the desired outcomes) or through conversations with grantees and community members (e.g., field visits, or stories of impact shared by grantees).",
-  "modified": "2024-12-09 14:55:31.408702",
+  "label": "We gather information either through data on outcomes related to our DEI focus (e.g. tracking the number of women or Adivasi participants achieving the desired outcomes) or through conversations with grantees and community members (e.g. field visits or stories of impact shared by grantees).",
+  "modified": "2024-12-16 15:18:49.598528",
   "name": "Diversity Equity Inclusion-dei_strategic_considerations_02-1",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2204,7 +2204,7 @@
   "field": "dei_strategic_considerations_02",
   "group": null,
   "label": "We do not seek such information from our grantees.",
-  "modified": "2024-12-09 14:56:04.088925",
+  "modified": "2024-12-16 15:19:18.488612",
   "name": "Diversity Equity Inclusion-dei_strategic_considerations_02-2",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 0.0
@@ -2217,7 +2217,7 @@
   "field": "dei_sourcing",
   "group": null,
   "label": "We have an open call for applications that states eligibility criteria and the number of organisations to be selected.",
-  "modified": "2024-12-10 12:51:01.933035",
+  "modified": "2024-12-16 15:20:22.728726",
   "name": "Diversity Equity Inclusion-dei_sourcing-1",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2230,7 +2230,7 @@
   "field": "dei_sourcing",
   "group": null,
   "label": "We publicise grant application information in multiple languages in newspapers and/or other communication channels.",
-  "modified": "2024-12-09 14:58:24.971205",
+  "modified": "2024-12-16 15:23:01.086143",
   "name": "Diversity Equity Inclusion-dei_sourcing-2",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2243,7 +2243,7 @@
   "field": "dei_sourcing",
   "group": null,
   "label": "We seek referrals from existing grantees, alums, intermediary organisations, and other networks, especially those proximate to the communities we serve.",
-  "modified": "2024-12-10 12:51:28.476281",
+  "modified": "2024-12-16 15:21:38.642450",
   "name": "Diversity Equity Inclusion-dei_sourcing-3",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2256,7 +2256,7 @@
   "field": "dei_sourcing",
   "group": null,
   "label": "We make grant-related information (tenure, funding, conditions, etc.) available in multiple languages, including the languages that are spoken by the constituents that we want to serve.",
-  "modified": "2024-12-10 12:51:41.586165",
+  "modified": "2024-12-16 15:22:23.106422",
   "name": "Diversity Equity Inclusion-dei_sourcing-4",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2269,7 +2269,7 @@
   "field": "dei_sourcing",
   "group": "Others",
   "label": "We do not take any of these steps.",
-  "modified": "2024-12-10 12:50:21.467251",
+  "modified": "2024-12-16 15:22:42.525270",
   "name": "Diversity Equity Inclusion-dei_sourcing-6",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 0.0
@@ -2282,7 +2282,7 @@
   "field": "dei_application",
   "group": null,
   "label": "Our process allows for receiving applications in more than one language.",
-  "modified": "2024-12-09 15:15:05.371991",
+  "modified": "2024-12-16 15:23:32.323308",
   "name": "Diversity Equity Inclusion-dei_application-1",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2294,8 +2294,8 @@
   "doctype": "Field Options",
   "field": "dei_application",
   "group": null,
-  "label": "We do not have a fixed, mandatory application format, and nonprofits can apply in a variety of ways, such as  sharing their preexisting formats/documents, interviews, and video applications.",
-  "modified": "2024-12-10 12:52:36.358078",
+  "label": "We do not have a fixed, mandatory application format, and nonprofits can apply in a variety of ways, such as sharing their preexisting formats/documents, interviews, and video applications.",
+  "modified": "2024-12-16 15:24:05.953193",
   "name": "Diversity Equity Inclusion-dei_application-2",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2307,8 +2307,8 @@
   "doctype": "Field Options",
   "field": "dei_application",
   "group": null,
-  "label": "We provide application support, such as  webinars, one-on-one calls, help with filling out  forms, and follow-ups for any missing information, to applicants that otherwise would typically drop-out of the process.",
-  "modified": "2024-12-10 12:52:52.675184",
+  "label": "We provide application support, such as webinars, one-on-one calls, help with filling out forms, and follow-ups for any missing information to applicants that otherwise would typically drop out of the process.",
+  "modified": "2024-12-16 15:24:35.066007",
   "name": "Diversity Equity Inclusion-dei_application-3",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2321,7 +2321,7 @@
   "field": "dei_application",
   "group": null,
   "label": "We seek feedback from applicants and refine the application process to improve access and ease of application.",
-  "modified": "2024-12-09 15:16:45.797681",
+  "modified": "2024-12-16 15:24:57.649843",
   "name": "Diversity Equity Inclusion-dei_application-4",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2346,8 +2346,8 @@
   "doctype": "Field Options",
   "field": "dei_selection",
   "group": null,
-  "label": "We ensure that the evaluation process takes into consideration the unique challenges that more proximate or community-led organisations may face, especially those that are new and have smaller budgets or teams.",
-  "modified": "2024-12-10 12:53:36.775688",
+  "label": "We ensure that the evaluation process takes into consideration the unique challenges that more proximate or community-led organisations may face, especially those that are new and have smaller budgets or teams. ",
+  "modified": "2024-12-16 15:26:36.851336",
   "name": "Diversity Equity Inclusion-dei_selection-1",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2360,7 +2360,7 @@
   "field": "dei_selection",
   "group": null,
   "label": "We try to remove any exclusionary criteria, such as expectations for staff size, annual budget, or referrals from other funders.",
-  "modified": "2024-12-09 15:25:03.393441",
+  "modified": "2024-12-16 15:27:29.795791",
   "name": "Diversity Equity Inclusion-dei_selection-2",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2373,7 +2373,7 @@
   "field": "dei_selection",
   "group": null,
   "label": "We ensure that our grant officers/selection committee have a clear understanding of DEI considerations and take steps to mitigate any unconscious bias.",
-  "modified": "2024-12-09 15:25:39.322407",
+  "modified": "2024-12-16 15:27:52.349980",
   "name": "Diversity Equity Inclusion-dei_selection-3",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2386,7 +2386,7 @@
   "field": "dei_selection",
   "group": null,
   "label": "We seek feedback from our grantees to refine the selection criteria, prioritising essential aspects, addressing biases, and minimising unnecessary workload for future applicants.",
-  "modified": "2024-12-09 15:26:20.178117",
+  "modified": "2024-12-16 15:28:20.024046",
   "name": "Diversity Equity Inclusion-dei_selection-4",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2399,7 +2399,7 @@
   "field": "dei_selection",
   "group": "",
   "label": "We assess the demographic representation of applicant organisations at different stages of the process, including initial screening and final decisions, and steps in between.",
-  "modified": "2024-12-10 12:56:31.852816",
+  "modified": "2024-12-16 15:28:46.726494",
   "name": "Diversity Equity Inclusion-dei_selection-5",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2412,7 +2412,7 @@
   "field": "dei_diligence",
   "group": null,
   "label": "We try to streamline diligence processes to minimise the time and effort required to complete a grant application.",
-  "modified": "2024-12-09 15:41:55.321143",
+  "modified": "2024-12-16 15:29:56.751840",
   "name": "Diversity Equity Inclusion-dei_diligence-1",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2424,8 +2424,8 @@
   "doctype": "Field Options",
   "field": "dei_diligence",
   "group": null,
-  "label": "We aim to build a trust-based relationship with our grantees by asking questions humbly and acknowledging power dynamics  without compromising on the rigor of the process.",
-  "modified": "2024-12-10 12:58:29.447952",
+  "label": "We acknowledge the power differential between funders and nonprofits by engaging in dialogue with a learning orientation, recognising the experience and expertise of nonprofits in the field, and striving to built trust with grantees.",
+  "modified": "2024-12-16 15:38:40.051990",
   "name": "Diversity Equity Inclusion-dei_diligence-2",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2437,8 +2437,8 @@
   "doctype": "Field Options",
   "field": "dei_diligence",
   "group": null,
-  "label": "We fund stipends  to organisations, especially smaller or more proximate ones, that reach the advanced stage of diligence, recognizing the costs they incur and resources they commit by participating in the process.",
-  "modified": "2024-12-10 12:58:52.417226",
+  "label": "We fund stipends to organisations, especially smaller or more proximate ones, that reach the advanced stage of diligence, recognising the costs they incur and resources they commit by participating in the process.",
+  "modified": "2024-12-16 15:39:53.592978",
   "name": "Diversity Equity Inclusion-dei_diligence-3",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2450,8 +2450,8 @@
   "doctype": "Field Options",
   "field": "dei_diligence",
   "group": null,
-  "label": "We go on field visits and have conversations with prospective grantees to deepen our understanding of their nonprofit needs rather than solely relying on documentation.",
-  "modified": "2024-12-10 12:59:07.025708",
+  "label": "We are open to field visits and conversations with prospective grantees to learn more about a nonprofit’s needs and experiences instead of solely relying on documentation.",
+  "modified": "2024-12-16 15:41:00.665497",
   "name": "Diversity Equity Inclusion-dei_diligence-4",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2477,7 +2477,7 @@
   "field": "dei_grant_setup_and_disbursement",
   "group": null,
   "label": "We evaluate the importance and relevance of the information we seek on a periodic basis to simplify the application process.",
-  "modified": "2024-12-10 13:01:34.180289",
+  "modified": "2024-12-16 15:42:03.272112",
   "name": "Diversity Equity Inclusion-dei_grant_setup_and_disbursement-1",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2490,7 +2490,7 @@
   "field": "dei_grant_setup_and_disbursement",
   "group": null,
   "label": "We minimise the information-sharing burden for grantees during the grant award process by seeking only critical information, either in writing or through an interview.",
-  "modified": "2024-12-10 13:01:59.593210",
+  "modified": "2024-12-16 15:43:46.779409",
   "name": "Diversity Equity Inclusion-dei_grant_setup_and_disbursement-2",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2503,7 +2503,7 @@
   "field": "dei_grant_setup_and_disbursement",
   "group": null,
   "label": "Our grant disbursement schedule takes into consideration the unique context of each grantee, including allowing them to seek larger disbursements in the beginning of the programme.",
-  "modified": "2024-12-10 13:03:15.911109",
+  "modified": "2024-12-16 15:44:49.525555",
   "name": "Diversity Equity Inclusion-dei_grant_setup_and_disbursement-3",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2516,7 +2516,7 @@
   "field": "dei_grant_setup_and_disbursement",
   "group": "",
   "label": "We collate preexisting sources of information (including prior application[s] or public databases), which grantee partners can then validate or update.",
-  "modified": "2024-12-10 13:03:36.309232",
+  "modified": "2024-12-16 15:45:19.371749",
   "name": "Diversity Equity Inclusion-dei_grant_setup_and_disbursement-4",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2529,7 +2529,7 @@
   "field": "dei_grantee_support",
   "group": null,
   "label": "We help grantees integrate DEI considerations into their programmes by providing appropriate organisational development (OD) training.",
-  "modified": "2024-12-10 13:29:11.195981",
+  "modified": "2024-12-16 15:46:25.573159",
   "name": "Diversity Equity Inclusion-dei_grantee_support-1",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2542,7 +2542,7 @@
   "field": "dei_grantee_support",
   "group": null,
   "label": "We regularly engage in DEI dialogues with grantees, bring in experts to provide advice, and/or support peer learning amongst our grantees.",
-  "modified": "2024-12-10 13:29:25.499345",
+  "modified": "2024-12-16 15:46:47.715604",
   "name": "Diversity Equity Inclusion-dei_grantee_support-2",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2568,7 +2568,7 @@
   "field": "dei_grantee_engagement",
   "group": null,
   "label": "All our grant officers, programme managers, and staff members are trained to mitigate unconscious bias to ensure respectful relationships with all grantees.",
-  "modified": "2024-12-10 13:08:10.271870",
+  "modified": "2024-12-16 15:47:36.773173",
   "name": "Diversity Equity Inclusion-dei_grantee_engagement-1",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2581,7 +2581,7 @@
   "field": "dei_grantee_engagement",
   "group": null,
   "label": "We have multiple channels for our grantees to provide formal or informal feedback, including anonymously, on the effectiveness of our grants and processes.",
-  "modified": "2024-12-10 13:08:23.840903",
+  "modified": "2024-12-16 15:48:01.943391",
   "name": "Diversity Equity Inclusion-dei_grantee_engagement-2",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2593,8 +2593,8 @@
   "doctype": "Field Options",
   "field": "dei_grantee_engagement",
   "group": null,
-  "label": "We strive to deepen internal understanding of the grantees’ community contexts and ground realities by attending community and grantee events while thoughtfully navigating power dynamcs.",
-  "modified": "2024-12-09 16:07:44.063889",
+  "label": "We strive to deepen internal understanding of the grantees’ community contexts and ground realities by attending community and grantee events whilst thoughtfully navigating power dynamics.",
+  "modified": "2024-12-16 15:48:45.807415",
   "name": "Diversity Equity Inclusion-dei_grantee_engagement-3",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2606,8 +2606,8 @@
   "doctype": "Field Options",
   "field": "dei_grantee_engagement",
   "group": null,
-  "label": "We periodically share updates with our grantees, including internal and portfolio progress, learnings and success stories,  and our future direction.",
-  "modified": "2024-12-10 13:09:05.023297",
+  "label": "We periodically share updates with our grantees, including internal and portfolio progress, learnings and success stories, and our future direction.",
+  "modified": "2024-12-16 15:50:39.903732",
   "name": "Diversity Equity Inclusion-dei_grantee_engagement-4",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2633,7 +2633,7 @@
   "field": "dei_reporting",
   "group": null,
   "label": "Our monitoring, learning, and evaluation (MLE) process is designed to facilitate learning both for us and our grantees.",
-  "modified": "2024-12-10 13:09:57.484168",
+  "modified": "2024-12-16 15:51:25.839850",
   "name": "Diversity Equity Inclusion-dei_reporting-1",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2645,8 +2645,8 @@
   "doctype": "Field Options",
   "field": "dei_reporting",
   "group": null,
-  "label": "We minimize the reporting burden by allowing grantees to provide information in the formats available with them or through conversations/ interviews.",
-  "modified": "2024-12-09 16:16:38.687567",
+  "label": "We minimise the reporting burden by allowing grantees to provide information in the formats available to them or through conversations and interviews.",
+  "modified": "2024-12-16 15:52:10.631686",
   "name": "Diversity Equity Inclusion-dei_reporting-2",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2659,7 +2659,7 @@
   "field": "dei_reporting",
   "group": null,
   "label": "We periodically review our reporting requirements with an objective to collect only useful information and avoid collection of data without any explicit purpose.",
-  "modified": "2024-12-09 16:17:37.024185",
+  "modified": "2024-12-16 15:52:34.891345",
   "name": "Diversity Equity Inclusion-dei_reporting-3",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2684,8 +2684,8 @@
   "doctype": "Field Options",
   "field": "dei_renewal",
   "group": null,
-  "label": "The ability of grantees to serve marginalized commuinities enhances their prospects for grant renewal.",
-  "modified": "2024-12-09 16:22:42.644637",
+  "label": "The ability of grantees to serve marginalised communities enhances their prospects for grant renewal.",
+  "modified": "2024-12-16 15:54:23.871270",
   "name": "Diversity Equity Inclusion-dei_renewal-1",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 1.0
@@ -2697,8 +2697,8 @@
   "doctype": "Field Options",
   "field": "dei_renewal",
   "group": "Others",
-  "label": "We do not specially track DEI indicators as long as the overall grant objectives are being met.",
-  "modified": "2024-12-09 16:24:05.025979",
+  "label": "We do not specifically track DEI indicators as long as the overall grant objectives are being met.",
+  "modified": "2024-12-16 15:54:56.359528",
   "name": "Diversity Equity Inclusion-dei_renewal-2",
   "ref_doctype": "Diversity Equity Inclusion",
   "score": 0.0
