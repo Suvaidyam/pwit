@@ -30,7 +30,7 @@
                 </div>
                 <p v-if="recommendedList.length > 0  && check_results && Object.keys(check_results)?.length"
                     class="pl-2  py-2 font-bold text-[11px] text-white border-t">
-                    ADDITIONAL PWIT PRINCIPLES
+                    ADDITIONAL PRINCIPLES
                 </p>
                 <div class="" @click="store.sidebar=false" v-for="items in additionalList" :key="items.name">
                     <router-link :to="`/funder/${items.ref_doctype?.toLowerCase()?.split(' ').join('-')}`"
