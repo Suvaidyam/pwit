@@ -1,10 +1,10 @@
 <template>
-    <div class="pt-6 w-full ">
+    <div class="pt-2 w-full ">
         <div class="w-full pt-1">
             <div class="relative inline-block text-buttom w-full">
                 <details class=" w-full" open>
                     <summary
-                        class="flex w-full justify-between items-center px-4 py-3 bg-[#e9eaec] text-h5  font-bold font-primary text-pbase "
+                        class="flex w-full justify-between items-center rounded-md px-4 py-3 bg-[#e9eaec] text-h5  font-bold font-primary text-pbase "
                         aria-expanded="true">
                         Introduction
                         <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
