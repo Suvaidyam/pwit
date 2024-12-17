@@ -152,12 +152,12 @@
             <p style="padding-top: 18px; font-size: 16px;color: #002C77;font-family: serif;font-weight: 700;">
                 Useful Resources
             </p>
-            <ul style="padding: 0px 22px;">
+            <ul style="padding: 0px 10px;">
                 {% for resource in doc.details.useful_resources %}
                 {% if resource.section %}
                     <p style="font-size: 14px; padding: 4px 8px; background-color: #E9EAEC;font-weight: 700;">{{ resource.section }}</p>
                 {% endif %}
-                <li style="padding: 7px 0px; ">
+                <li style="padding: 7px 0px;margin-left:20px; ">
                     <a href="{{ resource.to }}" target="_blank" style="font-size: 14px; text-align: center;">
                         {{ resource.resources }}
                     </a>
