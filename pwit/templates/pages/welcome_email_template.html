@@ -75,7 +75,7 @@
 <body>
     <div class="center-container"> <!-- HEADER -->
         <div class="header">
-            <img src={{link+'/files/navbar.png'}} alt="PWIT Logo" style="width: 150px; height: auto;" />
+            <img src='{{link}}/assets/pwit/images/navbar.png' alt="PWIT Logo" style="width: 150px; height: auto;" />
             <div
                 style="font-size: 14px; font-weight: 500; line-height: 15px; color:#002C77;font-weight:600;padding-top:7px">
                 Assistive Funder Toolkit</div>
@@ -119,27 +119,23 @@
                     <div style="text-align: center; margin-bottom: 10px;">
                         <a href="https://www.youtube.com/user/TheBridgespanGroup" target="_blank"
                             style="text-decoration: none; margin: 0 8px;">
-                            <img src=`${doc.url}/files/navbar.png` alt="YouTube" style="width: 24px; height: 24px; vertical-align: middle;" />
+                            <img src='{{link}}/files/yt.png' alt="YouTube" style="width: 24px; height: 24px; vertical-align: middle;" />
                         </a>
                         <a href="https://www.facebook.com/BridgespanGroup/" target="_blank"
                             style="text-decoration: none; margin: 0 8px;">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMiAxMmMwLTUuNTItNC40OC0xMC0xMC0xMFMyIDYuNDggMiAxMmMwIDQuODQgMy40NCA4Ljg3IDggOS44VjE1SDh2LTNoMlY5LjVDMTAgNy41NyAxMS41NyA2IDEzLjUgNkgxNnYzaC0yYy0uNTUgMC0xIC40NS0xIDF2MmgzdjNoLTN2Ni45NWM1LjA1LS41IDktNC43NiA5LTkuOTUiLz48L3N2Zz4="
-                                alt="Facebook" style="width: 24px; height: 24px; vertical-align: middle;" />
+                            <img src='{{link}}/files/fb.png' alt="Facebook" style="width: 24px; height: 24px; vertical-align: middle;" />
                         </a>
                         <a href="https://twitter.com/BridgespanGroup" target="_blank"
                             style="text-decoration: none; margin: 0 8px;">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJjdXJyZW50Q29sb3IiPjxwYXRoIGQ9Ik0xIDJoMi41TDMuNSAyaC0yLjV6TTUuNSAyaDIuNUw3LjIgMmgtMi41eiI+PGFuaW1hdGUgZmlsbD0iZnJlZXplIiBhdHRyaWJ1dGVOYW1lPSJkIiBkdXI9IjAuNHMiIHZhbHVlcz0iTTEgMmgyLjVMMy41IDJoLTIuNXpNNS41IDJoMi41TDcuMiAyaC0yLjV6O00xIDJoMi41TDE4LjUgMjJoLTIuNXpNNS41IDJoMi41TDIzIDIyaC0yLjV6Ii8+PC9wYXRoPjxwYXRoIGQ9Ik0zIDJoNXYwaC01ek0xNiAyMmg1djBoLTV6Ij48YW5pbWF0ZSBmaWxsPSJmcmVlemUiIGF0dHJpYnV0ZU5hbWU9ImQiIGJlZ2luPSIwLjRzIiBkdXI9IjAuNHMiIHZhbHVlcz0iTTMgMmg1djBoLTV6TTE2IDIyaDV2MGgtNXo7TTMgMmg1djJoLTV6TTE2IDIyaDV2LTJoLTV6Ii8+PC9wYXRoPjxwYXRoIGQ9Ik0xOC41IDJoMy41TDIyIDJoLTMuNXoiPjxhbmltYXRlIGZpbGw9ImZyZWV6ZSIgYXR0cmlidXRlTmFtZT0iZCIgYmVnaW49IjAuNXMiIGR1cj0iMC40cyIgdmFsdWVzPSJNMTguNSAyaDMuNUwyMiAyaC0zLjV6O00xOC41IDJoMy41TDUgMjJoLTMuNXoiLz48L3BhdGg+PC9nPjwvc3ZnPg=="
-                                alt="Twitter" style="width: 24px; height: 24px; vertical-align: middle;" />
+                            <img src='{{link}}/files/tw.png' alt="Twitter" style="width: 24px; height: 24px; vertical-align: middle;" />
                         </a>
                         <a href="https://www.instagram.com/thebridgespangroup/" target="_blank"
                             style="text-decoration: none; margin: 0 8px;">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xMy4wMjggMmMxLjEyNS4wMDMgMS42OTYuMDA5IDIuMTg5LjAyM2wuMTk0LjAwN2MuMjI0LjAwOC40NDUuMDE4LjcxMi4wM2MxLjA2NC4wNSAxLjc5LjIxOCAyLjQyNy40NjVjLjY2LjI1NCAxLjIxNi41OTggMS43NzIgMS4xNTNhNC45IDQuOSAwIDAgMSAxLjE1MyAxLjc3MmMuMjQ3LjYzNy40MTUgMS4zNjMuNDY1IDIuNDI4Yy4wMTIuMjY2LjAyMi40ODcuMDMuNzEybC4wMDYuMTk0Yy4wMTUuNDkyLjAyMSAxLjA2My4wMjMgMi4xODhsLjAwMS43NDZ2MS4zMWE3OSA3OSAwIDAgMS0uMDIzIDIuMTg4bC0uMDA2LjE5NGMtLjAwOC4yMjUtLjAxOC40NDYtLjAzLjcxMmMtLjA1IDEuMDY1LS4yMiAxLjc5LS40NjYgMi40MjhhNC45IDQuOSAwIDAgMS0xLjE1MyAxLjc3MmE0LjkgNC45IDAgMCAxLTEuNzcyIDEuMTUzYy0uNjM3LjI0Ny0xLjM2My40MTUtMi40MjcuNDY1bC0uNzEyLjAzbC0uMTk0LjAwNmMtLjQ5My4wMTQtMS4wNjQuMDIxLTIuMTg5LjAyM2wtLjc0Ni4wMDFoLTEuMzA5YTc4IDc4IDAgMCAxLTIuMTg5LS4wMjNsLS4xOTQtLjAwNmE2MyA2MyAwIDAgMS0uNzEyLS4wMzFjLTEuMDY0LS4wNS0xLjc5LS4yMTgtMi40MjgtLjQ2NWE0LjkgNC45IDAgMCAxLTEuNzcxLTEuMTUzYTQuOSA0LjkgMCAwIDEtMS4xNTQtMS43NzJjLS4yNDctLjYzNy0uNDE1LTEuMzYzLS40NjUtMi40MjhsLS4wMy0uNzEybC0uMDA1LS4xOTRBNzkgNzkgMCAwIDEgMiAxMy4wMjh2LTIuMDU2YTc5IDc5IDAgMCAxIC4wMjItMi4xODhsLjAwNy0uMTk0Yy4wMDgtLjIyNS4wMTgtLjQ0Ni4wMy0uNzEyYy4wNS0xLjA2NS4yMTgtMS43OS40NjUtMi40MjhBNC45IDQuOSAwIDAgMSAzLjY4IDMuNjc4YTQuOSA0LjkgMCAwIDEgMS43Ny0xLjE1M2MuNjM4LS4yNDcgMS4zNjMtLjQxNSAyLjQyOC0uNDY1Yy4yNjYtLjAxMi40ODgtLjAyMi43MTItLjAzbC4xOTQtLjAwNmE3OSA3OSAwIDAgMSAyLjE4OC0uMDIzek0xMiA3YTUgNSAwIDEgMCAwIDEwYTUgNSAwIDAgMCAwLTEwbTAgMmEzIDMgMCAxIDEgLjAwMSA2YTMgMyAwIDAgMSAwLTZtNS4yNS0zLjVhMS4yNSAxLjI1IDAgMCAwIDAgMi41YTEuMjUgMS4yNSAwIDAgMCAwLTIuNSIvPjwvc3ZnPg=="
-                                alt="Instagram" style="width: 24px; height: 24px; vertical-align: middle;" />
+                            <img src='{{link}}/files/ins.png' alt="Instagram" style="width: 24px; height: 24px; vertical-align: middle;" />
                         </a>
                         <a href="https://www.linkedin.com/company/the-bridgespan-group" target="_blank"
                             style="text-decoration: none; margin: 0 8px;">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xOSAzYTIgMiAwIDAgMSAyIDJ2MTRhMiAyIDAgMCAxLTIgMkg1YTIgMiAwIDAgMS0yLTJWNWEyIDIgMCAwIDEgMi0yem0tLjUgMTUuNXYtNS4zYTMuMjYgMy4yNiAwIDAgMC0zLjI2LTMuMjZjLS44NSAwLTEuODQuNTItMi4zMiAxLjN2LTEuMTFoLTIuNzl2OC4zN2gyLjc5di00LjkzYzAtLjc3LjYyLTEuNCAxLjM5LTEuNGExLjQgMS40IDAgMCAxIDEuNCAxLjR2NC45M3pNNi44OCA4LjU2YTEuNjggMS42OCAwIDAgMCAxLjY4LTEuNjhjMC0uOTMtLjc1LTEuNjktMS42OC0xLjY5YTEuNjkgMS42OSAwIDAgMC0xLjY5IDEuNjljMCAuOTMuNzYgMS42OCAxLjY5IDEuNjhtMS4zOSA5Ljk0di04LjM3SDUuNXY4LjM3eiIvPjwvc3ZnPg=="
-                                alt="LinkedIn" style="width: 24px; height: 24px; vertical-align: middle;" />
+                            <img src='{{link}}/files/li.png' alt="LinkedIn" style="width: 24px; height: 24px; vertical-align: middle;" />
                         </a>
                     </div>
 
