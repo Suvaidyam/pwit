@@ -38,7 +38,7 @@
    "search_index": 1
   },
   {
-   "description": "Are these guidelines flexible and adaptable based on context and need?",
+   "description": "Are these guidelines flexible and adaptable based on context and need?\n{ Core cost support refers to supporting day-to-day activities of grantees (e.g. salaries of non-programme employees, rent, and utilities for a central office, \nhuman resources, finance and accounting, fundraising, communications, technology, and measurement and evaluation) via grants}",
    "fieldname": "cc_guidelines",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -93,7 +93,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-05 15:01:56.249897",
+ "modified": "2024-12-17 11:22:50.565841",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Core Costs",
