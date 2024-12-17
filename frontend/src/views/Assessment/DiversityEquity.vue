@@ -47,15 +47,15 @@
                                         and decision making at all levels within a group, organisation, movement, or
                                         society.
                                         <Popper :arrow="true" :zIndex="20" :offsetDistance="4" placement="bottom-start">
-                                                <InfoIcon class="w-3 h-[14px] cursor-pointer leading-none" />
+                                                <InfoIcon class="w-4 h-[14px] cursor-pointer leading-none" />
                                             <template #content>
-                                                <div class="border shadow-lg rounded-md bg-white p-3 py-2">
+                                                <div class="border-2 shadow-lg rounded-md bg-white p-3 py-2">
                                                     <a href="https://www.opensocietyfoundations.org/publications/advancing-diversity-equity-and-inclusion-in-grant-making"
                                                         class="text-sm ">
                                                         “ <span class="text-blue-600">Advancing Diversity, Equity and
                                                             inclusion in Grantmaking.</span>”
                                                     </a>
-                                                    <p class="text-sm text-trbase">Open Society Foundations (OSF), July
+                                                    <p class="text-sm text-gray-900">Open Society Foundations (OSF), July
                                                         2021</p>
                                                 </div>
                                             </template>
@@ -93,11 +93,11 @@
                                         important for funders?
                                         <Popper :arrow="true" :zIndex="20" :offsetDistance="0" placement="bottom-start">
                                             <button>
-                                                <InfoIcon class="w-4" />
+                                                <InfoIcon class="w-5 text-slate-400" />
                                             </button>
                                             <template #content>
-                                                <div class="border shadow-lg rounded-md bg-white p-3 py-2">
-                                                    <p class="text-sm font-medium text-trbase">Whilst the self-assessment tool
+                                                <div class="border-2 shadow-lg rounded-md bg-white p-3 py-2">
+                                                    <p class="text-sm font-medium text-gray-900">Whilst the self-assessment tool
                                                         focuses on grantmaking, it is important to look inward at how
                                                         your organisation
                                                         would benefit from a commitment to DEI in order to address
