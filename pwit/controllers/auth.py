@@ -82,7 +82,8 @@ class AuthAPIs:
     
     def send_custom_welcome_email_method(doc):
         link= AuthAPIs.reset_password(doc)
-        message_content = frappe.render_template("pwit/templates/pages/welcome_email_template.html",{"doc":doc, "verification_link": link})
+        url = frappe.utils.get_url()
+        message_content = frappe.render_template("pwit/templates/pages/welcome_email_template.html",{"doc":doc, "verification_link": link, "url": url})
         now = frappe.flags.in_test or frappe.flags.in_install
         frappe.sendmail(
             recipients=[doc.email],

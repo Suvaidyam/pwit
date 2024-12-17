@@ -2,7 +2,9 @@
 	<div class="w-full h-screen">
 		<div
 			class="w-full pt-4 sm:pt-0 px-4 md:px-8 lg:px-20 flex flex-col gap-2 md:gap-3 justify-center md:h-40 items-center ">
-			<h1 class="text-h3 sm:text-h2 font-bold lg:text-[64px] text-primary font-primary leading-7 md:leading-[70.4px]">Assistive Funder
+			<h1
+				class="text-h3 sm:text-h2 font-bold lg:text-[64px] text-primary font-primary leading-7 md:leading-[70.4px]">
+				Assistive Funder
 				Toolkit
 			</h1>
 			<p class="px-4 text-center font-bold text-[#464547] leading-4 tracking-wide text-h5 font-primary">
@@ -88,7 +90,7 @@
 						<p class="text-[#f38714] text-center font-bold text-h5 uppercase  tracking-wider leading-4 ">
 							Embed Diversity, Equity, and inclusion in grantmaking
 						</p>
-						<p class="text-h6 leading-3 font-bold text-center">Recognize and address the needs of
+						<p class="text-h6 leading-3 font-bold text-center">Recognise and address the needs of
 							underserved individuals and communities</p>
 					</div>
 				</div>
@@ -108,97 +110,37 @@
 		<div class=" w-full px-4 md:px-8 lg:px-20 py-6 ">
 			<div class="flex h-full items-center flex-col md:flex-row mt-5">
 				<div class="w-full flex flex-col gap-3">
-					<h1 class="text-primary text-h2 font-bold leading-9 tracking-wide font-primary">What does the toolkit
+					<h1 class="text-primary text-h2 font-bold leading-9 tracking-wide font-primary">What does the
+						toolkit
 						include?
 					</h1>
 					<p class="pt-2 text-h5 font-normal text-trbase text-justify leading-5 tracking-wider">The toolkit
 						includes two elements:</p>
-					<div class="flex flex-col gap-5 mt-3">
-						<div class="flex gap-2">
-							<div class="w-10 min-w-10 h-10 flex items-center justify-center rounded-full bg-gray-100">
-								<svg width="18" height="20" viewBox="0 0 18 20" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd"
-										d="M1.172 1.172C-1.19209e-07 2.343 0 4.229 0 8V12C0 15.771 -1.19209e-07 17.657 1.172 18.828C2.344 19.999 4.229 20 8 20H10C13.771 20 15.657 20 16.828 18.828C17.981 17.676 18 15.832 18 12.18L15.182 14.998C14.912 15.268 14.691 15.489 14.442 15.684C14.1499 15.9128 13.8333 16.1083 13.498 16.267C13.1911 16.4051 12.8758 16.5236 12.554 16.622L10.242 17.393C9.87498 17.5154 9.48113 17.5332 9.10458 17.4443C8.72804 17.3554 8.38368 17.1635 8.11011 16.8899C7.83654 16.6163 7.64456 16.272 7.5557 15.8954C7.46684 15.5189 7.4846 15.125 7.607 14.758L7.881 13.938L8.356 12.512L8.377 12.446C8.498 12.084 8.597 11.788 8.733 11.502C8.893 11.166 9.08733 10.8517 9.316 10.559C9.511 10.309 9.732 10.089 10.002 9.819L14.008 5.812L15.12 4.7L15.247 4.573C15.5868 4.23215 15.9907 3.96188 16.4353 3.77773C16.88 3.59358 17.3567 3.49919 17.838 3.5C17.687 2.47 17.394 1.737 16.828 1.172C15.657 -1.19209e-07 13.771 0 10 0H8C4.229 0 2.343 -1.19209e-07 1.172 1.172ZM4.25 7C4.25 6.80109 4.32902 6.61032 4.46967 6.46967C4.61032 6.32902 4.80109 6.25 5 6.25H11.5C11.6989 6.25 11.8897 6.32902 12.0303 6.46967C12.171 6.61032 12.25 6.80109 12.25 7C12.25 7.19891 12.171 7.38968 12.0303 7.53033C11.8897 7.67098 11.6989 7.75 11.5 7.75H5C4.80109 7.75 4.61032 7.67098 4.46967 7.53033C4.32902 7.38968 4.25 7.19891 4.25 7ZM4.25 11C4.25 10.8011 4.32902 10.6103 4.46967 10.4697C4.61032 10.329 4.80109 10.25 5 10.25H7.5C7.69891 10.25 7.88968 10.329 8.03033 10.4697C8.17098 10.6103 8.25 10.8011 8.25 11C8.25 11.1989 8.17098 11.3897 8.03033 11.5303C7.88968 11.671 7.69891 11.75 7.5 11.75H5C4.80109 11.75 4.61032 11.671 4.46967 11.5303C4.32902 11.3897 4.25 11.1989 4.25 11ZM4.25 15C4.25 14.8011 4.32902 14.6103 4.46967 14.4697C4.61032 14.329 4.80109 14.25 5 14.25H6.5C6.69891 14.25 6.88968 14.329 7.03033 14.4697C7.17098 14.6103 7.25 14.8011 7.25 15C7.25 15.1989 7.17098 15.3897 7.03033 15.5303C6.88968 15.671 6.69891 15.75 6.5 15.75H5C4.80109 15.75 4.61032 15.671 4.46967 15.5303C4.32902 15.3897 4.25 15.1989 4.25 15Z"
-										fill="#27853F" />
-								</svg>
-							</div>
-							<div class="">
-								<h4 class="font-bold text-[18px] text-sebase font-primary leading-4 tracking-wide">Part 1 -
-									Funding practices
-									diagnostic</h4>
-								<div class="pt-2 text-justify">
-									<p class="text-trbase text-h5 py-2 text-justify leading-5 inline">
-										<transition name="fade-slide-x">
-											<span v-if="readmore.one" key="text" class="inline">
-												Funder Diagnostic is a 10-minute diagnostic questionnaire regarding your
-												organisation’s funding beliefs and practices. At the end of the
-												questionnaire, you will receive an analysis that shows which of the five
-												grantmaking principles to work on first. Depending upon your experience
-												with PWIT principles, the tool will recommend three that you may explore
-												in more detail.
-											</span>
-										</transition>
-									</p>
-									<transition name="fade-slide-x">
-										<span key="button"
-											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
-											@click="readmore.one = !readmore.one">
-											{{ readmore.one ? 'Read Less' : 'Read More' }}
-										</span>
-									</transition>
-								</div>
-							</div>
-						</div>
-						<div class="flex gap-2">
-							<div class="w-10 min-w-10 h-10 flex items-center justify-center rounded-full bg-gray-100">
-								<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<g clip-path="url(#clip0_248_5487)">
-										<path fill-rule="evenodd" clip-rule="evenodd"
-											d="M14.25 2.5C14.25 2.4337 14.2237 2.37011 14.1768 2.32322C14.1299 2.27634 14.0663 2.25 14 2.25H7C6.27065 2.25 5.57118 2.53973 5.05546 3.05546C4.53973 3.57118 4.25 4.27065 4.25 5V19C4.25 19.7293 4.53973 20.4288 5.05546 20.9445C5.57118 21.4603 6.27065 21.75 7 21.75H17C17.7293 21.75 18.4288 21.4603 18.9445 20.9445C19.4603 20.4288 19.75 19.7293 19.75 19V9.147C19.75 9.0807 19.7237 9.01711 19.6768 8.97022C19.6299 8.92334 19.5663 8.897 19.5 8.897H15C14.8011 8.897 14.6103 8.81798 14.4697 8.67733C14.329 8.53668 14.25 8.34591 14.25 8.147V2.5ZM15 12.25C15.1989 12.25 15.3897 12.329 15.5303 12.4697C15.671 12.6103 15.75 12.8011 15.75 13C15.75 13.1989 15.671 13.3897 15.5303 13.5303C15.3897 13.671 15.1989 13.75 15 13.75H9C8.80109 13.75 8.61032 13.671 8.46967 13.5303C8.32902 13.3897 8.25 13.1989 8.25 13C8.25 12.8011 8.32902 12.6103 8.46967 12.4697C8.61032 12.329 8.80109 12.25 9 12.25H15ZM15 16.25C15.1989 16.25 15.3897 16.329 15.5303 16.4697C15.671 16.6103 15.75 16.8011 15.75 17C15.75 17.1989 15.671 17.3897 15.5303 17.5303C15.3897 17.671 15.1989 17.75 15 17.75H9C8.80109 17.75 8.61032 17.671 8.46967 17.5303C8.32902 17.3897 8.25 17.1989 8.25 17C8.25 16.8011 8.32902 16.6103 8.46967 16.4697C8.61032 16.329 8.80109 16.25 9 16.25H15Z"
-											fill="#27853F" />
-										<path
-											d="M15.75 2.82396C15.75 2.63996 15.943 2.52296 16.086 2.63796C16.2073 2.73596 16.315 2.84996 16.409 2.97996L19.422 7.17696C19.49 7.27296 19.416 7.39696 19.298 7.39696H16C15.9337 7.39696 15.8701 7.37062 15.8232 7.32373C15.7763 7.27685 15.75 7.21326 15.75 7.14696V2.82396Z"
-											fill="#27853F" />
-									</g>
-									<defs>
-										<clipPath id="clip0_248_5487">
-											<rect width="24" height="24" fill="white" />
-										</clipPath>
-									</defs>
-								</svg>
-							</div>
-							<div class="">
-								<h4 class="font-bold text-sebase text-[18px] font-primary leading-4 tracking-wide">Part 2 –
-									Assistive guides for each
-									principle</h4>
-								<div class="pt-2 text-justify">
-									<p class="text-trbase text-h5 py-2 text-justify leading-5 inline">
-										<transition name="fade-slide-x">
-											<span v-if="readmore.two" key="text" class="inline">
-												Assistive Guides help you assess how aligned your current funding
-												practices are with each of the five principles. For the first four
-												principles, the guide helps to categorise your practices on a
-												progressive scale. For the fifth principle (Embedding diversity, equity,
-												and inclusion in grantmaking), the guide is structured as a checklist,
-												capturing key steps that funders can take to integrate DEI across the
-												grantmaking cycle. We use this alternative format because practices that
-												embody this principle are still maturing.
-											</span>
-										</transition>
-									</p>
-									<transition name="fade-slide-x">
-										<span key="button"
-											class="text-secondary text-h6 cursor-pointer font-bold transition-all duration-300 ease-in-out"
-											@click="readmore.two = !readmore.two">
-											{{ readmore.two ? 'Read Less' : 'Read More' }}
-										</span>
-									</transition>
-								</div>
-							</div>
-						</div>
-					</div>
+					<ol class="flex flex-col gap-3 mt-3 md:pl-8 list-decimal">
+						<li class="pt-2 text-justify ">
+							<p class="text-trbase text-h5 py-2 leading-5 inline">
+								<span class="font-bold">Funder Diagnostic</span> is a 10-minute diagnostic questionnaire regarding your
+								organisation’s funding beliefs and practices. At the end of the
+								questionnaire, you will receive an analysis that shows which of the five
+								grantmaking principles to work on first. Depending upon your experience
+								with PWIT principles, the tool will recommend three that you may explore
+								in more detail.
+
+							</p>
+						</li>
+						<li class=" text-justify">
+							<p class="text-trbase text-h5 py-2 leading-5 inline">
+								<span class="font-bold">Assistive Guides</span> help you assess how aligned your current funding
+								practices are with each of the five principles. For the first four
+								principles, the guide helps to categorise your practices on a
+								progressive scale. For the fifth principle (Embedding diversity, equity,
+								and inclusion in grantmaking), the guide is structured as a checklist,
+								capturing key steps that funders can take to integrate DEI across the
+								grantmaking cycle. We use this alternative format because practices that
+								embody this principle are still maturing.
+							</p>
+						</li>
+					</ol>
 				</div>
 				<div class="w-full md:h-full flex justify-center items-center">
 					<img class="w-[400px] h-[270px]" src="../../assets/right.png" alt="">
@@ -214,11 +156,13 @@
 				<div class="w-full flex flex-col gap-3 order-1 md:order-2">
 					<h1 class="text-primary text-h2 font-bold font-primary leading-9 tracking-wide">What will the output
 						include?</h1>
-					<P class="text-h5 font-normal text-trbase text-justify leading-5 ">After completing the questions for each principle, you will receive an instant summary
+					<P class="text-h5 font-normal text-trbase text-justify leading-5 ">After completing the questions
+						for each principle, you will receive an instant summary
 						identifying your level of practice and recommendations on how to progress to the next level. A
 						curated list of resources for each PWIT principle is also shared for you to explore further.
 					</P>
-					<P class="text-h5 font-normal text-trbase text-justify leading-5 ">Wherever you may be on your grantmaking journey, this toolkit provides concrete steps and
+					<P class="text-h5 font-normal text-trbase text-justify leading-5 ">Wherever you may be on your
+						grantmaking journey, this toolkit provides concrete steps and
 						recommendations for making your work more supportive of nonprofits and more likely to achieve
 						your intended impact.</P>
 					<!-- <div class="flex flex-col gap-5">
@@ -554,7 +498,8 @@
 
 
 			<!-- Content -->
-			<h1 class="text-center font-primary text-h3 md:text-h2 font-bold tracking-wide leading-9 text-white pt-8 pb-5">
+			<h1
+				class="text-center font-primary text-h3 md:text-h2 font-bold tracking-wide leading-9 text-white pt-8 pb-5">
 				About the Partnership
 			</h1>
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
