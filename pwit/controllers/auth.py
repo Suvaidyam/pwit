@@ -2,6 +2,7 @@ import frappe
 from frappe.utils import now_datetime
 from hashlib import sha256
 from frappe.utils import get_url
+import time
 
 class AuthAPIs:
     def create_session():
@@ -123,25 +124,73 @@ class AuthAPIs:
         else:
             return {'code': 400, 'msg': 'Session not found'}
         
-    def check_user_details(session):  
+    # def check_user_details(session):  
+    #     details = {}
+    #     session_exits = frappe.get_all('Session', filters={'name': session,'designation':['is', 'set']}, pluck='name',order_by='creation desc',  limit_page_length=1,ignore_permissions=True )
+    #     if frappe.session.user and not session_exits:
+    #         details_exits = frappe.get_all('Session', filters={'user': frappe.session.user,'designation':['is', 'set']}, pluck='name',order_by='creation desc',  limit_page_length=1,ignore_permissions=True )
+    #         if details_exits:
+    #             session_details = frappe.get_doc('Session', details_exits[0])
+    #             if session_details:
+    #                 details = frappe.get_doc('Session', session)
+    #                 details.designation = session_details.get('designation')
+    #                 details.annual_budget = session_details.get('annual_budget')
+    #                 for item in session_details.get('funder_type'):
+    #                     details.append('funder_type', {'funder_type': item.funder_type})
+    #                 details.save(ignore_permissions=True)
+    #             return {'code': 200, 'data': details}
+    #         else:
+    #             return {'code': 400, 'msg': 'Session not found'}
+    #     else:
+    #         return {'code': 200, 'data':{},'msg':'Already set'}
+  
+    def check_user_details(session):
+        retries = 3
+        delay = 1
         details = {}
-        session_exits = frappe.get_all('Session', filters={'name': session,'designation':['is', 'set']}, pluck='name',order_by='creation desc',  limit_page_length=1,ignore_permissions=True )
-        if frappe.session.user and not session_exits:
-            details_exits = frappe.get_all('Session', filters={'user': frappe.session.user,'designation':['is', 'set']}, pluck='name',order_by='creation desc',  limit_page_length=1,ignore_permissions=True )
-            if details_exits:
-                session_details = frappe.get_doc('Session', details_exits[0])
-                if session_details:
-                    details = frappe.get_doc('Session', session)
-                    details.designation = session_details.get('designation')
-                    details.annual_budget = session_details.get('annual_budget')
-                    for item in session_details.get('funder_type'):
-                        details.append('funder_type', {'funder_type': item.funder_type})
-                    details.save(ignore_permissions=True)
-                return {'code': 200, 'data': details}
-            else:
-                return {'code': 400, 'msg': 'Session not found'}
-        else:
-            return {'code': 200, 'data':{},'msg':'Already set'}
+        for attempt in range(retries):
+            try:
+                session_exits = frappe.get_all('Session', filters={'name': session,'designation':['is', 'set']}, pluck='name',order_by='creation desc',  limit_page_length=1,ignore_permissions=True )
+                if frappe.session.user and not session_exits:
+                    details_exits = frappe.get_all('Session', filters={'user': frappe.session.user,'designation':['is', 'set']}, pluck='name',order_by='creation desc',  limit_page_length=1,ignore_permissions=True )
+                    if details_exits:
+                        session_details = frappe.get_doc('Session', details_exits[0])
+                        if session_details:
+                            details = frappe.get_doc('Session', session)
+                            details.designation = session_details.get('designation')
+                            details.annual_budget = session_details.get('annual_budget')
+                            for item in session_details.get('funder_type'):
+                                details.append('funder_type', {'funder_type': item.funder_type})
+                                AuthAPIs.save_with_retry(details, retries=retries, delay=delay)
+                        return {'code': 200, 'data': details}
+                    else:
+                        return {'code': 400, 'msg': 'Session not found'}
+                else:
+                    return {'code': 200, 'data': {}, 'msg': 'Already set'}
+            except frappe.db.LostUpdateError as e:
+                frappe.db.rollback()
+                if attempt < retries - 1:
+                    time.sleep(delay)
+                else:
+                    frappe.log_error(message=str(e), title="Concurrent Update Error in check_user_details")
+                    return {'code': 409, 'msg': 'Concurrent update error', 'error': str(e)}
+            except Exception as e:
+                frappe.log_error(message=str(e), title="Error in check_user_details")
+                return {'code': 500, 'msg': 'An unexpected error occurred', 'error': str(e)}
+
+    def save_with_retry(doc, retries=3, delay=1):
+        """Attempt to save a document with retries on serialization failure."""
+        for attempt in range(retries):
+            try:
+                doc.save(ignore_permissions=True)
+                return
+            except frappe.db.LostUpdateError as e:
+                if attempt < retries - 1:
+                    frappe.db.rollback()  # Rollback the transaction
+                    time.sleep(delay)  # Wait before retrying
+                else:
+                    raise e
+
     def get_other_details(session):
         session_details = {}
         existing_session = frappe.get_all(
