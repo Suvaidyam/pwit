@@ -136,13 +136,25 @@ class AuthAPIs:
                     details.annual_budget = session_details.get('annual_budget')
                     for item in session_details.get('funder_type'):
                         details.append('funder_type', {'funder_type': item.funder_type})
-                    details.save(ignore_permissions=True)
+                    AuthAPIs.save_with_retry(details)
+                    # details.save(ignore_permissions=True)
                 return {'code': 200, 'data': details}
             else:
                 return {'code': 400, 'msg': 'Session not found'}
         else:
-            return {'code': 200, 'data':{},'msg':'Already set'}
-        
+            return {'code': 200, 'data':{},'msg':'Already set'}    
+
+    def save_with_retry(doc, max_retries=3):
+        retries = 0
+        while retries < max_retries:
+            try:
+                doc.save(ignore_permissions=True)
+                break  # Success, exit the loop
+            except Exception as e:
+                retries += 1
+                if retries >= max_retries:
+                    frappe.throw(e)
+            
     def get_other_details(session):
         session_details = {}
         existing_session = frappe.get_all(
