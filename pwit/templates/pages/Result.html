@@ -154,6 +154,9 @@
             </p>
             <ul style="padding: 0px 22px;">
                 {% for resource in doc.details.useful_resources %}
+                {% if resource.section %}
+                    <p style="font-size: 14px; padding: 4px 8px; background-color: #E9EAEC;font-weight: 700;">{{ resource.section }}</p>
+                {% endif %}
                 <li style="padding: 7px 0px; ">
                     <a href="{{ resource.to }}" target="_blank" style="font-size: 14px; text-align: center;">
                         {{ resource.resources }}
