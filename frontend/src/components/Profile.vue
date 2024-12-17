@@ -18,12 +18,13 @@
                             <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4 relative">
                                 <X @click="store.isOpen = false" class="text-sm  cursor-pointer absolute right-5" />
                                 <div class="block justify-center gap-5 items-center">
-                                    <h1 class="text-center font-primary font-bold text-h3 text-[#21272A]">My Profile</h1>
+                                    <h1 class="text-center font-primary font-bold text-h3 text-[#21272A]">My Profile
+                                    </h1>
 
                                     <p class="text-center text-[#21272A] font-normal text-h5 pt-2"> Set up or update
                                         your profile</p>
                                 </div>
-                              
+
                                 <div class="space-y-4 container pt-2">
                                     <div>
                                         <label for="full_name" class="block text-gray-800 text-sm pb-2">
@@ -58,14 +59,18 @@
                                     </div>
                                 </div>
                                 <!-- other details -->
-                                <div class="" v-if="otherFormData.designation && otherFormData.funderType && otherFormData.annual_budget">
+                                <div class=""
+                                    v-if="otherFormData.designation && otherFormData.funderType && otherFormData.annual_budget">
                                     <div class="relative border-b py-3">
-                                        <p class="py-2 text-h3 absolute left-[40%] top-0 bg-white text-secondary">Other Details</p>
+                                        <p class="py-2 text-h3 absolute left-[40%] top-0 bg-white text-secondary">Other
+                                            Details</p>
                                     </div>
                                     <div class="bg-white pb-4 sm:pb-4 pt-4">
                                         <div class="flex flex-col gap-2">
-                                            <label for="designation" class="text-h5 font-normal text-[#21272A]">Designation</label>
-                                            <select disabled name="" id="designation" v-model="otherFormData.designation"
+                                            <label for="designation"
+                                                class="text-h5 font-normal text-[#21272A]">Designation</label>
+                                            <select disabled name="" id="designation"
+                                                v-model="otherFormData.designation"
                                                 class="outline-none border-b-2 border-gray-400 bg-gray-50 py-3 text-gray-600 px-2">
                                                 <option value="">Select</option>
                                                 <option value="Executive Director/Chief Executive Officer/Head of CSR">
@@ -105,7 +110,8 @@
                                             <label for="annual_budget" class="text-h5 font-normal text-[#21272A]">
                                                 Organisation’s
                                                 approximate annual budget allocation</label>
-                                            <select disabled name="" id="annual_budget" v-model="otherFormData.annual_budget"
+                                            <select disabled name="" id="annual_budget"
+                                                v-model="otherFormData.annual_budget"
                                                 class="outline-none border-b-2 border-gray-400 bg-gray-50 py-3 text-gray-600 px-2">
                                                 <option value="">Select</option>
                                                 <option value="Less than INR 10 Cr.">Less than INR 10 Cr.
@@ -136,7 +142,7 @@
 </template>
 
 <script setup>
-import { ref, inject,watch, onMounted } from 'vue'
+import { ref, inject, watch, onMounted } from 'vue'
 import { TransitionChild, TransitionRoot, Dialog, DialogPanel } from '@headlessui/vue'
 import { X } from 'lucide-vue-next';
 
@@ -165,15 +171,15 @@ const get_funder_type = async () => {
     options.value = res
 }
 const get_other = async () => {
-    let res = await call('pwit.controllers.api.get_other_details', {session:store.session})
-    if(res?.code==200){
+    let res = await call('pwit.controllers.api.get_other_details', { session: store.session })
+    if (res?.code == 200) {
         otherFormData.value = res.data
-        otherFormData.value.funderType = res.data.funder_type.map((e)=>e.funder_type)
+        otherFormData.value.funderType = res.data.funder_type.map((e) => e.funder_type)
     }
 }
 const user_mobile = async () => {
     let res = await call('pwit.controllers.api.user_mobile_no', {})
-    if(res?.code==200){
+    if (res?.code == 200) {
         formData.value.mobile_no = res.data
     }
 }
@@ -230,18 +236,18 @@ const saveUserProfile = async () => {
     let res = await call('pwit.controllers.api.update_user_dt', { data: data })
     store.isOpen = false
 }
-watch(() => store.isOpen, async(val) => {
+watch(() => store.isOpen, async (val) => {
     if (val) {
-        if(auth.isLoggedIn){
-        try {
-            await call('pwit.controllers.api.check_user_details', {session:store.session})
-        } catch (error) {
-            console.log(error)
+        if (auth.isLoggedIn) {
+            try {
+                await call('pwit.controllers.api.check_user_details', { session: store.session })
+                await user_mobile()
+                await get_other()
+            } catch (error) {
+                console.log(error)
+            }
         }
-        await user_mobile()
-        await get_other()
     }
-    }
-}, { immediate: true ,deep:true})
+}, { immediate: true, deep: true })
 
 </script>
