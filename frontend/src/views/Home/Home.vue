@@ -16,14 +16,14 @@
 		<div class="w-full bg-tatary px-4 md:px-8 lg:px-20 py-6 mt-7">
 			<h4 class="text-center text-h2 font-bold text-[#21272A] my-6 font-primary tracking-wide leading-9">About the
 				tool</h4>
-			<div class="flex justify-center font-normal text-sebase text-h5 text-center tracking-wider leading-5">
-				<p>Philanthropy has a significant opportunity to amplify the impact of their grantmaking by enabling a
-					stronger and more resilient nonprofit sector. <a target="_blank"
-						href="https://www.bridgespan.org/our-global-reach/pay-what-it-takes-india-initiative"
-						class="text-secondary hover:underline"> Bridgespan’s Pay-What-ItTakes India Initiative</a> has
-					identified five principles of effective grantmaking, rooted in trust, that funders can adopt to
-					support
-					strong, resilient nonprofit partners.</p>
+			<div class="flex font-normal text-sebase text-h5 tracking-wide leading-5">
+				<p>Welcome to the <a target="_blank"
+					href="https://www.bridgespan.org/our-global-reach/pay-what-it-takes-india-initiative"
+					class="text-secondary hover:underline">  Pay-What-It-Takes (PWIT) India </a> nitiative’s Assistive Funder toolkit. Through our research and experience working 
+				with funders and nonprofits in India, we have identified five principles of effective grantmaking that philanthropic organisations and 
+				corporate social responsibility (CSR) initiatives can adopt to promote strong, resilient nonprofit partners and amplify their impact.
+				This toolkit provides a simple way for funders to assess for themselves how they can become “assistive funders” that embody the 
+				Pay-What-It-Takes principles.</p>
 			</div>
 
 			<div
@@ -97,13 +97,14 @@
 
 			</div>
 
-			<div class="flex justify-center text-sebase text-center text-h5 py-8 font-normal tracking-wider ">
-				As funders recognize the importance of making grantmaking more supportive and inclusive, there is a need
-				to pursue actionable strategies to advance on this journey. The Funder Practices Assistive Tool is an
-				open-source and freely available tool to help assess how aligned your current funding practices are with
-				the five PWIT principles and identify areas for further enhancement. Wherever you may be on your
-				journey, the tool provides next steps and recommendations for how you can make your grantmaking
-				practices more supportive and chart a path forward for more expansive forms of true cost investment.
+			<div class="flex flex-col py-8 font-normal text-sebase text-h5 tracking-wider ">
+				<p>We recommend that one individual, such as the executive director or head of CSR, lead the assessment process and include 
+					participation or consultation with key staff members and the board.</p>
+				<p class="pt-2">The tool is designed to be completed in one session. However, you can pause and return to this later. You will be provided with the 
+					opportunity to create an account to save your progress and email results to yourself after completing each section.</p>
+				<p class="pt-2">Your responses are confidential and will only be seen by The Bridgespan Group’s PWIT team and the Centre for Philanthropy for 
+					Inclusive Development (CPID) team. Any trends inferred from this data will only be made at an aggregate level (e.g., based on the 
+					type of funder).</p>
 			</div>
 		</div>
 		<!--  -->
