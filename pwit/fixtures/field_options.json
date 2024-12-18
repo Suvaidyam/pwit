@@ -275,8 +275,8 @@
   "group": null,
   "label": "We do not have written guidelines. There is a difference of opinion amongst decision makers on this aspect.",
   "modified": "2024-12-10 15:42:59.800837",
-  "name": "Organization Development-od_guidelines-1",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_guidelines-1",
+  "ref_doctype": "Organisational Development",
   "score": 1.0
  },
  {
@@ -289,8 +289,8 @@
   "group": null,
   "label": "We do not have written guidelines but may extend short-term OD support to nonprofit partners in exceptional circumstances. There are individuals amongst the decision makers in our organisation who are in favor of extending OD support to nonprofit partners.",
   "modified": "2024-12-10 15:43:51.439645",
-  "name": "Organization Development-od_guidelines-2",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_guidelines-2",
+  "ref_doctype": "Organisational Development",
   "score": 2.0
  },
  {
@@ -303,8 +303,8 @@
   "group": null,
   "label": "We have written guidelines that stipulates short-term OD support that can be provided to nonprofit partners. The decision makers in our organisation understand that context may dictate the OD needs of nonprofit partners and are amenable to customizing this on a case-by case basis.",
   "modified": "2024-12-10 15:44:29.859576",
-  "name": "Organization Development-od_guidelines-3",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_guidelines-3",
+  "ref_doctype": "Organisational Development",
   "score": 3.0
  },
  {
@@ -317,8 +317,8 @@
   "group": null,
   "label": "We have written guidelines that allows dedicated, long-term OD support to nonprofit partners. Decision-makers in our organisation understand the importance of and are committed to supporting longer-term investments in OD for nonprofit partners.",
   "modified": "2024-12-10 15:44:53.726997",
-  "name": "Organization Development-od_guidelines-4",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_guidelines-4",
+  "ref_doctype": "Organisational Development",
   "score": 4.0
  },
  {
@@ -331,8 +331,8 @@
   "group": null,
   "label": "We do not allocate any budget for OD in our annual grants.",
   "modified": "2024-12-02 20:13:13.135963",
-  "name": "Organization Development-od_budget_allocation-1",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_budget_allocation-1",
+  "ref_doctype": "Organisational Development",
   "score": 1.0
  },
  {
@@ -345,8 +345,8 @@
   "group": null,
   "label": "We do not have a formal allocation in our budget for OD. Our funding for OD typically remains less than 5%.",
   "modified": "2024-12-02 20:13:31.874873",
-  "name": "Organization Development-od_budget_allocation-2",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_budget_allocation-2",
+  "ref_doctype": "Organisational Development",
   "score": 2.0
  },
  {
@@ -359,8 +359,8 @@
   "group": null,
   "label": "We have a formal allocation in our budget for OD that typically remains less than 10%.",
   "modified": "2024-12-02 20:13:53.408961",
-  "name": "Organization Development-od_budget_allocation-3",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_budget_allocation-3",
+  "ref_doctype": "Organisational Development",
   "score": 3.0
  },
  {
@@ -373,8 +373,8 @@
   "group": null,
   "label": "We have a formal allocation in our budget for OD that typically is more than 10%.",
   "modified": "2024-12-02 20:14:28.233617",
-  "name": "Organization Development-od_budget_allocation-4",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_budget_allocation-4",
+  "ref_doctype": "Organisational Development",
   "score": 4.0
  },
  {
@@ -387,8 +387,8 @@
   "group": null,
   "label": "We do not provide any OD grants to nonprofit partners.\nOR\nWe only provide some short-duration training support to nonprofit partners.",
   "modified": "2024-12-02 20:16:19.284814",
-  "name": "Organization Development-od_approaches_adopted_01-1",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_approaches_adopted_01-1",
+  "ref_doctype": "Organisational Development",
   "score": 1.0
  },
  {
@@ -401,8 +401,8 @@
   "group": null,
   "label": "We may provide short-term OD grants linked to the programmatic grants, on a case-by-case basis.\nAND\nWe may provide non- financial OD support to nonprofit partners either directly or in partnership with experts / externals.",
   "modified": "2024-12-02 20:17:28.806084",
-  "name": "Organization Development-od_approaches_adopted_01-2",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_approaches_adopted_01-2",
+  "ref_doctype": "Organisational Development",
   "score": 2.0
  },
  {
@@ -415,8 +415,8 @@
   "group": null,
   "label": "We provide dedicated OD funding to most of our nonprofit partners.\nAND\nWe may provide non- financial OD support to nonprofit partners either directly or in partnership with experts / externals.",
   "modified": "2024-12-02 20:19:09.299744",
-  "name": "Organization Development-od_approaches_adopted_01-3",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_approaches_adopted_01-3",
+  "ref_doctype": "Organisational Development",
   "score": 3.0
  },
  {
@@ -429,8 +429,8 @@
   "group": null,
   "label": "We provide dedicated OD funding to all nonprofit partners.\nAND\nWe may provide non- financial OD support to nonprofit partners either directly or in partnership with experts / externals.",
   "modified": "2024-12-02 20:19:45.758610",
-  "name": "Organization Development-od_approaches_adopted_01-4",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_approaches_adopted_01-4",
+  "ref_doctype": "Organisational Development",
   "score": 4.0
  },
  {
@@ -443,8 +443,8 @@
   "group": null,
   "label": "We do not provide any OD grants to our nonprofit partners.",
   "modified": "2024-12-02 20:20:40.161112",
-  "name": "Organization Development-od_approaches_adopted_02-1",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_approaches_adopted_02-1",
+  "ref_doctype": "Organisational Development",
   "score": 1.0
  },
  {
@@ -457,8 +457,8 @@
   "group": null,
   "label": "We fund our nonprofit parnters only on select, predertermined OD aspects, as prescribed by our guidelines.\nWe do not consult nonprofit partners to understand present and future OD needs during the proposal phase.\nWe do not support or advise nonprofits on articulating their OD needs.",
   "modified": "2024-12-02 20:21:12.809591",
-  "name": "Organization Development-od_approaches_adopted_02-2",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_approaches_adopted_02-2",
+  "ref_doctype": "Organisational Development",
   "score": 2.0
  },
  {
@@ -471,8 +471,8 @@
   "group": null,
   "label": "While we have preference towards funding select OD aspects, we occasionally provide flexibility to nonprofit partners to choose areas beyond those.\nWe sometimes consult nonprofit partners during the proposal phase to guage alignments between our preferred areas of OD support and nonprofit parnters’ OD needs. We do not support or advise nonprofits on articulating their OD needs.",
   "modified": "2024-12-02 20:21:49.366511",
-  "name": "Organization Development-od_approaches_adopted_02-3",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_approaches_adopted_02-3",
+  "ref_doctype": "Organisational Development",
   "score": 3.0
  },
  {
@@ -485,8 +485,8 @@
   "group": null,
   "label": "We fund OD areas based on nonprofit partners’ needs and context.\nWe, ourselves or through support from external partners, help nonprofit partners to build a holistic OD plan.\nThe focus is on building a trusted relationship with our nonprofit partners.",
   "modified": "2024-12-02 20:22:12.978150",
-  "name": "Organization Development-od_approaches_adopted_02-4",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_approaches_adopted_02-4",
+  "ref_doctype": "Organisational Development",
   "score": 4.0
  },
  {
@@ -499,8 +499,8 @@
   "group": null,
   "label": "We do not make an effort to communicate our approach internally. Internal team members develop an understanding based on prevalent practices.",
   "modified": "2024-12-02 20:23:07.401236",
-  "name": "Organization Development-od_communication_channels_01-1",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_communication_channels_01-1",
+  "ref_doctype": "Organisational Development",
   "score": 1.0
  },
  {
@@ -513,8 +513,8 @@
   "group": null,
   "label": "We don’t use our website or other official means to communicate our approach on OD support internally.\nOur approach is often communicated at the senior management and board level.\nThere is no mechanism to gather feedback on our guidelines from internal teams.",
   "modified": "2024-12-02 20:23:47.460280",
-  "name": "Organization Development-od_communication_channels_01-2",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_communication_channels_01-2",
+  "ref_doctype": "Organisational Development",
   "score": 2.0
  },
  {
@@ -527,8 +527,8 @@
   "group": null,
   "label": "We don’t use our website or other official means to communicate our guidelines on OD support internally. Most teams,\nincluding the board and senior management, are aware of the guidelines. We sometimes gather internal feedback on the guidelines with the intent to improve our grantmaking approach.",
   "modified": "2024-12-02 20:24:13.240196",
-  "name": "Organization Development-od_communication_channels_01-3",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_communication_channels_01-3",
+  "ref_doctype": "Organisational Development",
   "score": 3.0
  },
  {
@@ -541,8 +541,8 @@
   "group": null,
   "label": "We communicate our approach on OD support across the organisation using our website and other official means. All our teams have a clear understanding of the guidelines.\nThis is documented and available for internal access.\nWe regularly gather internal feedback on the guidelines to improve our grantmaking approach.",
   "modified": "2024-12-02 20:24:48.010889",
-  "name": "Organization Development-od_communication_channels_01-4",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_communication_channels_01-4",
+  "ref_doctype": "Organisational Development",
   "score": 4.0
  },
  {
@@ -555,8 +555,8 @@
   "group": null,
   "label": "We do not communicate our approach on OD support to nonprofits or make this information publicly available.",
   "modified": "2024-12-02 20:25:14.410341",
-  "name": "Organization Development-od_communication_channels_02-1",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_communication_channels_02-1",
+  "ref_doctype": "Organisational Development",
   "score": 1.0
  },
  {
@@ -569,8 +569,8 @@
   "group": null,
   "label": "We don’t use our website or other official means to communicate our approach on OD support to nonprofits or the wider sector. Information is shared with nonprofits and select sector stakeholders on a one-on-one basis when the opportunity arises.\nOur communication with nonprofits primarily follows a one-way approach, with no / limited effort to seek their feedback. For cases where exceptions are made, the reason is not communicated to nonprofits.",
   "modified": "2024-12-02 20:25:43.520240",
-  "name": "Organization Development-od_communication_channels_02-2",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_communication_channels_02-2",
+  "ref_doctype": "Organisational Development",
   "score": 2.0
  },
  {
@@ -583,8 +583,8 @@
   "group": null,
   "label": "We use our website or other official means to communicate our guidelines on OD support to nonprofits and the wider sector.\nInformation is shared with nonprofits before and during the proposal process. We sometimes share this information with the sector via formal communication channels as well.\nWe maintain communication with nonprofits, occasionally considering their feedback when deemed relevant or necessary.",
   "modified": "2024-12-02 20:26:30.743014",
-  "name": "Organization Development-od_communication_channels_02-3",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_communication_channels_02-3",
+  "ref_doctype": "Organisational Development",
   "score": 3.0
  },
  {
@@ -597,8 +597,8 @@
   "group": null,
   "label": "We use our website or official means to communicate our guidelines on OD support to nonprofits and the wider sector.\nWe maintain communication with nonprofits and continuously seek their feedback to strengthen our grantmaking approach.",
   "modified": "2024-12-02 20:27:08.120768",
-  "name": "Organization Development-od_communication_channels_02-4",
-  "ref_doctype": "Organization Development",
+  "name": "Organisational Development-od_communication_channels_02-4",
+  "ref_doctype": "Organisational Development",
   "score": 4.0
  },
  {

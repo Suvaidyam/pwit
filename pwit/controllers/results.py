@@ -15,7 +15,7 @@ class Result:
             },
             {
                 'label':'Invest in organisational development',
-                'name':'Organization Development'
+                'name':'Organisational Development'
             },
             {
                 'label':'Building financial resilience',

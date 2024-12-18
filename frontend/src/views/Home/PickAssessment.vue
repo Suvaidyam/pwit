@@ -131,7 +131,7 @@
                                                 </div>
                                                 <p class="text-h5 font-normal text-sebase ">Invest in organisational development</p>
                                             </div>
-                                            <router-link to="/funder/organization-development" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">{{ Object.keys(last_draft).length && last_draft.some(item => item.doctype === 'Organization Development')?'Continue':'View' }}</router-link>
+                                            <router-link to="/funder/organisational-development" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">{{ Object.keys(last_draft).length && last_draft.some(item => item.doctype === 'Organisational Development')?'Continue':'View' }}</router-link>
                                         </div>
                                         <div class="flex justify-between items-center gap-1">
                                             <div class="flex gap-2 items-center">

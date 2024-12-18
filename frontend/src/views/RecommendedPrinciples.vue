@@ -178,8 +178,8 @@ const data = ref([
         name1: 'INVEST IN ORGANISATIONAL DEVELOPMENT',
         description: 'Organisational development (OD) investments build and strengthen a range of critical efficiency and growth-oriented capabilities that enable nonprofits to deliver greater impact.',
         icon: 'ChartNoAxesCombined',
-        route: '/funder/organization-development',
-        doctype: 'Organization Development',
+        route: '/funder/organisational-development',
+        doctype: 'Organisational Development',
         color: '#029fd9',
     },
     {
