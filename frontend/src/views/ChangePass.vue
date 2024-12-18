@@ -1,6 +1,10 @@
 <template>
     <div class="w-full flex flex-col gap-6 items-center justify-center h-full px-4">
-        <img :src="`/files/logo.png`" alt="" class="w-52">
+        <img src="../assets/navbar.png" alt="" class="w-52">
+        <!-- <div class="flex flex-col items-center">
+            <p class="text-secondary text-h4 font-semibold">Assistive Funder Toolkit</p>
+            <p class="text-h5">(Developed by the Pay-What-It-Takes India Initiative)</p>
+        </div> -->
         <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4 md:max-w-xl border rounded-md shadow-md">
             <div class="block justify-center gap-5 items-center">
             </div>
@@ -19,7 +23,8 @@
                     <label for="Confirm_pass" class="block text-gray-800 text-sm pb-1">
                         Confirm Password
                     </label>
-                    <input v-model="confirmPassword" @input="confirm_password" id="Confirm_pass" :type="show_pass ? 'text' : 'password'"
+                    <input v-model="confirmPassword" @input="confirm_password" id="Confirm_pass"
+                        :type="show_pass ? 'text' : 'password'"
                         class="outline-none w-full border-b-2  bg-gray-100 placeholder:text-[#697077] text-sm px-3 h-12 text-h5"
                         placeholder="Confirm New Password">
                     <span class="absolute right-2 top-11 font-semibold text-gray-500 text-xs cursor-pointer"
@@ -29,7 +34,13 @@
                     </span>
                     <p v-if="errorCofirm" class="text-red-500 text-xs mt-1 -bottom-5">{{ errorCofirm }}</p>
                 </div>
-                <button @click="handleClick" class="w-full text-white bg-secondary py-2 px-8 rounded-md">
+                <button @click="handleClick"
+                    class="w-full flex items-center justify-center gap-2 text-white bg-secondary py-2 px-8 rounded-md">
+                    <div v-if="loading" class="h-5 w-5 ">
+                        <div
+                            class="animate-spin h-full w-full rounded-full border-2 border-t-[#00A0DC] border-b-[#00A0DC]">
+                        </div>
+                    </div>
                     Update
                 </button>
 
@@ -47,12 +58,10 @@ import { useRoute, useRouter } from 'vue-router';
 
 
 
-const store = inject('store');
-const auth = inject('$auth');
-const call = inject('$call');
 const newPassword = ref('');
 const confirmPassword = ref('');
 const show_pass = ref(false)
+const loading = ref(false)
 const route = useRoute();
 const router = useRouter();
 const errorMessage = ref('')
@@ -90,7 +99,8 @@ const handleClick = async () => {
         formData.append('confirm_password', confirmPassword.value);
         formData.append('logout_all_sessions', 1);
         formData.append('cmd', 'frappe.core.doctype.user.user.update_password');
-        if (errorCofirm.value =='' && errorMessage.value == '') {
+        if (errorCofirm.value == '' && errorMessage.value == '' && newPassword.value != '' && confirmPassword.value != '') {
+            loading.value = true;
             try {
                 const response = await fetch('/', {
                     method: 'POST',
@@ -105,13 +115,20 @@ const handleClick = async () => {
                     newPassword.value = '';
                     confirmPassword.value = '';
                     setTimeout(() => {
+                        loading.value = false;
                         router.push('/')
                     }, 500);
                 } else {
                     toast.error(`Email ${response.statusText}`);
+                    setTimeout(() => {
+                        loading.value = false;
+                    }, 500);
                 }
             } catch (error) {
                 toast.error('Please setup email settings');
+                setTimeout(() => {
+                    loading.value = false;
+                }, 500);
             }
         }
     }
