@@ -83,15 +83,16 @@ class AuthAPIs:
     def send_custom_welcome_email_method(doc):
         link= AuthAPIs.reset_password(doc)
         url = frappe.utils.get_url()
-        message_content = frappe.render_template("pwit/templates/pages/welcome_email_template.html",{"doc":doc, "verification_link": link, "url": url})
+        message_content = frappe.render_template("pwit/templates/pages/verify_email.html",{"doc":doc, "verification_link": link, "url": url})
         now = frappe.flags.in_test or frappe.flags.in_install
         frappe.sendmail(
             recipients=[doc.email],
-            subject= 'Welcome to The Bridgespan Group Portal',
+            subject= 'Verify Your E-mail Address',
             message=message_content,
             delayed=(not now) if now is not None else doc.flags.delay_emails,
             retry=3,
         )
+   
     def reset_custom_password_method(doc, send_email=True):
         link= AuthAPIs.reset_password(doc)
         message_content = frappe.render_template("pwit/templates/pages/forget_email_template.html",{"doc":doc, "verification_link": link})
@@ -103,6 +104,7 @@ class AuthAPIs:
             delayed=(not now) if now is not None else doc.flags.delay_emails,
             retry=3,
         )
+   
     def reset_password(self):  
         key = frappe.generate_hash()
         hashed_key = sha256(key.encode('utf-8')).hexdigest()
@@ -143,6 +145,7 @@ class AuthAPIs:
                 return {'code': 400, 'msg': 'Session not found'}
         else:
             return {'code': 200, 'data':{},'msg':'Already set'}
+   
     def get_other_details(session):
         session_details = {}
         existing_session = frappe.get_all(
