@@ -66,6 +66,7 @@ const route = useRoute();
 const router = useRouter();
 const errorMessage = ref('')
 const errorCofirm = ref('')
+const call = inject('$call');
 
 const validatePassword = () => {
     const minLength = 8;
@@ -92,25 +93,19 @@ const confirm_password = () => {
     }
 }
 const handleClick = async () => {
-    if (route.query.key) {
-        const formData = new FormData();
-        formData.append('key', route.query.key);
-        formData.append('new_password', newPassword.value);
-        formData.append('confirm_password', confirmPassword.value);
-        formData.append('logout_all_sessions', 1);
-        formData.append('cmd', 'frappe.core.doctype.user.user.update_password');
+    if (route.query.key) { 
         if (errorCofirm.value == '' && errorMessage.value == '' && newPassword.value != '' && confirmPassword.value != '') {
             loading.value = true;
+ 
             try {
-                const response = await fetch('/', {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                    },
+                let response = await call('pwit.controllers.api.custom_update_password', {
+                    key: route.query.key,
+                    new_password: newPassword.value,
+                    confirm_password: confirmPassword.value,
+                    logout_all_sessions: 1
                 });
 
-                if (response.ok) {
-                    const result = await response.json();
+                if (response) { 
                     toast.success('Password updated successfully');
                     newPassword.value = '';
                     confirmPassword.value = '';
@@ -119,7 +114,7 @@ const handleClick = async () => {
                         router.push('/')
                     }, 500);
                 } else {
-                    toast.error(`Email ${response.statusText}`);
+                    toast.error(`Email ${response.message}`);
                     setTimeout(() => {
                         loading.value = false;
                     }, 500);

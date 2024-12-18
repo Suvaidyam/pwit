@@ -80,18 +80,6 @@ class AuthAPIs:
         doc.save(ignore_permissions=True)
         return {'code': 200, 'data': doc}
     
-    def send_welcome_email(doc):
-        url = frappe.utils.get_url()
-        message_content = frappe.render_template("pwit/templates/pages/welcome_email_template.html",{"url": url})
-        now = frappe.flags.in_test or frappe.flags.in_install
-        frappe.sendmail(
-            recipients=[doc.email],
-            subject= 'Welcome to The Bridgespan Group Portal',
-            message=message_content,
-            delayed=(not now) if now is not None else doc.flags.delay_emails,
-            retry=3,
-        )
-   
     def send_custom_welcome_email_method(doc):
         link= AuthAPIs.reset_password(doc)
         url = frappe.utils.get_url()
@@ -99,7 +87,7 @@ class AuthAPIs:
         now = frappe.flags.in_test or frappe.flags.in_install
         frappe.sendmail(
             recipients=[doc.email],
-            subject= 'Welcome to The Bridgespan Group Portal',
+            subject= 'Verify Your E-mail Address',
             message=message_content,
             delayed=(not now) if now is not None else doc.flags.delay_emails,
             retry=3,
