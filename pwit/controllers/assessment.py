@@ -340,14 +340,14 @@ class AssessmentAPIs:
             myp = frappe.get_all('Multi-year Partnerships', filters={'session': ['in',session],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
             core_costs = frappe.get_all('Core Costs', filters={'session': ['in',session],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
             dei = frappe.get_all('Diversity Equity Inclusion', filters={'session': ['in',session],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
-            od = frappe.get_all('Organization Development', filters={'session': ['in',session],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
+            od = frappe.get_all('Organisational Development', filters={'session': ['in',session],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
             fr = frappe.get_all('Financial Resilience', filters={'session': ['in',session],'docstatus':0}, fields=['modified'],order_by='modified desc', limit_page_length=1)
             # Consolidate all results into a single list with labels
             all_draft = [
                 {"doctype": "Multi-year Partnerships",'route':'multi-year-partnerships', "modified": myp[0]['modified']} if myp else None,
                 {"doctype": "Core Costs" ,'route':'core-costs', "modified": core_costs[0]['modified']} if core_costs else None,
                 {"doctype": "Diversity Equity Inclusion" ,'route':'diversity-equity-inclusion', "modified": dei[0]['modified']} if dei else None,
-                {"doctype": "Organization Development" ,'route':'organization-development', "modified": od[0]['modified']} if od else None,
+                {"doctype": "Organisational Development" ,'route':'organisational-development', "modified": od[0]['modified']} if od else None,
                 {"doctype": "Financial Resilience" ,'route':'financial-resilience', "modified": fr[0]['modified']} if fr else None,
                 {"doctype": "Funder Diagnostic" ,'route':'funder-diagnostic', "modified": fun[0]['modified']} if fun else None
             ]
@@ -372,14 +372,14 @@ class AssessmentAPIs:
             myp = frappe.get_all('Multi-year Partnerships', filters={'session': ['in',session_id],'docstatus':1}, fields=['creation'],order_by='creation desc', limit_page_length=1)
             core_costs = frappe.get_all('Core Costs', filters={'session': ['in',session_id],'docstatus':1}, fields=['creation'],order_by='creation desc', limit_page_length=1)
             dei = frappe.get_all('Diversity Equity Inclusion', filters={'session': ['in',session_id],'docstatus':1}, fields=['creation'],order_by='creation desc', limit_page_length=1)
-            od = frappe.get_all('Organization Development', filters={'session': ['in',session_id],'docstatus':1}, fields=['creation'],order_by='creation desc', limit_page_length=1)
+            od = frappe.get_all('Organisational Development', filters={'session': ['in',session_id],'docstatus':1}, fields=['creation'],order_by='creation desc', limit_page_length=1)
             fr = frappe.get_all('Financial Resilience', filters={'session': ['in',session_id],'docstatus':1}, fields=['creation'],order_by='creation desc', limit_page_length=1)
             # Consolidate all results into a single list with labels
             last_sub = [
                 {"doctype": "Multi-year Partnerships", "creation": myp[0]['creation']} if myp else None,
                 {"doctype": "Core Costs" , "creation": core_costs[0]['creation']} if core_costs else None,
                 {"doctype": "Diversity Equity Inclusion" , "creation": dei[0]['creation']} if dei else None,
-                {"doctype": "Organization Development" ,"creation": od[0]['creation']} if od else None,
+                {"doctype": "Organisational Development" ,"creation": od[0]['creation']} if od else None,
                 {"doctype": "Financial Resilience" ,"creation": fr[0]['creation']} if fr else None,
             ]
 

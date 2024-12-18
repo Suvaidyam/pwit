@@ -6,7 +6,7 @@
                 <router-link to="/">Home</router-link>
                 / <router-link to="/funder-diagnostic">Funder Diagnostic</router-link> / <router-link
                     to="/recommended">Recommended Principles</router-link> /
-                <router-link :to="`/funder/${route.params.category}`">{{ title=='Organization Development'?' Organisation Development':title }}</router-link>
+                <router-link :to="`/funder/${route.params.category}`">{{ title=='Organisational Development'?' Organisation Development':title }}</router-link>
                 <span class="text-gray-400 truncate"> / Results and Recommendations</span>
             </p> -->
             <router-link to="/" class="flex text-trbase items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|

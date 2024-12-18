@@ -22,7 +22,7 @@
                             <IndianRupee v-if="items.ref_doctype == 'Core Costs'" class="w-5 h-5" />
                             <Handshake v-if="items.ref_doctype == 'Multi-year Partnerships'" class="w-5 h-5" />
                             <PiggyBank v-if="items.ref_doctype == 'Financial Resilience'" class="w-5 h-5" />
-                            <ChartNoAxesCombined v-if="items.ref_doctype == 'Organization Development'" class="w-5 h-5" />
+                            <ChartNoAxesCombined v-if="items.ref_doctype == 'Organisational Development'" class="w-5 h-5" />
                             <Scale v-if="items.ref_doctype == 'Diversity Equity Inclusion'" class="w-5 h-5" />
                         </div>
                         <p class="">{{ items.label }}</p>
@@ -41,7 +41,7 @@
                             <IndianRupee v-if="items.ref_doctype == 'Core Costs'" class="w-5 h-5" />
                             <Handshake v-if="items.ref_doctype == 'Multi-year Partnerships'" class="w-5 h-5" />
                             <PiggyBank v-if="items.ref_doctype == 'Financial Resilience'" class="w-5 h-5" />
-                            <ChartNoAxesCombined v-if="items.ref_doctype == 'Organization Development'" class="w-5 h-5" />
+                            <ChartNoAxesCombined v-if="items.ref_doctype == 'Organisational Development'" class="w-5 h-5" />
                             <Scale v-if="items.ref_doctype == 'Diversity Equity Inclusion'" class="w-5 h-5" />
                         </div>
                         <p >{{ items.label }}</p>

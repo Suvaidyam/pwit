@@ -51,7 +51,7 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Organization Development",
+   "options": "Organisational Development",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
@@ -106,13 +106,14 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-04 11:41:38.405377",
+ "modified": "2024-12-18 17:05:18.202688",
  "modified_by": "Administrator",
  "module": "Assessment",
- "name": "Organization Development",
+ "name": "Organisational Development",
  "owner": "Administrator",
  "permissions": [
   {
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,

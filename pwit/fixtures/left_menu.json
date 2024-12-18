@@ -29,11 +29,11 @@
   "docstatus": 0,
   "doctype": "Left-Menu",
   "icon": "",
-  "label": "Organisation Development",
-  "modified": "2024-12-11 13:30:43.526929",
+  "label": "Organisational Development",
+  "modified": "2024-12-18 16:39:53.974186",
   "name": "Organization Development",
   "priority": 3,
-  "ref_doctype": "Organization Development"
+  "ref_doctype": "Organisational Development"
  },
  {
   "code": "fr",
