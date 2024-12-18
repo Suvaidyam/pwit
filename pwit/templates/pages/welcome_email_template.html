@@ -36,21 +36,42 @@
         overflow: hidden;
     }
 
+    .top-header {
+        position: relative;
+        background-color: #255B97;
+        width: 100%;
+        height: 160px;
+        padding-top: 20px;
+    }
+
     .header-logo {
         margin: 0 auto;
     }
 
     .divider {
         position: relative;
-        width: 182px;
-        padding: 20px 0px;
-        margin: 0px auto;
+        margin: 0px auto 10px;
+        width: 200px;
+        height: 30px;
 
     }
 
-    .line-pwit {
+    .divider::before,
+    .divider::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 90px;
         height: 2px;
-        background: white;
+        background-color: white;
+    }
+
+    .divider::before {
+        left: 0;
+    }
+
+    .divider::after {
+        right: 0;
     }
 
     .button-container {
@@ -75,7 +96,8 @@
 <body>
     <div class="center-container"> <!-- HEADER -->
         <div class="header">
-            <img src='https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734498439/logo_uywexq.png' alt="PWIT Logo" style="width: 150px; height: auto;" />
+            <img src='https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734498439/logo_uywexq.png' alt="PWIT Logo"
+                style="width: 150px; height: auto;" />
             <div
                 style="font-size: 14px; font-weight: 500; line-height: 15px; color:#002C77;font-weight:600;padding-top:7px">
                 Assistive Funder Toolkit</div>
@@ -84,19 +106,17 @@
         </div> <!-- BODY -->
         <div class="card"> <!-- Head -->
             <!-- class="head-image" -->
-            <div class="head-image" style="width: 100%; height: 160px; background-color: #255B97;">
-                <div>
-                    <div class="divider">
-                        <div class="line-pwit">
-                            <p style="position: absolute; left: 42%;top: 4px;color: white;">
-                                <img style="width: 30px;"
-                                    src="https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734501961/material-symbols--mail_fyfsli.png" />
-                            </p>
+            <div class="top-header">
+                <div class="head-image" style="width: 100%; height: 100%; background-color: #255B97;">
+                    <div>
+                        <div class="divider">
+                            <img style="width: 30px;"
+                                src="https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734501961/material-symbols--mail_fyfsli.png" />
                         </div>
+                        <p style="color: white; font-size: 22px;">Verify Your E-mail Address</p>
                     </div>
-                    <p style="color: white; font-size: 22px;">Verify Your E-mail Address</p>
-                </div>
-            </div> <!-- Body -->
+                </div> <!-- Body -->
+            </div>
             <div style="padding: 20px;">
                 <p style="text-align: start; font-size: 14px; font-weight: 400;">Hi {{doc.full_name}}</p>
                 <p style="text-align: start; padding-top: 10px; font-size: 14px; font-weight: 400;">You’re almost ready
@@ -119,23 +139,28 @@
                     <div style="text-align: center; margin-bottom: 10px;">
                         <a href="https://www.youtube.com/user/TheBridgespanGroup" target="_blank"
                             style="text-decoration: none; margin: 0 8px;">
-                            <img src='https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734502504/mdi--youtube_p6y7u3.png' alt="YouTube" style="width: 24px; height: 24px; vertical-align: middle;" />
+                            <img src='https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734502504/mdi--youtube_p6y7u3.png'
+                                alt="YouTube" style="width: 24px; height: 24px; vertical-align: middle;" />
                         </a>
                         <a href="https://www.facebook.com/BridgespanGroup/" target="_blank"
                             style="text-decoration: none; margin: 0 8px;">
-                            <img src='https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734502526/ic--baseline-facebook_mtyh7k.png' alt="Facebook" style="width: 24px; height: 24px; vertical-align: middle;" />
+                            <img src='https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734502526/ic--baseline-facebook_mtyh7k.png'
+                                alt="Facebook" style="width: 24px; height: 24px; vertical-align: middle;" />
                         </a>
                         <a href="https://twitter.com/BridgespanGroup" target="_blank"
                             style="text-decoration: none; margin: 0 8px;">
-                            <img src='https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734502523/mdi--twitter_tojzq1.png' alt="Twitter" style="width: 24px; height: 24px; vertical-align: middle;" />
+                            <img src='https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734502523/mdi--twitter_tojzq1.png'
+                                alt="Twitter" style="width: 24px; height: 24px; vertical-align: middle;" />
                         </a>
                         <a href="https://www.instagram.com/thebridgespangroup/" target="_blank"
                             style="text-decoration: none; margin: 0 8px;">
-                            <img src='https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734502524/basil--instagram-solid_jbg2c8.png' alt="Instagram" style="width: 24px; height: 24px; vertical-align: middle;" />
+                            <img src='https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734502524/basil--instagram-solid_jbg2c8.png'
+                                alt="Instagram" style="width: 24px; height: 24px; vertical-align: middle;" />
                         </a>
                         <a href="https://www.linkedin.com/company/the-bridgespan-group" target="_blank"
                             style="text-decoration: none; margin: 0 8px;">
-                            <img src='https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734502525/mdi--linkedin_quevsb.png' alt="LinkedIn" style="width: 24px; height: 24px; vertical-align: middle;" />
+                            <img src='https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734502525/mdi--linkedin_quevsb.png'
+                                alt="LinkedIn" style="width: 24px; height: 24px; vertical-align: middle;" />
                         </a>
                     </div>
 
