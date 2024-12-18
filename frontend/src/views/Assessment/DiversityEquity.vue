@@ -54,7 +54,7 @@
                                             </button>
                                             <template #content>
                                                 <div class="border-2 shadow-lg rounded-md bg-white p-3 py-2">
-                                                    <a href="https://www.opensocietyfoundations.org/publications/advancing-diversity-equity-and-inclusion-in-grant-making"
+                                                    <a target="_blank" href="https://www.opensocietyfoundations.org/publications/advancing-diversity-equity-and-inclusion-in-grant-making"
                                                         class="text-sm ">
                                                         “ <span class="text-blue-600">Advancing Diversity, Equity and
                                                             inclusion in Grantmaking.</span>”

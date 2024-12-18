@@ -134,3 +134,65 @@ def get_other_details(session):
 @frappe.whitelist(allow_guest=True)
 def user_mobile_no():
     return AuthAPIs.user_mobile_no()
+
+from frappe.auth import MAX_PASSWORD_SIZE
+from frappe.core.doctype.user.user import test_password_strength, handle_password_test_fail,_get_user_for_update_password,reset_user_data
+from frappe.utils import (
+	cint,
+	today
+)
+from frappe.utils.password import update_password as _update_password
+from frappe.website.utils import get_home_page
+from frappe.apps import get_default_path
+from frappe import _
+import frappe
+@frappe.whitelist(allow_guest=True, methods=["POST"])
+def custom_update_password(
+    new_password: str, logout_all_sessions: int = 0, key: str | None = None, old_password: str | None = None
+):
+
+    if len(new_password) > MAX_PASSWORD_SIZE:
+        frappe.throw(_("Password size exceeded the maximum allowed size."))
+
+    result = test_password_strength(new_password)
+    feedback = result.get("feedback", None)
+
+    if feedback and not feedback.get("password_policy_validation_passed", False):
+        handle_password_test_fail(feedback)
+
+    res = _get_user_for_update_password(key, old_password)
+    if res.get("message"):
+        frappe.local.response.http_status_code = 410
+        return res["message"]
+    else:
+        user = res["user"]
+
+    logout_all_sessions = cint(logout_all_sessions) or frappe.get_system_settings("logout_on_password_reset")
+    _update_password(user, new_password, logout_all_sessions=cint(logout_all_sessions))
+
+    user_doc, redirect_url = reset_user_data(user)
+    newurl = frappe.utils.get_url()
+    email = frappe.db.get_value("User", user, "email")
+    message_content = frappe.render_template("pwit/templates/pages/welcome_email_template.html",{"url": newurl+'/pwit'})
+    frappe.sendmail(
+        recipients=[email],
+        subject= 'Welcome to The Bridgespan Group Portal',
+        message=message_content,
+        retry=3
+    )
+    # get redirect url from cache
+    redirect_to = frappe.cache.hget("redirect_after_login", user)
+    if redirect_to:
+        redirect_url = redirect_to
+        frappe.cache.hdel("redirect_after_login", user)
+
+    frappe.local.login_manager.login_as(user)
+
+    frappe.db.set_value("User", user, "last_password_reset_date", today())
+    frappe.db.set_value("User", user, "reset_password_key", "")
+
+    if user_doc.user_type == "System User":
+        return get_default_path() or "/app"
+    else:
+        return redirect_url or get_default_path() or get_home_page()
+
