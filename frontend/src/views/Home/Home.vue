@@ -19,7 +19,7 @@
 			<div class="flex font-normal text-sebase text-h5 tracking-wide leading-5">
 				<p>Welcome to the <a target="_blank"
 					href="https://www.bridgespan.org/our-global-reach/pay-what-it-takes-india-initiative"
-					class="text-secondary hover:underline">  Pay-What-It-Takes (PWIT) India </a> nitiative’s Assistive Funder toolkit. Through our research and experience working 
+					class="text-secondary hover:underline">  Pay-What-It-Takes (PWIT) India </a> initiative’s Assistive Funder toolkit. Through our research and experience working 
 				with funders and nonprofits in India, we have identified five principles of effective grantmaking that philanthropic organisations and 
 				corporate social responsibility (CSR) initiatives can adopt to promote strong, resilient nonprofit partners and amplify their impact.
 				This toolkit provides a simple way for funders to assess for themselves how they can become “assistive funders” that embody the 
@@ -97,7 +97,7 @@
 
 			</div>
 
-			<div class="flex flex-col py-8 font-normal text-sebase text-h5 tracking-wider ">
+			<div class="flex flex-col py-8 font-normal text-sebase text-h5 ">
 				<p>We recommend that one individual, such as the executive director or head of CSR, lead the assessment process and include 
 					participation or consultation with key staff members and the board.</p>
 				<p class="pt-2">The tool is designed to be completed in one session. However, you can pause and return to this later. You will be provided with the 
@@ -115,10 +115,10 @@
 						toolkit
 						include?
 					</h1>
-					<p class="pt-2 text-h5 font-normal text-trbase text-justify leading-5 tracking-wider">The toolkit
+					<p class="pt-2 text-h5 font-normal text-trbase  leading-5 tracking-wider">The toolkit
 						includes two elements:</p>
 					<ol class="flex flex-col gap-3 mt-3 md:pl-8 list-decimal">
-						<li class="pt-2 text-justify ">
+						<li class="pt-2 ">
 							<p class="text-trbase text-h5 py-2 leading-5 inline">
 								<span class="font-bold">Funder Diagnostic</span> is a 10-minute diagnostic questionnaire regarding your
 								organisation’s funding beliefs and practices. At the end of the
@@ -129,7 +129,7 @@
 
 							</p>
 						</li>
-						<li class=" text-justify">
+						<li class="">
 							<p class="text-trbase text-h5 py-2 leading-5 inline">
 								<span class="font-bold">Assistive Guides</span> help you assess how aligned your current funding
 								practices are with each of the five principles. For the first four
@@ -157,12 +157,12 @@
 				<div class="w-full flex flex-col gap-3 order-1 md:order-2">
 					<h1 class="text-primary text-h2 font-bold font-primary leading-9 tracking-wide">What will the output
 						include?</h1>
-					<P class="text-h5 font-normal text-trbase text-justify leading-5 ">After completing the questions
+					<P class="text-h5 font-normal text-trbase  leading-5 ">After completing the questions
 						for each principle, you will receive an instant summary
 						identifying your level of practice and recommendations on how to progress to the next level. A
 						curated list of resources for each PWIT principle is also shared for you to explore further.
 					</P>
-					<P class="text-h5 font-normal text-trbase text-justify leading-5 ">Wherever you may be on your
+					<P class="text-h5 font-normal text-trbase leading-5 ">Wherever you may be on your
 						grantmaking journey, this toolkit provides concrete steps and
 						recommendations for making your work more supportive of nonprofits and more likely to achieve
 						your intended impact.</P>
