@@ -68,12 +68,12 @@
                                 <div class=" w-full pb-2">
                                     <DialogTitle class="text-h3 font-bold text-primary leading-6 font-primary">Pick an
                                         Assessment </DialogTitle>
-                                        <X @click="open_ass= false" class="text-h6 cursor-pointer absolute right-5 -top-1 mt-8" />
+                                        <X @click="open_ass= false" class="text-h6 cursor-pointer absolute right-5 -top-2 mt-8" />
                                 </div>
-                                <hr>
-                                <div class="flex flex-col gap-3 pt-1.5">
+                                <div class="flex flex-col gap-3">
                                     <div class="flex flex-col gap-2">
                                         <p class="text-sm text-[#444444]">Please select which section of the tool you would like to explore further:</p>
+                                        <hr>
                                         <h2 class="font-primary font-bold text-sebase capitalize text-h4 tracking-wider">Funder
                                             diagnostic</h2>
                                         <div class="flex justify-between items-center gap-1 border-b pb-4">

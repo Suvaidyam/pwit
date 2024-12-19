@@ -174,10 +174,12 @@ def custom_update_password(
     newurl = frappe.utils.get_url()
     email = frappe.db.get_value("User", user, "email")
     message_content = frappe.render_template("pwit/templates/pages/welcome_email_template.html",{"url": newurl+'/pwit'})
+    now = frappe.flags.in_test or frappe.flags.in_install
     frappe.sendmail(
         recipients=[email],
         subject= 'Welcome to The Bridgespan Group Portal',
         message=message_content,
+        delayed= (not now) if now is not None else user_doc.flags.delay_emails,
         retry=3
     )
     # get redirect url from cache
