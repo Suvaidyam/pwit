@@ -60,7 +60,7 @@
                                                     <a target="_blank"
                                                         href="https://www.opensocietyfoundations.org/publications/advancing-diversity-equity-and-inclusion-in-grant-making"
                                                         class="text-sm ">
-                                                        “ <span class="text-blue-600">Advancing Diversity, Equity and
+                                                        “ <span class="hover:underline ">Advancing Diversity, Equity and
                                                             inclusion in Grantmaking.</span>”
                                                     </a>
                                                     <p class="text-sm ">Open Society Foundations (OSF), July
@@ -184,12 +184,13 @@
                             </div>
                             <div class="pt-10 flex justify-end w-full">
                                 <button @click="is_dei_ass"
-                                    class="bg-secondary text-white text-h5 py-2.5 px-10 rounded-md">
+                                    class="bg-secondary text-white text-h5 py-2.5 w-full sm:w-auto sm:px-10 rounded-md">
                                     {{ Object.keys(initialData).length ? `Continue the Assessment` : `Start the
                                     Assessment`}} </button>
                             </div>
+                            <hr class="mt-3 border-[1.5px]">
                             <!-- resources -->
-                            <div class="">
+                            <div class="pt-5">
                                 <div class="flex items-center gap-4">
                                     <div class="w-7 h-7 flex items-center justify-center rounded-full bg-gray-200">
                                         <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
