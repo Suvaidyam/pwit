@@ -50,7 +50,7 @@
    "search_index": 1
   },
   {
-   "description": "{\nFinancial resilience is a nonprofit\u2019s ability to sustain its operations over the long term and withstand external stresses and shocks. Nonprofits cultivate financial \nresilience by developing prudent financial plans, monitoring financial performance, diversifying their funder base, and building reserve funds}",
+   "description": "{\nFinancial resilience is a nonprofit\u2019s ability to sustain its operations over the long term and withstand external stresses and shocks. Nonprofits cultivate financial \nresilience by developing prudent financial plans, monitoring financial performance, diversifying their funder base, and building reserve funds.}",
    "fieldname": "fr_guidelines",
    "fieldtype": "Link",
    "label": "Do you have written guidelines that clearly stipulate the financial resilience support extended to nonprofit partners?",
@@ -87,7 +87,7 @@
    "fieldname": "fr_communication_channels_02",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "How are your guidelines on financial resilience support communica ted to nonprofits (current and potential) and the wider sector?",
+   "label": "How are your guidelines on financial resilience support communicated to nonprofits (current and potential) and the wider sector?",
    "options": "Field Options",
    "reqd": 1
   }
@@ -95,7 +95,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-17 11:24:31.479784",
+ "modified": "2024-12-19 18:02:37.563011",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Financial Resilience",

@@ -150,7 +150,7 @@ const register = async () => {
         });
 
         if (res.code === 200) {
-            toast.success(res.msg);
+            toast.success('A verification email has been sent on the email address provided, please follow the link to set up your password.');
             loading.value = false;
             store.authPopup = false;
         } else {
