@@ -14,8 +14,9 @@
 		</div>
 		<!--  -->
 		<div class="w-full bg-tatary px-4 md:px-8 lg:px-20 py-6 mt-7">
-			<h4 class="text-center text-h2 font-bold text-[#21272A] my-6 font-primary tracking-wide leading-9">About the
+			<h4 class="text-center text-h2 font-bold text-[#21272A] mt-6 font-primary tracking-wide leading-9">About the
 				tool</h4>
+			<p class="text-secondary text-h4 py-2 font-semibold">How to Use the Pay-What-It-Takes (PWIT) India Assistive Funder Toolkit</p>
 			<div class="flex font-normal text-sebase text-h5 tracking-wide leading-5">
 				<p class="text-justify">Welcome to the <a target="_blank"
 					href="https://www.bridgespan.org/our-global-reach/pay-what-it-takes-india-initiative"
@@ -25,7 +26,7 @@
 				This toolkit provides a simple way for funders to assess for themselves how they can become “assistive funders” that embody the 
 				Pay-What-It-Takes principles.</p>
 			</div>
-
+			<p class="text-h4 font-semibold text-center pt-4">Pay-What-It-Takes Grantmaking Principles</p>
 			<div
 				class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-12 gap-x-3 pt-14">
 				<div class="h-[160px] flex rounded-md bg-white relative px-4 ">
@@ -109,9 +110,10 @@
 		</div>
 		<!--  -->
 		<div class=" w-full px-4 md:px-8 lg:px-20 py-6 ">
+			<p class="text-[36px] text-primary font-semibold">About the Assistive Funder Toolkit</p>
 			<div class="flex h-full items-center flex-col md:flex-row mt-5">
 				<div class="w-full flex flex-col gap-3">
-					<h1 class="text-primary text-h2 font-bold leading-9 tracking-wide font-primary">What does the
+					<h1 class="text-secondary text-h2 font-bold leading-9 tracking-wide font-primary">What does the
 						toolkit
 						include?
 					</h1>
@@ -175,7 +177,7 @@
 					<!-- <img class="w-[364px] h-[300px]" src="../../assets/left.png" alt=""> -->
 				</div>
 				<div class="w-full flex flex-col gap-3 order-1 md:order-2">
-					<h1 class="text-primary text-h2 font-bold font-primary leading-9 tracking-wide">What will the output
+					<h1 class="text-secondary text-h2 font-bold font-primary leading-9 tracking-wide">What will the output
 						include?</h1>
 					<P class="text-h5 font-normal text-trbase text-justify leading-5 ">After completing the questions
 						for each principle, you will receive an instant summary
