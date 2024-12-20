@@ -200,13 +200,13 @@ const set_policyconsent = async () => {
 		name:store.session,
 		value:policyconsent.value
 	});
-	if (res.code === 200) {
+	if (res?.code === 200) {
 		sessionStorage.setItem('policyconsent',JSON.stringify(res.data.policyconsent))
 	}
 };
 const get_last_draft = async () => {
 	const res = await call('pwit.controllers.api.get_last_draft', { });
-	if (res.code === 200) {
+	if (res?.code === 200) {
         last_draft.value = res?.data ?? {}
         if(res.data.doctype=='Diversity Equity Inclusion'){
             store.is_dei_ass=true

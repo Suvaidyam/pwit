@@ -67,6 +67,7 @@ const router = useRouter();
 const errorMessage = ref('')
 const errorCofirm = ref('')
 const call = inject('$call');
+const store = inject('store');
 
 const validatePassword = () => {
     const minLength = 8;
@@ -111,6 +112,7 @@ const handleClick = async () => {
                     confirmPassword.value = '';
                     setTimeout(() => {
                         loading.value = false;
+                        store.checkLogin=true;
                         router.push('/')
                     }, 500);
                 } else {

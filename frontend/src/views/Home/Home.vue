@@ -551,8 +551,9 @@ import FooterNav from '../../components/FooterNav.vue';
 import PickAssessment from './PickAssessment.vue';
 import ContactUs from './ContactUs.vue';
 import { IndianRupee, Handshake, PiggyBank, ChartNoAxesCombined, Scale } from 'lucide-vue-next'
+import { watch } from 'vue';
 
-// const call = inject('$call');
+const store = inject('store');
 let readmore = ref({
 	one: false,
 	two: false,
@@ -573,7 +574,14 @@ let readmore = ref({
 // onMounted(() => {
 // 	get_faqs();
 // });
-
+watch(()=>store.checkLogin, (newVal) => {
+	if(newVal){
+		store.checkLogin = false;
+		setTimeout(() => {
+			window.location.reload()
+		}, 500);
+	}
+},{immediate:true,deep:true});
 </script>
 <style scoped>
 .fade-slide-x-enter-from {
