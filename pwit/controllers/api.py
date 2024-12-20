@@ -172,8 +172,9 @@ def custom_update_password(
 
     user_doc, redirect_url = reset_user_data(user)
     newurl = frappe.utils.get_url()
+    newurl = newurl + "/pwit"
     email = frappe.db.get_value("User", user, "email")
-    message_content = frappe.render_template("pwit/templates/pages/welcome_email_template.html",{"url": newurl+'/pwit'})
+    message_content = frappe.render_template("pwit/templates/pages/welcome_email_template.html",{"url": newurl})
     now = frappe.flags.in_test or frappe.flags.in_install
     frappe.sendmail(
         recipients=[email],

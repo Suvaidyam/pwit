@@ -1,6 +1,7 @@
 import { reactive, ref } from 'vue';
 
 const auth = ref(false); 
+const checkLogin = ref(false); 
 const authPopup = ref(false); 
 const isOpen = ref(false);
 const isForgetPas = ref(false);
@@ -20,5 +21,6 @@ export const store = reactive({
     save_as_login:save_as_login.value,
     authPopup:authPopup.value,
     nextPrinciple:nextPrinciple.value,
-    is_dei_ass:is_dei_ass.value
+    is_dei_ass:is_dei_ass.value,
+    checkLogin:checkLogin.value
 });
