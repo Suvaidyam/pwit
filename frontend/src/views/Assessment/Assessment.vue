@@ -3,7 +3,7 @@
         <Breadcrumb />
         <div class="flex pt-3 flex-col md:flex-row md:items-center justify-between gap-3">
             <div class="flex items-center gap-3">
-                <h1 v-for="item in heading.filter((e)=>e.name==title)" class="text-h4 md:text-h2 font-primary font-semibold text-primary leading-7">{{ item.label }}</h1>
+                <h1 v-for="item in heading.filter((e)=>e.name==title)" class="text-h4 md:text-h2 font-primary font-semibold text-primary leading-8">{{ item.label }}</h1>
                 <p class=" w-16 min-w-16 py-1 text-center hidden md:block rounded-2xl text-red-700 bg-red-100 font-bold"
                     v-if="Object.keys(initialData).length">Draft</p>
             </div>

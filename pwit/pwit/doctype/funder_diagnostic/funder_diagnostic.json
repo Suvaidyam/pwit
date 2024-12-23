@@ -28,14 +28,14 @@
   {
    "fieldname": "core_cost_1",
    "fieldtype": "Link",
-   "label": "A lower core cost (administrative or support-function expenses not tied to a specific program)  means a nonprofit is more efficient.",
+   "label": "A lower core cost (administrative or support-function expenses not tied to a specific  programme) means a nonprofit is more efficient.",
    "options": "Field Options",
    "reqd": 1
   },
   {
    "fieldname": "od_1",
    "fieldtype": "Link",
-   "label": "We fund nonprofits when they seek money for organisational development that may not be  directly related to a program.",
+   "label": "We fund nonprofits for organisational development that may not be directly related to a  programme.",
    "options": "Field Options",
    "reqd": 1
   },
@@ -56,36 +56,36 @@
   {
    "fieldname": "core_cost_2",
    "fieldtype": "Link",
-   "label": "We rarely have a conversation with nonprofits partners to reduce core costs at the proposal stage.",
+   "label": "We rarely ask our nonprofit partners to reduce core costs at the proposal stage.",
    "options": "Field Options",
    "reqd": 1
   },
   {
-   "description": "core-cost  support.",
+   "description": "core cost support.",
    "fieldname": "core_cost_3",
    "fieldtype": "Link",
-   "label": "We encourage our nonprofit partners to find alternative sources for covering their core costs rather  than asking us to increase our ",
+   "label": "We encourage our nonprofit partners to find alternative sources for covering their core costs  rather than ask us to increase our",
    "options": "Field Options",
    "reqd": 1
   },
   {
    "fieldname": "dei_1",
    "fieldtype": "Link",
-   "label": "A  nonprofit\u2019s relationship with other credible funders is an important selection criterion for us.",
+   "label": "A nonprofit\u2019s relationship with other credible and/or large funders is an important selection  criterion for us.",
    "options": "Field Options",
    "reqd": 1
   },
   {
    "fieldname": "od_2",
    "fieldtype": "Link",
-   "label": "Nonprofits are able to do well even in the absence of organisational development.",
+   "label": "Nonprofits are able to do well even in the absence of organisational development funding.",
    "options": "Field Options",
    "reqd": 1
   },
   {
    "fieldname": "myp_2",
    "fieldtype": "Link",
-   "label": "We typically support programmes that show results within an annual funding cycle.",
+   "label": "We typically support programmes that can show results within an annual funding cycle.",
    "options": "Field Options",
    "reqd": 1
   },
@@ -106,23 +106,24 @@
   {
    "fieldname": "myp_3",
    "fieldtype": "Link",
-   "label": "The majority of our funding goes to nonprofit partners whom we have supported for a long period  of time.",
+   "label": "The majority of our funding goes to nonprofit partners whom we have supported for a long  period of time.",
    "options": "Field Options",
    "reqd": 1
   },
   {
-   "description": "benefit all sections of the community equally.",
+   "description": "benefit all segments of the community equally.",
    "fieldname": "dei_2",
    "fieldtype": "Link",
-   "label": "A special focus on marginalised communities is not necessary, a nonprofit\u2019s initiatives will typically ",
+   "label": "A special focus on marginalised communities is not necessary because a nonprofit\u2019s  initiatives will typically ",
    "options": "Field Options",
    "reqd": 1
   },
   {
+   "description": "working on a substantive issue.",
    "fieldname": "dei_3",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "The leadership composition does not matter as long as the nonprofit organisation is working on a  credible issue.",
+   "label": "The leadership composition (i.e. demographic makeup) does not matter as long as the  nonprofit organisation is ",
    "options": "Field Options",
    "reqd": 1
   },
@@ -159,7 +160,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-12 12:32:58.842281",
+ "modified": "2024-12-23 18:46:55.500933",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Funder Diagnostic",

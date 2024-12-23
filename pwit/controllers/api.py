@@ -178,7 +178,7 @@ def custom_update_password(
     now = frappe.flags.in_test or frappe.flags.in_install
     frappe.sendmail(
         recipients=[email],
-        subject= 'Welcome to The Bridgespan Group Portal',
+        subject= 'Welcome to the Bridgespan Group portal',
         message=message_content,
         delayed= (not now) if now is not None else user_doc.flags.delay_emails,
         retry=3
