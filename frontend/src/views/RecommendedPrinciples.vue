@@ -28,12 +28,7 @@
                         </router-link>
                     </div>
                     <p class="text-sebase pt-3  font-normal text-sm text-justify">
-                        Funders can pursue or advance their journey on one or more principles; however, we recognize
-                        that a step-by-step approach
-                        would allow this exercise to become more meaningful and effective. This section presents three
-                        entry points for you to initiate
-                        your journey; however, you may select whichever principles you would like to explore given your
-                        focus.
+                        Getting better at the five high-impact PWIT funding principles starts with assessing where you are today. Based on your results from the Funder Diagnostic, we recommend prioritising the three principles below, but you may choose to assess your organisation on any or all of the five principles.
                     </p>
                 </div>
                 <div class="flex items-center justify-center my-14">
@@ -101,7 +96,7 @@
                 <div class="flex items-center justify-center my-14">
                     <div class="border-t border-[#D0D1D3] flex-grow"></div>
                     <p class="px-4  text-sebase font-bold text-h4 font-primary ">Additional PWIT principles to explore
-                        principles</p>
+                    </p>
                     <div class="border-t border-[#D0D1D3] flex-grow"></div>
                 </div>
                 <Loader v-if="loading" />

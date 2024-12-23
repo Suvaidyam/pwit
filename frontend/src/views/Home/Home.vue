@@ -14,9 +14,9 @@
 		</div>
 		<!--  -->
 		<div class="w-full bg-tatary px-4 md:px-8 lg:px-20 py-6 mt-7">
-			<h4 class="text-center text-h2 font-bold text-[#21272A] mt-6 font-primary tracking-wide leading-9">About the
-				tool</h4>
-			<p class="text-secondary text-h4 py-2 font-semibold">How to Use the Pay-What-It-Takes (PWIT) India Assistive Funder Toolkit</p>
+			<!-- <h4 class="text-center text-h2 font-bold text-[#21272A] mt-6 font-primary tracking-wide leading-9">About the
+				tool</h4> -->
+			<p class="text-secondary text-h3 py-2 font-semibold">How to Use the Pay-What-It-Takes (PWIT) India Assistive Funder Toolkit</p>
 			<div class="flex font-normal text-sebase text-h5 tracking-wide leading-5">
 				<p class="text-justify">Welcome to the <a target="_blank"
 					href="https://www.bridgespan.org/our-global-reach/pay-what-it-takes-india-initiative"
@@ -26,72 +26,72 @@
 				This toolkit provides a simple way for funders to assess for themselves how they can become “assistive funders” that embody the 
 				Pay-What-It-Takes principles.</p>
 			</div>
-			<p class="text-h4 font-semibold text-center pt-4">Pay-What-It-Takes Grantmaking Principles</p>
+			<p class="text-[18px] font-semibold text-center pt-4 pb-1">Pay-What-It-Takes Grantmaking Principles</p>
 			<div
 				class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-12 gap-x-3 pt-14">
-				<div class="h-[160px] flex rounded-md bg-white relative px-4 ">
+				<div class="h-[170px] flex rounded-md bg-white relative px-4 ">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8  tracking-wider border-[#59467b] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						<Handshake class="w-7 h-7" />
 					</div>
 					<div class="flex flex-col justify-around gap-2 pt-10 pb-4">
-						<p class="text-[#42217c] text-center font-bold text-h5 uppercase tracking-wider leading-4">
+						<p class="text-[#42217c] text-center font-bold text-[15px] uppercase tracking-wider leading-4">
 							Develop Multiyear Funder-Nonprofit Partnerships
 						</p>
-						<p class="text-h6 text-center leading-3 font-bold ">Partner for the long term and build mutual
+						<p class="text-h6 text-center leading-4 font-semibold ">Partner for the long term and build mutual
 							trust with NGOs</p>
 					</div>
 
 				</div>
-				<div class="h-[160px] flex justify-center rounded-md bg-white relative px-4 ">
+				<div class="h-[170px] flex justify-center rounded-md bg-white relative px-4 ">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#136096] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						<IndianRupee class="w-7 h-7" />
 					</div>
 					<div class="flex flex-col justify-around gap-2 pt-10 pb-4">
-						<p class="text-[#136096] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
+						<p class="text-[#136096] text-center font-bold text-[15px] uppercase  tracking-wider leading-5">
 							Pay a fair share of core costs
 						</p>
-						<p class="text-h6 font-bold text-center leading-3">Cover NGOs' expenses for day-to-day
+						<p class="text-h6 font-semibold text-center leading-4">Cover NGOs' expenses for day-to-day
 							operations</p>
 					</div>
 
 				</div>
-				<div class="h-[160px] flex justify-center rounded-md bg-white relative px-4">
+				<div class="h-[170px] flex justify-center rounded-md bg-white relative px-4">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#029fd9] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						<ChartNoAxesCombined class="w-7 h-7" />
 					</div>
 					<div class="flex flex-col gap-2 justify-around pt-10 pb-4">
-						<p class="text-[#029fd9] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
+						<p class="text-[#029fd9] text-center font-bold text-[15px] uppercase  tracking-wider leading-5">
 							Invest in organisational development
 						</p>
-						<p class="text-h6 font-bold text-center leading-3">Support NGOs' growth in key areas</p>
+						<p class="text-h6 font-semibold text-center leading-4">Support NGOs' growth in key areas</p>
 					</div>
 				</div>
-				<div class="h-[160px] flex rounded-md bg-white relative px-4">
+				<div class="h-[170px] flex rounded-md bg-white relative px-4">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#058248] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						<PiggyBank class="w-7 h-7" />
 					</div>
 					<div class="flex flex-col gap-2 justify-around pt-10 pb-4">
-						<p class="text-[#058248] text-center font-bold text-h5 uppercase  tracking-wider leading-4">
+						<p class="text-[#058248] text-center font-bold text-[15px] uppercase  tracking-wider leading-5">
 							Build Financial Resilience
 						</p>
-						<p class="text-h6 font-bold text-center leading-3">Contribute to reserves, or corpus, that
+						<p class="text-h6 font-semibold text-center leading-4">Contribute to reserves, or corpus, that
 							provide a safety net for NGOs</p>
 					</div>
 				</div>
-				<div class="h-[160px] flex rounded-md bg-white relative px-4 ">
+				<div class="h-[170px] flex rounded-md bg-white relative px-4 ">
 					<div
 						class="w-[70px] h-[70px] rounded-full border-8 border-[#f38714] absolute left-[40%] sm:left-[38%] md:left-[36%] lg:left-[36%] -top-10 bg-white flex justify-center items-center">
 						<Scale class="w-7 h-7" />
 					</div>
 					<div class="flex flex-col gap-2 justify-around pt-10 pb-4">
-						<p class="text-[#f38714] text-center font-bold text-h5 uppercase  tracking-wider leading-4 ">
+						<p class="text-[#f38714] text-center font-bold text-[15px] uppercase  tracking-wider leading-4">
 							Embed Diversity, Equity, and inclusion in grantmaking
 						</p>
-						<p class="text-h6 leading-3 font-bold text-center">Recognise and address the needs of
+						<p class="text-h6 leading-4 font-semibold text-center">Recognise and address the needs of
 							underserved individuals and communities</p>
 					</div>
 				</div>
@@ -110,17 +110,17 @@
 		</div>
 		<!--  -->
 		<div class=" w-full px-4 md:px-8 lg:px-20 py-6 ">
-			<p class="text-[36px] text-primary font-semibold">About the Assistive Funder Toolkit</p>
-			<div class="flex h-full items-center flex-col md:flex-row mt-5">
+			<p class="text-h2 text-primary font-semibold">About the Assistive Funder Toolkit</p>
+			<div class="flex h-full items-center flex-col md:flex-row mt-1">
 				<div class="w-full flex flex-col gap-3">
-					<h1 class="text-secondary text-h2 font-bold leading-9 tracking-wide font-primary">What does the
+					<h1 class=" text-h4 font-bold text-sebase leading-9 tracking-wide font-primary">What does the
 						toolkit
 						include?
 					</h1>
 					<p class="pt-2 text-h5 font-normal text-trbase  leading-5 tracking-wider">The toolkit
 						includes two elements:</p>
-					<ol class="flex flex-col gap-3 px-4 md:px-0 text-justify mt-3 md:pl-8 list-decimal">
-						<li class="pt-2 ">
+					<ol class="flex flex-col gap-3 px-4 md:px-0 text-justify md:pl-8 list-decimal">
+						<li>
 							<p class="text-trbase text-h5 py-2 leading-5 inline">
 								<span class="font-bold">Funder Diagnostic</span> is a 10-minute diagnostic questionnaire regarding your
 								organisation’s funding beliefs and practices. At the end of the
@@ -177,7 +177,7 @@
 					<!-- <img class="w-[364px] h-[300px]" src="../../assets/left.png" alt=""> -->
 				</div>
 				<div class="w-full flex flex-col gap-3 order-1 md:order-2">
-					<h1 class="text-secondary text-h2 font-bold font-primary leading-9 tracking-wide">What will the output
+					<h1 class=" text-h4 text-sebase font-bold font-primary leading-9 tracking-wide">What will the output
 						include?</h1>
 					<P class="text-h5 font-normal text-trbase text-justify leading-5 ">After completing the questions
 						for each principle, you will receive an instant summary
@@ -194,7 +194,7 @@
 
 
 		<div class="flex flex-col text-justify gap-3 px-4 md:px-8 lg:px-16 p">
-			<h1 class="text-h2 text-primary font-bold font-primary tracking-wide leading-9">How to get started</h1>
+			<h1 class="text-h4 text-sebase font-bold font-primary tracking-wide leading-9">How to get started?</h1>
 			<p class="text-h5 text-trbase font-normal tracking-wide leading-5">You may pick which section of the tool
 				you would like to start with.</p>
 			<p class="text-h5 text-trbase font-normal tracking-wide  leading-5">You may begin with the <span
@@ -291,12 +291,11 @@
 			</h1>
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 				<div class="flex flex-col gap-4 w-full text-center text-white font-primary text-sm">
-					<p class="text-h5 text-[#E9EAEB] font-normal text-center leading-5 tracking-wider"> Lorem
-						ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-						culpa qui officia deserunt mollit anim id est laborum.
+					<p class="text-h5 text-[#E9EAEB] font-normal text-justify leading-5 tracking-wider"> This funder tool has been developed by The Bridgespan Group as part of the Pay-What-It-Takes (PWIT) India Initiative. The PWIT principles closely align with the principles of inclusive philanthropy, and hence CPID and the PWIT India Initiative have collaborated to host this tool under the aegis of CPID. We believe this tool can help funders improve their internal practices, and unlock the potential of their nonprofit partners to deliver greater social outcomes.
+					</p>
+					<p class="text-h5 text-[#E9EAEB] font-normal text-justify leading-5 tracking-wider"> Pay-What-It-Takes (PWIT) India is a multiyear, collaborative initiative aimed at building a stronger and resilient social sector in India. Funders and their nonprofit partners share a commitment to making progress on some of society’s most pressing problems. Yet, chronic underfunding of nonprofits’ true costs – core costs, organisational development (OD) costs, financial resilience, and programmatic costs – blunts the impact for which funders and nonprofits strive. PWIT’s goal is to inform and influence the mindsets and practices of funders, NGOs, and intermediaries to advance five principles that can unlock the impact potential of NGOs, and hence advance social outcomes in India.
+					</p>
+					<p class="text-h5 text-[#E9EAEB] font-normal text-justify leading-5 tracking-wider"> The Centre for Philanthropy for Inclusive Development (CPID) is a Centre of Excellence at ISDM. It is dedicated to catalysing philanthropy as a force for inclusive development through a combination of rigorous research, learning programs, knowledge exchanges and convening diverse voices.
 					</p>
 				</div>
 			</div>
