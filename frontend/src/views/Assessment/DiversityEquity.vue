@@ -60,7 +60,7 @@
                                                     <a target="_blank"
                                                         href="https://www.opensocietyfoundations.org/publications/advancing-diversity-equity-and-inclusion-in-grant-making"
                                                         class="text-sm ">
-                                                        “ <span class="hover:underline ">Advancing Diversity, Equity and
+                                                        “ <span class="underline ">Advancing Diversity, Equity and
                                                             inclusion in Grantmaking.</span>”
                                                     </a>
                                                     <p class="text-sm ">Open Society Foundations (OSF), July
