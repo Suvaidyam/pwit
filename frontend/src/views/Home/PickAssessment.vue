@@ -74,10 +74,10 @@
                                     <div class="flex flex-col gap-2">
                                         <p class="text-sm text-[#444444]">Please select which section of the tool you would like to explore further:</p>
                                         <hr>
-                                        <h2 class="font-primary font-bold text-sebase capitalize text-h4 tracking-wider">Funder
-                                            diagnostic</h2>
                                         <div class="flex justify-between items-center gap-1 border-b pb-4">
-                                            <div class="flex gap-2 items-center">
+                                            <h2 class="font-primary font-bold text-sebase capitalize text-h4 tracking-wider">Funder
+                                                diagnostic</h2>
+                                            <!-- <div class="flex gap-2 items-center">
                                                 <div
                                                     class="w-8 h-8 min-w-8 rounded-full bg-gray-200 flex justify-center items-center">
                                                     <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +85,7 @@
                                                     </svg>
                                                 </div>
                                                 <p class="text-h5 text-sebase ">Funding practices diagnostic</p>
-                                            </div>
+                                            </div> -->
                                             <router-link to="/funder-diagnostic"
                                                 class="text-primary text-sm cursor-pointer font-bold tracking-wide">{{ Object.keys(last_draft).length && last_draft.some(item => item.doctype === 'Funder Diagnostic')?'Continue':'View' }}</router-link>
                                         </div>

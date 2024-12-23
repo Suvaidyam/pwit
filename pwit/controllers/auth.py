@@ -87,7 +87,7 @@ class AuthAPIs:
         now = frappe.flags.in_test or frappe.flags.in_install
         frappe.sendmail(
             recipients=[doc.email],
-            subject= 'Verify Your E-mail Address',
+            subject= 'Verify your e-mail address',
             message=message_content,
             delayed=(not now) if now is not None else doc.flags.delay_emails,
             retry=3,
@@ -99,7 +99,7 @@ class AuthAPIs:
         now = frappe.flags.in_test or frappe.flags.in_install
         frappe.sendmail(
             recipients=[doc.email],
-            subject= 'Password Forget',
+            subject= 'Forgot password',
             message=message_content,
             delayed=(not now) if now is not None else doc.flags.delay_emails,
             retry=3,
