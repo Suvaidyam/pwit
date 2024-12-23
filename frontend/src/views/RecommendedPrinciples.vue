@@ -62,8 +62,26 @@
                             <div class="flex items-center pt-8">
                                 <div>
                                     <h3 class="text-h5 font-bold" :class="`text-[${el.color}]`">{{ el.name1 }}</h3>
-                                    <p class="text-[trbase] text-h6 font-normal pt-1 text-justify">{{ el.description }}
-                                    </p>
+                                    <div class="text-[trbase] text-h6 font-normal pt-1 text-justify">
+                                        <template v-if="el.description.split(' ').length > 40">
+                                            <div>
+                                            {{ el.description.split(' ').slice(0, 40).join(' ') }}
+                                            <Popper :arrow="true" :hover="true" :zIndex="20" :offsetDistance="4" placement="bottom-start">
+                                                <button>
+                                                ...
+                                                </button>
+                                                <template #content>
+                                                <div class="shadow-lg sm:w-96 rounded-md bg-[#255B97] text-white p-3 py-2">
+                                                    <p class="text-h6">{{ el.description }}</p>
+                                                </div>
+                                                </template>
+                                            </Popper>
+                                            </div>
+                                        </template>
+                                        <template v-else>
+                                            {{ el.description }}
+                                        </template>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -105,8 +123,26 @@
                             <div class="flex items-center pt-8">
                                 <div>
                                     <h3 class="text-h5 font-bold" :class="`text-[${el.color}]`">{{ el.name1 }}</h3>
-                                    <p class="text-[trbase] text-h6 font-normal pt-1 text-justify">{{ el.description }}
-                                    </p>
+                                    <div class="text-[trbase] text-h6 font-normal pt-1 text-justify">
+                                        <template v-if="el.description.split(' ').length > 40">
+                                            <div>
+                                            {{ el.description.split(' ').slice(0, 40).join(' ') }}
+                                            <Popper :arrow="true" :hover="true" :zIndex="20" :offsetDistance="4" placement="bottom-start">
+                                                <button>
+                                                ...
+                                                </button>
+                                                <template #content>
+                                                <div class="shadow-lg sm:w-96 rounded-md bg-[#255B97] text-white p-3 py-2">
+                                                    <p class="text-h6">{{ el.description }}</p>
+                                                </div>
+                                                </template>
+                                            </Popper>
+                                            </div>
+                                        </template>
+                                        <template v-else>
+                                            {{ el.description }}
+                                        </template>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -127,6 +163,7 @@
     </template>
 <script setup>
 import { computed, inject, onMounted, ref, watch } from 'vue'
+import Popper from "vue3-popper";
 import { useRouter } from 'vue-router'
 import FooterNav from '../components/FooterNav.vue';
 import Loader from '../components/Loader.vue';
@@ -163,7 +200,11 @@ const data = ref([
         group: 'Recommended',
         code: 'core_cost',
         name1: 'PAY A FAIR SHARE OF CORE COSTS',
-        description: 'Core costs — often referred to as indirect costs — are functions are essential for nonprofits to conduct day-to-day operations and deliver on their impact mandates. Supporting nonprofits in this regard aligns with funders goals of ensuring that nonprofits have the critical investments required to enable operational effectives, have sound...',
+        description: `Core costs – often referred to as indirect costs or administrative costs – are associated with 
+        support functions essential for nonprofits to conduct day-to-day operations and deliver on their impact mandates.
+        Supporting nonprofits in this regard aligns with the funder’s goals of ensuring that nonprofits have the critical investments 
+        required to enable operational effectiveness, have sound governance processes and structures in place, are compliant with
+        regulations, and have solid financial management practices.`,
         icon: 'IndianRupee',
         route: '/funder/core-costs',
         doctype: 'Core Costs',
@@ -200,8 +241,10 @@ const data = ref([
         group: 'Additional',
         code: 'fr',
         name1: 'BUILD FINANCIAL RESILIENCE',
-        description: 'Financial resilience refers to a nonprofit’s ability to sustain its operations over the long term and withstand external stresses and shocks. By supporting nonprofits build their financial resilience, funders can ensure the sustainability of the organization and its ability to continue creating impact in the communities in which they work.',
-        icon: 'PiggyBank',
+        description: `Financial resilience refers to a nonprofit’s ability to sustain its operations over the long term and 
+        withstand external stresses and shocks. By supporting nonprofits in building their financial resilience, funders can help 
+        strengthen an organisation’s ability to continue creating impact in targeted communities and geographies.`,
+                icon: 'PiggyBank',
         route: '/funder/financial-resilience',
         doctype: 'Financial Resilience',
         color: '#058248',
@@ -291,6 +334,14 @@ const evaluateLogic = (logicArray, results) => {
     });
 };
 
+const truncatedDescription=(el)=> {
+    const words = el.description.split(' ');
+    return {
+        words: words.length,
+        text: words.length > 40 && words.slice(0, 40).join(' ')
+    }
+}
+    
 const get_save_as_draft = async () => {
     try {
         let res = await call('pwit.controllers.api.get_save_as_draft', { doctype: 'Funder Diagnostic', user: auth.cookie.user_id });

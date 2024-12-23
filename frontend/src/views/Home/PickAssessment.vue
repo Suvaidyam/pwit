@@ -23,7 +23,7 @@
                         <DialogPanel
                             class="relative transform overflow-hidden  bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl">
                             <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                                <div class="flex px-4 md:px-6 flex-col gap-2 items-center justify-center">
+                                <div class="flex md:px-6 flex-col gap-2 items-center justify-center">
                                     <div class="w-16 h-14   rounded-full flex justify-center items-center">
                                         <!-- <ExclamationTriangleIcon class="h-8 w-8 text-white" /> -->
                                         <svg width="66" height="64" viewBox="0 0 66 64" fill="none" xmlns="http://www.w3.org/2000/svg">
