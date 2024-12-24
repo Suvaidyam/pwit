@@ -1,26 +1,24 @@
 <template>
   <div class="w-full pt-6">
     <div class="flex gap-2 px-4 md:px-8 lg:px-20">
-      <!-- <p class="text-gray-800 text-sm">
-        <router-link to="/">Home </router-link>
-        <span class="text-gray-400">/ Funder Diagnostic</span>
-      </p> -->
       <router-link to="/" class="flex items-center text-trbase gap-1"><House class="w-4 h-4"/> Home</router-link>|
       <div class="flex items-center cursor-pointer text-trbase" @click="router.back(-1)"><ArrowBigLeft  class="w-5 "/> Back</div>
     </div>
-    <div class="flex items-center px-4 md:px-8 lg:px-20 justify-between">
+    <div class="flex flex-col md:flex-row md:items-center px-4 md:px-8 lg:px-20 justify-between">
       <div class="flex items-center gap-3">
         <h1 class="text-h2  tracking-wide font-primary text-primary font-bold">
         Funder Diagnostic
       </h1>
+    </div>
+    <div class="flex gap-3 justify-between pb-5 ">
       <p class="w-16 py-1 flex items-center justify-center rounded-2xl text-red-700 bg-red-100 font-bold"
-        v-if="Object.keys(initialData).length">Draft</p>
-      </div>
+      v-if="Object.keys(initialData).length">Draft</p>
         <router-link v-if="viewResult" to="/recommended"
             class="border flex items-center gap-2 text-secondary border-[#255B97] rounded-md h-9 px-4 text-sm truncate">
             View Results
             <FileSearch2 class="w-4" />
         </router-link>
+    </div>
     </div>
     <p class="text-h5 px-4 md:px-8 lg:px-20 font-primary text-sebase font-semibold">
       Please select the degree to which <span class="underline font-primary">your organisation’s</span> mindset and practices agree or disagree with the
