@@ -74,7 +74,7 @@
                                     <div class="flex flex-col gap-2">
                                         <p class="text-sm text-[#444444]">Please select which section of the tool you would like to explore further:</p>
                                         <hr>
-                                        <div class="flex justify-between items-center gap-1 border-b pb-4">
+                                        <div class="flex justify-between items-center gap-1 border-b pb-2">
                                             <h2 class="font-primary font-bold text-sebase capitalize text-h4 tracking-wider">Funder
                                                 diagnostic</h2>
                                             <!-- <div class="flex gap-2 items-center">
