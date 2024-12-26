@@ -95,7 +95,7 @@
                     <div v-if="recommend_action.length"
                         class="w-full mx-auto h-96 relative overflow-y-auto">
                         <p class="text-primary font-bold sticky top-0 bg-white font-primary text-xl sm:text-2xl pb-4">
-                            Recommended Actions
+                            Recommended actions
                         </p>
                         <div v-if="recommend_action.length"
                             v-for="items in recommend_action" :key="items.name" class="pb-5">
@@ -110,7 +110,7 @@
                     <div v-if="recommendations?.details?.useful_resources"
                         class="w-full mx-auto rounded-sm shadow-md px-4 pb-2 h-96 overflow-y-auto">
                         <p class="text-primary sticky top-0 bg-white font-bold font-primary text-xl sm:text-2xl pb-4">
-                            Useful Resources
+                            Useful resources
                         </p>
                         <div v-for="resource in recommendations?.details?.useful_resources" :key="resource.title"
                             class="flex flex-col gap-1 py-3 border-b ">

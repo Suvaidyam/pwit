@@ -29,7 +29,7 @@
   {
    "fieldname": "guidelines_section",
    "fieldtype": "Section Break",
-   "label": "Policy guidelines"
+   "label": "Guidelines"
   },
   {
    "fieldname": "annual_budget__allocation_section",
@@ -98,7 +98,7 @@
    "fieldname": "od_communication_channels_02",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "How are your  guidelines on OD support communica ted to nonprofits (current and  potential) and the  wider sector?",
+   "label": "How are your  guidelines on OD support communicated to nonprofits (current and  potential) and the  wider sector?",
    "options": "Field Options",
    "reqd": 1
   }
@@ -106,7 +106,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-18 17:05:18.202688",
+ "modified": "2024-12-26 11:20:17.116975",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Organisational Development",

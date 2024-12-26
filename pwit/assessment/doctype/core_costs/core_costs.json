@@ -25,7 +25,7 @@
   {
    "fieldname": "guidelines_section",
    "fieldtype": "Section Break",
-   "label": "Policy guidelines"
+   "label": "Guidelines"
   },
   {
    "fieldname": "amended_from",
@@ -78,7 +78,7 @@
   {
    "fieldname": "cc_communication_channels_02",
    "fieldtype": "Link",
-   "label": "How are your guidelines on core cost support communica ted to nonprofits (current and potential) and the wider sector? ",
+   "label": "How are your guidelines on core cost support communicated to nonprofits (current and potential) and the wider sector? ",
    "options": "Field Options",
    "reqd": 1
   },
@@ -93,7 +93,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-19 18:01:28.400254",
+ "modified": "2024-12-26 12:25:38.149758",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Core Costs",

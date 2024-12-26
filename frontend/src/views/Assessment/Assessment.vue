@@ -17,6 +17,7 @@
                 </button>
             </div>
         </div>
+        <p v-if="title !== 'Diversity Equity Inclusion'" class="pt-3 text-h5 text-sebase">For each question, we ask you to select the level that largely corresponds to your organisation’s current practices, if any.</p>
         <transition name="fade" mode="out-in">
             <div class="w-full pt-4">
                 <FormView v-if="title !== 'Diversity Equity Inclusion'" :width="true" :initialData="initialData" :doctype="title"
