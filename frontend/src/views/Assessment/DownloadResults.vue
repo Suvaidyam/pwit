@@ -49,9 +49,9 @@
                                             Director/Chief Executive Officer/Head of CSR</option>
                                         <option value="Director of Philanthropy">Director of Philanthropy</option>
                                         <option value="Chief Operating Officer">Chief Operating Officer</option>
-                                        <option value="Program Lead/Program Officer">Program Lead/Program Officer
+                                        <option value="Program Lead/Program Officer">Programme Lead/Programme Officer
                                         </option>
-                                        <option value="Third party supporting funder organisation">Third party
+                                        <option value="Third party supporting funder organisation">Third-party
                                             supporting funder organisation</option>
                                         <option value="Other">Other</option>
                                     </select>
@@ -94,7 +94,7 @@
                                         <option value="INR 10-50 Cr.">INR 10-50 Cr.</option>
                                         <option value="INR 51-100 Cr.">INR 51-100 Cr.</option>
                                         <option value="INR 101-300 Cr.">INR 101-300 Cr.</option>
-                                        <option value="INR 301 and above">INR 301 and above</option>
+                                        <option value="INR 301 and above">INR 301 Cr. and above</option>
                                     </select>
                                     <p v-if="errors.annual_budget" class="absolute -bottom-5 text-red-500 text-h6 mt-1">
                                         {{

@@ -40,7 +40,7 @@
   {
    "fieldname": "guidelines_section",
    "fieldtype": "Section Break",
-   "label": "Policy guidelines"
+   "label": "Guidelines"
   },
   {
    "description": "{Multiyear partnerships refer to partnerships between funders and nonprofits for a duration of two years or more.}",
@@ -116,7 +116,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-17 13:27:07.173882",
+ "modified": "2024-12-26 10:56:26.203456",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Multi-year Partnerships",
