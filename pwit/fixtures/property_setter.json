@@ -263,13 +263,13 @@
   "doctype_or_field": "DocField",
   "field_name": "cc_communication_channels_02",
   "is_system_generated": 0,
-  "modified": "2024-12-03 15:11:42.581055",
+  "modified": "2024-12-26 13:20:58.444539",
   "module": null,
   "name": "Core Costs-cc_communication_channels_02-short_name",
   "property": "short_name",
   "property_type": null,
   "row_name": null,
-  "value": "Channels of communication: Nonprofits and the"
+  "value": "Channels of communication: Nonprofits and the ecosystem"
  },
  {
   "default_value": null,
