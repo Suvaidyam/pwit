@@ -135,13 +135,13 @@
   "doctype_or_field": "DocField",
   "field_name": "myp_approaches_adopted_01",
   "is_system_generated": 0,
-  "modified": "2024-11-29 10:00:08.742870",
+  "modified": "2024-12-26 13:11:35.252372",
   "module": null,
   "name": "Multi-year Partnerships-myp_approaches_adopted_01-short_name",
   "property": "short_name",
   "property_type": null,
   "row_name": null,
-  "value": "Approaches : Structuring of multiyear partnerships"
+  "value": "Approaches adopted: Forming multiyear partnerships"
  },
  {
   "default_value": null,
@@ -151,13 +151,13 @@
   "doctype_or_field": "DocField",
   "field_name": "myp_approaches_adopted_02",
   "is_system_generated": 0,
-  "modified": "2024-11-29 10:01:11.132972",
+  "modified": "2024-12-26 13:11:44.278519",
   "module": null,
   "name": "Multi-year Partnerships-myp_approaches_adopted_02-short_name",
   "property": "short_name",
   "property_type": null,
   "row_name": null,
-  "value": "Approaches : Eligibility for multiyear partnerships"
+  "value": "Approaches adopted: Eligibility criteria for multiyear partnerships"
  },
  {
   "default_value": null,
@@ -167,13 +167,13 @@
   "doctype_or_field": "DocField",
   "field_name": "myp_approaches_adopted_03",
   "is_system_generated": 0,
-  "modified": "2024-11-29 10:02:25.235472",
+  "modified": "2024-12-26 13:11:52.020898",
   "module": null,
   "name": "Multi-year Partnerships-myp_approaches_adopted_03-short_name",
   "property": "short_name",
   "property_type": null,
   "row_name": null,
-  "value": "Approaches :  Defined criteria for eligibility"
+  "value": "Approaches adopted: Criteria to renew/retain partnerships"
  },
  {
   "default_value": null,
@@ -215,13 +215,13 @@
   "doctype_or_field": "DocField",
   "field_name": "cc_approaches_adopted_01",
   "is_system_generated": 0,
-  "modified": "2024-12-03 15:07:38.937575",
+  "modified": "2024-12-26 13:11:11.656313",
   "module": null,
   "name": "Core Costs-cc_approaches_adopted_01-short_name",
   "property": "short_name",
   "property_type": null,
   "row_name": null,
-  "value": "Approaches : Core cost support extended"
+  "value": "Approaches adopted:  Support extended and consultative nature of approach"
  },
  {
   "default_value": null,
@@ -231,13 +231,13 @@
   "doctype_or_field": "DocField",
   "field_name": "cc_approaches_adopted_02",
   "is_system_generated": 0,
-  "modified": "2024-12-03 15:09:15.706855",
+  "modified": "2024-12-26 13:11:20.615695",
   "module": null,
   "name": "Core Costs-cc_approaches_adopted_02-short_name",
   "property": "short_name",
   "property_type": null,
   "row_name": null,
-  "value": "Approaches : Ability to negotiate"
+  "value": "Approaches adopted: Ability to negotiate"
  },
  {
   "default_value": null,
@@ -311,13 +311,13 @@
   "doctype_or_field": "DocField",
   "field_name": "od_approaches_adopted_01",
   "is_system_generated": 0,
-  "modified": "2024-12-18 17:38:13.963868",
+  "modified": "2024-12-26 13:10:43.591278",
   "module": null,
   "name": "Organization Development-od_approaches_adopted_01-short_name",
   "property": "short_name",
   "property_type": null,
   "row_name": null,
-  "value": "Approach: Preferred pathways to extend OD grants"
+  "value": "Approaches adopted: Preferred pathways to extend OD grants"
  },
  {
   "default_value": null,
@@ -327,13 +327,13 @@
   "doctype_or_field": "DocField",
   "field_name": "od_approaches_adopted_02",
   "is_system_generated": 0,
-  "modified": "2024-12-18 17:38:04.725232",
+  "modified": "2024-12-26 13:10:52.587976",
   "module": null,
   "name": "Organization Development-od_approaches_adopted_02-short_name",
   "property": "short_name",
   "property_type": null,
   "row_name": null,
-  "value": "Approach: Decision on OD needs of partner"
+  "value": "Approaches adopted: Decision on OD needs of partner"
  },
  {
   "default_value": null,
@@ -343,13 +343,13 @@
   "doctype_or_field": "DocField",
   "field_name": "od_communication_channels_02",
   "is_system_generated": 0,
-  "modified": "2024-12-18 17:35:56.172261",
+  "modified": "2024-12-26 13:06:55.174271",
   "module": null,
   "name": "Organization Development-od_communication_channels_02-short_name",
   "property": "short_name",
   "property_type": null,
   "row_name": null,
-  "value": "Channels of communication: Nonprofits and the"
+  "value": "Channels of communication: Nonprofits and the wider sector"
  },
  {
   "default_value": null,
@@ -359,13 +359,13 @@
   "doctype_or_field": "DocField",
   "field_name": "fr_approaches_adopted_01",
   "is_system_generated": 0,
-  "modified": "2024-12-03 15:24:05.414241",
+  "modified": "2024-12-26 13:07:59.189074",
   "module": null,
   "name": "Financial Resilience-fr_approaches_adopted_01-short_name",
   "property": "short_name",
   "property_type": null,
   "row_name": null,
-  "value": "Approach: Non-financial support provided"
+  "value": "Approaches adopted: Non-financial support provided"
  },
  {
   "default_value": null,
@@ -375,13 +375,13 @@
   "doctype_or_field": "DocField",
   "field_name": "fr_approaches_adopted_02",
   "is_system_generated": 0,
-  "modified": "2024-12-03 15:24:34.252276",
+  "modified": "2024-12-26 13:10:03.276976",
   "module": null,
   "name": "Financial Resilience-fr_approaches_adopted_02-short_name",
   "property": "short_name",
   "property_type": null,
   "row_name": null,
-  "value": "Approach: Financial support provided"
+  "value": "Approaches adopted: Financial contibutions for building reserves"
  },
  {
   "default_value": null,
@@ -407,13 +407,13 @@
   "doctype_or_field": "DocField",
   "field_name": "fr_communication_channels_02",
   "is_system_generated": 0,
-  "modified": "2024-12-03 15:25:32.518604",
+  "modified": "2024-12-26 13:10:27.454511",
   "module": null,
   "name": "Financial Resilience-fr_communication_channels_02-short_name",
   "property": "short_name",
   "property_type": null,
   "row_name": null,
-  "value": "Channels of communication: Nonprofits and the"
+  "value": "Channels of communication: Nonprofits and the wider sector"
  },
  {
   "default_value": null,
