@@ -50,7 +50,7 @@
    "fieldname": "cc_approaches_adopted_01",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "What approach have you adopted for providing core- cost support to nonprofit partners? How consultative is your approach? ",
+   "label": "What approach have you adopted for providing core cost support to nonprofit partners? How consultative is your approach? ",
    "options": "Field Options",
    "reqd": 1
   },
@@ -93,7 +93,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-26 12:25:38.149758",
+ "modified": "2024-12-26 14:06:32.929332",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Core Costs",
