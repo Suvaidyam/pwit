@@ -7,7 +7,7 @@
         </div>
         <div class="w-full h-full bg-primary p-2 pt-24 relative">
             <LeftMenuLoader v-if="loading" />
-            <div v-if="!loading" class="w-full h-full">
+            <div v-if="!loading" class="w-full h-full overflow-auto">
                 <div class="text-white absolute right-0 top-20 opacity-40 block md:hidden text-center p-1.5 hover:bg-white hover:text-black rounded-full mb-1 cursor-pointer"
                     @click="store.sidebar = false"><X class=""/></div>
                 <p v-if="check_results && Object.keys(check_results)?.length" class="pl-2  py-2 font-bold text-[11px] text-white">

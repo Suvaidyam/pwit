@@ -59,7 +59,7 @@
   {
    "fieldname": "od_guidelines",
    "fieldtype": "Link",
-   "label": "Do you have written guidelines that  clearly states the  organisational development (OD)  support available to  nonprofit partners? ",
+   "label": "Do you have written guidelines that  clearly state the  organisational development (OD)  support available to  nonprofit partners? ",
    "options": "Field Options",
    "reqd": 1
   },
@@ -106,7 +106,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-26 11:20:17.116975",
+ "modified": "2024-12-27 10:46:53.395995",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Organisational Development",
