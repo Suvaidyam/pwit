@@ -139,6 +139,8 @@
 import { ref, inject,watch, onMounted } from 'vue'
 import { TransitionChild, TransitionRoot, Dialog, DialogPanel } from '@headlessui/vue'
 import { X } from 'lucide-vue-next';
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 
 const isReadonly = ref(true);
 const store = inject('store');
@@ -228,7 +230,10 @@ const saveUserProfile = async () => {
         user_image: imgUrl.value
     }
     let res = await call('pwit.controllers.api.update_user_dt', { data: data })
-    store.isOpen = false
+    if (res?.code == 200) {
+        store.isOpen = false
+        toast.success(res.message)
+    } 
 }
 watch(() => store.isOpen, async(val) => {
     if (val) {
