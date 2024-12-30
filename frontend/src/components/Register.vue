@@ -15,7 +15,7 @@
                     </span>
                 </label>
                 <input @keydown.enter="register" @input="validateName" v-model="full_name" type="text" id="full_name"
-                    class="outline-none w-full border-b-2 bg-gray-100 placeholder:text-[#697077] px-3 h-12 text-h5" placeholder="Enter Full Name">
+                    class="outline-none w-full border-b-2 bg-gray-100 placeholder:text-[#697077] px-3 h-12 text-h5" placeholder="Enter full name">
                 <span v-if="invalidName" class="text-red-500 text-xs mt-1 -bottom-5">Only letters allowed</span>
                 <span v-if="lengthExceeded" class="text-red-500 text-xs mt-1 -bottom-5">Maximum length of 50
                     characters</span>
@@ -27,7 +27,7 @@
                 </label>
                 <input @keydown.enter="register" @input="emailvalidate" id="emailInputId" v-model="email" type="email"
                     class="outline-none w-full border-b-2 bg-gray-100 placeholder:text-[#697077] px-3 h-12 text-h5"
-                    placeholder="Enter Email Address">
+                    placeholder="Enter email address">
                 <div class="absolute -bottom-6">
                     <p v-if="errorMessage" class="text-h6 text-red-600">{{ errorMessage }}</p>
                     <p v-else class="text-h6 text-[#697077]">Sign up with work email</p>

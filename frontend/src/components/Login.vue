@@ -15,7 +15,7 @@
                 </label>
                 <input @keydown.enter="login" @input="(e) => validateEmail(e.target.value)" id="emailInputId"
                     v-model="email" type="email" class="outline-none w-full border-b-2 bg-gray-100 placeholder:text-[#697077] px-3 h-12 text-h5"
-                    placeholder="Enter Email Address">
+                    placeholder="Enter email address">
                 <div class="absolute -bottom-6">
                     <p v-if="errorMessage" class="text-sm text-red-600">{{ errorMessage }}</p>
                 </div>

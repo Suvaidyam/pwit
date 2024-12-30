@@ -178,7 +178,7 @@
                                         For each question, we ask
                                         you to select the
                                         statement or statements that largely describe your organisation’s current
-                                        practices, if any
+                                        practices, if any.
                                     </p>
                                 </div>
                             </div>
