@@ -7,7 +7,7 @@
                     Full Name <span class="text-red-500">*</span>
                 </label>
                 <input v-model="data.full_name" @input="clearError('full_name')" type="text"
-                    placeholder="Enter Full Name" :class="[
+                    placeholder="Enter full name" :class="[
                         'w-full px-3 py-2 border-b bg-[#f3f4f8] border-gray-300 shadow-sm outline-none',
                         { 'border-red-500': errors.full_name }
                     ]" />
@@ -17,7 +17,7 @@
                 <label class="block text-gray-800 text-sm mb-2">
                     Email Address <span class="text-red-500">*</span>
                 </label>
-                <input v-model="data.email" @input="clearError('email')" type="email" placeholder="Enter Email Address"
+                <input v-model="data.email" @input="clearError('email')" type="email" placeholder="Enter email address"
                     :class="[
                         'w-full px-3 py-2 border-b bg-[#f3f4f8] border-gray-300 shadow-sm outline-none',
                         { 'border-red-500': errors.email }

@@ -60,11 +60,11 @@
                                 <!-- other details -->
                                 <div class="" v-if="otherFormData.designation && otherFormData.funderType && otherFormData.annual_budget">
                                     <div class="relative border-b py-3">
-                                        <p class="py-2 text-h3 absolute left-[40%] top-0 bg-white text-secondary">Other Details</p>
+                                        <p class="py-2 text-h3 absolute left-[27%] sm:left-[40%] top-0 bg-white text-secondary">Other Details</p>
                                     </div>
                                     <div class="bg-white pb-4 sm:pb-4 pt-4">
                                         <div class="flex flex-col gap-2">
-                                            <label for="designation" class="text-h5 font-normal text-[#21272A]">Designation</label>
+                                            <label for="designation" class="text-sm font-normal text-[#21272A]">Designation</label>
                                             <select disabled name="" id="designation" v-model="otherFormData.designation"
                                                 class="outline-none border-b-2 border-gray-400 bg-gray-50 py-3 text-gray-600 px-2">
                                                 <option value="">Select</option>
@@ -86,8 +86,8 @@
                                             </select>
                                         </div>
                                         <div class="pt-3">
-                                            <p class=" text-h5 font-normal text-[#21272A]">
-                                                Funder type organization
+                                            <p class=" text-sm font-normal text-[#21272A]">
+                                                Funder type organisation
                                             </p>
                                             <label :for="option.id" v-for="option in options" :key="option" :class="[
                                                 'w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3',
@@ -102,7 +102,7 @@
                                             </label>
                                         </div>
                                         <div class="flex flex-col gap-2 pt-3">
-                                            <label for="annual_budget" class="text-h5 font-normal text-[#21272A]">
+                                            <label for="annual_budget" class="text-sm font-normal text-[#21272A]">
                                                 Organisation’s
                                                 approximate annual budget allocation</label>
                                             <select disabled name="" id="annual_budget" v-model="otherFormData.annual_budget"
