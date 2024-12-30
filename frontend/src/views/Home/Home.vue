@@ -16,11 +16,11 @@
 		<div class="w-full bg-tatary px-4 md:px-8 lg:px-20 py-6 mt-7">
 			<!-- <h4 class="text-center text-h2 font-bold text-[#21272A] mt-6 font-primary tracking-wide leading-9">About the
 				tool</h4> -->
-			<p class="text-secondary text-h3 py-2 font-semibold">How to Use the Pay-What-It-Takes (PWIT) India Assistive Funder Toolkit</p>
+			<p class="text-secondary text-h4 md:text-h3 py-2 font-semibold">How to Use the Pay-What-It-Takes (PWIT) India Assistive Funder Toolkit</p>
 			<div class="flex font-normal text-sebase text-h5 tracking-wide leading-5">
 				<p class="text-justify">Welcome to the <a target="_blank"
 					href="https://www.bridgespan.org/our-global-reach/pay-what-it-takes-india-initiative"
-					class="text-secondary hover:underline">  Pay-What-It-Takes (PWIT) India </a> initiative’s Assistive Funder toolkit. Through our research and experience working 
+					class="text-secondary underline">  Pay-What-It-Takes (PWIT) India </a> initiative’s Assistive Funder toolkit. Through our research and experience working 
 				with funders and nonprofits in India, we have identified five principles of effective grantmaking that philanthropic organisations and 
 				corporate social responsibility (CSR) initiatives can adopt to promote strong, resilient nonprofit partners and amplify their impact.
 				This toolkit provides a simple way for funders to assess for themselves how they can become “assistive funders” that embody the 
@@ -99,18 +99,18 @@
 			</div>
 
 			<div class="flex flex-col py-8 text-justify font-normal text-sebase text-h5 ">
-				<p>We recommend that one individual, such as the executive director or head of CSR, lead the assessment process and include 
+				<p class="leading-5">We recommend that one individual, such as the executive director or head of CSR, lead the assessment process and include 
 					participation or consultation with key staff members and the board.</p>
-				<p class="pt-2">The tool is designed to be completed in one session. However, you can pause and return to this later. You will be provided with the 
+				<p class="pt-2 leading-5">The tool is designed to be completed in one session. However, you can pause and return to this later. You will be provided with the 
 					opportunity to create an account to save your progress and email results to yourself after completing each section.</p>
-				<p class="pt-2">Your responses are confidential and will only be seen by The Bridgespan Group’s PWIT team and the Centre for Philanthropy for 
+				<p class="pt-2 leading-5">Your responses are confidential and will only be seen by The Bridgespan Group’s PWIT team and the Centre for Philanthropy for 
 					Inclusive Development (CPID) team. Any trends inferred from this data will only be made at an aggregate level (e.g., based on the 
 					type of funder).</p>
 			</div>
 		</div>
 		<!--  -->
 		<div class=" w-full px-4 md:px-8 lg:px-20 py-6 ">
-			<p class="text-h2 text-primary font-semibold">About the Assistive Funder Toolkit</p>
+			<p class="text-h3 md:text-h2 text-primary font-semibold">About the Assistive Funder Toolkit</p>
 			<div class="flex h-full items-center flex-col md:flex-row mt-1">
 				<div class="w-full flex flex-col gap-3">
 					<h1 class=" text-h4 font-bold text-sebase leading-9 tracking-wide font-primary">What does the
@@ -121,7 +121,7 @@
 						includes two elements:</p>
 					<ol class="flex flex-col gap-3 px-4 md:px-0 text-justify md:pl-8 list-decimal">
 						<li>
-							<p class="text-trbase text-h5 py-2 leading-5 inline">
+							<p class="text-h5 font-normal text-trbase text-justify leading-5 ">
 								<span class="font-bold">Funder Diagnostic</span> is a 10-minute diagnostic questionnaire regarding your
 								organisation’s funding beliefs and practices. At the end of the
 								questionnaire, you will receive an analysis that shows which of the five
@@ -132,7 +132,7 @@
 							</p>
 						</li>
 						<li class="">
-							<p class="text-trbase text-h5 py-2 leading-5 inline">
+							<p class="text-h5 font-normal text-trbase text-justify leading-5 ">
 								<span class="font-bold">Assistive Guides</span> help you assess how aligned your current funding
 								practices are with each of the five principles. For the first four
 								principles, the guide helps to categorise your practices on a
@@ -263,7 +263,7 @@
 		<div class="w-full flex justify-center py-6 px-4">
 			<PickAssessment />
 		</div>
-		<div class="bg-secondary h-auto pb-52  relative px-4 md:px-8 lg:px-16">
+		<div class="bg-secondary h-auto pb-36 md:pb-40  relative px-4 md:px-8 lg:px-16">
 			<!-- SVG Background -->
 			<div class="absolute inset-0 flex justify-center gap-12 py-10">
 				<div class="relative">
@@ -291,18 +291,18 @@
 			</h1>
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 				<div class="flex flex-col gap-4 w-full text-center text-white font-primary text-sm">
-					<p class="text-h5 text-[#E9EAEB] font-normal text-justify leading-5 tracking-wider"> This funder tool has been developed by The Bridgespan Group as part of the Pay-What-It-Takes (PWIT) India Initiative. The PWIT principles closely align with the principles of inclusive philanthropy, and hence CPID and the PWIT India Initiative have collaborated to host this tool under the aegis of CPID. We believe this tool can help funders improve their internal practices, and unlock the potential of their nonprofit partners to deliver greater social outcomes.
+					<p class="text-h5 text-[#E9EAEB] font-normal text-justify leading-5 tracking-wide"> This funder tool has been developed by The Bridgespan Group as part of the Pay-What-It-Takes (PWIT) India Initiative. The PWIT principles closely align with the principles of inclusive philanthropy, and hence CPID and the PWIT India Initiative have collaborated to host this tool under the aegis of CPID. We believe this tool can help funders improve their internal practices, and unlock the potential of their nonprofit partners to deliver greater social outcomes.
 					</p>
-					<p class="text-h5 text-[#E9EAEB] font-normal text-justify leading-5 tracking-wider"> Pay-What-It-Takes (PWIT) India is a multiyear, collaborative initiative aimed at building a stronger and resilient social sector in India. Funders and their nonprofit partners share a commitment to making progress on some of society’s most pressing problems. Yet, chronic underfunding of nonprofits’ true costs – core costs, organisational development (OD) costs, financial resilience, and programmatic costs – blunts the impact for which funders and nonprofits strive. PWIT’s goal is to inform and influence the mindsets and practices of funders, NGOs, and intermediaries to advance five principles that can unlock the impact potential of NGOs, and hence advance social outcomes in India.
+					<p class="text-h5 text-[#E9EAEB] font-normal text-justify leading-5 tracking-wide"> Pay-What-It-Takes (PWIT) India is a multiyear, collaborative initiative aimed at building a stronger and resilient social sector in India. Funders and their nonprofit partners share a commitment to making progress on some of society’s most pressing problems. Yet, chronic underfunding of nonprofits’ true costs – core costs, organisational development (OD) costs, financial resilience, and programmatic costs – blunts the impact for which funders and nonprofits strive. PWIT’s goal is to inform and influence the mindsets and practices of funders, NGOs, and intermediaries to advance five principles that can unlock the impact potential of NGOs, and hence advance social outcomes in India.
 					</p>
-					<p class="text-h5 text-[#E9EAEB] font-normal text-justify leading-5 tracking-wider"> The Centre for Philanthropy for Inclusive Development (CPID) is a Centre of Excellence at ISDM. It is dedicated to catalysing philanthropy as a force for inclusive development through a combination of rigorous research, learning programs, knowledge exchanges and convening diverse voices.
+					<p class="text-h5 text-[#E9EAEB] font-normal text-justify leading-5 tracking-wide"> The Centre for Philanthropy for Inclusive Development (CPID) is a Centre of Excellence at ISDM. It is dedicated to catalysing philanthropy as a force for inclusive development through a combination of rigorous research, learning programs, knowledge exchanges and convening diverse voices.
 					</p>
 				</div>
 			</div>
 		</div>
 
 		<div
-			class="flex flex-col sm:flex-row h-[500px]  items-center justify-center gap-4 px-4 pb-8 relative bg-gray-100 ">
+			class="flex flex-col sm:flex-row h-[440px] md:h-[500px]  items-center justify-center gap-4 px-4 pb-8 relative bg-gray-100 ">
 			<ContactUs />
 		</div>
 		<FooterNav />

@@ -37,7 +37,7 @@
             </div>
             <div class="flex justify-center">
                 <button type="button" @click="sendMessage"
-                    class="w-[169px] h-12 rounded-md bg-secondary text-white text-h5 text-center shadow-md">
+                    class="w-full sm:w-[169px] h-12 rounded-md bg-secondary text-white text-h5 text-center shadow-md">
                     Send Message
                 </button>
             </div>

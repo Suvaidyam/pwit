@@ -16,9 +16,10 @@
  "fields": [
   {
    "fieldname": "user",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "User",
-   "options": "User"
+   "options": "User",
+   "set_only_once": 1
   },
   {
    "fieldname": "routes",
@@ -58,7 +59,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-30 11:42:54.623105",
+ "modified": "2024-12-30 16:05:57.956558",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Session",
