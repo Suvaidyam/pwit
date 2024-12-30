@@ -1,6 +1,6 @@
 import frappe
 from frappe.model.docstatus import DocStatus
-
+from hashlib import md5
 class FormAPIs:
     def get_meta(doctype):
         return frappe.get_meta(doctype)
@@ -36,6 +36,7 @@ class FormAPIs:
         return {'code': 200, 'message': 'Document saved as draft successfully', 'data': new_doc}
     
     def get_save_as_draft(doctype, user):
+        user = md5(user.encode('utf-8')).hexdigest()
         draft = {}
         session = frappe.get_all('Session', filters={'user': user}, pluck='name')
         if session:

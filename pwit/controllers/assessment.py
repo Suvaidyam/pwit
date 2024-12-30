@@ -1,7 +1,7 @@
 import frappe
 from frappe.model.docstatus import DocStatus
 from pwit.controllers.form import FormAPIs
-
+from hashlib import md5
 class AssessmentAPIs:
     def question_list(doctype):
         assessments = frappe.get_all(doctype, fields=['*'])
@@ -12,6 +12,7 @@ class AssessmentAPIs:
         if not user:
             assessments = frappe.get_all(doctype,filters={'session':session,'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
         else:
+            user = user = md5(user.encode('utf-8')).hexdigest()
             all_session = frappe.get_all('Session', {'user': user}, pluck='name',order_by='creation desc')
             if len(all_session):
                 assessments = frappe.get_all(doctype,filters={'session':["IN", all_session],'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
@@ -129,6 +130,7 @@ class AssessmentAPIs:
         if not user:
             assessments = frappe.get_all(doctype,filters={'session':session,'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
         else:
+            user = md5(user.encode('utf-8')).hexdigest()
             all_session = frappe.get_all('Session', {'user': user}, pluck='name',order_by='creation desc')
             if len(all_session):
                 assessments = frappe.get_all(doctype,filters={'session':["IN", all_session],'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
@@ -203,6 +205,7 @@ class AssessmentAPIs:
             if not user:
                 assessments = frappe.get_all(doctype,filters={'session':session,'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
             else:
+                user = md5(user.encode('utf-8')).hexdigest()
                 all_session = frappe.get_all('Session', {'user': user}, pluck='name',order_by='creation desc')
                 if len(all_session):
                     assessments = frappe.get_all(doctype,filters={'session':["IN", all_session],'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
@@ -331,6 +334,7 @@ class AssessmentAPIs:
         
     def get_last_draft():
         user = frappe.session.user
+        user = md5(user.encode('utf-8')).hexdigest()
 
         if not user:
             return {'code': 404, 'message': 'User not found'}
@@ -367,6 +371,7 @@ class AssessmentAPIs:
         if user == 'Guest':
             session_id = [session]
         else:
+            user = md5(user.encode('utf-8')).hexdigest()
             session_id = frappe.get_all('Session', {'user': user}, pluck='name',order_by='creation desc')
         if len(session_id):
             myp = frappe.get_all('Multi-year Partnerships', filters={'session': ['in',session_id],'docstatus':1}, fields=['creation'],order_by='creation desc', limit_page_length=1)

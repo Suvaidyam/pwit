@@ -2,6 +2,7 @@ import frappe
 from frappe.utils import now_datetime
 from hashlib import sha256
 from frappe.utils import get_url
+from hashlib import md5
 
 class AuthAPIs:
     def create_session():
@@ -11,7 +12,8 @@ class AuthAPIs:
     
     def set_user_session(name,user):
         doc = frappe.get_doc('Session',name)
-        doc.user = user
+        encrypt_user = md5(user.encode('utf-8')).hexdigest()
+        doc.user = encrypt_user
         doc.save(ignore_permissions=True)
         return {'code':200,'data':doc} 
     
@@ -130,7 +132,8 @@ class AuthAPIs:
         details = {}
         session_exits = frappe.get_all('Session', filters={'name': session,'designation':['is', 'set']}, pluck='name',order_by='creation desc',  limit_page_length=1,ignore_permissions=True )
         if frappe.session.user and not session_exits:
-            details_exits = frappe.get_all('Session', filters={'user': frappe.session.user,'designation':['is', 'set']}, pluck='name',order_by='creation desc',  limit_page_length=1,ignore_permissions=True )
+            user = user = md5(frappe.session.user.encode('utf-8')).hexdigest()
+            details_exits = frappe.get_all('Session', filters={'user': user,'designation':['is', 'set']}, pluck='name',order_by='creation desc',  limit_page_length=1,ignore_permissions=True )
             if details_exits:
                 session_details = frappe.get_doc('Session', details_exits[0])
                 if session_details:
@@ -158,9 +161,10 @@ class AuthAPIs:
         )
         
         if frappe.session.user and existing_session:
+            user = md5(frappe.session.user.encode('utf-8')).hexdigest()
             existing_user_session = frappe.get_all(
                 'Session',
-                filters={'user': frappe.session.user, 'designation': ['is', 'set']},
+                filters={'user': user, 'designation': ['is', 'set']},
                 pluck='name',
                 order_by='creation desc',
                 limit_page_length=1,
