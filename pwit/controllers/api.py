@@ -92,6 +92,7 @@ def update_user_dt(data):
     doc.mobile_no=data.get('mobile_no')
     doc.user_image=data.get('user_image')
     doc.save()
+    return {'code':200,'message':'Profile Updated Successfully'}
 
 @frappe.whitelist(allow_guest=True)
 def save_doc(doctype, doc,name=None):
