@@ -224,7 +224,7 @@ const data = ref([
         group: 'Additional',
         code: 'dei',
         name1: 'EMBED DIVERSITY EQUITY, AND INCLUSION IN GRANTMAKING',
-        description: 'An intentional focus on DEI can help funders address the disproportional funding gap that persists by organizations not located in major cities and headed by members of historically marginalized populations such as Dalit, Bahujan and Adivasi (DBA) communities. An intentional focus on DEI can help funders address the disproportionate financial gap these critical agents of social change face and thus accelerate progress on India’s steepest challenges.',
+        description: `An intentional focus on DEI can help funders address the disproportional funding gap that persists for organisations not located in major cities and headed by members of historically marginalised populations, such as Dalit, Bahujan, and Adivasi (DBA) communities. By supporting these critical agents of social change, funders can accelerate progress on India’s steepest challenges.`,
         icon: 'Scale',
         route: '/funder/diversity-equity-inclusion',
         doctype: 'Diversity Equity Inclusion',

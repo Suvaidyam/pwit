@@ -25,7 +25,7 @@
                                             New Password
                                         </label>
                                         <input v-model="newPassword" id="new_password" type="password"
-                                            placeholder="Enter New Password"
+                                            placeholder="Enter new password"
                                             class="w-full px-3 py-2 border-b bg-gray-100 placeholder:text-[#697077] border-gray-300 shadow-sm outline-none">
                                     </div>
                                    
@@ -35,7 +35,7 @@
                                         </label>
                                         <input @keyup="onchange"  v-model="confirmPassword" id="Confirm_pass" :type="show_pass ? 'text' : 'password'"
                                             class="outline-none w-full border-b-2  bg-gray-100 placeholder:text-[#697077]  px-3 h-12 text-h5"
-                                            placeholder="Confirm New Password">
+                                            placeholder="Confirm new password">
                                         <span
                                             class="absolute right-2 top-11 font-semibold text-gray-500 text-xs cursor-pointer"
                                             @click="show_pass = !show_pass">

@@ -5,7 +5,7 @@
             </div>
             <div class="space-y-6 container">
                 <div>
-                    <input v-model="email" id="email" type="email" placeholder="Enter Email Address"
+                    <input v-model="email" id="email" type="email" placeholder="Enter email address"
                         class="w-full px-3 py-2.5 border-b bg-gray-100 placeholder:text-[#697077] border-gray-300 shadow-sm outline-none">
                 </div>
                 <div class="flex flex-col items-center gap-2 justify-center">
