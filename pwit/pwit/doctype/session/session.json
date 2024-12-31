@@ -45,7 +45,7 @@
    "fieldname": "annual_budget",
    "fieldtype": "Autocomplete",
    "label": "Annual budget",
-   "options": "Less than INR 10 Cr.\nINR 10-50 Cr.\nINR 51-100 Cr.\nINR 101-300 Cr.\nINR 301 and above"
+   "options": "Less than INR 10 Cr.\nINR 10-50 Cr.\nINR 51-100 Cr.\nINR 101-300 Cr.\nINR 301 Cr. and above"
   },
   {
    "fieldname": "funder_type",
@@ -57,7 +57,7 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-30 16:39:43.595563",
+ "modified": "2024-12-31 10:10:59.351729",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Session",

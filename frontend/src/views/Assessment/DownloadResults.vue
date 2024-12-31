@@ -49,7 +49,7 @@
                                             Director/Chief Executive Officer/Head of CSR</option>
                                         <option value="Director of Philanthropy">Director of Philanthropy</option>
                                         <option value="Chief Operating Officer">Chief Operating Officer</option>
-                                        <option value="Program Lead/Program Officer">Programme Lead/Programme Officer
+                                        <option value="Programme Lead/Programme Officer">Programme Lead/Programme Officer
                                         </option>
                                         <option value="Third party supporting funder organisation">Third-party
                                             supporting funder organisation</option>
