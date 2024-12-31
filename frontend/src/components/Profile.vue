@@ -50,22 +50,17 @@
                                             class="w-full px-3 border-b bg-[#f3f4f8] cursor-not-allowed text-gray-500 border-gray-300   shadow-sm py-2 outline-none"
                                             :disabled="true">
                                     </div>
-                                    <div class="flex justify-end">
-                                        <button type="button" @click="saveUserProfile"
-                                            class="text-white bg-secondary py-2 px-8 rounded-md">
-                                            Save
-                                        </button>
-                                    </div>
+                                  
                                 </div>
                                 <!-- other details -->
                                 <div class="" v-if="otherFormData.designation && otherFormData.funderType && otherFormData.annual_budget">
                                     <div class="relative border-b py-3">
-                                        <p class="py-2 text-h3 absolute left-[27%] sm:left-[40%] top-0 bg-white text-secondary">Other Details</p>
+                                        <p class=" absolute left-[27%] sm:left-[40%] top-1 bg-white text-center font-primary font-bold text-h3 text-[#21272A]">Other Details</p>
                                     </div>
                                     <div class="bg-white pb-4 sm:pb-4 pt-4">
                                         <div class="flex flex-col gap-2">
                                             <label for="designation" class="text-sm font-normal text-[#21272A]">Designation</label>
-                                            <select disabled name="" id="designation" v-model="otherFormData.designation"
+                                            <select  name="" id="designation" v-model="otherFormData.designation"
                                                 class="outline-none border-b-2 border-gray-400 bg-gray-50 py-3 text-gray-600 px-2">
                                                 <option value="">Select</option>
                                                 <option value="Executive Director/Chief Executive Officer/Head of CSR">
@@ -76,7 +71,7 @@
                                                 </option>
                                                 <option value="Chief Operating Officer">Chief Operating Officer
                                                 </option>
-                                                <option value="Program Lead/Program Officer">Program Lead/Program
+                                                <option value="Programme Lead/Programme Officer">Programme Lead/Programme
                                                     Officer
                                                 </option>
                                                 <option value="Third party supporting funder organisation">Third party
@@ -93,7 +88,7 @@
                                                 'w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3',
                                                 otherFormData.funderType.includes(option) ? 'border-[#255B97]' : 'border-gray-300'
                                             ]">
-                                                <input disabled type="checkbox" :id="option" :value="option"
+                                                <input  type="checkbox" :id="option" :value="option"
                                                     v-model="otherFormData.funderType" class="cursor-pointer" />
                                                 <p
                                                     :class="[otherFormData.funderType.includes(option) ? 'text-secondary' : 'text-slate-600', 'font-normal text-sm cursor-pointer']">
@@ -105,7 +100,7 @@
                                             <label for="annual_budget" class="text-sm font-normal text-[#21272A]">
                                                 Organisation’s
                                                 approximate annual budget allocation</label>
-                                            <select disabled name="" id="annual_budget" v-model="otherFormData.annual_budget"
+                                            <select  name="" id="annual_budget" v-model="otherFormData.annual_budget"
                                                 class="outline-none border-b-2 border-gray-400 bg-gray-50 py-3 text-gray-600 px-2">
                                                 <option value="">Select</option>
                                                 <option value="Less than INR 10 Cr.">Less than INR 10 Cr.
@@ -116,7 +111,7 @@
                                                 </option>
                                                 <option value="INR 101-300 Cr.">INR 101-300 Cr.
                                                 </option>
-                                                <option value="INR 301 and above">INR 301 and above
+                                                <option value="INR 301 and above">INR 301 Cr. and above
                                                 </option>
                                             </select>
                                         </div>
@@ -126,6 +121,12 @@
                                         </div> -->
                                     </div>
                                 </div>
+                                <div class="flex justify-end">
+                                        <button type="button" @click="saveUserProfile"
+                                            class="text-white bg-secondary py-2 px-8 rounded-md">
+                                            Save
+                                        </button>
+                                    </div>
                             </div>
                         </DialogPanel>
                     </TransitionChild>
@@ -183,44 +184,6 @@ const user_mobile = async () => {
 onMounted(() => {
     get_funder_type()
 })
-// const imageUpload = async (event) => {
-//     const file = event.target.files[0];
-//     if (file) {
-//         const reader = new FileReader();
-
-//         reader.onload = (e) => {
-//             uploadedImage.value = e.target.result;
-//         };
-//         reader.readAsDataURL(file);
-
-//         const formData1 = new FormData();
-//         formData1.append("file", file);
-//         formData1.append("is_private", 1);
-//         formData1.append("folder", "Home");
-//         formData1.append("doctype", "User");
-//         formData1.append("docname", formData.value.user_id);
-//         formData1.append("fieldname", "user_image");
-
-//         try {
-//             const response = await fetch('/api/method/upload_file', {
-//                 method: 'POST',
-//                 body: formData1,
-//                 headers: {
-//                 },
-//             });
-
-//             if (response.ok) {
-//                 const result = await response.json();
-//                 imgUrl.value = result.message.file_url
-//             } else {
-//                 console.error('Upload failed', response.status, response.statusText);
-//             }
-//         } catch (error) {
-//             console.error('Error uploading file:', error);
-//         }
-//     }
-
-// };
 const saveUserProfile = async () => {
     let data = {
         user: formData.value.user_id,
@@ -231,10 +194,16 @@ const saveUserProfile = async () => {
     }
     let res = await call('pwit.controllers.api.update_user_dt', { data: data })
     if (res?.code == 200) {
+        await submitSelection()
         store.isOpen = false
         toast.success(res.message)
     } 
 }
+
+const submitSelection = async () => {
+    let res = await call('pwit.controllers.api.save_user_details', { data: otherFormData.value, session: store.session })
+}
+
 watch(() => store.isOpen, async(val) => {
     if (val) {
         if(auth.isLoggedIn){

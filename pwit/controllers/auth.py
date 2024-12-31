@@ -121,8 +121,9 @@ class AuthAPIs:
             doc = frappe.get_doc('Session', session)
             doc.designation = data.get('designation')
             doc.annual_budget = data.get('annual_budget')
-            for item in data.get('funderType'):
-                doc.append('funder_type', {'funder_type': item})
+            doc.funder_type = []
+            for item in data.get('funderType',[]):
+                doc.append('funder_type',{'funder_type': item})
             doc.save(ignore_permissions=True)
             return {'code': 200, 'data': doc}
         else:
