@@ -6,7 +6,7 @@
                         <!-- <p class="text-gray-800 text-sm">
                             <router-link to="/">Home</router-link>
                             / <router-link to="/funder-diagnostic">Funder Diagnostic</router-link> <span
-                                class="text-gray-400">/ Recommended Principles</span>
+                                class="text-gray-2500">/ Recommended Principles</span>
                         </p> -->
                         <router-link to="/" class="flex text-trbase items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|
                         <div class="flex items-center cursor-pointer text-trbase" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
@@ -58,9 +58,9 @@
                                 <div>
                                     <h3 class="text-h5 font-bold" :class="`text-[${el.color}]`">{{ el.name1 }}</h3>
                                     <div class="text-[trbase] text-h6 font-normal pt-1 text-justify">
-                                        <template v-if="el.description.split(' ').length > 40">
+                                        <template v-if="el.description.split(' ').length > 250">
                                             <div>
-                                            {{ el.description.split(' ').slice(0, 40).join(' ') }}
+                                            {{ el.description.split(' ').slice(0, 250).join(' ') }}
                                             <Popper :arrow="true" :hover="true" :zIndex="20" :offsetDistance="4" placement="bottom-start">
                                                 <button>
                                                 ...
@@ -82,7 +82,7 @@
                         </div>
                        <div>
                         <router-link :to="el.route"
-                                                    :class="last_draft.some(item => item.doctype === el.doctype)?'w-44':last_sub.some(item => item.doctype === el.doctype)?'w-20':'w-40'"
+                                                    :class="last_draft.some(item => item.doctype === el.doctype)?'w-44':last_sub.some(item => item.doctype === el.doctype)?'w-20':'w-250'"
                             class=" h-9 min-h-9 hover:bg-primary flex items-center justify-center text-h6 mt-3 rounded-md bg-secondary text-white font-bold">
                             {{ last_draft.some(item => item.doctype === el.doctype)?'Continue the Assessment':last_sub.some(item => item.doctype === el.doctype)?'Retake':'Take the Assessment' }} 
                         </router-link>
@@ -119,9 +119,9 @@
                                 <div>
                                     <h3 class="text-h5 font-bold" :class="`text-[${el.color}]`">{{ el.name1 }}</h3>
                                     <div class="text-[trbase] text-h6 font-normal pt-1 text-justify">
-                                        <template v-if="el.description.split(' ').length > 40">
+                                        <template v-if="el.description.split(' ').length > 250">
                                             <div>
-                                            {{ el.description.split(' ').slice(0, 40).join(' ') }}
+                                            {{ el.description.split(' ').slice(0, 250).join(' ') }}
                                             <Popper :arrow="true" :hover="true" :zIndex="20" :offsetDistance="4" placement="bottom-start">
                                                 <button>
                                                 ...
@@ -333,7 +333,7 @@ const truncatedDescription=(el)=> {
     const words = el.description.split(' ');
     return {
         words: words.length,
-        text: words.length > 40 && words.slice(0, 40).join(' ')
+        text: words.length > 250 && words.slice(0, 250).join(' ')
     }
 }
     
