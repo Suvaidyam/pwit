@@ -67,12 +67,10 @@ class AuthAPIs:
             return {'code':200,'data':new_doc} 
             
     def set_route_logs(from_route,session,to): 
-        doc = frappe.get_doc('Session', session)
-        doc.append('routes', {
-            'doctype': 'Route Child',
-            'from': from_route,
-            'to': to
-        })
+        doc = frappe.new_doc('Route Logs')
+        doc.session = session
+        doc.from_route = from_route
+        doc.to_route = to
         doc.save(ignore_permissions=True)
         return {'code': 200, 'data': doc}
             

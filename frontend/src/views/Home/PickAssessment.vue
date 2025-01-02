@@ -34,7 +34,10 @@
                                         Policy/Consent</h2>
                                     <p class="text-sm text-center">Please indicate that you consent to your information being stored, processed, and analysed for the purpose of 
                                         strengthening this tool’s offerings. Your information and individual responses will not be shared or made public.</p>
-                                    <div class="flex gap-2 items-center">
+                                    <p class="text-sm text-center ">Your responses are confidential and will only be seen by The Bridgespan Group’s PWIT team and the Centre for Philanthropy for 
+                                        Inclusive Development (CPID) team. Any trends inferred from this data will only be made at an aggregate level (e.g., based on the 
+                                        type of funder).</p>
+                                    <div class="flex gap-2 items-center pt-2">
                                         <input type="checkbox" v-model="policyconsent" @change="set_policyconsent" name="" id="policyconsent">
                                         <label class="text-sm" for="policyconsent">I understand and agree to the above.</label>
                                     </div>
