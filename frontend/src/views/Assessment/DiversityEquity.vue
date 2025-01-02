@@ -226,9 +226,9 @@
                                         <li>“<a class="text-blue-600 hover:underline"  href="https://www.bridgespan.org/insights/advance-dei-goals-through-impact-investing-strategy" target="_blank">Want to Advance Diversity, Racial Equity, and Inclusion Goals Through Your Investing? Here Are Three 
                                             Questions to Ask,</a>” The Bridgespan Group, August 2023.</li> 
                                         <li><a class="text-blue-600 hover:underline"  href="https://cep.org/wp-content/uploads/2020/11/CEP_Foundations-Respond-to-Crisis_Toward-Equity_2020.pdf" target="_blank">Foundations Respond to Crisis: Toward Equity?,</a> The Center for Effective Philanthropy.</li> 
-                                        <li><a class="text-blue-600 hover:underline"  href="https://www.bridgespan.org/getmedia/834680a3-0818-4b04-b7b0-d143a5594240/Finding-Your-Philanthropy-Compass-A-Guide-for-Donors.pdf">Finding Your Philanthropy Compass,</a> The Bridgespan Group.</li> 
-                                        <li><a class="text-blue-600 hover:underline"  href="https://missioninvestors.org/racial-equity-impact-investing">Racial Equity & Impact Investing,</a> Mission Investors Exchange.</li> 
-                                        <li>“<a class="text-blue-600 hover:underline"  href="https://www.peakgrantmaking.org/insights/equity-in-practice-part-2-a-closer-look-at-risk-management/">Equity in Practice, Part 2: A Closer Look at Risk Management,</a>” Peak Grantmaking and Arabella 
+                                        <li><a class="text-blue-600 hover:underline"  href="https://www.bridgespan.org/getmedia/834680a3-0818-4b04-b7b0-d143a5594240/Finding-Your-Philanthropy-Compass-A-Guide-for-Donors.pdf" target="_blank">Finding Your Philanthropy Compass,</a> The Bridgespan Group.</li> 
+                                        <li><a class="text-blue-600 hover:underline"  href="https://missioninvestors.org/racial-equity-impact-investing" target="_blank">Racial Equity & Impact Investing,</a> Mission Investors Exchange.</li> 
+                                        <li>“<a class="text-blue-600 hover:underline"  href="https://www.peakgrantmaking.org/insights/equity-in-practice-part-2-a-closer-look-at-risk-management/" target="_blank">Equity in Practice, Part 2: A Closer Look at Risk Management,</a>” Peak Grantmaking and Arabella 
                                             Advisors, August 2019.</li> 
                                     </ul>
                                 </div>
