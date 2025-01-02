@@ -103,9 +103,7 @@
 					participation or consultation with key staff members and the board.</p>
 				<p class="pt-2 leading-5">The tool is designed to be completed in one session. However, you can pause and return to this later. You will be provided with the 
 					opportunity to create an account to save your progress and email results to yourself after completing each section.</p>
-				<p class="pt-2 leading-5">Your responses are confidential and will only be seen by The Bridgespan Group’s PWIT team and the Centre for Philanthropy for 
-					Inclusive Development (CPID) team. Any trends inferred from this data will only be made at an aggregate level (e.g., based on the 
-					type of funder).</p>
+				
 			</div>
 		</div>
 		<!--  -->

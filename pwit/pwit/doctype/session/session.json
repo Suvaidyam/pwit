@@ -7,10 +7,11 @@
  "field_order": [
   "user",
   "policyconsent",
-  "routes",
   "section_break_scvg",
   "designation",
+  "column_break_edwc",
   "annual_budget",
+  "section_break_arzy",
   "funder_type"
  ],
  "fields": [
@@ -18,12 +19,6 @@
    "fieldname": "user",
    "fieldtype": "Data",
    "label": "User"
-  },
-  {
-   "fieldname": "routes",
-   "fieldtype": "Table",
-   "label": "Routes",
-   "options": "Route Child"
   },
   {
    "default": "0",
@@ -52,12 +47,49 @@
    "fieldtype": "Table MultiSelect",
    "label": "Funder Type",
    "options": "Funder Type Child"
+  },
+  {
+   "fieldname": "column_break_edwc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_arzy",
+   "fieldtype": "Section Break"
   }
  ],
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-12-31 10:10:59.351729",
+ "links": [
+  {
+   "link_doctype": "Route Logs",
+   "link_fieldname": "session"
+  },
+  {
+   "link_doctype": "Funder Diagnostic",
+   "link_fieldname": "session"
+  },
+  {
+   "link_doctype": "Multi-year Partnerships",
+   "link_fieldname": "session"
+  },
+  {
+   "link_doctype": "Core Costs",
+   "link_fieldname": "session"
+  },
+  {
+   "link_doctype": "Organisational Development",
+   "link_fieldname": "session"
+  },
+  {
+   "link_doctype": "Diversity Equity Inclusion",
+   "link_fieldname": "session"
+  },
+  {
+   "link_doctype": "Financial Resilience",
+   "link_fieldname": "session"
+  }
+ ],
+ "modified": "2025-01-02 15:49:43.508639",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Session",

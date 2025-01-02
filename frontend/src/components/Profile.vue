@@ -53,8 +53,7 @@
                                     </div>
 
                                     <!-- other details -->
-                                    <div class=""
-                                        v-if="otherFormData.designation && otherFormData.funderType && otherFormData.annual_budget">
+                                    <div class="">
                                         <div class="relative border-b py-3">
                                             <p
                                                 class=" absolute left-[27%] sm:left-[40%] top-1 bg-white text-center font-primary font-bold text-h3 text-[#21272A]">
