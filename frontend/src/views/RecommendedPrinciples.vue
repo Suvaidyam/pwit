@@ -82,7 +82,7 @@
                         </div>
                        <div>
                         <router-link :to="el.route"
-                                                    :class="last_draft.some(item => item.doctype === el.doctype)?'w-44':last_sub.some(item => item.doctype === el.doctype)?'w-20':'w-250'"
+                                                    :class="last_draft.some(item => item.doctype === el.doctype)?'w-44':last_sub.some(item => item.doctype === el.doctype)?'w-20':'w-40'"
                             class=" h-9 min-h-9 hover:bg-primary flex items-center justify-center text-h6 mt-3 rounded-md bg-secondary text-white font-bold">
                             {{ last_draft.some(item => item.doctype === el.doctype)?'Continue the Assessment':last_sub.some(item => item.doctype === el.doctype)?'Retake':'Take the Assessment' }} 
                         </router-link>
