@@ -70,7 +70,6 @@
                                         </Popper>
                                     </div>
                                     <div class="flex flex-col gap-1 pr-4 border shadow-md rounded-md p-3 mt-3">
-                                        <img src="../../assets/DEI.png" class="w-full" alt="">
                                         <div >
                                             <p class="text-sm text-trbase"> This framework can
                                                 help you
@@ -85,6 +84,7 @@
                                                     class="text-orange-400">orange</span> on
                                                 the to below graphic.</p>
                                         </div>
+                                        <img src="../../assets/DEI.png" class="w-full pt-3" alt="">
                                     </div>
                                 </div>
                             </div>
