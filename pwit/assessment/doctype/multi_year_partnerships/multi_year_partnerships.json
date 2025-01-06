@@ -57,7 +57,7 @@
    "label": "Annual budget allocation"
   },
   {
-   "description": "{CSR programmes can also make multiyear grants not exceeding three years, excluding the year of commencement as per the CSR Law. The law does not cap \nthe percentage of funding towards multiyear partnerships or renewals.}",
+   "description": "{CSR programmes can make multiyear grants not exceeding three years, excluding the year of commencement as per the CSR Law. The law does not cap \nthe percentage of funding towards multiyear partnerships or renewals.}",
    "fieldname": "myp_budget_allocation",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -116,7 +116,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-26 10:56:26.203456",
+ "modified": "2025-01-06 11:28:52.859749",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Multi-year Partnerships",
