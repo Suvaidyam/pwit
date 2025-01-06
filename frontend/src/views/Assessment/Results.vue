@@ -85,7 +85,7 @@
                     <div class="w-full mx-auto flex justify-center items-center p-4">
                         <div class="text-start">
                             <p class="text-sm text-trbase text-justify">
-                                {{ recommendations?.details?.description }}
+                                <div v-html="recommendations?.details?.description"></div>
                             </p>
                         </div>
                     </div>
