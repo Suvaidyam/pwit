@@ -69,11 +69,10 @@
                                             </template>
                                         </Popper>
                                     </div>
-                                    <div class="flex flex-col gap-1 pr-4 md:pr-0">
-                                        <img src="../../assets/DEI.png" class="pt-5 w-full" alt="">
-                                        <div>
-                                            <p class="text-sm text-trbase"><span
-                                                    class="font-bold text-secondary">Note:</span> This framework can
+                                    <div class="flex flex-col gap-1 pr-4 border shadow-md rounded-md p-3 mt-3">
+                                        <img src="../../assets/DEI.png" class="w-full" alt="">
+                                        <div >
+                                            <p class="text-sm text-trbase"> This framework can
                                                 help you
                                                 understand the internal and external aspects of embedding DEI
                                                 within your institution.</p>
@@ -84,7 +83,7 @@
                                                 tool primarily focuses on embedding DEI within the grantmaking
                                                 process. We only touch upon the elements marked in <span
                                                     class="text-orange-400">orange</span> on
-                                                the above graphic.</p>
+                                                the to below graphic.</p>
                                         </div>
                                     </div>
                                 </div>
