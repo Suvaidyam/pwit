@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "creation": "2024-11-27 19:21:00.773428",
  "doctype": "DocType",
@@ -33,7 +34,7 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "in_list_view": 1,
    "label": "Description",
    "reqd": 1
@@ -64,7 +65,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-28 07:03:18.019934",
+ "modified": "2025-01-06 16:36:46.565528",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Results and Recommendtions",
