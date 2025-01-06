@@ -212,7 +212,7 @@ const data = ref([
         group: 'Recommended',
         code: 'od',
         name1: 'INVEST IN ORGANISATIONAL DEVELOPMENT',
-        description: 'Organisational development (OD) investments build and strengthen a range of critical efficiency and growth-oriented capabilities that enable nonprofits to deliver greater impact.',
+        description: 'Organisational development (OD) investments build and strengthen a range of critical efficiency and growth-oriented capabilities (e.g. strategic planning, fundraising, human resources, etc.) that enable nonprofits to deliver greater impact.',
         icon: 'ChartNoAxesCombined',
         route: '/funder/organisational-development',
         doctype: 'Organisational Development',
