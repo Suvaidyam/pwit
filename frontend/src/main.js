@@ -26,7 +26,30 @@ initializeDynamicRoutes().then(() => {
     app.provide("$call", call);
     app.provide("$socket", socket);
     
+    (function addGoogleAnalyticsScript() {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-SXKY993N5R';
+      document.head.appendChild(script);
     
+      script.onload = () => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-SXKY993N5R'); // Replace with your Measurement ID
+      };
+    })();
+    
+    // Track Page Views Dynamically
+    router.afterEach((to) => {
+      if (window.gtag) {
+        window.gtag('config', 'G-SXKY993N5R', {
+          page_path: to.fullPath,
+        });
+      }
+    });
+   
     app.mount("#app");
   });
 
