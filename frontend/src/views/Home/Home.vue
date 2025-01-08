@@ -20,7 +20,7 @@
 			<div class="flex font-normal text-sebase text-h5 tracking-wide leading-5">
 				<p class="text-justify">Welcome to the <a target="_blank"
 					href="https://www.bridgespan.org/our-global-reach/pay-what-it-takes-india-initiative"
-					class="text-secondary underline">  Pay-What-It-Takes (PWIT) India </a> initiative’s Assistive Funder toolkit. Through our research and experience working 
+					class="text-secondary underline">  Pay-What-It-Takes (PWIT) India</a> Initiative’s Assistive Funder Toolkit. Through our research and experience working 
 				with funders and nonprofits in India, we have identified five principles of effective grantmaking that philanthropic organisations and 
 				corporate social responsibility (CSR) initiatives can adopt to promote strong, resilient nonprofit partners and amplify their impact.
 				This toolkit provides a simple way for funders to assess for themselves how they can become “assistive funders” that embody the 
