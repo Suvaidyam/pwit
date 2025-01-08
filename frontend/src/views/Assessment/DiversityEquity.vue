@@ -201,10 +201,11 @@
                                     </div>
                                     <p class="text-h5 text-sebase font-bold font-primary pb-2">Resources on DEI</p>
                                 </div>
+                                <p class="text-sm pl-[44px] leading-5 text-trbase">Whilst the self-assessment tool focuses on grantmaking, it is important to look inward at how your organisation would benefit from a commitment to DEI in order to address systemic exclusion and inequities. Understanding ways to embed DEI in internal culture, systems, and practices requires deeper reflection and work. Some resources on enhancing institutional DEI can be found here.</p>
                                 <!-- one -->
-                                <div class="pl-[44px]">
-                                    <div class="text-h5 font-medium pb-2">Internal/institutional level</div>
-                                    <ul class="pl-4 list-disc text-sm text-trbase">
+                                <div class="pl-[44px] pt-2">
+                                    <div class="text-h5 font-medium pb-2 flex items-center gap-1"><SunDim class="w-4"/> Internal/institutional level</div>
+                                    <ul class="pl-9 list-disc text-sm text-trbase">
                                         <li><a class="text-blue-600 hover:underline" target="_blank" href="https://www.d5coalition.org/work/leaders/">Coalition resources,</a> D5.</li>
                                         <li>“<a class="text-blue-600 hover:underline"  href="https://www.abfe.org/resources/case-study-who-manages-money-how-foundations-should-help-democratize-capital" target="_blank">Case Study: Who Manages The Money? How Foundations Should Help Democratize Capital,</a>” ABFE, 
                                             October 2014.</li>
@@ -213,10 +214,10 @@
                                 </div>
                                 <!-- second -->
                                 <div class="pl-[44px] pt-3">
-                                    <div class="text-h5 font-medium pb-2">Philanthropic goals 
+                                    <div class="text-h5 font-medium pb-2 flex items-center gap-1"><SunDim class="w-4"/> Philanthropic goals 
                                         and strategy
                                     </div>
-                                    <ul class="pl-4 list-disc text-sm text-trbase">
+                                    <ul class="pl-9 list-disc text-sm text-trbase">
                                         <li>“<a class="text-blue-600 hover:underline" target="_blank" href="https://humentum.org/blog-media/equitable-development-through-operating-models/">Equitable Development Through Operating Models,</a> ” Humentum, October 2022.</li>
                                         <li><a class="text-blue-600 hover:underline"  href="https://ssir.org/articles/entry/overcoming_the_racial_bias_in_philanthropic_funding" target="_blank">Overcoming the Racial Bias in Philanthropic Funding,</a> Stanford Social Innovation Review, May 2020.</li>
                                         <li><a class="text-blue-600 hover:underline"  href="https://www.bridgespan.org/insights/racial-equity-in-philanthropy-initiative" target="_blank">Racial Equity in Philanthropy,</a> The Bridgespan Group.</li> 
@@ -233,16 +234,16 @@
                                 </div>
                                 <!-- third -->
                                 <div class="pl-[44px] pt-3">
-                                    <div class="text-h5 font-medium pb-2">Grantmaking process </div>
-                                    <ul class="pl-4 list-disc text-sm text-trbase">
+                                    <div class="text-h5 font-medium pb-2 flex items-center gap-1"><SunDim class="w-4"/> Grantmaking process </div>
+                                    <ul class="pl-9 list-disc text-sm text-trbase">
                                         <li><a class="text-blue-600 hover:underline" target="_blank" href="https://www.bridgespan.org/insights/philanthropic-sourcing-diligence-and-decision-making-an-equity-oriented-approach">Philanthropic Sourcing, Diligence, and Decision-Making: An Equity-Oriented Approach,</a>The Bridgespan 
                                             Group, January 2023.</li>
-                                        <li>“<a class="text-blue-600 hover:underline"  href="https://www.bridgespan.org/insights/resource-list-on-philanthropic-sourcing-and-diligence" target="_blank">Resource List on Philanthropic Sourcing and Diligence,</a>” The Bridgespan Group, January 2023</li>
+                                        <li>“<a class="text-blue-600 hover:underline"  href="https://www.bridgespan.org/insights/resource-list-on-philanthropic-sourcing-and-diligence" target="_blank">Resource List on Philanthropic Sourcing and Diligence,</a>” The Bridgespan Group, January 2023.</li>
                                         <li><a class="text-blue-600 hover:underline"  href="https://www.bridgespan.org/getmedia/b5e15f15-d53d-4fc4-adbf-e74945606e1d/full-report-philanthropy-and-feminist-movements.pdf" target="_blank">Lighting the Way: A Report for Philanthropy on the Power and Promise of Feminist Movements,</a>  The 
                                             Bridgespan Group.</li> 
                                         <li><a class="text-blue-600 hover:underline"  href="https://www.fordfoundation.org/wp-content/uploads/2019/11/ff_dei_funderguidance_final_2.pdf" target="_blank">Funder Guidance for Engaging Grantees on DEI,</a> Ford Foundation.</li> 
-                                        <li><a class="text-blue-600 hover:underline"  href="https://justicefunders.org/wp-content/uploads/2019/03/JF-Grantmaking-Self-Assessment.pdf" target="_blank">Justice Funders’ Grantmaking Self-Assessment,</a> Justice Funders</li> 
-                                        <li><a class="text-blue-600 hover:underline"  href="https://www.opensocietyfoundations.org/publications/advancing-diversity-equity-and-inclusion-in-grant-making" target="_blank">Advancing Diversity, Equity, and Inclusion in Grantmaking,</a> Open Society Foundations</li> 
+                                        <li><a class="text-blue-600 hover:underline"  href="https://justicefunders.org/wp-content/uploads/2019/03/JF-Grantmaking-Self-Assessment.pdf" target="_blank">Justice Funders’ Grantmaking Self-Assessment,</a> Justice Funders.</li> 
+                                        <li><a class="text-blue-600 hover:underline"  href="https://www.opensocietyfoundations.org/publications/advancing-diversity-equity-and-inclusion-in-grant-making" target="_blank">Advancing Diversity, Equity, and Inclusion in Grantmaking,</a> Open Society Foundations.</li> 
                                         <li><a class="text-blue-600 hover:underline"  href="https://www.abfe.org/resources/evaluation-tool-towards-equity" target="_blank">Avaluation as a Tool Towards Equity,</a> ABFE.</li> 
                                         <li>“<a class="text-blue-600 hover:underline"  href="https://www.alliancemagazine.org/blog/insights-from-our-work-funding-and-supporting-charities-to-improve-dei/" target="_blank">Insights from Our Work Funding and Supporting Charities to Improve DEI,</a> ” Alliance Magazine, 15
                                             November 2021.</li> 
@@ -250,8 +251,8 @@
                                 </div>
                                 <!-- fouth -->
                                 <div class="pl-[44px] pt-3">
-                                    <div class="text-h5 font-medium pb-2">Ecosystem level </div>
-                                    <ul class="pl-4 list-disc text-sm text-trbase">
+                                    <div class="text-h5 font-medium pb-2 flex items-center gap-1"><SunDim class="w-4"/> Ecosystem level </div>
+                                    <ul class="pl-9 list-disc text-sm text-trbase">
                                         <li>“<a class="text-blue-600 hover:underline"  href="https://www.philanthropyohio.org/news/new-racial-equity-capacity-assessment-helps-ohio-funders-lead-equity" target="_blank">New Racial Equity Capacity Assessment Helps Ohio Funders Lead with Equity,</a>” Philanthropy Ohio, 
                                             April 2021.
                                             </li> 
@@ -269,7 +270,7 @@
 
 <script setup>
 import { inject, onMounted, ref } from 'vue'
-import { InfoIcon } from 'lucide-vue-next'
+import { InfoIcon,SunDim } from 'lucide-vue-next'
 import Popper from "vue3-popper";
 
 const store = inject('store')
