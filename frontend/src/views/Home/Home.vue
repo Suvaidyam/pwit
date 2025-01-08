@@ -200,7 +200,7 @@
 				to get customised recommendations for specific principles you need to improve or
 				proceed directly to the <span class="font-bold text-[15px]">Assistive Guides</span> to explore specific
 				principles of interest to your
-				organisation. you can select any of the
+				organisation. You can select any of the
 				five principle-level <span class="font-bold text-[15px]">Assistive Guides</span> to explore. The
 				Assistive Guides help map your current
 				practices along the five PWIT principles, across various elements spanning organisational guidelines,
