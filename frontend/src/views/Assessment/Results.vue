@@ -214,6 +214,8 @@ const get_results = async () => {
 
                 }
             }, 1000)
+        }else{
+            loading.value = false
         }
     } catch (error) {
         loading.value = false

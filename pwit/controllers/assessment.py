@@ -37,79 +37,81 @@ class AssessmentAPIs:
         else:
             return {'code': 200, 'data': {}}
         
-    def get_dei_result(doctype,session,user=None):
+    def get_dei_result(doctype,session=None,user=None):
         data = AssessmentAPIs.get_dei(doctype,session,user)
         datas = []
         group = {}
-        for key, value in data.items():
-            modified_data = {'priority': 'Low','key':key,'value':value}  # Start with priority
-            
-            # Modify data based on the key
-            if key == 'Strategic considerations':
-                modified_data['value'] = round((value * 4) / 2, 1)
-                group[key]= round((value * 4) / 2, 1)
-                if modified_data['value'] == 4:
-                    modified_data['priority'] = 'High'
-                elif modified_data['value'] == 2:
-                    modified_data['priority'] = 'Medium'
+        if data:
+            for key, value in data.items():
+                modified_data = {'priority': 'Low','key':key,'value':value}  # Start with priority
+                
+                # Modify data based on the key
+                if key == 'Strategic considerations':
+                    modified_data['value'] = round((value * 4) / 2, 1)
+                    group[key]= round((value * 4) / 2, 1)
+                    if modified_data['value'] == 4:
+                        modified_data['priority'] = 'High'
+                    elif modified_data['value'] == 2:
+                        modified_data['priority'] = 'Medium'
+                    else:
+                        modified_data['priority'] = 'Low'
+                elif key == 'Selection':
+                    modified_data['value'] = round(value * 0.8, 1)
+                    group[key]= round(value * 0.8, 1)
+                    if modified_data['value'] == 4:
+                        modified_data['priority'] = 'High'
+                    elif modified_data['value'] == 2.4 or modified_data['value'] == 3.2:
+                        modified_data['priority'] = 'Medium'
+                    else:
+                        modified_data['priority'] = 'Low'
+                elif key == 'Grantee support':
+                    modified_data['value'] = round(value * 2, 1)
+                    group[key]= round(value * 2, 1)
+                    if modified_data['value'] == 4:
+                        modified_data['priority'] = 'High'
+                    elif modified_data['value'] == 2:
+                        modified_data['priority'] = 'Medium'
+                    else:
+                        modified_data['priority'] = 'Low'
+                elif key == 'Reporting':
+                    modified_data['value'] = round(value * 1.33, 1)
+                    group[key]= round(value * 1.33, 1)
+                    if modified_data['value'] == 4:
+                        modified_data['priority'] = 'High'
+                    elif modified_data['value'] == 2.7:
+                        modified_data['priority'] = 'Medium'
+                    else:
+                        modified_data['priority'] = 'Low'
+                elif key == 'Renewal':
+                    modified_data['value'] = round(value * 4, 1)
+                    group[key]= round(value * 4, 1)
+                    if modified_data['value'] == 4:
+                        modified_data['priority'] = 'High'
+                    else:
+                        modified_data['priority'] = 'Low'
                 else:
-                    modified_data['priority'] = 'Low'
-            elif key == 'Selection':
-                modified_data['value'] = round(value * 0.8, 1)
-                group[key]= round(value * 0.8, 1)
-                if modified_data['value'] == 4:
-                    modified_data['priority'] = 'High'
-                elif modified_data['value'] == 2.4 or modified_data['value'] == 3.2:
-                    modified_data['priority'] = 'Medium'
-                else:
-                    modified_data['priority'] = 'Low'
-            elif key == 'Grantee support':
-                modified_data['value'] = round(value * 2, 1)
-                group[key]= round(value * 2, 1)
-                if modified_data['value'] == 4:
-                    modified_data['priority'] = 'High'
-                elif modified_data['value'] == 2:
-                    modified_data['priority'] = 'Medium'
-                else:
-                    modified_data['priority'] = 'Low'
-            elif key == 'Reporting':
-                modified_data['value'] = round(value * 1.33, 1)
-                group[key]= round(value * 1.33, 1)
-                if modified_data['value'] == 4:
-                    modified_data['priority'] = 'High'
-                elif modified_data['value'] == 2.7:
-                    modified_data['priority'] = 'Medium'
-                else:
-                    modified_data['priority'] = 'Low'
-            elif key == 'Renewal':
-                modified_data['value'] = round(value * 4, 1)
-                group[key]= round(value * 4, 1)
-                if modified_data['value'] == 4:
-                    modified_data['priority'] = 'High'
-                else:
-                    modified_data['priority'] = 'Low'
-            else:
-                modified_data['key'] = key
-                modified_data['value'] = value
-                group[key]= value
-                if modified_data['value'] == 4:
-                    modified_data['priority'] = 'High'
-                elif modified_data['value'] == 2 or modified_data['value'] == 3:
-                    modified_data['priority'] = 'Medium'
-                else:
-                    modified_data['priority'] = 'Low'
-            
-            # Append the modified dictionary to the list
-            datas.append(modified_data)
+                    modified_data['key'] = key
+                    modified_data['value'] = value
+                    group[key]= value
+                    if modified_data['value'] == 4:
+                        modified_data['priority'] = 'High'
+                    elif modified_data['value'] == 2 or modified_data['value'] == 3:
+                        modified_data['priority'] = 'Medium'
+                    else:
+                        modified_data['priority'] = 'Low'
+                
+                # Append the modified dictionary to the list
+                datas.append(modified_data)
 
-        average = round(sum([data['value'] for data in datas]) / len(datas),2)
-        draft = {}
-        if doctype:
-            details = AssessmentAPIs.get_assistive_results_details(doctype) 
-        if doctype and user:
-            draft = FormAPIs.get_save_as_draft(doctype,user) 
-        return {'code': 200, 'data': {"average":average,"result":datas,'details':details,'group':group,'draft':draft}}
-   
+            average = round(sum([data['value'] for data in datas]) / len(datas),2)
+            draft = {}
+            if doctype:
+                details = AssessmentAPIs.get_assistive_results_details(doctype) 
+            if doctype and user:
+                draft = FormAPIs.get_save_as_draft(doctype,user) 
+            return {'code': 200, 'data': {"average":average,"result":datas,'details':details,'group':group,'draft':draft}}
+        else:
+            return {'code': 404, 'message': 'No data found', 'data': {}}
     def get_assistive_result(doctype,session=None,user=None):
         assessments = []
         fields = []
