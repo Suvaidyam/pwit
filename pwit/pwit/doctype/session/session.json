@@ -32,13 +32,13 @@
   },
   {
    "fieldname": "designation",
-   "fieldtype": "Autocomplete",
+   "fieldtype": "Select",
    "label": "Designation",
    "options": "Executive Director/Chief  Executive Officer/Head of CSR\nDirector of Philanthropy\nChief Operating Officer\nProgram Lead/Program Officer\nThird party supporting  funder organisation\nOther"
   },
   {
    "fieldname": "annual_budget",
-   "fieldtype": "Autocomplete",
+   "fieldtype": "Select",
    "label": "Annual budget",
    "options": "Less than INR 10 Cr.\nINR 10-50 Cr.\nINR 51-100 Cr.\nINR 101-300 Cr.\nINR 301 Cr. and above"
   },
@@ -89,7 +89,7 @@
    "link_fieldname": "session"
   }
  ],
- "modified": "2025-01-02 15:49:43.508639",
+ "modified": "2025-01-09 09:50:48.561155",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Session",
