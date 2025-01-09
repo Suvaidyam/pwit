@@ -7,9 +7,9 @@ class AssessmentAPIs:
         assessments = frappe.get_all(doctype, fields=['*'])
         return {'code': 200, 'data': assessments}
 
-    def get_results(doctype,session,user=None):
+    def get_results(doctype,session=None,user=None):
         assessments = []
-        if not user:
+        if not user and session:
             assessments = frappe.get_all(doctype,filters={'session':session,'docstatus':DocStatus.submitted()}, fields=['*'],order_by='creation desc', limit_page_length=1)
         else:
             user = user = md5(user.encode('utf-8')).hexdigest()
