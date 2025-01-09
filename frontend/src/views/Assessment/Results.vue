@@ -84,9 +84,9 @@
                     <!-- Right Section -->
                     <div class="w-full mx-auto flex justify-center items-center p-4">
                         <div class="text-start">
-                            <p class="text-sm text-trbase text-justify">
+                            <div class="text-sm text-trbase text-justify">
                                 <div v-html="recommendations?.details?.description"></div>
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>
