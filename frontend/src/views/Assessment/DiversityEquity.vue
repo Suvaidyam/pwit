@@ -82,7 +82,7 @@
                                                 tool primarily focuses on embedding DEI within the grantmaking
                                                 process. We only touch upon the elements marked in <span
                                                     class="text-orange-400">orange</span> on
-                                                the to below graphic.</p>
+                                                the below graphic.</p>
                                         </div>
                                         <img src="../../assets/DEI.png" class="w-full pt-3" alt="">
                                     </div>
