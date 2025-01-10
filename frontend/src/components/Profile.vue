@@ -89,16 +89,29 @@
                                             <div class="pt-3">
                                                 <p class=" text-sm font-normal text-[#21272A]">
                                                     Funder type organisation
-                                                </p>
-                                                <label :for="option.id" v-for="option in options" :key="option" :class="[
-                                                    'w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3',
-                                                    otherFormData.funderType.includes(option) ? 'border-[#255B97]' : 'border-gray-300'
-                                                ]">
-                                                    <input type="checkbox" :id="option" :value="option"
-                                                        v-model="otherFormData.funderType" class="cursor-pointer" />
+                                                </p> 
+                                                <label class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
+                                                    <input type="radio" id="option" value="Corporate Social Responsibility (CSR)"
+                                                        v-model="otherFormData.funder_type" class="cursor-pointer" />
                                                     <p
-                                                        :class="[otherFormData.funderType.includes(option) ? 'text-secondary' : 'text-slate-600', 'font-normal text-sm cursor-pointer']">
-                                                        {{ option }}
+                                                        class="text-secondary font-normal text-sm cursor-pointer">
+                                                        Corporate Social Responsibility (CSR)
+                                                    </p>
+                                                </label>
+                                                <label class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
+                                                    <input type="radio" id="option" value="Domestic Foundation"
+                                                        v-model="otherFormData.funder_type" class="cursor-pointer" />
+                                                    <p
+                                                        class="text-secondary font-normal text-sm cursor-pointer">
+                                                        Domestic Foundation
+                                                    </p>
+                                                </label>
+                                                <label class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
+                                                    <input type="radio" id="option" value="Global Foundation"
+                                                        v-model="otherFormData.funder_type" class="cursor-pointer" />
+                                                    <p
+                                                        class="text-secondary font-normal text-sm cursor-pointer">
+                                                        Global Foundation
                                                     </p>
                                                 </label>
                                             </div>
@@ -157,10 +170,10 @@ const call = inject('$call');
 const formData = ref(auth.cookie);
 const otherFormData = ref({
     designation: '',
-    funderType: [],
+    funder_type: '',
     annual_budget: ''
 })
-const options = ref([])
+
 // const uploadedImage = ref(null);
 const imgUrl = ref('');
 const props = defineProps({
@@ -170,15 +183,11 @@ const props = defineProps({
         default: false
     }
 })
-const get_funder_type = async () => {
-    let res = await call('pwit.controllers.api.get_funder_type', {})
-    options.value = res
-}
+
 const get_other = async () => {
     let res = await call('pwit.controllers.api.get_other_details', { session: store.session })
     if (res?.code == 200) {
-        otherFormData.value = res.data
-        otherFormData.value.funderType = res.data.funder_type.map((e) => e.funder_type)
+        otherFormData.value = res.data 
     }
 }
 const user_mobile = async () => {
@@ -188,9 +197,6 @@ const user_mobile = async () => {
     }
 }
 
-onMounted(() => {
-    get_funder_type()
-})
 const saveUserProfile = async () => {
     let data = {
         user: formData.value.user_id,

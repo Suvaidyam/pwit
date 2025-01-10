@@ -49,7 +49,8 @@
                                             Director/Chief Executive Officer/Head of CSR</option>
                                         <option value="Director of Philanthropy">Director of Philanthropy</option>
                                         <option value="Chief Operating Officer">Chief Operating Officer</option>
-                                        <option value="Programme Lead/Programme Officer">Programme Lead/Programme Officer
+                                        <option value="Programme Lead/Programme Officer">Programme Lead/Programme
+                                            Officer
                                         </option>
                                         <option value="Third party supporting funder organisation">Third-party
                                             supporting funder organisation</option>
@@ -57,7 +58,7 @@
                                     </select>
                                     <p v-if="errors.designation" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
                                         errors.designation
-                                        }}</p>
+                                    }}</p>
                                 </div>
 
                                 <div class="pt-5 relative">
@@ -65,20 +66,33 @@
                                         Please select which funder type your organisation identifies as
                                         <span class="text-red-500">*</span>
                                     </p>
-                                    <label v-for="option in options" :key="option" :class="[
-                                        'w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3',
-                                        formData.funderType.includes(option) ? 'border-[#255B97] text-secondary' : 'border-gray-300 text-black'
-                                    ]">
-                                        <input type="checkbox" :id="option" :value="option"
-                                            v-model="formData.funderType" class="cursor-pointer" />
-                                        <p
-                                            :class="['font-normal text-sm cursor-pointer']">
-                                            {{ option }}
+                                    <label
+                                        class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
+                                        <input type="radio" id="option" value="Corporate Social Responsibility (CSR)"
+                                            v-model="formData.funder_type" class="cursor-pointer" />
+                                        <p class="text-secondary font-normal text-sm cursor-pointer">
+                                            Corporate Social Responsibility (CSR)
                                         </p>
                                     </label>
-                                    <p v-if="errors.funderType" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
-                                        errors.funderType
-                                        }}</p>
+                                    <label
+                                        class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
+                                        <input type="radio" id="option" value="Domestic Foundation"
+                                            v-model="formData.funder_type" class="cursor-pointer" />
+                                        <p class="text-secondary font-normal text-sm cursor-pointer">
+                                            Domestic Foundation
+                                        </p>
+                                    </label>
+                                    <label
+                                        class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
+                                        <input type="radio" id="option" value="Global Foundation"
+                                            v-model="formData.funder_type" class="cursor-pointer" />
+                                        <p class="text-secondary font-normal text-sm cursor-pointer">
+                                            Global Foundation
+                                        </p>
+                                    </label>
+                                    <p v-if="errors.funder_type" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
+                                        errors.funder_type
+                                    }}</p>
                                 </div>
 
                                 <div class="flex flex-col gap-2 pt-5 relative">
@@ -94,7 +108,7 @@
                                         <option value="INR 10-50 Cr.">INR 10-50 Cr.</option>
                                         <option value="INR 51-100 Cr.">INR 51-100 Cr.</option>
                                         <option value="INR 101-300 Cr.">INR 101-300 Cr.</option>
-                                        <option value="INR 301 and above">INR 301 Cr. and above</option>
+                                        <option value="INR 301 Cr. and above">INR 301 Cr. and above</option>
                                     </select>
                                     <p v-if="errors.annual_budget" class="absolute -bottom-5 text-red-500 text-h6 mt-1">
                                         {{
@@ -137,14 +151,16 @@
                                     <X @click="confirmation = false" class="text-sm cursor-pointer" />
                                 </div>
                                 <p class="text-sm font-normal text-[#21272A] py-1">
-                                    You can download the result now. However, creating an account lets you save results and access them anytime.
+                                    You can download the result now. However, creating an account lets you save results
+                                    and access them anytime.
                                 </p>
                                 <hr class="pb-2 mt-2">
                                 <div class="flex justify-end gap-2 pt-2">
                                     <button @click="confirmationDn('guest')"
                                         class="bg-secondary text-white rounded-md w-28 h-10 text-h5">Guest</button>
                                     <button @click="confirmationDn('login')"
-                                        class="bg-secondary text-white rounded-md w-36 h-10 text-h5">Login / Register</button>
+                                        class="bg-secondary text-white rounded-md w-36 h-10 text-h5">Login /
+                                        Register</button>
                                 </div>
                             </div>
                         </DialogPanel>
@@ -169,15 +185,14 @@ const confirmation = ref(false)
 const down_loading = ref(false);
 const formData = ref({
     designation: '',
-    funderType: [],
+    funder_type: '',
     annual_budget: ''
 })
 const errors = ref({
     designation: '',
-    funderType: '',
+    funder_type: '',
     annual_budget: ''
 });
-const options = ref([])
 // Props
 const props = defineProps({
     disabled: {
@@ -189,16 +204,13 @@ const props = defineProps({
         mandatory: true
     }
 })
-const get_funder_type = async () => {
-    let res = await call('pwit.controllers.api.get_funder_type', {})
-    options.value = res
-}
+
 
 const validateForm = () => {
     errors.value.designation = formData.value.designation ? '' : 'Designation is required.';
-    errors.value.funderType = formData.value.funderType.length ? '' : 'Please select at least one funder type.';
+    errors.value.funder_type = formData.value.funder_type.length ? '' : 'Please select at least one funder type.';
     errors.value.annual_budget = formData.value.annual_budget ? '' : 'Annual budget is required.';
-    return !errors.value.designation && !errors.value.funderType && !errors.value.annual_budget;
+    return !errors.value.designation && !errors.value.funder_type && !errors.value.annual_budget;
 };
 // Submit selected options
 const submitSelection = async () => {
@@ -249,7 +261,6 @@ const confirmationDn = (value) => {
     }
 }
 onMounted(() => {
-    get_funder_type()
     if (auth.isLoggedIn && sessionStorage.getItem('authPopup') == 'true') {
         download_results()
     }

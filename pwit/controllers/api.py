@@ -117,10 +117,6 @@ def download_results(doctype, session):
     return Result.download_results(doctype, session)
 
 @frappe.whitelist(allow_guest=True)
-def get_funder_type():
-    return FormAPIs.get_funder_type()
-
-@frappe.whitelist(allow_guest=True)
 def save_user_details(data,session):
     return AuthAPIs.save_user_details(data,session)
 
