@@ -119,9 +119,7 @@ class AuthAPIs:
             doc = frappe.get_doc('Session', session)
             doc.designation = data.get('designation')
             doc.annual_budget = data.get('annual_budget')
-            doc.funder_type = []
-            for item in data.get('funderType',[]):
-                doc.append('funder_type',{'funder_type': item})
+            doc.funder_type = data.get('funder_type')
             doc.save(ignore_permissions=True)
             return {'code': 200, 'data': doc}
         else:
@@ -139,8 +137,7 @@ class AuthAPIs:
                     details = frappe.get_doc('Session', session)
                     details.designation = session_details.get('designation')
                     details.annual_budget = session_details.get('annual_budget')
-                    for item in session_details.get('funder_type'):
-                        details.append('funder_type', {'funder_type': item.funder_type})
+                    details.funder_type = session_details.get('funder_type')
                     details.save(ignore_permissions=True)
                 return {'code': 200, 'data': details}
             else:
