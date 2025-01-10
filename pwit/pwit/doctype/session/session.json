@@ -11,7 +11,7 @@
   "designation",
   "column_break_edwc",
   "annual_budget",
-  "section_break_arzy",
+  "column_break_wwox",
   "funder_type"
  ],
  "fields": [
@@ -34,27 +34,27 @@
    "fieldname": "designation",
    "fieldtype": "Select",
    "label": "Designation",
-   "options": "Executive Director/Chief  Executive Officer/Head of CSR\nDirector of Philanthropy\nChief Operating Officer\nProgramme Lead/Programme Officer\nThird party supporting  funder organisation\nOther"
+   "options": "\nExecutive Director/Chief  Executive Officer/Head of CSR\nDirector of Philanthropy\nChief Operating Officer\nProgramme Lead/Programme Officer\nThird party supporting  funder organisation\nOther"
   },
   {
    "fieldname": "annual_budget",
    "fieldtype": "Select",
    "label": "Annual budget",
-   "options": "Less than INR 10 Cr.\nINR 10-50 Cr.\nINR 51-100 Cr.\nINR 101-300 Cr.\nINR 301 Cr. and above"
+   "options": "\nLess than INR 10 Cr.\nINR 10-50 Cr.\nINR 51-100 Cr.\nINR 101-300 Cr.\nINR 301 Cr. and above"
   },
   {
    "fieldname": "funder_type",
-   "fieldtype": "Table MultiSelect",
+   "fieldtype": "Select",
    "label": "Funder Type",
-   "options": "Funder Type Child"
+   "options": "\nCorporate Social Responsibility (CSR)\nGlobal Foundation\nDomestic Foundation"
   },
   {
    "fieldname": "column_break_edwc",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_arzy",
-   "fieldtype": "Section Break"
+   "fieldname": "column_break_wwox",
+   "fieldtype": "Column Break"
   }
  ],
  "hide_toolbar": 1,
@@ -89,7 +89,7 @@
    "link_fieldname": "session"
   }
  ],
- "modified": "2025-01-10 12:13:01.883892",
+ "modified": "2025-01-10 15:08:30.606843",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Session",
