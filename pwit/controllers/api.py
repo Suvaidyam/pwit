@@ -59,7 +59,7 @@ def question_list(doctype):
     return AssessmentAPIs.question_list(doctype)
 
 @frappe.whitelist(allow_guest=True)
-def get_results(doctype,session,user=None):
+def get_results(doctype,session=None,user=None):
     return AssessmentAPIs.get_results(doctype,session,user)
 
 @frappe.whitelist(allow_guest=True)
