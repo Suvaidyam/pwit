@@ -1,0 +1,545 @@
+[
+ {
+  "columns": [
+   {
+    "fieldname": "name",
+    "fieldtype": "Data",
+    "label": "ID",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.funder_type",
+    "fieldtype": "Select",
+    "label": "Funder Type",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.designation",
+    "fieldtype": "Select",
+    "label": "Designation",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.annual_budget",
+    "fieldtype": "Select",
+    "label": "Annual budget",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "docstatus",
+    "fieldtype": "Int",
+    "label": "Status",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "modified",
+    "fieldtype": "Date",
+    "label": "Last updated on",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "myp_guidelines.code",
+    "fieldtype": "Small Text",
+    "label": "Do you have written guidelines that enable multiyear partnerships?",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "myp_budget_allocation.code",
+    "fieldtype": "Small Text",
+    "label": "Do you provide multiyear grants (within any relevant legal parameters) to nonprofit partners?",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "myp_approaches_adopted_01.code",
+    "fieldtype": "Small Text",
+    "label": "How intentional are you in forming multiyear partnerships?",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "myp_approaches_adopted_02.code",
+    "fieldtype": "Small Text",
+    "label": "Do you have well-defined eligibility criteria for multiyear partnerships?",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "myp_approaches_adopted_03.code",
+    "fieldtype": "Small Text",
+    "label": "What are the criteria to renew/retain partnerships? ",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "myp_communication_channels_01.code",
+    "fieldtype": "Small Text",
+    "label": "How is your approach to multiyear partnerships communicated internally?",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "myp_communication_channels_02.code",
+    "fieldtype": "Small Text",
+    "label": "How are your guidelines on multiyear partnerships communicated to nonprofits (current and potential) and the wider sector? ",
+    "options": null,
+    "width": 0
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "SVA Report",
+  "filters": [],
+  "modified": "2025-01-10 16:28:24.969438",
+  "name": "Multi-year Partnerships",
+  "ref_doctype": "Multi-year Partnerships"
+ },
+ {
+  "columns": [
+   {
+    "fieldname": "name",
+    "fieldtype": "Data",
+    "label": "ID",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.funder_type",
+    "fieldtype": "Select",
+    "label": "Funder Type",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.designation",
+    "fieldtype": "Select",
+    "label": "Designation",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.annual_budget",
+    "fieldtype": "Select",
+    "label": "Annual budget",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "docstatus",
+    "fieldtype": "Int",
+    "label": "Status",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "modified",
+    "fieldtype": "Date",
+    "label": "Last updated on",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "od_1.label",
+    "fieldtype": "Small Text",
+    "label": "We fund nonprofits for organisational development that may not be directly related to a  programme.",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "myp_1.label",
+    "fieldtype": "Small Text",
+    "label": "Changing nonprofit partners frequently creates competition amongst them, pushing them to  be more efficient.",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "fr_1.label",
+    "fieldtype": "Small Text",
+    "label": "We encourage our nonprofit partners to create an operating surplus and transfer the surplus  to reserves.",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "core_cost_2.label",
+    "fieldtype": "Small Text",
+    "label": "We rarely ask our nonprofit partners to reduce core costs at the proposal stage.",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "core_cost_3.label",
+    "fieldtype": "Small Text",
+    "label": "We encourage our nonprofit partners to find alternative sources for covering their core costs  rather than ask us to increase our",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "dei_1.label",
+    "fieldtype": "Small Text",
+    "label": "A nonprofit’s relationship with other credible and/or large funders is an important selection  criterion for us.",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "od_2.label",
+    "fieldtype": "Small Text",
+    "label": "Nonprofits are able to do well even in the absence of organisational development funding.",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "myp_2.label",
+    "fieldtype": "Small Text",
+    "label": "We typically support programmes that can show results within an annual funding cycle.",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "fr_2.label",
+    "fieldtype": "Small Text",
+    "label": "Most nonprofits do not have the capabilities to manage reserves.",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "fr_3.label",
+    "fieldtype": "Small Text",
+    "label": "We proactively introduce our nonprofit partners to other funders.",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "myp_3.label",
+    "fieldtype": "Small Text",
+    "label": "The majority of our funding goes to nonprofit partners whom we have supported for a long  period of time.",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "dei_2.label",
+    "fieldtype": "Small Text",
+    "label": "A special focus on marginalised communities is not necessary because a nonprofit’s  initiatives will typically ",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "dei_3.label",
+    "fieldtype": "Small Text",
+    "label": "The leadership composition (i.e. demographic makeup) does not matter as long as the  nonprofit organisation is ",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "od_3.label",
+    "fieldtype": "Small Text",
+    "label": "Organisational development funding does not contribute to social impact.",
+    "options": null,
+    "width": 0
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "SVA Report",
+  "filters": [],
+  "modified": "2025-01-10 18:13:34.476223",
+  "name": "Funder Diagnostic",
+  "ref_doctype": "Funder Diagnostic"
+ },
+ {
+  "columns": [
+   {
+    "fieldname": "name",
+    "fieldtype": "Data",
+    "label": "ID",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.funder_type",
+    "fieldtype": "Select",
+    "label": "Funder Type",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.annual_budget",
+    "fieldtype": "Select",
+    "label": "Annual budget",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.designation",
+    "fieldtype": "Select",
+    "label": "Designation",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "docstatus",
+    "fieldtype": "Int",
+    "label": "Status",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "modified",
+    "fieldtype": "Date",
+    "label": "Last updated on",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "cc_guidelines.code",
+    "fieldtype": "Data",
+    "label": "Do you have written guidelines that clearly stipulate the core cost support that is extended to nonprofit partners? ",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "cc_approaches_adopted_01.code",
+    "fieldtype": "Data",
+    "label": "What approach have you adopted for providing core cost support to nonprofit partners? How consultative is your approach? ",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "cc_approaches_adopted_02.code",
+    "fieldtype": "Data",
+    "label": "Does your approach allow room for nonprofit partners to negotiate the core cost support provided?",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "cc_communication_channels_01.code",
+    "fieldtype": "Data",
+    "label": "How are your guidelines on core cost support communicated internally?",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "cc_communication_channels_02.code",
+    "fieldtype": "Data",
+    "label": "How are your guidelines on core cost support communicated to nonprofits (current and potential) and the wider sector? ",
+    "options": null,
+    "width": 0
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "SVA Report",
+  "filters": [],
+  "modified": "2025-01-11 14:03:29.007840",
+  "name": "Core Costs",
+  "ref_doctype": "Core Costs"
+ },
+ {
+  "columns": [
+   {
+    "fieldname": "name",
+    "fieldtype": "Check",
+    "label": "ID",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.funder_type",
+    "fieldtype": "Select",
+    "label": "Funder Type",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.annual_budget",
+    "fieldtype": "Select",
+    "label": "Annual budget",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.designation",
+    "fieldtype": "Select",
+    "label": "Designation",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "docstatus",
+    "fieldtype": "Int",
+    "label": "Status",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "modified",
+    "fieldtype": "Date",
+    "label": "Last updated on",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "od_guidelines.code",
+    "fieldtype": "Data",
+    "label": "Do you have written guidelines that  clearly state the  organisational development (OD)  support available to  nonprofit partners? ",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "od_budget_allocation.code",
+    "fieldtype": "Data",
+    "label": "Do you provide OD  grants to nonprofit  partners?",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "od_approaches_adopted_01.code",
+    "fieldtype": "Data",
+    "label": "What are your  preferred pathways  to extend OD grants  to your nonprofit  partners?",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "od_approaches_adopted_02.code",
+    "fieldtype": "Data",
+    "label": "Who decides the OD  needs of nonprofit  partners? How  consultative is your  approach?",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "od_communication_channels_01.code",
+    "fieldtype": "Data",
+    "label": "How are your  guidelines on OD support  communicated  internally?",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "od_communication_channels_02.code",
+    "fieldtype": "Data",
+    "label": "How are your  guidelines on OD support communicated to nonprofits (current and  potential) and the  wider sector?",
+    "options": null,
+    "width": 0
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "SVA Report",
+  "filters": [],
+  "modified": "2025-01-11 14:07:37.503977",
+  "name": "Organisational Development",
+  "ref_doctype": "Organisational Development"
+ },
+ {
+  "columns": [
+   {
+    "fieldname": "name",
+    "fieldtype": "Data",
+    "label": "ID",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.funder_type",
+    "fieldtype": "Select",
+    "label": "Funder Type",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.annual_budget",
+    "fieldtype": "Select",
+    "label": "Annual budget",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.designation",
+    "fieldtype": "Select",
+    "label": "Designation",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "docstatus",
+    "fieldtype": "Int",
+    "label": "Status",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "modified",
+    "fieldtype": "Date",
+    "label": "Last updated on",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "fr_guidelines.code",
+    "fieldtype": "Data",
+    "label": "Do you have written guidelines that clearly stipulate financial resilience support extended to nonprofit partners?",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "fr_approaches_adopted_01.code",
+    "fieldtype": "Data",
+    "label": "Do you help nonprofit partners build their resilience through non-financial support? ",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "fr_approaches_adopted_02.code",
+    "fieldtype": "Data",
+    "label": "Do you provide a financial contribution(s) to nonprofit partners to help them build reserves? ",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "fr_communication_channels_01.code",
+    "fieldtype": "Data",
+    "label": "How are your guidelines on financial resilience support communicated internally?",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "fr_communication_channels_02.code",
+    "fieldtype": "Data",
+    "label": "How are your guidelines on financial resilience support communicated to nonprofits (current and potential) and the wider sector?",
+    "options": null,
+    "width": 0
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "SVA Report",
+  "filters": [],
+  "modified": "2025-01-11 14:10:20.767148",
+  "name": "Financial Resilience",
+  "ref_doctype": "Financial Resilience"
+ },
+ {
+  "columns": [
+   {
+    "fieldname": "email",
+    "fieldtype": "Data",
+    "label": "Email",
+    "options": null,
+    "width": 300
+   },
+   {
+    "fieldname": "full_name",
+    "fieldtype": "Data",
+    "label": "Full Name",
+    "options": null,
+    "width": 200
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "SVA Report",
+  "filters": [],
+  "modified": "2025-01-11 14:13:55.953353",
+  "name": "User",
+  "ref_doctype": "User"
+ }
+]
