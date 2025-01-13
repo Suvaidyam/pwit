@@ -177,7 +177,7 @@
    {
     "fieldname": "core_cost_3.label",
     "fieldtype": "Small Text",
-    "label": "We encourage our nonprofit partners to find alternative sources for covering their core costs  rather than ask us to increase our",
+    "label": "We encourage our nonprofit partners to find alternative sources for covering their core costs  rather than ask us to increase our core cost support.",
     "options": null,
     "width": 0
    },
@@ -226,14 +226,14 @@
    {
     "fieldname": "dei_2.label",
     "fieldtype": "Small Text",
-    "label": "A special focus on marginalised communities is not necessary because a nonprofit’s  initiatives will typically ",
+    "label": "A special focus on marginalised communities is not necessary because a nonprofit’s  initiatives will typically benefit all segments of the community equally.",
     "options": null,
     "width": 0
    },
    {
     "fieldname": "dei_3.label",
     "fieldtype": "Small Text",
-    "label": "The leadership composition (i.e. demographic makeup) does not matter as long as the  nonprofit organisation is ",
+    "label": "The leadership composition (i.e. demographic makeup) does not matter as long as the  nonprofit organisation is working on a substantive issue.",
     "options": null,
     "width": 0
    },
@@ -248,7 +248,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-10 18:13:34.476223",
+  "modified": "2025-01-13 14:36:25.695140",
   "name": "Funder Diagnostic",
   "order_by": null,
   "ref_doctype": "Funder Diagnostic",
@@ -301,7 +301,7 @@
    {
     "fieldname": "cc_guidelines.code",
     "fieldtype": "Data",
-    "label": "Do you have written guidelines that clearly stipulate the core cost support that is extended to nonprofit partners? ",
+    "label": "\nDo you have written guidelines that clearly stipulate the core cost support that is extended to nonprofit partners? Are these guidelines flexible and adaptable based on context and need?",
     "options": null,
     "width": 0
    },
@@ -337,7 +337,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-11 14:03:29.007840",
+  "modified": "2025-01-13 14:26:00.426832",
   "name": "Core Costs",
   "order_by": null,
   "ref_doctype": "Core Costs",
@@ -493,14 +493,14 @@
    {
     "fieldname": "fr_approaches_adopted_01.code",
     "fieldtype": "Data",
-    "label": "Do you help nonprofit partners build their resilience through non-financial support? ",
+    "label": "Do you help nonprofit partners build their resilience through non-financial support? This can be through helping them diversify their funder base, supporting with financial planning, etc.",
     "options": null,
     "width": 0
    },
    {
     "fieldname": "fr_approaches_adopted_02.code",
     "fieldtype": "Data",
-    "label": "Do you provide a financial contribution(s) to nonprofit partners to help them build reserves? ",
+    "label": "Do you provide a financial contribution(s) to nonprofit partners to help them build reserves? This can be through the transfer of surplus that the nonprofit accumulates, dedicated grants and/or the transfer of flexible funding towards reserves building.",
     "options": null,
     "width": 0
    },
@@ -522,7 +522,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-11 14:10:20.767148",
+  "modified": "2025-01-13 14:29:44.300511",
   "name": "Financial Resilience",
   "order_by": null,
   "ref_doctype": "Financial Resilience",
@@ -557,6 +557,13 @@
  {
   "columns": [
    {
+    "fieldname": "name",
+    "fieldtype": "Data",
+    "label": "ID",
+    "options": null,
+    "width": 0
+   },
+   {
     "fieldname": "session.funder_type",
     "fieldtype": "Select",
     "label": "Funder Type",
@@ -574,6 +581,20 @@
     "fieldname": "session.designation",
     "fieldtype": "Select",
     "label": "Designation",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "docstatus",
+    "fieldtype": "Int",
+    "label": "Status",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "modified",
+    "fieldtype": "Date",
+    "label": "Last updated on",
     "options": null,
     "width": 0
    },
@@ -658,7 +679,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-13 13:16:51.165381",
+  "modified": "2025-01-13 14:15:35.987619",
   "name": "Diversity Equity Inclusion",
   "order_by": null,
   "ref_doctype": "Diversity Equity Inclusion",
