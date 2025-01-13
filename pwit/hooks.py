@@ -16,6 +16,7 @@ fixtures=[
     'Left-Menu',
     'Property Setter',
     'Results and Recommendtions',
+    'SVA Report'
     ]
 
 # Each item in the list will be shown as an app in the apps page
