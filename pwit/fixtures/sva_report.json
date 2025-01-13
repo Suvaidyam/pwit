@@ -98,7 +98,9 @@
   "filters": [],
   "modified": "2025-01-10 16:28:24.969438",
   "name": "Multi-year Partnerships",
-  "ref_doctype": "Multi-year Partnerships"
+  "order_by": null,
+  "ref_doctype": "Multi-year Partnerships",
+  "repeat_parent_data": 0
  },
  {
   "columns": [
@@ -248,7 +250,9 @@
   "filters": [],
   "modified": "2025-01-10 18:13:34.476223",
   "name": "Funder Diagnostic",
-  "ref_doctype": "Funder Diagnostic"
+  "order_by": null,
+  "ref_doctype": "Funder Diagnostic",
+  "repeat_parent_data": 0
  },
  {
   "columns": [
@@ -335,7 +339,9 @@
   "filters": [],
   "modified": "2025-01-11 14:03:29.007840",
   "name": "Core Costs",
-  "ref_doctype": "Core Costs"
+  "order_by": null,
+  "ref_doctype": "Core Costs",
+  "repeat_parent_data": 0
  },
  {
   "columns": [
@@ -429,7 +435,9 @@
   "filters": [],
   "modified": "2025-01-11 14:07:37.503977",
   "name": "Organisational Development",
-  "ref_doctype": "Organisational Development"
+  "order_by": null,
+  "ref_doctype": "Organisational Development",
+  "repeat_parent_data": 0
  },
  {
   "columns": [
@@ -516,7 +524,9 @@
   "filters": [],
   "modified": "2025-01-11 14:10:20.767148",
   "name": "Financial Resilience",
-  "ref_doctype": "Financial Resilience"
+  "order_by": null,
+  "ref_doctype": "Financial Resilience",
+  "repeat_parent_data": 0
  },
  {
   "columns": [
@@ -540,6 +550,118 @@
   "filters": [],
   "modified": "2025-01-11 14:13:55.953353",
   "name": "User",
-  "ref_doctype": "User"
+  "order_by": null,
+  "ref_doctype": "User",
+  "repeat_parent_data": 0
+ },
+ {
+  "columns": [
+   {
+    "fieldname": "session.funder_type",
+    "fieldtype": "Select",
+    "label": "Funder Type",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.annual_budget",
+    "fieldtype": "Select",
+    "label": "Annual budget",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.designation",
+    "fieldtype": "Select",
+    "label": "Designation",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "dei_strategic_considerations_01.label",
+    "fieldtype": "Small Text",
+    "label": "Is implementation of DEI specifically for marginalised communities a stated goal of your grantmaking? (Select one) ",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "dei_strategic_considerations_02.label",
+    "fieldtype": "Small Text",
+    "label": "Do you collect and review data or feedback from grantees to evaluate how inclusive their programmes are? (Select one) ",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "dei_sourcing.field_options.label",
+    "fieldtype": "Small Text",
+    "label": "What steps do you take to go beyond your networks and source nonprofits in an inclusive way? (Select all that apply)",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "dei_application.field_options.label",
+    "fieldtype": "Small Text",
+    "label": " Is your grant application process inclusive and accessible for nonprofits well-suited to achieve the desired impact?(Select all that apply)",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "dei_selection.field_options.label",
+    "fieldtype": "Small Text",
+    "label": " How do you ensure your selection criteria and processes are equitable for all applicants? (Select all that apply)",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "dei_diligence.field_options.label",
+    "fieldtype": "Small Text",
+    "label": "Do you try to make the diligence process less arduous for the nonprofit? (Select all that apply)",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "dei_grant_setup_and_disbursement.field_options.label",
+    "fieldtype": "Small Text",
+    "label": " Which of the following steps do you take to make the grant award process and disbursement more inclusive? (Select all that apply)",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "dei_grantee_support.field_options.label",
+    "fieldtype": "Small Text",
+    "label": "How do you help grantees become more inclusive? (Select all that apply)",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "dei_grantee_engagement.field_options.label",
+    "fieldtype": "Small Text",
+    "label": "What steps do you take to ensure ongoing engagement with grantees is inclusive and equitable? (Select all that apply)",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "dei_reporting.field_options.label",
+    "fieldtype": "Small Text",
+    "label": "What steps do you take to make reporting more inclusive for all grantees? (Select all that apply)",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "dei_renewal.label",
+    "fieldtype": "Small Text",
+    "label": " Is progress on DEI-related outcomes/results seen as a positive at the time of grant renewal? (Select one)",
+    "options": null,
+    "width": 0
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "SVA Report",
+  "filters": [],
+  "modified": "2025-01-13 13:16:51.165381",
+  "name": "Diversity Equity Inclusion",
+  "order_by": null,
+  "ref_doctype": "Diversity Equity Inclusion",
+  "repeat_parent_data": 1
  }
 ]
