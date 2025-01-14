@@ -68,8 +68,7 @@
                                                     <option value="">Select</option>
                                                     <option
                                                         value="Executive Director/Chief Executive Officer/Head of CSR">
-                                                        Executive
-                                                        Director/Chief Executive Officer/Head of CSR
+                                                        Executive Director/Chief Executive Officer/Head of CSR
                                                     </option>
                                                     <option value="Director of Philanthropy">Director of Philanthropy
                                                     </option>
@@ -130,7 +129,7 @@
                                                     </option>
                                                     <option value="INR 101-300 Cr.">INR 101-300 Cr.
                                                     </option>
-                                                    <option value="INR 301 and above">INR 301 Cr. and above
+                                                    <option value="INR 301 Cr. and above">INR 301 Cr. and above
                                                     </option>
                                                 </select>
                                             </div>

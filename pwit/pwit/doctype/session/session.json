@@ -34,7 +34,7 @@
    "fieldname": "designation",
    "fieldtype": "Select",
    "label": "Designation",
-   "options": "\nExecutive Director/Chief  Executive Officer/Head of CSR\nDirector of Philanthropy\nChief Operating Officer\nProgramme Lead/Programme Officer\nThird party supporting  funder organisation\nOther"
+   "options": "\nExecutive Director/Chief Executive Officer/Head of CSR\nDirector of Philanthropy\nChief Operating Officer\nProgramme Lead/Programme Officer\nThird party supporting funder organisation\nOther"
   },
   {
    "fieldname": "annual_budget",
@@ -89,7 +89,7 @@
    "link_fieldname": "session"
   }
  ],
- "modified": "2025-01-10 15:08:30.606843",
+ "modified": "2025-01-14 14:42:34.733627",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Session",
