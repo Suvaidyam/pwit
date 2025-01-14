@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Layout</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .principle-card {
+      border-radius: 10px;
+      background-color: #FFFFFF;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative; 
+      margin-bottom: 30px;
+    }
+    .principle-icon {
+      width: 50px;
+      height: 50px; 
+      background-color: white;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 24px; 
+      position: absolute;
+      top: -25px;
+      left: 20px;
+    }
+    .principle-title {
+      font-weight: bold;
+      font-size: 19px; 
+      margin-top: 30px;
+    }
+    .principle-description {
+      font-size: 15px;
+      color: #4B5563; /* Medium gray */
+      margin-top: 10px;
+    } 
+    .principle-icon img {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 25px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 px-10">
+  <div class="container">
+    <div style=" margin: 0px 0px 10px;">
+        <div style="text-align: end;"> <img src="https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734498439/logo_uywexq.png" alt="PWIT Logo" style="width: 150px; height: auto;" /></div>
+         <div
+             style="text-align: center; font-size: 16px; font-weight: 500; line-height: 15px; color:#002C77;font-weight:600;padding-top:12px">
+             Assistive Funder Toolkit</div>
+         <div style="font-size: 12px; text-align: center; font-weight: 400;">(Developed by the Pay-What-It-Takes India Initiative)
+         </div>
+     </div>
+     <h2 style="color: #002C77;" class="text-2xl font-bold">Pathway for funders to strengthen their grant making practices</h2>
+     <p style="font-size: 13px;margin-top: 13px;">Getting better at the five high-impact PWIT funding principles starts with assessing where you are today. Based on your results from the Funder Diagnostic, we recommend prioritising the three principles below, but you may choose to assess your organisation on any or all of the five principles.</p>
+   <!-- Recommended Principles -->
+   <h2 style="margin-bottom: 35px; margin-top: 13px; color: #292e31;" class="text-xl font-bold mb-6">Recommended principles</h2>
+   <div >
+     {% for item in data if item.group == 'Recommended' %}
+     <div class="principle-card" style=" border-top: 4px solid {{item.color}};">
+       <div class="principle-icon" style="border: 4px solid {{item.color}};">
+        <img class="icon-img" src="{{item.icon}}" alt=""/>
+       </div>
+       <div class="principle-title" style=" color: {{item.color}};">{{item.name1}}</div>
+       <div class="principle-description">
+         {{item.description}}
+       </div>
+     </div>
+     {% if loop.index % 2 == 0 %}</tr><tr>{% endif %}
+     {% endfor %}
+   <!-- Additional Principles -->
+   <h2 style="margin-bottom: 35px;  color: #292e31;" class="text-xl font-bold mb-6">Additional principles to explore</h2>
+   <div >
+     {% for item in data if item.group == 'Additional' %}
+     <div class="principle-card" style=" border-top: 4px solid {{item.color}};">
+       <div class="principle-icon" style=" border: 4px solid {{item.color}};">
+        <img class="icon-img" src="{{item.icon}}" alt=""/>
+       </div>
+       <div class="principle-title" style=" color: {{item.color}};">{{item.name1}}</div>
+       <div class="principle-description">
+         {{item.description}}
+       </div>
+     </div>
+     {% if loop.index % 2 == 0 %}</tr><tr>{% endif %}
+     {% endfor %}
+  </div>
+
+</body>
+</html>

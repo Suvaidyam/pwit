@@ -17,7 +17,8 @@
                             strengthen their
                             grant
                             making practices</h1>
-                        <router-link to="/funder-diagnostic"
+                        <div class="flex items-center gap-3">
+                            <router-link to="/funder-diagnostic"
                             class="border border-[#255B97] w-10 justify-center md:w-auto min-w-10 flex items-center gap-2 truncate rounded-md h-7 md:h-9 text-secondary text-sm lg:px-6"
                             @click="re_attempt">
                             <span class="hidden lg:block" v-if="Object.keys(initialData).length">Continue
@@ -26,6 +27,17 @@
                             <ChevronRight class="w-4 h-4 min-w-4" v-if="false" />
                             <RefreshCcw class="w-4 h-4 min-w-4" v-else />
                         </router-link>
+                        <button @click="download_results"
+                            :class="[false ? 'cursor-not-allowed' : 'cursor-pointer']"
+                            class="border flex items-center justify-center gap-2 px-2 md:px-4 h-7 md:h-9 text-sm border-[#27853F] text-[#27853F] rounded-md">
+                            <span class="hidden lg:block truncate">Download</span>
+                            <div class="h-5 w-5" v-if="down_loading">
+                                <div class="animate-spin h-full w-full rounded-full border-[3px] border-t-[#002C77] border-b-[#255B97]">
+                                </div>
+                            </div>
+                            <Download class="w-4" v-else />
+                        </button>
+                        </div>
                     </div>
                     <p class="text-sebase pt-3  font-normal text-sm text-justify">
                         Getting better at the five high-impact PWIT funding principles starts with assessing where you are today. Based on your results from the Funder Diagnostic, we recommend prioritising the three principles below, but you may choose to assess your organisation on any or all of the five principles.
@@ -162,7 +174,7 @@ import Popper from "vue3-popper";
 import { useRouter } from 'vue-router'
 import FooterNav from '../components/FooterNav.vue';
 import Loader from '../components/Loader.vue';
-import { IndianRupee, Handshake,House,ArrowBigLeft, PiggyBank, ChartNoAxesCombined, Scale, RefreshCcw, ChevronRight } from 'lucide-vue-next'
+import { IndianRupee,Download, Handshake,House,ArrowBigLeft, PiggyBank, ChartNoAxesCombined, Scale, RefreshCcw, ChevronRight } from 'lucide-vue-next'
 
 const router = useRouter()
 const call = inject('$call')
@@ -256,6 +268,9 @@ const get_result = async () => {
             user: auth.cookie.user_id !== 'Guest' ? auth.cookie.user_id : ''
         })
             .then(res => {
+                if (Object.keys(res?.data)?.length === 0) {
+                    router.push('/funder-diagnostic')
+                }
                 const groupedSums = Object.entries(res.data).reduce((acc, [key, value]) => {
                     const keyParts = key.split('_');
                     keyParts.pop();
@@ -359,6 +374,14 @@ const get_last_sub = async () => {
         last_sub.value = res?.data ?? {}
 	}
 };
+
+const download_results = async () => {
+    let link = document.createElement('a')
+    link.href = `/api/method/pwit.controllers.funder_results.download_funder?session=${store.session}`;
+    link.target = '_blank';
+    link.click() 
+}
+
 watch(() => data.value, (value) => {
     recommendedList.value = value?.filter(e => e.group === 'Recommended')
     additionalList.value = value?.filter(e => e.group === 'Additional')
