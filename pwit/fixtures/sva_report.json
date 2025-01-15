@@ -147,6 +147,13 @@
     "width": 0
    },
    {
+    "fieldname": "core_cost_1.label",
+    "fieldtype": "Small Text",
+    "label": "A lower core cost (administrative or support-function expenses not tied to a specific programme) means a nonprofit is more efficient.",
+    "options": null,
+    "width": 0
+   },
+   {
     "fieldname": "od_1.label",
     "fieldtype": "Small Text",
     "label": "We fund nonprofits for organisational development that may not be directly related to a  programme.",
@@ -248,9 +255,9 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-13 14:36:25.695140",
+  "modified": "2025-01-14 16:58:22.138240",
   "name": "Funder Diagnostic",
-  "order_by": null,
+  "order_by": "",
   "ref_doctype": "Funder Diagnostic",
   "repeat_parent_data": 0
  },

@@ -7,13 +7,29 @@
   "doctype_or_field": "DocField",
   "field_name": "fieldtype",
   "is_system_generated": 0,
-  "modified": "2025-01-09 14:14:40.213170",
+  "modified": "2025-01-14 16:14:16.833760",
   "module": null,
   "name": "Report Column-fieldtype-options",
   "property": "options",
   "property_type": null,
   "row_name": null,
   "value": "Check\nCurrency\nData\nDate\nDatetime\nDuration\nDynamic Link\nFloat\nFold\nInt\nLink\nSelect\nTime\nSmall Text\nText\nTable MultiSelect"
+ },
+ {
+  "default_value": null,
+  "doc_type": "Report Column",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "label",
+  "is_system_generated": 0,
+  "modified": "2025-01-14 16:14:18.132788",
+  "module": null,
+  "name": "Report Column-label-fieldtype",
+  "property": "fieldtype",
+  "property_type": "Select",
+  "row_name": null,
+  "value": "Small Text"
  },
  {
   "default_value": null,
@@ -574,21 +590,5 @@
   "property_type": "Check",
   "row_name": null,
   "value": "1"
- },
- {
-  "default_value": null,
-  "doc_type": "Report Column",
-  "docstatus": 0,
-  "doctype": "Property Setter",
-  "doctype_or_field": "DocField",
-  "field_name": "label",
-  "is_system_generated": 0,
-  "modified": "2025-01-13 14:25:40.732076",
-  "module": null,
-  "name": "Report Column-label-fieldtype",
-  "property": "fieldtype",
-  "property_type": "Select",
-  "row_name": null,
-  "value": "Small Text"
  }
 ]
