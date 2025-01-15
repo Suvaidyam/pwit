@@ -58,6 +58,7 @@
         height: 30px;
 
     }
+ 
 
 </style>
 
@@ -86,13 +87,34 @@
             </div>
              <!-- Body -->
             <div style="padding: 20px;">
-                <p style="text-align: start; font-size: 14px; font-weight: 400;">PWIT Contact Us by {{doc.full_name}},</p>
-                <p style="text-align: start; font-size: 14px; font-weight: 400;padding-top: 5px;">{{doc.message}}</p>
-                <p style="text-align: start; padding-top: 10px; font-size: 14px; font-weight: 400;">Contact Us:- {{doc.email}}</p>
+                <p style="text-align: start; font-size: 14px; font-weight: 400;line-height: 0;">Someone submitted their message via Contact Us form. 
+                     </p>
+                <p style="text-align: start; font-size: 14px; font-weight: 400;line-height: 0;">Please find the details below :
+                     </p>
+                <table style="width:100%; border: 1px solid black; border-collapse: collapse;" >
+                    <thead style="font-size: 14px;">
+                        <th style="width:30%; border: 1px solid black;">Field</th>
+                        <th style="width:100%; border: 1px solid black;">Input</th>
+                    </thead>
+                    <tbody style="font-size: 14px;">
+                        <tr>
+                            <td style="border: 1px solid black;">Name</td>
+                            <td style="border: 1px solid black;">{{doc.full_name}}</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;">Email Address</td>
+                            <td style="border: 1px solid black;">{{doc.email}}</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;">Message</td>
+                            <td style="border: 1px solid black;">{{doc.message}}</td>
+                        </tr>
+                    </tbody>
+                </table>
                 
                 <div style="text-align: start; font-size: 14px;">
                     <p>Thank you,</p>
-                    <p>PWIT Team</p>
+                    <p>The Pay-What-It-Takes India Team</p>
                 </div>
             </div>
         </div> <!-- FOOTER -->
