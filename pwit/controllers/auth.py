@@ -57,8 +57,9 @@ class AuthAPIs:
             # send email
             message_content = frappe.render_template("pwit/templates/pages/contact.html",{"doc":new_doc})
             now = frappe.flags.in_test or frappe.flags.in_install
+            # shashank.rastogi@bridgespan.org
             frappe.sendmail(
-                recipients= ['shashank.rastogi@bridgespan.org'],
+                recipients= ['rahul.suvaidyam@gmail.com'],
                 subject= 'PWIT Contact Us',
                 message=message_content,
                 delayed=(not now) if now is not None else new_doc.flags.delay_emails,
