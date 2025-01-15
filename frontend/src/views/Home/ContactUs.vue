@@ -36,9 +36,10 @@
                 <p v-if="errors.message" class="text-red-500 text-h6  absolute -bottom-5 ">{{ errors.message }}</p>
             </div>
             <div class="flex justify-center">
-                <button type="button" @click="sendMessage"
+                <button type="button" @click="sendMessage" :disabled="loading"
                     class="w-full sm:w-[169px] h-12 rounded-md bg-secondary text-white text-h5 text-center shadow-md">
-                    Send Message
+                    <p v-if="loading"> Sending...</p>
+                    <p v-if="!loading">Send Message</p>
                 </button>
             </div>
         </div>
@@ -60,7 +61,7 @@ const errors = ref({
     email: '',
     message: ''
 });
-
+const loading = ref(false);
 const clearError = (field) => {
     errors.value[field] = '';
 };
@@ -115,6 +116,7 @@ const sendMessage = async () => {
     })();
 
     try {
+        loading.value = true;
         const res = await call('pwit.controllers.api.contact_us', {
             data: {
                 ...data.value,
@@ -124,6 +126,7 @@ const sendMessage = async () => {
         switch (res.code) {
             case 200:
                 toast.success('Successfully submitted');
+                loading.value = false;
                 // Clear the form fields
                 data.value = {
                     full_name: '',
