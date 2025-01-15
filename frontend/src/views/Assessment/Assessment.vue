@@ -1,14 +1,9 @@
 <template>
     <div class="p-4 w-full">
-        <Breadcrumb />
-        <div class="flex pt-3 flex-col md:flex-row md:items-center justify-between gap-3">
-            <div class="flex items-center gap-3">
-                <h1 v-for="item in heading.filter((e)=>e.name==title)" class="text-h4 md:text-h2 font-primary font-semibold text-primary leading-8">{{ item.label }}</h1>
-                <p class=" w-16 min-w-16 py-1 text-center hidden md:block rounded-2xl text-red-700 bg-red-100 font-bold"
-                    v-if="Object.keys(initialData).length">Draft</p>
-            </div>
-            <div class="flex justify-between w-full md:w-auto">
-                <p class=" w-16 py-1 text-center block md:hidden rounded-2xl text-red-700 bg-red-100 font-bold"
+        <div class="flex justify-between gap-3 pb-2">
+            <Breadcrumb />
+            <div class="flex justify-between">
+                <p class=" w-16 py-1 text-center rounded-2xl text-red-700 bg-red-100 font-bold"
                     v-if="Object.keys(initialData).length">Draft</p>
                 <button v-if="Object.keys(results).length" @click="() => router.push(`${current_path}/results`)"
                     class="border flex items-center gap-2 text-secondary border-[#255B97] rounded-md h-9 px-4 text-sm truncate">
@@ -17,6 +12,10 @@
                 </button>
             </div>
         </div>
+        <div class="flex items-center gap-3">
+                <h1 v-for="item in heading.filter((e)=>e.name==title)" class="text-h4 md:text-h2 font-primary font-semibold text-primary leading-8">{{ item.label }}</h1>
+               
+            </div>
         <p v-if="title !== 'Diversity Equity Inclusion'" class="pt-3 text-h5 text-sebase">For each question, we ask you to select the level that largely corresponds to your organisation’s current practices, if any.</p>
         <transition name="fade" mode="out-in">
             <div class="w-full pt-4">
@@ -53,25 +52,25 @@ const initialData = ref({});
 const results = ref({});
 
 const heading = ref([{
-    label:'Multiyear funder-nonprofit partnerships',
-    name:'Multi-year Partnerships'
-},
-{
-    label:'Embedding diversity, equity and inclusion (DEI) in grantmaking',
-    name:'Diversity Equity Inclusion'
-},
-{
-    label:'Invest in organisational development',
-    name:'Organisational Development'
-},
-{
-    label:'Building financial resilience',
-    name:'Financial Resilience'
-},
-{
-    label:'Pay a fair share of core costs',
-    name:'Core Costs'
-}
+                'label':'Develop multiyear funder-nonprofit partnerships',
+                'name':'Multi-year Partnerships'
+            },
+            {
+                'label':'Embed diversity, equity, and inclusion in grantmaking',
+                'name':'Diversity Equity Inclusion'
+            },
+            {
+                'label':'Invest in organisational development',
+                'name':'Organisational Development'
+            },
+            {
+                'label':'Build financial resilience',
+                'name':'Financial Resilience'
+            },
+            {
+                'label':'Pay a fair share of core costs',
+                'name':'Core Costs'
+            }
 ]);
 
 watch(route, (oldVal, newVal) => {

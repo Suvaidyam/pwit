@@ -1,19 +1,11 @@
 <template>
     <div class="w-full h-screen p-4">
-        <div class="flex gap-2">
-            <Text @click="store.sidebar = true" class="w-6 min-w-6 cursor-pointer block md:hidden" />
-            <!-- <p class="text-gray-800 text-sm">
-                <router-link to="/">Home</router-link>
-                / <router-link to="/funder-diagnostic">Funder Diagnostic</router-link> / <router-link
-                    to="/recommended">Recommended Principles</router-link> /
-                <router-link :to="`/funder/${route.params.category}`">{{ title=='Organisational Development'?' Organisation Development':title }}</router-link>
-                <span class="text-gray-400 truncate"> / Results and Recommendations</span>
-            </p> -->
-            <router-link to="/" class="flex text-trbase items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|
-            <div class="flex items-center text-trbase cursor-pointer" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
-        </div>
         <div class="flex justify-between items-center">
-            <h1 class="text-h3 md:text-h2 text-primary truncate">{{ recommendations?.details?.title }}</h1>
+            <div class="flex gap-2">
+                <Text @click="store.sidebar = true" class="w-6 min-w-6 cursor-pointer block md:hidden" />
+                <router-link to="/" class="flex text-trbase items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|
+                <div class="flex items-center text-trbase cursor-pointer" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
+            </div>
             <div class="flex items-center gap-3">
                 <button v-if="recommendations.result && Object.keys(recommendations.result).length"
                     class="border border-[#255B97] flex items-center gap-2 truncate rounded-md h-7 md:h-9 text-secondary text-sm px-2 md:px-4"
@@ -30,6 +22,8 @@
                     :disabled="recommendations.result && Object.keys(recommendations.result).length > 0 ? false : true" />
             </div>
         </div>
+        <h1 class="text-h3 md:text-h2 text-primary truncate">{{ recommendations?.details?.title }}</h1>
+
         <div class="w-full results-section"
             :class="recommendations.result && Object.keys(recommendations.result).length ? '' : 'h-full'"
             v-if="!loading">
