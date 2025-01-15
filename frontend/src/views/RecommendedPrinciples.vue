@@ -2,21 +2,11 @@
         <div class="w-100">
             <div class="px-4 md:px-8 lg:px-20 mx-auto">
                 <div class="mt-6">
-                    <div class="flex gap-2">
-                        <!-- <p class="text-gray-800 text-sm">
-                            <router-link to="/">Home</router-link>
-                            / <router-link to="/funder-diagnostic">Funder Diagnostic</router-link> <span
-                                class="text-gray-2500">/ Recommended Principles</span>
-                        </p> -->
-                        <router-link to="/" class="flex text-trbase items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|
-                        <div class="flex items-center cursor-pointer text-trbase" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
-                    </div>
                     <div class="flex justify-between items-center">
-                        <h1 class="text-h3 truncate md:text-h2 font-bold  text-[#002C77] font-primary">Pathway for
-                            funders to
-                            strengthen their
-                            grant
-                            making practices</h1>
+                        <div class="flex gap-2"> 
+                            <router-link to="/" class="flex text-trbase items-center gap-1"><House class="w-4 h-4"/> Home</router-link>|
+                            <div class="flex items-center cursor-pointer text-trbase" @click="router.back(-1)"><ArrowBigLeft  class="w-5"/> Back</div>
+                        </div>
                         <div class="flex items-center gap-3">
                             <router-link to="/funder-diagnostic"
                             class="border border-[#255B97] w-10 justify-center md:w-auto min-w-10 flex items-center gap-2 truncate rounded-md h-7 md:h-9 text-secondary text-sm lg:px-6"
@@ -39,6 +29,11 @@
                         </button>
                         </div>
                     </div>
+                    <h1 class="text-h3 truncate md:text-h2 font-bold  text-[#002C77] font-primary">Pathway for
+                        funders to
+                        strengthen their
+                        grant
+                        making practices</h1>
                     <p class="text-sebase pt-3  font-normal text-sm text-justify">
                         Getting better at the five high-impact PWIT funding principles starts with assessing where you are today. Based on your results from the Funder Diagnostic, we recommend prioritising the three principles below, but you may choose to assess your organisation on any or all of the five principles.
                     </p>
@@ -235,7 +230,7 @@ const data = ref([
         score: 0,
         group: 'Additional',
         code: 'dei',
-        name1: 'EMBED DIVERSITY EQUITY, AND INCLUSION IN GRANTMAKING',
+        name1: 'EMBED DIVERSITY, EQUITY, AND INCLUSION IN GRANTMAKING',
         description: `An intentional focus on DEI can help funders address the disproportional funding gap that persists for organisations not located in major cities and headed by members of historically marginalised populations, such as Dalit, Bahujan, and Adivasi (DBA) communities. By supporting these critical agents of social change, funders can accelerate progress on India’s steepest challenges.`,
         icon: 'Scale',
         route: '/funder/diversity-equity-inclusion',

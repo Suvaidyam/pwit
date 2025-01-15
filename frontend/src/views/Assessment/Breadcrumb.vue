@@ -1,5 +1,5 @@
 <template>
-    <div class="flex gap-2">
+    <div class="flex gap-2 items-center">
         <Text  @click="store.sidebar=true" class="w-6 min-w-6 cursor-pointer block md:hidden"/>
         <!-- <p class="text-gray-800 text-sm">
             <router-link to="/">Home</router-link>

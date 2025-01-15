@@ -6,11 +6,11 @@ class Result:
  def download_results(doctype, session):
     user = None
     main = [{
-                'label':'Multiyear funder-nonprofit partnerships',
+                'label':'Develop multiyear funder-nonprofit partnerships',
                 'name':'Multi-year Partnerships'
             },
             {
-                'label':'Embedding diversity, equity and inclusion (DEI) in grantmaking',
+                'label':'Embed diversity, equity, and inclusion in grantmaking',
                 'name':'Diversity Equity Inclusion'
             },
             {
@@ -18,7 +18,7 @@ class Result:
                 'name':'Organisational Development'
             },
             {
-                'label':'Building financial resilience',
+                'label':'Build financial resilience',
                 'name':'Financial Resilience'
             },
             {
