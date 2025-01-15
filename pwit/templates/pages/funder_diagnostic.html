@@ -6,6 +6,7 @@
   <title>Card Layout</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
+    
     .principle-card {
       border-radius: 10px;
       background-color: #FFFFFF;
@@ -41,16 +42,26 @@
         left: 8px;
         width: 25px;
     }
+    .logo-container {
+      text-align: right;
+    }
+    .logo-container img {
+      display: inline-block;
+      width: 150px;
+      height: auto;
+    }
   </style>
 </head>
-<body class="bg-gray-100 px-10">
+<body style="padding: 0px 96px;">
   <div class="container">
     <div style=" margin: 0px 0px 10px;">
-        <div style="text-align: end;"> <img src="https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734498439/logo_uywexq.png" alt="PWIT Logo" style="width: 150px; height: auto;" /></div>
+      <div class="logo-container">
+        <img src="https://res.cloudinary.com/dkb3hvxhf/image/upload/v1734498439/logo_uywexq.png" alt="PWIT Logo" />
+      </div>
          <div
-             style="text-align: center; font-size: 16px; font-weight: 500; line-height: 15px; color:#002C77;font-weight:600;padding-top:12px">
+             style="text-align: center; font-size: 16px; line-height: 15px; color:#002C77;font-weight:700;padding-top:12px">
              Assistive Funder Toolkit</div>
-         <div style="font-size: 12px; text-align: center; font-weight: 400;">(Developed by the Pay-What-It-Takes India Initiative)
+         <div style="font-size: 13px; text-align: center; font-weight: 400;">(Developed by the Pay-What-It-Takes India Initiative)
          </div>
      </div>
      <h2 style="color: #002C77;" class="text-2xl font-bold">Pathway for funders to strengthen their grant making practices</h2>
@@ -71,7 +82,7 @@
      {% if loop.index % 2 == 0 %}</tr><tr>{% endif %}
      {% endfor %}
    <!-- Additional Principles -->
-   <h2 style="margin-bottom: 35px;  color: #292e31;" class="text-xl font-bold mb-6">Additional principles to explore</h2>
+   <h2 style="margin-bottom: 35px;  color: #292e31;" class="text-xl font-bold mb-6">Additional PWIT principles to explore</h2>
    <div >
      {% for item in data if item.group == 'Additional' %}
      <div class="principle-card" style=" border-top: 4px solid {{item.color}};">

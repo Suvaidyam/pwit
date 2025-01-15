@@ -158,7 +158,7 @@
                                                     </svg>
 
                                                 </div>
-                                                <p class="text-h5 font-normal text-sebase ">Embed diversity, equity and inclusion in
+                                                <p class="text-h5 font-normal text-sebase ">Embed diversity, equity, and inclusion in
                                                     grantmaking</p>
                                             </div>
                                             <router-link to="/funder/diversity-equity-inclusion" class="text-primary text-sm cursor-pointer font-bold leading-4 tracking-wide">{{ Object.keys(last_draft).length && last_draft.some(item => item.doctype === 'Diversity Equity Inclusion')?'Continue':'View' }}</router-link>

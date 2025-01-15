@@ -46,7 +46,7 @@ def download_funder(session):
         "score": 0,
         "group": "Additional",
         "code": "dei",
-        "name1": "EMBED DIVERSITY EQUITY, AND INCLUSION IN GRANTMAKING",
+        "name1": "EMBED DIVERSITY, EQUITY, AND INCLUSION IN GRANTMAKING",
         "description": "An intentional focus on DEI can help funders address the disproportional funding gap that persists for organisations not located in major cities and headed by members of historically marginalised populations, such as Dalit, Bahujan, and Adivasi (DBA) communities. By supporting these critical agents of social change, funders can accelerate progress on India’s steepest challenges.",
         "icon": "https://res.cloudinary.com/dkb3hvxhf/image/upload/v1736846692/dei_sjctcg.png", 
         "doctype": "Diversity Equity Inclusion",
