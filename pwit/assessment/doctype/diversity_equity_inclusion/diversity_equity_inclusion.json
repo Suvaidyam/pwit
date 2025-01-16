@@ -182,7 +182,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-01-06 13:32:12.416859",
+ "modified": "2025-01-16 12:15:03.342198",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Diversity Equity Inclusion",
@@ -201,6 +201,13 @@
    "share": 1,
    "submit": 1,
    "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin",
+   "select": 1
   }
  ],
  "sort_field": "creation",
