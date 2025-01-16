@@ -37,6 +37,13 @@
     "width": 0
    },
    {
+    "fieldname": "creation",
+    "fieldtype": "Date",
+    "label": "Created on",
+    "options": null,
+    "width": 0
+   },
+   {
     "fieldname": "modified",
     "fieldtype": "Date",
     "label": "Last updated on",
@@ -96,7 +103,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-10 16:28:24.969438",
+  "modified": "2025-01-16 11:04:35.847045",
   "name": "Multi-year Partnerships",
   "order_by": null,
   "ref_doctype": "Multi-year Partnerships",
@@ -136,6 +143,13 @@
     "fieldname": "docstatus",
     "fieldtype": "Int",
     "label": "Status",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "creation",
+    "fieldtype": "Date",
+    "label": "Created on",
     "options": null,
     "width": 0
    },
@@ -255,7 +269,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-14 16:58:22.138240",
+  "modified": "2025-01-16 11:03:27.624200",
   "name": "Funder Diagnostic",
   "order_by": "",
   "ref_doctype": "Funder Diagnostic",
@@ -299,6 +313,13 @@
     "width": 0
    },
    {
+    "fieldname": "creation",
+    "fieldtype": "Date",
+    "label": "Created on",
+    "options": null,
+    "width": 0
+   },
+   {
     "fieldname": "modified",
     "fieldtype": "Date",
     "label": "Last updated on",
@@ -308,7 +329,7 @@
    {
     "fieldname": "cc_guidelines.code",
     "fieldtype": "Data",
-    "label": "\nDo you have written guidelines that clearly stipulate the core cost support that is extended to nonprofit partners? Are these guidelines flexible and adaptable based on context and need?",
+    "label": "Do you have written guidelines that clearly stipulate the core cost support that is extended to nonprofit partners? Are these guidelines flexible and adaptable based on context and need?",
     "options": null,
     "width": 0
    },
@@ -344,7 +365,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-13 14:26:00.426832",
+  "modified": "2025-01-16 11:02:55.434243",
   "name": "Core Costs",
   "order_by": null,
   "ref_doctype": "Core Costs",
@@ -388,6 +409,13 @@
     "width": 0
    },
    {
+    "fieldname": "creation",
+    "fieldtype": "Date",
+    "label": "Created on",
+    "options": null,
+    "width": 0
+   },
+   {
     "fieldname": "modified",
     "fieldtype": "Date",
     "label": "Last updated on",
@@ -397,7 +425,7 @@
    {
     "fieldname": "od_guidelines.code",
     "fieldtype": "Data",
-    "label": "Do you have written guidelines that  clearly state the  organisational development (OD)  support available to  nonprofit partners? ",
+    "label": "Do you have written guidelines that clearly state the organisational development (OD) support available to  nonprofit partners? ",
     "options": null,
     "width": 0
    },
@@ -411,28 +439,28 @@
    {
     "fieldname": "od_approaches_adopted_01.code",
     "fieldtype": "Data",
-    "label": "What are your  preferred pathways  to extend OD grants  to your nonprofit  partners?",
+    "label": "What are your preferred pathways to extend OD grants to your nonprofit partners?",
     "options": null,
     "width": 0
    },
    {
     "fieldname": "od_approaches_adopted_02.code",
     "fieldtype": "Data",
-    "label": "Who decides the OD  needs of nonprofit  partners? How  consultative is your  approach?",
+    "label": "Who decides the OD needs of nonprofit partners? How consultative is your approach?",
     "options": null,
     "width": 0
    },
    {
     "fieldname": "od_communication_channels_01.code",
     "fieldtype": "Data",
-    "label": "How are your  guidelines on OD support  communicated  internally?",
+    "label": "How are your guidelines on OD support communicated internally?",
     "options": null,
     "width": 0
    },
    {
     "fieldname": "od_communication_channels_02.code",
     "fieldtype": "Data",
-    "label": "How are your  guidelines on OD support communicated to nonprofits (current and  potential) and the  wider sector?",
+    "label": "How are your guidelines on OD support communicated to nonprofits (current and potential) and the wider sector?",
     "options": null,
     "width": 0
    }
@@ -440,7 +468,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-11 14:07:37.503977",
+  "modified": "2025-01-16 11:01:36.932846",
   "name": "Organisational Development",
   "order_by": null,
   "ref_doctype": "Organisational Development",
@@ -480,6 +508,13 @@
     "fieldname": "docstatus",
     "fieldtype": "Int",
     "label": "Status",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "creation",
+    "fieldtype": "Date",
+    "label": "Created on",
     "options": null,
     "width": 0
    },
@@ -529,7 +564,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-13 14:29:44.300511",
+  "modified": "2025-01-16 11:03:48.330809",
   "name": "Financial Resilience",
   "order_by": null,
   "ref_doctype": "Financial Resilience",
@@ -550,12 +585,26 @@
     "label": "Full Name",
     "options": null,
     "width": 200
+   },
+   {
+    "fieldname": "creation",
+    "fieldtype": "Date",
+    "label": "Created on",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "modified",
+    "fieldtype": "Date",
+    "label": "Last updated on",
+    "options": null,
+    "width": 0
    }
   ],
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-11 14:13:55.953353",
+  "modified": "2025-01-16 11:00:02.880598",
   "name": "User",
   "order_by": null,
   "ref_doctype": "User",
@@ -595,6 +644,13 @@
     "fieldname": "docstatus",
     "fieldtype": "Int",
     "label": "Status",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "creation",
+    "fieldtype": "Date",
+    "label": "Created on",
     "options": null,
     "width": 0
    },
@@ -686,7 +742,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-13 14:15:35.987619",
+  "modified": "2025-01-16 11:04:12.227438",
   "name": "Diversity Equity Inclusion",
   "order_by": null,
   "ref_doctype": "Diversity Equity Inclusion",
