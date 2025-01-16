@@ -17,7 +17,8 @@
                             <ChevronRight class="w-4 h-4 min-w-4" v-if="false" />
                             <RefreshCcw class="w-4 h-4 min-w-4" v-else />
                         </router-link>
-                        <button @click="download_results"
+                        <DownloadRecom />
+                        <!-- <button @click="download_results"
                             :class="[false ? 'cursor-not-allowed' : 'cursor-pointer']"
                             class="border flex items-center justify-center gap-2 px-2 md:px-4 h-7 md:h-9 text-sm border-[#27853F] text-[#27853F] rounded-md">
                             <span class="hidden lg:block truncate">Download</span>
@@ -26,7 +27,7 @@
                                 </div>
                             </div>
                             <Download class="w-4" v-else />
-                        </button>
+                        </button> -->
                         </div>
                     </div>
                     <h1 class="text-h3 truncate md:text-h2 font-bold  text-[#002C77] font-primary">Pathway for
@@ -165,11 +166,12 @@
     </template>
 <script setup>
 import { computed, inject, onMounted, ref, watch } from 'vue'
+import { IndianRupee,Download, Handshake,House,ArrowBigLeft, PiggyBank, ChartNoAxesCombined, Scale, RefreshCcw, ChevronRight } from 'lucide-vue-next'
 import Popper from "vue3-popper";
 import { useRouter } from 'vue-router'
 import FooterNav from '../components/FooterNav.vue';
 import Loader from '../components/Loader.vue';
-import { IndianRupee,Download, Handshake,House,ArrowBigLeft, PiggyBank, ChartNoAxesCombined, Scale, RefreshCcw, ChevronRight } from 'lucide-vue-next'
+import DownloadRecom from '../components/DownloadRecom.vue';
 
 const router = useRouter()
 const call = inject('$call')
@@ -370,12 +372,6 @@ const get_last_sub = async () => {
 	}
 };
 
-const download_results = async () => {
-    let link = document.createElement('a')
-    link.href = `/api/method/pwit.controllers.funder_results.download_funder?session=${store.session}`;
-    link.target = '_blank';
-    link.click() 
-}
 
 watch(() => data.value, (value) => {
     recommendedList.value = value?.filter(e => e.group === 'Recommended')
