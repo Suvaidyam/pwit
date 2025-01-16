@@ -160,7 +160,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-23 18:46:55.500933",
+ "modified": "2025-01-16 12:17:52.458226",
  "modified_by": "Administrator",
  "module": "pwit",
  "name": "Funder Diagnostic",
@@ -179,6 +179,13 @@
    "share": 1,
    "submit": 1,
    "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin",
+   "select": 1
   }
  ],
  "sort_field": "creation",
