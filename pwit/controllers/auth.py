@@ -60,7 +60,7 @@ class AuthAPIs:
             # shashank.rastogi@bridgespan.org
             frappe.sendmail(
                 recipients= ['rahul.suvaidyam@gmail.com'],
-                subject= 'PWIT Contact Us',
+                subject= 'Message submitted through Assistive Funder Toolkit',
                 message=message_content,
                 delayed=(not now) if now is not None else new_doc.flags.delay_emails,
                 retry=3,
