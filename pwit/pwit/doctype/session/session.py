@@ -6,4 +6,6 @@ from frappe.model.document import Document
 
 
 class Session(Document):
-	pass
+	def after_insert(self):
+		self.session_id = self.name
+		self.save(ignore_permissions=True)
