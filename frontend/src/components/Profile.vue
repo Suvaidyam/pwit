@@ -219,11 +219,6 @@ const submitSelection = async () => {
 watch(() => store.isOpen, async (val) => {
     if (val) {
         if (auth.isLoggedIn) {
-            try {
-                await call('pwit.controllers.api.check_user_details', { session: store.session })
-            } catch (error) {
-                console.log(error)
-            }
             await user_mobile()
             await get_other()
         }
