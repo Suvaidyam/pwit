@@ -2,7 +2,7 @@
     <div class="p-4 w-full">
         <div class="flex justify-between gap-3 pb-2">
             <Breadcrumb />
-            <div class="flex justify-between">
+            <div class="flex justify-between gap-3">
                 <p class=" w-16 py-1 text-center rounded-2xl text-red-700 bg-red-100 font-bold"
                     v-if="Object.keys(initialData).length">Draft</p>
                 <button v-if="Object.keys(results).length" @click="() => router.push(`${current_path}/results`)"
