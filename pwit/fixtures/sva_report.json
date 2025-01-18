@@ -2,9 +2,16 @@
  {
   "columns": [
    {
-    "fieldname": "name",
+    "fieldname": "session.session_id",
     "fieldtype": "Data",
     "label": "ID",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.user",
+    "fieldtype": "Data",
+    "label": "User Ref",
     "options": null,
     "width": 0
    },
@@ -96,7 +103,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-16 11:53:21.260803",
+  "modified": "2025-01-17 18:09:43.487927",
   "name": "Multi-year Partnerships",
   "order_by": null,
   "ref_doctype": "Multi-year Partnerships",
@@ -105,9 +112,16 @@
  {
   "columns": [
    {
-    "fieldname": "name",
+    "fieldname": "session.session_id",
     "fieldtype": "Data",
     "label": "ID",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.user",
+    "fieldtype": "Data",
+    "label": "User Ref",
     "options": null,
     "width": 0
    },
@@ -255,7 +269,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-16 11:57:40.800273",
+  "modified": "2025-01-17 18:11:49.083726",
   "name": "Funder Diagnostic",
   "order_by": "",
   "ref_doctype": "Funder Diagnostic",
@@ -264,9 +278,16 @@
  {
   "columns": [
    {
-    "fieldname": "name",
+    "fieldname": "session.session_id",
     "fieldtype": "Data",
     "label": "ID",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.user",
+    "fieldtype": "Data",
+    "label": "User Ref",
     "options": null,
     "width": 0
    },
@@ -344,7 +365,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-16 11:57:49.005211",
+  "modified": "2025-01-17 18:11:36.835377",
   "name": "Core Costs",
   "order_by": null,
   "ref_doctype": "Core Costs",
@@ -353,9 +374,16 @@
  {
   "columns": [
    {
-    "fieldname": "name",
-    "fieldtype": "Check",
+    "fieldname": "session.session_id",
+    "fieldtype": "Data",
     "label": "ID",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.user",
+    "fieldtype": "Data",
+    "label": "User Ref",
     "options": null,
     "width": 0
    },
@@ -440,7 +468,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-16 11:53:08.993490",
+  "modified": "2025-01-17 18:12:25.267750",
   "name": "Organisational Development",
   "order_by": null,
   "ref_doctype": "Organisational Development",
@@ -449,9 +477,16 @@
  {
   "columns": [
    {
-    "fieldname": "name",
+    "fieldname": "session.session_id",
     "fieldtype": "Data",
     "label": "ID",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.user",
+    "fieldtype": "Data",
+    "label": "User Ref",
     "options": null,
     "width": 0
    },
@@ -529,7 +564,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-16 11:57:29.961584",
+  "modified": "2025-01-17 18:11:24.576841",
   "name": "Financial Resilience",
   "order_by": null,
   "ref_doctype": "Financial Resilience",
@@ -578,9 +613,16 @@
  {
   "columns": [
    {
-    "fieldname": "name",
+    "fieldname": "session.session_id",
     "fieldtype": "Data",
     "label": "ID",
+    "options": null,
+    "width": 0
+   },
+   {
+    "fieldname": "session.user",
+    "fieldtype": "Data",
+    "label": "User Ref",
     "options": null,
     "width": 0
    },
@@ -700,7 +742,7 @@
   "docstatus": 0,
   "doctype": "SVA Report",
   "filters": [],
-  "modified": "2025-01-16 11:53:34.251802",
+  "modified": "2025-01-17 18:10:14.093676",
   "name": "Diversity Equity Inclusion",
   "order_by": null,
   "ref_doctype": "Diversity Equity Inclusion",
