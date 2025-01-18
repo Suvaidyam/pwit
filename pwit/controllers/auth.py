@@ -15,6 +15,8 @@ class AuthAPIs:
         encrypt_user = md5(user.encode('utf-8')).hexdigest()
         doc.user = encrypt_user
         doc.save(ignore_permissions=True)
+        if name:
+            AuthAPIs.check_user_details(name)
         return {'code':200,'data':doc} 
     
     def set_policyconsent_session(name,value):
