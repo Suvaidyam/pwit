@@ -8,7 +8,7 @@ app_license = "mit"
 # Apps
 # ------------------
 
-# required_apps = []
+required_apps = ["Suvaidyam/sva_report", "Suvaidyam/sva_form_vuejs"]
 
 fixtures=[
     'Field Options',

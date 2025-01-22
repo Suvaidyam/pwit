@@ -9,6 +9,12 @@ export default defineConfig({
 	server: {
 		port: 8080,
 		proxy: getProxyOptions(),
+		host: "0.0.0.0", // Example: Keep this if needed
+		strictPort: true, // Example: Ensures the exact port is used
+		watch: {
+		  usePolling: true, // Example: Useful for some environments
+		},
+	
 	},
 	plugins: [
 		vue(),
@@ -33,9 +39,10 @@ export default defineConfig({
 	],
 	resolve: {
 		alias: {
+			"@@": path.resolve(__dirname, "../../sva_form_vuejs"),
 			"@": path.resolve(__dirname, "src"),
 		},
-	},
+	}, 
 	build: {
 		outDir: "../pwit/public/pwit", // Adjusted for pwit
 		emptyOutDir: true,

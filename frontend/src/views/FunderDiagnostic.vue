@@ -47,7 +47,7 @@
 <script setup>
 import { ref, inject, onMounted } from 'vue';
 import FooterNav from '../components/FooterNav.vue';
-import { FormView } from '../../../../sva_form_vuejs/form_view.js';
+import { FormView } from '@@/form_view.js';
 import { useRouter } from 'vue-router';
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
