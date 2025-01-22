@@ -71,6 +71,7 @@
    "label": "Approaches adopted"
   },
   {
+   "description": "{Please note that this question offers only three response options.}",
    "fieldname": "myp_approaches_adopted_01",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -116,7 +117,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-01-16 12:16:27.774690",
+ "modified": "2025-01-22 17:44:32.159580",
  "modified_by": "Administrator",
  "module": "Assessment",
  "name": "Multi-year Partnerships",
