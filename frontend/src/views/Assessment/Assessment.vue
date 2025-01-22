@@ -35,7 +35,7 @@
 import { ref, watch, inject, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router';
 import Breadcrumb from './Breadcrumb.vue'
-import { FormView } from '../../../../../sva_form_vuejs/form_view';
+import { FormView } from '@@/form_view.js';
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
 import { FileSearch2 } from 'lucide-vue-next'
