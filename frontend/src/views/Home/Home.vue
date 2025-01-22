@@ -335,14 +335,7 @@ let readmore = ref({
 // onMounted(() => {
 // 	get_faqs();
 // });
-watch(()=>store.checkLogin, (newVal) => {
-	if(newVal){
-		store.checkLogin = false;
-		setTimeout(() => {
-			window.location.reload()
-		}, 500);
-	}
-},{immediate:true,deep:true});
+
 </script>
 <style scoped>
 .fade-slide-x-enter-from {

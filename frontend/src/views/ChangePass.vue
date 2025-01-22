@@ -1,10 +1,10 @@
 <template>
     <div class="w-full flex flex-col gap-6 items-center justify-center h-full px-4">
         <img src="../assets/navbar.png" alt="" class="w-52">
-        <!-- <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center">
             <p class="text-secondary text-h4 font-semibold">Assistive Funder Toolkit</p>
             <p class="text-h5">(Developed by the Pay-What-It-Takes India Initiative)</p>
-        </div> -->
+        </div>
         <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4 md:max-w-xl border rounded-md shadow-md">
             <div class="block justify-center gap-5 items-center">
             </div>
@@ -15,7 +15,7 @@
                     </label>
                     <input v-model="newPassword" @input="validatePassword" id="new_password" type="password"
                         placeholder="Enter New Password"
-                        class="w-full px-3 py-2 border-b bg-gray-100 placeholder:text-[#697077] border-gray-300 shadow-sm outline-none">
+                        class="w-full px-3 py-2 border-b bg-gray-100 placeholder:text-[#697077] placeholder:text-sm border-gray-300 shadow-sm outline-none">
                     <p v-if="errorMessage" class="text-red-500 text-xs mt-1 -bottom-5">{{ errorMessage }}</p>
                 </div>
 
@@ -46,15 +46,17 @@
 
             </div>
         </div>
+        <Profile />
     </div>
 </template>
 
 <script setup>
-import { ref, inject } from 'vue'
+import { ref, inject, onMounted } from 'vue'
 import { Eye, EyeOff } from 'lucide-vue-next'
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
 import { useRoute, useRouter } from 'vue-router';
+import Profile from '../components/Profile.vue';
 
 
 
@@ -67,6 +69,7 @@ const router = useRouter();
 const errorMessage = ref('')
 const errorCofirm = ref('')
 const call = inject('$call');
+const session = inject('$session');
 const store = inject('store');
 
 const validatePassword = () => {
@@ -94,10 +97,10 @@ const confirm_password = () => {
     }
 }
 const handleClick = async () => {
-    if (route.query.key) { 
+    if (route.query.key) {
         if (errorCofirm.value == '' && errorMessage.value == '' && newPassword.value != '' && confirmPassword.value != '') {
             loading.value = true;
- 
+
             try {
                 let response = await call('pwit.controllers.api.custom_update_password', {
                     key: route.query.key,
@@ -106,14 +109,13 @@ const handleClick = async () => {
                     logout_all_sessions: 1
                 });
 
-                if (response) { 
+                if (response) {
                     toast.success('Password updated successfully');
                     newPassword.value = '';
                     confirmPassword.value = '';
                     setTimeout(() => {
                         loading.value = false;
-                        store.checkLogin=true;
-                        router.push('/')
+                        window.location.reload()
                     }, 500);
                 } else {
                     toast.error(`Email ${response.message}`);
@@ -130,5 +132,20 @@ const handleClick = async () => {
         }
     }
 };
-
+onMounted(async () => {
+    if (session.isLoggedIn) {
+        await call('pwit.controllers.api.set_user_session', {
+                    name: store.session,
+                    user: session.user
+                });
+        const response = await call('pwit.controllers.api.check_user_details', { session: store.session })
+        if (response.code == 400) {
+            store.isOpen=true;
+            store.checkLogin=true;
+            toast.success('Please complete your profile');
+        } else {
+            router.push('/')
+        }
+    }
+})
 </script>

@@ -59,10 +59,10 @@
                                                 class=" absolute left-[27%] sm:left-[40%] top-1 bg-white text-center font-primary font-bold text-h3 text-[#21272A]">
                                                 Other Details</p>
                                         </div>
-                                        <div class="bg-white pb-4 sm:pb-4 pt-4">
-                                            <div class="flex flex-col gap-2">
+                                        <div class="bg-white pb-4 sm:pb-4 pt-4 flex flex-col gap-2">
+                                            <div class="flex flex-col gap-2 relative">
                                                 <label for="designation"
-                                                    class="text-sm font-normal text-[#21272A]">Designation</label>
+                                                    class="text-sm font-normal text-[#21272A]">Designation <span class="text-red-500">*</span></label>
                                                 <select name="" id="designation" v-model="otherFormData.designation"
                                                     class="outline-none border-b-2 border-gray-400 bg-gray-50 py-3 text-gray-600 px-2">
                                                     <option value="">Select</option>
@@ -84,40 +84,49 @@
                                                     </option>
                                                     <option value="Other">Other</option>
                                                 </select>
+                                                <p v-if="errors.designation"
+                                                    class="absolute -bottom-5 text-red-500 text-h6 mt-1">
+                                                    {{
+                                                        errors.designation }}</p>
                                             </div>
-                                            <div class="pt-3">
+                                            <div class="pt-3 relative">
                                                 <p class=" text-sm font-normal text-[#21272A]">
-                                                    Funder type organisation
-                                                </p> 
-                                                <label class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
-                                                    <input type="radio" id="option" value="Corporate Social Responsibility (CSR)"
+                                                    Funder type organisation <span class="text-red-500">*</span>
+                                                </p>
+                                                <label
+                                                    class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
+                                                    <input type="radio" id="option"
+                                                        value="Corporate Social Responsibility (CSR)"
                                                         v-model="otherFormData.funder_type" class="cursor-pointer" />
-                                                    <p
-                                                        class="text-secondary font-normal text-sm cursor-pointer">
+                                                    <p class="text-secondary font-normal text-sm cursor-pointer">
                                                         Corporate Social Responsibility (CSR)
                                                     </p>
                                                 </label>
-                                                <label class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
+                                                <label
+                                                    class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
                                                     <input type="radio" id="option" value="Domestic Foundation"
                                                         v-model="otherFormData.funder_type" class="cursor-pointer" />
-                                                    <p
-                                                        class="text-secondary font-normal text-sm cursor-pointer">
+                                                    <p class="text-secondary font-normal text-sm cursor-pointer">
                                                         Domestic Foundation
                                                     </p>
                                                 </label>
-                                                <label class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
+                                                <label
+                                                    class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
                                                     <input type="radio" id="option" value="Global Foundation"
                                                         v-model="otherFormData.funder_type" class="cursor-pointer" />
-                                                    <p
-                                                        class="text-secondary font-normal text-sm cursor-pointer">
+                                                    <p class="text-secondary font-normal text-sm cursor-pointer">
                                                         Global Foundation
                                                     </p>
                                                 </label>
+                                                <p v-if="errors.funder_type"
+                                                    class="absolute -bottom-5 text-red-500 text-h6 mt-1">
+                                                    {{
+                                                        errors.funder_type }}</p>
                                             </div>
-                                            <div class="flex flex-col gap-2 pt-3">
+                                            <div class="flex flex-col gap-2 pt-3 relative">
                                                 <label for="annual_budget" class="text-sm font-normal text-[#21272A]">
                                                     Organisation’s
-                                                    approximate annual budget allocation</label>
+                                                    approximate annual budget allocation <span class="text-red-500">*</span></label>
                                                 <select name="" id="annual_budget" v-model="otherFormData.annual_budget"
                                                     class="outline-none border-b-2 border-gray-400 bg-gray-50 py-3 text-gray-600 px-2">
                                                     <option value="">Select</option>
@@ -132,6 +141,10 @@
                                                     <option value="INR 301 Cr. and above">INR 301 Cr. and above
                                                     </option>
                                                 </select>
+                                                <p v-if="errors.annual_budget"
+                                                    class="absolute -bottom-5 text-red-500 text-h6 mt-1">
+                                                    {{
+                                                        errors.annual_budget }}</p>
                                             </div>
                                             <!-- <div class="flex justify-end pt-2">
                                                 <button @click="submitSelection"
@@ -161,6 +174,7 @@ import { TransitionChild, TransitionRoot, Dialog, DialogPanel } from '@headlessu
 import { X } from 'lucide-vue-next';
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
+import router from '../router';
 
 const isReadonly = ref(true);
 const store = inject('store');
@@ -172,7 +186,11 @@ const otherFormData = ref({
     funder_type: '',
     annual_budget: ''
 })
-
+const errors = ref({
+    designation: '',
+    funder_type: '',
+    annual_budget: ''
+});
 // const uploadedImage = ref(null);
 const imgUrl = ref('');
 const props = defineProps({
@@ -186,7 +204,7 @@ const props = defineProps({
 const get_other = async () => {
     let res = await call('pwit.controllers.api.get_other_details', { session: store.session })
     if (res?.code == 200) {
-        otherFormData.value = res.data 
+        otherFormData.value = res.data
     }
 }
 const user_mobile = async () => {
@@ -204,6 +222,9 @@ const saveUserProfile = async () => {
         mobile_no: formData.value.mobile_no,
         user_image: imgUrl.value
     }
+    if (!validateForm()) {
+        return;
+    }
     let res = await call('pwit.controllers.api.update_user_dt', { data: data })
     if (res?.code == 200) {
         await submitSelection()
@@ -211,9 +232,24 @@ const saveUserProfile = async () => {
         toast.success(res.message)
     }
 }
-
+const validateForm = () => {
+    errors.value.designation = otherFormData.value.designation ? '' : 'Designation is required.';
+    errors.value.funder_type = otherFormData.value.funder_type ? '' : 'Funder type. is required.';
+    errors.value.annual_budget = otherFormData.value.annual_budget ? '' : 'Annual budget is required.';
+    return !errors.value.designation && !errors.value.funder_type && !errors.value.annual_budget;
+};
 const submitSelection = async () => {
-    let res = await call('pwit.controllers.api.save_user_details', { data: otherFormData.value, session: store.session })
+    if (!validateForm()) {
+        return;
+    }
+    try {
+        let res = await call('pwit.controllers.api.save_user_details', { data: otherFormData.value, session: store.session })
+        if (res?.code == 200 && store.checkLogin) {
+            router.push('/')
+        }
+    } catch (error) {
+
+    }
 }
 
 watch(() => store.isOpen, async (val) => {

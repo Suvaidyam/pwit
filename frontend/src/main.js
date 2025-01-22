@@ -9,6 +9,7 @@ import socket from "./libs/controllers/socket";
 import Auth from "./libs/controllers/auth";
 import {FeatherIcon} from 'frappe-ui';
 import { store } from "./Store";
+import {session} from './data/session'
 
 initializeDynamicRoutes().then(() => {
     
@@ -25,6 +26,7 @@ initializeDynamicRoutes().then(() => {
     app.provide("$auth", auth);
     app.provide("$call", call);
     app.provide("$socket", socket);
+    app.provide("$session", session);
     
     (function addGoogleAnalyticsScript() {
       const script = document.createElement('script');
