@@ -3,6 +3,7 @@ from frappe.utils import now_datetime
 from hashlib import sha256
 from frappe.utils import get_url
 from hashlib import md5
+import urllib.parse
 
 class AuthAPIs:
     def create_session():
@@ -36,6 +37,9 @@ class AuthAPIs:
             else:
                 new_user = frappe.new_doc("User")
                 new_user.email = data.get("email")
+                new_user.flags.designation = data.get("designation")
+                new_user.flags.funder_type = data.get("funder_type")
+                new_user.flags.annual_budget = data.get("annual_budget")
 
                 if data.get("full_name"):
                     full_name = data.get("full_name").split(" ")
@@ -86,6 +90,13 @@ class AuthAPIs:
     def send_custom_welcome_email_method(doc):
         link= AuthAPIs.reset_password(doc)
         url = frappe.utils.get_url()
+        params = {
+            'designation': doc.flags.get('designation',''),
+            'annual_budget': doc.flags.get('annual_budget',''),
+            'funder_type': doc.flags.get('funder_type','')
+        }
+        encoded_params = urllib.parse.urlencode(params)
+        link = link + '&' + encoded_params 
         message_content = frappe.render_template("pwit/templates/pages/verify_email.html",{"doc":doc, "verification_link": link, "url": url})
         now = frappe.flags.in_test or frappe.flags.in_install
         frappe.sendmail(

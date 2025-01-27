@@ -71,7 +71,7 @@ const errorCofirm = ref('')
 const call = inject('$call');
 const session = inject('$session');
 const store = inject('store');
-
+console.log(route)
 const validatePassword = () => {
     const minLength = 8;
     const hasNumber = /\d/.test(newPassword.value);
@@ -135,15 +135,11 @@ const handleClick = async () => {
 onMounted(async () => {
     if (session.isLoggedIn) {
         await call('pwit.controllers.api.set_user_session', {
-                    name: store.session,
-                    user: session.user
-                });
-        const response = await call('pwit.controllers.api.check_user_details', { session: store.session })
-        if (response.code == 400) {
-            store.isOpen=true;
-            store.checkLogin=true;
-            toast.success('Please complete your profile');
-        } else {
+            name: store.session,
+            user: session.user
+        });
+        let res = await call('pwit.controllers.api.save_user_details', { data: route.query, session: store.session })
+        if(res.code==200){
             router.push('/')
         }
     }

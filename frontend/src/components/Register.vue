@@ -1,39 +1,120 @@
 <template>
     <div class="bg-white px-4 w-full pb-4 pt-5 sm:p-6 sm:pb-4">
         <div class="mt-3 text-center">
-            <DialogTitle as="h3" class="text-h3 md:text-h2 font-bold text-sebase font-primary text-center">Sign up and create an account
+            <DialogTitle as="h3" class="text-h3 md:text-h2 font-bold text-sebase font-primary text-center">Sign up and
+                create an account
             </DialogTitle>
             <p class="text-h5 pt-2 text-center text-sebase">Please provide the following
                 information to continue </p>
         </div>
         <div class="flex flex-col gap-3 pt-4">
-            <div class="flex flex-col gap-2 w-full">
+            <div class="flex flex-col gap-2 w-full relative">
                 <label for="full_name" class="text-sm text-tatary">
                     Full Name
                     <span class="text-red-500">
                         *
                     </span>
                 </label>
-                <input @keydown.enter="register" @input="validateName" v-model="full_name" type="text" id="full_name"
-                    class="outline-none w-full border-b-2 bg-gray-100 placeholder:text-[#697077] px-3 h-12 text-h5" placeholder="Enter full name">
-                <span v-if="invalidName" class="text-red-500 text-xs mt-1 -bottom-5">Only letters allowed</span>
-                <span v-if="lengthExceeded" class="text-red-500 text-xs mt-1 -bottom-5">Maximum length of 50
-                    characters</span>
+                <input @keydown.enter="register" v-model="formData.full_name" type="text" id="full_name"
+                    class="outline-none w-full border-b-2 bg-gray-100 placeholder:text-[#697077] px-3 h-12 text-h5"
+                    placeholder="Enter full name">
+                    <p v-if="errors.full_name" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
+                    errors.full_name
+                }}</p>
             </div>
-            <div class="flex flex-col gap-2 w-full relative">
+            <div class="flex flex-col gap-2 w-full relative pt-2">
                 <label for="" class="text-sm text-tatary">
                     Email Address
                     <span class="text-red-500"> *</span>
                 </label>
-                <input @keydown.enter="register" @input="emailvalidate" id="emailInputId" v-model="email" type="email"
+                <input @keydown.enter="register" id="emailInputId" v-model="formData.email" type="email"
                     class="outline-none w-full border-b-2 bg-gray-100 placeholder:text-[#697077] px-3 h-12 text-h5"
                     placeholder="Enter email address">
                 <div class="absolute -bottom-6">
-                    <p v-if="errorMessage" class="text-h6 text-red-600">{{ errorMessage }}</p>
+                    <p v-if="errors.email" class="text-h6 text-red-600">{{ errors.email }}</p>
                     <p v-else class="text-h6 text-[#697077]">Sign up with work email</p>
                 </div>
             </div>
+            <div class="flex flex-col gap-5 pt-3">
+                <div class="flex flex-col gap-2 relative">
+                <label for="designation" class="text-h5 font-normal text-[#21272A]">
+                    Please share your designation
+                    <span class="text-red-500">*</span>
+                </label>
+                <select id="designation" v-model="formData.designation"
+                    class="outline-none border-b-2 bg-gray-50 py-3 text-black px-2"
+                    :class="[!errors.designation ? 'border-gray-400' : 'border-red-500']">
+                    <option value="">Select</option>
+                    <option value="Executive Director/Chief Executive Officer/Head of CSR">Executive
+                        Director/Chief Executive Officer/Head of CSR</option>
+                    <option value="Director of Philanthropy">Director of Philanthropy</option>
+                    <option value="Chief Operating Officer">Chief Operating Officer</option>
+                    <option value="Programme Lead/Programme Officer">Programme Lead/Programme
+                        Officer
+                    </option>
+                    <option value="Third party supporting funder organisation">Third-party
+                        supporting funder organisation</option>
+                    <option value="Other">Other</option>
+                </select>
+                <p v-if="errors.designation" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
+                    errors.designation
+                }}</p>
+            </div>
 
+            <div class="relative">
+                <p class="text-h5 font-normal text-[#21272A]">
+                    Please select which funder type your organisation identifies as
+                    <span class="text-red-500">*</span>
+                </p>
+                <label
+                    class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
+                    <input type="radio" id="option" value="Corporate Social Responsibility (CSR)"
+                        v-model="formData.funder_type" class="cursor-pointer" />
+                    <p class="text-secondary font-normal text-sm cursor-pointer">
+                        Corporate Social Responsibility (CSR)
+                    </p>
+                </label>
+                <label
+                    class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
+                    <input type="radio" id="option" value="Domestic Foundation" v-model="formData.funder_type"
+                        class="cursor-pointer" />
+                    <p class="text-secondary font-normal text-sm cursor-pointer">
+                        Domestic Foundation
+                    </p>
+                </label>
+                <label
+                    class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
+                    <input type="radio" id="option" value="Global Foundation" v-model="formData.funder_type"
+                        class="cursor-pointer" />
+                    <p class="text-secondary font-normal text-sm cursor-pointer">
+                        Global Foundation
+                    </p>
+                </label>
+                <p v-if="errors.funder_type" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
+                    errors.funder_type
+                }}</p>
+            </div>
+
+            <div class="flex flex-col gap-2 relative">
+                <label for="annual_budget" class="text-h5 font-normal text-[#21272A]">
+                    Your organisation’s approximate annual budget allocation
+                    <span class="text-red-500">*</span>
+                </label>
+                <select id="annual_budget" v-model="formData.annual_budget"
+                    class="outline-none border-b-2 bg-gray-50 py-3 text-gray-900 px-2"
+                    :class="[!errors.annual_budget ? 'border-gray-400' : 'border-red-500']">
+                    <option value="">Select</option>
+                    <option value="Less than INR 10 Cr.">Less than INR 10 Cr.</option>
+                    <option value="INR 10-50 Cr.">INR 10-50 Cr.</option>
+                    <option value="INR 51-100 Cr.">INR 51-100 Cr.</option>
+                    <option value="INR 101-300 Cr.">INR 101-300 Cr.</option>
+                    <option value="INR 301 Cr. and above">INR 301 Cr. and above</option>
+                </select>
+                <p v-if="errors.annual_budget" class="absolute -bottom-5 text-red-500 text-h6 mt-1">
+                    {{
+                        errors.annual_budget }}</p>
+            </div>
+            </div>
             <div class="flex items-center gap-2 py-2 mt-3">
                 <input v-model="remember" type="checkbox" id="remember" class="h-4 w-4" />
                 <label for="remember" class="text-sm text-gray-700">Remember me</label>
@@ -70,83 +151,54 @@ import 'vue3-toastify/dist/index.css';
 
 const open = ref(false)
 const loading = ref(false)
-const remember = ref(false)
-const email = ref('')
-const full_name = ref('')
-const errorMessage = ref('')
+const remember = ref(false)  
 const store = inject('store');
-const call = inject('$call');
-const invalidName = ref(false);
-const lengthExceeded = ref(false);
-
-const validateName = () => {
-    const regex = /^[A-Za-z ]+$/;
-    invalidName.value = !regex.test(full_name.value);
-    lengthExceeded.value = full_name.value.length > 50;
-};
-
-const remainingCharacters = computed(() => {
-    return 50 - full_name.value.length;
+const call = inject('$call'); 
+const formData = ref({
+    email: '',
+    full_name: '',
+    designation: '',
+    funder_type: '',
+    annual_budget: ''
+})
+const errors = ref({
+    email: '',
+    full_name: '',
+    designation: '',
+    funder_type: '',
+    annual_budget: ''
 });
 
+const validateForm = () => {
+    errors.value.full_name = formData.value.full_name ? '' : 'Full name is required.';
+    errors.value.email = formData.value.email ? '' : 'Email is required.';
+    errors.value.designation = formData.value.designation ? '' : 'Designation is required.';
+    errors.value.funder_type = formData.value.funder_type.length ? '' : 'Please select at least one funder type.';
+    errors.value.annual_budget = formData.value.annual_budget ? '' : 'Annual budget is required.';
+    return !errors.value.full_name && !errors.value.email && !errors.value.designation && !errors.value.funder_type && !errors.value.annual_budget;
+};
 const emailvalidate = () => {
     const minLength = 3;
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    if (!email.value) {
-        errorMessage.value = 'Email is required.';
-    } else if (email.value.length < minLength) {
-        errorMessage.value = `Email must be at least ${minLength} characters.`;
-    } else if (!emailPattern.test(email.value)) {
-        errorMessage.value = 'Invalid email';
+    if (!formData.value.email) {
+        errors.value.email = 'Email is required.';
+    } else if (formData.value.email.length < minLength) {
+        errors.value.email = `Email must be at least ${minLength} characters.`;
+    } else if (!emailPattern.test(formData.value.email)) {
+        errors.value.email = 'Invalid email';
     } else {
-        errorMessage.value = '';
+        errors.value.email = '';
     }
 };
 
-watch([full_name, email], ([newFullName, newEmail]) => {
-    const fullNameEl = document.getElementById('full_name');
-    const emailEl = document.getElementById('emailInputId');
-    let valid = true;
-
-    fullNameEl.style.borderBottom = emailEl.style.borderBottom = '';
-    if (!newFullName) {
-        fullNameEl.style.borderBottom = '1px solid red';
-        valid = false;
-    }
-
-    if (!newEmail) {
-        emailEl.style.borderBottom = '1px solid red';
-        valid = false;
-    }
-});
-
-
 const register = async () => {
-
-    const emailEl = document.getElementById('emailInputId');
-    const fullNameEl = document.getElementById('full_name');
-    let valid = true;
-
-    fullNameEl.style.borderBottom = emailEl.style.borderBottom = '';
-    if (!full_name.value) {
-        fullNameEl.style.borderBottom = '1px solid red';
-        valid = false;
-    }
-
-    if (!email.value) {
-        emailEl.style.borderBottom = '1px solid red';
-        valid = false;
-    } 
     open.value = false;
-    if (errorMessage.value == '') {
+    if (validateForm()) {
         loading.value = true;
 
         const res = await call('pwit.controllers.api.register', {
-            data: {
-                email: email.value,
-                full_name: full_name.value,
-            }
+            data: formData.value
         });
 
         if (res.code === 200) {
