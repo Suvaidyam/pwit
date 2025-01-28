@@ -173,7 +173,7 @@ const validateForm = () => {
     errors.value.full_name = formData.value.full_name ? '' : 'Full name is required.';
     errors.value.email = formData.value.email ? '' : 'Email is required.';
     errors.value.designation = formData.value.designation ? '' : 'Designation is required.';
-    errors.value.funder_type = formData.value.funder_type.length ? '' : 'Please select at least one funder type.';
+    errors.value.funder_type = formData.value.funder_type.length ? '' : 'Funder type is required';
     errors.value.annual_budget = formData.value.annual_budget ? '' : 'Annual budget is required.';
     return !errors.value.full_name && !errors.value.email && !errors.value.designation && !errors.value.funder_type && !errors.value.annual_budget;
 };
