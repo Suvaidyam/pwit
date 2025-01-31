@@ -1,10 +1,11 @@
 <template>
-    <button @click="download_results" :disabled="props.disabled"
+    <button @click="auth.isLoggedIn?download_results():confirmation=true" :disabled="props.disabled"
         :class="[props.disabled ? 'cursor-not-allowed' : 'cursor-pointer']"
         class="border flex items-center justify-center gap-2 px-2 md:px-4 h-7 md:h-9 text-sm border-[#27853F] text-[#27853F] rounded-md">
         <span class="hidden lg:block truncate">Download Result </span>
         <div class="h-5 w-5" v-if="down_loading">
-            <div class="animate-spin h-full w-full rounded-full border-[3px] border-t-[#002C77] border-b-[#255B97]">
+            <div class="animate-spin h-full w-full rounded-full border-[2px] flex justify-center items-center border-dotted border-[#002C77]">
+                <div class="w-3 h-3 rounded-full border-dashed border-[1px] border-[#002C77]"></div>
             </div>
         </div>
         <Download class="w-4" v-else />
@@ -230,7 +231,6 @@ const download_results = async () => {
         down_loading.value = true
         let link = document.createElement('a')
         link.href = `/api/method/pwit.controllers.api.download_results?doctype=${props.ref_doctype}&session=${store.session}`;
-        link.target = '_blank';
         link.click()
         sessionStorage.removeItem('authPopup');
         setTimeout(() => {
@@ -248,12 +248,14 @@ const check_user_details = async () => {
         }
         return false
     } else {
+        formData.value = response.data
         return true
     }
 }
-const confirmationDn = (value) => {
+const confirmationDn = async(value) => {
     confirmation.value = false
     if (value == 'guest') {
+        await check_user_details()
         userDetailsPop.value = true
     } else {
         store.authPopup = true;

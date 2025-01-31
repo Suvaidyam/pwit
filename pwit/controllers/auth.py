@@ -157,7 +157,8 @@ class AuthAPIs:
             else:
                 return {'code': 400, 'msg': 'Session not found'}
         else:
-            return {'code': 200, 'data':{},'msg':'Already set'}
+            data = frappe.get_doc('Session', session)
+            return {'code': 200, 'data':data,'msg':'Already set'}
    
     def get_other_details(session):
         session_details = {}
