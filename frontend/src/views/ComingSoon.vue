@@ -6,9 +6,10 @@
         </div>
         <div class="w-full flex flex-col gap-6 items-center justify-center h-1/2 px-4">
             <p class="text-h3 text-trbase">The Assistive Funder Tooklit will be launched soon!</p>
-            <div class="flex gap-2 items-center">
+            <div class="flex flex-col md:flex-row gap-2 items-center">
                 <p class="text-xl text-trbase">Be the first to know when we go live:</p>
-                <input v-model="email" type="email" name="" id="" placeholder="test@example.com"
+                <div class="flex gap-2 items-center">
+                    <input v-model="email" type="email" name="" id="" placeholder="test@example.com"
                     class="outline-none border-2 py-1.5 px-2 rounded-md border-primary text-h5">
                 <button :disabled="loading" @click="handleClick()"
                     class="px-4 flex items-center gap-2 py-2 bg-secondary text-white rounded-md">Submit
@@ -17,6 +18,7 @@
                         <div class="w-3 h-3 rounded-full border-dashed border-[1px] border-[#002C77]"></div>
                     </div>
                 </button>
+                </div>
             </div>
         </div>
     </div>
@@ -50,14 +52,17 @@ const handleClick = async () => {
     }
     loading.value = true
     try {
-        const res = await call('pwit.api.coming_soon', { email: email.value })
-        if (res.code === 'success') {
-            toast.success('Thank you for showing interest. We will notify you when we go live.')
+        const res = await call('pwit.controllers.api.subscribe', { email: email.value })
+        if (res.code == 200) {
+            toast.success(res.message)
             email.value = ''
             setTimeout(() => {
                 loading.value = false
             }, 1000);
-        } 
+        } else if (res.code == 201) {
+            toast.error(res.message)
+            loading.value = false
+        }
     } catch (error) {
         loading.value = false
         toast.error('Something went wrong. Please try again later.')
