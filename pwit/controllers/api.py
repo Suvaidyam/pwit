@@ -132,6 +132,22 @@ def get_other_details(session):
 def user_mobile_no():
     return AuthAPIs.user_mobile_no()
 
+@frappe.whitelist(allow_guest=True)
+def page_switch():
+    data = frappe.get_doc('pwit settings')
+    return {'data':data}
+
+@frappe.whitelist(allow_guest=True)
+def subscribe(email):
+    exits = frappe.db.exists('Subscribe Mail', {'email': email})
+    if exits:
+        return {'code': 201, 'message': 'Email already submited'}
+    else:
+        doc = frappe.new_doc('Subscribe Mail')
+        doc.email = email
+        doc.save(ignore_permissions=True)
+        return {'data':doc,'code': 200, 'message': 'Thank you for showing interest. We will notify you when we go live.'}
+
 from frappe.auth import MAX_PASSWORD_SIZE
 from frappe.core.doctype.user.user import test_password_strength, handle_password_test_fail,_get_user_for_update_password,reset_user_data
 from frappe.utils import (

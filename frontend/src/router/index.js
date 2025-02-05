@@ -15,11 +15,11 @@ const routes = [
     name: "Home",
     component: Home,
   },
-  // {
-  //   path: "/",
-  //   name: "ComingSoon",
-  //   component: ComingSoon,
-  // },
+  {
+    path: "/coming-soon",
+    name: "ComingSoon",
+    component: ComingSoon,
+  },
   {
     path: "/recommended",
     name: "Recommended",
