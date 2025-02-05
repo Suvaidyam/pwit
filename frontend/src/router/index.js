@@ -7,6 +7,7 @@ import Assessment from '../views/Assessment/Assessment.vue';
 import NotFound from '../views/NotFound.vue';
 import Results from "../views/Assessment/Results.vue";
 import ChangePass from "../views/ChangePass.vue";
+import ComingSoon from "../views/ComingSoon.vue";
 
 const routes = [
   {
@@ -14,6 +15,11 @@ const routes = [
     name: "Home",
     component: Home,
   },
+  // {
+  //   path: "/",
+  //   name: "ComingSoon",
+  //   component: ComingSoon,
+  // },
   {
     path: "/recommended",
     name: "Recommended",
