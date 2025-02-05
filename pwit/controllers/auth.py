@@ -65,7 +65,7 @@ class AuthAPIs:
             now = frappe.flags.in_test or frappe.flags.in_install
             # shashank.rastogi@bridgespan.org
             frappe.sendmail(
-                recipients= ['rahul.suvaidyam@gmail.com'],
+                recipients= ['shashank.rastogi@bridgespan.org'],
                 subject= 'Message submitted through Assistive Funder Toolkit',
                 message=message_content,
                 delayed=(not now) if now is not None else new_doc.flags.delay_emails,

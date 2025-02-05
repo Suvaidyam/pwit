@@ -1,6 +1,6 @@
 <template>
 	<div class="h-screen">
-		<Navbar v-if="!['ChangePass'].includes(route.name)"/>
+		<Navbar v-if="!['ChangePass','ComingSoon'].includes(route.name)"/>
 		<div class="pt-20 mx-auto max-w-[1700px] h-full">
 			<router-view />
 		</div>
