@@ -18,6 +18,7 @@
 import { ref, inject, onMounted, watch } from 'vue'
 import AuthPop from './AuthPop.vue';
 import ProfileDrop from './ProfileDrop.vue';
+import router from '../router';
 const call = inject('$call')
 const auth = inject('$auth');
 const store = inject('store');
@@ -32,7 +33,7 @@ const create_session = async () => {
         if (response) {
             sessionStorage.setItem('session', JSON.stringify(response))
             store.session = response?.data?.name
-            if(auth.isLoggedIn){
+            if (auth.isLoggedIn) {
                 const email = auth.cookie.user_id
                 await call('pwit.controllers.api.set_user_session', {
                     name: response?.data?.name,
@@ -44,7 +45,15 @@ const create_session = async () => {
         store.session = cur_session.value?.data?.name
     }
 }
-onMounted(() => {
+onMounted(async () => {
     create_session()
+    let res = await call('pwit.controllers.api.page_switch', {});
+    if (res.data.show_m_page == 1) {
+        router.push('/coming-soon')
+    } else {
+        if (router.currentRoute.value.path == '/coming-soon') {
+            router.push('/')
+        }
+    }
 })
 </script>
