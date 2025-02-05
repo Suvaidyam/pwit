@@ -1,10 +1,11 @@
 <template>
-    <button @click="auth.isLoggedIn?download_results():confirmation=true" :disabled="props.disabled"
+    <button @click="auth.isLoggedIn ? download_results() : confirmation = true" :disabled="props.disabled"
         :class="[props.disabled ? 'cursor-not-allowed' : 'cursor-pointer']"
         class="border flex items-center justify-center gap-2 px-2 md:px-4 h-7 md:h-9 text-sm border-[#27853F] text-[#27853F] rounded-md">
         <span class="hidden lg:block truncate">Download Result </span>
         <div class="h-5 w-5" v-if="down_loading">
-            <div class="animate-spin h-full w-full rounded-full border-[2px] flex justify-center items-center border-dotted border-[#002C77]">
+            <div
+                class="animate-spin h-full w-full rounded-full border-[2px] flex justify-center items-center border-dotted border-[#002C77]">
                 <div class="w-3 h-3 rounded-full border-dashed border-[1px] border-[#002C77]"></div>
             </div>
         </div>
@@ -32,9 +33,12 @@
                                     <X @click="userDetailsPop = false" class="text-sm cursor-pointer" />
                                 </div>
                                 <p class="text-[13px] font-normal text-[#21272A] py-1">
-                                    Your responses are confidential and your information and individual responses will
-                                    not be shared or made public. Any trends inferred from this data will only be made
-                                    at an aggregate level (e.g., based on the type of funder).
+                                    The Assistive Funder Toolkit has been designed to maintain complete anonymity of
+                                    respondent. Significant precautions have been taken in the design architecture to
+                                    ensure that Bridgespan, ISDM or any other party involved cannot correlate the
+                                    responses with personally identifiable information. Any analysis conducted or trends
+                                    inferred from the data collected through this toolkit will exclusively be done at an
+                                    aggregate level.
                                 </p>
                                 <hr class="pb-2 mt-2">
                                 <div class="flex flex-col gap-2 relative">
@@ -59,7 +63,7 @@
                                     </select>
                                     <p v-if="errors.designation" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
                                         errors.designation
-                                    }}</p>
+                                        }}</p>
                                 </div>
 
                                 <div class="pt-5 relative">
@@ -93,7 +97,7 @@
                                     </label>
                                     <p v-if="errors.funder_type" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
                                         errors.funder_type
-                                    }}</p>
+                                        }}</p>
                                 </div>
 
                                 <div class="flex flex-col gap-2 pt-5 relative">
@@ -252,7 +256,7 @@ const check_user_details = async () => {
         return true
     }
 }
-const confirmationDn = async(value) => {
+const confirmationDn = async (value) => {
     confirmation.value = false
     if (value == 'guest') {
         await check_user_details()
