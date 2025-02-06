@@ -31,7 +31,7 @@ initializeDynamicRoutes().then(() => {
     (function addGoogleAnalyticsScript() {
       const script = document.createElement('script');
       script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-SXKY993N5R';
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-MSG8ZT922D';
       document.head.appendChild(script);
     
       script.onload = () => {
@@ -39,14 +39,14 @@ initializeDynamicRoutes().then(() => {
         function gtag() { window.dataLayer.push(arguments); }
         window.gtag = gtag;
         gtag('js', new Date());
-        gtag('config', 'G-SXKY993N5R'); // Replace with your Measurement ID
+        gtag('config', 'G-MSG8ZT922D'); // Replace with your Measurement ID
       };
     })();
     
     // Track Page Views Dynamically
     router.afterEach((to) => {
       if (window.gtag) {
-        window.gtag('config', 'G-SXKY993N5R', {
+        window.gtag('config', 'G-MSG8ZT922D', {
           page_path: to.fullPath,
         });
       }
