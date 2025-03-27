@@ -63,41 +63,26 @@
                                     </select>
                                     <p v-if="errors.designation" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
                                         errors.designation
-                                        }}</p>
+                                    }}</p>
                                 </div>
 
                                 <div class="pt-5 relative">
                                     <p class="text-h5 font-normal text-[#21272A]">
                                         Please select which funder type your organisation identifies as
                                         <span class="text-red-500">*</span>
-                                    </p>
-                                    <label
+                                    </p> 
+                                    <!--  -->
+                                    <label v-for="item in funder_options" :key="item"
                                         class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
-                                        <input type="radio" id="option" value="Corporate Social Responsibility (CSR)"
+                                        <input type="radio" id="option" :value="item"
                                             v-model="formData.funder_type" class="cursor-pointer" />
                                         <p class="text-secondary font-normal text-sm cursor-pointer">
-                                            Corporate Social Responsibility (CSR)
-                                        </p>
-                                    </label>
-                                    <label
-                                        class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
-                                        <input type="radio" id="option" value="Domestic Foundation"
-                                            v-model="formData.funder_type" class="cursor-pointer" />
-                                        <p class="text-secondary font-normal text-sm cursor-pointer">
-                                            Domestic Foundation
-                                        </p>
-                                    </label>
-                                    <label
-                                        class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
-                                        <input type="radio" id="option" value="Global Foundation"
-                                            v-model="formData.funder_type" class="cursor-pointer" />
-                                        <p class="text-secondary font-normal text-sm cursor-pointer">
-                                            Global Foundation
+                                            {{ item }}
                                         </p>
                                     </label>
                                     <p v-if="errors.funder_type" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
                                         errors.funder_type
-                                        }}</p>
+                                    }}</p>
                                 </div>
 
                                 <div class="flex flex-col gap-2 pt-5 relative">
@@ -205,7 +190,7 @@ const props = defineProps({
         default: false
     },
 })
-
+const funder_options = ref([])
 
 const validateForm = () => {
     errors.value.designation = formData.value.designation ? '' : 'Designation is required.';
@@ -224,7 +209,12 @@ const submitSelection = async () => {
         await download_results()
     }
 }
-
+const funder_type = async () => {
+    let res = await call('pwit.controllers.api.funder_type_options', {})
+    if (res) {
+        funder_options.value = res
+    }
+}
 const download_results = async () => {
 
     let value = await check_user_details()
@@ -262,6 +252,7 @@ const confirmationDn = async (value) => {
     }
 }
 onMounted(() => {
+    funder_type()
     if (auth.isLoggedIn && sessionStorage.getItem('authPopup') == 'true') {
         download_results()
     }
