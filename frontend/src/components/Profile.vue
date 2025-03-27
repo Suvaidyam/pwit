@@ -93,29 +93,13 @@
                                                 <p class=" text-sm font-normal text-[#21272A]">
                                                     Funder type organisation <span class="text-red-500">*</span>
                                                 </p>
-                                                <label
+                                                <label v-for="item in funder_options" :key="item"
                                                     class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
                                                     <input type="radio" id="option"
-                                                        value="Corporate Social Responsibility (CSR)"
+                                                        :value="item"
                                                         v-model="otherFormData.funder_type" class="cursor-pointer" />
                                                     <p class="text-secondary font-normal text-sm cursor-pointer">
-                                                        Corporate Social Responsibility (CSR)
-                                                    </p>
-                                                </label>
-                                                <label
-                                                    class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
-                                                    <input type="radio" id="option" value="Domestic Foundation"
-                                                        v-model="otherFormData.funder_type" class="cursor-pointer" />
-                                                    <p class="text-secondary font-normal text-sm cursor-pointer">
-                                                        Domestic Foundation
-                                                    </p>
-                                                </label>
-                                                <label
-                                                    class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
-                                                    <input type="radio" id="option" value="Global Foundation"
-                                                        v-model="otherFormData.funder_type" class="cursor-pointer" />
-                                                    <p class="text-secondary font-normal text-sm cursor-pointer">
-                                                        Global Foundation
+                                                        {{ item }}
                                                     </p>
                                                 </label>
                                                 <p v-if="errors.funder_type"
@@ -181,6 +165,7 @@ const store = inject('store');
 const auth = inject('$auth');
 const call = inject('$call');
 const formData = ref(auth.cookie);
+const funder_options = ref([]);
 const otherFormData = ref({
     designation: '',
     funder_type: '',
@@ -205,6 +190,12 @@ const get_other = async () => {
     let res = await call('pwit.controllers.api.get_other_details', { session: store.session })
     if (res?.code == 200) {
         otherFormData.value = res.data
+    }
+}
+const funder_type = async () => {
+    let res = await call('pwit.controllers.api.funder_type_options', { })
+    if(res){
+        funder_options.value = res
     }
 }
 const user_mobile = async () => {
@@ -260,5 +251,7 @@ watch(() => store.isOpen, async (val) => {
         }
     }
 }, { immediate: true, deep: true })
-
+onMounted(() => {
+    funder_type()
+})
 </script>

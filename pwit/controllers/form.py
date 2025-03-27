@@ -47,3 +47,14 @@ class FormAPIs:
                 draft = {}
         return {'code': 200, 'data': draft}
     
+    def funder_type_options():
+        meta = frappe.get_meta('Session')
+        funder_type = meta.get_field('funder_type')
+        options = []
+        for option in funder_type.options.split('\n'):
+            parts = option.split(':')
+            if parts[0]:  # Ensure the first part is not an empty string
+                options.append(parts[0])
+        return sorted(options)
+
+    

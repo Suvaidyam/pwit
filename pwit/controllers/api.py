@@ -106,6 +106,10 @@ def save_as_draft(doctype, doc,name=None):
 def get_save_as_draft(doctype, user):
     return FormAPIs.get_save_as_draft(doctype, user)
 
+@frappe.whitelist(allow_guest=True)
+def funder_type_options():
+    return FormAPIs.funder_type_options()
+
 def send_custom_welcome_email(doc):
     AuthAPIs.send_custom_welcome_email_method(doc)
 
