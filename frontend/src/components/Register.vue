@@ -27,7 +27,7 @@
                     placeholder="Enter full name">
                 <p v-if="errors.full_name" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
                     errors.full_name
-                    }}</p>
+                }}</p>
             </div>
             <div class="flex flex-col gap-2 w-full relative pt-2">
                 <label for="" class="text-sm text-tatary">
@@ -65,7 +65,7 @@
                     </select>
                     <p v-if="errors.designation" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
                         errors.designation
-                        }}</p>
+                    }}</p>
                 </div>
 
                 <div class="relative">
@@ -73,33 +73,17 @@
                         Please select which funder type your organisation identifies as
                         <span class="text-red-500">*</span>
                     </p>
-                    <label
+                    <label v-for="item in funder_options" :key="item"
                         class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
-                        <input type="radio" id="option" value="Corporate Social Responsibility (CSR)"
-                            v-model="formData.funder_type" class="cursor-pointer" />
-                        <p class="text-secondary font-normal text-sm cursor-pointer">
-                            Corporate Social Responsibility (CSR)
-                        </p>
-                    </label>
-                    <label
-                        class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
-                        <input type="radio" id="option" value="Domestic Foundation" v-model="formData.funder_type"
+                        <input type="radio" id="option" :value="item" v-model="formData.funder_type"
                             class="cursor-pointer" />
                         <p class="text-secondary font-normal text-sm cursor-pointer">
-                            Domestic Foundation
-                        </p>
-                    </label>
-                    <label
-                        class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
-                        <input type="radio" id="option" value="Global Foundation" v-model="formData.funder_type"
-                            class="cursor-pointer" />
-                        <p class="text-secondary font-normal text-sm cursor-pointer">
-                            Global Foundation
+                            {{ item }}
                         </p>
                     </label>
                     <p v-if="errors.funder_type" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
                         errors.funder_type
-                        }}</p>
+                    }}</p>
                 </div>
 
                 <div class="flex flex-col gap-2 relative">
@@ -151,7 +135,7 @@
 </template>
 
 <script setup>
-import { ref, watch, inject, computed } from 'vue'
+import { ref, watch, inject, onMounted } from 'vue'
 import { DialogTitle } from '@headlessui/vue'
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
@@ -175,7 +159,7 @@ const errors = ref({
     funder_type: '',
     annual_budget: ''
 });
-
+const funder_options = ref([])
 const validateForm = () => {
     errors.value.full_name = formData.value.full_name ? '' : 'Full name is required.';
     errors.value.email = formData.value.email ? '' : 'Email is required.';
@@ -198,7 +182,12 @@ const emailvalidate = () => {
         errors.value.email = '';
     }
 };
-
+const funder_type = async () => {
+    let res = await call('pwit.controllers.api.funder_type_options', {})
+    if (res) {
+        funder_options.value = res
+    }
+}
 const register = async () => {
     open.value = false;
     if (validateForm()) {
@@ -220,5 +209,7 @@ const register = async () => {
         }
     }
 };
-
+onMounted(() => {
+    funder_type()
+})
 </script>
