@@ -238,8 +238,6 @@ const check_user_details = async () => {
     if (response.code == 400) {
         if (auth.isLoggedIn) {
             userDetailsPop.value = true
-        } else {
-            confirmation.value = true
         }
         return false
     } else {
