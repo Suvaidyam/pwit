@@ -52,16 +52,7 @@
                         class="outline-none border-b-2 bg-gray-50 py-3 text-black px-2"
                         :class="[!errors.designation ? 'border-gray-400' : 'border-red-500']">
                         <option value="">Select</option>
-                        <option value="Executive Director/Chief Executive Officer/Head of CSR">Executive
-                            Director/Chief Executive Officer/Head of CSR</option>
-                        <option value="Director of Philanthropy">Director of Philanthropy</option>
-                        <option value="Chief Operating Officer">Chief Operating Officer</option>
-                        <option value="Programme Lead/Programme Officer">Programme Lead/Programme
-                            Officer
-                        </option>
-                        <option value="Third party supporting funder organisation">Third-party
-                            supporting funder organisation</option>
-                        <option value="Other">Other</option>
+                        <option v-for="item in dropdown_options.designation" :value="item" :key="item">{{ item }}</option>
                     </select>
                     <p v-if="errors.designation" class="absolute -bottom-5 text-red-500 text-h6 mt-1">{{
                         errors.designation
@@ -73,7 +64,7 @@
                         Please select which funder type your organisation identifies as
                         <span class="text-red-500">*</span>
                     </p>
-                    <label v-for="item in funder_options" :key="item"
+                    <label v-for="item in dropdown_options.funder_type" :key="item"
                         class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
                         <input type="radio" id="option" :value="item" v-model="formData.funder_type"
                             class="cursor-pointer" />
@@ -95,11 +86,7 @@
                         class="outline-none border-b-2 bg-gray-50 py-3 text-gray-900 px-2"
                         :class="[!errors.annual_budget ? 'border-gray-400' : 'border-red-500']">
                         <option value="">Select</option>
-                        <option value="Less than INR 10 Cr.">Less than INR 10 Cr.</option>
-                        <option value="INR 10-50 Cr.">INR 10-50 Cr.</option>
-                        <option value="INR 51-100 Cr.">INR 51-100 Cr.</option>
-                        <option value="INR 101-300 Cr.">INR 101-300 Cr.</option>
-                        <option value="INR 301 Cr. and above">INR 301 Cr. and above</option>
+                        <option v-for="item in dropdown_options.annual_budget" :value="item" :key="item">{{item}}</option> 
                     </select>
                     <p v-if="errors.annual_budget" class="absolute -bottom-5 text-red-500 text-h6 mt-1">
                         {{
@@ -159,7 +146,7 @@ const errors = ref({
     funder_type: '',
     annual_budget: ''
 });
-const funder_options = ref([])
+const dropdown_options = ref({})
 const validateForm = () => {
     errors.value.full_name = formData.value.full_name ? '' : 'Full name is required.';
     errors.value.email = formData.value.email ? '' : 'Email is required.';
@@ -182,10 +169,10 @@ const emailvalidate = () => {
         errors.value.email = '';
     }
 };
-const funder_type = async () => {
-    let res = await call('pwit.controllers.api.funder_type_options', {})
-    if (res) {
-        funder_options.value = res
+const dropdown_option = async () => {
+    let res = await call('pwit.controllers.api.profile_dropdown_options', {})
+    if (res.code === 200) {
+        dropdown_options.value = res.data
     }
 }
 const register = async () => {
@@ -210,6 +197,6 @@ const register = async () => {
     }
 };
 onMounted(() => {
-    funder_type()
+    dropdown_option()
 })
 </script>

@@ -66,23 +66,7 @@
                                                 <select name="" id="designation" v-model="otherFormData.designation"
                                                     class="outline-none border-b-2 border-gray-400 bg-gray-50 py-3 text-gray-600 px-2">
                                                     <option value="">Select</option>
-                                                    <option
-                                                        value="Executive Director/Chief Executive Officer/Head of CSR">
-                                                        Executive Director/Chief Executive Officer/Head of CSR
-                                                    </option>
-                                                    <option value="Director of Philanthropy">Director of Philanthropy
-                                                    </option>
-                                                    <option value="Chief Operating Officer">Chief Operating Officer
-                                                    </option>
-                                                    <option value="Programme Lead/Programme Officer">Programme
-                                                        Lead/Programme
-                                                        Officer
-                                                    </option>
-                                                    <option value="Third party supporting funder organisation">Third
-                                                        party
-                                                        supporting funder organisation
-                                                    </option>
-                                                    <option value="Other">Other</option>
+                                                    <option v-for="item in dropdown_options.designation" :value="item" :key="item">{{ item }}</option>
                                                 </select>
                                                 <p v-if="errors.designation"
                                                     class="absolute -bottom-5 text-red-500 text-h6 mt-1">
@@ -93,7 +77,7 @@
                                                 <p class=" text-sm font-normal text-[#21272A]">
                                                     Funder type organisation <span class="text-red-500">*</span>
                                                 </p>
-                                                <label v-for="item in funder_options" :key="item"
+                                                <label v-for="item in dropdown_options.funder_type" :key="item"
                                                     class="w-full px-4 py-2 bg-white flex gap-2 border rounded-md cursor-pointer mt-3 border-[#255B97]">
                                                     <input type="radio" id="option"
                                                         :value="item"
@@ -114,16 +98,7 @@
                                                 <select name="" id="annual_budget" v-model="otherFormData.annual_budget"
                                                     class="outline-none border-b-2 border-gray-400 bg-gray-50 py-3 text-gray-600 px-2">
                                                     <option value="">Select</option>
-                                                    <option value="Less than INR 10 Cr.">Less than INR 10 Cr.
-                                                    </option>
-                                                    <option value="INR 10-50 Cr.">INR 10-50 Cr.
-                                                    </option>
-                                                    <option value="INR 51-100 Cr.">INR 51-100 Cr.
-                                                    </option>
-                                                    <option value="INR 101-300 Cr.">INR 101-300 Cr.
-                                                    </option>
-                                                    <option value="INR 301 Cr. and above">INR 301 Cr. and above
-                                                    </option>
+                                                    <option v-for="item in dropdown_options.annual_budget" :value="item" :key="item">{{item}}</option>
                                                 </select>
                                                 <p v-if="errors.annual_budget"
                                                     class="absolute -bottom-5 text-red-500 text-h6 mt-1">
@@ -165,7 +140,7 @@ const store = inject('store');
 const auth = inject('$auth');
 const call = inject('$call');
 const formData = ref(auth.cookie);
-const funder_options = ref([]);
+const dropdown_options = ref({});
 const otherFormData = ref({
     designation: '',
     funder_type: '',
@@ -192,10 +167,10 @@ const get_other = async () => {
         otherFormData.value = res.data
     }
 }
-const funder_type = async () => {
-    let res = await call('pwit.controllers.api.funder_type_options', { })
-    if(res){
-        funder_options.value = res
+const dropdown_option = async () => {
+    let res = await call('pwit.controllers.api.profile_dropdown_options', {})
+    if (res.code === 200) {
+        dropdown_options.value = res.data
     }
 }
 const user_mobile = async () => {
@@ -252,6 +227,6 @@ watch(() => store.isOpen, async (val) => {
     }
 }, { immediate: true, deep: true })
 onMounted(() => {
-    funder_type()
+    dropdown_option()
 })
 </script>
