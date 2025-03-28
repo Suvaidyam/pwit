@@ -47,3 +47,22 @@ class FormAPIs:
                 draft = {}
         return {'code': 200, 'data': draft}
     
+    import frappe
+
+    def profile_dropdown_options():
+        meta = frappe.get_meta('Session')
+        fields = ['funder_type', 'designation', 'annual_budget']
+        
+        data = {}
+        
+        for field in fields:
+            field_meta = meta.get_field(field)
+            if field_meta and hasattr(field_meta, 'options') and field_meta.options:
+                data[field] = field_meta.options.split('\n')[1:] 
+            else:
+                data[field] = []
+        
+        return {'code': 200, 'data': data}
+
+
+    
