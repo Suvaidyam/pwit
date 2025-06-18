@@ -105,7 +105,7 @@
 					opportunity to create an account to save your progress and email results to yourself after completing each section.</p>
 				
 			</div>
-			<div class="w-full flex justify-center pt-2 px-4">
+			<div class="w-full flex justify-center pt-2">
 				<PickAssessment />
 			</div>
 		</div>
