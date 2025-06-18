@@ -2,7 +2,7 @@
     <button @click="openDialog"
         class="bg-secondary text-white flex items-center justify-center gap-2 w-full md:w-1/3 h-14 text-h5 font-bold rounded-md">Start
         the
-        Assessment
+        assessment
         <ArrowRight class="w-4" />
     </button>
     <!-- <router-link :to="`/funder/${last_draft?.route}`" v-else class="bg-secondary text-white flex items-center justify-center gap-2 w-full md:w-1/3 h-14 text-h5 font-bold rounded-md">
