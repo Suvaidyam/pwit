@@ -97,16 +97,15 @@
 				</div>
 
 			</div>
-
-			<div class="flex flex-col pt-8 pb-4 text-justify font-normal text-sebase text-h5 ">
+			<div class="w-full flex justify-center pt-6">
+				<PickAssessment />
+			</div>
+			<div class="flex flex-col pt-4 pb-4 text-justify font-normal text-sebase text-h5 ">
 				<p class="leading-5">We recommend that one individual, such as the executive director or head of CSR, lead the assessment process and include 
 					participation or consultation with key staff members and the board.</p>
 				<p class="pt-2 leading-5">The tool is designed to be completed in one session. However, you can pause and return to this later. You will be provided with the 
 					opportunity to create an account to save your progress and email results to yourself after completing each section.</p>
 				
-			</div>
-			<div class="w-full flex justify-center pt-2">
-				<PickAssessment />
 			</div>
 		</div>
 		<!--  -->
