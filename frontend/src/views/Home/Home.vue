@@ -12,6 +12,9 @@
 				the
 				Pay-What-It-Takes India Initiative</p>
 		</div>
+		<div class="w-full flex justify-center">
+			<PickAssessment />
+		</div>
 		<!--  -->
 		<div class="w-full bg-tatary px-4 md:px-8 lg:px-20 py-6 mt-7">
 			<!-- <h4 class="text-center text-h2 font-bold text-[#21272A] mt-6 font-primary tracking-wide leading-9">About the
@@ -97,10 +100,7 @@
 				</div>
 
 			</div>
-			<div class="w-full flex justify-center pt-6">
-				<PickAssessment />
-			</div>
-			<div class="flex flex-col pt-4 pb-4 text-justify font-normal text-sebase text-h5 ">
+			<div class="flex flex-col pt-6 pb-4 text-justify font-normal text-sebase text-h5 ">
 				<p class="leading-5">We recommend that one individual, such as the executive director or head of CSR, lead the assessment process and include 
 					participation or consultation with key staff members and the board.</p>
 				<p class="pt-2 leading-5">The tool is designed to be completed in one session. However, you can pause and return to this later. You will be provided with the 
